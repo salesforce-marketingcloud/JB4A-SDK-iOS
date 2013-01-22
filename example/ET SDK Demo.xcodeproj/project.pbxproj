@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F13A04415FE7C9D00BAC9B0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F13A04615FE7C9D00BAC9B0 /* Localizable.strings */; };
+		7F13A0491600CD4400BAC9B0 /* UIDevice+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F13A0481600CD4400BAC9B0 /* UIDevice+Identifier.m */; };
+		7F344FC8169DFA66005CBE6B /* custom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7F344FC7169DFA66005CBE6B /* custom.caf */; };
+		7F5446BA162E389200EFACA7 /* ETPush.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F6CCDD715FA1F9B009E8D79 /* ETPush.h */; };
+		7F5446BB162E389200EFACA7 /* ETData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F8134BD160B548100919DE4 /* ETData.h */; };
+		7F5446BC162E389200EFACA7 /* ETDataConnector.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F8134BF160B548100919DE4 /* ETDataConnector.h */; };
+		7F5446BD162E389200EFACA7 /* PushConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F13A04015FE6E2000BAC9B0 /* PushConstants.h */; };
+		7F5446BE162E389200EFACA7 /* UIDevice+Identifier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F13A0471600CD4400BAC9B0 /* UIDevice+Identifier.h */; };
+		7F5446CC163EAFD200EFACA7 /* grayapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5446CB163EAFD200EFACA7 /* grayapp.png */; };
+		7F5446CE163EAFE500EFACA7 /* grayapp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5446CD163EAFE400EFACA7 /* grayapp1.png */; };
+		7F5446D0163EB09200EFACA7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5446CF163EB09200EFACA7 /* Default@2x.png */; };
+		7F5446D2163EB10A00EFACA7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5446D1163EB10900EFACA7 /* Default.png */; };
+		7F5446D4163EB50200EFACA7 /* grayapp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5446D3163EB50200EFACA7 /* grayapp2.png */; };
+		7F5446D6163EB51800EFACA7 /* grayapp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5446D5163EB51800EFACA7 /* grayapp3.png */; };
+		7F557F531611F82A00DF65A2 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F557F521611F82A00DF65A2 /* CoreAudio.framework */; };
+		7F557F561611F84600DF65A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F557F551611F84600DF65A2 /* AudioToolbox.framework */; };
+		7F557F571611F86800DF65A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F557F551611F84600DF65A2 /* AudioToolbox.framework */; };
+		7F62C46915F7A7420054BA91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C46815F7A7420054BA91 /* UIKit.framework */; };
+		7F62C46B15F7A7420054BA91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C46A15F7A7420054BA91 /* Foundation.framework */; };
+		7F62C46D15F7A7420054BA91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C46C15F7A7420054BA91 /* CoreGraphics.framework */; };
+		7F62C47315F7A7420054BA91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F62C47115F7A7420054BA91 /* InfoPlist.strings */; };
+		7F62C47515F7A7420054BA91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F62C47415F7A7420054BA91 /* main.m */; };
+		7F62C47915F7A7420054BA91 /* ETAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F62C47815F7A7420054BA91 /* ETAppDelegate.m */; };
+		7F62C47C15F7A7420054BA91 /* ETViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F62C47B15F7A7420054BA91 /* ETViewController.m */; };
+		7F62C47F15F7A7420054BA91 /* ETViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F62C47D15F7A7420054BA91 /* ETViewController_iPhone.xib */; };
+		7F62C48215F7A7420054BA91 /* ETViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F62C48015F7A7420054BA91 /* ETViewController_iPad.xib */; };
+		7F62C48B15F7A8450054BA91 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C48A15F7A8450054BA91 /* CFNetwork.framework */; };
+		7F62C48D15F7A84F0054BA91 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C48C15F7A84F0054BA91 /* MobileCoreServices.framework */; };
+		7F62C48F15F7A8550054BA91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C48E15F7A8550054BA91 /* Security.framework */; };
+		7F62C49115F7A85A0054BA91 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49015F7A85A0054BA91 /* SystemConfiguration.framework */; };
+		7F62C49315F7A8610054BA91 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49215F7A8610054BA91 /* libz.dylib */; };
+		7F62C49515F7A8660054BA91 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49415F7A8660054BA91 /* libsqlite3.dylib */; };
+		7F62C49715F7A86C0054BA91 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49615F7A86C0054BA91 /* CoreTelephony.framework */; };
+		7F62C49915F7A8710054BA91 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49815F7A8710054BA91 /* StoreKit.framework */; };
+		7F62C49B15F7A8770054BA91 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49A15F7A8770054BA91 /* CoreLocation.framework */; };
+		7F62C49D15F7A93B0054BA91 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F62C49C15F7A93B0054BA91 /* AirshipConfig.plist */; };
+		7F6CCDD315FA1F9B009E8D79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C46A15F7A7420054BA91 /* Foundation.framework */; };
+		7F6CCDD815FA1F9B009E8D79 /* ETPush.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F6CCDD715FA1F9B009E8D79 /* ETPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F6CCDDA15FA1F9B009E8D79 /* ETPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CCDD915FA1F9B009E8D79 /* ETPush.m */; };
+		7F6CCDE615FA28BE009E8D79 /* libetpushsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6CCDD215FA1F9B009E8D79 /* libetpushsdk.a */; };
+		7F8134C1160B548100919DE4 /* ETData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8134BE160B548100919DE4 /* ETData.m */; };
+		7F8134C2160B548100919DE4 /* ETDataConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8134C0160B548100919DE4 /* ETDataConnector.m */; };
+		7F8134C4160B549D00919DE4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F8134C3160B549D00919DE4 /* Default-568h@2x.png */; };
+		7F8AB8221619D557005DFE0D /* PushConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F13A04015FE6E2000BAC9B0 /* PushConstants.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7F8AB82B1619D9E2005DFE0D /* ETURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F8E7EBA1610AE7E00E51D61 /* ETURLConnection.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7F8AB82C1619D9E2005DFE0D /* ETData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F8134BD160B548100919DE4 /* ETData.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7F8AB82D1619D9E2005DFE0D /* ETDataConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F8134BF160B548100919DE4 /* ETDataConnector.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7F8AB82E1619D9E2005DFE0D /* UIDevice+Identifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F13A0471600CD4400BAC9B0 /* UIDevice+Identifier.h */; settings = {ATTRIBUTES = (); }; };
+		7F8E7EBC1610AE7E00E51D61 /* ETURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E7EBB1610AE7E00E51D61 /* ETURLConnection.m */; };
+		7FA41368160BA1F500810A4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C46C15F7A7420054BA91 /* CoreGraphics.framework */; };
+		7FA41369160BA1FE00810A4C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C48C15F7A84F0054BA91 /* MobileCoreServices.framework */; };
+		7FA4136A160BA20400810A4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C48E15F7A8550054BA91 /* Security.framework */; };
+		7FA4136B160BA20A00810A4C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49015F7A85A0054BA91 /* SystemConfiguration.framework */; };
+		7FA4136C160BA21200810A4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C46815F7A7420054BA91 /* UIKit.framework */; };
+		7FA4136D160BA21800810A4C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49215F7A8610054BA91 /* libz.dylib */; };
+		7FA4136E160BA22000810A4C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49415F7A8660054BA91 /* libsqlite3.dylib */; };
+		7FA4136F160BA22700810A4C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49615F7A86C0054BA91 /* CoreTelephony.framework */; };
+		7FA41370160BA22E00810A4C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49815F7A8710054BA91 /* StoreKit.framework */; };
+		7FA41371160BA23700810A4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C49A15F7A8770054BA91 /* CoreLocation.framework */; };
+		7FA4137B160BA79800810A4C /* libUAirship-1.3.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA4137A160BA79800810A4C /* libUAirship-1.3.3.a */; };
+		7FA7580C15FA30BE000B7EBE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62C48A15F7A8450054BA91 /* CFNetwork.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F6CCDE715FA28CC009E8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F62C45B15F7A7420054BA91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F6CCDD115FA1F9B009E8D79;
+			remoteInfo = etpushsdk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7F6CCDD015FA1F9B009E8D79 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "/Users/Shared/BuiltProducts/${PRODUCT_NAME}";
+			dstSubfolderSpec = 0;
+			files = (
+				7F5446BA162E389200EFACA7 /* ETPush.h in CopyFiles */,
+				7F5446BB162E389200EFACA7 /* ETData.h in CopyFiles */,
+				7F5446BC162E389200EFACA7 /* ETDataConnector.h in CopyFiles */,
+				7F5446BD162E389200EFACA7 /* PushConstants.h in CopyFiles */,
+				7F5446BE162E389200EFACA7 /* UIDevice+Identifier.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7F13A04015FE6E2000BAC9B0 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
+		7F13A04515FE7C9D00BAC9B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F13A0471600CD4400BAC9B0 /* UIDevice+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Identifier.h"; sourceTree = "<group>"; };
+		7F13A0481600CD4400BAC9B0 /* UIDevice+Identifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Identifier.m"; sourceTree = "<group>"; };
+		7F2D4B2A1614C749000A8128 /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
+		7F2D4B2C1614D793000A8128 /* README.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = README.html; sourceTree = "<group>"; };
+		7F2D4B2E1614D95A000A8128 /* index.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.markdown; sourceTree = "<group>"; };
+		7F2D4B2F1615F635000A8128 /* Push Constants-template.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Push Constants-template.markdown"; sourceTree = "<group>"; };
+		7F344FC7169DFA66005CBE6B /* custom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = custom.caf; sourceTree = "<group>"; };
+		7F5446CB163EAFD200EFACA7 /* grayapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayapp.png; sourceTree = "<group>"; };
+		7F5446CD163EAFE400EFACA7 /* grayapp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayapp1.png; sourceTree = "<group>"; };
+		7F5446CF163EB09200EFACA7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7F5446D1163EB10900EFACA7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7F5446D3163EB50200EFACA7 /* grayapp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayapp2.png; sourceTree = "<group>"; };
+		7F5446D5163EB51800EFACA7 /* grayapp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayapp3.png; sourceTree = "<group>"; };
+		7F557F521611F82A00DF65A2 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		7F557F551611F84600DF65A2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7F62C46415F7A7420054BA91 /* ET SDK Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ET SDK Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F62C46815F7A7420054BA91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7F62C46A15F7A7420054BA91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F62C46C15F7A7420054BA91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7F62C47015F7A7420054BA91 /* ET SDK Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ET SDK Demo-Info.plist"; sourceTree = "<group>"; };
+		7F62C47215F7A7420054BA91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F62C47415F7A7420054BA91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F62C47615F7A7420054BA91 /* ET SDK Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ET SDK Demo-Prefix.pch"; sourceTree = "<group>"; };
+		7F62C47715F7A7420054BA91 /* ETAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETAppDelegate.h; sourceTree = "<group>"; };
+		7F62C47815F7A7420054BA91 /* ETAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETAppDelegate.m; sourceTree = "<group>"; };
+		7F62C47A15F7A7420054BA91 /* ETViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETViewController.h; sourceTree = "<group>"; };
+		7F62C47B15F7A7420054BA91 /* ETViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETViewController.m; sourceTree = "<group>"; };
+		7F62C47E15F7A7420054BA91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ETViewController_iPhone.xib; sourceTree = "<group>"; };
+		7F62C48115F7A7420054BA91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ETViewController_iPad.xib; sourceTree = "<group>"; };
+		7F62C48A15F7A8450054BA91 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7F62C48C15F7A84F0054BA91 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7F62C48E15F7A8550054BA91 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7F62C49015F7A85A0054BA91 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7F62C49215F7A8610054BA91 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		7F62C49415F7A8660054BA91 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		7F62C49615F7A86C0054BA91 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7F62C49815F7A8710054BA91 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		7F62C49A15F7A8770054BA91 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7F62C49C15F7A93B0054BA91 /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		7F6CCDD215FA1F9B009E8D79 /* libetpushsdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libetpushsdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6CCDD615FA1F9B009E8D79 /* etpushsdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "etpushsdk-Prefix.pch"; sourceTree = "<group>"; };
+		7F6CCDD715FA1F9B009E8D79 /* ETPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
+		7F6CCDD915FA1F9B009E8D79 /* ETPush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETPush.m; sourceTree = "<group>"; };
+		7F8134BD160B548100919DE4 /* ETData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETData.h; sourceTree = "<group>"; };
+		7F8134BE160B548100919DE4 /* ETData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETData.m; sourceTree = "<group>"; };
+		7F8134BF160B548100919DE4 /* ETDataConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETDataConnector.h; sourceTree = "<group>"; };
+		7F8134C0160B548100919DE4 /* ETDataConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETDataConnector.m; sourceTree = "<group>"; };
+		7F8134C3160B549D00919DE4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7F8E7EBA1610AE7E00E51D61 /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETURLConnection.h; sourceTree = "<group>"; };
+		7F8E7EBB1610AE7E00E51D61 /* ETURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETURLConnection.m; sourceTree = "<group>"; };
+		7FA4137A160BA79800810A4C /* libUAirship-1.3.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libUAirship-1.3.3.a"; path = "Airship/libUAirship-1.3.3.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F62C46115F7A7420054BA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F557F571611F86800DF65A2 /* AudioToolbox.framework in Frameworks */,
+				7F6CCDE615FA28BE009E8D79 /* libetpushsdk.a in Frameworks */,
+				7F62C49B15F7A8770054BA91 /* CoreLocation.framework in Frameworks */,
+				7F62C49915F7A8710054BA91 /* StoreKit.framework in Frameworks */,
+				7F62C49715F7A86C0054BA91 /* CoreTelephony.framework in Frameworks */,
+				7F62C49515F7A8660054BA91 /* libsqlite3.dylib in Frameworks */,
+				7F62C49315F7A8610054BA91 /* libz.dylib in Frameworks */,
+				7F62C49115F7A85A0054BA91 /* SystemConfiguration.framework in Frameworks */,
+				7F62C48F15F7A8550054BA91 /* Security.framework in Frameworks */,
+				7F62C48D15F7A84F0054BA91 /* MobileCoreServices.framework in Frameworks */,
+				7F62C48B15F7A8450054BA91 /* CFNetwork.framework in Frameworks */,
+				7F62C46915F7A7420054BA91 /* UIKit.framework in Frameworks */,
+				7F62C46B15F7A7420054BA91 /* Foundation.framework in Frameworks */,
+				7F62C46D15F7A7420054BA91 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6CCDCF15FA1F9B009E8D79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F557F561611F84600DF65A2 /* AudioToolbox.framework in Frameworks */,
+				7F557F531611F82A00DF65A2 /* CoreAudio.framework in Frameworks */,
+				7FA4137B160BA79800810A4C /* libUAirship-1.3.3.a in Frameworks */,
+				7FA41371160BA23700810A4C /* CoreLocation.framework in Frameworks */,
+				7FA41370160BA22E00810A4C /* StoreKit.framework in Frameworks */,
+				7FA4136F160BA22700810A4C /* CoreTelephony.framework in Frameworks */,
+				7FA4136E160BA22000810A4C /* libsqlite3.dylib in Frameworks */,
+				7FA4136D160BA21800810A4C /* libz.dylib in Frameworks */,
+				7FA4136C160BA21200810A4C /* UIKit.framework in Frameworks */,
+				7FA4136B160BA20A00810A4C /* SystemConfiguration.framework in Frameworks */,
+				7FA4136A160BA20400810A4C /* Security.framework in Frameworks */,
+				7FA41369160BA1FE00810A4C /* MobileCoreServices.framework in Frameworks */,
+				7FA41368160BA1F500810A4C /* CoreGraphics.framework in Frameworks */,
+				7FA7580C15FA30BE000B7EBE /* CFNetwork.framework in Frameworks */,
+				7F6CCDD315FA1F9B009E8D79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F2D4B2D1614D94A000A8128 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D4B2A1614C749000A8128 /* AppledocSettings.plist */,
+				7F2D4B2C1614D793000A8128 /* README.html */,
+				7F2D4B2E1614D95A000A8128 /* index.markdown */,
+				7F2D4B2F1615F635000A8128 /* Push Constants-template.markdown */,
+			);
+			name = docs;
+			sourceTree = "<group>";
+		};
+		7F5446D7163EBEE700EFACA7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7F344FC7169DFA66005CBE6B /* custom.caf */,
+				7F5446D5163EB51800EFACA7 /* grayapp3.png */,
+				7F5446D3163EB50200EFACA7 /* grayapp2.png */,
+				7F5446D1163EB10900EFACA7 /* Default.png */,
+				7F5446CF163EB09200EFACA7 /* Default@2x.png */,
+				7F5446CD163EAFE400EFACA7 /* grayapp1.png */,
+				7F5446CB163EAFD200EFACA7 /* grayapp.png */,
+				7FA4137A160BA79800810A4C /* libUAirship-1.3.3.a */,
+				7F8134C3160B549D00919DE4 /* Default-568h@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		7F62C45915F7A7410054BA91 = {
+			isa = PBXGroup;
+			children = (
+				7F5446D7163EBEE700EFACA7 /* Assets */,
+				7F62C46E15F7A7420054BA91 /* ET SDK Demo */,
+				7F6CCDD415FA1F9B009E8D79 /* etpushsdk */,
+				7F62C46715F7A7420054BA91 /* Frameworks */,
+				7F62C46515F7A7420054BA91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F62C46515F7A7420054BA91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F62C46415F7A7420054BA91 /* ET SDK Demo.app */,
+				7F6CCDD215FA1F9B009E8D79 /* libetpushsdk.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F62C46715F7A7420054BA91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F557F551611F84600DF65A2 /* AudioToolbox.framework */,
+				7F557F521611F82A00DF65A2 /* CoreAudio.framework */,
+				7F62C49A15F7A8770054BA91 /* CoreLocation.framework */,
+				7F62C49815F7A8710054BA91 /* StoreKit.framework */,
+				7F62C49615F7A86C0054BA91 /* CoreTelephony.framework */,
+				7F62C49415F7A8660054BA91 /* libsqlite3.dylib */,
+				7F62C49215F7A8610054BA91 /* libz.dylib */,
+				7F62C49015F7A85A0054BA91 /* SystemConfiguration.framework */,
+				7F62C48E15F7A8550054BA91 /* Security.framework */,
+				7F62C48C15F7A84F0054BA91 /* MobileCoreServices.framework */,
+				7F62C48A15F7A8450054BA91 /* CFNetwork.framework */,
+				7F62C46815F7A7420054BA91 /* UIKit.framework */,
+				7F62C46A15F7A7420054BA91 /* Foundation.framework */,
+				7F62C46C15F7A7420054BA91 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F62C46E15F7A7420054BA91 /* ET SDK Demo */ = {
+			isa = PBXGroup;
+			children = (
+				7F62C47715F7A7420054BA91 /* ETAppDelegate.h */,
+				7F62C47815F7A7420054BA91 /* ETAppDelegate.m */,
+				7F62C47A15F7A7420054BA91 /* ETViewController.h */,
+				7F62C47B15F7A7420054BA91 /* ETViewController.m */,
+				7F62C47D15F7A7420054BA91 /* ETViewController_iPhone.xib */,
+				7F62C48015F7A7420054BA91 /* ETViewController_iPad.xib */,
+				7F62C49C15F7A93B0054BA91 /* AirshipConfig.plist */,
+				7F62C46F15F7A7420054BA91 /* Supporting Files */,
+			);
+			path = "ET SDK Demo";
+			sourceTree = "<group>";
+		};
+		7F62C46F15F7A7420054BA91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F62C47015F7A7420054BA91 /* ET SDK Demo-Info.plist */,
+				7F62C47115F7A7420054BA91 /* InfoPlist.strings */,
+				7F62C47415F7A7420054BA91 /* main.m */,
+				7F62C47615F7A7420054BA91 /* ET SDK Demo-Prefix.pch */,
+				7F13A04615FE7C9D00BAC9B0 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F6CCDD415FA1F9B009E8D79 /* etpushsdk */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D4B2D1614D94A000A8128 /* docs */,
+				7F8E7EB81610AE6000E51D61 /* Customs and Overrides */,
+				7F6CCDD515FA1F9B009E8D79 /* Supporting Files */,
+				7F6CCDD715FA1F9B009E8D79 /* ETPush.h */,
+				7F6CCDD915FA1F9B009E8D79 /* ETPush.m */,
+				7F8134BD160B548100919DE4 /* ETData.h */,
+				7F8134BE160B548100919DE4 /* ETData.m */,
+				7F8134BF160B548100919DE4 /* ETDataConnector.h */,
+				7F8134C0160B548100919DE4 /* ETDataConnector.m */,
+				7F13A0471600CD4400BAC9B0 /* UIDevice+Identifier.h */,
+				7F13A0481600CD4400BAC9B0 /* UIDevice+Identifier.m */,
+				7F13A04015FE6E2000BAC9B0 /* PushConstants.h */,
+			);
+			path = etpushsdk;
+			sourceTree = "<group>";
+		};
+		7F6CCDD515FA1F9B009E8D79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F6CCDD615FA1F9B009E8D79 /* etpushsdk-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F8E7EB81610AE6000E51D61 /* Customs and Overrides */ = {
+			isa = PBXGroup;
+			children = (
+				7F8E7EBA1610AE7E00E51D61 /* ETURLConnection.h */,
+				7F8E7EBB1610AE7E00E51D61 /* ETURLConnection.m */,
+			);
+			name = "Customs and Overrides";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7F8AB86E161B4083005DFE0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6CCDD815FA1F9B009E8D79 /* ETPush.h in Headers */,
+				7F8AB82B1619D9E2005DFE0D /* ETURLConnection.h in Headers */,
+				7F8AB82C1619D9E2005DFE0D /* ETData.h in Headers */,
+				7F8AB82D1619D9E2005DFE0D /* ETDataConnector.h in Headers */,
+				7F8AB8221619D557005DFE0D /* PushConstants.h in Headers */,
+				7F8AB82E1619D9E2005DFE0D /* UIDevice+Identifier.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7F62C46315F7A7420054BA91 /* ET SDK Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F62C48515F7A7420054BA91 /* Build configuration list for PBXNativeTarget "ET SDK Demo" */;
+			buildPhases = (
+				7F62C46015F7A7420054BA91 /* Sources */,
+				7F62C46115F7A7420054BA91 /* Frameworks */,
+				7F62C46215F7A7420054BA91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F6CCDE815FA28CC009E8D79 /* PBXTargetDependency */,
+			);
+			name = "ET SDK Demo";
+			productName = "ET SDK Demo";
+			productReference = 7F62C46415F7A7420054BA91 /* ET SDK Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F6CCDD115FA1F9B009E8D79 /* etpushsdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6CCDDD15FA1F9B009E8D79 /* Build configuration list for PBXNativeTarget "etpushsdk" */;
+			buildPhases = (
+				7F6CCDCE15FA1F9B009E8D79 /* Sources */,
+				7F6CCDCF15FA1F9B009E8D79 /* Frameworks */,
+				7F6CCDD015FA1F9B009E8D79 /* CopyFiles */,
+				7F8AB86E161B4083005DFE0D /* Headers */,
+				7F544679162DEEFE00EFACA7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = etpushsdk;
+			productName = etpushsdk;
+			productReference = 7F6CCDD215FA1F9B009E8D79 /* libetpushsdk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F62C45B15F7A7420054BA91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ET;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "ExactTarget, Inc";
+			};
+			buildConfigurationList = 7F62C45E15F7A7420054BA91 /* Build configuration list for PBXProject "ET SDK Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7F62C45915F7A7410054BA91;
+			productRefGroup = 7F62C46515F7A7420054BA91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F62C46315F7A7420054BA91 /* ET SDK Demo */,
+				7F6CCDD115FA1F9B009E8D79 /* etpushsdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F62C46215F7A7420054BA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F62C47315F7A7420054BA91 /* InfoPlist.strings in Resources */,
+				7F62C47F15F7A7420054BA91 /* ETViewController_iPhone.xib in Resources */,
+				7F62C48215F7A7420054BA91 /* ETViewController_iPad.xib in Resources */,
+				7F62C49D15F7A93B0054BA91 /* AirshipConfig.plist in Resources */,
+				7F13A04415FE7C9D00BAC9B0 /* Localizable.strings in Resources */,
+				7F8134C4160B549D00919DE4 /* Default-568h@2x.png in Resources */,
+				7F5446CC163EAFD200EFACA7 /* grayapp.png in Resources */,
+				7F5446CE163EAFE500EFACA7 /* grayapp1.png in Resources */,
+				7F5446D0163EB09200EFACA7 /* Default@2x.png in Resources */,
+				7F5446D2163EB10A00EFACA7 /* Default.png in Resources */,
+				7F5446D4163EB50200EFACA7 /* grayapp2.png in Resources */,
+				7F5446D6163EB51800EFACA7 /* grayapp3.png in Resources */,
+				7F344FC8169DFA66005CBE6B /* custom.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F544679162DEEFE00EFACA7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Version 2.0 (updated for Xcode 4, with some fixes)\n# Changes:\n#    - Works with xcode 4, even when running xcode 3 projects (Workarounds for apple bugs)\n#    - Faster / better: only runs lipo once, instead of once per recursion\n#    - Added some debugging statemetns that can be switched on/off by changing the DEBUG_THIS_SCRIPT variable to \"true\"\n#    - Fixed some typos\n#\n# Purpose:\n#   Create a static library for iPhone from within XCode\n#   Because Apple staff DELIBERATELY broke Xcode to make this impossible from the GUI (Xcode 3.2.3 specifically states this in the Release notes!)\n#   ...no, I don't understand why they did this!\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n# More info: see this Stack Overflow question: http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nexport TARGET_BUILD_DIR=\"~/build\"\n\nDEBUG_THIS_SCRIPT=\"true\"\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n# Next, work out if we're in SIM or DEVICE\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\n\nexport ALREADYINVOKED=\"true\"\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\"\nxcodebuild -configuration \"${CONFIGURATION}\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nACTION=\"build\"\n#Merge all platform binaries as a fat binary for each configurations.\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\nCREATING_UNIVERSAL_DIR=\"/Users/Shared/BuiltProducts/${TARGET_NAME}\"\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\nrm -rf \"${CREATING_UNIVERSAL_DIR}/*.a\"\n#mkdir \"${CREATING_UNIVERSAL_DIR}\"\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nlipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\n#if [ -d \"${CURRENTCONFIG_SIMULATOR_DIR}/usr/local/include\" ]\n#then\n#mkdir -p \"${CREATING_UNIVERSAL_DIR}/usr/local/include\"\n## * needs to be outside the double quotes?\n#cp -r \"${CURRENTCONFIG_DEVICE_DIR}/usr/local/include/*\" \"${CREATING_UNIVERSAL_DIR}\"\n#fi\nfi";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F62C46015F7A7420054BA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F62C47515F7A7420054BA91 /* main.m in Sources */,
+				7F62C47915F7A7420054BA91 /* ETAppDelegate.m in Sources */,
+				7F62C47C15F7A7420054BA91 /* ETViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6CCDCE15FA1F9B009E8D79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6CCDDA15FA1F9B009E8D79 /* ETPush.m in Sources */,
+				7F13A0491600CD4400BAC9B0 /* UIDevice+Identifier.m in Sources */,
+				7F8134C1160B548100919DE4 /* ETData.m in Sources */,
+				7F8134C2160B548100919DE4 /* ETDataConnector.m in Sources */,
+				7F8E7EBC1610AE7E00E51D61 /* ETURLConnection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F6CCDE815FA28CC009E8D79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F6CCDD115FA1F9B009E8D79 /* etpushsdk */;
+			targetProxy = 7F6CCDE715FA28CC009E8D79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F13A04615FE7C9D00BAC9B0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F13A04515FE7C9D00BAC9B0 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		7F62C47115F7A7420054BA91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F62C47215F7A7420054BA91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7F62C47D15F7A7420054BA91 /* ETViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F62C47E15F7A7420054BA91 /* en */,
+			);
+			name = ETViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		7F62C48015F7A7420054BA91 /* ETViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F62C48115F7A7420054BA91 /* en */,
+			);
+			name = ETViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F62C48315F7A7420054BA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F62C48415F7A7420054BA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F62C48615F7A7420054BA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Edwin Roger (8E395V6HFD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Edwin Roger (8E395V6HFD)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ET SDK Demo/ET SDK Demo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Airship\"/**";
+				INFOPLIST_FILE = "ET SDK Demo/ET SDK Demo-Info.plist";
+				INSTALL_GROUP = everyone;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Airship\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "90E30D66-5A9E-4132-8FD3-8A04CA90FA38";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "90E30D66-5A9E-4132-8FD3-8A04CA90FA38";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7F62C48715F7A7420054BA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ExactTarget, Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ExactTarget, Inc";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ET SDK Demo/ET SDK Demo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Airship\"/**";
+				INFOPLIST_FILE = "ET SDK Demo/ET SDK Demo-Info.plist";
+				INSTALL_GROUP = everyone;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Airship\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2F883D08-3E06-47D2-9283-F78D03D60E6D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2F883D08-3E06-47D2-9283-F78D03D60E6D";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7F6CCDDB15FA1F9B009E8D79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/etpushsdk.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "etpushsdk/etpushsdk-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Airship\"/**";
+				INSTALL_GROUP = everyone;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Airship\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s i386";
+			};
+			name = Debug;
+		};
+		7F6CCDDC15FA1F9B009E8D79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/etpushsdk.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "etpushsdk/etpushsdk-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Airship\"/**";
+				INSTALL_GROUP = everyone;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Airship\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F62C45E15F7A7420054BA91 /* Build configuration list for PBXProject "ET SDK Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F62C48315F7A7420054BA91 /* Debug */,
+				7F62C48415F7A7420054BA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F62C48515F7A7420054BA91 /* Build configuration list for PBXNativeTarget "ET SDK Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F62C48615F7A7420054BA91 /* Debug */,
+				7F62C48715F7A7420054BA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F6CCDDD15FA1F9B009E8D79 /* Build configuration list for PBXNativeTarget "etpushsdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6CCDDB15FA1F9B009E8D79 /* Debug */,
+				7F6CCDDC15FA1F9B009E8D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F62C45B15F7A7420054BA91 /* Project object */;
+}

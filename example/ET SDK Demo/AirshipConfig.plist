@@ -1,0 +1,8 @@
+{
+    /* NOTE: DO NOT USE THE MASTER SECRET */
+    "APP_STORE_OR_AD_HOC_BUILD" = NO; /* set to YES for production builds */
+    "DEVELOPMENT_APP_KEY" = "F_fKnFKWS1KZnybGSh0vaw";
+    "DEVELOPMENT_APP_SECRET" = "6jvftNpjRveCJs1e3kAFww";
+    "PRODUCTION_APP_KEY" = "Your production app key";
+    "PRODUCTION_APP_SECRET" = "Your production app secret";
+}

@@ -1,0 +1,1728 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ETPush Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ExactTarget MobilePush SDK </a></h1>
+				<a id="developerHome" href="../index.html">ExactTarget, Inc</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ETPush Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/pushManager">&nbsp;&nbsp;&nbsp;&nbsp;+ pushManager</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addAttributeNamed:value:">&nbsp;&nbsp;&nbsp;&nbsp;- addAttributeNamed:value:</option>
+	
+	<option value="//api/name/addTag:">&nbsp;&nbsp;&nbsp;&nbsp;- addTag:</option>
+	
+	<option value="//api/name/allTags">&nbsp;&nbsp;&nbsp;&nbsp;- allTags</option>
+	
+	<option value="//api/name/applicationDidBecomeActiveNotificationReceived">&nbsp;&nbsp;&nbsp;&nbsp;- applicationDidBecomeActiveNotificationReceived</option>
+	
+	<option value="//api/name/applicationDidEnterBackgroundNotificationReceived">&nbsp;&nbsp;&nbsp;&nbsp;- applicationDidEnterBackgroundNotificationReceived</option>
+	
+	<option value="//api/name/applicationDidFailToRegisterForRemoteNotificationsWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- applicationDidFailToRegisterForRemoteNotificationsWithError:</option>
+	
+	<option value="//api/name/applicationLaunchedWithOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- applicationLaunchedWithOptions:</option>
+	
+	<option value="//api/name/applicationTerminated">&nbsp;&nbsp;&nbsp;&nbsp;- applicationTerminated</option>
+	
+	<option value="//api/name/clearSavedAuthToken">&nbsp;&nbsp;&nbsp;&nbsp;- clearSavedAuthToken</option>
+	
+	<option value="//api/name/configureSDKWithAppID:andClientID:andClientSecret:">&nbsp;&nbsp;&nbsp;&nbsp;- configureSDKWithAppID:andClientID:andClientSecret:</option>
+	
+	<option value="//api/name/handleNotification:forApplicationState:">&nbsp;&nbsp;&nbsp;&nbsp;- handleNotification:forApplicationState:</option>
+	
+	<option value="//api/name/registerDeviceToken:">&nbsp;&nbsp;&nbsp;&nbsp;- registerDeviceToken:</option>
+	
+	<option value="//api/name/registerForRemoteNotificationTypes:">&nbsp;&nbsp;&nbsp;&nbsp;- registerForRemoteNotificationTypes:</option>
+	
+	<option value="//api/name/removeAttributeNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- removeAttributeNamed:</option>
+	
+	<option value="//api/name/removeTag:">&nbsp;&nbsp;&nbsp;&nbsp;- removeTag:</option>
+	
+	<option value="//api/name/resetBadgeCount">&nbsp;&nbsp;&nbsp;&nbsp;- resetBadgeCount</option>
+	
+	<option value="//api/name/setQuietTimeStart:end:">&nbsp;&nbsp;&nbsp;&nbsp;- setQuietTimeStart:end:</option>
+	
+	<option value="//api/name/setUserEmailAddress:">&nbsp;&nbsp;&nbsp;&nbsp;- setUserEmailAddress:</option>
+	
+	<option value="//api/name/shouldDisplayAlertViewIfPushReceived:">&nbsp;&nbsp;&nbsp;&nbsp;- shouldDisplayAlertViewIfPushReceived:</option>
+	
+	<option value="//api/name/startListeningForApplicationNotifications">&nbsp;&nbsp;&nbsp;&nbsp;- startListeningForApplicationNotifications</option>
+	
+	<option value="//api/name/stopListeningForApplicationNotifications">&nbsp;&nbsp;&nbsp;&nbsp;- stopListeningForApplicationNotifications</option>
+	
+	<option value="//api/name/updateET">&nbsp;&nbsp;&nbsp;&nbsp;- updateET</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Configuring the app for ETPush">Configuring the app for ETPush</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Push Lifecycle">Push Lifecycle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Application Lifecycle">Application Lifecycle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Data Interaction">Data Interaction</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Listeners for UIApplication events">Listeners for UIApplication events</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pushManager">pushManager</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAttributeNamed:value:">addAttributeNamed:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addTag:">addTag:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allTags">allTags</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationDidBecomeActiveNotificationReceived">applicationDidBecomeActiveNotificationReceived</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationDidEnterBackgroundNotificationReceived">applicationDidEnterBackgroundNotificationReceived</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationDidFailToRegisterForRemoteNotificationsWithError:">applicationDidFailToRegisterForRemoteNotificationsWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationLaunchedWithOptions:">applicationLaunchedWithOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationTerminated">applicationTerminated</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearSavedAuthToken">clearSavedAuthToken</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/configureSDKWithAppID:andClientID:andClientSecret:">configureSDKWithAppID:andClientID:andClientSecret:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleNotification:forApplicationState:">handleNotification:forApplicationState:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerDeviceToken:">registerDeviceToken:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerForRemoteNotificationTypes:">registerForRemoteNotificationTypes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAttributeNamed:">removeAttributeNamed:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeTag:">removeTag:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetBadgeCount">resetBadgeCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setQuietTimeStart:end:">setQuietTimeStart:end:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setUserEmailAddress:">setUserEmailAddress:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldDisplayAlertViewIfPushReceived:">shouldDisplayAlertViewIfPushReceived:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startListeningForApplicationNotifications">startListeningForApplicationNotifications</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopListeningForApplicationNotifications">stopListeningForApplicationNotifications</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateET">updateET</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ETPush Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ETPush Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ETPush.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This is the main interface to the ExactTarget MobilePush SDK. It is meant to handle a lot of the heavy lifting with regards to sending data back to ExactTarget.</p>
+
+<p>Please note that this is a singleton object, and you should reference it as <a href="#//api/name/pushManager">[ETPush pushManager]</a>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Configuring the app for ETPush" name="task_Configuring the app for ETPush"></a>
+						<h3 class="subsubtitle task-title">Configuring the app for ETPush</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pushManager">+&nbsp;pushManager</a></code>
+		<span class="tooltip"><p>Returns (or initializes) the shared pushManager instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/configureSDKWithAppID:andClientID:andClientSecret:">&ndash;&nbsp;configureSDKWithAppID:andClientID:andClientSecret:</a></code>
+		<span class="tooltip"><p>This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateET">&ndash;&nbsp;updateET</a></code>
+		<span class="tooltip"><p>Triggers a data send to ExactTarget. Mostly used internally, but this method can be used to prompt a send if you desire.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearSavedAuthToken">&ndash;&nbsp;clearSavedAuthToken</a></code>
+		<span class="tooltip"><p>Clears the Fuel Auth token data from NSUserDefaults. This isn&rsquo;t always going to be useful, but it is if you do something like change your credentials. Call it with care.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Push Lifecycle" name="task_Push Lifecycle"></a>
+						<h3 class="subsubtitle task-title">Push Lifecycle</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/registerForRemoteNotificationTypes:">&ndash;&nbsp;registerForRemoteNotificationTypes:</a></code>
+		<span class="tooltip"><p>Wrapper for iOS' application:registerForRemoteNotifications; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/registerDeviceToken:">&ndash;&nbsp;registerDeviceToken:</a></code>
+		<span class="tooltip"><p>Responsible for sending a received token back to ExactTarget. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationDidFailToRegisterForRemoteNotificationsWithError:">&ndash;&nbsp;applicationDidFailToRegisterForRemoteNotificationsWithError:</a></code>
+		<span class="tooltip"><p>Handles a registration failure.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetBadgeCount">&ndash;&nbsp;resetBadgeCount</a></code>
+		<span class="tooltip"><p>Reset the application&rsquo;s badge number to zero (aka, remove it) and let the push servers know that it should zero the count.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldDisplayAlertViewIfPushReceived:">&ndash;&nbsp;shouldDisplayAlertViewIfPushReceived:</a></code>
+		<span class="tooltip"><p>Tell the SDK to display a UIAlertView if a push is received while the app is already running. Default behavior is set to NO.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Application Lifecycle" name="task_Application Lifecycle"></a>
+						<h3 class="subsubtitle task-title">Application Lifecycle</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationLaunchedWithOptions:">&ndash;&nbsp;applicationLaunchedWithOptions:</a></code>
+		<span class="tooltip"><p>Notifies the ET SDK of an app launch, including the dictionary sent to the app by iOS. The launchOptions dictionary is necessary because it will include the APNS dictionary, necessary for processing opens and other analytic information.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationTerminated">&ndash;&nbsp;applicationTerminated</a></code>
+		<span class="tooltip"><p>Notifies the ET SDK of an app termination. Internally, this method does a lot of cleanup.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleNotification:forApplicationState:">&ndash;&nbsp;handleNotification:forApplicationState:</a></code>
+		<span class="tooltip"><p>Handles a push notification received by the app when the application is already running.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Data Interaction" name="task_Data Interaction"></a>
+						<h3 class="subsubtitle task-title">Data Interaction</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setUserEmailAddress:">&ndash;&nbsp;setUserEmailAddress:</a></code>
+		<span class="tooltip"><p>Accepts the email address to identify the device&rsquo;s user.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addTag:">&ndash;&nbsp;addTag:</a></code>
+		<span class="tooltip"><p>Adds the provided Tag (NSString) to the list of tags.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeTag:">&ndash;&nbsp;removeTag:</a></code>
+		<span class="tooltip"><p>Removes the provided Tag (NSString) from the list of tags.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/allTags">&ndash;&nbsp;allTags</a></code>
+		<span class="tooltip"><p>Returns the list of tags for this device.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAttributeNamed:value:">&ndash;&nbsp;addAttributeNamed:value:</a></code>
+		<span class="tooltip"><p>Adds an attribute to the data set sent to ExactTarget.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAttributeNamed:">&ndash;&nbsp;removeAttributeNamed:</a></code>
+		<span class="tooltip"><p>Removes the provided attributef rom the data set to send to ExactTarget.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setQuietTimeStart:end:">&ndash;&nbsp;setQuietTimeStart:end:</a></code>
+		<span class="tooltip"><p>Sets the quiet time for the user, where they do not wish to be disturbed.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Listeners for UIApplication events" name="task_Listeners for UIApplication events"></a>
+						<h3 class="subsubtitle task-title">Listeners for UIApplication events</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startListeningForApplicationNotifications">&ndash;&nbsp;startListeningForApplicationNotifications</a></code>
+		<span class="tooltip"><p>Sets up the listeners.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopListeningForApplicationNotifications">&ndash;&nbsp;stopListeningForApplicationNotifications</a></code>
+		<span class="tooltip"><p>Drops the listeners.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationDidBecomeActiveNotificationReceived">&ndash;&nbsp;applicationDidBecomeActiveNotificationReceived</a></code>
+		<span class="tooltip"><p>Responds to the UIApplicationDidBecomeActiveNotification notification</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationDidEnterBackgroundNotificationReceived">&ndash;&nbsp;applicationDidEnterBackgroundNotificationReceived</a></code>
+		<span class="tooltip"><p>Responds to the UIApplicationDidEnterBackgroundNotification notification</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/pushManager" title="pushManager"></a>
+	<h3 class="subsubtitle method-title">pushManager</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns (or initializes) the shared pushManager instance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (ETPush *)pushManager</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The singleton instance of an ETPush pushManager.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns (or initializes) the shared pushManager instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addAttributeNamed:value:" title="addAttributeNamed:value:"></a>
+	<h3 class="subsubtitle method-title">addAttributeNamed:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds an attribute to the data set sent to ExactTarget.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addAttributeNamed:(NSString *)<em>name</em> value:(NSString *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name of the attribute you wish to send. This will be the key of the pair.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>The value to set for thid data pair.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Adds an attribute to the data set sent to ExactTarget.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addTag:" title="addTag:"></a>
+	<h3 class="subsubtitle method-title">addTag:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds the provided Tag (NSString) to the list of tags.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addTag:(NSString *)<em>tag</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tag</em></dt>
+			<dd><p>A string to add to the list of tags</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Adds the provided Tag (NSString) to the list of tags.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/allTags" title="allTags"></a>
+	<h3 class="subsubtitle method-title">allTags</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the list of tags for this device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSSet *)allTags</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>All tags associated.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the list of tags for this device.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationDidBecomeActiveNotificationReceived" title="applicationDidBecomeActiveNotificationReceived"></a>
+	<h3 class="subsubtitle method-title">applicationDidBecomeActiveNotificationReceived</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Responds to the UIApplicationDidBecomeActiveNotification notification</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)applicationDidBecomeActiveNotificationReceived</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Responds to the UIApplicationDidBecomeActiveNotification notification</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationDidEnterBackgroundNotificationReceived" title="applicationDidEnterBackgroundNotificationReceived"></a>
+	<h3 class="subsubtitle method-title">applicationDidEnterBackgroundNotificationReceived</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Responds to the UIApplicationDidEnterBackgroundNotification notification</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)applicationDidEnterBackgroundNotificationReceived</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Responds to the UIApplicationDidEnterBackgroundNotification notification</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationDidFailToRegisterForRemoteNotificationsWithError:" title="applicationDidFailToRegisterForRemoteNotificationsWithError:"></a>
+	<h3 class="subsubtitle method-title">applicationDidFailToRegisterForRemoteNotificationsWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Handles a registration failure.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)applicationDidFailToRegisterForRemoteNotificationsWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>The error returned to the application on a registration failure</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Handles a registration failure.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationLaunchedWithOptions:" title="applicationLaunchedWithOptions:"></a>
+	<h3 class="subsubtitle method-title">applicationLaunchedWithOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Notifies the ET SDK of an app launch, including the dictionary sent to the app by iOS. The launchOptions dictionary is necessary because it will include the APNS dictionary, necessary for processing opens and other analytic information.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)applicationLaunchedWithOptions:(NSDictionary *)<em>launchOptions</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>launchOptions</em></dt>
+			<dd><p>The dictionary passed to the application by iOS on launch.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Notifies the ET SDK of an app launch, including the dictionary sent to the app by iOS. The launchOptions dictionary is necessary because it will include the APNS dictionary, necessary for processing opens and other analytic information.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationTerminated" title="applicationTerminated"></a>
+	<h3 class="subsubtitle method-title">applicationTerminated</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Notifies the ET SDK of an app termination. Internally, this method does a lot of cleanup.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)applicationTerminated</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value (but how could it &ndash; the app terminated)</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Notifies the ET SDK of an app termination. Internally, this method does a lot of cleanup.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clearSavedAuthToken" title="clearSavedAuthToken"></a>
+	<h3 class="subsubtitle method-title">clearSavedAuthToken</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Clears the Fuel Auth token data from NSUserDefaults. This isn&rsquo;t always going to be useful, but it is if you do something like change your credentials. Call it with care.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)clearSavedAuthToken</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Clears the Fuel Auth token data from NSUserDefaults. This isn&rsquo;t always going to be useful, but it is if you do something like change your credentials. Call it with care.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/configureSDKWithAppID:andClientID:andClientSecret:" title="configureSDKWithAppID:andClientID:andClientSecret:"></a>
+	<h3 class="subsubtitle method-title">configureSDKWithAppID:andClientID:andClientSecret:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)configureSDKWithAppID:(NSString *)<em>etAppID</em> andClientID:(NSString *)<em>clientID</em> andClientSecret:(NSString *)<em>clientSecret</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>etAppID</em></dt>
+			<dd><p>The GUID-style ID for your app as set up in Code@</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientID</em></dt>
+			<dd><p>Assigned ID for use with OAuth authentication flow</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientSecret</em></dt>
+			<dd><p>Assigned secret for use with OAuth authentication flow</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p>
+
+<p>If you are unsure of any of these variables, please check with code@exacttarget (code.exacttarget.com).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handleNotification:forApplicationState:" title="handleNotification:forApplicationState:"></a>
+	<h3 class="subsubtitle method-title">handleNotification:forApplicationState:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Handles a push notification received by the app when the application is already running.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)handleNotification:(NSDictionary *)<em>userInfo</em> forApplicationState:(UIApplicationState)<em>applicationState</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userInfo</em></dt>
+			<dd><p>The dictionary containing the push notification</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>applicationState</em></dt>
+			<dd><p>State of the application at time of notification</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Handles a push notification received by the app when the application is already running.</p>
+
+<p>This method must be implemented in [[UIApplication sharedApplication] didReceiveRemoteNotification:userInfo].</p>
+
+<p>Sometimes, when a push comes in, the application will already be running (it happens). This method rises to the occasion of handing that notification, displaying an Alert (if the SDK is configured to do so), and calling all of the analytic methods that wouldn&rsquo;t be called otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/registerDeviceToken:" title="registerDeviceToken:"></a>
+	<h3 class="subsubtitle method-title">registerDeviceToken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Responsible for sending a received token back to ExactTarget. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)registerDeviceToken:(NSData *)<em>deviceToken</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deviceToken</em></dt>
+			<dd><p>Token as received from Apple, still an NSData object</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Responsible for sending a received token back to ExactTarget. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later.</p>
+
+<p>This method is necessary to implementation of ET Push.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/registerForRemoteNotificationTypes:" title="registerForRemoteNotificationTypes:"></a>
+	<h3 class="subsubtitle method-title">registerForRemoteNotificationTypes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Wrapper for iOS' application:registerForRemoteNotifications; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)<em>types</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>types</em></dt>
+			<dd><p>The UIRemoteNotificationTypes that the application would like to use for push. These are pipe-delimited, and use Apple&rsquo;s native values</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Wrapper for iOS' application:registerForRemoteNotifications; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeAttributeNamed:" title="removeAttributeNamed:"></a>
+	<h3 class="subsubtitle method-title">removeAttributeNamed:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes the provided attributef rom the data set to send to ExactTarget.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)removeAttributeNamed:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name of the attribute you wish to remove.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the value that was set. It will no longer be sent back to ExactTarget.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Removes the provided attributef rom the data set to send to ExactTarget.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeTag:" title="removeTag:"></a>
+	<h3 class="subsubtitle method-title">removeTag:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes the provided Tag (NSString) from the list of tags.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeTag:(NSString *)<em>tag</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tag</em></dt>
+			<dd><p>A string to remove from the list of tags</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Removes the provided Tag (NSString) from the list of tags.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resetBadgeCount" title="resetBadgeCount"></a>
+	<h3 class="subsubtitle method-title">resetBadgeCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reset the application&rsquo;s badge number to zero (aka, remove it) and let the push servers know that it should zero the count.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resetBadgeCount</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reset the application&rsquo;s badge number to zero (aka, remove it) and let the push servers know that it should zero the count.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setQuietTimeStart:end:" title="setQuietTimeStart:end:"></a>
+	<h3 class="subsubtitle method-title">setQuietTimeStart:end:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the quiet time for the user, where they do not wish to be disturbed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setQuietTimeStart:(NSString *)<em>start</em> end:(NSString *)<em>end</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>start</em></dt>
+			<dd><p>The time to begin quiet time in the format of HH:MM</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>end</em></dt>
+			<dd><p>The time to end quiet time in the format of HH:MM</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the quiet time for the user, where they do not wish to be disturbed.</p>
+
+<p>The time should be in 24 hour format, and will be treated as local time to the device.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setUserEmailAddress:" title="setUserEmailAddress:"></a>
+	<h3 class="subsubtitle method-title">setUserEmailAddress:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accepts the email address to identify the device&rsquo;s user.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setUserEmailAddress:(NSString *)<em>emailAddress</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accepts the email address to identify the device&rsquo;s user.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldDisplayAlertViewIfPushReceived:" title="shouldDisplayAlertViewIfPushReceived:"></a>
+	<h3 class="subsubtitle method-title">shouldDisplayAlertViewIfPushReceived:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tell the SDK to display a UIAlertView if a push is received while the app is already running. Default behavior is set to NO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)shouldDisplayAlertViewIfPushReceived:(BOOL)<em>desiredState</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>desiredState</em></dt>
+			<dd><p>YES/NO if you want to display an alert view while the app is running.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Tell the SDK to display a UIAlertView if a push is received while the app is already running. Default behavior is set to NO.</p>
+
+<p>Please note that all push notifications received by the application will be processed, but iOS will <em>not</em> present an alert to the user if the app is running when the alert is received. If you set this value to true (YES), then the SDK will generate and present the alert for you. It will not play a sound, though.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startListeningForApplicationNotifications" title="startListeningForApplicationNotifications"></a>
+	<h3 class="subsubtitle method-title">startListeningForApplicationNotifications</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets up the listeners.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startListeningForApplicationNotifications</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets up the listeners.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopListeningForApplicationNotifications" title="stopListeningForApplicationNotifications"></a>
+	<h3 class="subsubtitle method-title">stopListeningForApplicationNotifications</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Drops the listeners.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopListeningForApplicationNotifications</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Drops the listeners.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateET" title="updateET"></a>
+	<h3 class="subsubtitle method-title">updateET</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Triggers a data send to ExactTarget. Mostly used internally, but this method can be used to prompt a send if you desire.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updateET</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Triggers a data send to ExactTarget. Mostly used internally, but this method can be used to prompt a send if you desire.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 ExactTarget, Inc. All rights reserved. (Last updated: 2013-01-22)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

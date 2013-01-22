@@ -1,2 +1,3 @@
-MobilePushSDK-iOS
-=================
+ExactTarget MobilePush SDK for iOS
+==================================
+
