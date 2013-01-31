@@ -7,8 +7,8 @@
 //
 
 // SDK Version
-#define ETPushSDKVersionString @"1.0.1"
-#define ETPushSDKVersionNumber 1010
+#define ETPushSDKVersionString @"1.1.1"
+#define ETPushSDKVersionNumber 1110
 
 /** 
  Helpers.
@@ -57,4 +57,9 @@ typedef enum {
     ETPushModeQA2, // Points to the QA2 URL
     ETPushModeSilent // Won't actually phone home. Just goes through the motions
 } ETPushMode;
+
+typedef enum {
+    PushOriginationStateBackground = 0,
+    PushOriginationStateForeground
+} PushOriginationState;
 

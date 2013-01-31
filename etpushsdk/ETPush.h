@@ -12,6 +12,38 @@
 #import "ETDataconnector.h"
 #import "PushConstants.h"
 
+/**
+ Supporting protocol for OpenDirect, part of the ExactTarget 2013-02 release. 
+ 
+ Implementation of this delegate is not required for OpenDirect to function, but it is provided as a convenience to developers who do not with to parse the push payload on their own. 
+ 
+ All OpenDirect data is passed down as a JSON String, so you get it as an NSString. Please remember to parse it appropriately from there. Also, please remember to fail gracefully if you can't take action on the message. 
+ */
+@protocol ExactTargetOpenDirectDelegate <NSObject>
+
+/**
+ Method called when an OpenDirect payload is received from MobilePush. 
+ 
+ @param payload The contents of the payload as received from MobilePush.
+ @return Doesn't return a value.
+ */
+-(void)didReceiveOpenDirectMessageWithContents:(NSString *)payload;
+
+@optional
+
+/**
+ Allows you to define the behavior of OpenDirect based on application state. 
+ 
+ If set to YES, the OpenDirect delegate will be called if a push with an OpenDirect payload is received and the application state is running. This is counter to normal push behavior, so the default is NO.
+
+ Consider that if you set this to YES, and the user is running the app when a push comes in, the app will start doing things that they didn't prompt it to do. This is bad user experience since it's confusing to the user. Along these lines, iOS won't present a notification if one is received while the app is running. 
+ 
+ @return BOOL representing whether or not you want action to be taken.
+ */
+-(BOOL)shouldDeliverOpenDirectMessageIfAppIsRunning;
+
+@end
+
 /** 
  This is the main interface to the ExactTarget MobilePush SDK. It is meant to handle a lot of the heavy lifting with regards to sending data back to ExactTarget. 
  
@@ -25,6 +57,9 @@
     
     ETPushMode _pushMode;
     BOOL _showLocalAlert;
+    
+    // OpenDirect Delegate stuff
+    id<ExactTargetOpenDirectDelegate> _openDirectDelegate;
 }
 
 /**---------------------------------------------------------------------------------------
@@ -55,7 +90,15 @@
                    andClientSecret:(NSString *)clientSecret;
 
 /**
- Triggers a data send to ExactTarget. Mostly used internally, but this method can be used to prompt a send if you desire. 
+ Sets the OpenDirect delegate.
+ 
+ @param delegate The object you wish to be called when an OpenDirect message is delivered. 
+ @return Doesn't return a value.
+ */
+-(void)setOpenDirectDelegate:(id<ExactTargetOpenDirectDelegate>)delegate;
+
+/**
+ Triggers a data send to ExactTarget. Mostly used internally, and rarely should be called by client code.
  
  */
 -(void)updateET;
@@ -66,6 +109,16 @@
  @return Doesn't return a value.
  */
 -(void)clearSavedAuthToken;
+
+/**
+ Causes the SDK to present a local notification if a push is received while the app is running. Default is NO.
+ 
+ Due to the way iOS processes a push notification, if the app is running when one comes in, the app is given the payload, but no notification is presented to the user. By setting this method to YES, if this situation occurs, a local UIAlertView is generated and presented to the user, mimicking a real push alert. 
+ 
+ @param desiredState A BOOL stating whether or not you wish for this behavior to be active.
+ @return Doesn't return a value.
+ */
+-(void)setDisplayLocalNotificationsTo:(BOOL)desiredState;
 
 /**---------------------------------------------------------------------------------------
  * @name Push Lifecycle

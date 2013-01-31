@@ -81,6 +81,10 @@
 	
 	<option value="//api/name/resetBadgeCount">&nbsp;&nbsp;&nbsp;&nbsp;- resetBadgeCount</option>
 	
+	<option value="//api/name/setDisplayLocalNotificationsTo:">&nbsp;&nbsp;&nbsp;&nbsp;- setDisplayLocalNotificationsTo:</option>
+	
+	<option value="//api/name/setOpenDirectDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- setOpenDirectDelegate:</option>
+	
 	<option value="//api/name/setQuietTimeStart:end:">&nbsp;&nbsp;&nbsp;&nbsp;- setQuietTimeStart:end:</option>
 	
 	<option value="//api/name/setUserEmailAddress:">&nbsp;&nbsp;&nbsp;&nbsp;- setUserEmailAddress:</option>
@@ -169,6 +173,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetBadgeCount">resetBadgeCount</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDisplayLocalNotificationsTo:">setDisplayLocalNotificationsTo:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setOpenDirectDelegate:">setOpenDirectDelegate:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setQuietTimeStart:end:">setQuietTimeStart:end:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setUserEmailAddress:">setUserEmailAddress:</a></span></li>
@@ -252,8 +260,15 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/setOpenDirectDelegate:">&ndash;&nbsp;setOpenDirectDelegate:</a></code>
+		<span class="tooltip"><p>Sets the OpenDirect delegate.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/updateET">&ndash;&nbsp;updateET</a></code>
-		<span class="tooltip"><p>Triggers a data send to ExactTarget. Mostly used internally, but this method can be used to prompt a send if you desire.</p></span>
+		<span class="tooltip"><p>Triggers a data send to ExactTarget. Mostly used internally, and rarely should be called by client code.</p></span>
 	</span>
 	
 	
@@ -261,6 +276,13 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/clearSavedAuthToken">&ndash;&nbsp;clearSavedAuthToken</a></code>
 		<span class="tooltip"><p>Clears the Fuel Auth token data from NSUserDefaults. This isn&rsquo;t always going to be useful, but it is if you do something like change your credentials. Call it with care.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDisplayLocalNotificationsTo:">&ndash;&nbsp;setDisplayLocalNotificationsTo:</a></code>
+		<span class="tooltip"><p>Causes the SDK to present a local notification if a push is received while the app is running. Default is NO.</p></span>
 	</span>
 	
 	
@@ -1333,6 +1355,120 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/setDisplayLocalNotificationsTo:" title="setDisplayLocalNotificationsTo:"></a>
+	<h3 class="subsubtitle method-title">setDisplayLocalNotificationsTo:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Causes the SDK to present a local notification if a push is received while the app is running. Default is NO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDisplayLocalNotificationsTo:(BOOL)<em>desiredState</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>desiredState</em></dt>
+			<dd><p>A BOOL stating whether or not you wish for this behavior to be active.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Causes the SDK to present a local notification if a push is received while the app is running. Default is NO.</p>
+
+<p>Due to the way iOS processes a push notification, if the app is running when one comes in, the app is given the payload, but no notification is presented to the user. By setting this method to YES, if this situation occurs, a local UIAlertView is generated and presented to the user, mimicking a real push alert.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setOpenDirectDelegate:" title="setOpenDirectDelegate:"></a>
+	<h3 class="subsubtitle method-title">setOpenDirectDelegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the OpenDirect delegate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setOpenDirectDelegate:(id&lt;ExactTargetOpenDirectDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>The object you wish to be called when an OpenDirect message is delivered.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the OpenDirect delegate.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/setQuietTimeStart:end:" title="setQuietTimeStart:end:"></a>
 	<h3 class="subsubtitle method-title">setQuietTimeStart:end:</h3>
 	
@@ -1578,7 +1714,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Triggers a data send to ExactTarget. Mostly used internally, but this method can be used to prompt a send if you desire.</p>
+		<p>Triggers a data send to ExactTarget. Mostly used internally, and rarely should be called by client code.</p>
 	</div>		
 	
     
@@ -1595,7 +1731,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Triggers a data send to ExactTarget. Mostly used internally, but this method can be used to prompt a send if you desire.</p>
+		<p>Triggers a data send to ExactTarget. Mostly used internally, and rarely should be called by client code.</p>
 	</div>
 	
 	
@@ -1625,7 +1761,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 ExactTarget, Inc. All rights reserved. (Last updated: 2013-01-22)</span><br />
+						<p><span class="copyright">&copy; 2013 ExactTarget, Inc. All rights reserved. (Last updated: 2013-01-31)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
