@@ -1,6 +1,6 @@
 # ExactTarget MobilePush SDK for iOS
 
-This is the git repository for the ET MobilePush SDK for Android. 
+This is the git repository for the ET MobilePush SDK for iOS. 
 
 For more information, please see [Code@ExactTarget](http://code.exacttarget.com).
 
