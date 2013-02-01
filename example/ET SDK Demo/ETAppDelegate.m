@@ -17,18 +17,9 @@
     
     NSLog(@"Launch Options: %@", launchOptions);
     
-    // Production, tied to mobileconnect_er (team account)
-    [[ETPush pushManager] configureSDKWithAppID:@"348b33bb-f3b8-44b6-b632-dd3cff05f4ec"
-                            andClientID:@"u92mz847hjx6xjb5wggwtkgy"
-                        andClientSecret:@"sCAChyS2JDBGxzkCqHsQUTjy"];
-
-    
-    // QA Credentials, tied to MC_E2_mcollins
-//    [[ETPush pushManager] setSdkModeTo:ETPushModeQA1];
-//    [[ETPush pushManager] configureSDKWithAppID:@"7df096f6-03a2-469a-a881-f34e2d6df695"
-//                                    andClientID:@"3uqenkaku8juh7tnz3bharxz"
-//                                andClientSecret:@"KkWbySjnymEtMwPfe9cz5J9N"];
-    
+    [[ETPush pushManager] configureSDKWithAppID:@""
+                            andClientID:@""
+                        andClientSecret:@""];
     
     [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
     [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
