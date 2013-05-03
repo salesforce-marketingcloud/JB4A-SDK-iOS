@@ -67,7 +67,11 @@
 	
 	<option value="//api/name/clearSavedAuthToken">&nbsp;&nbsp;&nbsp;&nbsp;- clearSavedAuthToken</option>
 	
+	<option value="//api/name/configureSDKWithAppID:andAccessToken:">&nbsp;&nbsp;&nbsp;&nbsp;- configureSDKWithAppID:andAccessToken:</option>
+	
 	<option value="//api/name/configureSDKWithAppID:andClientID:andClientSecret:">&nbsp;&nbsp;&nbsp;&nbsp;- configureSDKWithAppID:andClientID:andClientSecret:</option>
+	
+	<option value="//api/name/getSubscriberKey">&nbsp;&nbsp;&nbsp;&nbsp;- getSubscriberKey</option>
 	
 	<option value="//api/name/handleNotification:forApplicationState:">&nbsp;&nbsp;&nbsp;&nbsp;- handleNotification:forApplicationState:</option>
 	
@@ -86,6 +90,8 @@
 	<option value="//api/name/setOpenDirectDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- setOpenDirectDelegate:</option>
 	
 	<option value="//api/name/setQuietTimeStart:end:">&nbsp;&nbsp;&nbsp;&nbsp;- setQuietTimeStart:end:</option>
+	
+	<option value="//api/name/setSubscriberKey:">&nbsp;&nbsp;&nbsp;&nbsp;- setSubscriberKey:</option>
 	
 	<option value="//api/name/setUserEmailAddress:">&nbsp;&nbsp;&nbsp;&nbsp;- setUserEmailAddress:</option>
 	
@@ -159,7 +165,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearSavedAuthToken">clearSavedAuthToken</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/configureSDKWithAppID:andAccessToken:">configureSDKWithAppID:andAccessToken:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/configureSDKWithAppID:andClientID:andClientSecret:">configureSDKWithAppID:andClientID:andClientSecret:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getSubscriberKey">getSubscriberKey</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleNotification:forApplicationState:">handleNotification:forApplicationState:</a></span></li>
 	
@@ -178,6 +188,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setOpenDirectDelegate:">setOpenDirectDelegate:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setQuietTimeStart:end:">setQuietTimeStart:end:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setSubscriberKey:">setSubscriberKey:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setUserEmailAddress:">setUserEmailAddress:</a></span></li>
 	
@@ -254,7 +266,14 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/configureSDKWithAppID:andClientID:andClientSecret:">&ndash;&nbsp;configureSDKWithAppID:andClientID:andClientSecret:</a></code>
-		<span class="tooltip"><p>This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p></span>
+		<span class="tooltip"><p><strong>DEPRECATED</strong> This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/configureSDKWithAppID:andAccessToken:">&ndash;&nbsp;configureSDKWithAppID:andAccessToken:</a></code>
+		<span class="tooltip"><p>This is the main configuration method, responsible for setting credentials needed to communicate with ExactTarget.</p></span>
 	</span>
 	
 	
@@ -370,6 +389,20 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/setUserEmailAddress:">&ndash;&nbsp;setUserEmailAddress:</a></code>
 		<span class="tooltip"><p>Accepts the email address to identify the device&rsquo;s user.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setSubscriberKey:">&ndash;&nbsp;setSubscriberKey:</a></code>
+		<span class="tooltip"><p>Sets the subscriber key for a user, associating this device to said user.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getSubscriberKey">&ndash;&nbsp;getSubscriberKey</a></code>
+		<span class="tooltip"><p>Returns the subscriber key. May be useful.</p></span>
 	</span>
 	
 	
@@ -943,6 +976,71 @@
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Clears the Fuel Auth token data from NSUserDefaults. This isn&rsquo;t always going to be useful, but it is if you do something like change your credentials. Call it with care.</p>
+
+<p>@deprecated This is deprecated as of version 2.0</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/configureSDKWithAppID:andAccessToken:" title="configureSDKWithAppID:andAccessToken:"></a>
+	<h3 class="subsubtitle method-title">configureSDKWithAppID:andAccessToken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This is the main configuration method, responsible for setting credentials needed to communicate with ExactTarget.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)configureSDKWithAppID:(NSString *)<em>etAppID</em> andAccessToken:(NSString *)<em>accessToken</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>etAppID</em></dt>
+			<dd><p>The App ID generated by Code@ExactTarget to identify the consumer app</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>accessToken</em></dt>
+			<dd><p>The designed token given to you by Code@ExactTarget that allows you access to the API</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is the main configuration method, responsible for setting credentials needed to communicate with ExactTarget.</p>
+
+<p>If you are unsure of your accessToken or environment, please visit Code@Exacttarget</p>
 	</div>
 	
 	
@@ -966,7 +1064,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p>
+		<p><strong>DEPRECATED</strong> This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p>
 	</div>		
 	
     
@@ -1008,9 +1106,52 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p>
+		<p><strong>DEPRECATED</strong> This is the main configuration method, responsible for adding credentials necessary to the SDK for basic functionality to work.</p>
 
 <p>If you are unsure of any of these variables, please check with code@exacttarget (code.exacttarget.com).</p>
+
+<p>@deprecated As of 2.0, this method should no longer be used.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getSubscriberKey" title="getSubscriberKey"></a>
+	<h3 class="subsubtitle method-title">getSubscriberKey</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the subscriber key. May be useful.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)getSubscriberKey</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the subscriber key. May be useful.</p>
 	</div>
 	
 	
@@ -1527,6 +1668,47 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/setSubscriberKey:" title="setSubscriberKey:"></a>
+	<h3 class="subsubtitle method-title">setSubscriberKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the subscriber key for a user, associating this device to said user.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setSubscriberKey:(NSString *)<em>subscriberKey</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the subscriber key for a user, associating this device to said user.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/setUserEmailAddress:" title="setUserEmailAddress:"></a>
 	<h3 class="subsubtitle method-title">setUserEmailAddress:</h3>
 	
@@ -1761,7 +1943,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 ExactTarget, Inc. All rights reserved. (Last updated: 2013-01-31)</span><br />
+						<p><span class="copyright">&copy; 2013 ExactTarget, Inc. All rights reserved. (Last updated: 2013-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
