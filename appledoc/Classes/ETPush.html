@@ -71,6 +71,8 @@
 	
 	<option value="//api/name/configureSDKWithAppID:andClientID:andClientSecret:">&nbsp;&nbsp;&nbsp;&nbsp;- configureSDKWithAppID:andClientID:andClientSecret:</option>
 	
+	<option value="//api/name/deviceToken">&nbsp;&nbsp;&nbsp;&nbsp;- deviceToken</option>
+	
 	<option value="//api/name/getSubscriberKey">&nbsp;&nbsp;&nbsp;&nbsp;- getSubscriberKey</option>
 	
 	<option value="//api/name/handleNotification:forApplicationState:">&nbsp;&nbsp;&nbsp;&nbsp;- handleNotification:forApplicationState:</option>
@@ -168,6 +170,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/configureSDKWithAppID:andAccessToken:">configureSDKWithAppID:andAccessToken:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/configureSDKWithAppID:andClientID:andClientSecret:">configureSDKWithAppID:andClientID:andClientSecret:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceToken">deviceToken</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getSubscriberKey">getSubscriberKey</a></span></li>
 	
@@ -324,6 +328,13 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/registerDeviceToken:">&ndash;&nbsp;registerDeviceToken:</a></code>
 		<span class="tooltip"><p>Responsible for sending a received token back to ExactTarget. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deviceToken">&ndash;&nbsp;deviceToken</a></code>
+		<span class="tooltip"><p>Returns the device token as a NSString. As requested via GitHub (Issue #3).</p></span>
 	</span>
 	
 	
@@ -1111,6 +1122,52 @@
 <p>If you are unsure of any of these variables, please check with code@exacttarget (code.exacttarget.com).</p>
 
 <p>@deprecated As of 2.0, this method should no longer be used.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deviceToken" title="deviceToken"></a>
+	<h3 class="subsubtitle method-title">deviceToken</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the device token as a NSString. As requested via GitHub (Issue #3).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)deviceToken</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A stringified version of the Device Token</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the device token as a NSString. As requested via GitHub (Issue #3).</p>
 	</div>
 	
 	

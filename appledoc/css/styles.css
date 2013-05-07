@@ -166,7 +166,7 @@ th {
 	margin-left: 15px;
 	text-shadow: 0 -1px 0 #485E78;
 	top: 8px;
-	/*position: absolute;*/
+	position: absolute;
 }
 
 #top_header #library #developerHome {
