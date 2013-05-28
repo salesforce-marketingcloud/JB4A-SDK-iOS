@@ -10,6 +10,6 @@
 
 @interface UIDevice (Identifier)
 
-- (NSString *)uniqueDeviceIdentifier;
+- (NSString *)deviceID;
 
 @end

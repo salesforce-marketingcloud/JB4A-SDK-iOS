@@ -40,7 +40,7 @@
 		7FAC1BDD17397EE500CC268C /* grayapp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC1BD417397EE500CC268C /* grayapp2.png */; };
 		7FAC1BDE17397EE500CC268C /* grayapp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC1BD517397EE500CC268C /* grayapp3.png */; };
 		7FAC1BDF17397EE500CC268C /* interesting.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC1BD617397EE500CC268C /* interesting.jpeg */; };
-		7FAC1BEE1739875700CC268C /* libetpushsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAC1BEB1739875700CC268C /* libetpushsdk.a */; };
+		7FD83D1A1755450F003BCC8F /* libetpushsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD83D171755450F003BCC8F /* libetpushsdk.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +75,6 @@
 		7F85B37016C16EB100158C55 /* OpenDirectDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenDirectDemoViewController.m; sourceTree = "<group>"; };
 		7F85B37116C16EB100158C55 /* OpenDirectDemoViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenDirectDemoViewController_iPhone.xib; sourceTree = "<group>"; };
 		7F8BE32B173060D900782D26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/ETViewController_iPhone-land.xib"; sourceTree = "<group>"; };
-		7FA4137A160BA79800810A4C /* libUAirship-1.3.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libUAirship-1.3.3.a"; path = "Airship/libUAirship-1.3.3.a"; sourceTree = "<group>"; };
 		7FAC1BCE17397EE500CC268C /* custom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = custom.caf; path = Assets/custom.caf; sourceTree = "<group>"; };
 		7FAC1BCF17397EE500CC268C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Assets/Default-568h@2x.png"; sourceTree = "<group>"; };
 		7FAC1BD017397EE500CC268C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Assets/Default.png; sourceTree = "<group>"; };
@@ -85,12 +84,12 @@
 		7FAC1BD417397EE500CC268C /* grayapp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayapp2.png; path = Assets/grayapp2.png; sourceTree = "<group>"; };
 		7FAC1BD517397EE500CC268C /* grayapp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayapp3.png; path = Assets/grayapp3.png; sourceTree = "<group>"; };
 		7FAC1BD617397EE500CC268C /* interesting.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = interesting.jpeg; path = Assets/interesting.jpeg; sourceTree = "<group>"; };
-		7FAC1BE81739875700CC268C /* ETData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETData.h; sourceTree = "<group>"; };
-		7FAC1BE91739875700CC268C /* ETDataConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETDataConnector.h; sourceTree = "<group>"; };
-		7FAC1BEA1739875700CC268C /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
-		7FAC1BEB1739875700CC268C /* libetpushsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libetpushsdk.a; sourceTree = "<group>"; };
-		7FAC1BEC1739875700CC268C /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
-		7FAC1BED1739875700CC268C /* UIDevice+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Identifier.h"; sourceTree = "<group>"; };
+		7FD83D141755450F003BCC8F /* ETData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETData.h; sourceTree = "<group>"; };
+		7FD83D151755450F003BCC8F /* ETDataConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETDataConnector.h; sourceTree = "<group>"; };
+		7FD83D161755450F003BCC8F /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
+		7FD83D171755450F003BCC8F /* libetpushsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libetpushsdk.a; sourceTree = "<group>"; };
+		7FD83D181755450F003BCC8F /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
+		7FD83D191755450F003BCC8F /* UIDevice+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Identifier.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +110,7 @@
 				7F62C46915F7A7420054BA91 /* UIKit.framework in Frameworks */,
 				7F62C46B15F7A7420054BA91 /* Foundation.framework in Frameworks */,
 				7F62C46D15F7A7420054BA91 /* CoreGraphics.framework in Frameworks */,
-				7FAC1BEE1739875700CC268C /* libetpushsdk.a in Frameworks */,
+				7FD83D1A1755450F003BCC8F /* libetpushsdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +129,6 @@
 				7FAC1BD417397EE500CC268C /* grayapp2.png */,
 				7FAC1BD517397EE500CC268C /* grayapp3.png */,
 				7FAC1BD617397EE500CC268C /* interesting.jpeg */,
-				7FA4137A160BA79800810A4C /* libUAirship-1.3.3.a */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -209,12 +207,12 @@
 		7FAC1BE017397F7E00CC268C /* etpushsdk */ = {
 			isa = PBXGroup;
 			children = (
-				7FAC1BE81739875700CC268C /* ETData.h */,
-				7FAC1BE91739875700CC268C /* ETDataConnector.h */,
-				7FAC1BEA1739875700CC268C /* ETPush.h */,
-				7FAC1BEB1739875700CC268C /* libetpushsdk.a */,
-				7FAC1BEC1739875700CC268C /* PushConstants.h */,
-				7FAC1BED1739875700CC268C /* UIDevice+Identifier.h */,
+				7FD83D141755450F003BCC8F /* ETData.h */,
+				7FD83D151755450F003BCC8F /* ETDataConnector.h */,
+				7FD83D161755450F003BCC8F /* ETPush.h */,
+				7FD83D171755450F003BCC8F /* libetpushsdk.a */,
+				7FD83D181755450F003BCC8F /* PushConstants.h */,
+				7FD83D191755450F003BCC8F /* UIDevice+Identifier.h */,
 			);
 			path = etpushsdk;
 			sourceTree = "<group>";
@@ -402,10 +400,15 @@
 		7F62C48615F7A7420054BA91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Edwin Roger (8E395V6HFD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Edwin Roger (8E395V6HFD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ET SDK Demo/ET SDK Demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"ENABLE_UA=1",
+				);
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Airship\"/**";
 				INFOPLIST_FILE = "ET SDK Demo/ET SDK Demo-Info.plist";
 				INSTALL_GROUP = everyone;
@@ -417,8 +420,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7C46DDF2-A133-4BB6-A998-42359D9D295D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7C46DDF2-A133-4BB6-A998-42359D9D295D";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -430,6 +433,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ExactTarget, Inc";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ET SDK Demo/ET SDK Demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "ENABLE_UA=1";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Airship\"/**";
 				INFOPLIST_FILE = "ET SDK Demo/ET SDK Demo-Info.plist";
 				INSTALL_GROUP = everyone;

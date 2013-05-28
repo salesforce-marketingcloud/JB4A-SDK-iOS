@@ -160,6 +160,13 @@
 -(void)registerDeviceToken:(NSData *)deviceToken;
 
 /**
+ Returns the device token as a NSString. As requested via GitHub (Issue #3).
+ 
+ @return A stringified version of the Device Token
+ */
+-(NSString *)deviceToken;
+
+/**
  Handles a registration failure. 
  
  @param error The error returned to the application on a registration failure
