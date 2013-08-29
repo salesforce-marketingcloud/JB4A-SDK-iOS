@@ -6,6 +6,15 @@ For more information, please see [Code@ExactTarget](http://code.exacttarget.com)
 
 ## Release History
 
+### Version 2.1.1
+
+* Changes required in preparation for iOS 7 compatibilty. 
+
+### Version 2.1.0
+
+* OpenDirect payloads containing a full URL will automatically present themselves on app load. This functionality only works if there is no OpenDirect Delegate set. 
+* Verious bug fixes and improvements. 
+
 ### Version 2.0.1
 
 * Updated Urban Airship library to 1.4.0 to be compliant with recent Apple approval changes. 
