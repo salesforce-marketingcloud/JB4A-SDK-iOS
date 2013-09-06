@@ -9,13 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ETData.h"
-#import "ETDataConnector.h"
-#import "ETLocationManager.h"
+#import "ETDataconnector.h"
 #import "PushConstants.h"
-#import "ETSqliteHelper.h"
-#import "ETPhoneHome.h"
-
-#import "GenericUpdate.h"
 
 /**
  Supporting protocol for OpenDirect, part of the ExactTarget 2013-02 release. 
@@ -23,6 +18,8 @@
  Implementation of this delegate is not required for OpenDirect to function, but it is provided as a convenience to developers who do not with to parse the push payload on their own. 
  
  All OpenDirect data is passed down as a JSON String, so you get it as an NSString. Please remember to parse it appropriately from there. Also, please remember to fail gracefully if you can't take action on the message. 
+ 
+ Also, please note that setting an OpenDirect Delegate will negate the automatic webpage loading feature added to MobilePush recently. This is deliberately to not stomp on your URLs and deep links. 
  */
 @protocol ExactTargetOpenDirectDelegate <NSObject>
 
@@ -64,8 +61,6 @@
     
     // OpenDirect Delegate stuff
     id<ExactTargetOpenDirectDelegate> _openDirectDelegate;
-    
-
 }
 
 /**---------------------------------------------------------------------------------------
@@ -235,16 +230,6 @@
  */
 -(void)handleNotification:(NSDictionary *)userInfo forApplicationState:(UIApplicationState)applicationState;
 
-/** 
- Handles a local notification received by the application. 
- 
- Sometimes the SDK will use local notifications to indicate something to the user. These are handled differently by iOS, and as such, need to be implemented differently in the SDK. Sorry about that. 
- 
- @param notification The received UILocalNotification
- @return Doesn't return a value
- */
--(void)handleLocalNotification:(UILocalNotification *)notification;
-
 
 /**---------------------------------------------------------------------------------------
  * @name Data Interaction
@@ -257,17 +242,12 @@
 -(void)setUserEmailAddress:(NSString *)emailAddress;
 
 /**
- Accepts and sets the Subscriber Key for the device's user.
- 
- @param subscriberKey The subscriber key to attribute to the user. 
- @return Doesn't return a value.
+ Sets the subscriber key for a user, associating this device to said user. 
  */
 -(void)setSubscriberKey:(NSString *)subscriberKey;
 
 /**
- Returns the subscriber key for the active user, in case you need it.
-
- @return subscriberKey The code-set subscriber key.
+ Returns the subscriber key. May be useful.
  */
 -(NSString *)getSubscriberKey;
 
@@ -319,16 +299,6 @@
 - (void)setQuietTimeStart:(NSString*)start end:(NSString*)end;
 
 
-/**
- @name ETPush Convenience Methods
- */
-
-/**
- Gets the Apple-safe, unique Device Identifier that ET will later use to identify the device.
- 
- Note that this method is compliant with Apple's compliance rules, but may not be permanent.
- */
-+(NSString *)safeDeviceIdentifier;
 
 /**
  @name Listeners for UIApplication events
