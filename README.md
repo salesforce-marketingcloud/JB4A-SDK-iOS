@@ -6,6 +6,11 @@ For more information, please see [Code@ExactTarget](http://code.exacttarget.com)
 
 ## Release History
 
+### Version 2.1.2
+
+* Various bug fixes and enhancements. 
+* Deprecated internal functionality that was no longer required. 
+
 ### Version 2.1.1
 
 * Changes required in preparation for iOS 7 compatibilty. 
