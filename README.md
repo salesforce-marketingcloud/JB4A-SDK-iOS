@@ -6,6 +6,10 @@ For more information, please see [Code@ExactTarget](http://code.exacttarget.com)
 
 ## Release History
 
+### Version 2.1.3
+
+* Bug fixes. 
+
 ### Version 2.1.2
 
 * Various bug fixes and enhancements. 

@@ -40,7 +40,7 @@
 		7FAC1BDD17397EE500CC268C /* grayapp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC1BD417397EE500CC268C /* grayapp2.png */; };
 		7FAC1BDE17397EE500CC268C /* grayapp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC1BD517397EE500CC268C /* grayapp3.png */; };
 		7FAC1BDF17397EE500CC268C /* interesting.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC1BD617397EE500CC268C /* interesting.jpeg */; };
-		7FD83D1A1755450F003BCC8F /* libetpushsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD83D171755450F003BCC8F /* libetpushsdk.a */; };
+		7FD0B2C5187D9D7E00F6B0DB /* libetpushsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD0B2C4187D9D7E00F6B0DB /* libetpushsdk.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,10 +84,10 @@
 		7FAC1BD417397EE500CC268C /* grayapp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayapp2.png; path = Assets/grayapp2.png; sourceTree = "<group>"; };
 		7FAC1BD517397EE500CC268C /* grayapp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayapp3.png; path = Assets/grayapp3.png; sourceTree = "<group>"; };
 		7FAC1BD617397EE500CC268C /* interesting.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = interesting.jpeg; path = Assets/interesting.jpeg; sourceTree = "<group>"; };
+		7FD0B2C4187D9D7E00F6B0DB /* libetpushsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libetpushsdk.a; sourceTree = "<group>"; };
 		7FD83D141755450F003BCC8F /* ETData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETData.h; sourceTree = "<group>"; };
 		7FD83D151755450F003BCC8F /* ETDataConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETDataConnector.h; sourceTree = "<group>"; };
 		7FD83D161755450F003BCC8F /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
-		7FD83D171755450F003BCC8F /* libetpushsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libetpushsdk.a; sourceTree = "<group>"; };
 		7FD83D181755450F003BCC8F /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
 		7FD83D191755450F003BCC8F /* UIDevice+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Identifier.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +110,7 @@
 				7F62C46915F7A7420054BA91 /* UIKit.framework in Frameworks */,
 				7F62C46B15F7A7420054BA91 /* Foundation.framework in Frameworks */,
 				7F62C46D15F7A7420054BA91 /* CoreGraphics.framework in Frameworks */,
-				7FD83D1A1755450F003BCC8F /* libetpushsdk.a in Frameworks */,
+				7FD0B2C5187D9D7E00F6B0DB /* libetpushsdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,10 +207,10 @@
 		7FAC1BE017397F7E00CC268C /* etpushsdk */ = {
 			isa = PBXGroup;
 			children = (
+				7FD0B2C4187D9D7E00F6B0DB /* libetpushsdk.a */,
 				7FD83D141755450F003BCC8F /* ETData.h */,
 				7FD83D151755450F003BCC8F /* ETDataConnector.h */,
 				7FD83D161755450F003BCC8F /* ETPush.h */,
-				7FD83D171755450F003BCC8F /* libetpushsdk.a */,
 				7FD83D181755450F003BCC8F /* PushConstants.h */,
 				7FD83D191755450F003BCC8F /* UIDevice+Identifier.h */,
 			);
@@ -415,8 +415,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Airship\"",
-					"\"$(SRCROOT)/etpushsdk\"",
+					"\\\"$(SRCROOT)/Airship\\\"",
+					"\\\"$(SRCROOT)/etpushsdk\\\"",
+					/Users/eroger/Source/_GitHubRoot/iOS/sample/etpushsdk,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,8 +441,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Airship\"",
-					"\"$(SRCROOT)/etpushsdk\"",
+					"\\\"$(SRCROOT)/Airship\\\"",
+					"\\\"$(SRCROOT)/etpushsdk\\\"",
+					/Users/eroger/Source/_GitHubRoot/iOS/sample/etpushsdk,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
