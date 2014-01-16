@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ExactTargetOpenDirectDelegate Protocol Reference</title>
+		<title>ETLandingPagePresenter Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ExactTargetOpenDirectDelegate Protocol Reference</h1>
+				<h1 class="hideInXcode">ETLandingPagePresenter Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,15 +37,20 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/landingPagePath">&nbsp;&nbsp;&nbsp;&nbsp;landingPagePath</option>
+	
+	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/didReceiveOpenDirectMessageWithContents:">&nbsp;&nbsp;&nbsp;&nbsp;- didReceiveOpenDirectMessageWithContents:</option>
+	<option value="//api/name/initForLandingPageAt:">&nbsp;&nbsp;&nbsp;&nbsp;- initForLandingPageAt:</option>
 	
-	<option value="//api/name/shouldDeliverOpenDirectMessageIfAppIsRunning">&nbsp;&nbsp;&nbsp;&nbsp;- shouldDeliverOpenDirectMessageIfAppIsRunning</option>
+	<option value="//api/name/initForLandingPageAtWithURL:">&nbsp;&nbsp;&nbsp;&nbsp;- initForLandingPageAtWithURL:</option>
 	
 	
 	
@@ -69,15 +74,21 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/landingPagePath">landingPagePath</a></span></li>
+	
+</ul></li>
+
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didReceiveOpenDirectMessageWithContents:">didReceiveOpenDirectMessageWithContents:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initForLandingPageAt:">initForLandingPageAt:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldDeliverOpenDirectMessageIfAppIsRunning">shouldDeliverOpenDirectMessageIfAppIsRunning</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initForLandingPageAtWithURL:">initForLandingPageAtWithURL:</a></span></li>
 	
 </ul></li>
 
@@ -86,7 +97,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ExactTargetOpenDirectDelegate Protocol Reference" name="top"></a>
+				<a title="ETLandingPagePresenter Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -95,18 +106,21 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ExactTargetOpenDirectDelegate Protocol Reference</h1>
+						<h1 class="title title-header">ETLandingPagePresenter Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIViewController</td>
+</tr><tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">NSObject</td>
+	<td class="specification-value">UIWebViewDelegate</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ETPush.h</td>
+	<td class="specification-value">ETLandingPagePresenter.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -116,13 +130,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Supporting protocol for OpenDirect, part of the ExactTarget 2013-02 release.</p>
-
-<p>Implementation of this delegate is not required for OpenDirect to function, but it is provided as a convenience to developers who do not with to parse the push payload on their own.</p>
-
-<p>All OpenDirect data is passed down as a JSON String, so you get it as an NSString. Please remember to parse it appropriately from there. Also, please remember to fail gracefully if you can&rsquo;t take action on the message.</p>
-
-<p>Also, please note that setting an OpenDirect Delegate will negate the automatic webpage loading feature added to MobilePush recently. This is deliberately to not stomp on your URLs and deep links.</p>
+						<p>This is a helper class that shows webpages. These come down in several forms - sometimes a CloudPage, sometimes something from OpenDirect - and this guy shows them. It&rsquo;s a pretty simple class that pops up a view with a toolbar, shows a webpage, and waits to be dismissed.</p>
 					</div>
 					
 					
@@ -140,13 +148,19 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/didReceiveOpenDirectMessageWithContents:">&ndash;&nbsp;didReceiveOpenDirectMessageWithContents:</a></code>
+		<code><a href="#//api/name/landingPagePath">&nbsp;&nbsp;landingPagePath</a></code>
 	</span>
+	<span class="task-item-suffix">property</span>
 	
-	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/shouldDeliverOpenDirectMessageIfAppIsRunning">&ndash;&nbsp;shouldDeliverOpenDirectMessageIfAppIsRunning</a></code>
+		<code><a href="#//api/name/initForLandingPageAt:">&ndash;&nbsp;initForLandingPageAt:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initForLandingPageAtWithURL:">&ndash;&nbsp;initForLandingPageAtWithURL:</a></code>
 	</span>
 	
 	
@@ -159,6 +173,53 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/landingPagePath" title="landingPagePath"></a>
+	<h3 class="subsubtitle method-title">landingPagePath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Don&rsquo;t let the name fool you - this can be <em>any</em> URL, not just a landing page. It will eventually be converted to an NSURL and displayed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *landingPagePath</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Don&rsquo;t let the name fool you - this can be <em>any</em> URL, not just a landing page. It will eventually be converted to an NSURL and displayed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETLandingPagePresenter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					
@@ -168,37 +229,22 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/didReceiveOpenDirectMessageWithContents:" title="didReceiveOpenDirectMessageWithContents:"></a>
-	<h3 class="subsubtitle method-title">didReceiveOpenDirectMessageWithContents:</h3>
+	<a name="//api/name/initForLandingPageAt:" title="initForLandingPageAt:"></a>
+	<h3 class="subsubtitle method-title">initForLandingPageAt:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Method called when an OpenDirect payload is received from MobilePush.</p>
+		<p>A helper designated initializer that takes the landing page as a string.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)didReceiveOpenDirectMessageWithContents:(NSString *)<em>payload</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initForLandingPageAt:(NSString *)<em>landingPage</em></code></div>
 
     
 	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>payload</em></dt>
-			<dd><p>The contents of the payload as received from MobilePush.</p></dd>
-		</dl>
-		
-	</div>
 	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Doesn&rsquo;t return a value.</p>
-	</div>
 	
 	
 	
@@ -206,7 +252,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Method called when an OpenDirect payload is received from MobilePush.</p>
+		<p>A helper designated initializer that takes the landing page as a string.</p>
 	</div>
 	
 	
@@ -217,34 +263,29 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ETPush.h</code><br />
+		<code class="declared-in-ref">ETLandingPagePresenter.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/shouldDeliverOpenDirectMessageIfAppIsRunning" title="shouldDeliverOpenDirectMessageIfAppIsRunning"></a>
-	<h3 class="subsubtitle method-title">shouldDeliverOpenDirectMessageIfAppIsRunning</h3>
+	<a name="//api/name/initForLandingPageAtWithURL:" title="initForLandingPageAtWithURL:"></a>
+	<h3 class="subsubtitle method-title">initForLandingPageAtWithURL:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Allows you to define the behavior of OpenDirect based on application state.</p>
+		<p>Another helper that takes it in NSURL form. We&rsquo;re not picky. It&rsquo;d be cool of ObjC did method overloading, though.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)shouldDeliverOpenDirectMessageIfAppIsRunning</code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initForLandingPageAtWithURL:(NSURL *)<em>landingPage</em></code></div>
 
     
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>BOOL representing whether or not you want action to be taken.</p>
-	</div>
 	
 	
 	
@@ -252,11 +293,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Allows you to define the behavior of OpenDirect based on application state.</p>
-
-<p>If set to YES, the OpenDirect delegate will be called if a push with an OpenDirect payload is received and the application state is running. This is counter to normal push behavior, so the default is NO.</p>
-
-<p>Consider that if you set this to YES, and the user is running the app when a push comes in, the app will start doing things that they didn&rsquo;t prompt it to do. This is bad user experience since it&rsquo;s confusing to the user. Along these lines, iOS won&rsquo;t present a notification if one is received while the app is running.</p>
+		<p>Another helper that takes it in NSURL form. We&rsquo;re not picky. It&rsquo;d be cool of ObjC did method overloading, though.</p>
 	</div>
 	
 	
@@ -267,7 +304,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ETPush.h</code><br />
+		<code class="declared-in-ref">ETLandingPagePresenter.h</code><br />
 	</div>				
 	
 	
