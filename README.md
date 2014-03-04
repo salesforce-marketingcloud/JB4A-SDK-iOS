@@ -13,7 +13,6 @@ This version has a lot of new functionality, and a few changes that may be impor
 #### Overview
 
 * Introduction of **ETLocationManager** to support geofenced messages and the beginning of location-based messaging. 
-* Introduction of **CloudPages** support, which will continue to roll out over the next few releases. 
 * Tag and Attribute caching. 
 * Rewritten data management engine, with better, more fault-tolerant data transmission to ExactTarget and caching in the event of data failure. 
 * Quieter logging.
