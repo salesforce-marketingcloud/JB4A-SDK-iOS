@@ -7,7 +7,7 @@ For more information, please see [Code@ExactTarget](http://code.exacttarget.com)
 ## Release History
 
 ### Version 3.1.0
-_Released April 4, 2014, Correlating to ExactTarget's 2014-03 Release_
+_Released April 11, 2014, correlating to ExactTarget's 2014-03 Release_
 
 * New sample project to more simply demonstrate the SDK, as well as some of it's new features. Also, addresses several issues with references and functionality updates.
 * MPUSH-1936 - Fix to account for null messagesPerPeriod
