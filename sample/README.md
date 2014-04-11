@@ -1,5 +1,4 @@
-# Public Demo
+SDKDemo-iOS
+===========
 
-This is the public demo app of the ExactTarget MobilePush SDK. It is meant to demonstrate usage of the SDK, but is not completely functional as-is. 
-
-If you have questions around usage, please email MobilePush@ExactTarget.com
+Born from the need for a Contacts Demo App, it now serves as a public implementation demo. 
