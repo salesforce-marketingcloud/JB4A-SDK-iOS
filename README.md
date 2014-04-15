@@ -6,6 +6,11 @@ For more information, please see [Code@ExactTarget](http://code.exacttarget.com)
 
 ## Release History
 
+### Version 3.1.1
+_Released April 15, 2014_
+
+* MPUSH-2047 - Addresses and issue where the SDK was calling an iOS7-only method, breaking backwards compatibility. Returns the SDK to iOS6+ compatibility. 
+
 ### Version 3.1.0
 _Released April 11, 2014, correlating to ExactTarget's 2014-03 Release_
 
