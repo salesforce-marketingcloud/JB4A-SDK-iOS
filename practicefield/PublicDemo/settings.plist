@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>adhocClientId</key>
+	<string>fuelCredentialsHere</string>
+	<key>adhocClientSecret</key>
+	<string>fuelCredentialsHere</string>
+	<key>adhocMessageId</key>
+	<string>fuelCredentialsHere</string>
+	<key>debugClientId</key>
+	<string>fuelCredentialsHere</string>
+	<key>debugClientSecret</key>
+	<string>fuelCredentialsHere</string>
+	<key>debugMessageId</key>
+	<string>fuelCredentialsHere</string>
+	<key>prodClientId</key>
+	<string>fuelCredentialsHere</string>
+	<key>prodClientSecret</key>
+	<string>fuelCredentialsHere</string>
+	<key>prodMessageId</key>
+	<string>fuelCredentialsHere</string>
+</dict>
+</plist>
