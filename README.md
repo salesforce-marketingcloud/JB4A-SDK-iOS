@@ -6,6 +6,17 @@ For more information, please see [Code@ExactTarget](http://code.exacttarget.com)
 
 ## Release History
 
+### Version 3.2.0 
+_Released July 21, 2014, correlating to ExactTarget's 2014-05 Release_
+
+* MPUSH-2309 - Addressing an issue related to retrieving location messages from the database.
+* MPUSH-2141 - Add the "DEBUG" tag to debug builds.
+* MPUSH-2162 - Addressing an issue where the ETLandingPagePresenter doesn't display the UIToolbar correctly.
+* MPUSH-2176 - Location messages without a sound defined can cause a crash.
+* MPUSH-2313 - Added hardware identifier to the registration payload and corresponding accessor to ETPush (ETPush#hardwareIdentifier).
+* MPUSH-2427 - Fixes around CloudPages functionality.
+* MPUSH-2448 - Added delete functionality to CloudPages.
+
 ### Version 3.1.1
 _Released April 15, 2014_
 
