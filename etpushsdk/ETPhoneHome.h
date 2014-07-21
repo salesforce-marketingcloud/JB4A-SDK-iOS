@@ -51,4 +51,6 @@
  */
 -(void)checkForAndSendBackCachedData;
 
+-(int)numberOfActiveConnections;
+
 @end

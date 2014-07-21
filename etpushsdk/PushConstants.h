@@ -7,8 +7,8 @@
 //
 
 // SDK Version
-#define ETPushSDKVersionString @"3.1.0"
-#define ETPushSDKVersionNumber 3104
+#define ETPushSDKVersionString @"3.2.0"
+#define ETPushSDKVersionNumber 3200
 
 /** 
  Helpers.
@@ -69,12 +69,4 @@ typedef enum {
     PushOriginationStateForeground
 } PushOriginationState;
 
-typedef NS_ENUM(NSInteger, PushMessageFrequencyUnit) {
-    PushMessageFrequencyUnitNone,
-    PushMessageFrequencyUnitYear,
-    PushMessageFrequencyUnitMonth,
-    PushMessageFrequencyUnitWeek,
-    PushMessageFrequencyUnitDay,
-    PushMessageFrequencyUnitHour
-};
 

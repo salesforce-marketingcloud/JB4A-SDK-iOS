@@ -41,6 +41,8 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/hardwareIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;+ hardwareIdentifier</option>
+	
 	<option value="//api/name/isPushEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isPushEnabled</option>
 	
 	<option value="//api/name/pushManager">&nbsp;&nbsp;&nbsp;&nbsp;+ pushManager</option>
@@ -81,6 +83,8 @@
 	<option value="//api/name/handleLocalNotification:">&nbsp;&nbsp;&nbsp;&nbsp;- handleLocalNotification:</option>
 	
 	<option value="//api/name/handleNotification:forApplicationState:">&nbsp;&nbsp;&nbsp;&nbsp;- handleNotification:forApplicationState:</option>
+	
+	<option value="//api/name/openDirectDelegate">&nbsp;&nbsp;&nbsp;&nbsp;- openDirectDelegate</option>
 	
 	<option value="//api/name/registerDeviceToken:">&nbsp;&nbsp;&nbsp;&nbsp;- registerDeviceToken:</option>
 	
@@ -142,6 +146,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hardwareIdentifier">hardwareIdentifier</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isPushEnabled">isPushEnabled</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pushManager">pushManager</a></span></li>
@@ -183,6 +189,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleLocalNotification:">handleLocalNotification:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleNotification:forApplicationState:">handleNotification:forApplicationState:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openDirectDelegate">openDirectDelegate</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerDeviceToken:">registerDeviceToken:</a></span></li>
 	
@@ -282,6 +290,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setOpenDirectDelegate:">&ndash;&nbsp;setOpenDirectDelegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openDirectDelegate">&ndash;&nbsp;openDirectDelegate</a></code>
 	</span>
 	
 	
@@ -439,6 +453,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/hardwareIdentifier">+&nbsp;hardwareIdentifier</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/isPushEnabled">+&nbsp;isPushEnabled</a></code>
 	</span>
 	
@@ -489,6 +509,52 @@
 					<div class="section section-methods">
 						<a title="Class Methods" name="class_methods"></a>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/hardwareIdentifier" title="hardwareIdentifier"></a>
+	<h3 class="subsubtitle method-title">hardwareIdentifier</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. ExactTarget uses this data for segmentation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)hardwareIdentifier</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string of the hardware identification.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. ExactTarget uses this data for segmentation.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/isPushEnabled" title="isPushEnabled"></a>
@@ -1426,6 +1492,52 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/openDirectDelegate" title="openDirectDelegate"></a>
+	<h3 class="subsubtitle method-title">openDirectDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the OpenDirect delegate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;ExactTargetOpenDirectDelegate&gt;)openDirectDelegate</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>delegate The named OpenDirect delegate, or nil if there isn&rsquo;t one.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the OpenDirect delegate.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/registerDeviceToken:" title="registerDeviceToken:"></a>
 	<h3 class="subsubtitle method-title">registerDeviceToken:</h3>
 	
@@ -2000,7 +2112,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ExactTarget, a saleforce.com Company. All rights reserved. (Last updated: 2014-04-11)</span><br />
+						<p><span class="copyright">&copy; 2014 ExactTarget, a saleforce.com Company. All rights reserved. (Last updated: 2014-07-21)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						

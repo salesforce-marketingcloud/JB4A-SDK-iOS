@@ -112,6 +112,13 @@
 -(void)setOpenDirectDelegate:(id<ExactTargetOpenDirectDelegate>)delegate;
 
 /**
+ Returns the OpenDirect delegate.
+ 
+ @return delegate The named OpenDirect delegate, or nil if there isn't one. 
+ */
+-(id<ExactTargetOpenDirectDelegate>)openDirectDelegate;
+
+/**
  Triggers a data send to ExactTarget. Mostly used internally, and rarely should be called by client code.
  
  */
@@ -302,6 +309,13 @@
  Note that this method is compliant with Apple's compliance rules, but may not be permanent.
  */
 +(NSString *)safeDeviceIdentifier;
+
+/**
+ Returns the hardware identification string, like "iPhone1,1". ExactTarget uses this data for segmentation. 
+ 
+ @return A string of the hardware identification. 
+ */
++(NSString *)hardwareIdentifier;
 
 /**
  Returns the state of Push based on logic reflected at ExactTarget. 

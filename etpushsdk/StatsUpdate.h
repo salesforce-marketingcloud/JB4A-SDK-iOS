@@ -7,7 +7,7 @@
 //
 
 #import "GenericUpdate.h"
-#import "Message.h"
+#import "ETMessage.h"
 
 @interface StatsUpdate : GenericUpdate <NSCopying>
 

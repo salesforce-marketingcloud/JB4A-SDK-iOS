@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/** 
+/**
  This is a helper class that shows webpages. These come down in several forms - sometimes a CloudPage, sometimes something from OpenDirect - and this guy shows them. It's a pretty simple class that pops up a view with a toolbar, shows a webpage, and waits to be dismissed. 
  */
 @interface ETLandingPagePresenter : UIViewController<UIWebViewDelegate>

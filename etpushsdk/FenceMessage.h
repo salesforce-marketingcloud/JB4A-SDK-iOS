@@ -9,7 +9,7 @@
 #import "GenericUpdate.h"
 
 #import "Region.h"
-#import "Message.h"
+#import "ETMessage.h"
 
 /**
  FenceMessage is a middle class that joins together fences and messages, which exist in a many-to-many relationship with each other. 
@@ -17,8 +17,8 @@
 @interface FenceMessage : GenericUpdate
 
 @property (nonatomic, strong) Region *region;
-@property (nonatomic, strong) Message *message;
+@property (nonatomic, strong) ETMessage *message;
 
--(id)initWithRegion:(Region *)region andMessage:(Message *)message;
+-(id)initWithRegion:(Region *)region andMessage:(ETMessage *)message;
 
 @end
