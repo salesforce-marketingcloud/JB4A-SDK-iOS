@@ -14,6 +14,9 @@
 #import "PUDNavigationController.h"
 #import "PUDMessageReceivedTableViewController.h"
 
+// Libraries
+#import "ETLandingPagePresenter.h"
+
 @interface PUDAppDelegate()
 
 /**
@@ -40,30 +43,20 @@
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     
+    // uncomment these if you would like to override landing page default colors
+    //[[UIToolbar appearanceWhenContainedIn:[ETLandingPagePresenter class], nil] setBarTintColor:[UIColor etPrimaryOrange]];
+    //[[UIBarButtonItem appearanceWhenContainedIn:[ETLandingPagePresenter class], nil] setTintColor:[UIColor whiteColor]];
+    
     /**
-     ET_NOTE: This is a suggested implementation of the required configuration method. In this sample, the DEBUG and ADHOC flags are the differentiator between the development/sandbox and production instances of the Code@ExactTarget applications. If you are doing more complicated build configurations, this implementation may not work for you. The important thing is to ensure that the AppID and AccessToken you proivde match up to the Code@ET app you wish to send from and have the correct APNS certificates tied to.
+     ET_NOTE: In this sample app, the PUDUtility class is responsible for checking what preprocessor macros are defined (DEBUG, ADHOC, etc) and then returning the correct appId or accessToken. This is a bit more complicated build setup than typical, due to ExactTarget needing to support four different build configurations (debug, adhoc, qa, and release). The important thing is to ensure that the AppID and AccessToken you proivde match up to the Code@ET app you wish to send from and have the correct APNS certificates tied to.
      
      If you are unsure of your credentials or need help, please reach out to your Support partner. Likewise, if these services are not active in your account, log statements will be in your console to that effect. Please work with your sales or support rep if you have questions.
      */
-#ifdef DEBUG
-    [[ETPush pushManager] configureSDKWithAppID:@"placeHere" // The App ID from Code@ExactTarget
-                                 andAccessToken:@"placeHere" // The Access Token from Code@ExactTarget
+    [[ETPush pushManager] configureSDKWithAppID:[PUDUtility appID] // The App ID from Code@ExactTarget
+                                 andAccessToken:[PUDUtility accessToken] // The Access Token from Code@ExactTarget
                                   withAnalytics:YES // Whether or not you would like to use ExactTarget analytics services
                             andLocationServices:YES // Whether or not you would like to use location-based alerts
-                                  andCloudPages:NO]; // Whether or not you would like to use CloudPages.
-#elif ADHOC
-    [[ETPush pushManager] configureSDKWithAppID:@"placeHere"
-                                 andAccessToken:@"placeHere"
-                                  withAnalytics:YES
-                            andLocationServices:YES
-                                  andCloudPages:NO];
-#else
-    [[ETPush pushManager] configureSDKWithAppID:@"placeHere"
-                                 andAccessToken:@"placeHere"
-                                  withAnalytics:YES
-                            andLocationServices:YES
-                                  andCloudPages:NO];
-#endif
+                                  andCloudPages:YES]; // Whether or not you would like to use CloudPages.
     
     /**
      ET_NOTE: The OpenDirect Delegate must be set in order for OpenDirect to work with URL schemes other than http or https. Set this before you call [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
@@ -142,7 +135,7 @@
     NSLog(@"== NON BACKGROUND PUSH ==\nReceived a push: %@\n", userInfo);
     
     /**
-     Show and alert view and save the user info in order to be able to show the last received push at a later time
+     Show an alert view and save the user info in order to be able to show the last received push at a later time
      */
     [self notificationReceivedWithUserInfo:userInfo messageType:kPUDMessageTypeOutbound alertText:nil];
     
@@ -188,7 +181,7 @@
     [self notificationReceivedWithUserInfo:notification.userInfo messageType:kPUDMessageTypeLocation alertText:notification.alertBody];
     
     /**
-     ET_NOTE: This lets the SDK know that a local notification was received and passes in the notification so ExactTarget can process it and it is required for location-based sending
+     ET_NOTE: This lets the SDK know that a local notification was received and passes in the notification so ExactTarget can process it. It is required for location-based sending.
      */
     [[ETPush pushManager] handleLocalNotification:notification]; // Required for ETPush
 }
@@ -247,34 +240,59 @@
     
     BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
     BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
+    BOOL hasCloudPagePayload = ([userInfo objectForKey:kPUDPushDefineCloudPagePayloadKey] != nil);
     BOOL isLocationMessage = ([messageType isEqualToString:kPUDMessageTypeLocation]);
     
     /**
-     *  If app is active, show an alert view letting the user know that they received a push message
+     *  If app is active, show an alert view letting the user know that they received a push message. This can be automatically handled by the SDK if you call the [[ETPush pushManager] shouldDisplayAlertViewIfPushReceived:YES] being sure to pass in YES. Again, note that it is uncommon to do it this way - the SDK's handling of this will most likely suffice for your app
      */
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
-        if (hasOpenDirectPayload && !isLocationMessage) {
+        if (hasCloudPagePayload) {
+            /**
+             *  Show an alert view witht the message associated with the cloudpage
+             */
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [[[UIAlertView alloc] initWithTitle:appName
+                                            message:message
+                                           delegate:nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil] show];
+            });
+        }
+        else if (hasOpenDirectPayload && !isLocationMessage) {
             /**
              *  Show an alert view with the message and the option to view the opendirect. This is done because we don't want to interrupt the user's experience by handling the opendirect unless they willingly choose to view the opendirect
              */
-            [[[UIAlertView alloc] initWithTitle:appName message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"View", nil] show];
+            [[[UIAlertView alloc] initWithTitle:appName
+                                        message:message
+                                       delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:@"View", nil] show];
         }
         else if (hasDiscountCodeCustomKey) {
             /**
              *  Show an alert view with the message and the option to view the discount code. This is done because we don't want to interrupt the user's experience by handling the discount code unless they willingly choose to view the opendirect
              */
-            [[[UIAlertView alloc] initWithTitle:appName message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"View", nil] show];
+            [[[UIAlertView alloc] initWithTitle:appName
+                                        message:message
+                                       delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:@"View", nil] show];
         }
         else {
             /**
              *  Show an alert view with the message and the OK button
              */
-            [[[UIAlertView alloc] initWithTitle:appName message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            [[[UIAlertView alloc] initWithTitle:appName
+                                        message:message
+                                       delegate:nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil] show];
         }
     }
     else if ([UIApplication sharedApplication].applicationState == UIApplicationStateInactive) {
         /**
-         *  We will fall in this condition whenever a user taps a notification from outside the application. For the purposes of this app we will display the discount view if the message doesn't have opendirect. Note that you would handle this case however you wanted inside of your own app
+         *  We will fall in this condition whenever a user taps a notification from outside the application. For the purposes of this app we will display the discount view if the message doesn't have opendirect. Note that you would handle this case however you want inside of your own app
          */
         if (hasDiscountCodeCustomKey && !hasOpenDirectPayload) {
             [self handleDiscountCodePayload];

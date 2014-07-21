@@ -94,6 +94,135 @@
             </objects>
             <point key="canvasLocation" x="647" y="-242"/>
         </scene>
+        <!--Navigation Controller - Inbox-->
+        <scene sceneID="qJJ-eT-2Dw">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="IXZ-XN-P12" customClass="PUDNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inbox" image="cloud" id="nfa-yG-uXv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sle-ig-AsP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="udu-2L-Tcp">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="kUV-kz-Pzd" kind="relationship" relationship="rootViewController" id="sdM-9W-BLp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dS9-08-lvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="-1672"/>
+        </scene>
+        <!--Cloud Page Inbox View Controller - CloudPage Inbox-->
+        <scene sceneID="wG5-v6-xqW">
+            <objects>
+                <viewController id="kUV-kz-Pzd" customClass="PUDCloudPageInboxViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sTF-KE-cZp"/>
+                        <viewControllerLayoutGuide type="bottom" id="w4Z-Lg-GL5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="orC-OE-vFE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRd-48-TEr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uEL-Fc-6DB">
+                                        <rect key="frame" x="20" y="8" width="280" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Unread"/>
+                                            <segment title="Read"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uEL-Fc-6DB" secondAttribute="trailing" constant="20" symbolic="YES" id="Rm1-1U-ToO"/>
+                                    <constraint firstItem="uEL-Fc-6DB" firstAttribute="centerY" secondItem="hRd-48-TEr" secondAttribute="centerY" id="pIc-aC-1cm"/>
+                                    <constraint firstItem="uEL-Fc-6DB" firstAttribute="top" secondItem="hRd-48-TEr" secondAttribute="top" constant="8" id="rpE-Ok-ZwF"/>
+                                    <constraint firstItem="uEL-Fc-6DB" firstAttribute="leading" secondItem="hRd-48-TEr" secondAttribute="leading" constant="20" symbolic="YES" id="w6k-sF-Crg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="K6y-hB-rG3">
+                                <rect key="frame" x="0.0" y="44" width="320" height="410"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ruid_cloudPageInboxCell" rowHeight="60" id="clW-kW-kms" customClass="PUDCloudPageInboxTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="clW-kW-kms" id="1KN-hU-n6T">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Colts!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTa-R6-NDJ">
+                                                    <rect key="frame" x="26" y="10" width="267" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="lH7-Z6-yOh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 6th, 2014 at 4:30 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCE-YX-NIr">
+                                                    <rect key="frame" x="26" y="33" width="267" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eCE-YX-NIr" firstAttribute="trailing" secondItem="wTa-R6-NDJ" secondAttribute="trailing" id="5ex-5O-Bbj"/>
+                                                <constraint firstAttribute="trailing" secondItem="wTa-R6-NDJ" secondAttribute="trailing" constant="-6" id="8XX-9P-8gD"/>
+                                                <constraint firstItem="wTa-R6-NDJ" firstAttribute="top" secondItem="1KN-hU-n6T" secondAttribute="top" constant="10" id="CnM-J4-8yQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="eCE-YX-NIr" secondAttribute="bottom" constant="5" id="JUx-oF-FLp"/>
+                                                <constraint firstItem="eCE-YX-NIr" firstAttribute="top" secondItem="wTa-R6-NDJ" secondAttribute="bottom" constant="2" id="OtO-H8-era"/>
+                                                <constraint firstItem="wTa-R6-NDJ" firstAttribute="leading" secondItem="1KN-hU-n6T" secondAttribute="leading" constant="26" id="W9v-EX-aiK"/>
+                                                <constraint firstItem="wTa-R6-NDJ" firstAttribute="leading" secondItem="eCE-YX-NIr" secondAttribute="leading" id="f1Y-t0-qE1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageStartDateLabel" destination="eCE-YX-NIr" id="lbU-RA-naj"/>
+                                            <outlet property="messageTitleLabel" destination="wTa-R6-NDJ" id="tnq-dc-f9u"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="kUV-kz-Pzd" id="qva-Td-bEI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hRd-48-TEr" firstAttribute="leading" secondItem="K6y-hB-rG3" secondAttribute="leading" id="61S-cr-xst"/>
+                            <constraint firstItem="hRd-48-TEr" firstAttribute="top" secondItem="orC-OE-vFE" secondAttribute="top" id="9Lf-fC-9gr"/>
+                            <constraint firstItem="K6y-hB-rG3" firstAttribute="top" secondItem="hRd-48-TEr" secondAttribute="bottom" id="DIg-km-I3r"/>
+                            <constraint firstItem="w4Z-Lg-GL5" firstAttribute="top" secondItem="K6y-hB-rG3" secondAttribute="bottom" constant="1" id="pDH-qB-UBh"/>
+                            <constraint firstItem="K6y-hB-rG3" firstAttribute="trailing" secondItem="hRd-48-TEr" secondAttribute="trailing" id="usv-aH-k6J"/>
+                            <constraint firstAttribute="trailing" secondItem="K6y-hB-rG3" secondAttribute="trailing" id="xw2-31-qdN"/>
+                            <constraint firstItem="K6y-hB-rG3" firstAttribute="leading" secondItem="orC-OE-vFE" secondAttribute="leading" id="zHg-hi-Ooa"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="CloudPage Inbox" id="aMn-Mw-Xjy"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="inboxTableView" destination="K6y-hB-rG3" id="d4O-Sp-c6t"/>
+                        <outlet property="listFilterSegmentedControl" destination="uEL-Fc-6DB" id="fhF-Xt-9AU"/>
+                        <outlet property="segmentContainerView" destination="hRd-48-TEr" id="5UM-Og-wVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVO-Hj-Dl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="-1672"/>
+        </scene>
         <!--Message Received Table View Controller - Message Details-->
         <scene sceneID="2eK-z7-Mn8">
             <objects>
@@ -296,6 +425,7 @@
                         <segue destination="rS3-4F-Mxm" kind="relationship" relationship="viewControllers" id="tO2-Rh-TgM"/>
                         <segue destination="xsZ-AU-EHm" kind="relationship" relationship="viewControllers" id="7Tq-o1-lEP"/>
                         <segue destination="L6b-sw-iww" kind="relationship" relationship="viewControllers" id="Ibj-PV-kLE"/>
+                        <segue destination="IXZ-XN-P12" kind="relationship" relationship="viewControllers" id="itt-uW-TEj"/>
                         <segue destination="edQ-2z-Zfk" kind="relationship" relationship="viewControllers" id="1LT-DC-NuG"/>
                     </connections>
                 </tabBarController>
@@ -351,6 +481,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cloud" width="35" height="35"/>
         <image name="home" width="30" height="30"/>
         <image name="info" width="30" height="30"/>
         <image name="messages" width="30" height="30"/>

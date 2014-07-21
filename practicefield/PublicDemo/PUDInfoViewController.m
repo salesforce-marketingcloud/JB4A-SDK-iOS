@@ -57,11 +57,13 @@
                      @"<b>App Details</b><hr>"
                      "<i>App Bundle Id:</i> k_APP_BUNDLE_ID<br>"
                      "<i>App Version:</i> k_APP_VERSION<br>"
-                     "<i>SDK Version:</i> k_SDK_VERSION<br>"];
+                     "<i>SDK Version:</i> k_SDK_VERSION<br>"
+                     "<i>Build Type:</i> k_BUILD_TYPE<br>"];
     
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAppVersion withString:[PUDUtility appVersion]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAppBundleID withString:[PUDUtility bundleID]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoSDKVersion withString:[PUDUtility sdkVersion]];
+    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoBuildType withString:[PUDUtility buildType]];
     
     return ret;
 }
@@ -76,13 +78,15 @@
                      "<b>Client Id:</b> k_CLIENT_ID<br>"
                      "<b>Client Secret:</b> k_CLIENT_SECRET<br><br>"
                      "The messageId is found in the Marketing Cloud Message Center for the API Message which is a template for the message to send. This app overrides the values in the message to customize who receives the message as well as what is included in the message.</p>"
-                     "<b>Message Id:</b> k_MESSAGE_ID<br>";
+                     "<b>Message Id, Vanilla:</b> k_MESSAGE_ID_VANILLA<br>"
+                     "<b>Message Id, CloudPage:</b> k_MESSAGE_ID_CLOUDPAGE<br>";
     
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAppID withString:[PUDUtility safeAppID]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAccessToken withString:[PUDUtility safeAccessToken]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoClientID withString:[PUDUtility safeClientID]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoClientSecret withString:[PUDUtility safeClientSecret]];
-    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoMessageID withString:[PUDUtility messageID]];
+    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoMessageIDVanilla withString:[PUDUtility messageIdVanilla]];
+    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoMessageIDCloudPage withString:[PUDUtility messageIdCloudPage]];
     
     return ret;
 }

@@ -11,29 +11,98 @@
 // Libraries
 #import "ETPush.h"
 
+// Other
+#import "PUDAppSettingConstants.h"
+
 @interface PUDUtility()
-
-@property (nonatomic, strong) NSString *accessToken;
-
-@property (nonatomic, strong) NSString *appID;
-
-@property (nonatomic, strong) NSString *openDirectDelegateClassName;
 
 @end
 
 @implementation PUDUtility
 
-+ (id)sharedInstance
-{
-    static dispatch_once_t once;
-    static id sharedInstance;
-    dispatch_once(&once, ^{
-        sharedInstance = [[self alloc] init];
-    });
-    return sharedInstance;
+#pragma mark - App Settings
+
++ (NSString *)accessToken {
+#ifdef DEBUG
+    return kAppSettingDebugAccessToken;
+#elif ADHOC
+    return kAppSettingAdHocAccessToken;
+#elif QA
+    return kAppSettingQAAccessToken;
+#else
+    return kAppSettingReleaseAccessToken;
+#endif
+}
+
++ (NSString *)appID {
+#ifdef DEBUG
+    return kAppSettingDebugAppId;
+#elif ADHOC
+    return kAppSettingAdHocAppId;
+#elif QA
+    return kAppSettingQAAppId;
+#else
+    return kAppSettingReleaseAppId;
+#endif
+}
+
++ (NSString *)clientID {
+#ifdef DEBUG
+    return kAppSettingDebugClientId;
+#elif ADHOC
+    return kAppSettingAdHocClientId;
+#elif QA
+    return kAppSettingQAClientId;
+#else
+    return kAppSettingReleaseClientId;
+#endif
+}
+
++ (NSString *)clientSecret {
+#ifdef DEBUG
+    return kAppSettingDebugClientSecret;
+#elif ADHOC
+    return kAppSettingAdHocClientSecret;
+#elif QA
+    return kAppSettingQAClientSecret;
+#else
+    return kAppSettingReleaseClientSecret;
+#endif
+}
+
++ (NSString *)messageIdVanilla {
+#ifdef DEBUG
+    return kAppSettingDebugOutboundMessageIdVanilla;
+#elif ADHOC
+    return kAppSettingAdHocOutboundMessageIdVanilla;
+#elif QA
+    return kAppSettingQAOutboundMessageIdVanilla;
+#else
+    return kAppSettingReleaseOutboundMessageIdVanilla;
+#endif
+}
+
++ (NSString *)messageIdCloudPage {
+#ifdef DEBUG
+    return kAppSettingDebugOutboundMessageIdCloudPage;
+#elif ADHOC
+    return kAppSettingAdHocOutboundMessageIdCloudPage;
+#elif QA
+    return kAppSettingQAOutboundMessageIdCloudPage;
+#else
+    return kAppSettingReleaseOutboundMessageIdCloudPage;
+#endif
 }
 
 #pragma mark - public methods
+
++ (NSString *)fuelAccessTokenRoute {
+#if QA
+    return @"";
+#else
+    return @"https://auth.exacttargetapis.com/v1/requestToken";
+#endif
+}
 
 + (NSString *)appVersion {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
@@ -44,7 +113,7 @@
 }
 
 + (NSString *)safeAppID {
-    NSString *appID = [[PUDUtility sharedInstance] appID];
+    NSString *appID = [self appID];
     if (!appID) {
         return nil;
     }
@@ -57,16 +126,8 @@
     return [appID stringByReplacingCharactersInRange:range withString:@"***********"];
 }
 
-+ (NSString *)appID {
-    return [[PUDUtility sharedInstance] appID];
-}
-
-+ (void)setAppID:(NSString *)appID {
-    [[PUDUtility sharedInstance] setAppID:appID];
-}
-
 + (NSString *)safeAccessToken {
-    NSString *accessToken = [[PUDUtility sharedInstance] accessToken];
+    NSString *accessToken = [self accessToken];
     if (!accessToken) {
         return nil;
     }
@@ -79,16 +140,8 @@
     return [accessToken stringByReplacingCharactersInRange:range withString:@"***********"];
 }
 
-+ (NSString *)accessToken {
-    return [[PUDUtility sharedInstance] accessToken];
-}
-
-+ (void)setAccessToken:(NSString *)accessToken {
-    [[PUDUtility sharedInstance] setAccessToken:accessToken];
-}
-
 + (NSString *)safeClientID {
-    NSString *clientID = [self loadClientId];
+    NSString *clientID = [self clientID];
     if (!clientID) {
         return nil;
     }
@@ -101,26 +154,14 @@
     return [clientID stringByReplacingCharactersInRange:range withString:@"***********"];
 }
 
-+ (NSString *)clientID {
-    return [self loadClientId];
-}
-
 + (NSString *)safeClientSecret {
-    NSString *clientSecret = [self loadClientSecret];
+    NSString *clientSecret = [self clientSecret];
     if (!clientSecret) {
         return nil;
     }
     
     NSRange range = {7, 11};
     return [clientSecret stringByReplacingCharactersInRange:range withString:@"***********"];
-}
-
-+ (NSString *)clientSecret {
-    return [self loadClientSecret];
-}
-
-+ (NSString *)messageID {
-    return [self loadMessageId];
 }
 
 + (NSString *)isPushEnabled {
@@ -153,11 +194,12 @@
 }
 
 + (NSString *)openDirectDelegateClassName {
-    return [[PUDUtility sharedInstance] openDirectDelegateClassName];
-}
-
-+ (void)setOpenDirectDelegateClassName:(NSString *)openDirectDelegateClassName {
-    [[PUDUtility sharedInstance] setOpenDirectDelegateClassName:openDirectDelegateClassName];
+    id openDirectDelegate = [[ETPush pushManager] openDirectDelegate];
+    if (!openDirectDelegate) {
+        return nil;
+    }
+    
+    return NSStringFromClass([openDirectDelegate class]);
 }
 
 + (NSString *)isLocationEnabled {
@@ -187,76 +229,14 @@
     return @"DEBUG";
 #elif ADHOC
     return @"ADHOC";
+#elif QA
+    return @"QA";
 #else
     return @"RELEASE";
 #endif
 }
 
 #pragma mark - private methods
-
-+ (NSDictionary *)settingsPlistDictionary {
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSString *finalPath = [path stringByAppendingPathComponent:kPUDAppSettingsPlistName];
-    NSDictionary *plistData = [NSDictionary dictionaryWithContentsOfFile:finalPath];
-    
-    /**
-     Raise an exception if the file cannot be found or has no data inside it
-     */
-    if (!plistData) {
-        [NSException raise:[kPUDAppSettingsPlistName stringByAppendingString:@" Not Found"]
-                    format:@"The FuelCredentials.plist file cannot be found. Make sure it is contained inside the main bundle."];
-    }
-    
-    return plistData;
-}
-
-+ (NSString *)loadClientId {
-    NSDictionary *plistData = [self settingsPlistDictionary];
-
-    NSString *key = nil;
-    
-#ifdef DEBUG
-    key = @"debugClientId";
-#elif ADHOC
-    key = @"adhocClientId";
-#else
-    key = @"prodClientId";
-#endif
-    
-    return plistData[key];
-}
-
-+ (NSString *)loadClientSecret {
-    NSDictionary *plistData = [self settingsPlistDictionary];
-    
-    NSString *key = nil;
-    
-#ifdef DEBUG
-    key = @"debugClientSecret";
-#elif ADHOC
-    key = @"adhocClientSecret";
-#else
-    key = @"prodClientSecret";
-#endif
-    
-    return plistData[key];
-}
-
-+ (NSString *)loadMessageId {
-    NSDictionary *plistData = [self settingsPlistDictionary];
-    
-    NSString *key = nil;
-    
-#ifdef DEBUG
-    key = @"debugMessageId";
-#elif ADHOC
-    key = @"adhocMessageId";
-#else
-    key = @"prodMessageId";
-#endif
-    
-    return plistData[key];
-}
 
 + (NSString *)attributeFirstName {
     NSString *firstName = [[[ETPush pushManager] allAttributes] objectForKey:kPUDAttributeFirstName];

@@ -17,6 +17,11 @@ NSString *const kPUDAppSettingsPlistName = @"settings.plist";
 NSString *const kPUDAttributeFirstName = @"FirstName";
 NSString *const kPUDAttributeLastName = @"LastName";
 
+#pragma mark - CloudPage Inbox
+NSUInteger const kPUDCloudPageFilterSegmentControlAllIndex = 0;
+NSUInteger const kPUDCloudPageFilterSegmentControlUnreadIndex = 1;
+NSUInteger const kPUDCloudPageFilterSegmentControlReadIndex = 2;
+
 #pragma mark - Info Table View
 NSString *const kPUDInfoAppVersion = @"k_APP_VERSION";
 NSString *const kPUDInfoAppBundleID = @"k_APP_BUNDLE_ID";
@@ -27,7 +32,8 @@ NSString *const kPUDInfoAppID = @"k_APP_ID";
 NSString *const kPUDInfoAccessToken = @"k_ACCESS_TOKEN";
 NSString *const kPUDInfoClientID = @"k_CLIENT_ID";
 NSString *const kPUDInfoClientSecret = @"k_CLIENT_SECRET";
-NSString *const kPUDInfoMessageID = @"k_MESSAGE_ID";
+NSString *const kPUDInfoMessageIDVanilla = @"k_MESSAGE_ID_VANILLA";
+NSString *const kPUDInfoMessageIDCloudPage = @"k_MESSAGE_ID_CLOUDPAGE";
 NSString *const kPUDInfoPushEnabled = @"k_PUSH_ENABLED";
 NSString *const kPUDInfoDeviceToken = @"k_DEVICE_TOKEN";
 NSString *const kPUDInfoDeviceID = @"k_DEVICE_ID";
@@ -39,23 +45,34 @@ NSString *const kPUDInfoAttributeNFLTeamTags = @"k_NFL_TEAM_TAGS";
 NSString *const kPUDInfoAttributeFCTeamTags = @"k_FC_TEAM_TAGS";
 
 #pragma mark - Message Detail Table View
-NSUInteger const kPUDMessageDetailCustomSoundSectionIndex = 1;
-NSUInteger const kPUDMessageDetailCustomKeySectionIndex = 4;
-NSUInteger const kPUDMessageDetailMessageTextSectionIndex = 0;
-NSUInteger const kPUDMessageDetailOpenDirectSectionIndex = 3;
-NSUInteger const kPUDMessageDetailPayloadSectionIndex = 7;
-NSUInteger const kPUDMessageDetailSendMessageSectionIndex = 6;
-NSUInteger const kPUDMessageDetailTagsSectionIndex = 5;
-NSUInteger const kPUDMessageDetailUpdateBadgeSectionIndex = 2;
 
+// tags
 NSUInteger const kPUDMessageDetailSendButtonTag = 7645745;
 NSUInteger const kPUDMessageDetailSwitchTag = 4322;
 NSUInteger const kPUDMessageDetailTextFieldTag = 1234324;
+NSUInteger const kPUDMessageDetailSegmentedControlTag = 7437381;
 
+// custom keys
 NSString *const kPUDMessageDetailCustomKeyDiscountCode = @"discount_code";
 
+// textfield defaults
 NSString *const kPUDAppMessageDetailDefaultMessageText = @"Type something...";
 NSString *const kPUDMessageDetailDefaultOpenDirect = @"http://www.exacttarget.com";
+
+// push method segment
+NSUInteger const kPUDMessageDetailAlertSegmentIndex = 0;
+NSUInteger const kPUDMessageDetailAlertCloudPageSegmentIndex = 1;
+
+// custom sound picker
+NSUInteger const kPUDMessageDetailPickerSoundDefaultIndex = 0;
+NSUInteger const kPUDMessageDetailPickerSoundCustomIndex = 1;
+NSUInteger const kPUDMessageDetailPickerSoundNoneIndex = 2;
+
+// custom key picker
+NSUInteger const kPUDMessageDetailPickerCustomKeyNoneIndex = 0;
+NSUInteger const kPUDMessageDetailPickerCustomKey10Index = 1;
+NSUInteger const kPUDMessageDetailPickerCustomKey20Index = 2;
+NSUInteger const kPUDMessageDetailPickerCustomKey30Index = 3;
 
 #pragma mark - Messages Payload
 NSString *const kPUDMessagePayloadSoundKey = @"sound";
@@ -66,8 +83,21 @@ NSString *const kPUDMessagePayloadBadgeKey = @"badge";
 NSString *const kPUDMessagePayloadTagsKey = @"inclusionTags";
 NSString *const kPUDMessagePayloadOpenDirectKey = @"openDirect";
 NSString *const kPUDMessagePayloadCustomKeysKey = @"customKeys";
+NSString *const kPUDMessagePayloadCloudPageKey = @"cloudPage";
 
+// badge values
 NSString *const kPUDMessagePayloadDefaultBadgeValue = @"+0";
+
+// sound values
+NSString *const kPUDMessagePayloadSoundDefault = @"default";
+NSString *const kPUDMessagePayloadSoundCustom = @"custom.caf";
+NSString *const kPUDMessagePayloadSoundNone = nil;
+
+// custom key values
+NSString *const kPUDMessagePayloadCustomKeyNone = @"None";
+NSString *const kPUDMessagePayloadCustomKey10 = @"10%";
+NSString *const kPUDMessagePayloadCustomKey20 = @"20%";
+NSString *const kPUDMessagePayloadCustomKey30 = @"30%";
 
 #pragma mark - Messages Table View
 NSUInteger const kPUDMessagesLastReceivedSectionIndex = 0;
@@ -79,6 +109,7 @@ NSString *const kPUDMessageTypeOutbound = @"Outbound";
 
 #pragma mark - Push Defines
 NSString *const kPUDPushDefineOpenDirectPayloadKey = @"_od";
+NSString *const kPUDPushDefineCloudPagePayloadKey = @"_x";
 
 #pragma mark - Reuse Identifiers
 NSString *const kPUDReuseIdentifierDiscountCell = @"ruid_discountCell";
@@ -88,6 +119,7 @@ NSString *const kPUDReuseIdentifierMessageDetailCell = @"ruid_messageDetailCell"
 NSString *const kPUDReuseIdentifierPushReceivedCell = @"ruid_pushReceivedCell";
 NSString *const kPUDReuseIdentifierSettingCell = @"ruid_settingCell";
 NSString *const kPUDReuseIdentifierTagCell = @"ruid_tagCell";
+NSString *const kPUDReuseIdentifierCloudPageInboxCell = @"ruid_cloudPageInboxCell";
 
 #pragma mark - Segues
 NSString *const kPUDSegueMessagesToLastReceivedPush = @"seg_messagesToLastReceivedPush";

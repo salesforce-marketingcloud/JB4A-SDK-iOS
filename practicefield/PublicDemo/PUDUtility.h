@@ -10,31 +10,35 @@
 
 @interface PUDUtility : NSObject
 
+#pragma mark - App Settings
+
++ (NSString *)accessToken;
+
++ (NSString *)appID;
+
++ (NSString *)clientID;
+
++ (NSString *)clientSecret;
+
++ (NSString *)messageIdVanilla;
+
++ (NSString *)messageIdCloudPage;
+
+#pragma mark - Other
+
++ (NSString *)fuelAccessTokenRoute;
+
 + (NSString *)appVersion;
 
 + (NSString *)sdkVersion;
 
 + (NSString *)safeAppID;
 
-+ (NSString *)appID;
-
-+ (void)setAppID:(NSString *)appID;
-
 + (NSString *)safeAccessToken;
-
-+ (NSString *)accessToken;
-
-+ (void)setAccessToken:(NSString *)accessToken;
 
 + (NSString *)safeClientID;
 
-+ (NSString *)clientID;
-
 + (NSString *)safeClientSecret;
-
-+ (NSString *)clientSecret;
-
-+ (NSString *)messageID;
 
 + (NSString *)isPushEnabled;
 
@@ -43,8 +47,6 @@
 + (NSString *)deviceID;
 
 + (NSString *)openDirectDelegateClassName;
-
-+ (void)setOpenDirectDelegateClassName:(NSString *)openDirectDelegateClassName;
 
 + (NSString *)isLocationEnabled;
 

@@ -12,7 +12,7 @@
 #import "ETPush.h"
 
 /**
- *  ET_NOTE: To handle OpenDirect links other than http or https you have to implement the ExactTargetOpenDirectDelegate protocol.
+ *  ET_NOTE: To display/handle OpenDirect links other than http or https you have to implement the ExactTargetOpenDirectDelegate protocol. If you only plan on sending http or https OpenDirect links then you don't have to specify an ExactTargetOpenDirectDelegate as the SDK can display these schemes automatically
  */
 @interface PUDAppDelegate : UIResponder <UIAlertViewDelegate, UIApplicationDelegate, ExactTargetOpenDirectDelegate>
 

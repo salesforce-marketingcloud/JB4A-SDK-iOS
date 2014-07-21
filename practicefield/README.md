@@ -24,17 +24,14 @@ The following SDK features are implemented by the app:
 - [OpenDirect](https://exacttarget.github.io/MobilePushSDK-iOS/Protocols/ExactTargetOpenDirectDelegate.html)
 - [Custom Key](https://code.exacttarget.com/mobilepush/integrating-mobilepush-sdk-your-ios-mobile-app#CustomKeys)
 - [Location Messages](https://exacttarget.github.io/MobilePushSDK-iOS/Classes/ETLocationManager.html)
+- [CloudPages](PublicDemo/PUDMessageComposeTableViewController.m)
+- [CloudPage Inbox](PublicDemo/PUDCloudPageInboxViewController.m)
 
 In addition the app:
 
 - Displays the raw payload of the most recently received push message
 - Displays device info including: device token, device id, app id, access token
 - Lets you quickly and easily [email debug information](#debug) directly to ExactTarget
-
-### Unimplemented SDK Features
-
-- CloudPages
-- Push Inbox
 
 ### <a name="debug"></a> Sending Debug Data To ExactTarget
 
@@ -47,14 +44,15 @@ This app allows you to easily send debug information to ExactTarget directly fro
 
 ### Setting Up The App In Your Account
 
-1. Follow the steps in [Integrating the MobilePush SDK with your iOS Mobile App](https://code.exacttarget.com/mobilepush/integrating-mobilepush-sdk-your-ios-mobile-app) up until the "How to Implement Analytics in your iOS Mobile App" section. At this point you will have the app set up in your AppCenter account, have the app provisioned, and have the AppID and AccessToken placed inside the SDK initialization method in [PUDAppDelegate.m](PublicDemo/PUDAppDelegate.m). 
-2. Add two text attributes to your account - FirstName and LastName. This [guide](https://help.exacttarget.com/en-US/documentation/mobilepush/contacts/) describes this process. *NOTE: At this point you will be able to send messages to the app from MobilePush inside the Marketing Cloud. You can also set attributes within the app's Settings tab. You only need to continue further if you wish to be able to create and send push messages from within the app.*
+1. Follow the steps in [Integrating the MobilePush SDK with your iOS Mobile App](https://code.exacttarget.com/mobilepush/integrating-mobilepush-sdk-your-ios-mobile-app) up until the "How to Implement Analytics in your iOS Mobile App" section. At this point you will have the app set up in your AppCenter account, have the app provisioned, and have an AppID and AccessToken corresponding to your app.
+2. Place the access token and application id you received within AppCenter into [PUDAppSettingConstants.m](PublicDemo/PUDAppSettingConstants.m) file. PUDAppSettingConstants is where you will place app specific settings such as access token, clientid, client secret, and more.
+3. *NOTE: At this point you will be able to send messages to the app from MobilePush inside the Marketing Cloud. You can also set attributes within the app's Settings tab. You only need to continue further if you wish to be able to create and send push messages from within the app.*
 
-3. Under the Administration panel in MobilePush, enable all of the optional settings (custom sound, OpenDirect, and Custom Keys) then create a custom key in your account and name it "discount_code": ![Setup Step 02](Assets/setup01.png "Step 2")
-4. Create an outbound message inside MobilePush. Be sure to select "API Trigger" as the Send Method. Set the settings so that they match the following screenshot: ![Setup Step 03](Assets/setup02.png "Step 3")
-5. Place the message id of the message you just created inside the file named "settings.plist", for both the prod and debug MessageId.
-6. Place your Fuel clientId and clientSecret inside the file named "settings.plist" (you were given these when you set up server to server communication inside AppCenter), for both the prod and debug clientId and clientSecret.
-7. Start sending pushes via MobilePush and the app!
+4. Under the Administration panel in MobilePush, enable all of the optional settings (custom sound, OpenDirect, and Custom Keys) then create a custom key in your account and name it "discount_code": ![Setup Step 02](Assets/setup01.png "Step 2")
+5. Create an outbound message inside MobilePush. Be sure to select "API Trigger" as the Send Method. Set the settings so that they match the following screenshot: ![Setup Step 03](Assets/setup02.png "Step 3")
+6. Place the message id of the message you just created into the [PUDAppSettingConstants.m](PublicDemo/PUDAppSettingConstants.m) file.
+7. Place your Fuel clientId and clientSecret into the [PUDAppSettingConstants.m](PublicDemo/PUDAppSettingConstants.m) file (you were given these when you set up server to server communication inside AppCenter).
+8. Start sending pushes from inside the app!
 
 ### Third Party Libraries Used
 

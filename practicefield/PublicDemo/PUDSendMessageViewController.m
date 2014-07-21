@@ -167,7 +167,7 @@
 }
 
 - (void)sendMessageNowButtonTapped:(UIButton *)sender {
-    if (![ETPush isPushEnabled]) {
+    if (![ETPush isPushEnabled] && ![[[[UIDevice currentDevice] name] lowercaseString] isEqualToString:@"iphone simulator"]) {
         NSString *message = @"Please enable Push Notifications inside the Settings app in order to send messages.";
         [[[UIAlertView alloc] initWithTitle:@"Push Not Enabled" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }

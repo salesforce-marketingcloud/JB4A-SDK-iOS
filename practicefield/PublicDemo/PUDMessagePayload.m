@@ -25,6 +25,11 @@
 - (NSDictionary *)serializableDictionary {
     NSMutableDictionary *ret = [[self dictionaryWithValuesForKeys:[self serializableProperties]] mutableCopy];
     
+    // remove openDirect if message is not the right type
+    if (self.pushMethod == kPushMethodAlertCloudPage) {
+        [ret removeObjectForKey:kPUDMessagePayloadOpenDirectKey];
+    }
+    
     /**
      Remove any keys that have a <null> value
      */
