@@ -35,6 +35,8 @@ _Released April 11, 2014, correlating to ExactTarget's 2014-03 Release_
 
 ### Version 3.0
 
+<span class="alert">_This version no longer supported as of July 21, 2014._</span>
+
 This version has a lot of new functionality, and a few changes that may be important to note. Here's a quick summary. For more, please visit the full documentation.
 
 #### Overview
@@ -55,29 +57,29 @@ This version has a lot of new functionality, and a few changes that may be impor
 
 
 ### Version 2.1.3
-
+<span class="alert">_This version no longer supported as of July 21, 2014._</span>
 * Bug fixes.
 
 ### Version 2.1.2
-
+<span class="alert">_This version no longer supported as of July 21, 2014._</span>
 * Various bug fixes and enhancements.
 * Deprecated internal functionality that was no longer required.
 
 ### Version 2.1.1
-
+<span class="alert">_This version no longer supported as of July 21, 2014._</span>
 * Changes required in preparation for iOS 7 compatibilty.
 
 ### Version 2.1.0
-
+<span class="alert">_This version no longer supported as of July 21, 2014._</span>
 * OpenDirect payloads containing a full URL will automatically present themselves on app load. This functionality only works if there is no OpenDirect Delegate set.
 * Verious bug fixes and improvements.
 
 ### Version 2.0.1
-
+<span class="alert">_This version no longer supported as of July 21, 2014._</span>
 * Updated Urban Airship library to 1.4.0 to be compliant with recent Apple approval changes.
 
 ### Version 2.0.0
-
+<span class="alert">_This version no longer supported as of July 21, 2014._</span>
 * Support for Access Tokens in place of Client ID/Secret. Access Token is provided by Code@ExactTarget during app registrations.
 * Added support for Subscriber Key.
 * Added support for determining push enabled state based on the Notifications tab in Settings.
@@ -85,7 +87,7 @@ This version has a lot of new functionality, and a few changes that may be impor
 
 
 ### Version 1.1.1
-
+<span class="alert">_This version no longer supported as of July 21, 2014._</span>
 * First public version!
 * Support for OpenDirect, including the ExactTargetOpenDirectDelegate
 * Bugfixes around timezones and GMT-0000 and attribute processing
