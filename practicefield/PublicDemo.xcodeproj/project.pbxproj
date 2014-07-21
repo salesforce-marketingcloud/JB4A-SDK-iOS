@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D120EE61958D5B200571FB6 /* libetpushsdk-3.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D120EDF1958D5B200571FB6 /* libetpushsdk-3.1.1.a */; };
-		4D120EE71958D5B200571FB6 /* libetpushsdk-3.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D120EDF1958D5B200571FB6 /* libetpushsdk-3.1.1.a */; };
 		4D2180D819490A5C004F6095 /* PUDPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180D719490A5C004F6095 /* PUDPageContentViewController.m */; };
 		4D2180DB194A9D37004F6095 /* PUDSendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180DA194A9D37004F6095 /* PUDSendMessageViewController.m */; };
 		4D2180E2194B7B87004F6095 /* PUDAbstractPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180E1194B7B87004F6095 /* PUDAbstractPageViewController.m */; };
@@ -27,7 +25,6 @@
 		4D2DE023191051BD00B65B6F /* PublicDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE022191051BD00B65B6F /* PublicDemoTests.m */; };
 		4D2DE0321910525900B65B6F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DE0311910525900B65B6F /* libsqlite3.dylib */; };
 		4D2DE04B19105BB100B65B6F /* PUDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE04A19105BB100B65B6F /* PUDConstants.m */; };
-		4D2DE04C19105BB100B65B6F /* PUDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE04A19105BB100B65B6F /* PUDConstants.m */; };
 		4D2DE05519117CBA00B65B6F /* PUDPreferencesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE05419117CBA00B65B6F /* PUDPreferencesTableViewController.m */; };
 		4D57233419377AA5007B1464 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231219377AA5007B1464 /* AFHTTPRequestOperation.m */; };
 		4D57233519377AA5007B1464 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231419377AA5007B1464 /* AFHTTPRequestOperationManager.m */; };
@@ -52,21 +49,85 @@
 		4D71546819183F660040A1CC /* PUDFuelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546719183F660040A1CC /* PUDFuelService.m */; };
 		4D71546B19183F820040A1CC /* PUDServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546A19183F820040A1CC /* PUDServiceProvider.m */; };
 		4D715470191923AA0040A1CC /* PUDDefaultMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546F191923AA0040A1CC /* PUDDefaultMessageModel.m */; };
+		4D72EE1D195DEF2A00068553 /* PUDAppSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */; };
 		4D95F14319256984002A5A43 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D95F14219256984002A5A43 /* MobileCoreServices.framework */; };
+		4DA92C9C196D7F740005BC8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA92C9B196D7F740005BC8E /* QuartzCore.framework */; };
+		4DA92C9D196D7F7A0005BC8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA92C9B196D7F740005BC8E /* QuartzCore.framework */; };
+		4DA92C9E196D7F800005BC8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA92C9B196D7F740005BC8E /* QuartzCore.framework */; };
 		4DC426A91923AE9D002168F7 /* PUDMessageComposeTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC426A81923AE9D002168F7 /* PUDMessageComposeTableData.m */; };
 		4DC426AC1923ECF3002168F7 /* PUDDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC426AB1923ECF3002168F7 /* PUDDataPickerView.m */; };
-		4DC426B01924253F002168F7 /* NSMutableArray+AutoExpandInsert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC426AF1924253F002168F7 /* NSMutableArray+AutoExpandInsert.m */; };
 		4DC4D67D1925B5BA00128F29 /* PUDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D67C1925B5BA00128F29 /* PUDInfoViewController.m */; };
 		4DC4D6801925C16000128F29 /* PUDUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D67F1925C16000128F29 /* PUDUtility.m */; };
-		4DC4D684192658A500128F29 /* ETPush+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D683192658A500128F29 /* ETPush+Swizzle.m */; };
 		4DC4D6EF192A497900128F29 /* PUDDiscountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D6EE192A497900128F29 /* PUDDiscountTableViewController.m */; };
 		4DC4D6F2192A4AF700128F29 /* PUDDiscountTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F1192A4AF700128F29 /* PUDDiscountTableData.m */; };
 		4DC4D6F4192A572F00128F29 /* fre3of9x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F3192A572F00128F29 /* fre3of9x.ttf */; };
-		4DC4D6F8192D21CF00128F29 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F7192D21CF00128F29 /* settings.plist */; };
 		4DCFB92F192127CB00BF96BB /* PUDMessageReceivedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB92E192127CB00BF96BB /* PUDMessageReceivedTableViewController.m */; };
 		4DCFB93219227BD300BF96BB /* PUDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB93119227BD300BF96BB /* PUDNavigationController.m */; };
 		4DCFB93519227E4700BF96BB /* PUDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB93419227E4700BF96BB /* PUDTabBarController.m */; };
 		4DCFB93A1922842300BF96BB /* custom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4DCFB9391922842300BF96BB /* custom.caf */; };
+		4DD373EA19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */; };
+		4DD373EB19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */; };
+		4DD373EC19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */; };
+		4DDDC86F197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */; };
+		4DDDC870197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */; };
+		4DDDC871197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */; };
+		4DEB0ADF195DC22900790CEF /* PUDAppSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */; };
+		4DEB0AE2195DE31600790CEF /* PUDServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546A19183F820040A1CC /* PUDServiceProvider.m */; };
+		4DEB0AE3195DE31600790CEF /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231919377AA5007B1464 /* AFNetworkReachabilityManager.m */; };
+		4DEB0AE4195DE31600790CEF /* PUDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5723581937E19F007B1464 /* PUDHomeViewController.m */; };
+		4DEB0AE5195DE31600790CEF /* PUDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D67C1925B5BA00128F29 /* PUDInfoViewController.m */; };
+		4DEB0AE6195DE31600790CEF /* PUDMessageComposeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546119183EE60040A1CC /* PUDMessageComposeTableViewController.m */; };
+		4DEB0AE7195DE31600790CEF /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232F19377AA5007B1464 /* JDStatusBarView.m */; };
+		4DEB0AE8195DE31600790CEF /* PUDDefaultMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546F191923AA0040A1CC /* PUDDefaultMessageModel.m */; };
+		4DEB0AE9195DE31600790CEF /* PUDFuelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546719183F660040A1CC /* PUDFuelService.m */; };
+		4DEB0AEA195DE31600790CEF /* PUDDiscountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D6EE192A497900128F29 /* PUDDiscountTableViewController.m */; };
+		4DEB0AEB195DE31600790CEF /* PBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57233219377AA5007B1464 /* PBWebViewController.m */; };
+		4DEB0AEC195DE31600790CEF /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232319377AA5007B1464 /* AFURLSessionManager.m */; };
+		4DEB0AED195DE31600790CEF /* PUDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE04A19105BB100B65B6F /* PUDConstants.m */; };
+		4DEB0AEE195DE31600790CEF /* PUDMessagePayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D651C53191D54AB000BAF5E /* PUDMessagePayload.m */; };
+		4DEB0AF0195DE31600790CEF /* PUDAppSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */; };
+		4DEB0AF1195DE31600790CEF /* PUDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE004191051BD00B65B6F /* PUDAppDelegate.m */; };
+		4DEB0AF2195DE31600790CEF /* PUDSendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180DA194A9D37004F6095 /* PUDSendMessageViewController.m */; };
+		4DEB0AF3195DE31600790CEF /* PUDAbstractPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180E1194B7B87004F6095 /* PUDAbstractPageViewController.m */; };
+		4DEB0AF4195DE31600790CEF /* PUDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB93419227E4700BF96BB /* PUDTabBarController.m */; };
+		4DEB0AF6195DE31600790CEF /* PUDMessageReceivedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB92E192127CB00BF96BB /* PUDMessageReceivedTableViewController.m */; };
+		4DEB0AF7195DE31600790CEF /* UIColor+ExactTargetColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232619377AA5007B1464 /* UIColor+ExactTargetColors.m */; };
+		4DEB0AF8195DE31600790CEF /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232D19377AA5007B1464 /* JDStatusBarStyle.m */; };
+		4DEB0AF9195DE31600790CEF /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232B19377AA5007B1464 /* JDStatusBarNotification.m */; };
+		4DEB0AFA195DE31600790CEF /* PUDPreferencesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE05419117CBA00B65B6F /* PUDPreferencesTableViewController.m */; };
+		4DEB0AFB195DE31600790CEF /* PUDPreferencesTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D667BAF19200DB90015BC2E /* PUDPreferencesTableData.m */; };
+		4DEB0AFC195DE31600790CEF /* PUDPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180D719490A5C004F6095 /* PUDPageContentViewController.m */; };
+		4DEB0AFD195DE31600790CEF /* PUDPreferencesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D667BAC192005370015BC2E /* PUDPreferencesTableViewCell.m */; };
+		4DEB0AFE195DE31600790CEF /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232119377AA5007B1464 /* AFURLResponseSerialization.m */; };
+		4DEB0AFF195DE31600790CEF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231219377AA5007B1464 /* AFHTTPRequestOperation.m */; };
+		4DEB0B00195DE31600790CEF /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231D19377AA5007B1464 /* AFURLConnectionOperation.m */; };
+		4DEB0B01195DE31600790CEF /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231419377AA5007B1464 /* AFHTTPRequestOperationManager.m */; };
+		4DEB0B02195DE31600790CEF /* PUDMessageComposeTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC426A81923AE9D002168F7 /* PUDMessageComposeTableData.m */; };
+		4DEB0B03195DE31600790CEF /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D667B9F191D9BDD0015BC2E /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m */; };
+		4DEB0B04195DE31600790CEF /* PUDDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC426AB1923ECF3002168F7 /* PUDDataPickerView.m */; };
+		4DEB0B05195DE31600790CEF /* PUDDiscountTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F1192A4AF700128F29 /* PUDDiscountTableData.m */; };
+		4DEB0B06195DE31600790CEF /* PUDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB93119227BD300BF96BB /* PUDNavigationController.m */; };
+		4DEB0B07195DE31600790CEF /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231F19377AA5007B1464 /* AFURLRequestSerialization.m */; };
+		4DEB0B08195DE31600790CEF /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231B19377AA5007B1464 /* AFSecurityPolicy.m */; };
+		4DEB0B09195DE31600790CEF /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231619377AA5007B1464 /* AFHTTPSessionManager.m */; };
+		4DEB0B0A195DE31600790CEF /* PUDUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D67F1925C16000128F29 /* PUDUtility.m */; };
+		4DEB0B0B195DE31600790CEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE000191051BD00B65B6F /* main.m */; };
+		4DEB0B0D195DE31600790CEF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D95F14219256984002A5A43 /* MobileCoreServices.framework */; };
+		4DEB0B0E195DE31600790CEF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DE0311910525900B65B6F /* libsqlite3.dylib */; };
+		4DEB0B0F195DE31600790CEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DDFF6191051BD00B65B6F /* CoreGraphics.framework */; };
+		4DEB0B11195DE31600790CEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DDFF8191051BD00B65B6F /* UIKit.framework */; };
+		4DEB0B12195DE31600790CEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DDFF4191051BD00B65B6F /* Foundation.framework */; };
+		4DEB0B14195DE31600790CEF /* custom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4DCFB9391922842300BF96BB /* custom.caf */; };
+		4DEB0B15195DE31600790CEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DE00F191051BD00B65B6F /* Images.xcassets */; };
+		4DEB0B16195DE31600790CEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DDFFD191051BD00B65B6F /* InfoPlist.strings */; };
+		4DEB0B17195DE31600790CEF /* fre3of9x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F3192A572F00128F29 /* fre3of9x.ttf */; };
+		4DEB0B18195DE31600790CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DE006191051BD00B65B6F /* Main.storyboard */; };
+		4DEC6D14196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D13196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m */; };
+		4DEC6D15196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D13196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m */; };
+		4DEC6D16196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D13196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m */; };
+		4DEC6D19196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */; };
+		4DEC6D1A196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */; };
+		4DEC6D1B196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */; };
 		7F22BEA51958706000FB6562 /* PUDServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546A19183F820040A1CC /* PUDServiceProvider.m */; };
 		7F22BEA61958706000FB6562 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231919377AA5007B1464 /* AFNetworkReachabilityManager.m */; };
 		7F22BEA71958706000FB6562 /* PUDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5723581937E19F007B1464 /* PUDHomeViewController.m */; };
@@ -80,12 +141,10 @@
 		7F22BEAF1958706000FB6562 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232319377AA5007B1464 /* AFURLSessionManager.m */; };
 		7F22BEB01958706000FB6562 /* PUDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE04A19105BB100B65B6F /* PUDConstants.m */; };
 		7F22BEB11958706000FB6562 /* PUDMessagePayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D651C53191D54AB000BAF5E /* PUDMessagePayload.m */; };
-		7F22BEB21958706000FB6562 /* NSMutableArray+AutoExpandInsert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC426AF1924253F002168F7 /* NSMutableArray+AutoExpandInsert.m */; };
 		7F22BEB31958706000FB6562 /* PUDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE004191051BD00B65B6F /* PUDAppDelegate.m */; };
 		7F22BEB41958706000FB6562 /* PUDSendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180DA194A9D37004F6095 /* PUDSendMessageViewController.m */; };
 		7F22BEB51958706000FB6562 /* PUDAbstractPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180E1194B7B87004F6095 /* PUDAbstractPageViewController.m */; };
 		7F22BEB61958706000FB6562 /* PUDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB93419227E4700BF96BB /* PUDTabBarController.m */; };
-		7F22BEB71958706000FB6562 /* ETPush+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D683192658A500128F29 /* ETPush+Swizzle.m */; };
 		7F22BEB81958706000FB6562 /* PUDMessageReceivedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB92E192127CB00BF96BB /* PUDMessageReceivedTableViewController.m */; };
 		7F22BEB91958706000FB6562 /* UIColor+ExactTargetColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232619377AA5007B1464 /* UIColor+ExactTargetColors.m */; };
 		7F22BEBA1958706000FB6562 /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232D19377AA5007B1464 /* JDStatusBarStyle.m */; };
@@ -117,7 +176,6 @@
 		7F22BED71958706000FB6562 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DE00F191051BD00B65B6F /* Images.xcassets */; };
 		7F22BED81958706000FB6562 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DDFFD191051BD00B65B6F /* InfoPlist.strings */; };
 		7F22BED91958706000FB6562 /* fre3of9x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F3192A572F00128F29 /* fre3of9x.ttf */; };
-		7F22BEDA1958706000FB6562 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F7192D21CF00128F29 /* settings.plist */; };
 		7F22BEDB1958706000FB6562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DE006191051BD00B65B6F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -133,24 +191,6 @@
 
 /* Begin PBXFileReference section */
 		4D120ED31957D35700571FB6 /* PublicDemo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PublicDemo copy-Info.plist"; path = "/Users/mlathrop/Repos/PublicDemo-iOS/PublicDemo copy-Info.plist"; sourceTree = "<absolute>"; };
-		4D120ED41958D5B200571FB6 /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLandingPagePresenter.h; path = ../../../../etpushsdk/ETLandingPagePresenter.h; sourceTree = "<group>"; };
-		4D120ED51958D5B200571FB6 /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocationManager.h; path = ../../../../etpushsdk/ETLocationManager.h; sourceTree = "<group>"; };
-		4D120ED61958D5B200571FB6 /* ETPhoneHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETPhoneHome.h; path = ../../../../etpushsdk/ETPhoneHome.h; sourceTree = "<group>"; };
-		4D120ED71958D5B200571FB6 /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETPush.h; path = ../../../../etpushsdk/ETPush.h; sourceTree = "<group>"; };
-		4D120ED81958D5B200571FB6 /* ETSqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETSqliteHelper.h; path = ../../../../etpushsdk/ETSqliteHelper.h; sourceTree = "<group>"; };
-		4D120ED91958D5B200571FB6 /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETURLConnection.h; path = ../../../../etpushsdk/ETURLConnection.h; sourceTree = "<group>"; };
-		4D120EDA1958D5B200571FB6 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactTargetEnhancedPushDataSource.h; path = ../../../../etpushsdk/ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
-		4D120EDB1958D5B200571FB6 /* FenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FenceMessage.h; path = ../../../../etpushsdk/FenceMessage.h; sourceTree = "<group>"; };
-		4D120EDC1958D5B200571FB6 /* GenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericUpdate.h; path = ../../../../etpushsdk/GenericUpdate.h; sourceTree = "<group>"; };
-		4D120EDD1958D5B200571FB6 /* Geofence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Geofence.h; path = ../../../../etpushsdk/Geofence.h; sourceTree = "<group>"; };
-		4D120EDE1958D5B200571FB6 /* KeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueStore.h; path = ../../../../etpushsdk/KeyValueStore.h; sourceTree = "<group>"; };
-		4D120EDF1958D5B200571FB6 /* libetpushsdk-3.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libetpushsdk-3.1.1.a"; path = "../../../../etpushsdk/libetpushsdk-3.1.1.a"; sourceTree = "<group>"; };
-		4D120EE01958D5B200571FB6 /* LocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationUpdate.h; path = ../../../../etpushsdk/LocationUpdate.h; sourceTree = "<group>"; };
-		4D120EE11958D5B200571FB6 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../../../../etpushsdk/Message.h; sourceTree = "<group>"; };
-		4D120EE21958D5B200571FB6 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushConstants.h; path = ../../../../etpushsdk/PushConstants.h; sourceTree = "<group>"; };
-		4D120EE31958D5B200571FB6 /* Region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Region.h; path = ../../../../etpushsdk/Region.h; sourceTree = "<group>"; };
-		4D120EE41958D5B200571FB6 /* Registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Registration.h; path = ../../../../etpushsdk/Registration.h; sourceTree = "<group>"; };
-		4D120EE51958D5B200571FB6 /* StatsUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsUpdate.h; path = ../../../../etpushsdk/StatsUpdate.h; sourceTree = "<group>"; };
 		4D2180D619490A5C004F6095 /* PUDPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDPageContentViewController.h; sourceTree = "<group>"; };
 		4D2180D719490A5C004F6095 /* PUDPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDPageContentViewController.m; sourceTree = "<group>"; };
 		4D2180D9194A9D37004F6095 /* PUDSendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDSendMessageViewController.h; sourceTree = "<group>"; };
@@ -231,24 +271,20 @@
 		4D71546E191923AA0040A1CC /* PUDDefaultMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDDefaultMessageModel.h; sourceTree = "<group>"; };
 		4D71546F191923AA0040A1CC /* PUDDefaultMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDDefaultMessageModel.m; sourceTree = "<group>"; };
 		4D95F14219256984002A5A43 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4DA92C9B196D7F740005BC8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4DC426A71923AE9D002168F7 /* PUDMessageComposeTableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDMessageComposeTableData.h; sourceTree = "<group>"; };
 		4DC426A81923AE9D002168F7 /* PUDMessageComposeTableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDMessageComposeTableData.m; sourceTree = "<group>"; };
 		4DC426AA1923ECF3002168F7 /* PUDDataPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDDataPickerView.h; sourceTree = "<group>"; };
 		4DC426AB1923ECF3002168F7 /* PUDDataPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDDataPickerView.m; sourceTree = "<group>"; };
-		4DC426AE1924253F002168F7 /* NSMutableArray+AutoExpandInsert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+AutoExpandInsert.h"; sourceTree = "<group>"; };
-		4DC426AF1924253F002168F7 /* NSMutableArray+AutoExpandInsert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+AutoExpandInsert.m"; sourceTree = "<group>"; };
 		4DC4D67B1925B5BA00128F29 /* PUDInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDInfoViewController.h; sourceTree = "<group>"; };
 		4DC4D67C1925B5BA00128F29 /* PUDInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDInfoViewController.m; sourceTree = "<group>"; };
 		4DC4D67E1925C16000128F29 /* PUDUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDUtility.h; sourceTree = "<group>"; };
-		4DC4D67F1925C16000128F29 /* PUDUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDUtility.m; sourceTree = "<group>"; };
-		4DC4D682192658A500128F29 /* ETPush+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ETPush+Swizzle.h"; sourceTree = "<group>"; };
-		4DC4D683192658A500128F29 /* ETPush+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ETPush+Swizzle.m"; sourceTree = "<group>"; };
+		4DC4D67F1925C16000128F29 /* PUDUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PUDUtility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4DC4D6ED192A497900128F29 /* PUDDiscountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDDiscountTableViewController.h; sourceTree = "<group>"; };
 		4DC4D6EE192A497900128F29 /* PUDDiscountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDDiscountTableViewController.m; sourceTree = "<group>"; };
 		4DC4D6F0192A4AF700128F29 /* PUDDiscountTableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDDiscountTableData.h; sourceTree = "<group>"; };
 		4DC4D6F1192A4AF700128F29 /* PUDDiscountTableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDDiscountTableData.m; sourceTree = "<group>"; };
 		4DC4D6F3192A572F00128F29 /* fre3of9x.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fre3of9x.ttf; sourceTree = "<group>"; };
-		4DC4D6F7192D21CF00128F29 /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
 		4DCFB92D192127CB00BF96BB /* PUDMessageReceivedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDMessageReceivedTableViewController.h; sourceTree = "<group>"; };
 		4DCFB92E192127CB00BF96BB /* PUDMessageReceivedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDMessageReceivedTableViewController.m; sourceTree = "<group>"; };
 		4DCFB93019227BD300BF96BB /* PUDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDNavigationController.h; sourceTree = "<group>"; };
@@ -256,8 +292,35 @@
 		4DCFB93319227E4700BF96BB /* PUDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDTabBarController.h; sourceTree = "<group>"; };
 		4DCFB93419227E4700BF96BB /* PUDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDTabBarController.m; sourceTree = "<group>"; };
 		4DCFB9391922842300BF96BB /* custom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = custom.caf; sourceTree = "<group>"; };
-		7F22BEE01958706000FB6562 /* PublicDemo copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PublicDemo copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F22BEE11958706100FB6562 /* PublicDemo-Internal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PublicDemo-Internal-Info.plist"; path = "/Users/eroger/Source/iOS_PublicDemo/PublicDemo-Internal-Info.plist"; sourceTree = "<absolute>"; };
+		4DD373E819632DCF0005E6FF /* PUDCloudPageInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDCloudPageInboxViewController.h; sourceTree = "<group>"; };
+		4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDCloudPageInboxViewController.m; sourceTree = "<group>"; };
+		4DDDC85D197D8E9C009542E9 /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLandingPagePresenter.h; path = ../../../../etpushsdk/ETLandingPagePresenter.h; sourceTree = "<group>"; };
+		4DDDC85E197D8E9C009542E9 /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocationManager.h; path = ../../../../etpushsdk/ETLocationManager.h; sourceTree = "<group>"; };
+		4DDDC85F197D8E9C009542E9 /* ETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETMessage.h; path = ../../../../etpushsdk/ETMessage.h; sourceTree = "<group>"; };
+		4DDDC860197D8E9C009542E9 /* ETPhoneHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETPhoneHome.h; path = ../../../../etpushsdk/ETPhoneHome.h; sourceTree = "<group>"; };
+		4DDDC861197D8E9C009542E9 /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETPush.h; path = ../../../../etpushsdk/ETPush.h; sourceTree = "<group>"; };
+		4DDDC862197D8E9C009542E9 /* ETSqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETSqliteHelper.h; path = ../../../../etpushsdk/ETSqliteHelper.h; sourceTree = "<group>"; };
+		4DDDC863197D8E9C009542E9 /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETURLConnection.h; path = ../../../../etpushsdk/ETURLConnection.h; sourceTree = "<group>"; };
+		4DDDC864197D8E9C009542E9 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactTargetEnhancedPushDataSource.h; path = ../../../../etpushsdk/ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
+		4DDDC865197D8E9C009542E9 /* FenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FenceMessage.h; path = ../../../../etpushsdk/FenceMessage.h; sourceTree = "<group>"; };
+		4DDDC866197D8E9C009542E9 /* GenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericUpdate.h; path = ../../../../etpushsdk/GenericUpdate.h; sourceTree = "<group>"; };
+		4DDDC867197D8E9C009542E9 /* Geofence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Geofence.h; path = ../../../../etpushsdk/Geofence.h; sourceTree = "<group>"; };
+		4DDDC868197D8E9C009542E9 /* KeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueStore.h; path = ../../../../etpushsdk/KeyValueStore.h; sourceTree = "<group>"; };
+		4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libetpushsdk-3.2.0.a"; path = "../../../../etpushsdk/libetpushsdk-3.2.0.a"; sourceTree = "<group>"; };
+		4DDDC86A197D8E9C009542E9 /* LocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationUpdate.h; path = ../../../../etpushsdk/LocationUpdate.h; sourceTree = "<group>"; };
+		4DDDC86B197D8E9C009542E9 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushConstants.h; path = ../../../../etpushsdk/PushConstants.h; sourceTree = "<group>"; };
+		4DDDC86C197D8E9C009542E9 /* Region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Region.h; path = ../../../../etpushsdk/Region.h; sourceTree = "<group>"; };
+		4DDDC86D197D8E9C009542E9 /* Registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Registration.h; path = ../../../../etpushsdk/Registration.h; sourceTree = "<group>"; };
+		4DDDC86E197D8E9C009542E9 /* StatsUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsUpdate.h; path = ../../../../etpushsdk/StatsUpdate.h; sourceTree = "<group>"; };
+		4DEB0ADD195DC22900790CEF /* PUDAppSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PUDAppSettingConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PUDAppSettingConstants.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4DEB0B1C195DE31600790CEF /* PublicDemo-QA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PublicDemo-QA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEB0B1D195DE31700790CEF /* PublicDemo copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PublicDemo copy2-Info.plist"; path = "/Users/mlathrop/Repos/PublicDemo-iOS/PublicDemo copy2-Info.plist"; sourceTree = "<absolute>"; };
+		4DEC6D12196CDD4F00322A99 /* PUDCloudPageInboxDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDCloudPageInboxDataSource.h; sourceTree = "<group>"; };
+		4DEC6D13196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDCloudPageInboxDataSource.m; sourceTree = "<group>"; };
+		4DEC6D17196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDCloudPageInboxTableViewCell.h; sourceTree = "<group>"; };
+		4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDCloudPageInboxTableViewCell.m; sourceTree = "<group>"; };
+		7F22BEE01958706000FB6562 /* PublicDemo-Internal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PublicDemo-Internal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,10 +328,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA92C9C196D7F740005BC8E /* QuartzCore.framework in Frameworks */,
 				4D95F14319256984002A5A43 /* MobileCoreServices.framework in Frameworks */,
+				4DDDC86F197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */,
 				4D2DE0321910525900B65B6F /* libsqlite3.dylib in Frameworks */,
 				4D2DDFF7191051BD00B65B6F /* CoreGraphics.framework in Frameworks */,
-				4D120EE61958D5B200571FB6 /* libetpushsdk-3.1.1.a in Frameworks */,
 				4D2DDFF9191051BD00B65B6F /* UIKit.framework in Frameworks */,
 				4D2DDFF5191051BD00B65B6F /* Foundation.framework in Frameworks */,
 			);
@@ -284,14 +348,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DEB0B0C195DE31600790CEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA92C9E196D7F800005BC8E /* QuartzCore.framework in Frameworks */,
+				4DEB0B0D195DE31600790CEF /* MobileCoreServices.framework in Frameworks */,
+				4DDDC871197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */,
+				4DEB0B0E195DE31600790CEF /* libsqlite3.dylib in Frameworks */,
+				4DEB0B0F195DE31600790CEF /* CoreGraphics.framework in Frameworks */,
+				4DEB0B11195DE31600790CEF /* UIKit.framework in Frameworks */,
+				4DEB0B12195DE31600790CEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F22BECE1958706000FB6562 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA92C9D196D7F7A0005BC8E /* QuartzCore.framework in Frameworks */,
 				7F22BECF1958706000FB6562 /* MobileCoreServices.framework in Frameworks */,
+				4DDDC870197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */,
 				7F22BED01958706000FB6562 /* libsqlite3.dylib in Frameworks */,
 				7F22BED11958706000FB6562 /* CoreGraphics.framework in Frameworks */,
-				4D120EE71958D5B200571FB6 /* libetpushsdk-3.1.1.a in Frameworks */,
 				7F22BED31958706000FB6562 /* UIKit.framework in Frameworks */,
 				7F22BED41958706000FB6562 /* Foundation.framework in Frameworks */,
 			);
@@ -307,7 +386,6 @@
 				4D2DE01C191051BD00B65B6F /* PublicDemoTests */,
 				4D2DDFF3191051BD00B65B6F /* Frameworks */,
 				4D2DDFF2191051BD00B65B6F /* Products */,
-				4D120ED31957D35700571FB6 /* PublicDemo copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -316,7 +394,8 @@
 			children = (
 				4D2DDFF1191051BD00B65B6F /* PublicDemo.app */,
 				4D2DE015191051BD00B65B6F /* PublicDemoTests.xctest */,
-				7F22BEE01958706000FB6562 /* PublicDemo copy.app */,
+				7F22BEE01958706000FB6562 /* PublicDemo-Internal.app */,
+				4DEB0B1C195DE31600790CEF /* PublicDemo-QA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -324,6 +403,7 @@
 		4D2DDFF3191051BD00B65B6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DA92C9B196D7F740005BC8E /* QuartzCore.framework */,
 				4D95F14219256984002A5A43 /* MobileCoreServices.framework */,
 				4D2DE0311910525900B65B6F /* libsqlite3.dylib */,
 				4D2DDFF4191051BD00B65B6F /* Foundation.framework */,
@@ -361,9 +441,9 @@
 				4D2DDFFD191051BD00B65B6F /* InfoPlist.strings */,
 				4D2DE000191051BD00B65B6F /* main.m */,
 				4D2DDFFC191051BD00B65B6F /* PublicDemo-Info.plist */,
+				4D120ED31957D35700571FB6 /* PublicDemo copy-Info.plist */,
+				4DEB0B1D195DE31700790CEF /* PublicDemo copy2-Info.plist */,
 				4D2DE002191051BD00B65B6F /* PublicDemo-Prefix.pch */,
-				7F22BEE11958706100FB6562 /* PublicDemo-Internal-Info.plist */,
-				4DC4D6F7192D21CF00128F29 /* settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -391,6 +471,8 @@
 			children = (
 				4D2180E0194B7B87004F6095 /* PUDAbstractPageViewController.h */,
 				4D2180E1194B7B87004F6095 /* PUDAbstractPageViewController.m */,
+				4DD373E819632DCF0005E6FF /* PUDCloudPageInboxViewController.h */,
+				4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */,
 				4DC4D6ED192A497900128F29 /* PUDDiscountTableViewController.h */,
 				4DC4D6EE192A497900128F29 /* PUDDiscountTableViewController.m */,
 				4D5723571937E19F007B1464 /* PUDHomeViewController.h */,
@@ -431,6 +513,8 @@
 		4D2DE02E191051E200B65B6F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4DEC6D12196CDD4F00322A99 /* PUDCloudPageInboxDataSource.h */,
+				4DEC6D13196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m */,
 				4D71546E191923AA0040A1CC /* PUDDefaultMessageModel.h */,
 				4D71546F191923AA0040A1CC /* PUDDefaultMessageModel.m */,
 				4DC4D6F0192A4AF700128F29 /* PUDDiscountTableData.h */,
@@ -449,6 +533,8 @@
 			isa = PBXGroup;
 			children = (
 				4D2DE006191051BD00B65B6F /* Main.storyboard */,
+				4DEC6D17196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.h */,
+				4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */,
 				4DC426AA1923ECF3002168F7 /* PUDDataPickerView.h */,
 				4DC426AB1923ECF3002168F7 /* PUDDataPickerView.m */,
 				4D667BAB192005370015BC2E /* PUDPreferencesTableViewCell.h */,
@@ -460,6 +546,8 @@
 		4D2DE04819105B9C00B65B6F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				4DEB0ADD195DC22900790CEF /* PUDAppSettingConstants.h */,
+				4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */,
 				4D2DE04919105BB100B65B6F /* PUDConstants.h */,
 				4D2DE04A19105BB100B65B6F /* PUDConstants.m */,
 				4DC4D67E1925C16000128F29 /* PUDUtility.h */,
@@ -508,24 +596,24 @@
 		4D57232719377AA5007B1464 /* etpushsdk */ = {
 			isa = PBXGroup;
 			children = (
-				4D120ED41958D5B200571FB6 /* ETLandingPagePresenter.h */,
-				4D120ED51958D5B200571FB6 /* ETLocationManager.h */,
-				4D120ED61958D5B200571FB6 /* ETPhoneHome.h */,
-				4D120ED71958D5B200571FB6 /* ETPush.h */,
-				4D120ED81958D5B200571FB6 /* ETSqliteHelper.h */,
-				4D120ED91958D5B200571FB6 /* ETURLConnection.h */,
-				4D120EDA1958D5B200571FB6 /* ExactTargetEnhancedPushDataSource.h */,
-				4D120EDB1958D5B200571FB6 /* FenceMessage.h */,
-				4D120EDC1958D5B200571FB6 /* GenericUpdate.h */,
-				4D120EDD1958D5B200571FB6 /* Geofence.h */,
-				4D120EDE1958D5B200571FB6 /* KeyValueStore.h */,
-				4D120EDF1958D5B200571FB6 /* libetpushsdk-3.1.1.a */,
-				4D120EE01958D5B200571FB6 /* LocationUpdate.h */,
-				4D120EE11958D5B200571FB6 /* Message.h */,
-				4D120EE21958D5B200571FB6 /* PushConstants.h */,
-				4D120EE31958D5B200571FB6 /* Region.h */,
-				4D120EE41958D5B200571FB6 /* Registration.h */,
-				4D120EE51958D5B200571FB6 /* StatsUpdate.h */,
+				4DDDC85D197D8E9C009542E9 /* ETLandingPagePresenter.h */,
+				4DDDC85E197D8E9C009542E9 /* ETLocationManager.h */,
+				4DDDC85F197D8E9C009542E9 /* ETMessage.h */,
+				4DDDC860197D8E9C009542E9 /* ETPhoneHome.h */,
+				4DDDC861197D8E9C009542E9 /* ETPush.h */,
+				4DDDC862197D8E9C009542E9 /* ETSqliteHelper.h */,
+				4DDDC863197D8E9C009542E9 /* ETURLConnection.h */,
+				4DDDC864197D8E9C009542E9 /* ExactTargetEnhancedPushDataSource.h */,
+				4DDDC865197D8E9C009542E9 /* FenceMessage.h */,
+				4DDDC866197D8E9C009542E9 /* GenericUpdate.h */,
+				4DDDC867197D8E9C009542E9 /* Geofence.h */,
+				4DDDC868197D8E9C009542E9 /* KeyValueStore.h */,
+				4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */,
+				4DDDC86A197D8E9C009542E9 /* LocationUpdate.h */,
+				4DDDC86B197D8E9C009542E9 /* PushConstants.h */,
+				4DDDC86C197D8E9C009542E9 /* Region.h */,
+				4DDDC86D197D8E9C009542E9 /* Registration.h */,
+				4DDDC86E197D8E9C009542E9 /* StatsUpdate.h */,
 				4D57232819377AA5007B1464 /* README.md */,
 			);
 			name = etpushsdk;
@@ -561,10 +649,6 @@
 			children = (
 				4D667B9E191D9BDD0015BC2E /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.h */,
 				4D667B9F191D9BDD0015BC2E /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m */,
-				4DC4D682192658A500128F29 /* ETPush+Swizzle.h */,
-				4DC4D683192658A500128F29 /* ETPush+Swizzle.m */,
-				4DC426AE1924253F002168F7 /* NSMutableArray+AutoExpandInsert.h */,
-				4DC426AF1924253F002168F7 /* NSMutableArray+AutoExpandInsert.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -627,6 +711,23 @@
 			productReference = 4D2DE015191051BD00B65B6F /* PublicDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4DEB0AE0195DE31600790CEF /* PublicDemo-QA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DEB0B19195DE31600790CEF /* Build configuration list for PBXNativeTarget "PublicDemo-QA" */;
+			buildPhases = (
+				4DEB0AE1195DE31600790CEF /* Sources */,
+				4DEB0B0C195DE31600790CEF /* Frameworks */,
+				4DEB0B13195DE31600790CEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PublicDemo-QA";
+			productName = PushDemo;
+			productReference = 4DEB0B1C195DE31600790CEF /* PublicDemo-QA.app */;
+			productType = "com.apple.product-type.application";
+		};
 		7F22BEA31958706000FB6562 /* PublicDemo-Internal */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F22BEDC1958706000FB6562 /* Build configuration list for PBXNativeTarget "PublicDemo-Internal" */;
@@ -641,7 +742,7 @@
 			);
 			name = "PublicDemo-Internal";
 			productName = PushDemo;
-			productReference = 7F22BEE01958706000FB6562 /* PublicDemo copy.app */;
+			productReference = 7F22BEE01958706000FB6562 /* PublicDemo-Internal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -692,6 +793,7 @@
 			targets = (
 				4D2DDFF0191051BD00B65B6F /* PublicDemo */,
 				7F22BEA31958706000FB6562 /* PublicDemo-Internal */,
+				4DEB0AE0195DE31600790CEF /* PublicDemo-QA */,
 				4D2DE014191051BD00B65B6F /* PublicDemoTests */,
 			);
 		};
@@ -706,7 +808,6 @@
 				4D2DE010191051BD00B65B6F /* Images.xcassets in Resources */,
 				4D2DDFFF191051BD00B65B6F /* InfoPlist.strings in Resources */,
 				4DC4D6F4192A572F00128F29 /* fre3of9x.ttf in Resources */,
-				4DC4D6F8192D21CF00128F29 /* settings.plist in Resources */,
 				4D2DE008191051BD00B65B6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,6 +820,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DEB0B13195DE31600790CEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DEB0B14195DE31600790CEF /* custom.caf in Resources */,
+				4DEB0B15195DE31600790CEF /* Images.xcassets in Resources */,
+				4DEB0B16195DE31600790CEF /* InfoPlist.strings in Resources */,
+				4DEB0B17195DE31600790CEF /* fre3of9x.ttf in Resources */,
+				4DEB0B18195DE31600790CEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F22BED51958706000FB6562 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -727,7 +840,6 @@
 				7F22BED71958706000FB6562 /* Images.xcassets in Resources */,
 				7F22BED81958706000FB6562 /* InfoPlist.strings in Resources */,
 				7F22BED91958706000FB6562 /* fre3of9x.ttf in Resources */,
-				7F22BEDA1958706000FB6562 /* settings.plist in Resources */,
 				7F22BEDB1958706000FB6562 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,12 +864,12 @@
 				4D57233C19377AA5007B1464 /* AFURLSessionManager.m in Sources */,
 				4D2DE04B19105BB100B65B6F /* PUDConstants.m in Sources */,
 				4D651C54191D54AB000BAF5E /* PUDMessagePayload.m in Sources */,
-				4DC426B01924253F002168F7 /* NSMutableArray+AutoExpandInsert.m in Sources */,
+				4DEB0ADF195DC22900790CEF /* PUDAppSettingConstants.m in Sources */,
 				4D2DE005191051BD00B65B6F /* PUDAppDelegate.m in Sources */,
 				4D2180DB194A9D37004F6095 /* PUDSendMessageViewController.m in Sources */,
+				4DEC6D14196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m in Sources */,
 				4D2180E2194B7B87004F6095 /* PUDAbstractPageViewController.m in Sources */,
 				4DCFB93519227E4700BF96BB /* PUDTabBarController.m in Sources */,
-				4DC4D684192658A500128F29 /* ETPush+Swizzle.m in Sources */,
 				4DCFB92F192127CB00BF96BB /* PUDMessageReceivedTableViewController.m in Sources */,
 				4D57233D19377AA5007B1464 /* UIColor+ExactTargetColors.m in Sources */,
 				4D57234019377AA5007B1464 /* JDStatusBarStyle.m in Sources */,
@@ -769,10 +881,12 @@
 				4D57233B19377AA5007B1464 /* AFURLResponseSerialization.m in Sources */,
 				4D57233419377AA5007B1464 /* AFHTTPRequestOperation.m in Sources */,
 				4D57233919377AA5007B1464 /* AFURLConnectionOperation.m in Sources */,
+				4DD373EA19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */,
 				4D57233519377AA5007B1464 /* AFHTTPRequestOperationManager.m in Sources */,
 				4DC426A91923AE9D002168F7 /* PUDMessageComposeTableData.m in Sources */,
 				4D667BA0191D9BDD0015BC2E /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */,
 				4DC426AC1923ECF3002168F7 /* PUDDataPickerView.m in Sources */,
+				4DEC6D19196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */,
 				4DC4D6F2192A4AF700128F29 /* PUDDiscountTableData.m in Sources */,
 				4DCFB93219227BD300BF96BB /* PUDNavigationController.m in Sources */,
 				4D57233A19377AA5007B1464 /* AFURLRequestSerialization.m in Sources */,
@@ -788,7 +902,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2DE023191051BD00B65B6F /* PublicDemoTests.m in Sources */,
-				4D2DE04C19105BB100B65B6F /* PUDConstants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEB0AE1195DE31600790CEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DEB0AE2195DE31600790CEF /* PUDServiceProvider.m in Sources */,
+				4DEB0AE3195DE31600790CEF /* AFNetworkReachabilityManager.m in Sources */,
+				4DEB0AE4195DE31600790CEF /* PUDHomeViewController.m in Sources */,
+				4DEB0AE5195DE31600790CEF /* PUDInfoViewController.m in Sources */,
+				4DEB0AE6195DE31600790CEF /* PUDMessageComposeTableViewController.m in Sources */,
+				4DEB0AE7195DE31600790CEF /* JDStatusBarView.m in Sources */,
+				4DEB0AE8195DE31600790CEF /* PUDDefaultMessageModel.m in Sources */,
+				4DEB0AE9195DE31600790CEF /* PUDFuelService.m in Sources */,
+				4DEB0AEA195DE31600790CEF /* PUDDiscountTableViewController.m in Sources */,
+				4DEB0AEB195DE31600790CEF /* PBWebViewController.m in Sources */,
+				4DEB0AEC195DE31600790CEF /* AFURLSessionManager.m in Sources */,
+				4DEB0AED195DE31600790CEF /* PUDConstants.m in Sources */,
+				4DEB0AEE195DE31600790CEF /* PUDMessagePayload.m in Sources */,
+				4DEB0AF0195DE31600790CEF /* PUDAppSettingConstants.m in Sources */,
+				4DEB0AF1195DE31600790CEF /* PUDAppDelegate.m in Sources */,
+				4DEB0AF2195DE31600790CEF /* PUDSendMessageViewController.m in Sources */,
+				4DEC6D16196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m in Sources */,
+				4DEB0AF3195DE31600790CEF /* PUDAbstractPageViewController.m in Sources */,
+				4DEB0AF4195DE31600790CEF /* PUDTabBarController.m in Sources */,
+				4DEB0AF6195DE31600790CEF /* PUDMessageReceivedTableViewController.m in Sources */,
+				4DEB0AF7195DE31600790CEF /* UIColor+ExactTargetColors.m in Sources */,
+				4DEB0AF8195DE31600790CEF /* JDStatusBarStyle.m in Sources */,
+				4DEB0AF9195DE31600790CEF /* JDStatusBarNotification.m in Sources */,
+				4DEB0AFA195DE31600790CEF /* PUDPreferencesTableViewController.m in Sources */,
+				4DEB0AFB195DE31600790CEF /* PUDPreferencesTableData.m in Sources */,
+				4DEB0AFC195DE31600790CEF /* PUDPageContentViewController.m in Sources */,
+				4DEB0AFD195DE31600790CEF /* PUDPreferencesTableViewCell.m in Sources */,
+				4DEB0AFE195DE31600790CEF /* AFURLResponseSerialization.m in Sources */,
+				4DEB0AFF195DE31600790CEF /* AFHTTPRequestOperation.m in Sources */,
+				4DEB0B00195DE31600790CEF /* AFURLConnectionOperation.m in Sources */,
+				4DD373EC19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */,
+				4DEB0B01195DE31600790CEF /* AFHTTPRequestOperationManager.m in Sources */,
+				4DEB0B02195DE31600790CEF /* PUDMessageComposeTableData.m in Sources */,
+				4DEB0B03195DE31600790CEF /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */,
+				4DEB0B04195DE31600790CEF /* PUDDataPickerView.m in Sources */,
+				4DEC6D1B196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */,
+				4DEB0B05195DE31600790CEF /* PUDDiscountTableData.m in Sources */,
+				4DEB0B06195DE31600790CEF /* PUDNavigationController.m in Sources */,
+				4DEB0B07195DE31600790CEF /* AFURLRequestSerialization.m in Sources */,
+				4DEB0B08195DE31600790CEF /* AFSecurityPolicy.m in Sources */,
+				4DEB0B09195DE31600790CEF /* AFHTTPSessionManager.m in Sources */,
+				4DEB0B0A195DE31600790CEF /* PUDUtility.m in Sources */,
+				4DEB0B0B195DE31600790CEF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,12 +972,12 @@
 				7F22BEAF1958706000FB6562 /* AFURLSessionManager.m in Sources */,
 				7F22BEB01958706000FB6562 /* PUDConstants.m in Sources */,
 				7F22BEB11958706000FB6562 /* PUDMessagePayload.m in Sources */,
-				7F22BEB21958706000FB6562 /* NSMutableArray+AutoExpandInsert.m in Sources */,
+				4D72EE1D195DEF2A00068553 /* PUDAppSettingConstants.m in Sources */,
 				7F22BEB31958706000FB6562 /* PUDAppDelegate.m in Sources */,
 				7F22BEB41958706000FB6562 /* PUDSendMessageViewController.m in Sources */,
+				4DEC6D15196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m in Sources */,
 				7F22BEB51958706000FB6562 /* PUDAbstractPageViewController.m in Sources */,
 				7F22BEB61958706000FB6562 /* PUDTabBarController.m in Sources */,
-				7F22BEB71958706000FB6562 /* ETPush+Swizzle.m in Sources */,
 				7F22BEB81958706000FB6562 /* PUDMessageReceivedTableViewController.m in Sources */,
 				7F22BEB91958706000FB6562 /* UIColor+ExactTargetColors.m in Sources */,
 				7F22BEBA1958706000FB6562 /* JDStatusBarStyle.m in Sources */,
@@ -826,10 +989,12 @@
 				7F22BEC01958706000FB6562 /* AFURLResponseSerialization.m in Sources */,
 				7F22BEC11958706000FB6562 /* AFHTTPRequestOperation.m in Sources */,
 				7F22BEC21958706000FB6562 /* AFURLConnectionOperation.m in Sources */,
+				4DD373EB19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */,
 				7F22BEC31958706000FB6562 /* AFHTTPRequestOperationManager.m in Sources */,
 				7F22BEC41958706000FB6562 /* PUDMessageComposeTableData.m in Sources */,
 				7F22BEC51958706000FB6562 /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */,
 				7F22BEC61958706000FB6562 /* PUDDataPickerView.m in Sources */,
+				4DEC6D1A196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */,
 				7F22BEC71958706000FB6562 /* PUDDiscountTableData.m in Sources */,
 				7F22BEC81958706000FB6562 /* PUDNavigationController.m in Sources */,
 				7F22BEC91958706000FB6562 /* AFURLRequestSerialization.m in Sources */,
@@ -912,7 +1077,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "69B8BB2B-AF96-4FBF-BBA4-D55EB71A375B";
+				PROVISIONING_PROFILE = "8EC7719A-6D89-4806-9CC9-00FF624D5B08";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -944,7 +1109,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "69B8BB2B-AF96-4FBF-BBA4-D55EB71A375B";
+				PROVISIONING_PROFILE = "58D98FA9-68D4-4E92-A9DB-80C9846FFE6A";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -957,7 +1122,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUNDLE_DISPLAY_NAME = "DEV - PF";
 				BUNDLE_IDENTIFIER = com.exacttarget.internal.PublicDemo;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Lathrop (QB2Q4J8HBF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Lathrop (ND6E2BN7MZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -976,7 +1141,7 @@
 					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
 				);
 				PRODUCT_NAME = PublicDemo;
-				PROVISIONING_PROFILE = "E17DBC83-45E3-4E45-A1F8-CEADD44CC342";
+				PROVISIONING_PROFILE = "3888A363-FC2E-4555-964F-971DAF649B60";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -988,7 +1153,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUNDLE_DISPLAY_NAME = "Practice Field";
 				BUNDLE_IDENTIFIER = com.exacttarget.publicdemo;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Lathrop (QB2Q4J8HBF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Lathrop (ND6E2BN7MZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1007,7 +1172,7 @@
 					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
 				);
 				PRODUCT_NAME = PublicDemo;
-				PROVISIONING_PROFILE = "E17DBC83-45E3-4E45-A1F8-CEADD44CC342";
+				PROVISIONING_PROFILE = "3888A363-FC2E-4555-964F-971DAF649B60";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1060,6 +1225,69 @@
 			};
 			name = Release;
 		};
+		4DEB0B1A195DE31600790CEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_DISPLAY_NAME = "QA1S1 - PF";
+				BUNDLE_IDENTIFIER = com.exacttarget.internal.PublicDemo;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "QA=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "PublicDemo copy2-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PublicDemo",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
+					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
+				);
+				PRODUCT_NAME = "PublicDemo-QA";
+				PROVISIONING_PROFILE = "021B58A0-CB10-4A1E-8A1D-C7F8AED51DE6";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4DEB0B1B195DE31600790CEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_DISPLAY_NAME = "QA1S1 - Practice Field";
+				BUNDLE_IDENTIFIER = com.exacttarget.internal.PublicDemo;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ExactTarget, Inc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "QA=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "PublicDemo copy2-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PublicDemo",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
+					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
+				);
+				PRODUCT_NAME = "PublicDemo-QA";
+				PROVISIONING_PROFILE = "021B58A0-CB10-4A1E-8A1D-C7F8AED51DE6";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		7F22BEDD1958706000FB6562 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1076,6 +1304,7 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PublicDemo-Internal-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -1085,7 +1314,7 @@
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
 					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
 				);
-				PRODUCT_NAME = "PublicDemo copy";
+				PRODUCT_NAME = "PublicDemo-Internal";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1117,7 +1346,7 @@
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
 					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
 				);
-				PRODUCT_NAME = "PublicDemo copy";
+				PRODUCT_NAME = "PublicDemo-Internal";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1149,6 +1378,15 @@
 			buildConfigurations = (
 				4D2DE02A191051BE00B65B6F /* Debug */,
 				4D2DE02B191051BE00B65B6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DEB0B19195DE31600790CEF /* Build configuration list for PBXNativeTarget "PublicDemo-QA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEB0B1A195DE31600790CEF /* Debug */,
+				4DEB0B1B195DE31600790CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

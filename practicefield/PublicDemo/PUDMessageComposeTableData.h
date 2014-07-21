@@ -25,7 +25,7 @@
 /**
  Stores the currently selected picker view row index
  */
-@property (nonatomic) NSInteger pickerSelectedRow;
+@property (nonatomic) NSInteger pickerSelectedRowIndex;
 
 /**
  Block that is called that returns a CGFloat of the cell's height
@@ -46,5 +46,10 @@
  The block that will be called when a switch's value is changed
  */
 @property (nonatomic, copy) SwitchValueChangedBlock switchValueChangedBlock;
+
+/**
+ The block that will be called when a segment control's value is changed
+ */
+@property (nonatomic, copy) SegmentedControlerValueChangedBlock segmentedControlValueChangedBlock;
 
 @end

@@ -102,7 +102,7 @@ NSString *accessTokenResponseObjectKey = @"accessToken";
     NSLog(@"== GETTING NEW ACCESS TOKEN ==");
     
     NSDictionary *parameters = @{ @"clientId" : [PUDUtility clientID], @"clientSecret" : [PUDUtility clientSecret] };
-    NSString *URLString = [NSString stringWithFormat:@"https://auth.exacttargetapis.com/v1/requestToken"];
+    NSString *URLString = [PUDUtility fuelAccessTokenRoute];
     
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"POST"
                                                                    URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]

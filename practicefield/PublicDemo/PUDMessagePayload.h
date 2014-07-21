@@ -10,6 +10,11 @@
 
 @interface PUDMessagePayload : NSObject
 
+typedef enum {
+    kPushMethodAlert,
+    kPushMethodAlertCloudPage
+} PushMethod;
+
 /**
  The text that will be sent as the message.
  */
@@ -49,6 +54,11 @@
  Dictionary of custom keys that can be sent inside the push payload
  */
 @property (nonatomic, strong) NSDictionary *customKeys;
+
+/**
+ The push message type
+ */
+@property (nonatomic) PushMethod pushMethod;
 
 /**
  The name of the properties on the object should be serialized.

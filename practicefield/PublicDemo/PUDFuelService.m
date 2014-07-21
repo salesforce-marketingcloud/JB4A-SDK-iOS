@@ -28,7 +28,19 @@ NSString *messageContactURLString = @"https://www.exacttargetapis.com/push/v1/me
 - (void)postMessageContactSendWithPayload:(PUDMessagePayload *)payload
                                   success:(void (^)(id responseObject))success
                                   failure:(void (^)(NSError *error))failure {
-    NSString *urlString = [NSString stringWithFormat:messageContactURLString, [PUDUtility messageID]];
+    
+    /**
+     *  Get the message id to use in URL
+     */
+    NSString *messageId = nil;
+    if (payload.pushMethod == kPushMethodAlert) {
+        messageId = [PUDUtility messageIdVanilla];
+    }
+    else if (payload.pushMethod == kPushMethodAlertCloudPage) {
+        messageId = [PUDUtility messageIdCloudPage];
+    }
+    
+    NSString *urlString = [NSString stringWithFormat:messageContactURLString, messageId];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];

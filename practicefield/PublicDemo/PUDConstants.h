@@ -11,11 +11,12 @@
 #define IOS_PRE_7_0 (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
 
 #pragma mark - TypeDefs
-typedef void (^SwitchValueChangedBlock)(UISwitch *);
 typedef CGFloat (^CellHeightBlock)();
 typedef void (^ConfigureCellBlock)(UITableViewCell *);
 typedef void (^PickerViewRowSelectedBlock)(UIPickerView *);
+typedef void (^SwitchValueChangedBlock)(UISwitch *);
 typedef void (^TextFieldDidEndEditingBlock)(UITextField *);
+typedef void (^SegmentedControlerValueChangedBlock)(UISegmentedControl *);
 
 #pragma mark - App Defaults
 extern CGFloat const kPUDAppCustomTextSize;
@@ -25,6 +26,11 @@ extern NSString *const kPUDAppSettingsPlistName;
 #pragma mark - Attributes
 extern NSString *const kPUDAttributeFirstName;
 extern NSString *const kPUDAttributeLastName;
+
+#pragma mark - CloudPage Inbox
+extern NSUInteger const kPUDCloudPageFilterSegmentControlAllIndex;
+extern NSUInteger const kPUDCloudPageFilterSegmentControlUnreadIndex;
+extern NSUInteger const kPUDCloudPageFilterSegmentControlReadIndex;
 
 #pragma mark - Info Table View
 extern NSString *const kPUDInfoAppVersion;
@@ -36,7 +42,8 @@ extern NSString *const kPUDInfoAppID;
 extern NSString *const kPUDInfoAccessToken;
 extern NSString *const kPUDInfoClientID;
 extern NSString *const kPUDInfoClientSecret;
-extern NSString *const kPUDInfoMessageID;
+extern NSString *const kPUDInfoMessageIDVanilla;
+extern NSString *const kPUDInfoMessageIDCloudPage;
 extern NSString *const kPUDInfoPushEnabled;
 extern NSString *const kPUDInfoDeviceToken;
 extern NSString *const kPUDInfoDeviceID;
@@ -48,23 +55,34 @@ extern NSString *const kPUDInfoAttributeNFLTeamTags;
 extern NSString *const kPUDInfoAttributeFCTeamTags;
 
 #pragma mark - Message Detail Table View
-extern NSUInteger const kPUDMessageDetailCustomSoundSectionIndex;
-extern NSUInteger const kPUDMessageDetailCustomKeySectionIndex;
-extern NSUInteger const kPUDMessageDetailMessageTextSectionIndex;
-extern NSUInteger const kPUDMessageDetailOpenDirectSectionIndex;
-extern NSUInteger const kPUDMessageDetailPayloadSectionIndex;
-extern NSUInteger const kPUDMessageDetailSendMessageSectionIndex;
-extern NSUInteger const kPUDMessageDetailTagsSectionIndex;
-extern NSUInteger const kPUDMessageDetailUpdateBadgeSectionIndex;
 
+// tags
 extern NSUInteger const kPUDMessageDetailSendButtonTag;
 extern NSUInteger const kPUDMessageDetailSwitchTag;
 extern NSUInteger const kPUDMessageDetailTextFieldTag;
+extern NSUInteger const kPUDMessageDetailSegmentedControlTag;
 
+// custom keys
 extern NSString *const kPUDMessageDetailCustomKeyDiscountCode;
 
+// textfield defaults
 extern NSString *const kPUDAppMessageDetailDefaultMessageText;
 extern NSString *const kPUDMessageDetailDefaultOpenDirect;
+
+// push method segment
+extern NSUInteger const kPUDMessageDetailAlertSegmentIndex;
+extern NSUInteger const kPUDMessageDetailAlertCloudPageSegmentIndex;
+
+// custom sound picker
+extern NSUInteger const kPUDMessageDetailPickerSoundDefaultIndex;
+extern NSUInteger const kPUDMessageDetailPickerSoundCustomIndex;
+extern NSUInteger const kPUDMessageDetailPickerSoundNoneIndex;
+
+// custom key picker
+extern NSUInteger const kPUDMessageDetailPickerCustomKeyNoneIndex;
+extern NSUInteger const kPUDMessageDetailPickerCustomKey10Index;
+extern NSUInteger const kPUDMessageDetailPickerCustomKey20Index;
+extern NSUInteger const kPUDMessageDetailPickerCustomKey30Index;
 
 #pragma mark - Messages Payload
 extern NSString *const kPUDMessagePayloadSoundKey;
@@ -75,8 +93,21 @@ extern NSString *const kPUDMessagePayloadBadgeKey;
 extern NSString *const kPUDMessagePayloadTagsKey;
 extern NSString *const kPUDMessagePayloadOpenDirectKey;
 extern NSString *const kPUDMessagePayloadCustomKeysKey;
+extern NSString *const kPUDMessagePayloadCloudPageKey;
 
+// badge values
 extern NSString *const kPUDMessagePayloadDefaultBadgeValue;
+
+// sound values
+extern NSString *const kPUDMessagePayloadSoundDefault;
+extern NSString *const kPUDMessagePayloadSoundCustom;
+extern NSString *const kPUDMessagePayloadSoundNone;
+
+// custom key values
+extern NSString *const kPUDMessagePayloadCustomKeyNone;
+extern NSString *const kPUDMessagePayloadCustomKey10;
+extern NSString *const kPUDMessagePayloadCustomKey20;
+extern NSString *const kPUDMessagePayloadCustomKey30;
 
 #pragma mark - Messages Table View
 extern NSUInteger const kPUDMessagesLastReceivedSectionIndex;
@@ -88,6 +119,7 @@ extern NSString *const kPUDMessageTypeOutbound;
 
 #pragma mark - Push Defines
 extern NSString *const kPUDPushDefineOpenDirectPayloadKey;
+extern NSString *const kPUDPushDefineCloudPagePayloadKey;
 
 #pragma mark - Reuse Identifiers
 extern NSString *const kPUDReuseIdentifierDiscountCell;
@@ -97,6 +129,7 @@ extern NSString *const kPUDReuseIdentifierMessageDetailCell;
 extern NSString *const kPUDReuseIdentifierPushReceivedCell;
 extern NSString *const kPUDReuseIdentifierSettingCell;
 extern NSString *const kPUDReuseIdentifierTagCell;
+extern NSString *const kPUDReuseIdentifierCloudPageInboxCell;
 
 #pragma mark - Segues
 extern NSString *const kPUDSegueMessagesToLastReceivedPush;

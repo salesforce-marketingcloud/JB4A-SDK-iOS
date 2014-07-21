@@ -41,7 +41,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _dataArray = [self tableDataArray];
+        _dataArray = [self tableViewDataPushTypeAlert];
         _message = [[PUDDefaultMessageModel alloc] init];
     }
     return self;
@@ -62,6 +62,13 @@
     [self.view addGestureRecognizer:singleTap];
     
     [self setupTableHeaderView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // this is needed in order to ensure that controls stay tinted properly
+    [self.tableView reloadData];
 }
 
 - (void)setupTableHeaderView {
@@ -126,59 +133,121 @@
     return messageText;
 }
 
+- (PUDMessageComposeTableData *)pushMethodData {
+    PUDMessageComposeTableData *ret = [[PUDMessageComposeTableData alloc] init];
+    
+    ret.sectionTitle = @"Push Method";
+    
+    ret.cellHeightBlock = ^(){
+        return (CGFloat)44.0f;
+    };
+    
+    ret.configureCellBlock = ^(UITableViewCell *cell) {
+        UISegmentedControl *segmentedControl = (UISegmentedControl *)[cell viewWithTag:kPUDMessageDetailSegmentedControlTag];
+        [segmentedControl removeAllSegments];
+        [segmentedControl insertSegmentWithTitle:@"Alert" atIndex:kPUDMessageDetailAlertSegmentIndex animated:NO];
+        [segmentedControl insertSegmentWithTitle:@"Alert + CloudPage" atIndex:kPUDMessageDetailAlertCloudPageSegmentIndex animated:NO];
+        [segmentedControl addTarget:self action:@selector(segmentedControlValueDidChange:) forControlEvents:UIControlEventValueChanged];
+        segmentedControl.hidden = NO;
+        
+        // set the select segment
+        if ([[self.message messagePayload] pushMethod] == kPushMethodAlert) {
+            [segmentedControl setSelectedSegmentIndex:kPUDMessageDetailAlertSegmentIndex];
+        }
+        else if ([[self.message messagePayload] pushMethod] == kPushMethodAlertCloudPage) {
+            [segmentedControl setSelectedSegmentIndex:kPUDMessageDetailAlertCloudPageSegmentIndex];
+        }
+        
+    };
+    
+    ret.segmentedControlValueChangedBlock = ^(UISegmentedControl *segmentedControl) {
+        if (segmentedControl.selectedSegmentIndex == kPUDMessageDetailAlertSegmentIndex) {
+            [[self.message messagePayload] setPushMethod:kPushMethodAlert];
+            
+            self.dataArray = [self tableViewDataPushTypeAlert];
+            [self.tableView reloadData];
+        }
+        else if (segmentedControl.selectedSegmentIndex == kPUDMessageDetailAlertCloudPageSegmentIndex) {
+            [[self.message messagePayload] setPushMethod:kPushMethodAlertCloudPage];
+            
+            self.dataArray = [self tableViewDataPushTypeAlertCloudPage];
+            [self.tableView reloadData];
+        }
+    };
+    
+    //TODO:
+    ret.sectionFooter = @"Specify the push method for the message. The Alert option will display a message on the user's lock screen and notification center. An Alert + CloudPage will display this same alert but will additionally send a URL that is opened inside your app when the user activates a notification. You can specify a URL pointing to a website or a URL specifying a specific location inside your app.";
+    
+    return ret;
+}
+
 - (PUDMessageComposeTableData *)customSoundData {
     PUDMessageComposeTableData *customSound = [[PUDMessageComposeTableData alloc] init];
     customSound.sectionTitle = @"Sound";
-    customSound.pickerSelectedRow = 0;
+    customSound.pickerSelectedRowIndex = 0;
     
     customSound.cellHeightBlock = ^(){
         return (CGFloat)44.0f;
     };
     
-    __weak typeof(customSound) weakCustomSound = customSound;
     customSound.configureCellBlock = ^(UITableViewCell *cell) {
         UITextField *textField = (UITextField *)[cell viewWithTag:kPUDMessageDetailTextFieldTag];
         
-        NSString *defaultSound = @"Default Sound";
-        NSString *custSound = @"Custom";
-        NSString *noneSound = @"None";
-        
         textField.hidden = NO;
         
+        // this is needed in order to hide the text indicator on the text field
         if (!IOS_PRE_7_0) {
             textField.tintColor = [UIColor whiteColor];
         }
         
-        /**
-         Set up the picker view
-         */
-        PUDDataPickerView *pickerView = [[PUDDataPickerView alloc] initWithArray:@[defaultSound, custSound, noneSound]];
+        // set up possible options
+        NSString *defaultSound = @"Default Sound";
+        NSString *custSound = @"Custom";
+        NSString *noneSound = @"None";
+        
+        // create array with the options
+        NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:3];
+        [dataArray setObject:defaultSound atIndexedSubscript:kPUDMessageDetailPickerSoundDefaultIndex];
+        [dataArray setObject:custSound atIndexedSubscript:kPUDMessageDetailPickerSoundCustomIndex];
+        [dataArray setObject:noneSound atIndexedSubscript:kPUDMessageDetailPickerSoundNoneIndex];
+        
+        // create pickerview using the options
+        PUDDataPickerView *pickerView = [[PUDDataPickerView alloc] initWithArray:dataArray];
         pickerView.dataSource = self;
         pickerView.delegate = self;
-        [pickerView selectRow:weakCustomSound.pickerSelectedRow inComponent:0 animated:NO];
+        
         pickerView.pickerViewRowSelectedBlock = ^(UIPickerView *picker) {
             PUDDataPickerView *dataPicker = (PUDDataPickerView *)picker;
-            weakCustomSound.pickerSelectedRow = [dataPicker selectedRowInComponent:0];
-            NSString *selectedText = dataPicker.dataArray[weakCustomSound.pickerSelectedRow];
+            NSString *selectedText = dataArray[[dataPicker selectedRowInComponent:0]];
             
             if ([selectedText isEqualToString:defaultSound]) {
-                [[self.message messagePayload] setSound:@"default"];
+                [[self.message messagePayload] setSound:kPUDMessagePayloadSoundDefault];
             }
             else if ([selectedText isEqualToString:custSound]) {
-                [[self.message messagePayload] setSound:@"custom.caf"];
+                [[self.message messagePayload] setSound:kPUDMessagePayloadSoundCustom];
             }
             else if ([selectedText isEqualToString:noneSound]) {
-                [[self.message messagePayload] setSound:nil];
+                [[self.message messagePayload] setSound:kPUDMessagePayloadSoundNone];
             }
             
             textField.text = selectedText;
         };
         
-        /**
-         Set up the textfield
-         */
         textField.inputView = pickerView;
-        textField.text = pickerView.dataArray[weakCustomSound.pickerSelectedRow];
+        
+        // set pickerview to currently selected value
+        if ([[[self.message messagePayload] sound] isEqualToString:kPUDMessagePayloadSoundDefault]) {
+            [pickerView selectRow:kPUDMessageDetailPickerSoundDefaultIndex inComponent:0 animated:NO];
+            textField.text = dataArray[kPUDMessageDetailPickerSoundDefaultIndex];
+        }
+        else if ([[[self.message messagePayload] sound] isEqualToString:kPUDMessagePayloadSoundCustom]) {
+            [pickerView selectRow:kPUDMessageDetailPickerSoundCustomIndex inComponent:0 animated:NO];
+            textField.text = dataArray[kPUDMessageDetailPickerSoundCustomIndex];
+        }
+        else if ([[[self.message messagePayload] sound] isEqualToString:kPUDMessagePayloadSoundNone]) {
+            [pickerView selectRow:kPUDMessageDetailPickerSoundNoneIndex inComponent:0 animated:NO];
+            textField.text = dataArray[kPUDMessageDetailPickerSoundNoneIndex];
+        }
     };
     
     customSound.sectionFooter = @"This is the sound that is played when the device receives the alert.";
@@ -213,8 +282,6 @@
         else {
             [[self.message messagePayload] setBadge:kPUDMessagePayloadDefaultBadgeValue];
         }
-        
-        [self reloadPostPayloadSection];
     };
     
     updateIOSBadge.sectionFooter = @"If ON, this will increment the badge count of the app by one.";
@@ -254,36 +321,32 @@
         return (CGFloat)44.0f;
     };
     
-    __weak typeof(customKey) weakCustomKey = customKey;
     customKey.configureCellBlock = ^(UITableViewCell *cell) {
         UITextField *textField = (UITextField *)[cell viewWithTag:kPUDMessageDetailTextFieldTag];
-        
-        NSArray *keys = @[
-                          @"None"
-                          ,@"10%"
-                          ,@"20%"
-                          ,@"30%"
-                          ];
-        
         textField.hidden = NO;
         
+        // this is needed in order to hide the text indicator on the text field
         if (!IOS_PRE_7_0) {
             textField.tintColor = [UIColor whiteColor];
         }
         
-        /**
-         Set up the picker view
-         */
-        PUDDataPickerView *pickerView = [[PUDDataPickerView alloc] initWithArray:keys];
+        // create array with the options
+        NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:4];
+        [dataArray setObject:kPUDMessagePayloadCustomKeyNone atIndexedSubscript:kPUDMessageDetailPickerCustomKeyNoneIndex];
+        [dataArray setObject:kPUDMessagePayloadCustomKey10 atIndexedSubscript:kPUDMessageDetailPickerCustomKey10Index];
+        [dataArray setObject:kPUDMessagePayloadCustomKey20 atIndexedSubscript:kPUDMessageDetailPickerCustomKey20Index];
+        [dataArray setObject:kPUDMessagePayloadCustomKey30 atIndexedSubscript:kPUDMessageDetailPickerCustomKey30Index];
+        
+        // set up picker view
+        PUDDataPickerView *pickerView = [[PUDDataPickerView alloc] initWithArray:dataArray];
         pickerView.dataSource = self;
         pickerView.delegate = self;
-        [pickerView selectRow:weakCustomKey.pickerSelectedRow inComponent:0 animated:NO];
+
         pickerView.pickerViewRowSelectedBlock = ^(UIPickerView *picker) {
             PUDDataPickerView *dataPicker = (PUDDataPickerView *)picker;
-            weakCustomKey.pickerSelectedRow = [dataPicker selectedRowInComponent:0];
-            NSString *selectedText = dataPicker.dataArray[weakCustomKey.pickerSelectedRow];
+            NSString *selectedText = dataArray[[dataPicker selectedRowInComponent:0]];
             
-            if ([selectedText isEqualToString:@"None"]) {
+            if ([selectedText isEqualToString:kPUDMessagePayloadCustomKeyNone]) {
                 [[self.message messagePayload] setCustomKeys:nil];
             }
             else {
@@ -294,11 +357,30 @@
             textField.text = selectedText;
         };
         
-        /**
-         Set up the textfield
-         */
         textField.inputView = pickerView;
-        textField.text = pickerView.dataArray[weakCustomKey.pickerSelectedRow];
+        
+        // set pickerview to currently selected value
+        NSDictionary *customKeyDict = [[self.message messagePayload] customKeys];
+        
+        NSString *value = kPUDMessagePayloadCustomKeyNone;
+        if (customKeyDict) {
+            value = customKeyDict[kPUDMessageDetailCustomKeyDiscountCode];
+        }
+        
+        if ([value isEqualToString:kPUDMessagePayloadCustomKeyNone]) {
+            [pickerView selectRow:kPUDMessageDetailPickerCustomKeyNoneIndex inComponent:0 animated:NO];
+        }
+        else if ([value isEqualToString:kPUDMessagePayloadCustomKey10]) {
+            [pickerView selectRow:kPUDMessageDetailPickerCustomKey10Index inComponent:0 animated:NO];
+        }
+        else if ([value isEqualToString:kPUDMessagePayloadCustomKey20]) {
+            [pickerView selectRow:kPUDMessageDetailPickerCustomKey20Index inComponent:0 animated:NO];
+        }
+        else if ([value isEqualToString:kPUDMessagePayloadCustomKey30]) {
+            [pickerView selectRow:kPUDMessageDetailPickerCustomKey30Index inComponent:0 animated:NO];
+        }
+        
+        textField.text = value;
     };
     
     customKey.sectionFooter = @"Custom keys allow you to specify your own data to be included in the push payload received by devices. The Practice Field app uses a custom key to give discounts out to specific subscribers.";
@@ -314,9 +396,14 @@
         return (CGFloat)44.0f;
     };
     
-    __weak typeof(tags) weakTags = tags;
     tags.configureCellBlock = ^(UITableViewCell *cell) {
         UITextField *textField = (UITextField *)[cell viewWithTag:kPUDMessageDetailTextFieldTag];
+        textField.hidden = NO;
+        
+        // this is needed in order to hide the text indicator on the text field
+        if (!IOS_PRE_7_0) {
+            textField.tintColor = [UIColor whiteColor];
+        }
         
         NSArray *tags = @[
                           @"None"
@@ -332,23 +419,13 @@
                           ,kPUDTagFcbarc
                           ];
         
-        textField.hidden = NO;
-        
-        if (!IOS_PRE_7_0) {
-            textField.tintColor = [UIColor whiteColor];
-        }
-        
-        /**
-         Set up the picker view
-         */
         PUDDataPickerView *pickerView = [[PUDDataPickerView alloc] initWithArray:tags];
         pickerView.dataSource = self;
         pickerView.delegate = self;
-        [pickerView selectRow:weakTags.pickerSelectedRow inComponent:0 animated:NO];
+
         pickerView.pickerViewRowSelectedBlock = ^(UIPickerView *picker) {
             PUDDataPickerView *dataPicker = (PUDDataPickerView *)picker;
-            weakTags.pickerSelectedRow = [dataPicker selectedRowInComponent:0];
-            NSString *selectedText = dataPicker.dataArray[weakTags.pickerSelectedRow];
+            NSString *selectedText = dataPicker.dataArray[[dataPicker selectedRowInComponent:0]];
             
             if ([selectedText isEqualToString:@"None"]) {
                 [[self.message messagePayload] setInclusionTags:nil];
@@ -360,11 +437,24 @@
             textField.text = selectedText;
         };
         
-        /**
-         Set up the textfield
-         */
         textField.inputView = pickerView;
-        textField.text = pickerView.dataArray[weakTags.pickerSelectedRow];
+        
+        NSArray *array = [[self.message messagePayload] inclusionTags];
+        NSString *value = @"none";
+        if (array) {
+            value = array[0];
+        }
+        
+        NSInteger selectedIndex = -1;
+        for (NSInteger i = 0; i < tags.count; i++) {
+            if ([((NSString *)tags[i]).lowercaseString isEqualToString:value]) {
+                selectedIndex = i;
+            }
+        }
+        
+        [pickerView selectRow:selectedIndex inComponent:0 animated:NO];
+        
+        textField.text = pickerView.dataArray[[pickerView selectedRowInComponent:0]];
     };
     
     tags.sectionFooter = @"Select a tag to filter the send on. You must have the tag set to ON in the Preferences tab in order to receive the message.";
@@ -388,17 +478,37 @@
     return payload;
 }
 
-- (NSArray *)tableDataArray {
+- (NSArray *)tableViewDataPushTypeAlert {
     NSMutableArray *dataArray = [NSMutableArray array];
     
-    //[dataArray autoExpandInsertObject:[self payloadData] atIndex:kPUDMessageDetailPayloadSectionIndex];
-    [dataArray autoExpandInsertObject:[self sendMessageData] atIndex:kPUDMessageDetailSendMessageSectionIndex];
-    [dataArray autoExpandInsertObject:[self messageTextData] atIndex:kPUDMessageDetailMessageTextSectionIndex];
-    [dataArray autoExpandInsertObject:[self customSoundData] atIndex:kPUDMessageDetailCustomSoundSectionIndex];
-    [dataArray autoExpandInsertObject:[self updateBadgeData] atIndex:kPUDMessageDetailUpdateBadgeSectionIndex];
-    [dataArray autoExpandInsertObject:[self tagData] atIndex:kPUDMessageDetailTagsSectionIndex];
-    [dataArray autoExpandInsertObject:[self customKeyData] atIndex:kPUDMessageDetailCustomKeySectionIndex];
-    [dataArray autoExpandInsertObject:[self openDirectData] atIndex:kPUDMessageDetailOpenDirectSectionIndex];
+    /**
+     *  IMPORTANT: The order here is the exact same order that the sections will be displayed
+     */
+    [dataArray addObject:[self pushMethodData]];
+    [dataArray addObject:[self messageTextData]];
+    [dataArray addObject:[self customSoundData]];
+    [dataArray addObject:[self updateBadgeData]];
+    [dataArray addObject:[self openDirectData]];
+    [dataArray addObject:[self customKeyData]];
+    [dataArray addObject:[self tagData]];
+    [dataArray addObject:[self sendMessageData]];
+    
+    return dataArray;
+}
+
+- (NSArray *)tableViewDataPushTypeAlertCloudPage {
+    NSMutableArray *dataArray = [NSMutableArray array];
+    
+    /**
+     *  IMPORTANT: The order here is the exact same order that the sections will be displayed
+     */
+    [dataArray addObject:[self pushMethodData]];
+    [dataArray addObject:[self messageTextData]];
+    [dataArray addObject:[self customSoundData]];
+    [dataArray addObject:[self updateBadgeData]];
+    [dataArray addObject:[self customKeyData]];
+    [dataArray addObject:[self tagData]];
+    [dataArray addObject:[self sendMessageData]];
     
     return dataArray;
 }
@@ -431,6 +541,7 @@
     UISwitch *badgeSwitch = (UISwitch *)[cell viewWithTag:kPUDMessageDetailSwitchTag];
     UIButton *sendButton = (UIButton *)[cell viewWithTag:kPUDMessageDetailSendButtonTag];
     UITextField *textField = (UITextField *)[cell viewWithTag:kPUDMessageDetailTextFieldTag];
+    UISegmentedControl *segmentedControl = (UISegmentedControl *)[cell viewWithTag:kPUDMessageDetailSegmentedControlTag];
     
     /**
      Create switch if needed
@@ -444,10 +555,10 @@
         
         NSDictionary *views = NSDictionaryOfVariableBindings(badgeSwitch);
         [badgeSwitch.superview addConstraints:[NSLayoutConstraint
-                                             constraintsWithVisualFormat:@"[badgeSwitch]-15.0-|"
-                                             options:kNilOptions
-                                             metrics:nil
-                                             views:views]];
+                                               constraintsWithVisualFormat:@"[badgeSwitch]-15.0-|"
+                                               options:kNilOptions
+                                               metrics:nil
+                                               views:views]];
     }
     
     /**
@@ -457,7 +568,7 @@
         sendButton = [UIButton buttonWithType:UIButtonTypeSystem];
         sendButton.tag = kPUDMessageDetailSendButtonTag;
         sendButton.translatesAutoresizingMaskIntoConstraints = NO;
-        sendButton.frame = CGRectMake(15, 12, 200, 20);
+        sendButton.frame = CGRectMake(10, 12, 200, 20);
         [sendButton setTitle:@"Send Message" forState:UIControlStateNormal];
         [sendButton addTarget:self action:@selector(sendMessageButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [cell.contentView addSubview:sendButton];
@@ -483,10 +594,27 @@
         
         NSDictionary *views = NSDictionaryOfVariableBindings(textField);
         [textField.superview addConstraints:[NSLayoutConstraint
-                                   constraintsWithVisualFormat:@"|-[textField]-|"
-                                   options:kNilOptions
-                                   metrics:nil
-                                   views:views]];
+                                             constraintsWithVisualFormat:@"|-15.0-[textField]-15.0-|"
+                                             options:kNilOptions
+                                             metrics:nil
+                                             views:views]];
+    }
+    
+    /**
+     Create segmentedControl if needed
+     */
+    if (!segmentedControl) {
+        segmentedControl = [[UISegmentedControl alloc] initWithFrame:CGRectMake(15, 8.0, self.tableView.bounds.size.width - 30, self.tableView.bounds.size.width - 60)];
+        segmentedControl.tag = kPUDMessageDetailSegmentedControlTag;
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = NO;
+        [cell.contentView addSubview:segmentedControl];
+        
+        NSDictionary *views = NSDictionaryOfVariableBindings(segmentedControl);
+        [textField.superview addConstraints:[NSLayoutConstraint
+                                             constraintsWithVisualFormat:@"|-15.0-[segmentedControl]-15.0-|"
+                                             options:kNilOptions
+                                             metrics:nil
+                                             views:views]];
     }
     
     /**
@@ -503,7 +631,6 @@
     }
     
     if (textField) {
-        
         if (!IOS_PRE_7_0) {
             textField.tintColor = nil;
         }
@@ -513,6 +640,14 @@
         textField.inputView = nil;
         textField.placeholder = nil;
         textField.text = nil;
+    }
+    
+    if (segmentedControl) {
+        segmentedControl.hidden = YES;
+        
+        if (!IOS_PRE_7_0) {
+            segmentedControl.tintColor = [UIColor etPrimaryBlue];
+        }
     }
     
     /**
@@ -593,6 +728,16 @@
     }
 }
 
+- (void)segmentedControlValueDidChange:(UISegmentedControl *)sender {
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    PUDMessageComposeTableData *data = self.dataArray[indexPath.section];
+    
+    if (data.segmentedControlValueChangedBlock) {
+        data.segmentedControlValueChangedBlock(sender);
+    }
+}
+
 #pragma mark - text view delegate methods
 
 - (void)resignOnTap:(id)iSender {
@@ -611,8 +756,6 @@
     if (data.textFieldDidEndEditingBlock) {
         data.textFieldDidEndEditingBlock(textField);
     }
-    
-    [self reloadPostPayloadSection];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -639,7 +782,6 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     PUDDataPickerView *dataPicker = (PUDDataPickerView *)pickerView;
     dataPicker.pickerViewRowSelectedBlock(dataPicker);
-    [self reloadPostPayloadSection];
 }
 
 #pragma mark - other methods
@@ -647,12 +789,6 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.currentResponder resignFirstResponder];
-}
-
-- (void)reloadPostPayloadSection {
-    return;
-    NSIndexSet *indexSet = [[NSIndexSet alloc] initWithIndex:kPUDMessageDetailPayloadSectionIndex];
-    [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end

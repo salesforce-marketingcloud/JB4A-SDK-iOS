@@ -38,6 +38,7 @@
     _messagePayload.override = @(YES);
     _messagePayload.badge = kPUDMessagePayloadDefaultBadgeValue;
     _messagePayload.sound = @"default";
+    _messagePayload.pushMethod = kPushMethodAlert;
     [self setDeviceTokenOnMessagePayload];
 }
 
