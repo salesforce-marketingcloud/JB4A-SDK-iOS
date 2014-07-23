@@ -2,12 +2,14 @@
 
 This is the git repository for the ET MobilePush SDK for iOS.
 
-For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation at [here](http://exacttarget.github.io/MobilePushSDK-iOS).
+For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://exacttarget.github.io/MobilePushSDK-iOS).
 
 ## Release History
+As of July 2014, we have clarified the version numbering of the SDK and versions that will be supported.  For more information see [here](https://code.exacttarget.com/apis-sdks/mobilepush-sdks/mobile-push-sdk.html).
 
 ### Version 3.2.0 
 _Released July 21, 2014, correlating to ExactTarget's 2014-05 Release_
+_(supported)_
 
 * MPUSH-2309 - Addressing an issue related to retrieving location messages from the database.
 * MPUSH-2141 - Add the "DEBUG" tag to debug builds.
@@ -19,11 +21,13 @@ _Released July 21, 2014, correlating to ExactTarget's 2014-05 Release_
 
 ### Version 3.1.1
 _Released April 15, 2014_
+_(supported)_
 
 * MPUSH-2047 - Addresses and issue where the SDK was calling an iOS7-only method, breaking backwards compatibility. Returns the SDK to iOS6+ compatibility. 
 
 ### Version 3.1.0
 _Released April 11, 2014, correlating to ExactTarget's 2014-03 Release_
+_(supported)_
 
 * New sample project to more simply demonstrate the SDK, as well as some of it's new features. Also, addresses several issues with references and functionality updates.
 * MPUSH-1936 - Fix to account for null messagesPerPeriod
