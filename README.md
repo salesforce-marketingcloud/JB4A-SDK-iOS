@@ -7,6 +7,16 @@ For more information, please see [Code@ExactTarget](http://code.exacttarget.com)
 ## Release History
 As of July 2014, we have clarified the version numbering of the SDK and versions that will be supported.  For more information see [here](https://code.exacttarget.com/apis-sdks/mobilepush-sdks/mobile-push-sdk.html).
 
+#### Version 3.3.0
+_Released August 25, 2014, correlating to ExactTarget's 2014-06 Release_
+_(supported)_
+
+* MPUSH-2560 - Continued Beacon work to meet further requirements.
+* MPUSH-2488 - Added device locale to registrations. 
+* MPUSH-2472 - Introduced ETEvent to track statistics and such going forward. This also includes the addition of the Bulk Uploader Shim and related functionality. 
+* MPUSH-2513 - Added the ability to retrieve inactive fences from the SDK's cache. This was previously impossible.
+* MPUSH-2536 - ETLog can now be turned on or off in production. It defaults to off.
+
 ### Version 3.2.0 
 _Released July 21, 2014, correlating to ExactTarget's 2014-05 Release_
 _(supported)_
