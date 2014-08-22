@@ -7,8 +7,8 @@
 //
 
 // SDK Version
-#define ETPushSDKVersionString @"3.2.0"
-#define ETPushSDKVersionNumber 3200
+#define ETPushSDKVersionString @"3.3.0"
+#define ETPushSDKVersionNumber 3300
 
 /** 
  Helpers.

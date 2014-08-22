@@ -1,3 +1,33 @@
+/**
+ * Copyright (c) 2014 ExactTarget, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ * list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation and/or
+ * other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 //
 //  PUDConstants.h
 //  PushDemo
@@ -51,8 +81,7 @@ extern NSString *const kPUDInfoOpenDirectDelegate;
 extern NSString *const kPUDInfoLocationEnabled;
 extern NSString *const kPUDInfoAttributeFirstName;
 extern NSString *const kPUDInfoAttributeLastName;
-extern NSString *const kPUDInfoAttributeNFLTeamTags;
-extern NSString *const kPUDInfoAttributeFCTeamTags;
+extern NSString *const kPUDInfoAttributeActivityTags;
 
 #pragma mark - Message Detail Table View
 
@@ -138,8 +167,7 @@ extern NSString *const kPUDSeguePushReceivedToDiscount;
 
 #pragma mark - Settings Table View
 extern NSUInteger const kPUDSettingsPersonalInformationSectionIndex;
-extern NSUInteger const kPUDSettingsFootballSectionIndex;
-extern NSUInteger const kPUDSettingsSoccerSectionIndex;
+extern NSUInteger const kPUDSettingsActivitySectionIndex;
 
 #pragma mark - Storyboard Identifiers
 extern NSString *const kPUDStoryboardIdentifierPushReceivedTableViewController;
@@ -149,16 +177,11 @@ extern NSString *const kPUDStoryboardIdentifierDiscountCodeViewController;
 extern NSString *const kPUDStoryboardMain;
 
 #pragma mark - Tags
-extern NSString *const kPUDTagCowboys;
-extern NSString *const kPUDTagPackers;
-extern NSString *const kPUDTagGiants;
-extern NSString *const kPUDTagSteelers;
-extern NSString *const kPUDTagColts;
-extern NSString *const kPUDTagArsenal;
-extern NSString *const kPUDTagChelsea;
-extern NSString *const kPUDTagManu;
-extern NSString *const kPUDTagMadrid;
-extern NSString *const kPUDTagFcbarc;
+extern NSString *const kPUDTagCampingGear;
+extern NSString *const kPUDTagHikingSupplies;
+extern NSString *const kPUDTagBoatingGear;
+extern NSString *const kPUDTagFishingSupplies;
+extern NSString *const kPUDTagHuntingGear;
 
 #pragma mark - User Defaults
 extern NSString *const kPUDUserDefaultsFirstName;
@@ -167,3 +190,21 @@ extern NSString *const kPUDUserDefaultsLastPushReceivedDate;
 extern NSString *const kPUDUserDefaultsPushUserInfo;
 extern NSString *const kPUDUserDefaultsMessageType;
 extern NSString *const kPUDUserDefaultsAlertText;
+
+#pragma mark - Configs Table View
+extern NSUInteger const kPUDConfigsDefaultIndex;
+extern NSUInteger const kPUDConfigsCustomIndex;
+
+#pragma mark - Configs UserDefaults
+extern NSString *const kPUDUserDefaultsConfigName;
+extern NSString *const kPUDUserDefaultsAppID;
+extern NSString *const kPUDUserDefaultsAccessToken;
+extern NSString *const kPUDUserDefaultsClientID;
+extern NSString *const kPUDUserDefaultsClientSecret;
+extern NSString *const kPUDUserDefaultsMessageIDVanilla;
+extern NSString *const kPUDUserDefaultsMessageIDCloudPage;
+extern NSString *const kPUDUserDefaultsRestUrl;
+
+#pragma mark - Notifications
+extern NSString *const kPUDPreferencesChanged;
+

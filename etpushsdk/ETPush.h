@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "ETLocationManager.h"
 #import "PushConstants.h"
+#import <Availability.h>
 
 
 /**
@@ -60,8 +61,7 @@
     
     // OpenDirect Delegate stuff
     id<ExactTargetOpenDirectDelegate> _openDirectDelegate;
-    
-
+        
 }
 
 #pragma mark - Configure the App for ETPush
@@ -100,7 +100,11 @@
  @param cpState Whether or not to use Cloud Pages
  @return Doesn't return a value
  */
--(void)configureSDKWithAppID:(NSString *)etAppID andAccessToken:(NSString *)accessToken withAnalytics:(BOOL)analyticsState andLocationServices:(BOOL)locState andCloudPages:(BOOL)cpState;
+-(void)configureSDKWithAppID:(NSString *)etAppID
+              andAccessToken:(NSString *)accessToken
+               withAnalytics:(BOOL)analyticsState
+         andLocationServices:(BOOL)locState
+                andCloudPages:(BOOL)cpState;
 
 
 /**
@@ -133,14 +137,109 @@
  *  ---------------------------------------------------------------------------------------
  */
 
+// Refer to Availability.h for the reasoning behind why the following #if's are used.
+// Basically, this will allow the code to be compiled for different IPHONEOS_DEPLOYMENT_TARGET values to
+// maintain backward compatibility for running on IOS 6.0 and up as well allowing for using different versions
+// of the IOS SDK compiled using XCode 5.X, XCode 6.X and up without getting depricated warnings or undefined warnings.
+
+// IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+// Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
 /**
- Wrapper for iOS' application:registerForRemoteNotifications; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled. 
+ Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.
+ 
+ @return Doesn't return a value
+ */
+-(void)registerForRemoteNotifications;
+
+/**
+ Wrapper for iOS' isRegisteredForRemoteNotifications; call.
+ 
+ @return BOOL
+ */
+- (BOOL)isRegisteredForRemoteNotifications;
+
+/**
+ Wrapper for iOS' application:registerUserNotificationSettings; call.
+ 
+ @param notificationSettings The UIUserNotificationSettings object that the application would like to use for push. These are pipe-delimited, and use Apple's native values
+ @return Doesn't return a value
+ */
+- (void)registerUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings;
+
+/**
+ Wrapper for iOS' currentUserNotificationSettings; call.
+ 
+ @return Doesn't return a value
+ */
+- (UIUserNotificationSettings *)currentUserNotificationSettings;
+
+/**
+ Wrapper for iOS' didRegisterUserNotificationSettings; callback.
+ 
+ @return Returns the current UIUserNotificationSettings object
+ */
+- (void)didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings;
+
+/**
+ Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.
  
  @param types The UIRemoteNotificationTypes that the application would like to use for push. These are pipe-delimited, and use Apple's native values
+ @return Doesn't return a value
  */
 -(void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types;
+#else
+// Supports IOS SDKs < 8.X (i.e. XCode 5.X or less)
+/**
+ Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.
+ 
+ @param types The UIRemoteNotificationTypes that the application would like to use for push. These are pipe-delimited, and use Apple's native values
+ @return Doesn't return a value
+ */
+-(void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types;
+#endif
+#else
+// IPHONEOS_DEPLOYMENT_TARGET >= 8.X
+// Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+/**
+ Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.
+ 
+ @return Doesn't return a value
+ */
+-(void)registerForRemoteNotifications;
 
-/** 
+/**
+ Wrapper for iOS' isRegisteredForRemoteNotifications; call.
+ 
+ @return BOOL
+ */
+- (BOOL)isRegisteredForRemoteNotifications;
+
+/**
+ Wrapper for iOS' application:registerUserNotificationSettings; call.
+ 
+ @param notificationSettings The UIUserNotificationSettings object that the application would like to use for push. These are pipe-delimited, and use Apple's native values
+ @return Doesn't return a value
+ */
+- (void)registerUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings;
+
+/**
+ Wrapper for iOS' currentUserNotificationSettings; call.
+ 
+ @return Returns the current UIUserNotificationSettings object
+ */
+- (UIUserNotificationSettings *)currentUserNotificationSettings;
+
+/**
+ Wrapper for iOS' didRegisterUserNotificationSettings; callback.
+ 
+ @return Doesn't return a value
+ */
+- (void)didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings;
+#endif
+
+/**
  Responsible for sending a received token back to ExactTarget. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later. 
  
  This method is necessary to implementation of ET Push.
@@ -347,5 +446,16 @@
  Responds to the UIApplicationDidEnterBackgroundNotification notification
  */
 -(void)applicationDidEnterBackgroundNotificationReceived; // UIApplicationDidEnterBackgroundNotification
+
+/**
+ Set the Log Level
+ */
+
++(void)setETLoggerToRequiredState:(BOOL)state;
+
+/**
+ To Log the string whenever [ETPush setETLoggerToState:YES]
+ */
++(void) ETLogger: (NSString *) stringToBeLogged;
 
 @end

@@ -6,180 +6,216 @@
 //  Copyright (c) 2013 ExactTarget, Inc. All rights reserved.
 //
 
-#import "GenericUpdate.h"
-#import "Geofence.h"
-#import "Region.h"
+#import "ETGenericUpdate.h"
+#import "ETRegion.h"
+
+#import "PushConstants.h"
+
 
 /**
- Enumeration of possible message types. This corresponds to the template types available through the MobilePush UI. 
+ Enumeration of the type of ETMessage this is. 
+ */
+typedef NS_ENUM(NSUInteger, MobilePushMessageType)
+{
+    MobilePushMessageTypeUnknown,       /* Unknown */
+    MobilePushMessageTypeBasic,         /* Basic - A standard push message */
+    MobilePushMessageTypeEnhanced __attribute__((deprecated)),      /* DO NOT USE - Was a CloudPage message, but that is a ContentType now */
+    MobilePushMessageTypeFenceEntry,    /* Geofence Entry */
+    MobilePushMessageTypeFenceExit,     /* Geofence Exit */
+    MobilePushMessageTypeProximity      /* Proximity */
+};
+
+/**
+ Bitmask of features that a message has. This is the representation of Push (AlertMessage), Push+Page (AlertMessage + Page), Page Only (Page) in the MobilePush UI.
+ */
+typedef NS_OPTIONS(NSUInteger, MobilePushContentType) {
+    MobilePushContentTypeNone           = 0,        /** Unknown */
+    MobilePushContentTypeAlertMessage   = 1 << 0,   /** Push Message */
+    MobilePushContentTypePage           = 1 << 1    /** CloudPage */
+};
+
+/**
+ Tracks where the currently parsing dictionary came from, because we run the values through twice to merge them together. 
+ */
+typedef NS_ENUM(NSInteger, MPMessageSource)
+{
+    MPMessageSourceDatabase,    /** Database */
+    MPMessageSourceRemote       /** ExactTarget via REST */
+};
+
+/** 
+ Time Unit enumeration for Message limiting. 
+ */
+typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
+    MobilePushMessageFrequencyUnitNone,     /** Unknown */
+    MobilePushMessageFrequencyUnitYear,     /** Year */
+    MobilePushMessageFrequencyUnitMonth,    /** Month */
+    MobilePushMessageFrequencyUnitWeek,     /** Week */
+    MobilePushMessageFrequencyUnitDay,      /** Day */
+    MobilePushMessageFrequencyUnitHour      /** Hour */
+};
+
+/**
+ ETMessage is the local representation of a Message from ExactTarget. They are multipurpose, sometimes representing a message that should be scheduled because of the entrance or exit of a Geofence, the proximal arrival to an iBeacon, or a CloudPage message downloaded from ET. Because of their multipurpose nature, there are a lot of different attributes on them, many of which may be null at any give time depending on the type of message. 
  
- Note that MobilePushMessageTypeEnhanced is not used. To determine if a message has a CloudPage component, check MobilePushContentType.
- */
-typedef NS_ENUM(NSUInteger, MobilePushMessageType){
-    MobilePushMessageTypeUnknown,
-    MobilePushMessageTypeBasic,
-    MobilePushMessageTypeEnhanced,
-    MobilePushMessageTypeFenceEntry,
-    MobilePushMessageTypeFenceExit
-};
-
-/**
- Bitmask determining the features of a particular message. 
- */
-typedef NS_OPTIONS(NSUInteger, MobilePushContentType){
-    MobilePushContentTypeNone           = 0,
-    MobilePushContentTypeAlertMessage   = 1 << 0,
-    MobilePushContentTypePage           = 1 << 1
-};
-
-/**
- Enumeration of the frequency units used in message limiting. 
- */
-typedef NS_ENUM(NSInteger, MobilePushMessageFrequencyUnit){
-    MobilePushMessageFrequencyUnitNone,
-    MobilePushMessageFrequencyUnitYear,
-    MobilePushMessageFrequencyUnitMonth,
-    MobilePushMessageFrequencyUnitWeek,
-    MobilePushMessageFrequencyUnitDay,
-    MobilePushMessageFrequencyUnitHour
-};
-
-/**
- Enumeration used to track the source of a message. Used internally. 
- */
-typedef NS_ENUM(NSInteger, MPMessageSource){
-    MPMessageSourceDatabase,
-    MPMessageSourceRemote
-};
-
-/**
- ETMessage is a representation of the messages sent by ExactTarget. It's a flexible object that can define various types of messages (standard push, geofenced, proximity, CloudPages, etc), but this means that sometimes not all properties will be set. 
+ ETMessages also feature Message Limiting, a system of preventing a given message from firing too often. If described in a sentence with the parameters interlaced, it would read "show this message only 1 (messagesPerPeriod) time per 1 (numberOfPeriods) hour (periodType). As of a recent release, messagesPerPeriod will be defaulted to 1 on the Middle Tier, so if it is null or absent, we assume 1, otherwise take the given value.
  
- The most public use of ETMessage is in the CloudPages inbox implementation. The ExactTargetEnhancedPushDataSource object has an array of ETMessages by the name of messages. These are used in populating the inbox.
- 
+ Many of these accessors are readonly because the value should be trusted and not changed. There are specific methods to modify the message, such as markAsRead or markAsDeleted. Also, unless specifically marked in a method, only active methods are returned through the getter methods. 
  */
-@interface ETMessage : GenericUpdate
+@interface ETMessage : ETGenericUpdate
 
 /**
- Unique identifier for a message. This originates from ExactTarget and will match Message ID on the server.
+ Encoded ID from ExactTarget. Will match the ID in MobilePush. This is the primary key. 
  */
 @property (nonatomic, strong, readonly) NSString *messageIdentifier;
 
 /**
-  Identifies this type of message more specifically. See the MobilePushMessageType enumeration for types.
+ This is the name which is set on ExactTargetMarketingCloud, while setting the ETMessage
+ */
+@property (nonatomic, strong) NSString *messageName;
+
+/** 
+ The type of ETMessage being represented.
  */
 @property (nonatomic, readonly) MobilePushMessageType messageType;
 
 /**
- Identifies the content type of the message. This is an enum used to differentiate types of messages.
+ Bitmask of features that this message has on it (CloudPage, Push only)
  */
 @property (nonatomic, readonly) MobilePushContentType contentType;
 
 /**
- The message alert text.
+ The alert text of the message. This displays on the screen. 
  */
 @property (nonatomic, strong, readonly) NSString *alert;
 
 /**
- The name of the sound to play on alert. Either nil, "default," "custom.caf," or something custom and unsupported by the MobilePush UI.
+ The sound that should play, if any. Most of the time, either "default" or "custom.caf", conventions enforced in MobilePush. 
  */
 @property (nonatomic, strong, readonly) NSString *sound;
 
 /**
- The amount to modify the badge icon. Usually nil or "+1".
+ The badge modifier. This should be a NSString in the form of "+1" or nothing at all. It's saved as a string because of that.
  */
-@property (nonatomic, strong, readonly) NSNumber *badge;
+@property (nonatomic, strong, readonly) NSString *badge;
 
 /**
- An array of NSDictionaries of the Custom Keys sent by ExactTarget.
+ An array of Key Value Pairs, or Custom Keys in local parlance, for this message. This will contain NSDictionary objects.
  */
 @property (nonatomic, strong, readonly) NSArray *keyValuePairs;
 
 /**
- The effective scheduling date for a message. 
+ The message's start date. Messages shouldn't show before this time. 
  */
 @property (nonatomic, strong, readonly) NSDate *startDate;
 
-/**
- The date a message should stop being shown/fired. 
+/** 
+ The message's end date. Messages shouldn't show after this time.
  */
 @property (nonatomic, strong, readonly) NSDate *endDate;
 
-/**
- Used by CloudPages, this is the unique ID of the site associated to the message. May be null.
+/** 
+ The Site ID for the CloudPage attached to this message. 
  */
 @property (nonatomic, strong, readonly) NSString *siteIdentifier;
 
 /** 
- A string of the CloudPage URL. May be null if this isn't an Enhanced Push message.
+ The Site URL for the ClouePage attached to this message. It is saved as an NSString and converted later to NSURL.
  */
 @property (nonatomic, strong, readonly) NSString *siteUrlAsString;
 
 /**
- The OpenDirect payload specified at message activiation time. This will ultimately be passed to the OpenDirect delegate if set, or will open a webpage if not.
+ OpenDirect payload for this message, if there is one. 
  */
 @property (nonatomic, strong, readonly) NSString *openDirectPayload;
 
 /**
- A remnant of when messages to fences were one to one. This can be disregarded. 
+ DEPRECTED. The related ETRegion for this message. This is a remnant of days when the relationship was one to one. It is not anymore. 
  */
-@property (nonatomic, strong, readonly) Region *relatedFence;
+@property (nonatomic, strong, readonly) ETRegion *relatedFence;
 
 /**
- The total number of times a message should be shown. 
+ The total number of times, ever, that a message will show on a device. 
  */
 @property (nonatomic, strong, readonly) NSNumber *messageLimit;
 
 /**
- The number of times per one period that a message should show. ET default is 1.
+ The total number of times for a given number of time units that a message can be shown. In the statement "show 1 time per 2 hours", this is the "1" part.
+ 
+ This defaults to 1 if it is not set in the received payload from ExactTarget. 
  */
 @property (nonatomic, strong, readonly) NSNumber *messagesPerPeriod;
 
 /**
- The number of time units that a message should wait between fires. 
+ The number of time periods in which a message should be limited. In the statement "show 1 time per 2 hours", this is the "2" part.
  */
 @property (nonatomic, strong, readonly) NSNumber *numberOfPeriods;
 
 /**
- The type of time unit that describes numberOfPeriods. 
+ The time unit counted in numberOfPeriods. In the statement "show 1 time per 2 hours", this is the "hours" part.
  */
 @property (nonatomic, readonly) MobilePushMessageFrequencyUnit periodType;
 
 /**
- Whether or not the period is rolling. What this means is whether or not the next period starts at a zero unit for the next window, or just add the number of units * period type.
+ Whether or not the period is a rolling period. Defaults to YES through code. 
  
- For example, consider a message that should show once per one hour, and that message fires at 11:53am. If the period is rolling, the next earliest time it can fire is 12:53pm. If it is *not* rolling, it can fire again at 12:00pm, because that is the start of a new hour.
+ Consider a message being fired at 2:19PM, and it may only be shown once per hour. In a rolling period, the next time it may show is 3:19PM. In a non-rolling period, the next earliest showing time is 3:00PM, the start of the next hour. 
  */
 @property (nonatomic, readonly, getter = isRollingPeriod) BOOL rollingPeriod;
 
 /**
- Whether or not the message has been marked read. This applies to CloudPages.
+ The number of times an ETRegion must be tripped before the message shows. This is not currently used, and is a placeholder for future functionality. 
+ */
+@property (nonatomic, strong, readonly) NSNumber *minTripped;
+
+/**
+ Ephemeral Messages disappear when the user walks away from the iBeacon that tripped the message. The default value is NO.
+ */
+@property (nonatomic, readonly, getter = isEphemeralMessage) BOOL ephemeralMessage;
+
+/**
+ For iBeacon messages, the proximity the user must arrive in before the message is fired. It is treated as a "less than" value, meaning if the message is set to Far, the message can be shown in Far, Near or Immediate.
+ */
+@property (nonatomic, readonly) CLProximity proximity;
+
+/**
+ The number of seconds the user must stand near an iBeacon before the message is displayed. This is treated as an offset in scheduling the UILocalNotification, which will be cancelled if the user walks away too early. 
+ */
+@property (nonatomic, readonly) NSInteger loiteringSeconds;
+
+/**
+ Whether or not the message has been read. This must be set through markAsRead by the developer.
  */
 @property (nonatomic, getter = isRead, readonly) BOOL read;
 
 /**
- Whether or not the message was marked deleted. This applies to CloudPage messages only.
- */
-@property (nonatomic, getter = isMessageDeleted, readonly) BOOL messageDeleted;
-
-/**
- Whether or not the message is marked active. This reflects it's state on ExactTarget's server.
+ Whether or not the message is active in the local database. 
  */
 @property (nonatomic, getter = isActive, readonly) BOOL active;
 
+/**
+ A reference to the UILocalNotification triggered for this message. It is used later to cancel the message if need be.
+ */
+@property (nonatomic, strong) UILocalNotification *notification;
+
 
 /**
- This will return a new, populated ETMessage from a dictionary. Third party developers shouldn't call this method on their own.
+ Creates a new ETMessage with values in the given NSDictionary. 
+ @param dict A dictionary of values to apply to the ETMessage
+ @return A new ETMessage
  */
 -(id)initFromDictionary:(NSDictionary *)dict;
 
 /**
- Designated initializer. Returns a new ETMessage for a specific fence fromm a dictionary. 
+ Designated Initializer. Creates a new ETMessage with values from an NSDictionary for a specific ETRegion. 
+ @param dict A dictionary of values to apply to the ETMessage
+ @param region The ETRegion that prompted the creation of this ETMessage
+ @return A new ETMessage
  */
--(id)initFromDictionary:(NSDictionary *)dict forFence:(Region *)region;
+-(id)initFromDictionary:(NSDictionary *)dict forFence:(ETRegion *)region;
 
 /**
- This is an overridden accessor for subject to handle some business logic around what to show. Use this for display in an inbox.
+ This is an overridden accessor for subj ect to handle some business logic around what to show. Use this for display in an inbox.
  */
 -(NSString *)subject; // Public getter, now with logic.
 
@@ -204,55 +240,90 @@ typedef NS_ENUM(NSInteger, MPMessageSource){
 -(BOOL)markAsUnread;
 
 /**
- Marks a message as deleted. There is no coming back from this. 
+ Marks a message as deleted. They will not be returned after this, and it's irreversable.
  */
 -(BOOL)markAsDeleted;
 
+/** Methods for testing */
 /**
- Returns a specific message (or nil) got a given identifier. The Identifier is the ET Message ID.
- 
- @param identifier A string Message ID from ET
- @return An ETMessage generated.
+ Getter for a private value, lastShownDate.
+ @return The Last Shown Date, if any.
  */
-+(ETMessage *)getMessageByIdentifier:(NSString *)identifier;
+- (NSDate *) getLastShownDate;
 
 /**
- Return all messages by specific content type.
- 
- @param contentType The MobilePushContentType that you would like messages for.
- @return An array of ETMessages that have the content type you asked for.
+ Getter for a private value, showCount.
+ @return The show count for this message. 
+ */
+- (int) getShowCount;
+
+/**---------------------------------------------------------------------------------------
+ * @name Message Retrieval Helpers
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+ Gets all active messages for a specific contentType, usually Cloud Pages.
+ @return An NSArray of ETMessages
  */
 +(NSArray *)getMessagesByContentType:(MobilePushContentType)contentType;
 
 /**
- Returns messages by message type. A message type can be standard push, loc entry or exit, or proximity. 
- 
- @param type The MobilePushMessageType you would like messages for. 
- @return An array of ETMessages that meet that criteria.
+ Gets a specific ETMessage for a given identifer. 
+ @param The Message ID to retrieve
+ @return The ETMessage, or nil if not found in the database.
+ */
++(ETMessage *)getMessageByIdentifier:(NSString *)identifier;
+
+/**
+ Gets all active ETMessages for a specific message type, like Fence Entry, Exit or Proximity.
+ @param type The MobilePushMessageType you'd like back
+ @return An array of ETMessages.
  */
 +(NSArray *)getMessagesByType:(MobilePushMessageType)type;
 
 /**
- Returns all messages for a specific region.
+ Gets all active ETMessages tied to a specific ETRegion (Geofence).
+ @param fence The ETRegion for which you would like messages
+ @return An NSArray of ETMessages
  */
-+(NSArray *)getMessagesForGeofence:(Region *)fence;
++(NSArray *)getMessagesForGeofence:(ETRegion *)fence;
 
 /**
- Returns all messages for a specific region of a specific kind (like, loc entry or exit).
+ Gets all active ETMessages tied to a specific ETRegion (Geofence) and MobilePushMessageType, like Entry ot Exit.
+ @param fence The ETRegion for which you would like messages
+ @param type The MobilePushMessageType that describes the messages you want
+ @return An NSArray of ETMessages that meet the criteria asked for.
  */
-+(NSArray *)getMessagesForGeofence:(Region *)fence andMessageType:(MobilePushMessageType)type;
++(NSArray *)getMessagesForGeofence:(ETRegion *)fence andMessageType:(MobilePushMessageType)type;
 
 /**
- Triggers a message request from ExactTarget's servers. Please do not call this one.
+ Gets all active ETMessages for a specific ETRegion (Proximity). 
+ @param region The ETRegion for which you would like messages
+ @return An NSArray of ETMessages
+ */
++(NSArray *)getProximityMessagesForRegion:(ETRegion *)region; // withRangedBeaconProximity:(CLProximity)prox;
+
+/**
+ Triggeres a data pull from ExactTarget for messages that meet the supplied requirements. 
+ @param messageType The Message Type you wish to retrieve
+ @param contentType The Content Type you wish to retrieve
+ @return Doesn't return a value, but has delegate callbacks. 
  */
 +(void)getMessagesFromExactTargetOfMessageType:(MobilePushMessageType)messageType andContentType:(MobilePushContentType)contentType;
 
 /**
- Invalidates all messages in the cache for a speecific message type. 
- 
- @param type The type of message to invalidate. 
- @return Successfulness of the request.
+ Marks all messages for a given type as inactive. This is done prior to processing new messages just received from ExactTarget. 
+ @param type The MobilePushMessageType you wish to invalidate
+ @return T/F if the invalidation query worked
  */
 +(BOOL)invalidateAllMessagesForType:(MobilePushMessageType)type;
+
+/**
+ ETMessage equality. Since object equality won't always work, this compares messageIdentifiers to determine equality.
+ @param message The ETMessage to compare self to
+ @return T/F if the messages are equal.
+ */
+-(BOOL)isEqualToMessage:(ETMessage *)message;
 
 @end

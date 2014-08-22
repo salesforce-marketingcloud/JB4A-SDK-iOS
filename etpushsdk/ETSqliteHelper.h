@@ -32,10 +32,10 @@
 -(NSInteger)lastErrorCode;
 -(NSInteger)rowsAffected;
 
--(NSArray *)executeQuery:(NSString *)sql, ...;
+-(NSArray *)executeQuery:(NSString *)sql, ... __attribute__((deprecated));
 -(NSArray *)executeQuery:(NSString *)sql arguments:(NSArray *)args;
 
--(BOOL)executeUpdate:(NSString *)sql, ...;
+-(BOOL)executeUpdate:(NSString *)sql, ... __attribute__((deprecated));
 -(BOOL)executeUpdate:(NSString *)sql arguments:(NSArray *)arguments;
 
 -(BOOL)tableExists:(NSString *)tableName;

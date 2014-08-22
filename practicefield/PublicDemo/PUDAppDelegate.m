@@ -1,3 +1,33 @@
+/**
+ * Copyright (c) 2014 ExactTarget, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ * list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation and/or
+ * other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 //
 //  PUDAppDelegate.m
 //  PushDemo
@@ -13,9 +43,13 @@
 #import "PUDDiscountTableViewController.h"
 #import "PUDNavigationController.h"
 #import "PUDMessageReceivedTableViewController.h"
-
+#import "PUDHomeViewController.h"
+#import "PUDTabBarController.h"
 // Libraries
 #import "ETLandingPagePresenter.h"
+
+//Constants
+#import "PUDConstants.h"
 
 @interface PUDAppDelegate()
 
@@ -29,12 +63,16 @@
  */
 @property (nonatomic, strong) PUDDiscountTableViewController *discountViewController;
 
+@property (nonatomic, strong) PUDHomeViewController *homeViewController;
+@property (nonatomic, strong) PUDTabBarController *tabbarViewController;
+
 @end
 
 @implementation PUDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     // set status bar style
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
@@ -52,12 +90,17 @@
      
      If you are unsure of your credentials or need help, please reach out to your Support partner. Likewise, if these services are not active in your account, log statements will be in your console to that effect. Please work with your sales or support rep if you have questions.
      */
+    
+    /**
+     *  The below method has to be implemented ONLY ONCE in the SDK. The below conditions are specifically for this app and you will NOT need multiple/ conditional implementation like this in your own app
+     */
+
     [[ETPush pushManager] configureSDKWithAppID:[PUDUtility appID] // The App ID from Code@ExactTarget
                                  andAccessToken:[PUDUtility accessToken] // The Access Token from Code@ExactTarget
                                   withAnalytics:YES // Whether or not you would like to use ExactTarget analytics services
-                            andLocationServices:YES // Whether or not you would like to use location-based alerts
+                            andLocationServices:YES  // Whether or not you would like to use location-based alerts
                                   andCloudPages:YES]; // Whether or not you would like to use CloudPages.
-    
+
     /**
      ET_NOTE: The OpenDirect Delegate must be set in order for OpenDirect to work with URL schemes other than http or https. Set this before you call [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
      */
@@ -91,6 +134,9 @@
      ET_NOTE: Logging the device id is very useful for debugging purposes. One thing this can help you do is create a filtered list inside of MobilePush that only includes the device that matches this id.
      */
     NSLog(@"== DEVICE ID ==\nThe ExactTarget Device ID is: %@\n", [ETPush safeDeviceIdentifier]);
+    
+    // To enable logging while debugging
+    [ETPush setETLoggerToRequiredState:YES];
     
     return YES;
 }
@@ -298,6 +344,12 @@
             [self handleDiscountCodePayload];
         }
     }
+    
+    // Posting "Push Received Notification" notification to refresh views (PUDMessageReceivedTableViewController)
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"kPUDPushReceivedNotification"
+                                                        object:self
+                                                      userInfo:nil];
+    
 }
 
 /**
@@ -313,22 +365,24 @@
 /**
  *  This method is NOT required in order to implement the SDK. This is used specifically for this app and you will likely not need a method like this in your own app
  */
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
     if (buttonIndex != alertView.cancelButtonIndex) {
-        /**
-         *  Handle the payload immediately because the subscriber clicked the view button
-         */
-        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
-        BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
-        BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
-        
-        if (hasOpenDirectPayload) {
-            [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
+            /**
+             *  Handle the payload immediately because the subscriber clicked the view button
+             */
+            NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
+            BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
+            BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
+            
+            if (hasOpenDirectPayload) {
+                [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
+            }
+            else if (hasDiscountCodeCustomKey) {
+                [self handleDiscountCodePayload];
+            }
         }
-        else if (hasDiscountCodeCustomKey) {
-            [self handleDiscountCodePayload];
-        }
-    }
 }
 
 - (void)handleOpenDirectPayload:(NSString *)payload {

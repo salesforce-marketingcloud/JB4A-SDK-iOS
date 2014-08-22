@@ -12,7 +12,7 @@
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
 				<h1><a id="libraryTitle" href="../index.html">ExactTarget MobilePush SDK </a></h1>
-				<a id="developerHome" href="../index.html">ExactTarget, a saleforce.com Company</a>
+				<a id="developerHome" href="../index.html">ExactTarget, a salesforce.com Company</a>
 			</div>
 			
 			<div id="title" role="banner">
@@ -49,23 +49,33 @@
 	
 	<option value="//api/name/endDate">&nbsp;&nbsp;&nbsp;&nbsp;endDate</option>
 	
+	<option value="//api/name/ephemeralMessage">&nbsp;&nbsp;&nbsp;&nbsp;ephemeralMessage</option>
+	
 	<option value="//api/name/keyValuePairs">&nbsp;&nbsp;&nbsp;&nbsp;keyValuePairs</option>
 	
-	<option value="//api/name/messageDeleted">&nbsp;&nbsp;&nbsp;&nbsp;messageDeleted</option>
+	<option value="//api/name/loiteringSeconds">&nbsp;&nbsp;&nbsp;&nbsp;loiteringSeconds</option>
 	
 	<option value="//api/name/messageIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;messageIdentifier</option>
 	
 	<option value="//api/name/messageLimit">&nbsp;&nbsp;&nbsp;&nbsp;messageLimit</option>
 	
+	<option value="//api/name/messageName">&nbsp;&nbsp;&nbsp;&nbsp;messageName</option>
+	
 	<option value="//api/name/messageType">&nbsp;&nbsp;&nbsp;&nbsp;messageType</option>
 	
 	<option value="//api/name/messagesPerPeriod">&nbsp;&nbsp;&nbsp;&nbsp;messagesPerPeriod</option>
+	
+	<option value="//api/name/minTripped">&nbsp;&nbsp;&nbsp;&nbsp;minTripped</option>
+	
+	<option value="//api/name/notification">&nbsp;&nbsp;&nbsp;&nbsp;notification</option>
 	
 	<option value="//api/name/numberOfPeriods">&nbsp;&nbsp;&nbsp;&nbsp;numberOfPeriods</option>
 	
 	<option value="//api/name/openDirectPayload">&nbsp;&nbsp;&nbsp;&nbsp;openDirectPayload</option>
 	
 	<option value="//api/name/periodType">&nbsp;&nbsp;&nbsp;&nbsp;periodType</option>
+	
+	<option value="//api/name/proximity">&nbsp;&nbsp;&nbsp;&nbsp;proximity</option>
 	
 	<option value="//api/name/read">&nbsp;&nbsp;&nbsp;&nbsp;read</option>
 	
@@ -98,6 +108,8 @@
 	
 	<option value="//api/name/getMessagesFromExactTargetOfMessageType:andContentType:">&nbsp;&nbsp;&nbsp;&nbsp;+ getMessagesFromExactTargetOfMessageType:andContentType:</option>
 	
+	<option value="//api/name/getProximityMessagesForRegion:">&nbsp;&nbsp;&nbsp;&nbsp;+ getProximityMessagesForRegion:</option>
+	
 	<option value="//api/name/invalidateAllMessagesForType:">&nbsp;&nbsp;&nbsp;&nbsp;+ invalidateAllMessagesForType:</option>
 	
 	
@@ -105,9 +117,15 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/getLastShownDate">&nbsp;&nbsp;&nbsp;&nbsp;- getLastShownDate</option>
+	
+	<option value="//api/name/getShowCount">&nbsp;&nbsp;&nbsp;&nbsp;- getShowCount</option>
+	
 	<option value="//api/name/initFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- initFromDictionary:</option>
 	
 	<option value="//api/name/initFromDictionary:forFence:">&nbsp;&nbsp;&nbsp;&nbsp;- initFromDictionary:forFence:</option>
+	
+	<option value="//api/name/isEqualToMessage:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToMessage:</option>
 	
 	<option value="//api/name/markAsDeleted">&nbsp;&nbsp;&nbsp;&nbsp;- markAsDeleted</option>
 	
@@ -137,6 +155,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Message Retrieval Helpers">Message Retrieval Helpers</a></span></li>
+	
 </ul></li>
 
 
@@ -155,23 +175,33 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/endDate">endDate</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ephemeralMessage">ephemeralMessage</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyValuePairs">keyValuePairs</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageDeleted">messageDeleted</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loiteringSeconds">loiteringSeconds</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageIdentifier">messageIdentifier</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageLimit">messageLimit</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageName">messageName</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageType">messageType</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messagesPerPeriod">messagesPerPeriod</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minTripped">minTripped</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/notification">notification</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfPeriods">numberOfPeriods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openDirectPayload">openDirectPayload</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/periodType">periodType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/proximity">proximity</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/read">read</a></span></li>
 	
@@ -205,6 +235,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMessagesFromExactTargetOfMessageType:andContentType:">getMessagesFromExactTargetOfMessageType:andContentType:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getProximityMessagesForRegion:">getProximityMessagesForRegion:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invalidateAllMessagesForType:">invalidateAllMessagesForType:</a></span></li>
 	
 </ul></li>
@@ -213,9 +245,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getLastShownDate">getLastShownDate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getShowCount">getShowCount</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initFromDictionary:">initFromDictionary:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initFromDictionary:forFence:">initFromDictionary:forFence:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToMessage:">isEqualToMessage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/markAsDeleted">markAsDeleted</a></span></li>
 	
@@ -253,7 +291,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">GenericUpdate</td>
+	<td class="specification-value">ETGenericUpdate</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">ETMessage.h</td>
@@ -266,9 +304,11 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>ETMessage is a representation of the messages sent by ExactTarget. It&rsquo;s a flexible object that can define various types of messages (standard push, geofenced, proximity, CloudPages, etc), but this means that sometimes not all properties will be set.</p>
+						<p>ETMessage is the local representation of a Message from ExactTarget. They are multipurpose, sometimes representing a message that should be scheduled because of the entrance or exit of a Geofence, the proximal arrival to an iBeacon, or a CloudPage message downloaded from ET. Because of their multipurpose nature, there are a lot of different attributes on them, many of which may be null at any give time depending on the type of message.</p>
 
-<p>The most public use of ETMessage is in the CloudPages inbox implementation. The <a href="../Classes/ExactTargetEnhancedPushDataSource.html">ExactTargetEnhancedPushDataSource</a> object has an array of ETMessages by the name of messages. These are used in populating the inbox.</p>
+<p>ETMessages also feature Message Limiting, a system of preventing a given message from firing too often. If described in a sentence with the parameters interlaced, it would <a href="#//api/name/read">read</a> &ldquo;show this message only 1 (<a href="#//api/name/messagesPerPeriod">messagesPerPeriod</a>) time per 1 (<a href="#//api/name/numberOfPeriods">numberOfPeriods</a>) hour (<a href="#//api/name/periodType">periodType</a>). As of a recent release, <a href="#//api/name/messagesPerPeriod">messagesPerPeriod</a> will be defaulted to 1 on the Middle Tier, so if it is null or absent, we assume 1, otherwise take the given value.</p>
+
+<p>Many of these accessors are readonly because the value should be trusted and not changed. There are specific methods to modify the message, such as <a href="#//api/name/markAsRead">markAsRead</a> or <a href="#//api/name/markAsDeleted">markAsDeleted</a>. Also, unless specifically marked in a method, only <a href="#//api/name/active">active</a> methods are returned through the getter methods.</p>
 					</div>
 					
 					
@@ -281,12 +321,18 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/messageIdentifier">&nbsp;&nbsp;messageIdentifier</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageName">&nbsp;&nbsp;messageName</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -394,19 +440,43 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/minTripped">&nbsp;&nbsp;minTripped</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ephemeralMessage">&nbsp;&nbsp;ephemeralMessage</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/proximity">&nbsp;&nbsp;proximity</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loiteringSeconds">&nbsp;&nbsp;loiteringSeconds</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/read">&nbsp;&nbsp;read</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/messageDeleted">&nbsp;&nbsp;messageDeleted</a></code>
+		<code><a href="#//api/name/active">&nbsp;&nbsp;active</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/active">&nbsp;&nbsp;active</a></code>
+		<code><a href="#//api/name/notification">&nbsp;&nbsp;notification</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -460,13 +530,33 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getMessageByIdentifier:">+&nbsp;getMessageByIdentifier:</a></code>
+		<code><a href="#//api/name/getLastShownDate">&ndash;&nbsp;getLastShownDate</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/getShowCount">&ndash;&nbsp;getShowCount</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Message Retrieval Helpers" name="task_Message Retrieval Helpers"></a>
+						<h3 class="subsubtitle task-title">Message Retrieval Helpers</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
 		<code><a href="#//api/name/getMessagesByContentType:">+&nbsp;getMessagesByContentType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMessageByIdentifier:">+&nbsp;getMessageByIdentifier:</a></code>
 	</span>
 	
 	
@@ -490,6 +580,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/getProximityMessagesForRegion:">+&nbsp;getProximityMessagesForRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/getMessagesFromExactTargetOfMessageType:andContentType:">+&nbsp;getMessagesFromExactTargetOfMessageType:andContentType:</a></code>
 	</span>
 	
@@ -497,6 +593,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/invalidateAllMessagesForType:">+&nbsp;invalidateAllMessagesForType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isEqualToMessage:">&ndash;&nbsp;isEqualToMessage:</a></code>
 	</span>
 	
 	
@@ -520,7 +622,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Whether or not the message is marked active. This reflects it&rsquo;s state on ExactTarget&rsquo;s server.</p>
+		<p>Whether or not the message is active in the local database.</p>
 	</div>		
 	
     
@@ -537,7 +639,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Whether or not the message is marked active. This reflects it&rsquo;s state on ExactTarget&rsquo;s server.</p>
+		<p>Whether or not the message is active in the local database.</p>
 	</div>
 	
 	
@@ -561,7 +663,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The message alert text.</p>
+		<p>The alert text of the message. This displays on the screen.</p>
 	</div>		
 	
     
@@ -578,7 +680,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The message alert text.</p>
+		<p>The alert text of the message. This displays on the screen.</p>
 	</div>
 	
 	
@@ -602,12 +704,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The amount to modify the badge icon. Usually nil or &ldquo;+1&rdquo;.</p>
+		<p>The badge modifier. This should be a NSString in the form of &ldquo;+1&rdquo; or nothing at all. It&rsquo;s saved as a string because of that.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *badge</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *badge</code></div>
 
     
 	
@@ -619,7 +721,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The amount to modify the badge icon. Usually nil or &ldquo;+1&rdquo;.</p>
+		<p>The badge modifier. This should be a NSString in the form of &ldquo;+1&rdquo; or nothing at all. It&rsquo;s saved as a string because of that.</p>
 	</div>
 	
 	
@@ -643,7 +745,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Identifies the content type of the message. This is an enum used to differentiate types of messages.</p>
+		<p>Bitmask of features that this message has on it (CloudPage, Push only)</p>
 	</div>		
 	
     
@@ -660,7 +762,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Identifies the content type of the message. This is an enum used to differentiate types of messages.</p>
+		<p>Bitmask of features that this message has on it (CloudPage, Push only)</p>
 	</div>
 	
 	
@@ -684,7 +786,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The date a message should stop being shown/fired.</p>
+		<p>The message&rsquo;s end date. Messages shouldn&rsquo;t show after this time.</p>
 	</div>		
 	
     
@@ -701,7 +803,48 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The date a message should stop being shown/fired.</p>
+		<p>The message&rsquo;s end date. Messages shouldn&rsquo;t show after this time.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/ephemeralMessage" title="ephemeralMessage"></a>
+	<h3 class="subsubtitle method-title">ephemeralMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Ephemeral Messages disappear when the user walks away from the iBeacon that tripped the message. The default value is NO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isEphemeralMessage) BOOL ephemeralMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Ephemeral Messages disappear when the user walks away from the iBeacon that tripped the message. The default value is NO.</p>
 	</div>
 	
 	
@@ -725,7 +868,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>An array of NSDictionaries of the Custom Keys sent by ExactTarget.</p>
+		<p>An array of Key Value Pairs, or Custom Keys in local parlance, for this message. This will contain NSDictionary objects.</p>
 	</div>		
 	
     
@@ -742,7 +885,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>An array of NSDictionaries of the Custom Keys sent by ExactTarget.</p>
+		<p>An array of Key Value Pairs, or Custom Keys in local parlance, for this message. This will contain NSDictionary objects.</p>
 	</div>
 	
 	
@@ -760,18 +903,18 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/messageDeleted" title="messageDeleted"></a>
-	<h3 class="subsubtitle method-title">messageDeleted</h3>
+	<a name="//api/name/loiteringSeconds" title="loiteringSeconds"></a>
+	<h3 class="subsubtitle method-title">loiteringSeconds</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Whether or not the message was marked deleted. This applies to CloudPage messages only.</p>
+		<p>The number of seconds the user must stand near an iBeacon before the message is displayed. This is treated as an offset in scheduling the UILocalNotification, which will be cancelled if the user walks away too early.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, getter=isMessageDeleted, readonly) BOOL messageDeleted</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger loiteringSeconds</code></div>
 
     
 	
@@ -783,7 +926,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Whether or not the message was marked deleted. This applies to CloudPage messages only.</p>
+		<p>The number of seconds the user must stand near an iBeacon before the message is displayed. This is treated as an offset in scheduling the UILocalNotification, which will be cancelled if the user walks away too early.</p>
 	</div>
 	
 	
@@ -807,7 +950,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Unique identifier for a message. This originates from ExactTarget and will match Message ID on the server.</p>
+		<p>Encoded ID from ExactTarget. Will match the ID in MobilePush. This is the primary key.</p>
 	</div>		
 	
     
@@ -824,7 +967,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Unique identifier for a message. This originates from ExactTarget and will match Message ID on the server.</p>
+		<p>Encoded ID from ExactTarget. Will match the ID in MobilePush. This is the primary key.</p>
 	</div>
 	
 	
@@ -848,7 +991,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The total number of times a message should be shown.</p>
+		<p>The total number of times, ever, that a message will show on a device.</p>
 	</div>		
 	
     
@@ -865,7 +1008,48 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The total number of times a message should be shown.</p>
+		<p>The total number of times, ever, that a message will show on a device.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageName" title="messageName"></a>
+	<h3 class="subsubtitle method-title">messageName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This is the name which is set on ExactTargetMarketingCloud, while setting the ETMessage</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *messageName</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is the name which is set on ExactTargetMarketingCloud, while setting the ETMessage</p>
 	</div>
 	
 	
@@ -889,7 +1073,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>  Identifies this type of message more specifically. See the <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> enumeration for types.</p>
+		<p>The type of ETMessage being represented.</p>
 	</div>		
 	
     
@@ -906,7 +1090,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>  Identifies this type of message more specifically. See the <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> enumeration for types.</p>
+		<p>The type of ETMessage being represented.</p>
 	</div>
 	
 	
@@ -930,7 +1114,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The number of times per one period that a message should show. ET default is 1.</p>
+		<p>The total number of times for a given number of time units that a message can be shown. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;1&rdquo; part.</p>
 	</div>		
 	
     
@@ -947,7 +1131,91 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The number of times per one period that a message should show. ET default is 1.</p>
+		<p>The total number of times for a given number of time units that a message can be shown. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;1&rdquo; part.</p>
+
+<p>This defaults to 1 if it is not set in the received payload from ExactTarget.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/minTripped" title="minTripped"></a>
+	<h3 class="subsubtitle method-title">minTripped</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of times an ETRegion must be tripped before the message shows. This is not currently used, and is a placeholder for future functionality.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *minTripped</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The number of times an ETRegion must be tripped before the message shows. This is not currently used, and is a placeholder for future functionality.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/notification" title="notification"></a>
+	<h3 class="subsubtitle method-title">notification</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A reference to the UILocalNotification triggered for this message. It is used later to cancel the message if need be.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UILocalNotification *notification</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A reference to the UILocalNotification triggered for this message. It is used later to cancel the message if need be.</p>
 	</div>
 	
 	
@@ -971,7 +1239,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The number of time units that a message should wait between fires.</p>
+		<p>The number of time periods in which a message should be limited. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;2&rdquo; part.</p>
 	</div>		
 	
     
@@ -988,7 +1256,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The number of time units that a message should wait between fires.</p>
+		<p>The number of time periods in which a message should be limited. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;2&rdquo; part.</p>
 	</div>
 	
 	
@@ -1012,7 +1280,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The OpenDirect payload specified at message activiation time. This will ultimately be passed to the OpenDirect delegate if set, or will open a webpage if not.</p>
+		<p>OpenDirect payload for this message, if there is one.</p>
 	</div>		
 	
     
@@ -1029,7 +1297,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The OpenDirect payload specified at message activiation time. This will ultimately be passed to the OpenDirect delegate if set, or will open a webpage if not.</p>
+		<p>OpenDirect payload for this message, if there is one.</p>
 	</div>
 	
 	
@@ -1053,7 +1321,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The type of time unit that describes <a href="#//api/name/numberOfPeriods">numberOfPeriods</a>.</p>
+		<p>The time unit counted in <a href="#//api/name/numberOfPeriods">numberOfPeriods</a>. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;hours&rdquo; part.</p>
 	</div>		
 	
     
@@ -1070,7 +1338,48 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The type of time unit that describes <a href="#//api/name/numberOfPeriods">numberOfPeriods</a>.</p>
+		<p>The time unit counted in <a href="#//api/name/numberOfPeriods">numberOfPeriods</a>. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;hours&rdquo; part.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/proximity" title="proximity"></a>
+	<h3 class="subsubtitle method-title">proximity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>For iBeacon messages, the proximity the user must arrive in before the message is fired. It is treated as a &ldquo;less than&rdquo; value, meaning if the message is set to Far, the message can be shown in Far, Near or Immediate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CLProximity proximity</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For iBeacon messages, the proximity the user must arrive in before the message is fired. It is treated as a &ldquo;less than&rdquo; value, meaning if the message is set to Far, the message can be shown in Far, Near or Immediate.</p>
 	</div>
 	
 	
@@ -1094,7 +1403,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Whether or not the message has been marked read. This applies to CloudPages.</p>
+		<p>Whether or not the message has been read. This must be set through <a href="#//api/name/markAsRead">markAsRead</a> by the developer.</p>
 	</div>		
 	
     
@@ -1111,7 +1420,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Whether or not the message has been marked read. This applies to CloudPages.</p>
+		<p>Whether or not the message has been read. This must be set through <a href="#//api/name/markAsRead">markAsRead</a> by the developer.</p>
 	</div>
 	
 	
@@ -1135,12 +1444,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A remnant of when messages to fences were one to one. This can be disregarded.</p>
+		<p>DEPRECTED. The related ETRegion for this message. This is a remnant of days when the relationship was one to one. It is not anymore.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) Region *relatedFence</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ETRegion *relatedFence</code></div>
 
     
 	
@@ -1152,7 +1461,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>A remnant of when messages to fences were one to one. This can be disregarded.</p>
+		<p>DEPRECTED. The related ETRegion for this message. This is a remnant of days when the relationship was one to one. It is not anymore.</p>
 	</div>
 	
 	
@@ -1176,7 +1485,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Whether or not the period is rolling. What this means is whether or not the next period starts at a zero unit for the next window, or just add the number of units * period type.</p>
+		<p>Whether or not the period is a rolling period. Defaults to YES through code.</p>
 	</div>		
 	
     
@@ -1193,9 +1502,9 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Whether or not the period is rolling. What this means is whether or not the next period starts at a zero unit for the next window, or just add the number of units * period type.</p>
+		<p>Whether or not the period is a rolling period. Defaults to YES through code.</p>
 
-<p>For example, consider a message that should show once per one hour, and that message fires at 11:53am. If the period is rolling, the next earliest time it can fire is 12:53pm. If it is <em>not</em> rolling, it can fire again at 12:00pm, because that is the start of a new hour.</p>
+<p>Consider a message being fired at 2:19PM, and it may only be shown once per hour. In a rolling period, the next time it may show is 3:19PM. In a non-rolling period, the next earliest showing time is 3:00PM, the start of the next hour.</p>
 	</div>
 	
 	
@@ -1219,7 +1528,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Used by CloudPages, this is the unique ID of the site associated to the message. May be null.</p>
+		<p>The Site ID for the CloudPage attached to this message.</p>
 	</div>		
 	
     
@@ -1236,7 +1545,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Used by CloudPages, this is the unique ID of the site associated to the message. May be null.</p>
+		<p>The Site ID for the CloudPage attached to this message.</p>
 	</div>
 	
 	
@@ -1260,7 +1569,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A string of the CloudPage URL. May be null if this isn&rsquo;t an Enhanced Push message.</p>
+		<p>The Site URL for the ClouePage attached to this message. It is saved as an NSString and converted later to NSURL.</p>
 	</div>		
 	
     
@@ -1277,7 +1586,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>A string of the CloudPage URL. May be null if this isn&rsquo;t an Enhanced Push message.</p>
+		<p>The Site URL for the ClouePage attached to this message. It is saved as an NSString and converted later to NSURL.</p>
 	</div>
 	
 	
@@ -1301,7 +1610,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The name of the sound to play on <a href="#//api/name/alert">alert</a>. Either nil, &ldquo;default,&rdquo; &ldquo;custom.caf,&rdquo; or something custom and unsupported by the MobilePush UI.</p>
+		<p>The sound that should play, if any. Most of the time, either &ldquo;default&rdquo; or &ldquo;custom.caf&rdquo;, conventions enforced in MobilePush.</p>
 	</div>		
 	
     
@@ -1318,7 +1627,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The name of the sound to play on <a href="#//api/name/alert">alert</a>. Either nil, &ldquo;default,&rdquo; &ldquo;custom.caf,&rdquo; or something custom and unsupported by the MobilePush UI.</p>
+		<p>The sound that should play, if any. Most of the time, either &ldquo;default&rdquo; or &ldquo;custom.caf&rdquo;, conventions enforced in MobilePush.</p>
 	</div>
 	
 	
@@ -1342,7 +1651,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The effective scheduling date for a message.</p>
+		<p>The message&rsquo;s start date. Messages shouldn&rsquo;t show before this time.</p>
 	</div>		
 	
     
@@ -1359,7 +1668,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The effective scheduling date for a message.</p>
+		<p>The message&rsquo;s start date. Messages shouldn&rsquo;t show before this time.</p>
 	</div>
 	
 	
@@ -1391,7 +1700,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a specific message (or nil) got a given identifier. The Identifier is the ET Message ID.</p>
+		<p>Gets a specific ETMessage for a given identifer.</p>
 	</div>		
 	
     
@@ -1404,8 +1713,8 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>identifier</em></dt>
-			<dd><p>A string Message ID from ET</p></dd>
+			<dt><em>The</em></dt>
+			<dd><p>Message ID to retrieve</p></dd>
 		</dl>
 		
 	</div>
@@ -1414,7 +1723,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An ETMessage generated.</p>
+		<p>The ETMessage, or nil if not found in the database.</p>
 	</div>
 	
 	
@@ -1423,7 +1732,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns a specific message (or nil) got a given identifier. The Identifier is the ET Message ID.</p>
+		<p>Gets a specific ETMessage for a given identifer.</p>
 	</div>
 	
 	
@@ -1447,7 +1756,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Return all messages by specific content type.</p>
+		<p>Gets all <a href="#//api/name/active">active</a> messages for a specific <a href="#//api/name/contentType">contentType</a>, usually Cloud Pages.</p>
 	</div>		
 	
     
@@ -1456,21 +1765,11 @@
 
     
 	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>contentType</em></dt>
-			<dd><p>The <a href="../Constants/MobilePushContentType.html">MobilePushContentType</a> that you would like messages for.</p></dd>
-		</dl>
-		
-	</div>
-	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An array of ETMessages that have the content type you asked for.</p>
+		<p>An NSArray of ETMessages</p>
 	</div>
 	
 	
@@ -1479,7 +1778,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Return all messages by specific content type.</p>
+		<p>Gets all <a href="#//api/name/active">active</a> messages for a specific <a href="#//api/name/contentType">contentType</a>, usually Cloud Pages.</p>
 	</div>
 	
 	
@@ -1503,7 +1802,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns messages by message type. A message type can be standard push, loc entry or exit, or proximity.</p>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages for a specific message type, like Fence Entry, Exit or Proximity.</p>
 	</div>		
 	
     
@@ -1517,7 +1816,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>type</em></dt>
-			<dd><p>The <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> you would like messages for.</p></dd>
+			<dd><p>The <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> you&rsquo;d like back</p></dd>
 		</dl>
 		
 	</div>
@@ -1526,7 +1825,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An array of ETMessages that meet that criteria.</p>
+		<p>An array of ETMessages.</p>
 	</div>
 	
 	
@@ -1535,7 +1834,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns messages by message type. A message type can be standard push, loc entry or exit, or proximity.</p>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages for a specific message type, like Fence Entry, Exit or Proximity.</p>
 	</div>
 	
 	
@@ -1559,16 +1858,31 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns all messages for a specific region.</p>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages tied to a specific ETRegion (Geofence).</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSArray *)getMessagesForGeofence:(Region *)<em>fence</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)getMessagesForGeofence:(ETRegion *)<em>fence</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fence</em></dt>
+			<dd><p>The ETRegion for which you would like messages</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSArray of ETMessages</p>
+	</div>
 	
 	
 	
@@ -1576,7 +1890,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns all messages for a specific region.</p>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages tied to a specific ETRegion (Geofence).</p>
 	</div>
 	
 	
@@ -1600,16 +1914,36 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns all messages for a specific region of a specific kind (like, loc entry or exit).</p>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages tied to a specific ETRegion (Geofence) and <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a>, like Entry ot Exit.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSArray *)getMessagesForGeofence:(Region *)<em>fence</em> andMessageType:(MobilePushMessageType)<em>type</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)getMessagesForGeofence:(ETRegion *)<em>fence</em> andMessageType:(MobilePushMessageType)<em>type</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fence</em></dt>
+			<dd><p>The ETRegion for which you would like messages</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> that describes the messages you want</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSArray of ETMessages that meet the criteria asked for.</p>
+	</div>
 	
 	
 	
@@ -1617,7 +1951,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns all messages for a specific region of a specific kind (like, loc entry or exit).</p>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages tied to a specific ETRegion (Geofence) and <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a>, like Entry ot Exit.</p>
 	</div>
 	
 	
@@ -1641,7 +1975,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Triggers a message request from ExactTarget&rsquo;s servers. Please do not call this one.</p>
+		<p>Triggeres a data pull from ExactTarget for messages that meet the supplied requirements.</p>
 	</div>		
 	
     
@@ -1650,7 +1984,27 @@
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageType</em></dt>
+			<dd><p>The Message Type you wish to retrieve</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>contentType</em></dt>
+			<dd><p>The Content Type you wish to retrieve</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value, but has delegate callbacks.</p>
+	</div>
 	
 	
 	
@@ -1658,7 +2012,63 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Triggers a message request from ExactTarget&rsquo;s servers. Please do not call this one.</p>
+		<p>Triggeres a data pull from ExactTarget for messages that meet the supplied requirements.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getProximityMessagesForRegion:" title="getProximityMessagesForRegion:"></a>
+	<h3 class="subsubtitle method-title">getProximityMessagesForRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages for a specific ETRegion (Proximity).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)getProximityMessagesForRegion:(ETRegion *)<em>region</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The ETRegion for which you would like messages</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSArray of ETMessages</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages for a specific ETRegion (Proximity).</p>
 	</div>
 	
 	
@@ -1682,7 +2092,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Invalidates all messages in the cache for a speecific message type.</p>
+		<p>Marks all messages for a given type as in<a href="#//api/name/active">active</a>. This is done prior to processing new messages just received from ExactTarget.</p>
 	</div>		
 	
     
@@ -1696,7 +2106,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>type</em></dt>
-			<dd><p>The type of message to invalidate.</p></dd>
+			<dd><p>The <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> you wish to invalidate</p></dd>
 		</dl>
 		
 	</div>
@@ -1705,7 +2115,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Successfulness of the request.</p>
+		<p>T/F if the invalidation query worked</p>
 	</div>
 	
 	
@@ -1714,7 +2124,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Invalidates all messages in the cache for a speecific message type.</p>
+		<p>Marks all messages for a given type as in<a href="#//api/name/active">active</a>. This is done prior to processing new messages just received from ExactTarget.</p>
 	</div>
 	
 	
@@ -1740,13 +2150,105 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/getLastShownDate" title="getLastShownDate"></a>
+	<h3 class="subsubtitle method-title">getLastShownDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Getter for a private value, lastShownDate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDate *)getLastShownDate</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The Last Shown Date, if any.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Getter for a private value, lastShownDate.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getShowCount" title="getShowCount"></a>
+	<h3 class="subsubtitle method-title">getShowCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Getter for a private value, showCount.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)getShowCount</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The show count for this message.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Getter for a private value, showCount.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/initFromDictionary:" title="initFromDictionary:"></a>
 	<h3 class="subsubtitle method-title">initFromDictionary:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>This will return a new, populated ETMessage from a dictionary. Third party developers shouldn&rsquo;t call this method on their own.</p>
+		<p>Creates a new ETMessage with values in the given NSDictionary.</p>
 	</div>		
 	
     
@@ -1755,7 +2257,22 @@
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dict</em></dt>
+			<dd><p>A dictionary of values to apply to the ETMessage</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new ETMessage</p>
+	</div>
 	
 	
 	
@@ -1763,7 +2280,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This will return a new, populated ETMessage from a dictionary. Third party developers shouldn&rsquo;t call this method on their own.</p>
+		<p>Creates a new ETMessage with values in the given NSDictionary.</p>
 	</div>
 	
 	
@@ -1787,16 +2304,36 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Designated initializer. Returns a new ETMessage for a specific fence fromm a dictionary.</p>
+		<p>Designated Initializer. Creates a new ETMessage with values from an NSDictionary for a specific ETRegion.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initFromDictionary:(NSDictionary *)<em>dict</em> forFence:(Region *)<em>region</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initFromDictionary:(NSDictionary *)<em>dict</em> forFence:(ETRegion *)<em>region</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dict</em></dt>
+			<dd><p>A dictionary of values to apply to the ETMessage</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The ETRegion that prompted the creation of this ETMessage</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new ETMessage</p>
+	</div>
 	
 	
 	
@@ -1804,7 +2341,63 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Designated initializer. Returns a new ETMessage for a specific fence fromm a dictionary.</p>
+		<p>Designated Initializer. Creates a new ETMessage with values from an NSDictionary for a specific ETRegion.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isEqualToMessage:" title="isEqualToMessage:"></a>
+	<h3 class="subsubtitle method-title">isEqualToMessage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>ETMessage equality. Since object equality won&rsquo;t always work, this compares messageIdentifiers to determine equality.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToMessage:(ETMessage *)<em>message</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>The ETMessage to compare self to</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>T/F if the messages are equal.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>ETMessage equality. Since object equality won&rsquo;t always work, this compares messageIdentifiers to determine equality.</p>
 	</div>
 	
 	
@@ -1828,7 +2421,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Marks a message as deleted. There is no coming back from this.</p>
+		<p>Marks a message as deleted. They will not be returned after this, and it&rsquo;s irreversable.</p>
 	</div>		
 	
     
@@ -1845,7 +2438,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Marks a message as deleted. There is no coming back from this.</p>
+		<p>Marks a message as deleted. They will not be returned after this, and it&rsquo;s irreversable.</p>
 	</div>
 	
 	
@@ -2033,7 +2626,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>This is an overridden accessor for subject to handle some business logic around what to show. Use this for display in an inbox.</p>
+		<p>This is an overridden accessor for subj ect to handle some business logic around what to show. Use this for display in an inbox.</p>
 	</div>		
 	
     
@@ -2050,7 +2643,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This is an overridden accessor for subject to handle some business logic around what to show. Use this for display in an inbox.</p>
+		<p>This is an overridden accessor for subj ect to handle some business logic around what to show. Use this for display in an inbox.</p>
 	</div>
 	
 	
@@ -2082,7 +2675,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ExactTarget, a saleforce.com Company. All rights reserved. (Last updated: 2014-07-21)</span><br />
+						<p><span class="copyright">&copy; 2014 ExactTarget, a salesforce.com Company. All rights reserved. (Last updated: 2014-08-22)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						

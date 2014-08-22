@@ -1,3 +1,33 @@
+/**
+ * Copyright (c) 2014 ExactTarget, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ * list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation and/or
+ * other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 //
 //  PUDConstants.m
 //  PushDemo
@@ -41,8 +71,7 @@ NSString *const kPUDInfoOpenDirectDelegate = @"k_OPENDIRECT_DELEGATE";
 NSString *const kPUDInfoLocationEnabled = @"k_LOCATION_ENABLED";
 NSString *const kPUDInfoAttributeFirstName = @"k_ATTR_FIRST";
 NSString *const kPUDInfoAttributeLastName = @"k_ATTR_LAST";
-NSString *const kPUDInfoAttributeNFLTeamTags = @"k_NFL_TEAM_TAGS";
-NSString *const kPUDInfoAttributeFCTeamTags = @"k_FC_TEAM_TAGS";
+NSString *const kPUDInfoAttributeActivityTags = @"k_ACTIVITY_TAGS";
 
 #pragma mark - Message Detail Table View
 
@@ -128,8 +157,7 @@ NSString *const kPUDSeguePushReceivedToDiscount = @"seg_pushReceivedToDiscount";
 
 #pragma mark - Settings Table View
 NSUInteger const kPUDSettingsPersonalInformationSectionIndex = 0;
-NSUInteger const kPUDSettingsFootballSectionIndex = 1;
-NSUInteger const kPUDSettingsSoccerSectionIndex = 2;
+NSUInteger const kPUDSettingsActivitySectionIndex = 1;
 
 #pragma mark - Storyboard Identifiers
 NSString *const kPUDStoryboardIdentifierPushReceivedTableViewController = @"sb_pushReceivedTableViewController";
@@ -139,16 +167,11 @@ NSString *const kPUDStoryboardIdentifierDiscountCodeViewController = @"sb_discou
 NSString *const kPUDStoryboardMain = @"Main";
 
 #pragma mark - Tags
-NSString *const kPUDTagCowboys = @"Cowboys";
-NSString *const kPUDTagPackers = @"Packers";
-NSString *const kPUDTagGiants = @"Giants";
-NSString *const kPUDTagSteelers = @"Steelers";
-NSString *const kPUDTagColts = @"Colts";
-NSString *const kPUDTagArsenal = @"Arsenal";
-NSString *const kPUDTagChelsea = @"Chelsea";
-NSString *const kPUDTagManu = @"Manu";
-NSString *const kPUDTagMadrid = @"Madrid";
-NSString *const kPUDTagFcbarc = @"Fcbarc";
+NSString *const kPUDTagCampingGear = @"Camping Gear";
+NSString *const kPUDTagHikingSupplies= @"Hiking Supplies";
+NSString *const kPUDTagBoatingGear = @"Boating Gear";
+NSString *const kPUDTagFishingSupplies = @"Fishing Supplies";
+NSString *const kPUDTagHuntingGear = @"Hunting Gear";
 
 #pragma mark - User Defaults
 NSString *const kPUDUserDefaultsFirstName = @"ud_firstName";
@@ -157,3 +180,22 @@ NSString *const kPUDUserDefaultsLastPushReceivedDate = @"ud_lastPushReceivedDate
 NSString *const kPUDUserDefaultsPushUserInfo = @"ud_pushUserInfo";
 NSString *const kPUDUserDefaultsMessageType = @"ud_messageType";
 NSString *const kPUDUserDefaultsAlertText = @"ud_alertText";
+
+#pragma mark - Configs UserDefaults
+NSString *const kPUDUserDefaultsConfigName = @"ud_configName";
+NSString *const kPUDUserDefaultsAppID = @"ud_appId";
+NSString *const kPUDUserDefaultsAccessToken = @"ud_accessToken";
+NSString *const kPUDUserDefaultsClientID = @"ud_clientId";
+NSString *const kPUDUserDefaultsClientSecret = @"ud_clientSecret";
+NSString *const kPUDUserDefaultsMessageIDVanilla = @"ud_standardMessageId";
+NSString *const kPUDUserDefaultsMessageIDCloudPage = @"ud_CloudpageMessageId";
+NSString *const kPUDUserDefaultsRestUrl = @"ud_RestUrl";
+
+#pragma mark - Configs Table View
+NSUInteger const kPUDConfigsDefaultIndex = 0;
+NSUInteger const kPUDConfigsCustomIndex = 1;
+
+#pragma mark - Notifications
+NSString *const kPUDPreferencesChanged =  @"PreferencesChanged";
+
+

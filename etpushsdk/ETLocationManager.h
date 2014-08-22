@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "LocationUpdate.h"
+#import "ETLocationUpdate.h"
 #import "ETMessage.h"
-#import "Geofence.h"
 
 /**
  ETLocationManager is the main interface to ExactTarget's Location Services. In the way that ETPush manages the push notification cycle, ETLocationMangaer manages geo services. It will use some of the information from ETPush (namely, App ID and Access Token) to function, but is an independent piece of functionality. 
@@ -28,12 +27,16 @@
 
 }
 
+/**
+ Keeps track of if we are currently in the middle of updating Geofences. That should only work one at a time.
+ */
 @property (nonatomic, getter = isUpdatingGeofences) BOOL updatingGeofences;
     
 /**
  Returns a reference to the shared loc manager.
  */
 +(ETLocationManager *)locationManager;
+
 -(id)init;
    
 /**
@@ -49,7 +52,7 @@
 /** 
  Use this method to disable Location Services through the MobilePush SDK.
  */
--(void)stopWathingLocation;
+-(void)stopWatchingLocation;
 
 /**
  Calls various handlers that should fire when the app enters the foreground. 
@@ -67,10 +70,40 @@
 
 
 /* Location */
+/**
+ Takes in an NSSet of fences that should be monitored.
+ @param fences The set to monitor. 
+ */
 -(void)monitorRegions:(NSSet *)fences;
+
+/**
+ Instructs the CLLocationManager to stop monitoring all regions. 
+ */
 -(void)stopMonitoringRegions;
--(void)getAndScheduleAlertsForRegion:(NSString *)regionIdentifier andMessageType:(MobilePushMessageType)type;
+
+/**
+ Retrieves the messages for a given ETRegion and MobilePushMessageType and schedules any messages returned for display. 
+ @param region The ETRegion that prompted this action
+ @param type The MobilePushMessageType of event that prompted this action.
+ */
+-(void)getAndScheduleAlertsForRegion:(ETRegion *)region andMessageType:(MobilePushMessageType)type;
+
+/**
+ Returns the currently monitored regions. 
+ @return An NSSet of monitored regions.
+ */
 -(NSSet *)monitoredRegions;
+
+/**
+ A dictionary version of the Last Known Location. The dictionary will contain two keys, latitude and longitude, which are NSNumber wrappers around doubles. Use doubleValue to retrieve.
+ */
 -(NSDictionary *)lastKnownLocation;
+
+/* For Tests */
+/**
+ Returns if we are currently watching location. 
+ @return T/F if locations are being watched.
+ */
+- (BOOL) getWatchingLocation;
  
 @end

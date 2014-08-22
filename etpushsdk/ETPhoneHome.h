@@ -8,10 +8,9 @@
 //  This object themed intentionally. 
 
 #import <UIKit/UIKit.h>
-#import "GenericUpdate.h"
+#import "ETGenericUpdate.h"
 
 #define BaseRequestURL @"https://consumer.exacttargetapis.com"
-//#define BaseRequestURL @"http://postcatcher.10.25.244.142.xip.io"
 
 /**
  ETPhoneHome is like a highway management system, governing the sending of data to and from ExactTarget, and caching that which can't get sent home. It works by marshalling around GenericUpdate object subclasses, which themselves create a common pattern for handling business. 
@@ -34,7 +33,13 @@
  
  @return bool Whether or not it was able to send to ET. 
  */
--(BOOL)phoneHome:(GenericUpdate *)updateObject;
+-(BOOL)phoneHome:(ETGenericUpdate *)updateObject;
+
+/**
+ Begins the process of sending data back to ExactTarget, but does so for bulk data. This is different than phoneHome: because it will send an array of things, and not just one object. 
+ 
+ */
+-(BOOL)phoneHomeInBulkForGenericUpdateType:(Class)updateClass;
 
 /**
  Saves the udpate object to the database in the event of a send failure. It is exposed in the header because some objects just need to be saved instead of sent. This method should not be used publicly. 
@@ -43,7 +48,7 @@
  
  @return bool Whether or not the save succeeded. Sometimes they don't. 
  */
--(BOOL)saveToDatabaseInstead:(GenericUpdate *)updateObject;
+-(BOOL)saveToDatabaseInstead:(ETGenericUpdate *)updateObject;
 
 
 /**
@@ -51,6 +56,9 @@
  */
 -(void)checkForAndSendBackCachedData;
 
--(int)numberOfActiveConnections;
+/**
+ For ETPhoneHome_Tests
+ */
+- (int) getNumberOfActiveConnections;
 
 @end

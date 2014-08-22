@@ -1,3 +1,33 @@
+/**
+ * Copyright (c) 2014 ExactTarget, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ * list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation and/or
+ * other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 //
 //  PUDUtility.m
 //  PublicDemo
@@ -248,97 +278,45 @@
     return lastName;
 }
 
-+ (NSString *)activeNFLTags {
++ (NSString *)activeActivityTags {
     NSString *tags = @"";
     
     NSSet *allTags = [[ETPush pushManager] allTags];
     
-    if ([allTags containsObject:kPUDTagCowboys.lowercaseString]) {
-        tags = [tags stringByAppendingString:@"Dallas Cowboys"];
+    if ([allTags containsObject:kPUDTagCampingGear.lowercaseString]) {
+        tags = [tags stringByAppendingString:@"Camping Gear"];
     }
     
-    if ([allTags containsObject:kPUDTagPackers.lowercaseString]) {
+    if ([allTags containsObject:kPUDTagHikingSupplies.lowercaseString]) {
         if (tags.length > 0) {
             tags = [tags stringByAppendingString:@", "];
         }
         
-        tags = [tags stringByAppendingString:@"Green Bay Packers"];
+        tags = [tags stringByAppendingString:@"Hiking Supplies"];
     }
     
-    if ([allTags containsObject:kPUDTagGiants.lowercaseString]) {
+    if ([allTags containsObject:kPUDTagBoatingGear.lowercaseString]) {
         if (tags.length > 0) {
             tags = [tags stringByAppendingString:@", "];
         }
         
-        tags = [tags stringByAppendingString:@"New York Giants"];
+        tags = [tags stringByAppendingString:@"Boating Gear"];
     }
     
-    if ([allTags containsObject:kPUDTagSteelers.lowercaseString]) {
+    if ([allTags containsObject:kPUDTagFishingSupplies.lowercaseString]) {
         if (tags.length > 0) {
             tags = [tags stringByAppendingString:@", "];
         }
         
-        tags = [tags stringByAppendingString:@"Pittsburgh Steelers"];
+        tags = [tags stringByAppendingString:@"Fishing Supplies"];
     }
     
-    if ([allTags containsObject:kPUDTagColts.lowercaseString]) {
+    if ([allTags containsObject:kPUDTagHuntingGear.lowercaseString]) {
         if (tags.length > 0) {
             tags = [tags stringByAppendingString:@", "];
         }
         
-        tags = [tags stringByAppendingString:@"Indianapolis Colts"];
-    }
-    
-    if ([tags isEqualToString:@""]) {
-        tags = nil;
-    }
-    
-    return tags;
-}
-
-+ (NSString *)activeFCTags {
-    NSString *tags = @"";
-    
-    NSSet *allTags = [[ETPush pushManager] allTags];
-    
-    if ([allTags containsObject:kPUDTagArsenal.lowercaseString]) {
-        if (tags.length > 0) {
-            tags = [tags stringByAppendingString:@", "];
-        }
-        
-        tags = [tags stringByAppendingString:@"Arsenal FC"];
-    }
-    
-    if ([allTags containsObject:kPUDTagChelsea.lowercaseString]) {
-        if (tags.length > 0) {
-            tags = [tags stringByAppendingString:@", "];
-        }
-        
-        tags = [tags stringByAppendingString:@"Chelsea FC"];
-    }
-    
-    if ([allTags containsObject:kPUDTagManu.lowercaseString]) {
-        if (tags.length > 0) {
-            tags = [tags stringByAppendingString:@", "];
-        }
-        
-        tags = [tags stringByAppendingString:@"Manchester United FC"];
-    }
-    
-    if ([allTags containsObject:kPUDTagMadrid.lowercaseString]) {
-        if (tags.length > 0) {
-            tags = [tags stringByAppendingString:@", "];
-        }
-        
-        tags = [tags stringByAppendingString:@"Real Madrid FC"];
-    }
-    
-    if ([allTags containsObject:kPUDTagFcbarc.lowercaseString]) {
-        if (tags.length > 0) {
-            tags = [tags stringByAppendingString:@", "];
-        }
-        
-        tags = [tags stringByAppendingString:@"FC Barecelona"];
+        tags = [tags stringByAppendingString:@"Hunting Gear"];
     }
     
     if ([tags isEqualToString:@""]) {

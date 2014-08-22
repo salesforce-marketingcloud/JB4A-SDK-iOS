@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D91051919A7CE760078A715 /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */; };
+		3D91051A19A7CE760078A715 /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */; };
+		3D91051B19A7CE760078A715 /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */; };
+		3D91053019A7D4030078A715 /* libetpushsdk-3.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D91052E19A7D4030078A715 /* libetpushsdk-3.3.0.a */; };
+		3D91053119A7D4030078A715 /* libetpushsdk-3.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D91052E19A7D4030078A715 /* libetpushsdk-3.3.0.a */; };
+		3D91053219A7D4030078A715 /* libetpushsdk-3.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D91052E19A7D4030078A715 /* libetpushsdk-3.3.0.a */; };
 		4D2180D819490A5C004F6095 /* PUDPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180D719490A5C004F6095 /* PUDPageContentViewController.m */; };
 		4D2180DB194A9D37004F6095 /* PUDSendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180DA194A9D37004F6095 /* PUDSendMessageViewController.m */; };
 		4D2180E2194B7B87004F6095 /* PUDAbstractPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180E1194B7B87004F6095 /* PUDAbstractPageViewController.m */; };
@@ -68,9 +74,6 @@
 		4DD373EA19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */; };
 		4DD373EB19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */; };
 		4DD373EC19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */; };
-		4DDDC86F197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */; };
-		4DDDC870197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */; };
-		4DDDC871197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */; };
 		4DEB0ADF195DC22900790CEF /* PUDAppSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */; };
 		4DEB0AE2195DE31600790CEF /* PUDServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546A19183F820040A1CC /* PUDServiceProvider.m */; };
 		4DEB0AE3195DE31600790CEF /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231919377AA5007B1464 /* AFNetworkReachabilityManager.m */; };
@@ -190,6 +193,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D91051719A7CE760078A715 /* PUDBeaconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDBeaconsViewController.h; sourceTree = "<group>"; };
+		3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDBeaconsViewController.m; sourceTree = "<group>"; };
+		3D91051C19A7D4030078A715 /* ETBulkUpdateShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBulkUpdateShim.h; sourceTree = "<group>"; };
+		3D91051D19A7D4030078A715 /* ETEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEvent.h; sourceTree = "<group>"; };
+		3D91051E19A7D4030078A715 /* ETFenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFenceMessage.h; sourceTree = "<group>"; };
+		3D91051F19A7D4030078A715 /* ETGenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETGenericUpdate.h; sourceTree = "<group>"; };
+		3D91052019A7D4030078A715 /* ETKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETKeyValueStore.h; sourceTree = "<group>"; };
+		3D91052119A7D4030078A715 /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLandingPagePresenter.h; sourceTree = "<group>"; };
+		3D91052219A7D4030078A715 /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationManager.h; sourceTree = "<group>"; };
+		3D91052319A7D4030078A715 /* ETLocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationUpdate.h; sourceTree = "<group>"; };
+		3D91052419A7D4030078A715 /* ETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMessage.h; sourceTree = "<group>"; };
+		3D91052519A7D4030078A715 /* ETPhoneHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPhoneHome.h; sourceTree = "<group>"; };
+		3D91052619A7D4030078A715 /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
+		3D91052719A7D4030078A715 /* ETRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegion.h; sourceTree = "<group>"; };
+		3D91052819A7D4030078A715 /* ETRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegistration.h; sourceTree = "<group>"; };
+		3D91052919A7D4030078A715 /* ETSqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETSqliteHelper.h; sourceTree = "<group>"; };
+		3D91052A19A7D4030078A715 /* ETStatsUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETStatsUpdate.h; sourceTree = "<group>"; };
+		3D91052B19A7D4030078A715 /* ETTestsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTestsHelper.h; sourceTree = "<group>"; };
+		3D91052C19A7D4030078A715 /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETURLConnection.h; sourceTree = "<group>"; };
+		3D91052D19A7D4030078A715 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
+		3D91052E19A7D4030078A715 /* libetpushsdk-3.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libetpushsdk-3.3.0.a"; sourceTree = "<group>"; };
+		3D91052F19A7D4030078A715 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
 		4D120ED31957D35700571FB6 /* PublicDemo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PublicDemo copy-Info.plist"; path = "/Users/mlathrop/Repos/PublicDemo-iOS/PublicDemo copy-Info.plist"; sourceTree = "<absolute>"; };
 		4D2180D619490A5C004F6095 /* PUDPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDPageContentViewController.h; sourceTree = "<group>"; };
 		4D2180D719490A5C004F6095 /* PUDPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDPageContentViewController.m; sourceTree = "<group>"; };
@@ -240,7 +265,6 @@
 		4D57232319377AA5007B1464 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		4D57232519377AA5007B1464 /* UIColor+ExactTargetColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ExactTargetColors.h"; sourceTree = "<group>"; };
 		4D57232619377AA5007B1464 /* UIColor+ExactTargetColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ExactTargetColors.m"; sourceTree = "<group>"; };
-		4D57232819377AA5007B1464 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4D57232A19377AA5007B1464 /* JDStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarNotification.h; sourceTree = "<group>"; };
 		4D57232B19377AA5007B1464 /* JDStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarNotification.m; sourceTree = "<group>"; };
 		4D57232C19377AA5007B1464 /* JDStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarStyle.h; sourceTree = "<group>"; };
@@ -294,24 +318,6 @@
 		4DCFB9391922842300BF96BB /* custom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = custom.caf; sourceTree = "<group>"; };
 		4DD373E819632DCF0005E6FF /* PUDCloudPageInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDCloudPageInboxViewController.h; sourceTree = "<group>"; };
 		4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDCloudPageInboxViewController.m; sourceTree = "<group>"; };
-		4DDDC85D197D8E9C009542E9 /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLandingPagePresenter.h; path = ../../../../etpushsdk/ETLandingPagePresenter.h; sourceTree = "<group>"; };
-		4DDDC85E197D8E9C009542E9 /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETLocationManager.h; path = ../../../../etpushsdk/ETLocationManager.h; sourceTree = "<group>"; };
-		4DDDC85F197D8E9C009542E9 /* ETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETMessage.h; path = ../../../../etpushsdk/ETMessage.h; sourceTree = "<group>"; };
-		4DDDC860197D8E9C009542E9 /* ETPhoneHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETPhoneHome.h; path = ../../../../etpushsdk/ETPhoneHome.h; sourceTree = "<group>"; };
-		4DDDC861197D8E9C009542E9 /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETPush.h; path = ../../../../etpushsdk/ETPush.h; sourceTree = "<group>"; };
-		4DDDC862197D8E9C009542E9 /* ETSqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETSqliteHelper.h; path = ../../../../etpushsdk/ETSqliteHelper.h; sourceTree = "<group>"; };
-		4DDDC863197D8E9C009542E9 /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETURLConnection.h; path = ../../../../etpushsdk/ETURLConnection.h; sourceTree = "<group>"; };
-		4DDDC864197D8E9C009542E9 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactTargetEnhancedPushDataSource.h; path = ../../../../etpushsdk/ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
-		4DDDC865197D8E9C009542E9 /* FenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FenceMessage.h; path = ../../../../etpushsdk/FenceMessage.h; sourceTree = "<group>"; };
-		4DDDC866197D8E9C009542E9 /* GenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericUpdate.h; path = ../../../../etpushsdk/GenericUpdate.h; sourceTree = "<group>"; };
-		4DDDC867197D8E9C009542E9 /* Geofence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Geofence.h; path = ../../../../etpushsdk/Geofence.h; sourceTree = "<group>"; };
-		4DDDC868197D8E9C009542E9 /* KeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueStore.h; path = ../../../../etpushsdk/KeyValueStore.h; sourceTree = "<group>"; };
-		4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libetpushsdk-3.2.0.a"; path = "../../../../etpushsdk/libetpushsdk-3.2.0.a"; sourceTree = "<group>"; };
-		4DDDC86A197D8E9C009542E9 /* LocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationUpdate.h; path = ../../../../etpushsdk/LocationUpdate.h; sourceTree = "<group>"; };
-		4DDDC86B197D8E9C009542E9 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushConstants.h; path = ../../../../etpushsdk/PushConstants.h; sourceTree = "<group>"; };
-		4DDDC86C197D8E9C009542E9 /* Region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Region.h; path = ../../../../etpushsdk/Region.h; sourceTree = "<group>"; };
-		4DDDC86D197D8E9C009542E9 /* Registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Registration.h; path = ../../../../etpushsdk/Registration.h; sourceTree = "<group>"; };
-		4DDDC86E197D8E9C009542E9 /* StatsUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsUpdate.h; path = ../../../../etpushsdk/StatsUpdate.h; sourceTree = "<group>"; };
 		4DEB0ADD195DC22900790CEF /* PUDAppSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PUDAppSettingConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PUDAppSettingConstants.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4DEB0B1C195DE31600790CEF /* PublicDemo-QA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PublicDemo-QA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -330,11 +336,11 @@
 			files = (
 				4DA92C9C196D7F740005BC8E /* QuartzCore.framework in Frameworks */,
 				4D95F14319256984002A5A43 /* MobileCoreServices.framework in Frameworks */,
-				4DDDC86F197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */,
 				4D2DE0321910525900B65B6F /* libsqlite3.dylib in Frameworks */,
 				4D2DDFF7191051BD00B65B6F /* CoreGraphics.framework in Frameworks */,
 				4D2DDFF9191051BD00B65B6F /* UIKit.framework in Frameworks */,
 				4D2DDFF5191051BD00B65B6F /* Foundation.framework in Frameworks */,
+				3D91053019A7D4030078A715 /* libetpushsdk-3.3.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,11 +360,11 @@
 			files = (
 				4DA92C9E196D7F800005BC8E /* QuartzCore.framework in Frameworks */,
 				4DEB0B0D195DE31600790CEF /* MobileCoreServices.framework in Frameworks */,
-				4DDDC871197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */,
 				4DEB0B0E195DE31600790CEF /* libsqlite3.dylib in Frameworks */,
 				4DEB0B0F195DE31600790CEF /* CoreGraphics.framework in Frameworks */,
 				4DEB0B11195DE31600790CEF /* UIKit.framework in Frameworks */,
 				4DEB0B12195DE31600790CEF /* Foundation.framework in Frameworks */,
+				3D91053219A7D4030078A715 /* libetpushsdk-3.3.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,11 +374,11 @@
 			files = (
 				4DA92C9D196D7F7A0005BC8E /* QuartzCore.framework in Frameworks */,
 				7F22BECF1958706000FB6562 /* MobileCoreServices.framework in Frameworks */,
-				4DDDC870197D8E9C009542E9 /* libetpushsdk-3.2.0.a in Frameworks */,
 				7F22BED01958706000FB6562 /* libsqlite3.dylib in Frameworks */,
 				7F22BED11958706000FB6562 /* CoreGraphics.framework in Frameworks */,
 				7F22BED31958706000FB6562 /* UIKit.framework in Frameworks */,
 				7F22BED41958706000FB6562 /* Foundation.framework in Frameworks */,
+				3D91053119A7D4030078A715 /* libetpushsdk-3.3.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +483,8 @@
 				4DC4D6EE192A497900128F29 /* PUDDiscountTableViewController.m */,
 				4D5723571937E19F007B1464 /* PUDHomeViewController.h */,
 				4D5723581937E19F007B1464 /* PUDHomeViewController.m */,
+				3D91051719A7CE760078A715 /* PUDBeaconsViewController.h */,
+				3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */,
 				4DC4D67B1925B5BA00128F29 /* PUDInfoViewController.h */,
 				4DC4D67C1925B5BA00128F29 /* PUDInfoViewController.m */,
 				4D71546019183EE60040A1CC /* PUDMessageComposeTableViewController.h */,
@@ -596,25 +604,26 @@
 		4D57232719377AA5007B1464 /* etpushsdk */ = {
 			isa = PBXGroup;
 			children = (
-				4DDDC85D197D8E9C009542E9 /* ETLandingPagePresenter.h */,
-				4DDDC85E197D8E9C009542E9 /* ETLocationManager.h */,
-				4DDDC85F197D8E9C009542E9 /* ETMessage.h */,
-				4DDDC860197D8E9C009542E9 /* ETPhoneHome.h */,
-				4DDDC861197D8E9C009542E9 /* ETPush.h */,
-				4DDDC862197D8E9C009542E9 /* ETSqliteHelper.h */,
-				4DDDC863197D8E9C009542E9 /* ETURLConnection.h */,
-				4DDDC864197D8E9C009542E9 /* ExactTargetEnhancedPushDataSource.h */,
-				4DDDC865197D8E9C009542E9 /* FenceMessage.h */,
-				4DDDC866197D8E9C009542E9 /* GenericUpdate.h */,
-				4DDDC867197D8E9C009542E9 /* Geofence.h */,
-				4DDDC868197D8E9C009542E9 /* KeyValueStore.h */,
-				4DDDC869197D8E9C009542E9 /* libetpushsdk-3.2.0.a */,
-				4DDDC86A197D8E9C009542E9 /* LocationUpdate.h */,
-				4DDDC86B197D8E9C009542E9 /* PushConstants.h */,
-				4DDDC86C197D8E9C009542E9 /* Region.h */,
-				4DDDC86D197D8E9C009542E9 /* Registration.h */,
-				4DDDC86E197D8E9C009542E9 /* StatsUpdate.h */,
-				4D57232819377AA5007B1464 /* README.md */,
+				3D91051C19A7D4030078A715 /* ETBulkUpdateShim.h */,
+				3D91051D19A7D4030078A715 /* ETEvent.h */,
+				3D91051E19A7D4030078A715 /* ETFenceMessage.h */,
+				3D91051F19A7D4030078A715 /* ETGenericUpdate.h */,
+				3D91052019A7D4030078A715 /* ETKeyValueStore.h */,
+				3D91052119A7D4030078A715 /* ETLandingPagePresenter.h */,
+				3D91052219A7D4030078A715 /* ETLocationManager.h */,
+				3D91052319A7D4030078A715 /* ETLocationUpdate.h */,
+				3D91052419A7D4030078A715 /* ETMessage.h */,
+				3D91052519A7D4030078A715 /* ETPhoneHome.h */,
+				3D91052619A7D4030078A715 /* ETPush.h */,
+				3D91052719A7D4030078A715 /* ETRegion.h */,
+				3D91052819A7D4030078A715 /* ETRegistration.h */,
+				3D91052919A7D4030078A715 /* ETSqliteHelper.h */,
+				3D91052A19A7D4030078A715 /* ETStatsUpdate.h */,
+				3D91052B19A7D4030078A715 /* ETTestsHelper.h */,
+				3D91052C19A7D4030078A715 /* ETURLConnection.h */,
+				3D91052D19A7D4030078A715 /* ExactTargetEnhancedPushDataSource.h */,
+				3D91052E19A7D4030078A715 /* libetpushsdk-3.3.0.a */,
+				3D91052F19A7D4030078A715 /* PushConstants.h */,
 			);
 			name = etpushsdk;
 			path = Libraries/etpushsdk;
@@ -887,6 +896,7 @@
 				4D667BA0191D9BDD0015BC2E /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */,
 				4DC426AC1923ECF3002168F7 /* PUDDataPickerView.m in Sources */,
 				4DEC6D19196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */,
+				3D91051919A7CE760078A715 /* PUDBeaconsViewController.m in Sources */,
 				4DC4D6F2192A4AF700128F29 /* PUDDiscountTableData.m in Sources */,
 				4DCFB93219227BD300BF96BB /* PUDNavigationController.m in Sources */,
 				4D57233A19377AA5007B1464 /* AFURLRequestSerialization.m in Sources */,
@@ -945,6 +955,7 @@
 				4DEB0B03195DE31600790CEF /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */,
 				4DEB0B04195DE31600790CEF /* PUDDataPickerView.m in Sources */,
 				4DEC6D1B196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */,
+				3D91051B19A7CE760078A715 /* PUDBeaconsViewController.m in Sources */,
 				4DEB0B05195DE31600790CEF /* PUDDiscountTableData.m in Sources */,
 				4DEB0B06195DE31600790CEF /* PUDNavigationController.m in Sources */,
 				4DEB0B07195DE31600790CEF /* AFURLRequestSerialization.m in Sources */,
@@ -995,6 +1006,7 @@
 				7F22BEC51958706000FB6562 /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */,
 				7F22BEC61958706000FB6562 /* PUDDataPickerView.m in Sources */,
 				4DEC6D1A196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */,
+				3D91051A19A7CE760078A715 /* PUDBeaconsViewController.m in Sources */,
 				7F22BEC71958706000FB6562 /* PUDDiscountTableData.m in Sources */,
 				7F22BEC81958706000FB6562 /* PUDNavigationController.m in Sources */,
 				7F22BEC91958706000FB6562 /* AFURLRequestSerialization.m in Sources */,
@@ -1124,22 +1136,12 @@
 				BUNDLE_IDENTIFIER = com.exacttarget.internal.PublicDemo;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Lathrop (ND6E2BN7MZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "PublicDemo/PublicDemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PublicDemo",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
-					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk";
 				PRODUCT_NAME = PublicDemo;
 				PROVISIONING_PROFILE = "3888A363-FC2E-4555-964F-971DAF649B60";
 				WRAPPER_EXTENSION = app;
@@ -1155,22 +1157,12 @@
 				BUNDLE_IDENTIFIER = com.exacttarget.publicdemo;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Lathrop (ND6E2BN7MZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "PublicDemo/PublicDemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PublicDemo",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
-					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk";
 				PRODUCT_NAME = PublicDemo;
 				PROVISIONING_PROFILE = "3888A363-FC2E-4555-964F-971DAF649B60";
 				WRAPPER_EXTENSION = app;
@@ -1234,10 +1226,7 @@
 				BUNDLE_IDENTIFIER = com.exacttarget.internal.PublicDemo;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
@@ -1246,10 +1235,7 @@
 				INFOPLIST_FILE = "PublicDemo copy2-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/PublicDemo",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
-					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
 				);
 				PRODUCT_NAME = "PublicDemo-QA";
 				PROVISIONING_PROFILE = "021B58A0-CB10-4A1E-8A1D-C7F8AED51DE6";
@@ -1265,10 +1251,7 @@
 				BUNDLE_DISPLAY_NAME = "QA1S1 - Practice Field";
 				BUNDLE_IDENTIFIER = com.exacttarget.internal.PublicDemo;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ExactTarget, Inc";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
@@ -1277,10 +1260,7 @@
 				INFOPLIST_FILE = "PublicDemo copy2-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/PublicDemo",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
-					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
 				);
 				PRODUCT_NAME = "PublicDemo-QA";
 				PROVISIONING_PROFILE = "021B58A0-CB10-4A1E-8A1D-C7F8AED51DE6";
@@ -1297,23 +1277,13 @@
 				BUNDLE_IDENTIFIER = com.exacttarget.internal.PublicDemo;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PublicDemo-Internal-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PublicDemo",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
-					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk";
 				PRODUCT_NAME = "PublicDemo-Internal";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1329,23 +1299,13 @@
 				BUNDLE_IDENTIFIER = com.exacttarget.publicdemo;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/PublicDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=1";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PublicDemo-Internal-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PublicDemo",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
-					"/Users/mlathrop/Repos/MobilePushSDK-iOS-Staging/etpushsdk",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk";
 				PRODUCT_NAME = "PublicDemo-Internal";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
