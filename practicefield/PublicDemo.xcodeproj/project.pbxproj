@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D3527CD19AD041300A0F519 /* libetpushsdk-3.3.0-IOS8Beta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3527CC19AD041300A0F519 /* libetpushsdk-3.3.0-IOS8Beta.a */; };
 		3D91051919A7CE760078A715 /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */; };
 		3D91051A19A7CE760078A715 /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */; };
 		3D91051B19A7CE760078A715 /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */; };
@@ -193,6 +194,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D3527CA19AD035B00A0F519 /* libetpushsdk-3.3.0-IOS8Beta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libetpushsdk-3.3.0-IOS8Beta.a"; path = "PublicDemo/Libraries/etpushsdk/libetpushsdk-3.3.0-IOS8Beta.a"; sourceTree = "<group>"; };
+		3D3527CC19AD041300A0F519 /* libetpushsdk-3.3.0-IOS8Beta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libetpushsdk-3.3.0-IOS8Beta.a"; sourceTree = "<group>"; };
 		3D91051719A7CE760078A715 /* PUDBeaconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDBeaconsViewController.h; sourceTree = "<group>"; };
 		3D91051819A7CE760078A715 /* PUDBeaconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDBeaconsViewController.m; sourceTree = "<group>"; };
 		3D91051C19A7D4030078A715 /* ETBulkUpdateShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBulkUpdateShim.h; sourceTree = "<group>"; };
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA92C9C196D7F740005BC8E /* QuartzCore.framework in Frameworks */,
+				3D3527CD19AD041300A0F519 /* libetpushsdk-3.3.0-IOS8Beta.a in Frameworks */,
 				4D95F14319256984002A5A43 /* MobileCoreServices.framework in Frameworks */,
 				4D2DE0321910525900B65B6F /* libsqlite3.dylib in Frameworks */,
 				4D2DDFF7191051BD00B65B6F /* CoreGraphics.framework in Frameworks */,
@@ -409,6 +413,7 @@
 		4D2DDFF3191051BD00B65B6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D3527CA19AD035B00A0F519 /* libetpushsdk-3.3.0-IOS8Beta.a */,
 				4DA92C9B196D7F740005BC8E /* QuartzCore.framework */,
 				4D95F14219256984002A5A43 /* MobileCoreServices.framework */,
 				4D2DE0311910525900B65B6F /* libsqlite3.dylib */,
@@ -623,6 +628,7 @@
 				3D91052C19A7D4030078A715 /* ETURLConnection.h */,
 				3D91052D19A7D4030078A715 /* ExactTargetEnhancedPushDataSource.h */,
 				3D91052E19A7D4030078A715 /* libetpushsdk-3.3.0.a */,
+				3D3527CC19AD041300A0F519 /* libetpushsdk-3.3.0-IOS8Beta.a */,
 				3D91052F19A7D4030078A715 /* PushConstants.h */,
 			);
 			name = etpushsdk;

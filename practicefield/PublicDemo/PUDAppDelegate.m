@@ -94,13 +94,13 @@
     /**
      *  The below method has to be implemented ONLY ONCE in the SDK. The below conditions are specifically for this app and you will NOT need multiple/ conditional implementation like this in your own app
      */
-
+    
     [[ETPush pushManager] configureSDKWithAppID:[PUDUtility appID] // The App ID from Code@ExactTarget
                                  andAccessToken:[PUDUtility accessToken] // The Access Token from Code@ExactTarget
                                   withAnalytics:YES // Whether or not you would like to use ExactTarget analytics services
                             andLocationServices:YES  // Whether or not you would like to use location-based alerts
                                   andCloudPages:YES]; // Whether or not you would like to use CloudPages.
-
+    
     /**
      ET_NOTE: The OpenDirect Delegate must be set in order for OpenDirect to work with URL schemes other than http or https. Set this before you call [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
      */
@@ -118,8 +118,45 @@
      UIRemoteNotificationTypeBadge - This flag allows you to update the badge on the app icon
      UIRemoteNotificationTypeSound - This flag allows you to play a sound when the push is received.
      */
-    [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
     
+    /**
+     MODIFICATIONS FOR IOS8.0 */
+    /*
+     Use these for IOS8 instead of UIRemoteNotificationType...
+     UIUserNotificationTypeBadge - This flag allows you to update the badge on the app icon
+     UIUserNotificationTypeSound - This flag allows you to play a sound when the push is received.
+     UIUserNotificationTypeAlert - This flag will ask for permission to show text to the user, in either Banner or an Alert.
+     */
+    // See ETPush.h for reasoning behind this #if logic
+    // IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+    // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+    // are we running on IOS8 and above?
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
+                                                UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert
+                                                                                 categories:nil];
+        [[ETPush pushManager] registerUserNotificationSettings:settings];
+        [[ETPush pushManager] registerForRemoteNotifications];
+    }
+    else {
+        [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+    }
+#else
+    // Supports IOS SDKs < 8.X (i.e. XCode 5.X or less)
+    [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+#endif
+#else
+    // IPHONEOS_DEPLOYMENT_TARGET >= 8.X
+    // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
+                                            UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert
+                                                                             categories:nil];
+    [[ETPush pushManager] registerUserNotificationSettings:settings];
+    [[ETPush pushManager] registerForRemoteNotifications];
+#endif
+
     /**
      ET_NOTE: If you specify YES, then a UIAlertView will be shown if a push received and the app is in the active state. This is not the recommended best practice for production apps but is called for in some use cases
      */
@@ -150,6 +187,29 @@
      */
     [[ETPush pushManager] resetBadgeCount];
 }
+
+/**
+ MODIFICATIONS FOR IOS8.0 */
+
+// See ETPush.h for reasoning behind this #if logic
+// IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+// Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [[ETPush pushManager] didRegisterUserNotificationSettings:notificationSettings];
+}
+#endif
+#else
+// IPHONEOS_DEPLOYMENT_TARGET = 8.X
+// Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [[ETPush pushManager] didRegisterUserNotificationSettings:notificationSettings];
+}
+#endif
+
 
 /**
  These are the Apple Push Notification Service Delegate methods. They are required for the Push lifecycle to work, and implementation of the ExactTarget methods within is required for ExactTarget's MobilePush to function as expected. You may copy this block directly to your code and modify it to your liking, or cherry-pick the required methods to your own implementation.
@@ -369,20 +429,20 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex != alertView.cancelButtonIndex) {
-            /**
-             *  Handle the payload immediately because the subscriber clicked the view button
-             */
-            NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
-            BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
-            BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
-            
-            if (hasOpenDirectPayload) {
-                [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
-            }
-            else if (hasDiscountCodeCustomKey) {
-                [self handleDiscountCodePayload];
-            }
+        /**
+         *  Handle the payload immediately because the subscriber clicked the view button
+         */
+        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
+        BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
+        BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
+        
+        if (hasOpenDirectPayload) {
+            [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
         }
+        else if (hasDiscountCodeCustomKey) {
+            [self handleDiscountCodePayload];
+        }
+    }
 }
 
 - (void)handleOpenDirectPayload:(NSString *)payload {
