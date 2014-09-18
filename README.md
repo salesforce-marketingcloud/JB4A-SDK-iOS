@@ -11,6 +11,8 @@ As of July 2014, we have clarified the version numbering of the SDK and versions
 _Released August 25, 2014, correlating to ExactTarget's 2014-06 Release_
 _(supported)_
 
+This latest commit clears up confusion with the iOS8 SDK library.  The libetpushsdk-3.3.0.a is supported in Xcode 5 and 6 and can be built for iOS8, iOS7, and iOS6.
+
 * MPUSH-2560 - Continued Beacon work to meet further requirements.
 * MPUSH-2488 - Added device locale to registrations. 
 * MPUSH-2472 - Introduced ETEvent to track statistics and such going forward. This also includes the addition of the Bulk Uploader Shim and related functionality. 
