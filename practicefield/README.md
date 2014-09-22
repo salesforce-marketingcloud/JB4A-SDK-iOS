@@ -1,10 +1,10 @@
 # Practice Field
 
-Practice Field is a sample app that demonstrates the features available for use in the ExactTarget [MobilePush SDK](https://github.com/ExactTarget/MobilePushSDK-iOS). See the [Implemented SDK Features](#implemented) section below for a full list of the features that are implemented.
+Practice Field is a sample app that demonstrates the features available for use in the ExactTarget [Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)](https://github.com/ExactTarget/MobilePushSDK-iOS). See the [Implemented SDK Features](#implemented) section below for a full list of the features that are implemented.
 
-### About the MobilePush SDK
+### About the ExactTarget Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)
 
-The MobilePush SDK allows you to utilize MobilePush functionality as part of your iOS mobile app. This functionality includes the ability to send push messages to mobile devices through the app (based on demographic information or geofence triggers), collect analytics information based on the results of sent push messages, and many other things. For a high level overview of MobilePush features see [here](http://www.exacttarget.com/products/mobile-marketing/drive-mobile-app-engagement). For technical discussion on MobilePush see [here](https://code.exacttarget.com/getting-started/mobilepush).
+The Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK) allows you to utilize MobilePush functionality as part of your iOS mobile app. This functionality includes the ability to send push messages to mobile devices through the app (based on demographic information or geofence triggers), collect analytics information based on the results of sent push messages, and many other things. For a high level overview of MobilePush features see [here](http://www.exacttarget.com/products/mobile-marketing/drive-mobile-app-engagement). For technical discussion on MobilePush see [here](https://code.exacttarget.com/getting-started/mobilepush).
 
 ### The Important Bits
 
@@ -44,7 +44,7 @@ This app allows you to easily send debug information to ExactTarget directly fro
 
 ### Setting Up The App In Your Account
 
-1. Follow the steps in [Integrating the MobilePush SDK with your iOS Mobile App](https://code.exacttarget.com/mobilepush/integrating-mobilepush-sdk-your-ios-mobile-app) up until the "How to Implement Analytics in your iOS Mobile App" section. At this point you will have the app set up in your AppCenter account, have the app provisioned, and have an AppID and AccessToken corresponding to your app.
+1. Follow the steps in [Integrating the Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK) with your iOS Mobile App](https://code.exacttarget.com/mobilepush/integrating-mobilepush-sdk-your-ios-mobile-app) up until the "How to Implement Analytics in your iOS Mobile App" section. At this point you will have the app set up in your AppCenter account, have the app provisioned, and have an AppID and AccessToken corresponding to your app.
 2. Place the access token and application id you received within AppCenter into [PUDAppSettingConstants.m](PublicDemo/PUDAppSettingConstants.m) file. PUDAppSettingConstants is where you will place app specific settings such as access token, clientid, client secret, and more.
 3. *NOTE: At this point you will be able to send messages to the app from MobilePush inside the Marketing Cloud. You can also set attributes within the app's Settings tab. You only need to continue further if you wish to be able to create and send push messages from within the app.*
 
@@ -56,7 +56,7 @@ This app allows you to easily send debug information to ExactTarget directly fro
 
 ### Third Party Libraries Used
 
-The following libraries aren't required in order to use the MobilePush SDK. They are used by this sample app for purposes unrelated to SDK functionality.
+The following libraries aren't required in order to use the Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK). They are used by this sample app for purposes unrelated to SDK functionality.
 
 - [AFNetworking 2.0](https://github.com/AFNetworking/AFNetworking)
 - [JDStatusBarNotification](https://github.com/jaydee3/JDStatusBarNotification)

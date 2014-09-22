@@ -1,6 +1,6 @@
-# ExactTarget MobilePush SDK for iOS
+# ExactTarget Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)
 
-This is the git repository for the ET MobilePush SDK for iOS.
+This is the git repository for the ExactTarget Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK).
 
 For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://exacttarget.github.io/MobilePushSDK-iOS).
 
@@ -63,7 +63,7 @@ This version has a lot of new functionality, and a few changes that may be impor
 * Quieter logging.
 
 #### New and Changed Methods
-* **configureSDKWithAppId:andAccessToken:** is being replaced with **configureSDKWithAppId:andAccessToken:withAnalytics:andLocationServices:andCloudPages:**. This new method gives you finer-grained controls over the features enabled in the MobilePush SDK. These flags act as global on/off switches, so if you intend to use any of these features in the app, they must be turned on here. The legacy configuration method is still in place, and defaults to *YES* for all of the feature flags. You need not change the method, but are encouraged to over time to reflect actual usage.
+* **configureSDKWithAppId:andAccessToken:** is being replaced with **configureSDKWithAppId:andAccessToken:withAnalytics:andLocationServices:andCloudPages:**. This new method gives you finer-grained controls over the features enabled in the Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK). These flags act as global on/off switches, so if you intend to use any of these features in the app, they must be turned on here. The legacy configuration method is still in place, and defaults to *YES* for all of the feature flags. You need not change the method, but are encouraged to over time to reflect actual usage.
 * **removeTag:** had a signature change, previously returning *void*, but now echoing back the submitted tag in the event of a successful removal, or nil if that tag was not removed (it may not have been previously set, previously removed, etc). This change shouldn't impact existing code.
 * **allAttributes** was added to ETPush to return an NSDictionary of the current attributes. This is a companion to the already present **allTags**.
 * **ETLocationManager** introduced to handle location services in general. Please check it's documentation and header for an overview of what is available and how to use it.
