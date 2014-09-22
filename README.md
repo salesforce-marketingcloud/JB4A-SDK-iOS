@@ -1,6 +1,6 @@
-# Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)
+# ExactTarget Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)
 
-This is the git repository for the Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK).
+This is the git repository for the ExactTarget Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK).
 
 For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://exacttarget.github.io/MobilePushSDK-iOS).
 

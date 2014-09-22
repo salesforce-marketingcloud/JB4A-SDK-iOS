@@ -2,7 +2,7 @@
 
 Practice Field is a sample app that demonstrates the features available for use in the ExactTarget [Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)](https://github.com/ExactTarget/MobilePushSDK-iOS). See the [Implemented SDK Features](#implemented) section below for a full list of the features that are implemented.
 
-### About the Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)
+### About the ExactTarget Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)
 
 The Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK) allows you to utilize MobilePush functionality as part of your iOS mobile app. This functionality includes the ability to send push messages to mobile devices through the app (based on demographic information or geofence triggers), collect analytics information based on the results of sent push messages, and many other things. For a high level overview of MobilePush features see [here](http://www.exacttarget.com/products/mobile-marketing/drive-mobile-app-engagement). For technical discussion on MobilePush see [here](https://code.exacttarget.com/getting-started/mobilepush).
 
