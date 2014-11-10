@@ -100,6 +100,11 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 @property (nonatomic, strong, readonly) NSString *badge;
 
 /**
+ The category name for an interactive notification if it has one.
+ */
+@property (nonatomic, strong, readonly) NSString *category;
+
+/**
  An array of Key Value Pairs, or Custom Keys in local parlance, for this message. This will contain NSDictionary objects.
  */
 @property (nonatomic, strong, readonly) NSArray *keyValuePairs;
@@ -198,6 +203,10 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  */
 @property (nonatomic, strong) UILocalNotification *notification;
 
+/**
+ Used while ranging beacons to determine if a message for a beacon has been shown based on the proximity trigger.
+ */
+@property (nonatomic) BOOL hasShownForBeacon;
 
 /**
  Creates a new ETMessage with values in the given NSDictionary. 
