@@ -60,38 +60,45 @@
  *                              on how to do this
  */
 
-#pragma mark - AdHoc settings
+#pragma mark - DEV settings
 
-extern NSString *const kAppSettingAdHocAccessToken;
-extern NSString *const kAppSettingAdHocAppId;
-extern NSString *const kAppSettingAdHocClientId;
-extern NSString *const kAppSettingAdHocClientSecret;
-extern NSString *const kAppSettingAdHocOutboundMessageIdVanilla;
-extern NSString *const kAppSettingAdHocOutboundMessageIdCloudPage;
-
-#pragma mark - Debug settings
-
-extern NSString *const kAppSettingDebugAccessToken;
-extern NSString *const kAppSettingDebugAppId;
-extern NSString *const kAppSettingDebugClientId;
-extern NSString *const kAppSettingDebugClientSecret;
-extern NSString *const kAppSettingDebugOutboundMessageIdVanilla;
-extern NSString *const kAppSettingDebugOutboundMessageIdCloudPage;
+extern NSString *const kAppSettingDevConfigName;
+extern NSString *const kAppSettingDevAccessToken;
+extern NSString *const kAppSettingDevAccessTokenUrl;
+extern NSString *const kAppSettingDevAppId;
+extern NSString *const kAppSettingDevClientId;
+extern NSString *const kAppSettingDevClientSecret;
+extern NSString *const kAppSettingDevOutboundMessageIdVanilla;
+extern NSString *const kAppSettingDevOutboundMessageIdCloudPage;
 
 #pragma mark - QA settings
 
-extern NSString *const kAppSettingQAAccessToken;
-extern NSString *const kAppSettingQAAppId;
-extern NSString *const kAppSettingQAClientId;
-extern NSString *const kAppSettingQAClientSecret;
-extern NSString *const kAppSettingQAOutboundMessageIdVanilla;
-extern NSString *const kAppSettingQAOutboundMessageIdCloudPage;
+extern NSString *const kAppSettingQaConfigName;
+extern NSString *const kAppSettingQaAccessToken;
+extern NSString *const kAppSettingQaAppId;
+extern NSString *const kAppSettingQaClientId;
+extern NSString *const kAppSettingQaClientSecret;
+extern NSString *const kAppSettingQaOutboundMessageIdVanilla;
+extern NSString *const kAppSettingQaOutboundMessageIdCloudPage;
 
-#pragma mark - Release settings
+#pragma mark - ETPROD settings
 
-extern NSString *const kAppSettingReleaseAccessToken;
-extern NSString *const kAppSettingReleaseAppId;
-extern NSString *const kAppSettingReleaseClientId;
-extern NSString *const kAppSettingReleaseClientSecret;
-extern NSString *const kAppSettingReleaseOutboundMessageIdVanilla;
-extern NSString *const kAppSettingReleaseOutboundMessageIdCloudPage;
+extern NSString *const kAppSettingEtprodConfigName;
+extern NSString *const kAppSettingEtprodAccessToken;
+extern NSString *const kAppSettingEtprodAccessTokenUrl;
+extern NSString *const kAppSettingEtprodAppId;
+extern NSString *const kAppSettingEtprodClientId;
+extern NSString *const kAppSettingEtprodClientSecret;
+extern NSString *const kAppSettingEtprodOutboundMessageIdVanilla;
+extern NSString *const kAppSettingEtprodOutboundMessageIdCloudPage;
+
+#pragma mark - APPSTORE settings
+
+extern NSString *const kAppSettingAppstoreConfigName;
+extern NSString *const kAppSettingAppstoreAccessToken;
+extern NSString *const kAppSettingAppstoreAccessTokenUrl;
+extern NSString *const kAppSettingAppstoreAppId;
+extern NSString *const kAppSettingAppstoreClientId;
+extern NSString *const kAppSettingAppstoreClientSecret;
+extern NSString *const kAppSettingAppstoreOutboundMessageIdVanilla;
+extern NSString *const kAppSettingAppstoreOutboundMessageIdCloudPage;

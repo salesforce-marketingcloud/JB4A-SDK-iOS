@@ -46,6 +46,7 @@
 
 // Views
 #import "PUDPreferencesTableViewCell.h"
+#import "PUDPushConfigTableViewController.h"
 
 //Constants
 #import "PUDConstants.h"
@@ -69,6 +70,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        //  _dataArray = @[[self currentPushConfig],[self personalInformationData], [self footballTagsData], [self soccerTagsData]];
         _updateETRequired = NO;
     }
     return self;

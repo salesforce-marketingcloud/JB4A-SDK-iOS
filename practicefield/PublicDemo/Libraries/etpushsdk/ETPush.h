@@ -185,7 +185,8 @@
 /**
  Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.
  
- @param types The UIRemoteNotificationTypes that the application would like to use for push. These are pipe-delimited, and use Apple's native values
+@deprecated in IOS8 - use registerUserNotificationSettings instead
+@param types The UIRemoteNotificationTypes that the application would like to use for push. These are pipe-delimited, and use Apple's native values
  @return Doesn't return a value
  */
 -(void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types;

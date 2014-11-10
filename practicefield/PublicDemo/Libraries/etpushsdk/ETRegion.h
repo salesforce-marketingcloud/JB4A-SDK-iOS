@@ -175,6 +175,14 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
 +(ETRegion*)getBeaconRegionForRegionWithProximityUUID:(NSString *)proximityUUID andMajorNumber:(NSNumber *)majorNumber andMinorNumber:(NSNumber *)minorNumber;
 
 /**
+ Returns a specific Beacon Region from the database.
+ 
+ @param proximityUUID The ranged beacon region UUID
+ @return The region, or nil if it doesn't exist.
+ */
++(ETRegion *)getBeaconRegionForRegionWithProximityUUID:(NSString *)proximityUUID;
+
+/**
  Pulls all active regions out of the local database. 
  
  @return An NSSet of ETRegions.

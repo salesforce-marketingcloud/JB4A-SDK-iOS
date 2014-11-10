@@ -49,7 +49,7 @@
 
 - (NSString *)htmlPrefix {
     return @"<html style=\"margin:10px; font-size:16px; word-wrap: break-word;\"><font color=\"black\" face=\"Avenir Next\">"
-    "<h3 style=\"text-align:center;\">Practice Field<br>for MobilePush SDK</h3>";
+    "<h3 style=\"text-align:center;\">Journey Builder for Apps (JB4A) IOS SDK</h3>";
 }
 
 - (NSArray *)pageHtml {
@@ -85,9 +85,9 @@
 - (NSString *)overviewHtml {
     
     NSString *ret = @"<b>Overview</b><hr>"
-                     "This is an app where you can practice using the ExactTarget MobilePush SDK."
+                     "This is an app where you can practice using the JB4A SDK."
                      "<br/><br/>"
-                     "The ExactTarget MobilePush SDK is a key component of "
+                     "The JB4A SDK is a key component of "
                      "<a href=\"http://www.exacttarget.com/products/mobile-marketing\">Mobile Marketing</a> for your company.<br/>";
     
     return ret;
@@ -97,8 +97,8 @@
     
     NSString *ret = @"<b>Purpose</b><hr>"
                      "<ul>"
-                     "<li>Provides a UI for demonstrating with various features of the MobilePush SDK.</li><br/>"
-                     "<li>Provides an example and template to for creating an iOS app that uses the ExactTarget MobilePush SDK.</li><br/>"
+                     "<li>Provides a UI for demonstrating with various features of the JB4A SDK.</li><br/>"
+                     "<li>Provides an example and template to for creating an iOS app that uses the JB4A SDK.</li><br/>"
                      "<li>Allows you to review the SDK components by collecting debugging information and sharing via email.</li><br/>"
                      "</ul>";
     
@@ -108,14 +108,14 @@
 - (NSString *)codeAtHtml {
     
     NSString *ret = @"<b>Additional Resources</b><hr>"
-                    "The following resources are available to learn more about using the MobilePush SDK.  They are not required to run this app, but are availble to assist you in developing an app using the MobilePush SDK."
+                    "The following resources are available to learn more about using the JB4A SDK.  They are not required to run this app, but are availble to assist you in developing an app using the JB4A SDK."
                      "<br/><br/>"
                      "<b>Code@</b><hr>"
-                     "For more information about the ET MobilePush SDK, see "
+                     "For more information about the JB4A SDK, see "
                      "<a href=\"https://code.exacttarget.com/api/mobilepush-sdks\">Code@</a><br/>"
                      "<br/>"
                      "<b>GitHub</b><hr>"
-                     "To view the code for this app, please see the GitHub repository for the iOS MobilePush SDK found "
+                     "To view the code for this app, please see the GitHub repository for the JB4A SDK found "
                      "<a href=\"https://github.com/ExactTarget/MobilePushSDK-iOS\">here</a>"
                      " and then open the practicefield folder.<br/>";
     

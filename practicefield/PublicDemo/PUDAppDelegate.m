@@ -50,6 +50,7 @@
 
 //Constants
 #import "PUDConstants.h"
+#define PushConfigAlertViewTag 1
 
 @interface PUDAppDelegate()
 
@@ -117,16 +118,13 @@
      UIRemoteNotificationTypeAlert - This flag will ask for permission to show text to the user, in either Banner or an Alert.
      UIRemoteNotificationTypeBadge - This flag allows you to update the badge on the app icon
      UIRemoteNotificationTypeSound - This flag allows you to play a sound when the push is received.
-     */
-    
-    /**
-     MODIFICATIONS FOR IOS8.0 */
-    /*
-     Use these for IOS8 instead of UIRemoteNotificationType...
+
+     // Use these for IOS8 instead of UIRemoteNotificationType...
      UIUserNotificationTypeBadge - This flag allows you to update the badge on the app icon
      UIUserNotificationTypeSound - This flag allows you to play a sound when the push is received.
      UIUserNotificationTypeAlert - This flag will ask for permission to show text to the user, in either Banner or an Alert.
      */
+    
     // See ETPush.h for reasoning behind this #if logic
     // IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
@@ -134,9 +132,68 @@
     // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
     // are we running on IOS8 and above?
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
-                                                UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert
-                                                                                 categories:nil];
+        // create user actions here if wanted
+        UIMutableUserNotificationAction *userActionButton1 = [[UIMutableUserNotificationAction alloc] init];
+        userActionButton1.identifier = @"userActionButton1";
+        userActionButton1.title = @"View Offer";
+        
+        // Given seconds, not minutes, to run in the background
+        userActionButton1.activationMode = UIUserNotificationActivationModeBackground;
+        userActionButton1.destructive = NO;
+        
+        // If YES requires passcode, but does not unlock the device
+        userActionButton1.authenticationRequired = NO;
+        
+        UIMutableUserNotificationAction *userActionButton2 = [[UIMutableUserNotificationAction alloc] init];
+        userActionButton2.identifier = @"userActionButton2";
+        userActionButton2.title = @"Add to Passbook";
+        
+        // Given seconds, not minutes, to run in the background
+        userActionButton2.activationMode = UIUserNotificationActivationModeBackground;
+        userActionButton2.destructive = NO;
+        
+        // If YES requires passcode, but does not unlock the device
+        userActionButton2.authenticationRequired = NO;
+        
+        UIMutableUserNotificationAction *userActionButton3 = [[UIMutableUserNotificationAction alloc] init];
+        userActionButton3.identifier = @"userActionButton3";
+        userActionButton3.title = @"Snooze";
+        
+        // Given seconds, not minutes, to run in the background
+        userActionButton3.activationMode = UIUserNotificationActivationModeBackground;
+        userActionButton3.destructive = NO;
+        
+        // If YES requires passcode, but does not unlock the device
+        userActionButton3.authenticationRequired = NO;
+        
+        UIMutableUserNotificationAction *userActionButton4 = [[UIMutableUserNotificationAction alloc] init];
+        userActionButton4.identifier = @"userActionButton4";
+        userActionButton4.title = @"Call Support";
+        
+        // this one runs in the foreground
+        userActionButton4.activationMode = UIUserNotificationActivationModeForeground;
+        userActionButton4.destructive = NO;
+        
+        // If YES requires passcode, but does not unlock the device
+        userActionButton4.authenticationRequired = NO;
+        
+        // create a category to handle the buttons
+        UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc] init];
+        category.identifier = @"Example";
+        
+        // these will be the default context buttons
+        [category setActions:@[userActionButton1, userActionButton2, userActionButton3, userActionButton4] forContext:UIUserNotificationActionContextDefault];
+        
+        // these will be the minimal context buttons
+        [category setActions:@[userActionButton1, userActionButton4] forContext:UIUserNotificationActionContextMinimal];
+        
+        // make a set of all categories the app will support - just one for now
+        NSSet *categories = [NSSet setWithObjects:category, nil];
+        
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge |
+                                                UIUserNotificationTypeSound |
+                                                UIUserNotificationTypeAlert
+                                                                                 categories:categories];
         [[ETPush pushManager] registerUserNotificationSettings:settings];
         [[ETPush pushManager] registerForRemoteNotifications];
     }
@@ -156,7 +213,7 @@
     [[ETPush pushManager] registerUserNotificationSettings:settings];
     [[ETPush pushManager] registerForRemoteNotifications];
 #endif
-
+    
     /**
      ET_NOTE: If you specify YES, then a UIAlertView will be shown if a push received and the app is in the active state. This is not the recommended best practice for production apps but is called for in some use cases
      */
@@ -188,9 +245,6 @@
     [[ETPush pushManager] resetBadgeCount];
 }
 
-/**
- MODIFICATIONS FOR IOS8.0 */
-
 // See ETPush.h for reasoning behind this #if logic
 // IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
@@ -199,6 +253,67 @@
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {
     [[ETPush pushManager] didRegisterUserNotificationSettings:notificationSettings];
+}
+
+// handle categories for local notifications
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void(^)())completionHandler
+{
+    if ([identifier isEqualToString:@"userActionButton1"]) {
+        [self handleUserAction1WithNotification:notification.userInfo];
+    }
+    else if ([identifier isEqualToString:@"userActionButton2"]) {
+        [self handleUserAction2WithNotification:notification.userInfo];
+    }
+    else if ([identifier isEqualToString:@"userActionButton3"]) {
+        [self handleUserAction3WithNotification:notification.userInfo];
+    }
+    else if ([identifier isEqualToString:@"userActionButton4"]) {
+        [self handleUserAction4WithNotification:notification.userInfo];
+    }
+    
+    completionHandler();
+}
+
+// handle categories for remote notifications
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
+{
+    if ([identifier isEqualToString:@"userActionButton1"]) {
+        [self handleUserAction1WithNotification:userInfo];
+    }
+    else if ([identifier isEqualToString:@"userActionButton2"]) {
+        [self handleUserAction2WithNotification:userInfo];
+    }
+    else if ([identifier isEqualToString:@"userActionButton3"]) {
+        [self handleUserAction3WithNotification:userInfo];
+    }
+    else if ([identifier isEqualToString:@"userActionButton4"]) {
+        [self handleUserAction4WithNotification:userInfo];
+    }
+    
+    completionHandler();
+}
+
+- (void)handleUserAction1WithNotification:(NSDictionary *)notification
+{
+    NSLog(@"handleUserAction1WithNotification - %@", notification);
+}
+
+- (void)handleUserAction2WithNotification:(NSDictionary *)notification
+{
+    NSLog(@"handleUserAction2WithNotification - %@", notification);
+}
+
+- (void)handleUserAction3WithNotification:(NSDictionary *)notification
+{
+    NSLog(@"handleUserAction3WithNotification - %@", notification);
+}
+
+- (void)handleUserAction4WithNotification:(NSDictionary *)notification
+{
+    NSLog(@"handleUserAction4WithNotification - %@", notification);
+    // call ExactTarget main telephone #
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", @"18663624538"]]])
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", @"18663624538"]]];
 }
 #endif
 #else
@@ -429,20 +544,20 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex != alertView.cancelButtonIndex) {
-        /**
-         *  Handle the payload immediately because the subscriber clicked the view button
-         */
-        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
-        BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
-        BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
-        
-        if (hasOpenDirectPayload) {
-            [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
+            /**
+             *  Handle the payload immediately because the subscriber clicked the view button
+             */
+            NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
+            BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
+            BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
+            
+            if (hasOpenDirectPayload) {
+                [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
+            }
+            else if (hasDiscountCodeCustomKey) {
+                [self handleDiscountCodePayload];
+            }
         }
-        else if (hasDiscountCodeCustomKey) {
-            [self handleDiscountCodePayload];
-        }
-    }
 }
 
 - (void)handleOpenDirectPayload:(NSString *)payload {

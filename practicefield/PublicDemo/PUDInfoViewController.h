@@ -29,7 +29,7 @@
  */
 
 //
-//  PUDInfoWebViewController.h
+//  PUDInfoViewController.h
 //  PublicDemo
 //
 //  Created by Matt Lathrop on 5/15/14.

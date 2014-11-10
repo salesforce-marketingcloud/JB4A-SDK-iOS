@@ -38,9 +38,14 @@
 
 #import <Foundation/Foundation.h>
 
+// Other
+#import "PUDPushConfig.h"
+
 @interface PUDUtility : NSObject
 
 #pragma mark - App Settings
+
++ (NSString *)configurationName;
 
 + (NSString *)accessToken;
 
@@ -61,6 +66,8 @@
 + (NSString *)appVersion;
 
 + (NSString *)sdkVersion;
+
++ (NSString *)configName;
 
 + (NSString *)safeAppID;
 
@@ -86,10 +93,14 @@
 
 + (NSString *)buildType;
 
++ (BOOL) isInternalBuild;
+
 + (NSString *)attributeFirstName;
 
 + (NSString *)attributeLastName;
 
 + (NSString *)activeActivityTags;
+
++ (BOOL) isSendMessageAvailable;
 
 @end

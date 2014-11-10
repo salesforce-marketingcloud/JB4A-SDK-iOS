@@ -413,7 +413,7 @@
         textField.text = value;
     };
     
-    customKey.sectionFooter = @"Custom keys allow you to specify your own data to be included in the push payload received by devices. The Practice Field app uses a custom key to give discounts out to specific subscribers.";
+    customKey.sectionFooter = @"Custom keys allow you to specify your own data to be included in the push payload received by devices. The Journey Builder for Apps (JB4A) IOS SDK uses a custom key to give discounts out to specific subscribers.";
     
     return customKey;
 }

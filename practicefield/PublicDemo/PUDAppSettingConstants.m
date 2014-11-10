@@ -38,39 +38,35 @@
 
 #import "PUDAppSettingConstants.h"
 
-#pragma mark - AdHoc settings
+#pragma mark - DEV settings
 
-NSString *const kAppSettingAdHocAccessToken = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingAdHocAppId = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingAdHocClientId = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingAdHocClientSecret = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingAdHocOutboundMessageIdVanilla = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingAdHocOutboundMessageIdCloudPage = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingDevConfigName = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingDevAccessToken = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingDevAccessTokenUrl = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingDevAppId = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingDevClientId = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingDevClientSecret = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingDevOutboundMessageIdVanilla = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingDevOutboundMessageIdCloudPage = @"updateWithYourAppConfigSettings";
 
-#pragma mark - Debug settings
+#pragma mark - ETPROD settings
 
-NSString *const kAppSettingDebugAccessToken = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingDebugAppId = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingDebugClientId = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingDebugClientSecret = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingDebugOutboundMessageIdVanilla = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingDebugOutboundMessageIdCloudPage = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingEtprodConfigName = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingEtprodAccessToken = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingEtprodAccessTokenUrl = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingEtprodAppId = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingEtprodClientId = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingEtprodClientSecret = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingEtprodOutboundMessageIdVanilla = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingEtprodOutboundMessageIdCloudPage = @"updateWithYourAppConfigSettings";
 
-#pragma mark - QA settings
+#pragma mark - APPSTORE settings
 
-NSString *const kAppSettingQAAccessToken = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingQAAppId = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingQAClientId = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingQAClientSecret = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingQAOutboundMessageIdVanilla = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingQAOutboundMessageIdCloudPage = @"updateWithYourAppConfigSettings";
-
-#pragma mark - Release settings
-
-NSString *const kAppSettingReleaseAccessToken = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingReleaseAppId = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingReleaseClientId = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingReleaseClientSecret = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingReleaseOutboundMessageIdVanilla = @"updateWithYourAppConfigSettings";
-NSString *const kAppSettingReleaseOutboundMessageIdCloudPage = @"updateWithYourAppConfigSettings";
-
+NSString *const kAppSettingAppstoreConfigName = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingAppstoreAccessToken = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingAppstoreAccessTokenUrl = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingAppstoreAppId = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingAppstoreClientId = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingAppstoreClientSecret = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingAppstoreOutboundMessageIdVanilla = @"updateWithYourAppConfigSettings";
+NSString *const kAppSettingAppstoreOutboundMessageIdCloudPage = @"updateWithYourAppConfigSettings";

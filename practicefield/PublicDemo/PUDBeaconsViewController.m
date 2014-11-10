@@ -49,11 +49,11 @@
 
 - (NSString *)htmlPrefix {
     return @"<html style=\"margin:10px; font-size:16px; word-wrap: break-word;\"><font color=\"black\" face=\"Avenir Next\">"
-    "<h3 style=\"text-align:center;\">Practice Field<br>for MobilePush SDK</h3>";
+    "<h3 style=\"text-align:center;\">Journey Builder for Apps (JB4A) IOS SDK</h3>";
 }
 
 - (NSArray *)pageHtml {
-    return @[[self overviewHtml], [self beacon1Html], [self beacon2Html], [self beacon3Html], [self beacon4Html]];
+    return @[[self overviewLocationsHtml],[self overviewHtml], [self beacon1Html], [self beacon2Html], [self beacon3Html], [self beacon4Html]];
 }
 
 - (void)viewDidLoad {
@@ -82,10 +82,24 @@
 
 #pragma mark - page content
 
+- (NSString *)overviewLocationsHtml {
+    
+    NSString *ret = @"<b>Geo-fences Overview</b><hr>"
+    "The JB4A SDK Explorer has been set with Entry and Exit geo-fence messages for the following three locations:"
+    "<br/>"
+    "<ul>"
+    "<li>Grand Canyon National Park (Coordinates: 36.106965, -112.112997)</li><br/>"
+    "<li>Yellowstone National Park (Coordinates: 44.598884, -110.499898)</li><br/>"
+    "<li>Yosemite Valley (Coordinates: 37.74856, -119.588113)</li>"
+    "</ul>"
+    "To see how geo-fence work, you could actually travel to one of the three locations and you would get an entry and exit message local notification.<br/>";
+    return ret;
+}
+
 - (NSString *)overviewHtml {
     
     NSString *ret = @"<b>Beacons Overview</b><hr>"
-    "The PracticeField has been set with several Beacon messages. In order to see how Beacons work, you will need to purchase several Beacons and configure them to work with the PracticeField app."
+    "The JB4A has been set with several Beacon messages. In order to see how Beacons work, you will need to purchase several Beacons and configure them to work with the JB4A."
     "<br/><br/>"
     "Each Beacon can be assigned a unique GUID as well as a Major and Minor number. For any Beacons you purchase, make sure that the Beacons can be configured.  You must be able to edit the GUID as well as the Major and Minor number."
     "<br/><br/>"

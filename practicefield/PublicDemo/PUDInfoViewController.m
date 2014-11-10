@@ -41,6 +41,9 @@
 // Controllers
 #import "PUDPageContentViewController.h"
 
+//Classes
+#import "PUDPushConfig.h"
+
 @interface PUDInfoViewController ()
 
 @end
@@ -56,7 +59,7 @@
 }
 
 - (NSArray *)pageHtmlWithHeader:(BOOL)hasHeader {
-    NSString *headerHtml = @"<h3 style=\"text-align:center;\">Practice Field<br>for MobilePush SDK</h3>";
+    NSString *headerHtml = @"<h3 style=\"text-align:center;\">Journey Builder for Apps (JB4A) IOS SDK</h3>";
     
     NSMutableArray *array = [NSMutableArray arrayWithArray:@[[self appDetailsHtml],
                                                              [self appKeysHtml],
@@ -103,7 +106,7 @@
 
 - (NSString *)appKeysHtml {
     
-    NSString *ret = @"<b>Production App Keys</b><hr>"
+    NSString *ret = @"<b>k_CONFIG_NAME App Keys</b><hr>"
     "The App Keys are used to uniquely identify your app within the Marketing Cloud.</p>"
     "<b>App Id:</b> k_APP_ID<br>"
     "<b>Access Token:</b> k_ACCESS_TOKEN<br><br>"
@@ -114,6 +117,7 @@
     "<b>Message Id, Vanilla:</b> k_MESSAGE_ID_VANILLA<br>"
     "<b>Message Id, CloudPage:</b> k_MESSAGE_ID_CLOUDPAGE<br>";
     
+    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoConfigName withString:[PUDUtility configName]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAppID withString:[PUDUtility safeAppID]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAccessToken withString:[PUDUtility safeAccessToken]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoClientID withString:[PUDUtility safeClientID]];
@@ -126,7 +130,7 @@
 - (NSString *)attributesHtml {
     
     NSString *ret = @"<b>Attributes</b><hr>"
-    "Attributes contain specific information about your subscribers, such as first and last name, gender, and geographical location.</p>You can assign specific information as part of a subscriber attribute to be used as part of sends or subscriber management.</p>This Practice Field app stores first name and last name as attributes.</p>"
+    "Attributes contain specific information about your subscribers, such as first and last name, gender, and geographical location.</p>You can assign specific information as part of a subscriber attribute to be used as part of sends or subscriber management.</p>This Journey Builder for Apps (JB4A) IOS SDK app stores first name and last name as attributes.</p>"
     "<b>First Name:</b> k_ATTR_FIRST<br>"
     "<b>Last Name:</b> k_ATTR_LAST<br>";
     
@@ -234,7 +238,7 @@
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc]init];
         mailComposer.mailComposeDelegate = self;
-        [mailComposer setSubject:@"iOS Practice Field App"];
+        [mailComposer setSubject:@"Journey Builder for Apps (JB4A) IOS SDK"];
         [mailComposer setToRecipients:@[@"MobilePushSupport@exacttarget.com"]];
         [mailComposer setMessageBody:[self emailHtml] isHTML:YES];
         self.navigationItem.rightBarButtonItem.customView = nil;

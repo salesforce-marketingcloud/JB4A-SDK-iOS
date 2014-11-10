@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Info View Controller - Your Device Info-->
+        <!--Your Device Info-->
         <scene sceneID="ctH-oY-hHH">
             <objects>
                 <viewController id="p5H-hr-LeX" customClass="PUDInfoViewController" sceneMemberID="viewController">
@@ -35,12 +35,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2v6-wY-fww">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crT-9Q-S30">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="YWs-v7-Fdy" id="zXa-CV-mzc"/>
                                 </connections>
@@ -68,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="1643" y="-952"/>
         </scene>
-        <!--Home View Controller - Getting Started-->
+        <!--Getting Started-->
         <scene sceneID="TFZ-Fw-Qx6">
             <objects>
                 <pageViewController storyboardIdentifier="PUDHomeViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="aof-hw-JdJ" customClass="PUDHomeViewController" sceneMemberID="viewController">
@@ -78,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="1187" y="-952"/>
         </scene>
-        <!--Navigation Controller - Info-->
+        <!--Info-->
         <scene sceneID="Dkl-cs-jCM">
             <objects>
                 <navigationController definesPresentationContext="YES" id="edQ-2z-Zfk" customClass="PUDNavigationController" sceneMemberID="viewController">
@@ -92,9 +90,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsO-V5-dRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="647" y="-242"/>
+            <point key="canvasLocation" x="631" y="-126"/>
         </scene>
-        <!--Navigation Controller - Inbox-->
+        <!--Inbox-->
         <scene sceneID="qJJ-eT-2Dw">
             <objects>
                 <navigationController definesPresentationContext="YES" id="IXZ-XN-P12" customClass="PUDNavigationController" sceneMemberID="viewController">
@@ -110,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="647" y="-1672"/>
         </scene>
-        <!--Cloud Page Inbox View Controller - CloudPage Inbox-->
+        <!--CloudPage Inbox-->
         <scene sceneID="wG5-v6-xqW">
             <objects>
                 <viewController id="kUV-kz-Pzd" customClass="PUDCloudPageInboxViewController" sceneMemberID="viewController">
@@ -124,11 +122,9 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRd-48-TEr">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uEL-Fc-6DB">
                                         <rect key="frame" x="20" y="8" width="280" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="All"/>
                                             <segment title="Unread"/>
@@ -146,7 +142,6 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="K6y-hB-rG3">
                                 <rect key="frame" x="0.0" y="44" width="320" height="410"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ruid_cloudPageInboxCell" rowHeight="60" id="clW-kW-kms" customClass="PUDCloudPageInboxTableViewCell">
@@ -158,7 +153,6 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Colts!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTa-R6-NDJ">
                                                     <rect key="frame" x="26" y="10" width="267" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="lH7-Z6-yOh"/>
                                                     </constraints>
@@ -168,7 +162,6 @@
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 6th, 2014 at 4:30 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCE-YX-NIr">
                                                     <rect key="frame" x="26" y="33" width="267" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -219,7 +212,7 @@
             </objects>
             <point key="canvasLocation" x="1187" y="-1672"/>
         </scene>
-        <!--Message Received Table View Controller - Message Details-->
+        <!--Message Details-->
         <scene sceneID="2eK-z7-Mn8">
             <objects>
                 <tableViewController storyboardIdentifier="sb_pushReceivedTableViewController" id="EIT-CW-ugY" customClass="PUDMessageReceivedTableViewController" sceneMemberID="viewController">
@@ -257,7 +250,7 @@
             </objects>
             <point key="canvasLocation" x="2291" y="956"/>
         </scene>
-        <!--Discount Table View Controller - Your Discount-->
+        <!--Your Discount-->
         <scene sceneID="Ylo-Al-wtr">
             <objects>
                 <tableViewController storyboardIdentifier="sb_discountCodeViewController" id="kAK-6n-zaX" customClass="PUDDiscountTableViewController" sceneMemberID="viewController">
@@ -286,7 +279,7 @@
             </objects>
             <point key="canvasLocation" x="2784" y="956"/>
         </scene>
-        <!--Preferences Table View Controller - Set Your Preferences-->
+        <!--Set Your Preferences-->
         <scene sceneID="SW8-GJ-eel">
             <objects>
                 <tableViewController id="VTO-a1-2Mz" customClass="PUDPreferencesTableViewController" sceneMemberID="viewController">
@@ -304,27 +297,23 @@
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0h-05-dq1">
                                             <rect key="frame" x="15" y="10" width="290" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000027" translatesAutoresizingMaskIntoConstraints="NO" id="ZZx-YE-zDy">
                                             <rect key="frame" x="15" y="13" width="233" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="233" translatesAutoresizingMaskIntoConstraints="NO" id="WqW-KJ-Yc3">
                                             <rect key="frame" x="15" y="26" width="233" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JaJ-eS-a5f">
                                             <rect key="frame" x="256" y="14" width="51" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </switch>
                                     </subviews>
                                     <constraints>
@@ -367,10 +356,10 @@
         <scene sceneID="T91-Ea-2Zb">
             <objects>
                 <tableViewController storyboardIdentifier="sb_pushConfigTableViewController" id="FIP-Fy-Nvs" customClass="PUDPushConfigTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="eyw-KY-Fdu">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eyw-KY-Fdu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ruid_pushConfigCell" id="qme-7w-4gu">
                                 <rect key="frame" x="0.0" y="55" width="320" height="44"/>
@@ -391,7 +380,7 @@
             </objects>
             <point key="canvasLocation" x="2169" y="227"/>
         </scene>
-        <!--Message Compose Table View Controller - Send Message-->
+        <!--Send Message-->
         <scene sceneID="Vim-az-ree">
             <objects>
                 <tableViewController id="fPs-Zy-bAs" customClass="PUDMessageComposeTableViewController" sceneMemberID="viewController">
@@ -420,7 +409,7 @@
             </objects>
             <point key="canvasLocation" x="2437" y="1747"/>
         </scene>
-        <!--Navigation Controller - Preferences-->
+        <!--Preferences-->
         <scene sceneID="5fr-AW-JCV">
             <objects>
                 <navigationController definesPresentationContext="YES" id="xsZ-AU-EHm" customClass="PUDNavigationController" sceneMemberID="viewController">
@@ -452,13 +441,14 @@
                         <segue destination="IXZ-XN-P12" kind="relationship" relationship="viewControllers" id="itt-uW-TEj"/>
                         <segue destination="bf3-cv-ksI" kind="relationship" relationship="viewControllers" id="HQt-m9-xZu"/>
                         <segue destination="edQ-2z-Zfk" kind="relationship" relationship="viewControllers" id="1LT-DC-NuG"/>
+                        <segue destination="v2h-WT-Qrg" kind="relationship" relationship="viewControllers" id="A3A-vs-hvp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106" y="156"/>
         </scene>
-        <!--Navigation Controller - Home-->
+        <!--Home-->
         <scene sceneID="A89-xb-Sc1">
             <objects>
                 <navigationController definesPresentationContext="YES" id="rS3-4F-Mxm" customClass="PUDNavigationController" sceneMemberID="viewController">
@@ -474,7 +464,7 @@
             </objects>
             <point key="canvasLocation" x="647" y="-952"/>
         </scene>
-        <!--Navigation Controller - Messages-->
+        <!--Messages-->
         <scene sceneID="okJ-Hf-4w7">
             <objects>
                 <navigationController definesPresentationContext="YES" id="L6b-sw-iww" customClass="PUDNavigationController" sceneMemberID="viewController">
@@ -490,17 +480,17 @@
             </objects>
             <point key="canvasLocation" x="665" y="1220"/>
         </scene>
-        <!--Beacons View Controller - ET Practice Field - Beacons-->
+        <!--SDK Explorer - Locations-->
         <scene sceneID="qct-OB-cPY">
             <objects>
                 <viewController storyboardIdentifier="PUDBeaconViewController" id="Cze-lB-OrO" customClass="PUDBeaconsViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="ET Practice Field - Beacons" id="GeA-mv-xib"/>
+                    <navigationItem key="navigationItem" title="SDK Explorer - Locations" id="GeA-mv-xib"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJT-0l-ek8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1150" y="2120"/>
         </scene>
-        <!--Send Message View Controller - Sending A Message-->
+        <!--Sending A Message-->
         <scene sceneID="mlL-EM-N9m">
             <objects>
                 <viewController id="Hpy-lx-lUL" customClass="PUDSendMessageViewController" sceneMemberID="viewController">
@@ -514,11 +504,11 @@
             </objects>
             <point key="canvasLocation" x="1265" y="1220"/>
         </scene>
-        <!--Navigation Controller - Beacons-->
+        <!--Locations-->
         <scene sceneID="Bt1-IB-8wZ">
             <objects>
                 <navigationController definesPresentationContext="YES" id="bf3-cv-ksI" customClass="PUDNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Beacons" image="beacon_gray" id="Ez3-cZ-PaC"/>
+                    <tabBarItem key="tabBarItem" title="Locations" image="beacon_gray" id="Ez3-cZ-PaC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="moS-q7-Shg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -533,10 +523,37 @@
             </objects>
             <point key="canvasLocation" x="679" y="2120"/>
         </scene>
+        <!--End User License Agreement-->
+        <scene sceneID="55u-gs-Ab3">
+            <objects>
+                <viewController id="MCr-An-wQE" customClass="PUDEulaViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="End User License Agreement" id="0ff-lh-NqO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEj-1z-Ws7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173" y="362"/>
+        </scene>
+        <!--EULA-->
+        <scene sceneID="J51-iH-kv6">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="v2h-WT-Qrg" customClass="PUDNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="EULA" image="eula" id="Pcq-ux-Bee"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vn1-Og-iqe">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MCr-An-wQE" kind="relationship" relationship="rootViewController" id="caq-GU-Kfo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLQ-XV-uAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="368"/>
+        </scene>
     </scenes>
     <resources>
         <image name="beacon_gray" width="30" height="30"/>
         <image name="cloud" width="35" height="35"/>
+        <image name="eula" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="info" width="30" height="30"/>
         <image name="messages" width="30" height="30"/>

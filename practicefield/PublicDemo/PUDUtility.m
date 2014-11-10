@@ -52,87 +52,45 @@
 
 #pragma mark - App Settings
 
-+ (NSString *)accessToken {
-#ifdef DEBUG
-    return kAppSettingDebugAccessToken;
-#elif ADHOC
-    return kAppSettingAdHocAccessToken;
-#elif QA
-    return kAppSettingQAAccessToken;
++ (NSString *)configurationName {
+    
+#if defined (QA) || defined (DEBUG)
+    return kAppSettingDevConfigName;
 #else
-    return kAppSettingReleaseAccessToken;
+    return kAppSettingAppstoreConfigName;
 #endif
 }
 
-+ (NSString *)appID {
-#ifdef DEBUG
-    return kAppSettingDebugAppId;
-#elif ADHOC
-    return kAppSettingAdHocAppId;
-#elif QA
-    return kAppSettingQAAppId;
-#else
-    return kAppSettingReleaseAppId;
-#endif
+
++ (NSString *)accessToken { //safe definitions exist
+    return kAppSettingAppstoreAccessToken;
 }
 
-+ (NSString *)clientID {
-#ifdef DEBUG
-    return kAppSettingDebugClientId;
-#elif ADHOC
-    return kAppSettingAdHocClientId;
-#elif QA
-    return kAppSettingQAClientId;
-#else
-    return kAppSettingReleaseClientId;
-#endif
++ (NSString *)appID { //safe definitions exist
+    return kAppSettingAppstoreAppId;
 }
 
-+ (NSString *)clientSecret {
-#ifdef DEBUG
-    return kAppSettingDebugClientSecret;
-#elif ADHOC
-    return kAppSettingAdHocClientSecret;
-#elif QA
-    return kAppSettingQAClientSecret;
-#else
-    return kAppSettingReleaseClientSecret;
-#endif
++ (NSString *)clientID { //safe definitions exist
+    return kAppSettingAppstoreClientId;
+}
+
++ (NSString *)clientSecret { //safe definitions exist
+    return kAppSettingAppstoreClientSecret;
 }
 
 + (NSString *)messageIdVanilla {
-#ifdef DEBUG
-    return kAppSettingDebugOutboundMessageIdVanilla;
-#elif ADHOC
-    return kAppSettingAdHocOutboundMessageIdVanilla;
-#elif QA
-    return kAppSettingQAOutboundMessageIdVanilla;
-#else
-    return kAppSettingReleaseOutboundMessageIdVanilla;
-#endif
+    return kAppSettingAppstoreOutboundMessageIdVanilla;
 }
 
 + (NSString *)messageIdCloudPage {
-#ifdef DEBUG
-    return kAppSettingDebugOutboundMessageIdCloudPage;
-#elif ADHOC
-    return kAppSettingAdHocOutboundMessageIdCloudPage;
-#elif QA
-    return kAppSettingQAOutboundMessageIdCloudPage;
-#else
-    return kAppSettingReleaseOutboundMessageIdCloudPage;
-#endif
+    return kAppSettingAppstoreOutboundMessageIdCloudPage;
+}
+
++ (NSString *)fuelAccessTokenRoute {
+    return kAppSettingAppstoreAccessTokenUrl;
 }
 
 #pragma mark - public methods
-
-+ (NSString *)fuelAccessTokenRoute {
-#if QA
-    return @"";
-#else
-    return @"https://auth.exacttargetapis.com/v1/requestToken";
-#endif
-}
 
 + (NSString *)appVersion {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
@@ -255,15 +213,11 @@
 }
 
 + (NSString *)buildType {
-#ifdef DEBUG
-    return @"DEBUG";
-#elif ADHOC
-    return @"ADHOC";
-#elif QA
-    return @"QA";
-#else
-    return @"RELEASE";
-#endif
+    return @"APPSTORE";
+}
+
++ (BOOL) isInternalBuild {
+    return NO;
 }
 
 #pragma mark - private methods
@@ -324,6 +278,10 @@
     }
     
     return tags;
+}
+
++ (BOOL) isSendMessageAvailable {
+    return YES;
 }
 
 @end

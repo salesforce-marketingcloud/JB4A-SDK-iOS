@@ -117,12 +117,15 @@
 }
 
 - (void)setupButtonView {
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo]) {
+    
+    /* If both View Message and Send Message are enabled */
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo] && [PUDUtility isSendMessageAvailable]) {
         self.viewMessageButtonHidden = NO;
-        
         /**
-         *  Create the view last message button
+         *  Create the send message button Create the view last message button
          */
+        //Display it only if the ClientID is present
+        
         UIButton *sendMessageButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, (self.view.frame.size.width / 2) - 0.5, 43)];
         [sendMessageButton addTarget:self action:@selector(sendMessageNowButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [sendMessageButton setTitle:@"SEND MESSAGE" forState:UIControlStateNormal];
@@ -142,7 +145,7 @@
         [self.buttonView addSubview:separatorView];
         
         /**
-         *  Create the send message button
+         *  Create the view last message button
          */
         UIButton *viewMessageButton = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width / 2) + 1, sendMessageButton.frame.origin.y, sendMessageButton.frame.size.width, sendMessageButton.frame.size.height)];
         [viewMessageButton addTarget:self action:@selector(viewLastMessageButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -156,11 +159,12 @@
         viewMessageButton.showsTouchWhenHighlighted = sendMessageButton.showsTouchWhenHighlighted;
         [self.buttonView addSubview:viewMessageButton];
     }
-    else {
+    /* If only Send Message is enabled */
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo] && [PUDUtility isSendMessageAvailable]) {
         self.viewMessageButtonHidden = YES;
         
         /**
-         *  Create the view last message button
+         *  Create the send message button
          */
         UIButton *sendMessageButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
         [sendMessageButton addTarget:self action:@selector(sendMessageNowButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -172,6 +176,23 @@
         sendMessageButton.titleEdgeInsets = UIEdgeInsetsMake(44 - halfImageViewWidth - 4, -sendMessageButton.imageView.frame.size.width, 0, 0);
         sendMessageButton.imageEdgeInsets = UIEdgeInsetsMake(-12, sendMessageButton.frame.size.width / 2 - sendMessageButton.imageView.frame.size.width * 3, 0, 0);
         [self.buttonView addSubview:sendMessageButton];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo] && ![PUDUtility isSendMessageAvailable]){
+        /**
+         *  Create the view message button
+         */
+        UIButton *viewMessageButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+        [viewMessageButton addTarget:self action:@selector(viewLastMessageButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [viewMessageButton setTitle:@"VIEW MESSAGE" forState:UIControlStateNormal];
+        [viewMessageButton setImage:[UIImage imageNamed:@"view"] forState:UIControlStateNormal];
+        viewMessageButton.titleLabel.font = [UIFont boldSystemFontOfSize:10.0];
+        
+        CGFloat halfImageViewWidth = viewMessageButton.imageView.frame.size.width / 2;
+        viewMessageButton.titleEdgeInsets = UIEdgeInsetsMake(44 - halfImageViewWidth - 4, -viewMessageButton.imageView.frame.size.width, 0, 0);
+        viewMessageButton.imageEdgeInsets = UIEdgeInsetsMake(-12, viewMessageButton.frame.size.width / 2 - viewMessageButton.imageView.frame.size.width * 3, 0, 0);
+        [self.buttonView addSubview:viewMessageButton];
+        
     }
 }
 
