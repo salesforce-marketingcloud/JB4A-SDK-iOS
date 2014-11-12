@@ -7,7 +7,15 @@ For more information, please see [Code@ExactTarget](http://code.exacttarget.com)
 ## Release History
 As of July 2014, we have clarified the version numbering of the SDK and versions that will be supported.  For more information see [here](https://code.exacttarget.com/apis-sdks/mobilepush-sdks/mobile-push-sdk.html).
 
-#### Version 3.3.0
+### Version 3.4.0
+_Released November 10, 2014, correlating to ExactTarget's 2014-08 Release_
+_(supported)_
+
+* MPUSH-2854 - Continued Beacon work
+* MPUSH-2855 - Fix for geo-fence messages
+* MPUSH-3010 - Update for local notification payload messages
+
+### Version 3.3.0
 _Released August 25, 2014, correlating to ExactTarget's 2014-06 Release_
 _(supported)_
 

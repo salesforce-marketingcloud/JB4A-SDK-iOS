@@ -11,7 +11,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">ExactTarget MobilePush SDK </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Journey Builder for Apps SDK </a></h1>
 				<a id="developerHome" href="../index.html">ExactTarget, a salesforce.com Company</a>
 			</div>
 			
@@ -45,11 +45,15 @@
 	
 	<option value="//api/name/badge">&nbsp;&nbsp;&nbsp;&nbsp;badge</option>
 	
+	<option value="//api/name/category">&nbsp;&nbsp;&nbsp;&nbsp;category</option>
+	
 	<option value="//api/name/contentType">&nbsp;&nbsp;&nbsp;&nbsp;contentType</option>
 	
 	<option value="//api/name/endDate">&nbsp;&nbsp;&nbsp;&nbsp;endDate</option>
 	
 	<option value="//api/name/ephemeralMessage">&nbsp;&nbsp;&nbsp;&nbsp;ephemeralMessage</option>
+	
+	<option value="//api/name/hasShownForBeacon">&nbsp;&nbsp;&nbsp;&nbsp;hasShownForBeacon</option>
 	
 	<option value="//api/name/keyValuePairs">&nbsp;&nbsp;&nbsp;&nbsp;keyValuePairs</option>
 	
@@ -171,11 +175,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/badge">badge</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/category">category</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/contentType">contentType</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/endDate">endDate</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ephemeralMessage">ephemeralMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasShownForBeacon">hasShownForBeacon</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyValuePairs">keyValuePairs</a></span></li>
 	
@@ -368,6 +376,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/category">&nbsp;&nbsp;category</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/keyValuePairs">&nbsp;&nbsp;keyValuePairs</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -477,6 +491,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/notification">&nbsp;&nbsp;notification</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasShownForBeacon">&nbsp;&nbsp;hasShownForBeacon</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -739,6 +759,47 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/category" title="category"></a>
+	<h3 class="subsubtitle method-title">category</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The category name for an inter<a href="#//api/name/active">active</a> <a href="#//api/name/notification">notification</a> if it has one.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *category</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The category name for an inter<a href="#//api/name/active">active</a> <a href="#//api/name/notification">notification</a> if it has one.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/contentType" title="contentType"></a>
 	<h3 class="subsubtitle method-title">contentType</h3>
 	
@@ -845,6 +906,47 @@
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Ephemeral Messages disappear when the user walks away from the iBeacon that tripped the message. The default value is NO.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasShownForBeacon" title="hasShownForBeacon"></a>
+	<h3 class="subsubtitle method-title">hasShownForBeacon</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used while ranging beacons to determine if a message for a beacon has been shown based on the <a href="#//api/name/proximity">proximity</a> trigger.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL hasShownForBeacon</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used while ranging beacons to determine if a message for a beacon has been shown based on the <a href="#//api/name/proximity">proximity</a> trigger.</p>
 	</div>
 	
 	
@@ -2675,7 +2777,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ExactTarget, a salesforce.com Company. All rights reserved. (Last updated: 2014-08-22)</span><br />
+						<p><span class="copyright">&copy; 2014 ExactTarget, a salesforce.com Company. All rights reserved. (Last updated: 2014-11-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
