@@ -1,0 +1,27 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "PUDConstants.h"
+    #import "PUDUtility.h"
+    #import "UIColor+ExactTargetColors.h"
+#endif
+
+#if defined (QA) || defined (DEBUG)
+#define ETLog(fmt, ...) NSLog((@"[ET] %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+//        #define ETLog(fmt, ...) NSLog((@"[ET] %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define ETLog(fmt, ...)
+#endif

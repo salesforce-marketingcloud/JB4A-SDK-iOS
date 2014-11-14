@@ -1,7 +1,7 @@
 Push Constants
 ==============
 
-To ensure consistency in implementation and ease development, a set of constants are used inside of the ET SDK. Below is a definition of each and rationale for their usage. 
+To ensure consistency in implementation and ease development, a set of constants are used inside of the Journey Builder for Apps SDK. Below is a definition of each and rationale for their usage. 
 
 
 ETData Request Notifications Constants
