@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ExactTargetEnhancedPushDataSource Class Reference</title>
+		<title>ETURLConnection Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ExactTargetEnhancedPushDataSource Class Reference</h1>
+				<h1 class="hideInXcode">ETURLConnection Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,9 +39,9 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/inboxTableView">&nbsp;&nbsp;&nbsp;&nbsp;inboxTableView</option>
+	<option value="//api/name/sendingObject">&nbsp;&nbsp;&nbsp;&nbsp;sendingObject</option>
 	
-	<option value="//api/name/messages">&nbsp;&nbsp;&nbsp;&nbsp;messages</option>
+	<option value="//api/name/tag">&nbsp;&nbsp;&nbsp;&nbsp;tag</option>
 	
 	
 	
@@ -71,9 +71,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/inboxTableView">inboxTableView</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendingObject">sendingObject</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messages">messages</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tag">tag</a></span></li>
 	
 </ul></li>
 
@@ -86,7 +86,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ExactTargetEnhancedPushDataSource Class Reference" name="top"></a>
+				<a title="ETURLConnection Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -95,7 +95,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ExactTargetEnhancedPushDataSource Class Reference</h1>
+						<h1 class="title title-header">ETURLConnection Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -103,13 +103,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
-</tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">UITableViewDataSource</td>
+	<td class="specification-value">NSURLConnection</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ExactTargetEnhancedPushDataSource.h</td>
+	<td class="specification-value">ETURLConnection.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -119,11 +116,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The ExactTargetEnhancedPushDataSource is an interface object for CloudPage support. It was designed to be used as the datasource for a UITableView, and can be allocated and used as such without too much other customization. Of course, you are welcomed to use it any way you want other than that.</p>
-
-<p>Should you wish to customize the display of the Data Source, you should subclass from here. At that time, you may override any typical UITableViewDataSource protocol members. You will likely be the most interested in cellForRowAtIndexPath:. If you do, you can access the current message by asking the <a href="#//api/name/messages">messages</a> array for the object corresponding to your NSIndexPath row. It will be an <a href="../Classes/ETMessage.html">ETMessage</a> object.</p>
-
-<p>Or, for the most customization, make a new one of these and only access the <a href="#//api/name/messages">messages</a> property. If you do that, you&rsquo;ll need to be both the delegate and data source for your table, but you can do whatever you like. The <a href="#//api/name/messages">messages</a> array will contain <a href="../Classes/ETMessage.html">ETMessage</a> objects, and you can see which properties are available on that by checking it&rsquo;s header.</p>
+						<p>ETURLConnection is a wrapper around vanilla NSURLConnections that is useful because it adds things that Apple should have (tags) or things needed for <a href="../Classes/ETPhoneHome.html">ETPhoneHome</a> to work correctly (reference to the sending object. Otherwise, it&rsquo;s just a regular NSURLConnection.</p>
 					</div>
 					
 					
@@ -141,13 +134,13 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/messages">&nbsp;&nbsp;messages</a></code>
+		<code><a href="#//api/name/tag">&nbsp;&nbsp;tag</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/inboxTableView">&nbsp;&nbsp;inboxTableView</a></code>
+		<code><a href="#//api/name/sendingObject">&nbsp;&nbsp;sendingObject</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -165,18 +158,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/inboxTableView" title="inboxTableView"></a>
-	<h3 class="subsubtitle method-title">inboxTableView</h3>
+	<a name="//api/name/sendingObject" title="sendingObject"></a>
+	<h3 class="subsubtitle method-title">sendingObject</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>This is a reference to the tableview in your UIViewController. We need a reference to it to reload data periodically.</p>
+		<p>A reference to the sendingObject for this connection. That object will save the response data and status code, etc. This allows us to fire off a bunch of these things in parallel.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) UITableView *inboxTableView</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) ETGenericUpdate *sendingObject</code></div>
 
     
 	
@@ -188,7 +181,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This is a reference to the tableview in your UIViewController. We need a reference to it to reload data periodically.</p>
+		<p>A reference to the sendingObject for this connection. That object will save the response data and status code, etc. This allows us to fire off a bunch of these things in parallel.</p>
 	</div>
 	
 	
@@ -199,25 +192,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ExactTargetEnhancedPushDataSource.h</code><br />
+		<code class="declared-in-ref">ETURLConnection.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/messages" title="messages"></a>
-	<h3 class="subsubtitle method-title">messages</h3>
+	<a name="//api/name/tag" title="tag"></a>
+	<h3 class="subsubtitle method-title">tag</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>This array contains ETMessages, suitable for display in a UITableView or other presentation apparatus of your liking. Please see <a href="../Classes/ETMessage.html">ETMessage</a> for a list of properties available.</p>
+		<p>The tag of this particular connection. Usually the BackgroundTaskID from iOS.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *messages</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) int tag</code></div>
 
     
 	
@@ -229,7 +222,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This array contains ETMessages, suitable for display in a UITableView or other presentation apparatus of your liking. Please see <a href="../Classes/ETMessage.html">ETMessage</a> for a list of properties available.</p>
+		<p>The tag of this particular connection. Usually the BackgroundTaskID from iOS.</p>
 	</div>
 	
 	
@@ -240,7 +233,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ExactTargetEnhancedPushDataSource.h</code><br />
+		<code class="declared-in-ref">ETURLConnection.h</code><br />
 	</div>				
 	
 	

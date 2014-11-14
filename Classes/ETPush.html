@@ -11,8 +11,8 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">ExactTarget MobilePush SDK </a></h1>
-				<a id="developerHome" href="../index.html">ExactTarget, a saleforce.com Company</a>
+				<h1><a id="libraryTitle" href="../index.html">Journey Builder for Apps SDK </a></h1>
+				<a id="developerHome" href="../index.html">ExactTarget, a salesforce.com Company</a>
 			</div>
 			
 			<div id="title" role="banner">
@@ -41,6 +41,8 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/ETLogger:">&nbsp;&nbsp;&nbsp;&nbsp;+ ETLogger:</option>
+	
 	<option value="//api/name/hardwareIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;+ hardwareIdentifier</option>
 	
 	<option value="//api/name/isPushEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isPushEnabled</option>
@@ -48,6 +50,8 @@
 	<option value="//api/name/pushManager">&nbsp;&nbsp;&nbsp;&nbsp;+ pushManager</option>
 	
 	<option value="//api/name/safeDeviceIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;+ safeDeviceIdentifier</option>
+	
+	<option value="//api/name/setETLoggerToRequiredState:">&nbsp;&nbsp;&nbsp;&nbsp;+ setETLoggerToRequiredState:</option>
 	
 	
 	
@@ -76,7 +80,11 @@
 	
 	<option value="//api/name/configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andCloudPages:">&nbsp;&nbsp;&nbsp;&nbsp;- configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andCloudPages:</option>
 	
+	<option value="//api/name/currentUserNotificationSettings">&nbsp;&nbsp;&nbsp;&nbsp;- currentUserNotificationSettings</option>
+	
 	<option value="//api/name/deviceToken">&nbsp;&nbsp;&nbsp;&nbsp;- deviceToken</option>
+	
+	<option value="//api/name/didRegisterUserNotificationSettings:">&nbsp;&nbsp;&nbsp;&nbsp;- didRegisterUserNotificationSettings:</option>
 	
 	<option value="//api/name/getSubscriberKey">&nbsp;&nbsp;&nbsp;&nbsp;- getSubscriberKey</option>
 	
@@ -84,11 +92,17 @@
 	
 	<option value="//api/name/handleNotification:forApplicationState:">&nbsp;&nbsp;&nbsp;&nbsp;- handleNotification:forApplicationState:</option>
 	
+	<option value="//api/name/isRegisteredForRemoteNotifications">&nbsp;&nbsp;&nbsp;&nbsp;- isRegisteredForRemoteNotifications</option>
+	
 	<option value="//api/name/openDirectDelegate">&nbsp;&nbsp;&nbsp;&nbsp;- openDirectDelegate</option>
 	
 	<option value="//api/name/registerDeviceToken:">&nbsp;&nbsp;&nbsp;&nbsp;- registerDeviceToken:</option>
 	
 	<option value="//api/name/registerForRemoteNotificationTypes:">&nbsp;&nbsp;&nbsp;&nbsp;- registerForRemoteNotificationTypes:</option>
+	
+	<option value="//api/name/registerForRemoteNotifications">&nbsp;&nbsp;&nbsp;&nbsp;- registerForRemoteNotifications</option>
+	
+	<option value="//api/name/registerUserNotificationSettings:">&nbsp;&nbsp;&nbsp;&nbsp;- registerUserNotificationSettings:</option>
 	
 	<option value="//api/name/removeAttributeNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- removeAttributeNamed:</option>
 	
@@ -146,6 +160,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ETLogger:">ETLogger:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hardwareIdentifier">hardwareIdentifier</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isPushEnabled">isPushEnabled</a></span></li>
@@ -153,6 +169,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pushManager">pushManager</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/safeDeviceIdentifier">safeDeviceIdentifier</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setETLoggerToRequiredState:">setETLoggerToRequiredState:</a></span></li>
 	
 </ul></li>
 
@@ -182,7 +200,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andCloudPages:">configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andCloudPages:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentUserNotificationSettings">currentUserNotificationSettings</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceToken">deviceToken</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didRegisterUserNotificationSettings:">didRegisterUserNotificationSettings:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getSubscriberKey">getSubscriberKey</a></span></li>
 	
@@ -190,11 +212,17 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleNotification:forApplicationState:">handleNotification:forApplicationState:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRegisteredForRemoteNotifications">isRegisteredForRemoteNotifications</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openDirectDelegate">openDirectDelegate</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerDeviceToken:">registerDeviceToken:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerForRemoteNotificationTypes:">registerForRemoteNotificationTypes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerForRemoteNotifications">registerForRemoteNotifications</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerUserNotificationSettings:">registerUserNotificationSettings:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAttributeNamed:">removeAttributeNamed:</a></span></li>
 	
@@ -314,6 +342,36 @@
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/registerForRemoteNotifications">&ndash;&nbsp;registerForRemoteNotifications</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRegisteredForRemoteNotifications">&ndash;&nbsp;isRegisteredForRemoteNotifications</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/registerUserNotificationSettings:">&ndash;&nbsp;registerUserNotificationSettings:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/currentUserNotificationSettings">&ndash;&nbsp;currentUserNotificationSettings</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didRegisterUserNotificationSettings:">&ndash;&nbsp;didRegisterUserNotificationSettings:</a></code>
+	</span>
+	
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/registerForRemoteNotificationTypes:">&ndash;&nbsp;registerForRemoteNotificationTypes:</a></code>
 	</span>
@@ -495,6 +553,18 @@
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setETLoggerToRequiredState:">+&nbsp;setETLoggerToRequiredState:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ETLogger:">+&nbsp;ETLogger:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -509,6 +579,47 @@
 					<div class="section section-methods">
 						<a title="Class Methods" name="class_methods"></a>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/ETLogger:" title="ETLogger:"></a>
+	<h3 class="subsubtitle method-title">ETLogger:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>To Log the string whenever [ETPush setETLoggerToState:YES]</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)ETLogger:(NSString *)<em>stringToBeLogged</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>To Log the string whenever [ETPush setETLoggerToState:YES]</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/hardwareIdentifier" title="hardwareIdentifier"></a>
@@ -672,6 +783,47 @@
 		<p>Gets the Apple-safe, unique Device Identifier that ET will later use to identify the device.</p>
 
 <p>Note that this method is compliant with Apple&rsquo;s compliance rules, but may not be permanent.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setETLoggerToRequiredState:" title="setETLoggerToRequiredState:"></a>
+	<h3 class="subsubtitle method-title">setETLoggerToRequiredState:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the Log Level</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setETLoggerToRequiredState:(BOOL)<em>state</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set the Log Level</p>
 	</div>
 	
 	
@@ -1277,6 +1429,52 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/currentUserNotificationSettings" title="currentUserNotificationSettings"></a>
+	<h3 class="subsubtitle method-title">currentUserNotificationSettings</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Wrapper for iOS' currentUserNotificationSettings; call.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIUserNotificationSettings *)currentUserNotificationSettings</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Wrapper for iOS' currentUserNotificationSettings; call.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/deviceToken" title="deviceToken"></a>
 	<h3 class="subsubtitle method-title">deviceToken</h3>
 	
@@ -1306,6 +1504,52 @@
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Returns the device token as a NSString. As requested via GitHub (Issue #3).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/didRegisterUserNotificationSettings:" title="didRegisterUserNotificationSettings:"></a>
+	<h3 class="subsubtitle method-title">didRegisterUserNotificationSettings:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Wrapper for iOS' didRegisterUserNotificationSettings; callback.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)didRegisterUserNotificationSettings:(UIUserNotificationSettings *)<em>notificationSettings</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the current UIUserNotificationSettings object</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Wrapper for iOS' didRegisterUserNotificationSettings; callback.</p>
 	</div>
 	
 	
@@ -1492,6 +1736,52 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/isRegisteredForRemoteNotifications" title="isRegisteredForRemoteNotifications"></a>
+	<h3 class="subsubtitle method-title">isRegisteredForRemoteNotifications</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Wrapper for iOS' isRegisteredForRemoteNotifications; call.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isRegisteredForRemoteNotifications</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>BOOL</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Wrapper for iOS' isRegisteredForRemoteNotifications; call.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/openDirectDelegate" title="openDirectDelegate"></a>
 	<h3 class="subsubtitle method-title">openDirectDelegate</h3>
 	
@@ -1602,7 +1892,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Wrapper for iOS' application:registerForRemoteNotifications; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+		<p>Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled. (<b class="deprecated">Deprecated:</b><span class="deprecated"> in IOS8 - use registerUserNotificationSettings instead</span>)</p>
 	</div>		
 	
     
@@ -1623,13 +1913,120 @@
 	
 	
 	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
 	
 	
 	
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Wrapper for iOS' application:registerForRemoteNotifications; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+		<p>Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/registerForRemoteNotifications" title="registerForRemoteNotifications"></a>
+	<h3 class="subsubtitle method-title">registerForRemoteNotifications</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)registerForRemoteNotifications</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/registerUserNotificationSettings:" title="registerUserNotificationSettings:"></a>
+	<h3 class="subsubtitle method-title">registerUserNotificationSettings:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Wrapper for iOS' application:registerUserNotificationSettings; call.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)registerUserNotificationSettings:(UIUserNotificationSettings *)<em>notificationSettings</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>notificationSettings</em></dt>
+			<dd><p>The UIUserNotificationSettings object that the application would like to use for push. These are pipe-delimited, and use Apple&rsquo;s native values</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Wrapper for iOS' application:registerUserNotificationSettings; call.</p>
 	</div>
 	
 	
@@ -2112,7 +2509,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ExactTarget, a saleforce.com Company. All rights reserved. (Last updated: 2014-07-21)</span><br />
+						<p><span class="copyright">&copy; 2014 ExactTarget, a salesforce.com Company. All rights reserved. (Last updated: 2014-11-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
