@@ -1,7 +1,6 @@
-# ExactTarget Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK)
+# Journey Builder for Apps iOS SDK
 
-This is the git repository for the ExactTarget Journey Builder for Apps iOS SDK (formerly MobilePush iOS SDK).
-
+This is the git repository for the Salesforce Marketing Cloud Journey Builder for Apps iOS SDK.<br><b>Formerly ExactTarget MobilePush IOS SDK</b>
 For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://exacttarget.github.io/MobilePushSDK-iOS).
 
 ## Release History
