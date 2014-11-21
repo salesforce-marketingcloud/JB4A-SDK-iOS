@@ -6,12 +6,12 @@ This is the git repository for the Salesforce Marketing Cloud Journey Builder fo
 For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://exacttarget.github.io/JB4A-SDK-iOS).
 
 ### Version 3.4.1 - HF.1
-_Released November 21, 2014, correlating to ExactTarget's 2014-08 Release_
+_Released November 21, 2014_
 _(supported)_
 * HF for Event Analytics
 
 ### Version 3.4.0
-_Released November 10, 2014, correlating to ExactTarget's 2014-08 Release_
+_Released November 17, 2014, correlating to ExactTarget's 2014-08 Release_
 _(supported)_
 
 * MPUSH-2854 - Continued Beacon work
@@ -44,13 +44,13 @@ _(supported)_
 
 ### Version 3.1.1
 _Released April 15, 2014_
-_(supported)_
+<span class="alert">_This version no longer supported as of November 17, 2014._</span>
 
 * MPUSH-2047 - Addresses and issue where the SDK was calling an iOS7-only method, breaking backwards compatibility. Returns the SDK to iOS6+ compatibility. 
 
 ### Version 3.1.0
 _Released April 11, 2014, correlating to ExactTarget's 2014-03 Release_
-_(supported)_
+<span class="alert">_This version no longer supported as of November 17, 2014._</span>
 
 * New sample project to more simply demonstrate the SDK, as well as some of it's new features. Also, addresses several issues with references and functionality updates.
 * MPUSH-1936 - Fix to account for null messagesPerPeriod
