@@ -5,6 +5,11 @@ This is the git repository for the Salesforce Marketing Cloud Journey Builder fo
 
 For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://exacttarget.github.io/JB4A-SDK-iOS).
 
+### Version 3.4.1 - HF.1
+_Released November 21, 2014, correlating to ExactTarget's 2014-08 Release_
+_(supported)_
+* HF for Event Analytics
+
 ### Version 3.4.0
 _Released November 10, 2014, correlating to ExactTarget's 2014-08 Release_
 _(supported)_
