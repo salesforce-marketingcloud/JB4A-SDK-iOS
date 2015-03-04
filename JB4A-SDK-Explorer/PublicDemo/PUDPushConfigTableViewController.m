@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2014 ExactTarget, Inc.
+ * Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -33,7 +33,7 @@
 //  PublicDemo
 //
 //  Created by Swetha Pendyala (Contractor) on 7/29/14.
-//  Copyright (c) 2014 ExactTarget. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "PUDPushConfigTableViewController.h"

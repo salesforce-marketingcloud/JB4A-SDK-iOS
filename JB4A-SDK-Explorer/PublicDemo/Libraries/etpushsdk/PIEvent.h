@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Tom Brooks (Contractor) on 1/13/15.
-//  Copyright (c) 2015 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "ETGenericUpdate.h"

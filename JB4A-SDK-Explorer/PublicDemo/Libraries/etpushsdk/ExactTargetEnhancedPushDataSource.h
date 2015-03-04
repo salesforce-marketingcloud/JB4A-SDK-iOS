@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Eddie Roger on 8/23/13.
-//  Copyright (c) 2013 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import <UIKit/UIKit.h> // need UITableViewDataSource, so we use UIKit, not Foundation
