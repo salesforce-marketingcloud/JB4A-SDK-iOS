@@ -7,8 +7,8 @@
 //
 
 // SDK Version
-#define ETPushSDKVersionString @"3.4.0"
-#define ETPushSDKVersionNumber 3400
+#define ETPushSDKVersionString @"3.4.2"
+#define ETPushSDKVersionNumber 3402
 
 /** 
  Helpers.
@@ -63,6 +63,7 @@
 static NSString * const ETLocationServicesActive    = @"ETLocationServicesActive";
 static NSString * const ETCloudPagesActive          = @"ETCloudPagesActive";
 static NSString * const ETAnalyticsActive           = @"ETAnalyticsActive";
+static NSString * const ETPIAnalyticsActive         = @"ETPIAnalyticsActive";
 
 typedef enum {
     PushOriginationStateBackground = 0,

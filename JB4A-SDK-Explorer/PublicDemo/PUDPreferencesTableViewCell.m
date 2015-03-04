@@ -82,7 +82,7 @@
         self.attributeTextField.placeholder = data.placeholderString;
         self.attributeTextField.text = data.textFieldValue;
     }
-
+    
     else if (indexPath.section == kPUDSettingsActivitySectionIndex) {
         self.attributeTextField.hidden = YES;
         self.titleLabel.hidden = NO;

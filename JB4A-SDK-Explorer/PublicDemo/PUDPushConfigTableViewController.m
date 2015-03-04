@@ -117,7 +117,7 @@
         NSDictionary *pushConfigDict = [NSJSONSerialization JSONObjectWithData:pushConfig options:NSJSONReadingMutableContainers error:&error];
         NSMutableDictionary *details = [pushConfigDict objectForKey:@"PushConfig"];
         
-        NSLog(@"Push Config: %@", [[NSString alloc] initWithData:pushConfig encoding:NSUTF8StringEncoding]);
+               NSLog(@"Push Config: %@", [[NSString alloc] initWithData:pushConfig encoding:NSUTF8StringEncoding]);
         
         PUDPushConfig *_lastPushConfig = [PUDPushConfig pushConfigFromDictionary:details];
         

@@ -584,6 +584,14 @@
                                                options:kNilOptions
                                                metrics:nil
                                                views:views]];
+        
+        [badgeSwitch.superview addConstraint: [NSLayoutConstraint constraintWithItem:badgeSwitch
+                                                                      attribute:NSLayoutAttributeCenterY
+                                                                      relatedBy:NSLayoutRelationEqual
+                                                                         toItem:cell.contentView
+                                                                      attribute:NSLayoutAttributeCenterY
+                                                                     multiplier:1
+                                                                       constant:0]];
     }
     
     /**
@@ -605,6 +613,14 @@
                                                                       attribute:NSLayoutAttributeCenterX
                                                                      multiplier:1
                                                                        constant:0]];
+        
+        [cell.contentView addConstraint: [NSLayoutConstraint constraintWithItem:sendButton
+                                                                      attribute:NSLayoutAttributeCenterY
+                                                                      relatedBy:NSLayoutRelationEqual
+                                                                         toItem:cell.contentView
+                                                                      attribute:NSLayoutAttributeCenterY
+                                                                     multiplier:1
+                                                                       constant:0]];
     }
     
     /**
@@ -623,6 +639,11 @@
                                              options:kNilOptions
                                              metrics:nil
                                              views:views]];
+        [textField.superview addConstraints:[NSLayoutConstraint
+                                             constraintsWithVisualFormat:@"V:|[textField]|"
+                                             options:kNilOptions
+                                             metrics:nil
+                                             views:views]];
     }
     
     /**
@@ -634,12 +655,21 @@
         segmentedControl.translatesAutoresizingMaskIntoConstraints = NO;
         [cell.contentView addSubview:segmentedControl];
         
-        NSDictionary *views = NSDictionaryOfVariableBindings(segmentedControl);
-        [textField.superview addConstraints:[NSLayoutConstraint
-                                             constraintsWithVisualFormat:@"|-15.0-[segmentedControl]-15.0-|"
-                                             options:kNilOptions
-                                             metrics:nil
-                                             views:views]];
+        [segmentedControl.superview addConstraint: [NSLayoutConstraint constraintWithItem:segmentedControl
+                                                                      attribute:NSLayoutAttributeCenterX
+                                                                      relatedBy:NSLayoutRelationEqual
+                                                                         toItem:cell.contentView
+                                                                      attribute:NSLayoutAttributeCenterX
+                                                                     multiplier:1
+                                                                       constant:0]];
+        
+        [cell.contentView addConstraint: [NSLayoutConstraint constraintWithItem:segmentedControl
+                                                                      attribute:NSLayoutAttributeCenterY
+                                                                      relatedBy:NSLayoutRelationEqual
+                                                                         toItem:cell.contentView
+                                                                      attribute:NSLayoutAttributeCenterY
+                                                                     multiplier:1
+                                                                       constant:0]];
     }
     
     /**
@@ -744,7 +774,7 @@
 
 - (void)showSendingInformationAlert {
     NSString *text = @"To view the push as a standard iOS alert, exit out of the app (via the home button) after receiving the success message.";
-    [[[UIAlertView alloc] initWithTitle:nil message:text delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Push Warning" message:text delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

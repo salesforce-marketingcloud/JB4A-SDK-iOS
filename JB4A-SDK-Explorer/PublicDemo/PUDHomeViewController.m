@@ -98,7 +98,7 @@
     NSString *ret = @"<b>Purpose</b><hr>"
                      "<ul>"
                      "<li>Provides a UI for demonstrating with various features of the JB4A SDK.</li><br/>"
-                     "<li>Provides an example and template to for creating an iOS app that uses the JB4A SDK.</li><br/>"
+                     "<li>Provides an example and template for creating an iOS app that uses the JB4A SDK.</li><br/>"
                      "<li>Allows you to review the SDK components by collecting debugging information and sharing via email.</li><br/>"
                      "</ul>";
     

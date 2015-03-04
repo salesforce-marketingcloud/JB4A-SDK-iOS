@@ -66,6 +66,12 @@
 
 @implementation PUDPreferencesTableViewController
 
+/**
+ The key that is used to store the access token inside NSUserDefaults
+ */
+NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
+
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -86,20 +92,35 @@
     singleTap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:singleTap];
     
+#if defined (QA) || defined (DEBUG)
+    [self listeningForConfigChanges];
+#endif
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     
+#if defined (QA) || defined (DEBUG)
+    _dataArray = @[[self currentPushConfig],[self personalInformationData], [self activityTagsData]];
+#else
     _dataArray = @[[self personalInformationData], [self activityTagsData]];
-
+#endif
+    
+    //Show this only once per app load. Its really annoying getting this pop-up everytime you switch screens.
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:updatePreferencesBool])
+    {
+        [[[UIAlertView alloc] initWithTitle:@"Updating Preferences"
+                                    message:@"Updates to preferences can take up to 15 mins to be processed. Before sending a message, wait 15 mins for changes to take effect."
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:updatePreferencesBool];
+    }
     // show alert about 15 min processing time
-    [[[UIAlertView alloc] initWithTitle:@"Updating Preferences"
-                                message:@"Updates to preferences can take up to 15 mins to be processed. Before sending a message, wait 15 mins for changes to take effect."
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
+    
     
     [self.tableView reloadData];
 }
@@ -118,6 +139,13 @@
 
 #pragma mark - table data creation
 
+#if defined (QA) || defined (DEBUG)
+- (NSArray *) currentPushConfig {
+    PUDPreferencesTableData *pushConfig = [[PUDPreferencesTableData alloc] init];
+    pushConfig.titleString = [PUDPushConfig getCurrentConfig].configurationName;
+    return @[pushConfig];
+}
+#endif
 - (NSArray *)personalInformationData {
     
     PUDPreferencesTableData *firstName = [[PUDPreferencesTableData alloc] init];
@@ -252,7 +280,6 @@
     else if (section == kPUDSettingsActivitySectionIndex) {
         return @"Activity Tags";
     }
-    
     return nil;
 }
 
@@ -265,7 +292,6 @@
     else if (section == kPUDSettingsActivitySectionIndex) {
         return @"Tags are used to specify which messsages a customer wishes to receive. For example, to receive messages for an interest in a particular activity.\n\n";
     }
-    
     return nil;
 }
 
@@ -351,4 +377,26 @@
     return NO;
 }
 
+
+# pragma mark - Custom Methods
+
+#if defined (QA) || defined (DEBUG)
+// Registering as observer for push configuration changes
+- (void) listeningForConfigChanges {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reloadView)
+                                                 name:kPUDPushConfigChangedNotification
+                                               object:nil];
+}
+
+- (void) reloadView {
+    /*
+     This method makes sure the message details change whenever the Config chnages.
+     */
+    _dataArray = @[[self currentPushConfig],[self personalInformationData], [self activityTagsData]];
+    
+    [self.tableView reloadData];
+}
+
+#endif
 @end

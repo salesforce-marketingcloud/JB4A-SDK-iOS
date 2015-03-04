@@ -73,10 +73,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Turn off any URL caching for security reasons. Keeps any sensitive data from being available to prying eyes.
+    NSURLCache *sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:0
+                                                            diskCapacity:0
+                                                                diskPath:nil];
+    [NSURLCache setSharedURLCache:sharedCache];
+    
+    // Enable PI Analytics for our apps for now
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:ETPIAnalyticsActive];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     // set status bar style
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    // set the overall app tint color
+    [[UINavigationBar appearance] setBarTintColor:[UIColor etPrimaryOrange]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
     // set page control appearance
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
@@ -95,7 +108,7 @@
     /**
      *  The below method has to be implemented ONLY ONCE in the SDK. The below conditions are specifically for this app and you will NOT need multiple/ conditional implementation like this in your own app
      */
-    
+
     [[ETPush pushManager] configureSDKWithAppID:[PUDUtility appID] // The App ID from Code@ExactTarget
                                  andAccessToken:[PUDUtility accessToken] // The Access Token from Code@ExactTarget
                                   withAnalytics:YES // Whether or not you would like to use ExactTarget analytics services
@@ -542,22 +555,22 @@
  */
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
+
     if (buttonIndex != alertView.cancelButtonIndex) {
-            /**
-             *  Handle the payload immediately because the subscriber clicked the view button
-             */
-            NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
-            BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
-            BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
-            
-            if (hasOpenDirectPayload) {
-                [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
-            }
-            else if (hasDiscountCodeCustomKey) {
-                [self handleDiscountCodePayload];
-            }
+        /**
+         *  Handle the payload immediately because the subscriber clicked the view button
+         */
+        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
+        BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
+        BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
+        
+        if (hasOpenDirectPayload) {
+            [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
         }
+        else if (hasDiscountCodeCustomKey) {
+            [self handleDiscountCodePayload];
+        }
+    }
 }
 
 - (void)handleOpenDirectPayload:(NSString *)payload {

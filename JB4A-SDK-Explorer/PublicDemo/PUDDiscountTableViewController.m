@@ -130,7 +130,16 @@
     PUDDiscountTableData *data = self.dataArray[indexPath.section];
     
     if (data.usesBarcodeFont && data.usesBarcodeFont.boolValue) {
-        cell.textLabel.font = [UIFont fontWithName:kPUDAppBarcodeFont size:150.0];
+        NSString *barcodeFontName;
+        // IOS7 and IOS8 handle the font file fre3of9x.ttf differently
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8)
+            // IOS >= 8 uses fontName "New" from font family name "New"
+            barcodeFontName = @"New";
+        else
+            // IOS < 8 uses fontName "Free3of9Extended" from font family name "Free 3 of 9 Extended"
+            barcodeFontName = kPUDAppBarcodeFont;
+        
+        cell.textLabel.font = [UIFont fontWithName:barcodeFontName size:150.0];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     
