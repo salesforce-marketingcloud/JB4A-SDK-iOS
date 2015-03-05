@@ -28,8 +28,8 @@ typedef NS_ENUM(NSInteger, GenericUpdateSendMethod)
  */
 @protocol ETGenericUpdateObjectProtocol <NSObject>
 
-+(id)alloc;
--(id)initFromDictionary:(NSDictionary *)dict;
++(instancetype)alloc;
+-(instancetype)initFromDictionary:(NSDictionary *)dict;
 
 +(NSString *)remoteRoutePath;
 -(NSString *)remoteRoutePath;

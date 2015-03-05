@@ -12,6 +12,30 @@
 
 #define BaseRequestURL @"https://consumer.exacttargetapis.com"
 
+
+/**
+ This enumeration defines what HTTP method should be used in sending the data. These are standard HTTP methods.
+ */
+typedef NS_ENUM(NSInteger, NSURLConnResponse)
+{
+    /** DidReceiveData */
+    NSURLConnectionDidReceiveData,
+    /** DidFinishLoading */
+    NSURLConnectionDidFinishLoading,
+    /** DidFailWithError */
+    NSURLConnectionDidFailWithError,
+    /** DidReceiveResponse */
+    NSURLConnectionDidReceiveResponse
+};
+
+/**
+ The key that is used to store the access token inside NSUserDefaults
+ */
+static NSString * const PIANALYTICS_SESSIONID = @"PIAnalytics_SessionID";
+static NSString * const PIANALYTICS_USERID = @"PIAnalytics_UserID";
+static NSString * const PIANALYTICS_DATE = @"PIAnalytics_Date";
+static NSTimeInterval PIANALYTICS_TIMEOUT = 1800; //30 minutes
+
 /**
  ETPhoneHome is like a highway management system, governing the sending of data to and from ExactTarget, and caching that which can't get sent home. It works by marshalling around GenericUpdate object subclasses, which themselves create a common pattern for handling business. 
  
@@ -20,6 +44,7 @@
  */
 @interface ETPhoneHome : NSObject <NSURLConnectionDataDelegate>
 
+-(NSTimeInterval)phoneHomeTest:(void(^)(int))callBackBlock;
 
 /**
   Singleton accessor. This isn't to be publicly used, so we can have a sense of humor about it. 

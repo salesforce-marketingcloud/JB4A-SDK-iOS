@@ -11,6 +11,8 @@
 
 #import "PushConstants.h"
 
+static NSString *kMessagesTableName = @"messages";
+static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
 
 /**
  Enumeration of the type of ETMessage this is. 
@@ -213,7 +215,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param dict A dictionary of values to apply to the ETMessage
  @return A new ETMessage
  */
--(id)initFromDictionary:(NSDictionary *)dict;
+-(instancetype)initFromDictionary:(NSDictionary *)dict;
 
 /**
  Designated Initializer. Creates a new ETMessage with values from an NSDictionary for a specific ETRegion. 
@@ -221,7 +223,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param region The ETRegion that prompted the creation of this ETMessage
  @return A new ETMessage
  */
--(id)initFromDictionary:(NSDictionary *)dict forFence:(ETRegion *)region;
+-(instancetype)initFromDictionary:(NSDictionary *)dict forFence:(ETRegion *)region;
 
 /**
  This is an overridden accessor for subj ect to handle some business logic around what to show. Use this for display in an inbox.

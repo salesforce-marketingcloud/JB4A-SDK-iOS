@@ -22,8 +22,8 @@
 
 @property (nonatomic) NSInteger maxRetries;
 
--(id)init;
-+(ETSqliteHelper *)database;
+-(instancetype)init;
++(instancetype)database;
 
 -(BOOL)open;
 -(void)close;

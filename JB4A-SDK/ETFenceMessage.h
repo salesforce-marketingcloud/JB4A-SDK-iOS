@@ -37,6 +37,6 @@
  @param message The ETMessage half of this relationship. 
  @return A new ETFenceMessage.
  */
--(id)initWithRegion:(ETRegion *)region andMessage:(ETMessage *)message;
+-(instancetype)initWithRegion:(ETRegion *)region andMessage:(ETMessage *)message;
 
 @end

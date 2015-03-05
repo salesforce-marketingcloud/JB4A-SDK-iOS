@@ -26,7 +26,7 @@
  @param failure What to do if the update failed
  @return id A very special ETGenericUpdate object that can bulk send data. 
  */
--(id)initForGenericUpdateClass:(Class<ETGenericUpdateObjectProtocol>)updateClass
+-(instancetype)initForGenericUpdateClass:(Class<ETGenericUpdateObjectProtocol>)updateClass
                     andObjects:(NSArray *)realObjects
               withSuccessBlock:(void(^)())success
                andFailureBlock:(void(^)())failure;
