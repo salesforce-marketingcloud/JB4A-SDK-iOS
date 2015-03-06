@@ -156,7 +156,6 @@
 		4D57232F19377AA5007B1464 /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
 		4D57233119377AA5007B1464 /* PBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebViewController.h; sourceTree = "<group>"; };
 		4D57233219377AA5007B1464 /* PBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebViewController.m; sourceTree = "<group>"; };
-		4D57233319377AA5007B1464 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Libraries/README.md; sourceTree = "<group>"; };
 		4D5723571937E19F007B1464 /* PUDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDHomeViewController.h; sourceTree = "<group>"; };
 		4D5723581937E19F007B1464 /* PUDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDHomeViewController.m; sourceTree = "<group>"; };
 		4D651C52191D54AB000BAF5E /* PUDMessagePayload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDMessagePayload.h; sourceTree = "<group>"; };
@@ -366,7 +365,6 @@
 				4D57232719377AA5007B1464 /* etpushsdk */,
 				4D57232919377AA5007B1464 /* JDStatusBarNotification */,
 				4D57233019377AA5007B1464 /* PBWebViewController */,
-				4D57233319377AA5007B1464 /* README.md */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";

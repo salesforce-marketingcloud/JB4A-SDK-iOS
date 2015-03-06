@@ -1,10 +1,10 @@
-# Practice Field
+# SDK Explorer
 
-Practice Field is a sample app that demonstrates the features available for use in the ExactTarget [MobilePush SDK](https://github.com/ExactTarget/MobilePushSDK-iOS). See the [Implemented SDK Features](#implemented) section below for a full list of the features that are implemented.
+SDK Explorer is a sample app that demonstrates the features available for use in the Salesforce Marketing Cloud [JB4A-SDK](https://github.com/ExactTarget/JB4A-SDK-iOS). See the [Implemented SDK Features](#implemented) section below for a full list of the features that are implemented.
 
-### About the MobilePush SDK
+### About the JB4A SDK
 
-The MobilePush SDK allows you to utilize MobilePush functionality as part of your iOS mobile app. This functionality includes the ability to send push messages to mobile devices through the app (based on demographic information or geofence triggers), collect analytics information based on the results of sent push messages, and many other things. For a high level overview of MobilePush features see [here](http://www.exacttarget.com/products/mobile-marketing/drive-mobile-app-engagement). For technical discussion on MobilePush see [here](https://code.exacttarget.com/getting-started/mobilepush).
+The JB4A SDK allows you to utilize MobilePush functionality as part of your iOS mobile app. This functionality includes the ability to send push messages to mobile devices through the app (based on demographic information or geofence triggers), collect analytics information based on the results of sent push messages, and many other things. For a high level overview of MobilePush features see [here](http://www.exacttarget.com/products/mobile-marketing/drive-mobile-app-engagement). For technical discussion on MobilePush see [here](http://code-preview.herokuapp.com/apis-sdks/journey-builder-for-apps/).
 
 ### The Important Bits
 
@@ -17,13 +17,13 @@ To quickly view all SDK implementation code blocks, search the entire project fo
 
 The following SDK features are implemented by the app:
 
-- [Tags](https://exacttarget.github.io/MobilePushSDK-iOS/Classes/ETPush.html#//api/name/addTag:)
-- [Attributes](https://exacttarget.github.io/MobilePushSDK-iOS/Classes/ETPush.html#//api/name/addAttributeNamed:value:)
+- [Tags](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/tags.html)
+- [Attributes](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/attributes.html)
 - [Push Messages](https://code.exacttarget.com/api/messagecontact-send-0) (via Fuel REST Route)
-- [Custom Alert Sound](https://code.exacttarget.com/mobilepush/integrating-mobilepush-sdk-your-ios-mobile-app#Audio)
-- [OpenDirect](https://exacttarget.github.io/MobilePushSDK-iOS/Protocols/ExactTargetOpenDirectDelegate.html)
-- [Custom Key](https://code.exacttarget.com/mobilepush/integrating-mobilepush-sdk-your-ios-mobile-app#CustomKeys)
-- [Location Messages](https://exacttarget.github.io/MobilePushSDK-iOS/Classes/ETLocationManager.html)
+- [Custom Alert Sound](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/custom-sound.html)
+- [OpenDirect](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/open-direct.html)
+- [Custom Key](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/custom-keys.html)
+- [Location Messages](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/location-services/geolocation.html)
 - [CloudPages](PublicDemo/PUDMessageComposeTableViewController.m)
 - [CloudPage Inbox](PublicDemo/PUDCloudPageInboxViewController.m)
 
@@ -31,22 +31,22 @@ In addition the app:
 
 - Displays the raw payload of the most recently received push message
 - Displays device info including: device token, device id, app id, access token
-- Lets you quickly and easily [email debug information](#debug) directly to ExactTarget
+- Lets you quickly and easily [email debug information](#debug) directly to Salesforce
 
-### <a name="debug"></a> Sending Debug Data To ExactTarget
+### <a name="debug"></a> Sending Debug Data To Salesforce
 
-This app allows you to easily send debug information to ExactTarget directly from your device. To do this follow these steps:
+This app allows you to easily send debug information to Salesforce directly from your device. To do this follow these steps:
 
 1. Navigate to the Info tab
 2. Tap the action button in the top right
-3. Tap the send button to email debug information to ExactTarget. You can optionally send the information to yourself using the standard email fields (to, cc, bcc)
+3. Tap the send button to email debug information to Salesforce. You can optionally send the information to yourself using the standard email fields (to, cc, bcc)
 4. Done!
 
 ### Setting Up The App In Your Account
 
-1. Follow the steps in [Integrating the MobilePush SDK with your iOS Mobile App](https://code.exacttarget.com/mobilepush/integrating-mobilepush-sdk-your-ios-mobile-app) up until the "How to Implement Analytics in your iOS Mobile App" section. At this point you will have the app set up in your AppCenter account, have the app provisioned, and have an AppID and AccessToken corresponding to your app.
+1. Follow the steps in [Integrate MobilePush into your mobile app using the Journey Builder for Apps SDK](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/getting-started.html) up until the "How to Implement Analytics in your iOS Mobile App" section. At this point you will have the app set up in your AppCenter account, have the app provisioned, and have an AppID and AccessToken corresponding to your app.
 2. Place the access token and application id you received within AppCenter into [PUDAppSettingConstants.m](PublicDemo/PUDAppSettingConstants.m) file. PUDAppSettingConstants is where you will place app specific settings such as access token, clientid, client secret, and more.
-3. *NOTE: At this point you will be able to send messages to the app from MobilePush inside the Marketing Cloud. You can also set attributes within the app's Settings tab. You only need to continue further if you wish to be able to create and send push messages from within the app.*
+3. *NOTE: At this point you will be able to send messages to the app from MobilePush inside the Salesforce Marketing Cloud. You can also set attributes within the app's Settings tab. You only need to continue further if you wish to be able to create and send push messages from within the app.*
 
 4. Under the Administration panel in MobilePush, enable all of the optional settings (custom sound, OpenDirect, and Custom Keys) then create a custom key in your account and name it "discount_code": ![Setup Step 02](Assets/setup01.png "Step 2")
 5. Create an outbound message inside MobilePush. Be sure to select "API Trigger" as the Send Method. Set the settings so that they match the following screenshot: ![Setup Step 03](Assets/setup02.png "Step 3")
@@ -56,7 +56,7 @@ This app allows you to easily send debug information to ExactTarget directly fro
 
 ### Third Party Libraries Used
 
-The following libraries aren't required in order to use the MobilePush SDK. They are used by this sample app for purposes unrelated to SDK functionality.
+The following libraries aren't required in order to use the JB4A SDK. They are used by this sample app for purposes unrelated to SDK functionality.
 
 - [AFNetworking 2.0](https://github.com/AFNetworking/AFNetworking)
 - [JDStatusBarNotification](https://github.com/jaydee3/JDStatusBarNotification)
