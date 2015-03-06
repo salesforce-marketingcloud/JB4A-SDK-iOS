@@ -279,7 +279,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>This is the main interface to the ExactTarget MobilePush SDK. It is meant to handle a lot of the heavy lifting with regards to sending data back to ExactTarget.</p>
+						<p>This is the main interface to the Salesforce MobilePush SDK. It is meant to handle a lot of the heavy lifting with regards to sending data back to Salesforce.</p>
 
 <p>Please note that this is a singleton object, and you should reference it as <a href="#//api/name/pushManager">[ETPush pushManager]</a>.</p>
 					</div>
@@ -628,7 +628,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. ExactTarget uses this data for segmentation.</p>
+		<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. Salesforce uses this data for segmentation.</p>
 	</div>		
 	
     
@@ -650,7 +650,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. ExactTarget uses this data for segmentation.</p>
+		<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. Salesforce uses this data for segmentation.</p>
 	</div>
 	
 	
@@ -674,7 +674,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the state of Push based on logic reflected at ExactTarget.</p>
+		<p>Returns the state of Push based on logic reflected at Salesforce.</p>
 	</div>		
 	
     
@@ -691,7 +691,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the state of Push based on logic reflected at ExactTarget.</p>
+		<p>Returns the state of Push based on logic reflected at Salesforce.</p>
 
 <p>As of this release, Push is considered enabled if the application is able to present an alert (banner, alert) to the user per Settings. Nothing else will be considered.</p>
 	</div>
@@ -855,7 +855,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Adds an attribute to the data set sent to ExactTarget.</p>
+		<p>Adds an attribute to the data set sent to Salesforce.</p>
 	</div>		
 	
     
@@ -887,7 +887,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Adds an attribute to the data set sent to ExactTarget.</p>
+		<p>Adds an attribute to the data set sent to Salesforce.</p>
 	</div>
 	
 	
@@ -1357,7 +1357,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>  This is the main configuration method, responsible for setting credentials needed to communicate with ExactTarget. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
+		<p>  This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
 	</div>		
 	
     
@@ -1381,7 +1381,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>analyticsState</em></dt>
-			<dd><p>Whether or not to send analytic data back to ExactTarget</p></dd>
+			<dd><p>Whether or not to send analytic data back to Salesforce</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -1409,7 +1409,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>  This is the main configuration method, responsible for setting credentials needed to communicate with ExactTarget. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
+		<p>  This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
 
 <p>Each of the flags in the method are used to control various aspects of the MobilePush SDK. The act as global on/off switches, meaning that if you disable one here, it is off eveywhere.</p>
 	</div>
@@ -1834,7 +1834,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Responsible for sending a received token back to ExactTarget. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later.</p>
+		<p>Responsible for sending a received token back to Salesforce. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later.</p>
 	</div>		
 	
     
@@ -1866,7 +1866,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Responsible for sending a received token back to ExactTarget. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later.</p>
+		<p>Responsible for sending a received token back to Salesforce. It marks the end of the token registration flow. If it is unable to reach ET server, it will save the token and try again later.</p>
 
 <p>This method is necessary to implementation of ET Push.</p>
 	</div>
@@ -1892,7 +1892,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled. (<b class="deprecated">Deprecated:</b><span class="deprecated"> in IOS8 - use registerUserNotificationSettings instead</span>)</p>
+		<p>Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify Salesforce that push is disabled. (<b class="deprecated">Deprecated:</b><span class="deprecated"> in IOS8 - use registerUserNotificationSettings instead</span>)</p>
 	</div>		
 	
     
@@ -1924,7 +1924,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+		<p>Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify Salesforce that push is disabled.</p>
 	</div>
 	
 	
@@ -1948,7 +1948,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+		<p>Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify Salesforce that push is disabled.</p>
 	</div>		
 	
     
@@ -1970,7 +1970,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify ExactTarget that push is disabled.</p>
+		<p>Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify Salesforce that push is disabled.</p>
 	</div>
 	
 	
@@ -2050,7 +2050,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Removes the provided attributef rom the data set to send to ExactTarget.</p>
+		<p>Removes the provided attributef rom the data set to send to Salesforce.</p>
 	</div>		
 	
     
@@ -2073,7 +2073,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Returns the value that was set. It will no longer be sent back to ExactTarget.</p>
+		<p>Returns the value that was set. It will no longer be sent back to Salesforce.</p>
 	</div>
 	
 	
@@ -2082,7 +2082,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Removes the provided attributef rom the data set to send to ExactTarget.</p>
+		<p>Removes the provided attributef rom the data set to send to Salesforce.</p>
 	</div>
 	
 	
@@ -2460,7 +2460,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Triggers a data send to ExactTarget. Mostly used internally, and rarely should be called by client code.</p>
+		<p>Triggers a data send to Salesforce. Mostly used internally, and rarely should be called by client code.</p>
 	</div>		
 	
     
@@ -2477,7 +2477,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Triggers a data send to ExactTarget. Mostly used internally, and rarely should be called by client code.</p>
+		<p>Triggers a data send to Salesforce. Mostly used internally, and rarely should be called by client code.</p>
 	</div>
 	
 	
@@ -2509,7 +2509,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Salesforce Marketing Cloud. All rights reserved. (Last updated: 2015-03-04)</span><br />
+						<p><span class="copyright">&copy; 2015 Salesforce Marketing Cloud. All rights reserved. (Last updated: 2015-03-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						

@@ -15,7 +15,7 @@ Sent when the data request has finished successfully. This ends the flow.
 Sent on a generic or unknown failure. 
 
 ### ETRequestFailedOnLoadingResult  
-Sent if the parser is unable to understand the data sent back by ExactTarget
+Sent if the parser is unable to understand the data sent back by Salesforce
 
 ### ETRequestFinishedWithFailure   
 Sent if the call to the MobilePush service fails. This indicates the end of a request flow that has ended in a failed state.
@@ -34,7 +34,7 @@ Sent when the initial request is sent to MobilePush.
 
 Fuel Auth Token Notification Constants
 ---
-These notifications are sent during the access token portion of the flow. An access token is required to make a request to any service at ExactTarget, and use the Client ID and Secret provided during app configuration. 
+These notifications are sent during the access token portion of the flow. An access token is required to make a request to any service at Salesforce, and use the Client ID and Secret provided during app configuration. 
 
 For more information, please check [code@ExactTarget](http://code.exacttarget.com).
 
@@ -42,7 +42,7 @@ For more information, please check [code@ExactTarget](http://code.exacttarget.co
 Sent if the request to the auth service has failed. 
 
 ### ETAuthRequestFinishedWithFailure 
-Sent if the auth request has reached a failed state and is unable to continue. Without a token, the subsequent calls can not be made. This indicates the end of the flow, and if received, the data should be considered not successfully sent to ExactTarget. 
+Sent if the auth request has reached a failed state and is unable to continue. Without a token, the subsequent calls can not be made. This indicates the end of the flow, and if received, the data should be considered not successfully sent to Salesforce. 
 
 ### ETAuthRequestStarted            
 Sent at the beginning of the authentication flow. This will not be sent if a token is saved and not required. 
