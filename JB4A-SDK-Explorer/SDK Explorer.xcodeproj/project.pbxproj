@@ -69,6 +69,7 @@
 		4DEC6D1B196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */; };
 		A99812E419B926DF00EA36EF /* PUDEulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99812E319B926DF00EA36EF /* PUDEulaViewController.m */; };
 		EF70050819DC6462001E76B5 /* ProductionTestImport.pushconfig in Resources */ = {isa = PBXBuildFile; fileRef = EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */; };
+		EF95C6091AAA033900CFE56B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EF95C6081AAA033900CFE56B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,6 +212,7 @@
 		A99812E219B926DF00EA36EF /* PUDEulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDEulaViewController.h; sourceTree = "<group>"; };
 		A99812E319B926DF00EA36EF /* PUDEulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDEulaViewController.m; sourceTree = "<group>"; };
 		EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductionTestImport.pushconfig; sourceTree = "<group>"; };
+		EF95C6081AAA033900CFE56B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		4D2DDFE8191051BD00B65B6F = {
 			isa = PBXGroup;
 			children = (
+				EF95C6081AAA033900CFE56B /* README.md */,
 				4D2DDFFA191051BD00B65B6F /* SDKExplorer */,
 				4D2DE01C191051BD00B65B6F /* SDKExplorerTests */,
 				4D2DDFF3191051BD00B65B6F /* Frameworks */,
@@ -619,6 +622,7 @@
 				A99812E419B926DF00EA36EF /* PUDEulaViewController.m in Sources */,
 				4DEB0AE5195DE31600790CEF /* PUDInfoViewController.m in Sources */,
 				4DEB0AE6195DE31600790CEF /* PUDMessageComposeTableViewController.m in Sources */,
+				EF95C6091AAA033900CFE56B /* README.md in Sources */,
 				4DEB0AE7195DE31600790CEF /* JDStatusBarView.m in Sources */,
 				4DEB0AE8195DE31600790CEF /* PUDDefaultMessageModel.m in Sources */,
 				4DEB0AE9195DE31600790CEF /* PUDFuelService.m in Sources */,
