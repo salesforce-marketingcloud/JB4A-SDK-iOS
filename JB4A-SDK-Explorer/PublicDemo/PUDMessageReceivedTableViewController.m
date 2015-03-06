@@ -75,7 +75,7 @@ NSString *messageTypeDefault = @"";
         
         _sectionFooterArray = @[@"The text that is displayed on the lock screen, banner, and alert views when a device receives the message.",
                                 @"MobilePush allows you to send Location or Outbound messages.\n\nOutbound messages are sent through the Marketing Cloud or via a triggered send API. You can schedule an Outbound message to send immediately or at a future time.\n\nLocation messages are sent when a user crosses into or out of a geographical region. You can set separate messages for entry and exit inside the Marketing Cloud.",
-                                @"This is the raw payload that the device receives from the Apple. This can be helpful for developers to see when debugging an app.\n\nNote: The _m custom key is always added to the payload by ExactTarget in order to provide message open tracking."];
+                                @"This is the raw payload that the device receives from the Apple. This can be helpful for developers to see when debugging an app.\n\nNote: The _m custom key is always added to the payload by Salesforce in order to provide message open tracking."];
         
         /**
          Set the default text that should be shown if there is no push text or raw payload

@@ -128,7 +128,7 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
     [super viewDidDisappear:animated];
     
     /**
-     ET_NOTE: updateET should be called as SPARINGLY as possible. A good place to call this is whenever a user exits out of your settings screen where he or she can edit values that are used as contact attributes. This method will then send the attribute changes to ExactTarget
+     ET_NOTE: updateET should be called as SPARINGLY as possible. A good place to call this is whenever a user exits out of your settings screen where he or she can edit values that are used as contact attributes. This method will then send the attribute changes to Salesforce
      */
     if (self.isUpdateETRequired) {
         self.updateETRequired = NO;
