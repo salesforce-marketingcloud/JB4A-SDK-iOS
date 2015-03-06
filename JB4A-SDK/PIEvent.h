@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Tom Brooks (Contractor) on 1/13/15.
-//  Copyright (c) 2015 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "ETGenericUpdate.h"
@@ -54,6 +54,10 @@ static NSString * const PIEVENT_OPEN_FROM_PUSH_FALSE = @"FALSE";
  */
 @property (nonatomic, strong, readonly) NSSet *events;
 
+/**
+ The current set of analytics being tracked by this PIEvent.
+ */
+@property (nonatomic, strong) NSSet *analyticTypes;
 
 /**
  Designated Initializer. Pass in an NSDictionary (usually from the cache db) to create an PIEvent.

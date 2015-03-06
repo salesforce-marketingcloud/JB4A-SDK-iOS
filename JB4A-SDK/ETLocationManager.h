@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Eddie Roger on 2/12/13.
-//  Copyright (c) 2013 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,11 +13,11 @@
 #import "ETMessage.h"
 
 /**
- ETLocationManager is the main interface to ExactTarget's Location Services. In the way that ETPush manages the push notification cycle, ETLocationMangaer manages geo services. It will use some of the information from ETPush (namely, App ID and Access Token) to function, but is an independent piece of functionality. 
+ ETLocationManager is the main interface to Salesforce's Location Services. In the way that ETPush manages the push notification cycle, ETLocationMangaer manages geo services. It will use some of the information from ETPush (namely, App ID and Access Token) to function, but is an independent piece of functionality.
  
  Due to the invasive nature of location services, ETLocationManager defaults to off, and must be explicity turned on by the developer, whether invisibly to the user or not. To begin location services, call [[ETLocationManager locationManager] startWatchingLocation]. Similarly, to stop location services, call [[ETLocationManager locationManager] stopWatchingLocation]. 
  
- ETLocationManager will always respect the user's wishes (as enforced by iOS), so if the user disables Location Services at the system level through Settings, the SDK will be unable to use any location services, and fence monitoring will not function. You can check for this by querying [[ETLocationManager locationManager] locationEnabled], as it will reconcile app-level permissions as well as the state of you enabling loc services. Internally, this method is used to report back to ExactTarget on the state of location services, so it is trustworthy. 
+ ETLocationManager will always respect the user's wishes (as enforced by iOS), so if the user disables Location Services at the system level through Settings, the SDK will be unable to use any location services, and fence monitoring will not function. You can check for this by querying [[ETLocationManager locationManager] locationEnabled], as it will reconcile app-level permissions as well as the state of you enabling loc services. Internally, this method is used to report back to Salesforce on the state of location services, so it is trustworthy.
  
  Please ensure you are linking against CoreLocation. You will get errors otherwise. 
  
@@ -64,7 +64,7 @@
 -(void)appInBackground;
 
 /**
- Queues a send for a location update to ExactTarget.
+ Queues a send for a location update to Salesforce.
  */
 -(void)updateLocationServerWithLocation:(CLLocation *)loc forAppState:(LocationUpdateAppState)state;
 

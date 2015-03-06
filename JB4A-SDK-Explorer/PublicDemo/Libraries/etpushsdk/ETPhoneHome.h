@@ -37,7 +37,7 @@ static NSString * const PIANALYTICS_DATE = @"PIAnalytics_Date";
 static NSTimeInterval PIANALYTICS_TIMEOUT = 1800; //30 minutes
 
 /**
- ETPhoneHome is like a highway management system, governing the sending of data to and from ExactTarget, and caching that which can't get sent home. It works by marshalling around GenericUpdate object subclasses, which themselves create a common pattern for handling business. 
+ ETPhoneHome is like a highway management system, governing the sending of data to and from Salesforce, and caching that which can't get sent home. It works by marshalling around GenericUpdate object subclasses, which themselves create a common pattern for handling business.
  
  Data should be sent back using phoneHome:, which will start the process of sending data to ET, and failing that, save it to the database. The behavior is all controlled by methods on the GenericUpdate object.
  
@@ -52,7 +52,7 @@ static NSTimeInterval PIANALYTICS_TIMEOUT = 1800; //30 minutes
 +(ETPhoneHome *)magicBicycle;
 
 /**
- Begins the process of sending data back to ExactTarget. 
+ Begins the process of sending data back to Salesforce.
  
  @param updateObject A subclass of GenericUpdate that wants to be send to ET.
  
@@ -61,7 +61,7 @@ static NSTimeInterval PIANALYTICS_TIMEOUT = 1800; //30 minutes
 -(BOOL)phoneHome:(ETGenericUpdate *)updateObject;
 
 /**
- Begins the process of sending data back to ExactTarget, but does so for bulk data. This is different than phoneHome: because it will send an array of things, and not just one object. 
+ Begins the process of sending data back to Salesforce, but does so for bulk data. This is different than phoneHome: because it will send an array of things, and not just one object.
  
  */
 -(BOOL)phoneHomeInBulkForGenericUpdateType:(Class)updateClass;
@@ -77,7 +77,7 @@ static NSTimeInterval PIANALYTICS_TIMEOUT = 1800; //30 minutes
 
 
 /**
- Checks the cache database for records that weren't successfully sent to ExactTarget, and tries to send them. No return value. 
+ Checks the cache database for records that weren't successfully sent to Salesforce, and tries to send them. No return value. 
  */
 -(void)checkForAndSendBackCachedData;
 

@@ -54,6 +54,10 @@ static NSString * const PIEVENT_OPEN_FROM_PUSH_FALSE = @"FALSE";
  */
 @property (nonatomic, strong, readonly) NSSet *events;
 
+/**
+ The current set of analytics being tracked by this PIEvent.
+ */
+@property (nonatomic, strong) NSSet *analyticTypes;
 
 /**
  Designated Initializer. Pass in an NSDictionary (usually from the cache db) to create an PIEvent.

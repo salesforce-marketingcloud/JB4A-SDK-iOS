@@ -55,7 +55,7 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
 @property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundTaskID;
 
 /**
- Sending to ExactTarget 
+ Sending to Salesforce
  
  These methods need to be implemented so that ETPhoneHome works.
  */
@@ -90,7 +90,7 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
 /** 
  Called by ETPhone if the ETURLConnection fails. This should do it's best to recover what it can, maybe loading things from the database or whatever. 
  
- Sometimes bad things happen when retrieving data from ExactTarget. I mean, cellular Internet isn't a perfect science.
+ Sometimes bad things happen when retrieving data from Salesforce. I mean, cellular Internet isn't a perfect science.
  */
 -(void)handleDataFailure;
 
