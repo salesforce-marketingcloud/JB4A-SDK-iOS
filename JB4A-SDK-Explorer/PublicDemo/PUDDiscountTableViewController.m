@@ -1,6 +1,5 @@
 /**
- * Copyright (c) 2014 ExactTarget, Inc.
- * All rights reserved.
+ * Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@
 //  PublicDemo
 //
 //  Created by Matt Lathrop on 5/19/14.
-//  Copyright (c) 2014 ExactTarget. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "PUDDiscountTableViewController.h"
@@ -130,7 +129,16 @@
     PUDDiscountTableData *data = self.dataArray[indexPath.section];
     
     if (data.usesBarcodeFont && data.usesBarcodeFont.boolValue) {
-        cell.textLabel.font = [UIFont fontWithName:kPUDAppBarcodeFont size:150.0];
+        NSString *barcodeFontName;
+        // IOS7 and IOS8 handle the font file fre3of9x.ttf differently
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8)
+            // IOS >= 8 uses fontName "New" from font family name "New"
+            barcodeFontName = @"New";
+        else
+            // IOS < 8 uses fontName "Free3of9Extended" from font family name "Free 3 of 9 Extended"
+            barcodeFontName = kPUDAppBarcodeFont;
+        
+        cell.textLabel.font = [UIFont fontWithName:barcodeFontName size:150.0];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     

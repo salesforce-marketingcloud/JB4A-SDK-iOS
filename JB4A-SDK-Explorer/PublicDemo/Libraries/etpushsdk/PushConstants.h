@@ -3,12 +3,12 @@
 //  etpushsdk
 //
 //  Created by Eddie Roger on 9/7/12.
-//  Copyright (c) 2012 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 // SDK Version
-#define ETPushSDKVersionString @"3.4.0"
-#define ETPushSDKVersionNumber 3400
+#define ETPushSDKVersionString @"3.4.2"
+#define ETPushSDKVersionNumber 3402
 
 /** 
  Helpers.
@@ -63,6 +63,7 @@
 static NSString * const ETLocationServicesActive    = @"ETLocationServicesActive";
 static NSString * const ETCloudPagesActive          = @"ETCloudPagesActive";
 static NSString * const ETAnalyticsActive           = @"ETAnalyticsActive";
+static NSString * const ETPIAnalyticsActive         = @"ETPIAnalyticsActive";
 
 typedef enum {
     PushOriginationStateBackground = 0,

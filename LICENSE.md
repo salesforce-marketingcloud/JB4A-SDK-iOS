@@ -1,4 +1,4 @@
-Copyright (c) 2014 ExactTarget, Inc.
+Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 
 All rights reserved.
 

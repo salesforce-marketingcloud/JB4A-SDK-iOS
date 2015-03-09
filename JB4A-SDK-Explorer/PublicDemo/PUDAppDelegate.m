@@ -1,6 +1,5 @@
 /**
- * Copyright (c) 2014 ExactTarget, Inc.
- * All rights reserved.
+ * Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@
 //  PushDemo
 //
 //  Created by Matt Lathrop on 4/29/14.
-//  Copyright (c) 2014 ExactTarget. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "PUDAppDelegate.h"
@@ -73,10 +72,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Turn off any URL caching for security reasons. Keeps any sensitive data from being available to prying eyes.
+    NSURLCache *sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:0
+                                                            diskCapacity:0
+                                                                diskPath:nil];
+    [NSURLCache setSharedURLCache:sharedCache];
+    
+    // Enable PI Analytics for our apps for now
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:ETPIAnalyticsActive];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     // set status bar style
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    // set the overall app tint color
+    [[UINavigationBar appearance] setBarTintColor:[UIColor etPrimaryOrange]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
     // set page control appearance
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
@@ -87,7 +99,7 @@
     //[[UIBarButtonItem appearanceWhenContainedIn:[ETLandingPagePresenter class], nil] setTintColor:[UIColor whiteColor]];
     
     /**
-     ET_NOTE: In this sample app, the PUDUtility class is responsible for checking what preprocessor macros are defined (DEBUG, ADHOC, etc) and then returning the correct appId or accessToken. This is a bit more complicated build setup than typical, due to ExactTarget needing to support four different build configurations (debug, adhoc, qa, and release). The important thing is to ensure that the AppID and AccessToken you proivde match up to the Code@ET app you wish to send from and have the correct APNS certificates tied to.
+     ET_NOTE: In this sample app, the PUDUtility class is responsible for checking what preprocessor macros are defined (DEBUG, ADHOC, etc) and then returning the correct appId or accessToken. This is a bit more complicated build setup than typical, due to Salesforce needing to support four different build configurations (debug, adhoc, qa, and release). The important thing is to ensure that the AppID and AccessToken you proivde match up to the Code@ET app you wish to send from and have the correct APNS certificates tied to.
      
      If you are unsure of your credentials or need help, please reach out to your Support partner. Likewise, if these services are not active in your account, log statements will be in your console to that effect. Please work with your sales or support rep if you have questions.
      */
@@ -95,10 +107,10 @@
     /**
      *  The below method has to be implemented ONLY ONCE in the SDK. The below conditions are specifically for this app and you will NOT need multiple/ conditional implementation like this in your own app
      */
-    
+
     [[ETPush pushManager] configureSDKWithAppID:[PUDUtility appID] // The App ID from Code@ExactTarget
                                  andAccessToken:[PUDUtility accessToken] // The Access Token from Code@ExactTarget
-                                  withAnalytics:YES // Whether or not you would like to use ExactTarget analytics services
+                                  withAnalytics:YES // Whether or not you would like to use Salesforce analytics services
                             andLocationServices:YES  // Whether or not you would like to use location-based alerts
                                   andCloudPages:YES]; // Whether or not you would like to use CloudPages.
     
@@ -108,7 +120,7 @@
     [[ETPush pushManager] setOpenDirectDelegate:self];
     
     /**
-     ET_NOTE: This method delivers the launch options dictionary to the SDK. This is a required implementation step to ensure that pushes are delivered and processed by ExactTarget.
+     ET_NOTE: This method delivers the launch options dictionary to the SDK. This is a required implementation step to ensure that pushes are delivered and processed by Salesforce.
      */
     [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
     
@@ -240,7 +252,7 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     
     /**
-     ET_NOTE: This method resets the application's badge icon to 0, and lets ExactTarget know that as well. It is required to clear the badge, and should be called here.
+     ET_NOTE: This method resets the application's badge icon to 0, and lets Salesforce know that as well. It is required to clear the badge, and should be called here.
      */
     [[ETPush pushManager] resetBadgeCount];
 }
@@ -311,7 +323,7 @@
 - (void)handleUserAction4WithNotification:(NSDictionary *)notification
 {
     NSLog(@"handleUserAction4WithNotification - %@", notification);
-    // call ExactTarget main telephone #
+    // call Salesforce main telephone #
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", @"18663624538"]]])
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", @"18663624538"]]];
 }
@@ -327,7 +339,7 @@
 
 
 /**
- These are the Apple Push Notification Service Delegate methods. They are required for the Push lifecycle to work, and implementation of the ExactTarget methods within is required for ExactTarget's MobilePush to function as expected. You may copy this block directly to your code and modify it to your liking, or cherry-pick the required methods to your own implementation.
+ These are the Apple Push Notification Service Delegate methods. They are required for the Push lifecycle to work, and implementation of the Salesforce methods within is required for Salesforce's MobilePush to function as expected. You may copy this block directly to your code and modify it to your liking, or cherry-pick the required methods to your own implementation.
  */
 #pragma mark - Push Notification Delegate Calls
 
@@ -361,7 +373,7 @@
     [self notificationReceivedWithUserInfo:userInfo messageType:kPUDMessageTypeOutbound alertText:nil];
     
     /**
-     ET_NOTE: This lets the SDK know that a push was delivered to the app, and passes in the userInfo dictionary so ExactTarget can process it and handle tracking opens. It is required.
+     ET_NOTE: This lets the SDK know that a push was delivered to the app, and passes in the userInfo dictionary so Salesforce can process it and handle tracking opens. It is required.
      */
     [[ETPush pushManager] handleNotification:userInfo forApplicationState:application.applicationState];
 }
@@ -381,7 +393,7 @@
     [self notificationReceivedWithUserInfo:userInfo messageType:kPUDMessageTypeOutbound alertText:nil];
     
     /**
-     ET_NOTE: This lets the SDK know that a push was delivered to the app, and passes in the userInfo dictionary so ExactTarget can process it and handle tracking opens. It is required.
+     ET_NOTE: This lets the SDK know that a push was delivered to the app, and passes in the userInfo dictionary so Salesforce can process it and handle tracking opens. It is required.
      */
     [[ETPush pushManager] handleNotification:userInfo forApplicationState:application.applicationState]; // Required for ETPush
     
@@ -392,7 +404,7 @@
 }
 
 /**
- ET_NOTE: This method handles local notifications, which the SDK may fire instead of a remote (push) notification. Implementation of this method is required if you are using ExactTarget location-based sending.
+ ET_NOTE: This method handles local notifications, which the SDK may fire instead of a remote (push) notification. Implementation of this method is required if you are using Salesforce location-based sending.
  */
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
@@ -402,7 +414,7 @@
     [self notificationReceivedWithUserInfo:notification.userInfo messageType:kPUDMessageTypeLocation alertText:notification.alertBody];
     
     /**
-     ET_NOTE: This lets the SDK know that a local notification was received and passes in the notification so ExactTarget can process it. It is required for location-based sending.
+     ET_NOTE: This lets the SDK know that a local notification was received and passes in the notification so Salesforce can process it. It is required for location-based sending.
      */
     [[ETPush pushManager] handleLocalNotification:notification]; // Required for ETPush
 }
@@ -542,22 +554,22 @@
  */
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
+
     if (buttonIndex != alertView.cancelButtonIndex) {
-            /**
-             *  Handle the payload immediately because the subscriber clicked the view button
-             */
-            NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
-            BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
-            BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
-            
-            if (hasOpenDirectPayload) {
-                [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
-            }
-            else if (hasDiscountCodeCustomKey) {
-                [self handleDiscountCodePayload];
-            }
+        /**
+         *  Handle the payload immediately because the subscriber clicked the view button
+         */
+        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
+        BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
+        BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
+        
+        if (hasOpenDirectPayload) {
+            [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
         }
+        else if (hasDiscountCodeCustomKey) {
+            [self handleDiscountCodePayload];
+        }
+    }
 }
 
 - (void)handleOpenDirectPayload:(NSString *)payload {

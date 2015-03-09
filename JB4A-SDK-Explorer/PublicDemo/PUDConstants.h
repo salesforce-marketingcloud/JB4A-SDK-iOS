@@ -1,6 +1,5 @@
 /**
- * Copyright (c) 2014 ExactTarget, Inc.
- * All rights reserved.
+ * Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@
 //  PushDemo
 //
 //  Created by Matt Lathrop on 4/29/14.
-//  Copyright (c) 2014 ExactTarget. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #pragma mark - Defines
@@ -168,7 +167,6 @@ extern NSString *const kPUDSegueMessagesToMessageDetail;
 extern NSString *const kPUDSeguePushReceivedToDiscount;
 
 #pragma mark - Settings Table View
-extern NSUInteger const kPUDSettingsPushConfigSectionIndex;
 extern NSUInteger const kPUDSettingsPersonalInformationSectionIndex;
 extern NSUInteger const kPUDSettingsActivitySectionIndex;
 

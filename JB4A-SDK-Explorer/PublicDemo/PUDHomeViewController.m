@@ -1,6 +1,5 @@
 /**
- * Copyright (c) 2014 ExactTarget, Inc.
- * All rights reserved.
+ * Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@
 //  PublicDemo
 //
 //  Created by Matt Lathrop on 5/29/14.
-//  Copyright (c) 2014 ExactTarget. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "PUDHomeViewController.h"
@@ -98,7 +97,7 @@
     NSString *ret = @"<b>Purpose</b><hr>"
                      "<ul>"
                      "<li>Provides a UI for demonstrating with various features of the JB4A SDK.</li><br/>"
-                     "<li>Provides an example and template to for creating an iOS app that uses the JB4A SDK.</li><br/>"
+                     "<li>Provides an example and template for creating an iOS app that uses the JB4A SDK.</li><br/>"
                      "<li>Allows you to review the SDK components by collecting debugging information and sharing via email.</li><br/>"
                      "</ul>";
     

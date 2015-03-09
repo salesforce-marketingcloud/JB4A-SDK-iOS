@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Swetha Pendyala (Contractor) on 6/2/14.
-//  Copyright (c) 2014 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

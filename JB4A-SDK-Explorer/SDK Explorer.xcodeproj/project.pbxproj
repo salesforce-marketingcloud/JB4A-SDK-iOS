@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00EABD171A111F1300CF90B4 /* libetpushsdk-3.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EABD151A111F1200CF90B4 /* libetpushsdk-3.4.0.a */; };
+		00006C311AA7863F00D34CB8 /* libetpushsdk-3.4.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00006C301AA7863F00D34CB8 /* libetpushsdk-3.4.2.a */; };
+		00006C5D1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00006C5A1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a */; };
 		3D06C959199B9ADB0085208E /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D06C958199B9ADB0085208E /* PUDBeaconsViewController.m */; };
 		3D91F0CA198AD1F000523DC6 /* PUDPushConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAB9F71982DBF5007A9100 /* PUDPushConfig.m */; };
 		3D91F0D7198C109800523DC6 /* PUDPushConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91F0D6198C109800523DC6 /* PUDPushConfigTableViewController.m */; };
@@ -68,29 +69,32 @@
 		4DEC6D1B196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */; };
 		A99812E419B926DF00EA36EF /* PUDEulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99812E319B926DF00EA36EF /* PUDEulaViewController.m */; };
 		EF70050819DC6462001E76B5 /* ProductionTestImport.pushconfig in Resources */ = {isa = PBXBuildFile; fileRef = EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */; };
+		EF95C6091AAA033900CFE56B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EF95C6081AAA033900CFE56B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00EABD031A111F1200CF90B4 /* ETBulkUpdateShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBulkUpdateShim.h; sourceTree = "<group>"; };
-		00EABD041A111F1200CF90B4 /* ETEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEvent.h; sourceTree = "<group>"; };
-		00EABD051A111F1200CF90B4 /* ETFenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFenceMessage.h; sourceTree = "<group>"; };
-		00EABD061A111F1200CF90B4 /* ETGenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETGenericUpdate.h; sourceTree = "<group>"; };
-		00EABD071A111F1200CF90B4 /* ETKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETKeyValueStore.h; sourceTree = "<group>"; };
-		00EABD081A111F1200CF90B4 /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLandingPagePresenter.h; sourceTree = "<group>"; };
-		00EABD091A111F1200CF90B4 /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationManager.h; sourceTree = "<group>"; };
-		00EABD0A1A111F1200CF90B4 /* ETLocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationUpdate.h; sourceTree = "<group>"; };
-		00EABD0B1A111F1200CF90B4 /* ETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMessage.h; sourceTree = "<group>"; };
-		00EABD0C1A111F1200CF90B4 /* ETPhoneHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPhoneHome.h; sourceTree = "<group>"; };
-		00EABD0D1A111F1200CF90B4 /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
-		00EABD0E1A111F1200CF90B4 /* ETRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegion.h; sourceTree = "<group>"; };
-		00EABD0F1A111F1200CF90B4 /* ETRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegistration.h; sourceTree = "<group>"; };
-		00EABD101A111F1200CF90B4 /* ETSqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETSqliteHelper.h; sourceTree = "<group>"; };
-		00EABD111A111F1200CF90B4 /* ETStatsUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETStatsUpdate.h; sourceTree = "<group>"; };
-		00EABD121A111F1200CF90B4 /* ETTestsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTestsHelper.h; sourceTree = "<group>"; };
-		00EABD131A111F1200CF90B4 /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETURLConnection.h; sourceTree = "<group>"; };
-		00EABD141A111F1200CF90B4 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
-		00EABD151A111F1200CF90B4 /* libetpushsdk-3.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libetpushsdk-3.4.0.a"; sourceTree = "<group>"; };
-		00EABD161A111F1200CF90B4 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
+		00006C301AA7863F00D34CB8 /* libetpushsdk-3.4.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libetpushsdk-3.4.2.a"; path = "../../../SDK Explorer/2015-04/PublicDemo/Libraries/etpushsdk/libetpushsdk-3.4.2.a"; sourceTree = "<group>"; };
+		00006C481AA7873F00D34CB8 /* ETBulkUpdateShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBulkUpdateShim.h; sourceTree = "<group>"; };
+		00006C491AA7873F00D34CB8 /* ETEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEvent.h; sourceTree = "<group>"; };
+		00006C4A1AA7873F00D34CB8 /* ETFenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFenceMessage.h; sourceTree = "<group>"; };
+		00006C4B1AA7873F00D34CB8 /* ETGenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETGenericUpdate.h; sourceTree = "<group>"; };
+		00006C4C1AA7873F00D34CB8 /* ETKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETKeyValueStore.h; sourceTree = "<group>"; };
+		00006C4D1AA7873F00D34CB8 /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLandingPagePresenter.h; sourceTree = "<group>"; };
+		00006C4E1AA7873F00D34CB8 /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationManager.h; sourceTree = "<group>"; };
+		00006C4F1AA7873F00D34CB8 /* ETLocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationUpdate.h; sourceTree = "<group>"; };
+		00006C501AA7873F00D34CB8 /* ETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMessage.h; sourceTree = "<group>"; };
+		00006C511AA7873F00D34CB8 /* ETPhoneHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPhoneHome.h; sourceTree = "<group>"; };
+		00006C521AA7873F00D34CB8 /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
+		00006C531AA7873F00D34CB8 /* ETRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegion.h; sourceTree = "<group>"; };
+		00006C541AA7873F00D34CB8 /* ETRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegistration.h; sourceTree = "<group>"; };
+		00006C551AA7873F00D34CB8 /* ETSqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETSqliteHelper.h; sourceTree = "<group>"; };
+		00006C561AA7873F00D34CB8 /* ETStatsUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETStatsUpdate.h; sourceTree = "<group>"; };
+		00006C571AA7873F00D34CB8 /* ETTestsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTestsHelper.h; sourceTree = "<group>"; };
+		00006C581AA7873F00D34CB8 /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETURLConnection.h; sourceTree = "<group>"; };
+		00006C591AA7873F00D34CB8 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
+		00006C5A1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libetpushsdk-3.4.2.a"; sourceTree = "<group>"; };
+		00006C5B1AA7873F00D34CB8 /* PIEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIEvent.h; sourceTree = "<group>"; };
+		00006C5C1AA7873F00D34CB8 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
 		3D06C957199B9ADB0085208E /* PUDBeaconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDBeaconsViewController.h; sourceTree = "<group>"; };
 		3D06C958199B9ADB0085208E /* PUDBeaconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDBeaconsViewController.m; sourceTree = "<group>"; };
 		3D91F0C8198AC52F00523DC6 /* SDK Explorer-Qa-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SDK Explorer-Qa-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -153,7 +157,6 @@
 		4D57232F19377AA5007B1464 /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
 		4D57233119377AA5007B1464 /* PBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebViewController.h; sourceTree = "<group>"; };
 		4D57233219377AA5007B1464 /* PBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebViewController.m; sourceTree = "<group>"; };
-		4D57233319377AA5007B1464 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Libraries/README.md; sourceTree = "<group>"; };
 		4D5723571937E19F007B1464 /* PUDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDHomeViewController.h; sourceTree = "<group>"; };
 		4D5723581937E19F007B1464 /* PUDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDHomeViewController.m; sourceTree = "<group>"; };
 		4D651C52191D54AB000BAF5E /* PUDMessagePayload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDMessagePayload.h; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 		A99812E219B926DF00EA36EF /* PUDEulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDEulaViewController.h; sourceTree = "<group>"; };
 		A99812E319B926DF00EA36EF /* PUDEulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDEulaViewController.m; sourceTree = "<group>"; };
 		EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductionTestImport.pushconfig; sourceTree = "<group>"; };
+		EF95C6081AAA033900CFE56B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,13 +220,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00006C311AA7863F00D34CB8 /* libetpushsdk-3.4.2.a in Frameworks */,
 				4DA92C9E196D7F800005BC8E /* QuartzCore.framework in Frameworks */,
 				4DEB0B0D195DE31600790CEF /* MobileCoreServices.framework in Frameworks */,
 				4DEB0B0E195DE31600790CEF /* libsqlite3.dylib in Frameworks */,
-				00EABD171A111F1300CF90B4 /* libetpushsdk-3.4.0.a in Frameworks */,
 				4DEB0B0F195DE31600790CEF /* CoreGraphics.framework in Frameworks */,
 				4DEB0B11195DE31600790CEF /* UIKit.framework in Frameworks */,
 				4DEB0B12195DE31600790CEF /* Foundation.framework in Frameworks */,
+				00006C5D1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +237,7 @@
 		4D2DDFE8191051BD00B65B6F = {
 			isa = PBXGroup;
 			children = (
+				EF95C6081AAA033900CFE56B /* README.md */,
 				4D2DDFFA191051BD00B65B6F /* SDKExplorer */,
 				4D2DE01C191051BD00B65B6F /* SDKExplorerTests */,
 				4D2DDFF3191051BD00B65B6F /* Frameworks */,
@@ -250,6 +256,7 @@
 		4D2DDFF3191051BD00B65B6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00006C301AA7863F00D34CB8 /* libetpushsdk-3.4.2.a */,
 				4DA92C9B196D7F740005BC8E /* QuartzCore.framework */,
 				4D95F14219256984002A5A43 /* MobileCoreServices.framework */,
 				4D2DE0311910525900B65B6F /* libsqlite3.dylib */,
@@ -361,7 +368,6 @@
 				4D57232719377AA5007B1464 /* etpushsdk */,
 				4D57232919377AA5007B1464 /* JDStatusBarNotification */,
 				4D57233019377AA5007B1464 /* PBWebViewController */,
-				4D57233319377AA5007B1464 /* README.md */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -454,26 +460,27 @@
 		4D57232719377AA5007B1464 /* etpushsdk */ = {
 			isa = PBXGroup;
 			children = (
-				00EABD031A111F1200CF90B4 /* ETBulkUpdateShim.h */,
-				00EABD041A111F1200CF90B4 /* ETEvent.h */,
-				00EABD051A111F1200CF90B4 /* ETFenceMessage.h */,
-				00EABD061A111F1200CF90B4 /* ETGenericUpdate.h */,
-				00EABD071A111F1200CF90B4 /* ETKeyValueStore.h */,
-				00EABD081A111F1200CF90B4 /* ETLandingPagePresenter.h */,
-				00EABD091A111F1200CF90B4 /* ETLocationManager.h */,
-				00EABD0A1A111F1200CF90B4 /* ETLocationUpdate.h */,
-				00EABD0B1A111F1200CF90B4 /* ETMessage.h */,
-				00EABD0C1A111F1200CF90B4 /* ETPhoneHome.h */,
-				00EABD0D1A111F1200CF90B4 /* ETPush.h */,
-				00EABD0E1A111F1200CF90B4 /* ETRegion.h */,
-				00EABD0F1A111F1200CF90B4 /* ETRegistration.h */,
-				00EABD101A111F1200CF90B4 /* ETSqliteHelper.h */,
-				00EABD111A111F1200CF90B4 /* ETStatsUpdate.h */,
-				00EABD121A111F1200CF90B4 /* ETTestsHelper.h */,
-				00EABD131A111F1200CF90B4 /* ETURLConnection.h */,
-				00EABD141A111F1200CF90B4 /* ExactTargetEnhancedPushDataSource.h */,
-				00EABD151A111F1200CF90B4 /* libetpushsdk-3.4.0.a */,
-				00EABD161A111F1200CF90B4 /* PushConstants.h */,
+				00006C481AA7873F00D34CB8 /* ETBulkUpdateShim.h */,
+				00006C491AA7873F00D34CB8 /* ETEvent.h */,
+				00006C4A1AA7873F00D34CB8 /* ETFenceMessage.h */,
+				00006C4B1AA7873F00D34CB8 /* ETGenericUpdate.h */,
+				00006C4C1AA7873F00D34CB8 /* ETKeyValueStore.h */,
+				00006C4D1AA7873F00D34CB8 /* ETLandingPagePresenter.h */,
+				00006C4E1AA7873F00D34CB8 /* ETLocationManager.h */,
+				00006C4F1AA7873F00D34CB8 /* ETLocationUpdate.h */,
+				00006C501AA7873F00D34CB8 /* ETMessage.h */,
+				00006C511AA7873F00D34CB8 /* ETPhoneHome.h */,
+				00006C521AA7873F00D34CB8 /* ETPush.h */,
+				00006C531AA7873F00D34CB8 /* ETRegion.h */,
+				00006C541AA7873F00D34CB8 /* ETRegistration.h */,
+				00006C551AA7873F00D34CB8 /* ETSqliteHelper.h */,
+				00006C561AA7873F00D34CB8 /* ETStatsUpdate.h */,
+				00006C571AA7873F00D34CB8 /* ETTestsHelper.h */,
+				00006C581AA7873F00D34CB8 /* ETURLConnection.h */,
+				00006C591AA7873F00D34CB8 /* ExactTargetEnhancedPushDataSource.h */,
+				00006C5A1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a */,
+				00006C5B1AA7873F00D34CB8 /* PIEvent.h */,
+				00006C5C1AA7873F00D34CB8 /* PushConstants.h */,
 			);
 			name = etpushsdk;
 			path = Libraries/etpushsdk;
@@ -615,6 +622,7 @@
 				A99812E419B926DF00EA36EF /* PUDEulaViewController.m in Sources */,
 				4DEB0AE5195DE31600790CEF /* PUDInfoViewController.m in Sources */,
 				4DEB0AE6195DE31600790CEF /* PUDMessageComposeTableViewController.m in Sources */,
+				EF95C6091AAA033900CFE56B /* README.md in Sources */,
 				4DEB0AE7195DE31600790CEF /* JDStatusBarView.m in Sources */,
 				4DEB0AE8195DE31600790CEF /* PUDDefaultMessageModel.m in Sources */,
 				4DEB0AE9195DE31600790CEF /* PUDFuelService.m in Sources */,
@@ -787,6 +795,9 @@
 					"$(PROJECT_DIR)/PublicDemo",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
+					/Users/tbrooks/Documents/work/ET/samples,
+					apps/SDK,
+					"Explorer/2015-04/PublicDemo/Libraries/etpushsdk",
 				);
 				PRODUCT_NAME = "SDK Explorer-Qa";
 				PROVISIONING_PROFILE = "";
@@ -818,6 +829,9 @@
 					"$(PROJECT_DIR)/PublicDemo",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
+					/Users/tbrooks/Documents/work/ET/samples,
+					apps/SDK,
+					"Explorer/2015-04/PublicDemo/Libraries/etpushsdk",
 				);
 				PRODUCT_NAME = "SDK Explorer-Qa";
 				PROVISIONING_PROFILE = "";

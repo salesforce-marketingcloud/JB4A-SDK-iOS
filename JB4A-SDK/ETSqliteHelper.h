@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Eddie Roger on 7/15/13.
-//  Copyright (c) 2013 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -22,8 +22,8 @@
 
 @property (nonatomic) NSInteger maxRetries;
 
--(id)init;
-+(ETSqliteHelper *)database;
+-(instancetype)init;
++(instancetype)database;
 
 -(BOOL)open;
 -(void)close;

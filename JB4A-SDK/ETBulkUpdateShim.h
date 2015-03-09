@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Eddie Roger on 7/24/14.
-//  Copyright (c) 2014 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "ETGenericUpdate.h"
@@ -26,7 +26,7 @@
  @param failure What to do if the update failed
  @return id A very special ETGenericUpdate object that can bulk send data. 
  */
--(id)initForGenericUpdateClass:(Class<ETGenericUpdateObjectProtocol>)updateClass
+-(instancetype)initForGenericUpdateClass:(Class<ETGenericUpdateObjectProtocol>)updateClass
                     andObjects:(NSArray *)realObjects
               withSuccessBlock:(void(^)())success
                andFailureBlock:(void(^)())failure;

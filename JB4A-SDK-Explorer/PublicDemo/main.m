@@ -3,7 +3,7 @@
 //  PushDemo
 //
 //  Created by Matt Lathrop on 4/29/14.
-//  Copyright (c) 2014 ExactTarget. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

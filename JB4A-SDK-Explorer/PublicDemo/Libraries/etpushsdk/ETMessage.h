@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Eddie Roger on 7/24/13.
-//  Copyright (c) 2013 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "ETGenericUpdate.h"
@@ -11,6 +11,8 @@
 
 #import "PushConstants.h"
 
+static NSString *kMessagesTableName = @"messages";
+static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
 
 /**
  Enumeration of the type of ETMessage this is. 
@@ -40,7 +42,7 @@ typedef NS_OPTIONS(NSUInteger, MobilePushContentType) {
 typedef NS_ENUM(NSInteger, MPMessageSource)
 {
     MPMessageSourceDatabase,    /** Database */
-    MPMessageSourceRemote       /** ExactTarget via REST */
+    MPMessageSourceRemote       /** Salesforce via REST */
 };
 
 /** 
@@ -56,7 +58,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 };
 
 /**
- ETMessage is the local representation of a Message from ExactTarget. They are multipurpose, sometimes representing a message that should be scheduled because of the entrance or exit of a Geofence, the proximal arrival to an iBeacon, or a CloudPage message downloaded from ET. Because of their multipurpose nature, there are a lot of different attributes on them, many of which may be null at any give time depending on the type of message. 
+ ETMessage is the local representation of a Message from Salesforce. They are multipurpose, sometimes representing a message that should be scheduled because of the entrance or exit of a Geofence, the proximal arrival to an iBeacon, or a CloudPage message downloaded from ET. Because of their multipurpose nature, there are a lot of different attributes on them, many of which may be null at any give time depending on the type of message.
  
  ETMessages also feature Message Limiting, a system of preventing a given message from firing too often. If described in a sentence with the parameters interlaced, it would read "show this message only 1 (messagesPerPeriod) time per 1 (numberOfPeriods) hour (periodType). As of a recent release, messagesPerPeriod will be defaulted to 1 on the Middle Tier, so if it is null or absent, we assume 1, otherwise take the given value.
  
@@ -65,12 +67,12 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 @interface ETMessage : ETGenericUpdate
 
 /**
- Encoded ID from ExactTarget. Will match the ID in MobilePush. This is the primary key. 
+ Encoded ID from Salesforce. Will match the ID in MobilePush. This is the primary key.
  */
 @property (nonatomic, strong, readonly) NSString *messageIdentifier;
 
 /**
- This is the name which is set on ExactTargetMarketingCloud, while setting the ETMessage
+ This is the name which is set on SalesforceMarketingCloud, while setting the ETMessage
  */
 @property (nonatomic, strong) NSString *messageName;
 
@@ -147,7 +149,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 /**
  The total number of times for a given number of time units that a message can be shown. In the statement "show 1 time per 2 hours", this is the "1" part.
  
- This defaults to 1 if it is not set in the received payload from ExactTarget. 
+ This defaults to 1 if it is not set in the received payload from Salesforce.
  */
 @property (nonatomic, strong, readonly) NSNumber *messagesPerPeriod;
 
@@ -213,7 +215,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param dict A dictionary of values to apply to the ETMessage
  @return A new ETMessage
  */
--(id)initFromDictionary:(NSDictionary *)dict;
+-(instancetype)initFromDictionary:(NSDictionary *)dict;
 
 /**
  Designated Initializer. Creates a new ETMessage with values from an NSDictionary for a specific ETRegion. 
@@ -221,7 +223,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param region The ETRegion that prompted the creation of this ETMessage
  @return A new ETMessage
  */
--(id)initFromDictionary:(NSDictionary *)dict forFence:(ETRegion *)region;
+-(instancetype)initFromDictionary:(NSDictionary *)dict forFence:(ETRegion *)region;
 
 /**
  This is an overridden accessor for subj ect to handle some business logic around what to show. Use this for display in an inbox.
@@ -314,7 +316,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 +(NSArray *)getProximityMessagesForRegion:(ETRegion *)region; // withRangedBeaconProximity:(CLProximity)prox;
 
 /**
- Triggeres a data pull from ExactTarget for messages that meet the supplied requirements. 
+ Triggeres a data pull from Salesforce for messages that meet the supplied requirements.
  @param messageType The Message Type you wish to retrieve
  @param contentType The Content Type you wish to retrieve
  @return Doesn't return a value, but has delegate callbacks. 
@@ -322,7 +324,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 +(void)getMessagesFromExactTargetOfMessageType:(MobilePushMessageType)messageType andContentType:(MobilePushContentType)contentType;
 
 /**
- Marks all messages for a given type as inactive. This is done prior to processing new messages just received from ExactTarget. 
+ Marks all messages for a given type as inactive. This is done prior to processing new messages just received from Salesforce. 
  @param type The MobilePushMessageType you wish to invalidate
  @return T/F if the invalidation query worked
  */

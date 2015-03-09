@@ -1,6 +1,5 @@
 /**
- * Copyright (c) 2014 ExactTarget, Inc.
- * All rights reserved.
+ * Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@
 //  PublicDemo
 //
 //  Created by Swetha Pendyala (Contractor) on 7/25/14.
-//  Copyright (c) 2014 ExactTarget. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "PUDPushConfig.h"
@@ -222,40 +221,9 @@
     return defaultPushConfig;
 }
 
-+ (NSArray *) availableDefaultPushConfigs { 
++ (NSArray *) availableDefaultPushConfigs {
     
-    PUDPushConfig *qaPushConfig;
     PUDPushConfig *etprodPushConfig;
-    
-#ifdef QA
-    
-    etprodPushConfig = [[PUDPushConfig alloc] init];
-    etprodPushConfig.configurationName = kAppSettingEtprodConfigName;
-    etprodPushConfig.appID = kAppSettingEtprodAppId;
-    etprodPushConfig.accessToken = kAppSettingEtprodAccessToken;
-    etprodPushConfig.clientID = kAppSettingEtprodClientId ;
-    etprodPushConfig.clientSecret = kAppSettingEtprodClientSecret;
-    etprodPushConfig.standardMessageID = kAppSettingEtprodOutboundMessageIdVanilla;
-    etprodPushConfig.cloudpageMessageID = kAppSettingEtprodOutboundMessageIdCloudPage;
-    etprodPushConfig.restUrl = kAppSettingEtprodAccessTokenUrl;
-    
-    return @[etprodPushConfig];
-    
-#elif DEBUG
-    
-    qaPushConfig = [[PUDPushConfig alloc] init];
-    qaPushConfig.configurationName = kAppSettingDevConfigName;
-    qaPushConfig.appID = kAppSettingDevAppId;
-    qaPushConfig.accessToken = kAppSettingDevAccessToken;
-    qaPushConfig.clientID = kAppSettingDevClientId ;
-    qaPushConfig.clientSecret = kAppSettingDevClientSecret;
-    qaPushConfig.standardMessageID = kAppSettingDevOutboundMessageIdVanilla;
-    qaPushConfig.cloudpageMessageID = kAppSettingDevOutboundMessageIdCloudPage;
-    qaPushConfig.restUrl = kAppSettingDevAccessTokenUrl;
-    
-return @[qaPushConfig];
-    
-#endif
     
     return @[etprodPushConfig];
 }
@@ -315,6 +283,14 @@ return @[qaPushConfig];
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
         // get the current settings to reapply them
         UIUserNotificationSettings *settings = [[ETPush pushManager] currentUserNotificationSettings];
+
+        // we have to have something or we won't get any notifications on the first install on a new device
+        if (settings.types == UIUserNotificationTypeNone) {
+            settings = [UIUserNotificationSettings settingsForTypes:
+                        UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert
+                                                         categories:nil];
+        }
+        
         [[ETPush pushManager] registerUserNotificationSettings:settings];
         [[ETPush pushManager] registerForRemoteNotifications];
     }

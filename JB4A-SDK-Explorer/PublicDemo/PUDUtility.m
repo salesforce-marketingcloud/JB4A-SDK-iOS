@@ -1,6 +1,5 @@
 /**
- * Copyright (c) 2014 ExactTarget, Inc.
- * All rights reserved.
+ * Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@
 //  PublicDemo
 //
 //  Created by Matt Lathrop on 5/15/14.
-//  Copyright (c) 2014 ExactTarget. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "PUDUtility.h"
@@ -100,8 +99,19 @@
     return ETPushSDKVersionString;
 }
 
++ (NSString *)configName {
+    NSString *configName = [self configurationName];
+
+    if (!configName) {
+        return nil;
+    }
+    
+    return configName;
+}
+
 + (NSString *)safeAppID {
     NSString *appID = [self appID];
+
     if (!appID) {
         return nil;
     }
@@ -116,6 +126,7 @@
 
 + (NSString *)safeAccessToken {
     NSString *accessToken = [self accessToken];
+
     if (!accessToken) {
         return nil;
     }
@@ -144,10 +155,7 @@
 
 + (NSString *)safeClientSecret {
     NSString *clientSecret = [self clientSecret];
-    if (!clientSecret) {
-        return nil;
-    }
-    
+
     NSRange range = {7, 11};
     return [clientSecret stringByReplacingCharactersInRange:range withString:@"***********"];
 }

@@ -3,7 +3,7 @@
 //  ET SDK Demo
 //
 //  Created by Eddie Roger on 11/4/13.
-//  Copyright (c) 2013 ExactTarget, Inc. All rights reserved.
+//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "ETGenericUpdate.h"
@@ -37,6 +37,6 @@
  @param message The ETMessage half of this relationship. 
  @return A new ETFenceMessage.
  */
--(id)initWithRegion:(ETRegion *)region andMessage:(ETMessage *)message;
+-(instancetype)initWithRegion:(ETRegion *)region andMessage:(ETMessage *)message;
 
 @end

@@ -4,6 +4,15 @@ This is the git repository for the Salesforce Marketing Cloud Journey Builder fo
 <b>Formerly ExactTarget MobilePush IOS SDK</b>
 
 For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://exacttarget.github.io/JB4A-SDK-iOS).
+### Version 3.4.2
+_Released March 9, 2015, correlating to Salesforce Marketing Cloud 2015-02 Release_
+_(supported)_
+* MPUSH-2476 - ETLandingPage shows white status bar background when status bar color is white
+* MPUSH-3195 - Fix setting the category field in a local notification payload under IOS7
+* MPUSH-3243 - Custom Sound does not give any sound
+* MPUSH-2934 - Add PI Analytics to iOS SDK
+* MPUSH-2914 - Rename SDK to JB4A SDK (iOS)
+* MPUSH-3091 - Missing LocationType in Beacon payloads
 
 ### Version 3.4.1 - HF.1
 _Released November 21, 2014_
