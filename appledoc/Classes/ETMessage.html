@@ -1,0 +1,2880 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ETMessage Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Journey Builder for Apps SDK </a></h1>
+				<a id="developerHome" href="../index.html">Salesforce Marketing Cloud</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ETMessage Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/active">&nbsp;&nbsp;&nbsp;&nbsp;active</option>
+	
+	<option value="//api/name/alert">&nbsp;&nbsp;&nbsp;&nbsp;alert</option>
+	
+	<option value="//api/name/badge">&nbsp;&nbsp;&nbsp;&nbsp;badge</option>
+	
+	<option value="//api/name/category">&nbsp;&nbsp;&nbsp;&nbsp;category</option>
+	
+	<option value="//api/name/contentType">&nbsp;&nbsp;&nbsp;&nbsp;contentType</option>
+	
+	<option value="//api/name/endDate">&nbsp;&nbsp;&nbsp;&nbsp;endDate</option>
+	
+	<option value="//api/name/ephemeralMessage">&nbsp;&nbsp;&nbsp;&nbsp;ephemeralMessage</option>
+	
+	<option value="//api/name/hasShownForBeacon">&nbsp;&nbsp;&nbsp;&nbsp;hasShownForBeacon</option>
+	
+	<option value="//api/name/keyValuePairs">&nbsp;&nbsp;&nbsp;&nbsp;keyValuePairs</option>
+	
+	<option value="//api/name/loiteringSeconds">&nbsp;&nbsp;&nbsp;&nbsp;loiteringSeconds</option>
+	
+	<option value="//api/name/messageIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;messageIdentifier</option>
+	
+	<option value="//api/name/messageLimit">&nbsp;&nbsp;&nbsp;&nbsp;messageLimit</option>
+	
+	<option value="//api/name/messageName">&nbsp;&nbsp;&nbsp;&nbsp;messageName</option>
+	
+	<option value="//api/name/messageType">&nbsp;&nbsp;&nbsp;&nbsp;messageType</option>
+	
+	<option value="//api/name/messagesPerPeriod">&nbsp;&nbsp;&nbsp;&nbsp;messagesPerPeriod</option>
+	
+	<option value="//api/name/minTripped">&nbsp;&nbsp;&nbsp;&nbsp;minTripped</option>
+	
+	<option value="//api/name/notification">&nbsp;&nbsp;&nbsp;&nbsp;notification</option>
+	
+	<option value="//api/name/numberOfPeriods">&nbsp;&nbsp;&nbsp;&nbsp;numberOfPeriods</option>
+	
+	<option value="//api/name/openDirectPayload">&nbsp;&nbsp;&nbsp;&nbsp;openDirectPayload</option>
+	
+	<option value="//api/name/periodType">&nbsp;&nbsp;&nbsp;&nbsp;periodType</option>
+	
+	<option value="//api/name/proximity">&nbsp;&nbsp;&nbsp;&nbsp;proximity</option>
+	
+	<option value="//api/name/read">&nbsp;&nbsp;&nbsp;&nbsp;read</option>
+	
+	<option value="//api/name/relatedFence">&nbsp;&nbsp;&nbsp;&nbsp;relatedFence</option>
+	
+	<option value="//api/name/rollingPeriod">&nbsp;&nbsp;&nbsp;&nbsp;rollingPeriod</option>
+	
+	<option value="//api/name/siteIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;siteIdentifier</option>
+	
+	<option value="//api/name/siteUrlAsString">&nbsp;&nbsp;&nbsp;&nbsp;siteUrlAsString</option>
+	
+	<option value="//api/name/sound">&nbsp;&nbsp;&nbsp;&nbsp;sound</option>
+	
+	<option value="//api/name/startDate">&nbsp;&nbsp;&nbsp;&nbsp;startDate</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/getMessageByIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;+ getMessageByIdentifier:</option>
+	
+	<option value="//api/name/getMessagesByContentType:">&nbsp;&nbsp;&nbsp;&nbsp;+ getMessagesByContentType:</option>
+	
+	<option value="//api/name/getMessagesByType:">&nbsp;&nbsp;&nbsp;&nbsp;+ getMessagesByType:</option>
+	
+	<option value="//api/name/getMessagesForGeofence:">&nbsp;&nbsp;&nbsp;&nbsp;+ getMessagesForGeofence:</option>
+	
+	<option value="//api/name/getMessagesForGeofence:andMessageType:">&nbsp;&nbsp;&nbsp;&nbsp;+ getMessagesForGeofence:andMessageType:</option>
+	
+	<option value="//api/name/getMessagesFromExactTargetOfMessageType:andContentType:">&nbsp;&nbsp;&nbsp;&nbsp;+ getMessagesFromExactTargetOfMessageType:andContentType:</option>
+	
+	<option value="//api/name/getProximityMessagesForRegion:">&nbsp;&nbsp;&nbsp;&nbsp;+ getProximityMessagesForRegion:</option>
+	
+	<option value="//api/name/invalidateAllMessagesForType:">&nbsp;&nbsp;&nbsp;&nbsp;+ invalidateAllMessagesForType:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/getLastShownDate">&nbsp;&nbsp;&nbsp;&nbsp;- getLastShownDate</option>
+	
+	<option value="//api/name/getShowCount">&nbsp;&nbsp;&nbsp;&nbsp;- getShowCount</option>
+	
+	<option value="//api/name/initFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- initFromDictionary:</option>
+	
+	<option value="//api/name/initFromDictionary:forFence:">&nbsp;&nbsp;&nbsp;&nbsp;- initFromDictionary:forFence:</option>
+	
+	<option value="//api/name/isEqualToMessage:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToMessage:</option>
+	
+	<option value="//api/name/markAsDeleted">&nbsp;&nbsp;&nbsp;&nbsp;- markAsDeleted</option>
+	
+	<option value="//api/name/markAsRead">&nbsp;&nbsp;&nbsp;&nbsp;- markAsRead</option>
+	
+	<option value="//api/name/markAsUnread">&nbsp;&nbsp;&nbsp;&nbsp;- markAsUnread</option>
+	
+	<option value="//api/name/messageScheduledForDisplay">&nbsp;&nbsp;&nbsp;&nbsp;- messageScheduledForDisplay</option>
+	
+	<option value="//api/name/siteURL">&nbsp;&nbsp;&nbsp;&nbsp;- siteURL</option>
+	
+	<option value="//api/name/subject">&nbsp;&nbsp;&nbsp;&nbsp;- subject</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Message Retrieval Helpers">Message Retrieval Helpers</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/active">active</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/alert">alert</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/badge">badge</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/category">category</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/contentType">contentType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/endDate">endDate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ephemeralMessage">ephemeralMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasShownForBeacon">hasShownForBeacon</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyValuePairs">keyValuePairs</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loiteringSeconds">loiteringSeconds</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageIdentifier">messageIdentifier</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageLimit">messageLimit</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageName">messageName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageType">messageType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messagesPerPeriod">messagesPerPeriod</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minTripped">minTripped</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/notification">notification</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfPeriods">numberOfPeriods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openDirectPayload">openDirectPayload</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/periodType">periodType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/proximity">proximity</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/read">read</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/relatedFence">relatedFence</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rollingPeriod">rollingPeriod</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/siteIdentifier">siteIdentifier</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/siteUrlAsString">siteUrlAsString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sound">sound</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startDate">startDate</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMessageByIdentifier:">getMessageByIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMessagesByContentType:">getMessagesByContentType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMessagesByType:">getMessagesByType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMessagesForGeofence:">getMessagesForGeofence:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMessagesForGeofence:andMessageType:">getMessagesForGeofence:andMessageType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMessagesFromExactTargetOfMessageType:andContentType:">getMessagesFromExactTargetOfMessageType:andContentType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getProximityMessagesForRegion:">getProximityMessagesForRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invalidateAllMessagesForType:">invalidateAllMessagesForType:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getLastShownDate">getLastShownDate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getShowCount">getShowCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initFromDictionary:">initFromDictionary:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initFromDictionary:forFence:">initFromDictionary:forFence:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToMessage:">isEqualToMessage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/markAsDeleted">markAsDeleted</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/markAsRead">markAsRead</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/markAsUnread">markAsUnread</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageScheduledForDisplay">messageScheduledForDisplay</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/siteURL">siteURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subject">subject</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ETMessage Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ETMessage Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">ETGenericUpdate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ETMessage.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>ETMessage is the local representation of a Message from Salesforce. They are multipurpose, sometimes representing a message that should be scheduled because of the entrance or exit of a Geofence, the proximal arrival to an iBeacon, or a CloudPage message downloaded from ET. Because of their multipurpose nature, there are a lot of different attributes on them, many of which may be null at any give time depending on the type of message.</p>
+
+<p>ETMessages also feature Message Limiting, a system of preventing a given message from firing too often. If described in a sentence with the parameters interlaced, it would <a href="#//api/name/read">read</a> &ldquo;show this message only 1 (<a href="#//api/name/messagesPerPeriod">messagesPerPeriod</a>) time per 1 (<a href="#//api/name/numberOfPeriods">numberOfPeriods</a>) hour (<a href="#//api/name/periodType">periodType</a>). As of a recent release, <a href="#//api/name/messagesPerPeriod">messagesPerPeriod</a> will be defaulted to 1 on the Middle Tier, so if it is null or absent, we assume 1, otherwise take the given value.</p>
+
+<p>Many of these accessors are readonly because the value should be trusted and not changed. There are specific methods to modify the message, such as <a href="#//api/name/markAsRead">markAsRead</a> or <a href="#//api/name/markAsDeleted">markAsDeleted</a>. Also, unless specifically marked in a method, only <a href="#//api/name/active">active</a> methods are returned through the getter methods.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageIdentifier">&nbsp;&nbsp;messageIdentifier</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageName">&nbsp;&nbsp;messageName</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageType">&nbsp;&nbsp;messageType</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/contentType">&nbsp;&nbsp;contentType</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/alert">&nbsp;&nbsp;alert</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sound">&nbsp;&nbsp;sound</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/badge">&nbsp;&nbsp;badge</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/category">&nbsp;&nbsp;category</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/keyValuePairs">&nbsp;&nbsp;keyValuePairs</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startDate">&nbsp;&nbsp;startDate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/endDate">&nbsp;&nbsp;endDate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/siteIdentifier">&nbsp;&nbsp;siteIdentifier</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/siteUrlAsString">&nbsp;&nbsp;siteUrlAsString</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openDirectPayload">&nbsp;&nbsp;openDirectPayload</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/relatedFence">&nbsp;&nbsp;relatedFence</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageLimit">&nbsp;&nbsp;messageLimit</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messagesPerPeriod">&nbsp;&nbsp;messagesPerPeriod</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfPeriods">&nbsp;&nbsp;numberOfPeriods</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/periodType">&nbsp;&nbsp;periodType</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rollingPeriod">&nbsp;&nbsp;rollingPeriod</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/minTripped">&nbsp;&nbsp;minTripped</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ephemeralMessage">&nbsp;&nbsp;ephemeralMessage</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/proximity">&nbsp;&nbsp;proximity</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loiteringSeconds">&nbsp;&nbsp;loiteringSeconds</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/read">&nbsp;&nbsp;read</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/active">&nbsp;&nbsp;active</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/notification">&nbsp;&nbsp;notification</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasShownForBeacon">&nbsp;&nbsp;hasShownForBeacon</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initFromDictionary:">&ndash;&nbsp;initFromDictionary:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initFromDictionary:forFence:">&ndash;&nbsp;initFromDictionary:forFence:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/subject">&ndash;&nbsp;subject</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/siteURL">&ndash;&nbsp;siteURL</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/markAsRead">&ndash;&nbsp;markAsRead</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageScheduledForDisplay">&ndash;&nbsp;messageScheduledForDisplay</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/markAsUnread">&ndash;&nbsp;markAsUnread</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/markAsDeleted">&ndash;&nbsp;markAsDeleted</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getLastShownDate">&ndash;&nbsp;getLastShownDate</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getShowCount">&ndash;&nbsp;getShowCount</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Message Retrieval Helpers" name="task_Message Retrieval Helpers"></a>
+						<h3 class="subsubtitle task-title">Message Retrieval Helpers</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMessagesByContentType:">+&nbsp;getMessagesByContentType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMessageByIdentifier:">+&nbsp;getMessageByIdentifier:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMessagesByType:">+&nbsp;getMessagesByType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMessagesForGeofence:">+&nbsp;getMessagesForGeofence:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMessagesForGeofence:andMessageType:">+&nbsp;getMessagesForGeofence:andMessageType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getProximityMessagesForRegion:">+&nbsp;getProximityMessagesForRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMessagesFromExactTargetOfMessageType:andContentType:">+&nbsp;getMessagesFromExactTargetOfMessageType:andContentType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/invalidateAllMessagesForType:">+&nbsp;invalidateAllMessagesForType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isEqualToMessage:">&ndash;&nbsp;isEqualToMessage:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/active" title="active"></a>
+	<h3 class="subsubtitle method-title">active</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether or not the message is active in the local database.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, getter=isActive, readonly) BOOL active</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether or not the message is active in the local database.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/alert" title="alert"></a>
+	<h3 class="subsubtitle method-title">alert</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The alert text of the message. This displays on the screen.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *alert</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The alert text of the message. This displays on the screen.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/badge" title="badge"></a>
+	<h3 class="subsubtitle method-title">badge</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The badge modifier. This should be a NSString in the form of &ldquo;+1&rdquo; or nothing at all. It&rsquo;s saved as a string because of that.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *badge</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The badge modifier. This should be a NSString in the form of &ldquo;+1&rdquo; or nothing at all. It&rsquo;s saved as a string because of that.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/category" title="category"></a>
+	<h3 class="subsubtitle method-title">category</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The category name for an inter<a href="#//api/name/active">active</a> <a href="#//api/name/notification">notification</a> if it has one.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *category</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The category name for an inter<a href="#//api/name/active">active</a> <a href="#//api/name/notification">notification</a> if it has one.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/contentType" title="contentType"></a>
+	<h3 class="subsubtitle method-title">contentType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Bitmask of features that this message has on it (CloudPage, Push only)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) MobilePushContentType contentType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Bitmask of features that this message has on it (CloudPage, Push only)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/endDate" title="endDate"></a>
+	<h3 class="subsubtitle method-title">endDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The message&rsquo;s end date. Messages shouldn&rsquo;t show after this time.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDate *endDate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The message&rsquo;s end date. Messages shouldn&rsquo;t show after this time.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/ephemeralMessage" title="ephemeralMessage"></a>
+	<h3 class="subsubtitle method-title">ephemeralMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Ephemeral Messages disappear when the user walks away from the iBeacon that tripped the message. The default value is NO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isEphemeralMessage) BOOL ephemeralMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Ephemeral Messages disappear when the user walks away from the iBeacon that tripped the message. The default value is NO.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasShownForBeacon" title="hasShownForBeacon"></a>
+	<h3 class="subsubtitle method-title">hasShownForBeacon</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used while ranging beacons to determine if a message for a beacon has been shown based on the <a href="#//api/name/proximity">proximity</a> trigger.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL hasShownForBeacon</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used while ranging beacons to determine if a message for a beacon has been shown based on the <a href="#//api/name/proximity">proximity</a> trigger.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/keyValuePairs" title="keyValuePairs"></a>
+	<h3 class="subsubtitle method-title">keyValuePairs</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An array of Key Value Pairs, or Custom Keys in local parlance, for this message. This will contain NSDictionary objects.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *keyValuePairs</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>An array of Key Value Pairs, or Custom Keys in local parlance, for this message. This will contain NSDictionary objects.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loiteringSeconds" title="loiteringSeconds"></a>
+	<h3 class="subsubtitle method-title">loiteringSeconds</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of seconds the user must stand near an iBeacon before the message is displayed. This is treated as an offset in scheduling the UILocalNotification, which will be cancelled if the user walks away too early.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger loiteringSeconds</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The number of seconds the user must stand near an iBeacon before the message is displayed. This is treated as an offset in scheduling the UILocalNotification, which will be cancelled if the user walks away too early.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageIdentifier" title="messageIdentifier"></a>
+	<h3 class="subsubtitle method-title">messageIdentifier</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Encoded ID from Salesforce. Will match the ID in MobilePush. This is the primary key.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *messageIdentifier</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Encoded ID from Salesforce. Will match the ID in MobilePush. This is the primary key.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageLimit" title="messageLimit"></a>
+	<h3 class="subsubtitle method-title">messageLimit</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The total number of times, ever, that a message will show on a device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *messageLimit</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The total number of times, ever, that a message will show on a device.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageName" title="messageName"></a>
+	<h3 class="subsubtitle method-title">messageName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This is the name which is set on SalesforceMarketingCloud, while setting the ETMessage</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *messageName</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is the name which is set on SalesforceMarketingCloud, while setting the ETMessage</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageType" title="messageType"></a>
+	<h3 class="subsubtitle method-title">messageType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The type of ETMessage being represented.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) MobilePushMessageType messageType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The type of ETMessage being represented.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messagesPerPeriod" title="messagesPerPeriod"></a>
+	<h3 class="subsubtitle method-title">messagesPerPeriod</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The total number of times for a given number of time units that a message can be shown. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;1&rdquo; part.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *messagesPerPeriod</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The total number of times for a given number of time units that a message can be shown. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;1&rdquo; part.</p>
+
+<p>This defaults to 1 if it is not set in the received payload from Salesforce.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/minTripped" title="minTripped"></a>
+	<h3 class="subsubtitle method-title">minTripped</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of times an ETRegion must be tripped before the message shows. This is not currently used, and is a placeholder for future functionality.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *minTripped</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The number of times an ETRegion must be tripped before the message shows. This is not currently used, and is a placeholder for future functionality.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/notification" title="notification"></a>
+	<h3 class="subsubtitle method-title">notification</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A reference to the UILocalNotification triggered for this message. It is used later to cancel the message if need be.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UILocalNotification *notification</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A reference to the UILocalNotification triggered for this message. It is used later to cancel the message if need be.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfPeriods" title="numberOfPeriods"></a>
+	<h3 class="subsubtitle method-title">numberOfPeriods</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of time periods in which a message should be limited. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;2&rdquo; part.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *numberOfPeriods</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The number of time periods in which a message should be limited. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;2&rdquo; part.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openDirectPayload" title="openDirectPayload"></a>
+	<h3 class="subsubtitle method-title">openDirectPayload</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>OpenDirect payload for this message, if there is one.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *openDirectPayload</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>OpenDirect payload for this message, if there is one.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/periodType" title="periodType"></a>
+	<h3 class="subsubtitle method-title">periodType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The time unit counted in <a href="#//api/name/numberOfPeriods">numberOfPeriods</a>. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;hours&rdquo; part.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) MobilePushMessageFrequencyUnit periodType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The time unit counted in <a href="#//api/name/numberOfPeriods">numberOfPeriods</a>. In the statement &ldquo;show 1 time per 2 hours&rdquo;, this is the &ldquo;hours&rdquo; part.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/proximity" title="proximity"></a>
+	<h3 class="subsubtitle method-title">proximity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>For iBeacon messages, the proximity the user must arrive in before the message is fired. It is treated as a &ldquo;less than&rdquo; value, meaning if the message is set to Far, the message can be shown in Far, Near or Immediate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CLProximity proximity</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For iBeacon messages, the proximity the user must arrive in before the message is fired. It is treated as a &ldquo;less than&rdquo; value, meaning if the message is set to Far, the message can be shown in Far, Near or Immediate.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/read" title="read"></a>
+	<h3 class="subsubtitle method-title">read</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether or not the message has been read. This must be set through <a href="#//api/name/markAsRead">markAsRead</a> by the developer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, getter=isRead, readonly) BOOL read</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether or not the message has been read. This must be set through <a href="#//api/name/markAsRead">markAsRead</a> by the developer.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/relatedFence" title="relatedFence"></a>
+	<h3 class="subsubtitle method-title">relatedFence</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>DEPRECTED. The related ETRegion for this message. This is a remnant of days when the relationship was one to one. It is not anymore.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ETRegion *relatedFence</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>DEPRECTED. The related ETRegion for this message. This is a remnant of days when the relationship was one to one. It is not anymore.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rollingPeriod" title="rollingPeriod"></a>
+	<h3 class="subsubtitle method-title">rollingPeriod</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether or not the period is a rolling period. Defaults to YES through code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isRollingPeriod) BOOL rollingPeriod</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether or not the period is a rolling period. Defaults to YES through code.</p>
+
+<p>Consider a message being fired at 2:19PM, and it may only be shown once per hour. In a rolling period, the next time it may show is 3:19PM. In a non-rolling period, the next earliest showing time is 3:00PM, the start of the next hour.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/siteIdentifier" title="siteIdentifier"></a>
+	<h3 class="subsubtitle method-title">siteIdentifier</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Site ID for the CloudPage attached to this message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *siteIdentifier</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The Site ID for the CloudPage attached to this message.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/siteUrlAsString" title="siteUrlAsString"></a>
+	<h3 class="subsubtitle method-title">siteUrlAsString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Site URL for the ClouePage attached to this message. It is saved as an NSString and converted later to NSURL.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *siteUrlAsString</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The Site URL for the ClouePage attached to this message. It is saved as an NSString and converted later to NSURL.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sound" title="sound"></a>
+	<h3 class="subsubtitle method-title">sound</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The sound that should play, if any. Most of the time, either &ldquo;default&rdquo; or &ldquo;custom.caf&rdquo;, conventions enforced in MobilePush.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *sound</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The sound that should play, if any. Most of the time, either &ldquo;default&rdquo; or &ldquo;custom.caf&rdquo;, conventions enforced in MobilePush.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startDate" title="startDate"></a>
+	<h3 class="subsubtitle method-title">startDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The message&rsquo;s start date. Messages shouldn&rsquo;t show before this time.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDate *startDate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The message&rsquo;s start date. Messages shouldn&rsquo;t show before this time.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/getMessageByIdentifier:" title="getMessageByIdentifier:"></a>
+	<h3 class="subsubtitle method-title">getMessageByIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets a specific ETMessage for a given identifer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (ETMessage *)getMessageByIdentifier:(NSString *)<em>identifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>The</em></dt>
+			<dd><p>Message ID to retrieve</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The ETMessage, or nil if not found in the database.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets a specific ETMessage for a given identifer.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getMessagesByContentType:" title="getMessagesByContentType:"></a>
+	<h3 class="subsubtitle method-title">getMessagesByContentType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets all <a href="#//api/name/active">active</a> messages for a specific <a href="#//api/name/contentType">contentType</a>, usually Cloud Pages.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)getMessagesByContentType:(MobilePushContentType)<em>contentType</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSArray of ETMessages</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets all <a href="#//api/name/active">active</a> messages for a specific <a href="#//api/name/contentType">contentType</a>, usually Cloud Pages.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getMessagesByType:" title="getMessagesByType:"></a>
+	<h3 class="subsubtitle method-title">getMessagesByType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages for a specific message type, like Fence Entry, Exit or Proximity.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)getMessagesByType:(MobilePushMessageType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> you&rsquo;d like back</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of ETMessages.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages for a specific message type, like Fence Entry, Exit or Proximity.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getMessagesForGeofence:" title="getMessagesForGeofence:"></a>
+	<h3 class="subsubtitle method-title">getMessagesForGeofence:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages tied to a specific ETRegion (Geofence).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)getMessagesForGeofence:(ETRegion *)<em>fence</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fence</em></dt>
+			<dd><p>The ETRegion for which you would like messages</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSArray of ETMessages</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages tied to a specific ETRegion (Geofence).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getMessagesForGeofence:andMessageType:" title="getMessagesForGeofence:andMessageType:"></a>
+	<h3 class="subsubtitle method-title">getMessagesForGeofence:andMessageType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages tied to a specific ETRegion (Geofence) and <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a>, like Entry ot Exit.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)getMessagesForGeofence:(ETRegion *)<em>fence</em> andMessageType:(MobilePushMessageType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fence</em></dt>
+			<dd><p>The ETRegion for which you would like messages</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> that describes the messages you want</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSArray of ETMessages that meet the criteria asked for.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages tied to a specific ETRegion (Geofence) and <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a>, like Entry ot Exit.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getMessagesFromExactTargetOfMessageType:andContentType:" title="getMessagesFromExactTargetOfMessageType:andContentType:"></a>
+	<h3 class="subsubtitle method-title">getMessagesFromExactTargetOfMessageType:andContentType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Triggeres a data pull from Salesforce for messages that meet the supplied requirements.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)getMessagesFromExactTargetOfMessageType:(MobilePushMessageType)<em>messageType</em> andContentType:(MobilePushContentType)<em>contentType</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageType</em></dt>
+			<dd><p>The Message Type you wish to retrieve</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>contentType</em></dt>
+			<dd><p>The Content Type you wish to retrieve</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Doesn&rsquo;t return a value, but has delegate callbacks.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Triggeres a data pull from Salesforce for messages that meet the supplied requirements.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getProximityMessagesForRegion:" title="getProximityMessagesForRegion:"></a>
+	<h3 class="subsubtitle method-title">getProximityMessagesForRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages for a specific ETRegion (Proximity).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)getProximityMessagesForRegion:(ETRegion *)<em>region</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The ETRegion for which you would like messages</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSArray of ETMessages</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets all <a href="#//api/name/active">active</a> ETMessages for a specific ETRegion (Proximity).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/invalidateAllMessagesForType:" title="invalidateAllMessagesForType:"></a>
+	<h3 class="subsubtitle method-title">invalidateAllMessagesForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Marks all messages for a given type as in<a href="#//api/name/active">active</a>. This is done prior to processing new messages just received from Salesforce.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)invalidateAllMessagesForType:(MobilePushMessageType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The <a href="../Constants/MobilePushMessageType.html">MobilePushMessageType</a> you wish to invalidate</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>T/F if the invalidation query worked</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Marks all messages for a given type as in<a href="#//api/name/active">active</a>. This is done prior to processing new messages just received from Salesforce.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/getLastShownDate" title="getLastShownDate"></a>
+	<h3 class="subsubtitle method-title">getLastShownDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Getter for a private value, lastShownDate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDate *)getLastShownDate</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The Last Shown Date, if any.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Getter for a private value, lastShownDate.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getShowCount" title="getShowCount"></a>
+	<h3 class="subsubtitle method-title">getShowCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Getter for a private value, showCount.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)getShowCount</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The show count for this message.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Getter for a private value, showCount.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initFromDictionary:" title="initFromDictionary:"></a>
+	<h3 class="subsubtitle method-title">initFromDictionary:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a new ETMessage with values in the given NSDictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dict</em></dt>
+			<dd><p>A dictionary of values to apply to the ETMessage</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new ETMessage</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a new ETMessage with values in the given NSDictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initFromDictionary:forFence:" title="initFromDictionary:forFence:"></a>
+	<h3 class="subsubtitle method-title">initFromDictionary:forFence:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated Initializer. Creates a new ETMessage with values from an NSDictionary for a specific ETRegion.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initFromDictionary:(NSDictionary *)<em>dict</em> forFence:(ETRegion *)<em>region</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dict</em></dt>
+			<dd><p>A dictionary of values to apply to the ETMessage</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The ETRegion that prompted the creation of this ETMessage</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new ETMessage</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Designated Initializer. Creates a new ETMessage with values from an NSDictionary for a specific ETRegion.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isEqualToMessage:" title="isEqualToMessage:"></a>
+	<h3 class="subsubtitle method-title">isEqualToMessage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>ETMessage equality. Since object equality won&rsquo;t always work, this compares messageIdentifiers to determine equality.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToMessage:(ETMessage *)<em>message</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>The ETMessage to compare self to</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>T/F if the messages are equal.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>ETMessage equality. Since object equality won&rsquo;t always work, this compares messageIdentifiers to determine equality.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/markAsDeleted" title="markAsDeleted"></a>
+	<h3 class="subsubtitle method-title">markAsDeleted</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Marks a message as deleted. They will not be returned after this, and it&rsquo;s irreversable.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)markAsDeleted</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Marks a message as deleted. They will not be returned after this, and it&rsquo;s irreversable.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/markAsRead" title="markAsRead"></a>
+	<h3 class="subsubtitle method-title">markAsRead</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Marks a message as <a href="#//api/name/read">read</a> in the local cache. Read messages do not show up in the Inbox.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)markAsRead</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Marks a message as <a href="#//api/name/read">read</a> in the local cache. Read messages do not show up in the Inbox.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/markAsUnread" title="markAsUnread"></a>
+	<h3 class="subsubtitle method-title">markAsUnread</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Marks a message as un<a href="#//api/name/read">read</a>. Just for convenience.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)markAsUnread</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Marks a message as un<a href="#//api/name/read">read</a>. Just for convenience.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageScheduledForDisplay" title="messageScheduledForDisplay"></a>
+	<h3 class="subsubtitle method-title">messageScheduledForDisplay</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Records a message as scheduled, and updates the fun, fun logic around when it should again, if it should of course.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)messageScheduledForDisplay</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Records a message as scheduled, and updates the fun, fun logic around when it should again, if it should of course.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/siteURL" title="siteURL"></a>
+	<h3 class="subsubtitle method-title">siteURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cleanses and returns the Sites URL as a proper NSURL. This is mostly for convenience.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSURL *)siteURL</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Cleanses and returns the Sites URL as a proper NSURL. This is mostly for convenience.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/subject" title="subject"></a>
+	<h3 class="subsubtitle method-title">subject</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This is an overridden accessor for subj ect to handle some business logic around what to show. Use this for display in an inbox.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)subject</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is an overridden accessor for subj ect to handle some business logic around what to show. Use this for display in an inbox.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ETMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Salesforce Marketing Cloud. All rights reserved. (Last updated: 2015-06-04)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

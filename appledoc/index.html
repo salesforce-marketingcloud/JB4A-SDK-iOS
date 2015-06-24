@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Journey Builder for Apps SDK Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">Journey Builder for Apps SDK </a></h1>
+				<a id="developerHome" href="index.html">Salesforce Marketing Cloud</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">Journey Builder for Apps SDK Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main"> 
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">Journey Builder for Apps SDK Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h2>A Note on Usage</h2>
+
+<p>All functionality should move through <a href="Classes/ETPush.html">ETPush</a> and it&rsquo;s methods. <a href="Classes/ETPush.html">ETPush</a> is a singleton for your convenience, and will handle communication with Salesforce automatically. There are a few internal use methods exposed, but should not be used and are documented as such.</p>
+
+<p>Version 3.0 of the Journey Builder for Apps SDK brings new features offered by Salesforce, most notably the introduction of location services, starting with Geofenced messages. Location Services are enabled through the combination of two settings - first, the SDK must be set up for Location at configuration time <a href="Classes/ETPush.html">ETPush</a>&rsquo;s configuration method, along with explicitly instructing the LocationManager to start watching location . By having a two-key system like this, your app can (and should strongly consider) allowing the user to turn on these features in the app itself, and provide a switch or button to control that. Note that <em>both are required</em> for Location services to work. Finally, the user has ultimate control over Location Services through the Settings app provided by iOS. The LocationManager will check for permissions on startWatchingLocation (and subsequent relevant times), and must respect what iOS tells it through those methods.</p>
+
+<p>More information is available at <a href="http://code.exacttarget.com">Code@ExactTarget</a>.</p>
+						
+						
+					</div>
+					
+                        
+                    
+                        <div class="index-column">
+						<h2 class="index-title">Programming Guides</h2>
+						<ul>
+                        
+                        <li><a href="docs/Push Constants.html">Push Constants</a></li>
+                        
+						</ul>
+                        </div>
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/ETEvent.html">ETEvent</a></li>
+							
+							<li><a href="Classes/ETLandingPagePresenter.html">ETLandingPagePresenter</a></li>
+							
+							<li><a href="Classes/ETLocationManager.html">ETLocationManager</a></li>
+							
+							<li><a href="Classes/ETMessage.html">ETMessage</a></li>
+							
+							<li><a href="Classes/ETPhoneHome.html">ETPhoneHome</a></li>
+							
+							<li><a href="Classes/ETPush.html">ETPush</a></li>
+							
+							<li><a href="Classes/ETURLConnection.html">ETURLConnection</a></li>
+							
+							<li><a href="Classes/ExactTargetEnhancedPushDataSource.html">ExactTargetEnhancedPushDataSource</a></li>
+							
+							<li><a href="Classes/PIEvent.html">PIEvent</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						<h2 class="index-title">Protocol References</h2>
+						<ul>
+							
+							<li><a href="Protocols/ExactTargetOpenDirectDelegate.html">ExactTargetOpenDirectDelegate</a></li>
+							
+						</ul>
+						
+                        
+						<h2 class="index-title">Constant References</h2>
+						<ul>
+                        
+                        <li><a href="Constants/MPMessageSource.html">MPMessageSource</a></li>
+                        
+                        <li><a href="Constants/MobilePushContentType.html">MobilePushContentType</a></li>
+                        
+                        <li><a href="Constants/MobilePushMessageFrequencyUnit.html">MobilePushMessageFrequencyUnit</a></li>
+                        
+                        <li><a href="Constants/MobilePushMessageType.html">MobilePushMessageType</a></li>
+                        
+                        <li><a href="Constants/MobilePushStatisticType.html">MobilePushStatisticType</a></li>
+                        
+                        <li><a href="Constants/NSURLConnResponse.html">NSURLConnResponse</a></li>
+                        
+                        <li><a href="Constants/configureSDKWithAppIDError.html">configureSDKWithAppIDError</a></li>
+                        
+						</ul>
+						
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Salesforce Marketing Cloud. All rights reserved. (Last updated: 2015-06-04)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>
