@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>ETPhoneHome Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Journey Builder for Apps SDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Salesforce Marketing Cloud</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/magicBicycle">+ magicBicycle</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/checkForAndSendBackCachedData">- checkForAndSendBackCachedData</option>
+		
+		<option value="//api/name/phoneHome:">- phoneHome:</option>
+		
+		<option value="//api/name/phoneHomeInBulkForGenericUpdateType:">- phoneHomeInBulkForGenericUpdateType:</option>
+		
+		<option value="//api/name/saveToDatabaseInstead:">- saveToDatabaseInstead:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">ETPhoneHome Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>NSURLConnectionDataDelegate</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>ETPhoneHome.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>ETPhoneHome is like a highway management system, governing the sending of data to and from Salesforce, and caching that which can&rsquo;t get sent home. It works by marshalling around GenericUpdate object subclasses, which themselves create a common pattern for handling business.</p>
+
+<p>Data should be sent back using <a href="#//api/name/phoneHome:">phoneHome:</a>, which will start the process of sending data to ET, and failing that, save it to the database. The behavior is all controlled by methods on the GenericUpdate object.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/magicBicycle" title="magicBicycle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/magicBicycle">+&nbsp;magicBicycle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>  Singleton accessor. This isn&rsquo;t to be publicly used, so we can have a sense of humor about it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (ETPhoneHome *)magicBicycle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>  Singleton accessor. This isn&rsquo;t to be publicly used, so we can have a sense of humor about it.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPhoneHome.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/phoneHome:" title="phoneHome:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/phoneHome:">&ndash;&nbsp;phoneHome:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Begins the process of sending data back to Salesforce.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)phoneHome:(ETGenericUpdate *)<em>updateObject</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>updateObject</code></th>
+						<td><p>A subclass of GenericUpdate that wants to be send to ET.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>bool Whether or not it was able to send to ET.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Begins the process of sending data back to Salesforce.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPhoneHome.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/phoneHomeInBulkForGenericUpdateType:" title="phoneHomeInBulkForGenericUpdateType:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/phoneHomeInBulkForGenericUpdateType:">&ndash;&nbsp;phoneHomeInBulkForGenericUpdateType:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Begins the process of sending data back to Salesforce, but does so for bulk data. This is different than <a href="#//api/name/phoneHome:">phoneHome:</a> because it will send an array of things, and not just one object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)phoneHomeInBulkForGenericUpdateType:(Class)<em>updateClass</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Begins the process of sending data back to Salesforce, but does so for bulk data. This is different than <a href="#//api/name/phoneHome:">phoneHome:</a> because it will send an array of things, and not just one object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPhoneHome.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/saveToDatabaseInstead:" title="saveToDatabaseInstead:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/saveToDatabaseInstead:">&ndash;&nbsp;saveToDatabaseInstead:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Saves the udpate object to the database in the event of a send failure. It is exposed in the header because some objects just need to be saved instead of sent. This method should not be used publicly.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)saveToDatabaseInstead:(ETGenericUpdate *)<em>updateObject</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>updateObject</code></th>
+						<td><p>The subclass of GenericUpdate to save to the database.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>bool Whether or not the save succeeded. Sometimes they don&rsquo;t.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Saves the udpate object to the database in the event of a send failure. It is exposed in the header because some objects just need to be saved instead of sent. This method should not be used publicly.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPhoneHome.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/checkForAndSendBackCachedData" title="checkForAndSendBackCachedData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/checkForAndSendBackCachedData">&ndash;&nbsp;checkForAndSendBackCachedData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Checks the cache database for records that weren&rsquo;t successfully sent to Salesforce, and tries to send them. No return value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)checkForAndSendBackCachedData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Checks the cache database for records that weren&rsquo;t successfully sent to Salesforce, and tries to send them. No return value.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPhoneHome.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Salesforce Marketing Cloud. All rights reserved. Updated: 2015-06-23</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
