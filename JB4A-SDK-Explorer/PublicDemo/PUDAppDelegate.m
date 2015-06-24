@@ -34,7 +34,6 @@
 //  Created by Matt Lathrop on 4/29/14.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
-
 #import "PUDAppDelegate.h"
 
 // Controllers
@@ -78,17 +77,13 @@
                                                                 diskPath:nil];
     [NSURLCache setSharedURLCache:sharedCache];
     
-    // Enable PI Analytics for our apps for now
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:ETPIAnalyticsActive];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
     // set status bar style
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // set the overall app tint color
     [[UINavigationBar appearance] setBarTintColor:[UIColor etPrimaryOrange]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-
+    
     // set page control appearance
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
@@ -107,142 +102,166 @@
     /**
      *  The below method has to be implemented ONLY ONCE in the SDK. The below conditions are specifically for this app and you will NOT need multiple/ conditional implementation like this in your own app
      */
+    BOOL configOK = NO;
+    NSError *error = nil;
+    
 
-    [[ETPush pushManager] configureSDKWithAppID:[PUDUtility appID] // The App ID from Code@ExactTarget
-                                 andAccessToken:[PUDUtility accessToken] // The Access Token from Code@ExactTarget
-                                  withAnalytics:YES // Whether or not you would like to use Salesforce analytics services
-                            andLocationServices:YES  // Whether or not you would like to use location-based alerts
-                                  andCloudPages:YES]; // Whether or not you would like to use CloudPages.
-    
-    /**
-     ET_NOTE: The OpenDirect Delegate must be set in order for OpenDirect to work with URL schemes other than http or https. Set this before you call [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
-     */
-    [[ETPush pushManager] setOpenDirectDelegate:self];
-    
-    /**
-     ET_NOTE: This method delivers the launch options dictionary to the SDK. This is a required implementation step to ensure that pushes are delivered and processed by Salesforce.
-     */
-    [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
-    
-    /**
-     ET_NOTE: This method begins the push registration workflow. It indicates to iOS (and Apple) that this application wishes to send push messages. It is required for push, but the flags you provide are at your descretion (at least one is required).
+    configOK = [[ETPush pushManager] configureSDKWithAppID:[PUDUtility appID]
+                                            andAccessToken:[PUDUtility accessToken]
+                                             withAnalytics:YES
+                                       andLocationServices:YES
+                                             andCloudPages:YES
+                                           withPIAnalytics:YES
+                                                     error:&error];
      
-     UIRemoteNotificationTypeAlert - This flag will ask for permission to show text to the user, in either Banner or an Alert.
-     UIRemoteNotificationTypeBadge - This flag allows you to update the badge on the app icon
-     UIRemoteNotificationTypeSound - This flag allows you to play a sound when the push is received.
-
-     // Use these for IOS8 instead of UIRemoteNotificationType...
-     UIUserNotificationTypeBadge - This flag allows you to update the badge on the app icon
-     UIUserNotificationTypeSound - This flag allows you to play a sound when the push is received.
-     UIUserNotificationTypeAlert - This flag will ask for permission to show text to the user, in either Banner or an Alert.
-     */
     
-    // See ETPush.h for reasoning behind this #if logic
-    // IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
-    // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
-    // are we running on IOS8 and above?
-    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
-        // create user actions here if wanted
-        UIMutableUserNotificationAction *userActionButton1 = [[UIMutableUserNotificationAction alloc] init];
-        userActionButton1.identifier = @"userActionButton1";
-        userActionButton1.title = @"View Offer";
-        
-        // Given seconds, not minutes, to run in the background
-        userActionButton1.activationMode = UIUserNotificationActivationModeBackground;
-        userActionButton1.destructive = NO;
-        
-        // If YES requires passcode, but does not unlock the device
-        userActionButton1.authenticationRequired = NO;
-        
-        UIMutableUserNotificationAction *userActionButton2 = [[UIMutableUserNotificationAction alloc] init];
-        userActionButton2.identifier = @"userActionButton2";
-        userActionButton2.title = @"Add to Passbook";
-        
-        // Given seconds, not minutes, to run in the background
-        userActionButton2.activationMode = UIUserNotificationActivationModeBackground;
-        userActionButton2.destructive = NO;
-        
-        // If YES requires passcode, but does not unlock the device
-        userActionButton2.authenticationRequired = NO;
-        
-        UIMutableUserNotificationAction *userActionButton3 = [[UIMutableUserNotificationAction alloc] init];
-        userActionButton3.identifier = @"userActionButton3";
-        userActionButton3.title = @"Snooze";
-        
-        // Given seconds, not minutes, to run in the background
-        userActionButton3.activationMode = UIUserNotificationActivationModeBackground;
-        userActionButton3.destructive = NO;
-        
-        // If YES requires passcode, but does not unlock the device
-        userActionButton3.authenticationRequired = NO;
-        
-        UIMutableUserNotificationAction *userActionButton4 = [[UIMutableUserNotificationAction alloc] init];
-        userActionButton4.identifier = @"userActionButton4";
-        userActionButton4.title = @"Call Support";
-        
-        // this one runs in the foreground
-        userActionButton4.activationMode = UIUserNotificationActivationModeForeground;
-        userActionButton4.destructive = NO;
-        
-        // If YES requires passcode, but does not unlock the device
-        userActionButton4.authenticationRequired = NO;
-        
-        // create a category to handle the buttons
-        UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc] init];
-        category.identifier = @"Example";
-        
-        // these will be the default context buttons
-        [category setActions:@[userActionButton1, userActionButton2, userActionButton3, userActionButton4] forContext:UIUserNotificationActionContextDefault];
-        
-        // these will be the minimal context buttons
-        [category setActions:@[userActionButton1, userActionButton4] forContext:UIUserNotificationActionContextMinimal];
-        
-        // make a set of all categories the app will support - just one for now
-        NSSet *categories = [NSSet setWithObjects:category, nil];
-        
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge |
-                                                UIUserNotificationTypeSound |
-                                                UIUserNotificationTypeAlert
-                                                                                 categories:categories];
-        [[ETPush pushManager] registerUserNotificationSettings:settings];
-        [[ETPush pushManager] registerForRemoteNotifications];
+    if (!configOK) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // something went wrong in the config call - show what the error is
+            [[[UIAlertView alloc] initWithTitle:@"Failed configureSDKWithAppID!"
+                                        message:[error localizedDescription]
+                                       delegate:nil
+                              cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
+                              otherButtonTitles:nil] show];
+        });
     }
     else {
+        /**
+         ET_NOTE: The OpenDirect Delegate must be set in order for OpenDirect to work with URL schemes other than http or https. Set this before you call [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
+         */
+        [[ETPush pushManager] setOpenDirectDelegate:self];
+        
+        /**
+         ET_NOTE: This method delivers the launch options dictionary to the SDK. This is a required implementation step to ensure that pushes are delivered and processed by Salesforce.
+         */
+        [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
+        
+        /**
+         ET_NOTE: This method begins the push registration workflow. It indicates to iOS (and Apple) that this application wishes to send push messages. It is required for push, but the flags you provide are at your descretion (at least one is required).
+         
+         UIRemoteNotificationTypeAlert - This flag will ask for permission to show text to the user, in either Banner or an Alert.
+         UIRemoteNotificationTypeBadge - This flag allows you to update the badge on the app icon
+         UIRemoteNotificationTypeSound - This flag allows you to play a sound when the push is received.
+         
+         // Use these for IOS8 instead of UIRemoteNotificationType...
+         UIUserNotificationTypeBadge - This flag allows you to update the badge on the app icon
+         UIUserNotificationTypeSound - This flag allows you to play a sound when the push is received.
+         UIUserNotificationTypeAlert - This flag will ask for permission to show text to the user, in either Banner or an Alert.
+         */
+        
+        // See ETPush.h for reasoning behind this #if logic
+        // IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+        // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+        // are we running on IOS8 and above?
+        if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
+            // create user actions here if wanted
+            UIMutableUserNotificationAction *userActionButton1 = [[UIMutableUserNotificationAction alloc] init];
+            userActionButton1.identifier = @"userActionButton1";
+            userActionButton1.title = @"View Offer";
+            
+            // Given seconds, not minutes, to run in the background
+            userActionButton1.activationMode = UIUserNotificationActivationModeBackground;
+            userActionButton1.destructive = NO;
+            
+            // If YES requires passcode, but does not unlock the device
+            userActionButton1.authenticationRequired = NO;
+            
+            UIMutableUserNotificationAction *userActionButton2 = [[UIMutableUserNotificationAction alloc] init];
+            userActionButton2.identifier = @"userActionButton2";
+            userActionButton2.title = @"Add to Passbook";
+            
+            // Given seconds, not minutes, to run in the background
+            userActionButton2.activationMode = UIUserNotificationActivationModeBackground;
+            userActionButton2.destructive = NO;
+            
+            // If YES requires passcode, but does not unlock the device
+            userActionButton2.authenticationRequired = NO;
+            
+            UIMutableUserNotificationAction *userActionButton3 = [[UIMutableUserNotificationAction alloc] init];
+            userActionButton3.identifier = @"userActionButton3";
+            userActionButton3.title = @"Snooze";
+            
+            // Given seconds, not minutes, to run in the background
+            userActionButton3.activationMode = UIUserNotificationActivationModeBackground;
+            userActionButton3.destructive = NO;
+            
+            // If YES requires passcode, but does not unlock the device
+            userActionButton3.authenticationRequired = NO;
+            
+            UIMutableUserNotificationAction *userActionButton4 = [[UIMutableUserNotificationAction alloc] init];
+            userActionButton4.identifier = @"userActionButton4";
+            userActionButton4.title = @"Call Support";
+            
+            // this one runs in the foreground
+            userActionButton4.activationMode = UIUserNotificationActivationModeForeground;
+            userActionButton4.destructive = NO;
+            
+            // If YES requires passcode, but does not unlock the device
+            userActionButton4.authenticationRequired = NO;
+            
+            // create a category to handle the buttons
+            UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc] init];
+            category.identifier = @"Example";
+            
+            // these will be the default context buttons
+            [category setActions:@[userActionButton1, userActionButton2, userActionButton3, userActionButton4] forContext:UIUserNotificationActionContextDefault];
+            
+            // these will be the minimal context buttons
+            [category setActions:@[userActionButton1, userActionButton4] forContext:UIUserNotificationActionContextMinimal];
+            
+            // make a set of all categories the app will support - just one for now
+            NSSet *categories = [NSSet setWithObjects:category, nil];
+            
+            UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound |
+                                                    UIUserNotificationTypeAlert
+                                                                                     categories:categories];
+            [[ETPush pushManager] registerUserNotificationSettings:settings];
+            [[ETPush pushManager] registerForRemoteNotifications];
+        }
+        else {
+            [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+        }
+#else
+        // Supports IOS SDKs < 8.X (i.e. XCode 5.X or less)
         [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+#endif
+#else
+        // IPHONEOS_DEPLOYMENT_TARGET >= 8.X
+        // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
+                                                UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert
+                                                                                 categories:nil];
+        [[ETPush pushManager] registerUserNotificationSettings:settings];
+        [[ETPush pushManager] registerForRemoteNotifications];
+#endif
+        
+        /**
+         ET_NOTE: If you specify YES, then a UIAlertView will be shown if a push received and the app is in the active state. This is not the recommended best practice for production apps but is called for in some use cases
+         */
+        [[ETPush pushManager] shouldDisplayAlertViewIfPushReceived:NO];
+        
+        /**
+         ET_NOTE: This method is required in order for location messaging to work and the user's location to be processed
+         */
+        [[ETLocationManager locationManager] startWatchingLocation];
+        
+        /**
+         ET_NOTE: Logging the device id is very useful for debugging purposes. One thing this can help you do is create a filtered list inside of MobilePush that only includes the device that matches this id.
+         */
+        NSLog(@"== DEVICE ID ==\nthe Salesforce Device ID is: %@\n", [ETPush safeDeviceIdentifier]);
+        
+        // To enable logging while debugging
+        [ETPush setETLoggerToRequiredState:YES];
+    } 
+    
+    NSString *configStr = [PUDPushConfig getCurrentConfig].configurationName;
+    if ([configStr length] == 0) {
+        PUDPushConfig *_defaultPushConfig = [PUDPushConfig getDefaultPushConfig];
+        [PUDPushConfig setCurrentConfigWithSelected:_defaultPushConfig];
     }
-#else
-    // Supports IOS SDKs < 8.X (i.e. XCode 5.X or less)
-    [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
-#endif
-#else
-    // IPHONEOS_DEPLOYMENT_TARGET >= 8.X
-    // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
-                                            UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert
-                                                                             categories:nil];
-    [[ETPush pushManager] registerUserNotificationSettings:settings];
-    [[ETPush pushManager] registerForRemoteNotifications];
-#endif
-    
-    /**
-     ET_NOTE: If you specify YES, then a UIAlertView will be shown if a push received and the app is in the active state. This is not the recommended best practice for production apps but is called for in some use cases
-     */
-    [[ETPush pushManager] shouldDisplayAlertViewIfPushReceived:NO];
-    
-    /**
-     ET_NOTE: This method is required in order for location messaging to work and the user's location to be processed
-     */
-    [[ETLocationManager locationManager] startWatchingLocation];
-    
-    /**
-     ET_NOTE: Logging the device id is very useful for debugging purposes. One thing this can help you do is create a filtered list inside of MobilePush that only includes the device that matches this id.
-     */
-    NSLog(@"== DEVICE ID ==\nThe ExactTarget Device ID is: %@\n", [ETPush safeDeviceIdentifier]);
-    
-    // To enable logging while debugging
-    [ETPush setETLoggerToRequiredState:YES];
     
     return YES;
 }
@@ -336,7 +355,6 @@
     [[ETPush pushManager] didRegisterUserNotificationSettings:notificationSettings];
 }
 #endif
-
 
 /**
  These are the Apple Push Notification Service Delegate methods. They are required for the Push lifecycle to work, and implementation of the Salesforce methods within is required for Salesforce's MobilePush to function as expected. You may copy this block directly to your code and modify it to your liking, or cherry-pick the required methods to your own implementation.
@@ -555,21 +573,21 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 
-    if (buttonIndex != alertView.cancelButtonIndex) {
-        /**
-         *  Handle the payload immediately because the subscriber clicked the view button
-         */
-        NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
-        BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
-        BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
-        
-        if (hasOpenDirectPayload) {
-            [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
+        if (buttonIndex != alertView.cancelButtonIndex) {
+            /**
+             *  Handle the payload immediately because the subscriber clicked the view button
+             */
+            NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
+            BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
+            BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
+            
+            if (hasOpenDirectPayload) {
+                [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
+            }
+            else if (hasDiscountCodeCustomKey) {
+                [self handleDiscountCodePayload];
+            }
         }
-        else if (hasDiscountCodeCustomKey) {
-            [self handleDiscountCodePayload];
-        }
-    }
 }
 
 - (void)handleOpenDirectPayload:(NSString *)payload {

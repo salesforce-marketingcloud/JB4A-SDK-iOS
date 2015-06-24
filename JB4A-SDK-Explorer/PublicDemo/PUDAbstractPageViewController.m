@@ -80,8 +80,6 @@
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
-    
-    [self listeningForPreferences];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -151,25 +149,5 @@
 {
     return 0;
 }
-
-
-# pragma mark - Custom Methods
-
-- (void) listeningForPreferences {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(reloadView)
-                                                 name:kPUDPreferencesChanged
-                                               object:nil];
-}
-
-- (void) reloadView {
-    PUDPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers
-                                      direction:UIPageViewControllerNavigationDirectionForward
-                                       animated:NO
-                                     completion:nil];
-}
-
 
 @end

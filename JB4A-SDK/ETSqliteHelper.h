@@ -1,6 +1,6 @@
 //
 //  ETSqliteHelper.h
-//  ET SDK Demo
+//  JB4A-SDK-iOS
 //
 //  Created by Eddie Roger on 7/15/13.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
@@ -17,10 +17,11 @@
  */
 @interface ETSqliteHelper : NSObject
 {
-    sqlite3 *_db;
+//    sqlite3 *_db;
 }
 
 @property (nonatomic) NSInteger maxRetries;
+@property (nonatomic) sqlite3 *db;
 
 -(instancetype)init;
 +(instancetype)database;

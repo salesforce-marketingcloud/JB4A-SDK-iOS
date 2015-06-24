@@ -19,9 +19,5 @@
     #import "UIColor+ExactTargetColors.h"
 #endif
 
-#if defined (QA) || defined (DEBUG)
-#define ETLog(fmt, ...) NSLog((@"[ET] %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
-//        #define ETLog(fmt, ...) NSLog((@"[ET] %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #define ETLog(fmt, ...)
-#endif
+

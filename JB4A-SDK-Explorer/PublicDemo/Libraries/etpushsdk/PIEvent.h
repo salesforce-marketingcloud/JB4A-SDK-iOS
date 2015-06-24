@@ -1,6 +1,6 @@
 //
 //  PIEvent.h
-//  ET SDK Demo
+//  JB4A-SDK-iOS
 //
 //  Created by Tom Brooks (Contractor) on 1/13/15.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.

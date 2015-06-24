@@ -53,11 +53,9 @@
 
 + (NSString *)configurationName {
     
-#if defined (QA) || defined (DEBUG)
-    return kAppSettingDevConfigName;
-#else
+
     return kAppSettingAppstoreConfigName;
-#endif
+
 }
 
 

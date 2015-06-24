@@ -256,61 +256,78 @@
     // Delete the database
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *paths = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *finalPath = [paths stringByAppendingPathComponent:@"etdb.db"];
+    NSString *finalPath = [paths stringByAppendingPathComponent:@"JB4ASDK"];
     NSError *error;
     
     BOOL success = [fileManager removeItemAtPath:finalPath error:&error];
     
     if (success) {
-        
         NSLog(@"Database cleared");
     }
-    
     else {
-        
         NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
     }
     
-    //Open the database
-    [[ETSqliteHelper database] open];
-    
-    // See ETPush.h for reasoning behind this #if logic
-    // IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
-    // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
-    // are we running on IOS8 and above?
-    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
-        // get the current settings to reapply them
-        UIUserNotificationSettings *settings = [[ETPush pushManager] currentUserNotificationSettings];
+    // reconfigure the SDK
+    PUDPushConfig *pushConfig = [PUDPushConfig getCurrentConfig];
 
-        // we have to have something or we won't get any notifications on the first install on a new device
-        if (settings.types == UIUserNotificationTypeNone) {
-            settings = [UIUserNotificationSettings settingsForTypes:
-                        UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert
-                                                         categories:nil];
-        }
-        
-        [[ETPush pushManager] registerUserNotificationSettings:settings];
-        [[ETPush pushManager] registerForRemoteNotifications];
+    error = nil;
+    BOOL configOK = [[ETPush pushManager] configureSDKWithAppID:pushConfig.appID
+                                                 andAccessToken:pushConfig.accessToken
+                                                  withAnalytics:YES
+                                            andLocationServices:YES
+                                                  andCloudPages:YES
+                                                withPIAnalytics:YES
+                                                          error:&error];
+    if (!configOK) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // something went wrong in the config call - show what the error is
+            [[[UIAlertView alloc] initWithTitle:@"Failed configureSDKWithAppID!"
+                                        message:[error localizedDescription]
+                                       delegate:nil
+                              cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
+                              otherButtonTitles:nil] show];
+        });
     }
     else {
+        // See ETPush.h for reasoning behind this #if logic
+        // IPHONEOS_DEPLOYMENT_TARGET = 6.X or 7.X
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+        // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+        // are we running on IOS8 and above?
+        if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
+            // get the current settings to reapply them
+            UIUserNotificationSettings *settings = [[ETPush pushManager] currentUserNotificationSettings];
+            
+            // we have to have something or we won't get any notifications on the first install on a new device
+            if (settings.types == UIUserNotificationTypeNone) {
+                settings = [UIUserNotificationSettings settingsForTypes:
+                            UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert
+                                                             categories:nil];
+            }
+            
+            [[ETPush pushManager] registerUserNotificationSettings:settings];
+            [[ETPush pushManager] registerForRemoteNotifications];
+        }
+        else {
+            [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+        }
+#else
+        // Supports IOS SDKs < 8.X (i.e. XCode 5.X or less)
         [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+#endif
+#else
+        // IPHONEOS_DEPLOYMENT_TARGET >= 8.X
+        // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
+        UIUserNotificationSettings *settings = [[ETPush pushManager] currentUserNotificationSettings];
+        [[ETPush pushManager] registerUserNotificationSettings:settings];
+        [[ETPush pushManager] registerForRemoteNotifications];
+#endif
+        
+        // Start watching for updates. Delay is introduced to allow enough time for alert views
+        [[ETLocationManager locationManager] performSelector:@selector(startWatchingLocation) withObject:nil afterDelay:1.0];
     }
-#else
-    // Supports IOS SDKs < 8.X (i.e. XCode 5.X or less)
-    [[ETPush pushManager] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
-#endif
-#else
-    // IPHONEOS_DEPLOYMENT_TARGET >= 8.X
-    // Supports IOS SDK 8.X (i.e. XCode 6.X and up)
-    UIUserNotificationSettings *settings = [[ETPush pushManager] currentUserNotificationSettings];
-    [[ETPush pushManager] registerUserNotificationSettings:settings];
-    [[ETPush pushManager] registerForRemoteNotifications];
-#endif
-    
-    // Start watching for updates. Delay is introduced to allow enough time for alert views
-    [[ETLocationManager locationManager] performSelector:@selector(startWatchingLocation) withObject:nil afterDelay:1.0];
 }
 
 -(NSString *)description

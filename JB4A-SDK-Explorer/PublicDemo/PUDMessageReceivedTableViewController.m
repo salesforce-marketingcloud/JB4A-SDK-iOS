@@ -213,7 +213,6 @@ NSString *messageTypeDefault = @"";
     
     NSString *alertText = nil;
     NSString *payloadString = nil;
-    NSString *dateReceivedString = nil;
     NSString *messageType = nil;
     
     /**
@@ -230,18 +229,6 @@ NSString *messageTypeDefault = @"";
     payloadString = userInfo.description;
     if (!payloadString) {
         payloadString = rawPayloadStringDefault;
-    }
-    
-    /**
-     Set the received date
-     */
-    NSDate *date = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsLastPushReceivedDate];
-    if (date) {
-        dateReceivedString = [date descriptionWithLocale:[NSLocale currentLocale]];
-    }
-    
-    if (!date) {
-        dateReceivedString = dateReceivedStringDefault;
     }
     
     /**

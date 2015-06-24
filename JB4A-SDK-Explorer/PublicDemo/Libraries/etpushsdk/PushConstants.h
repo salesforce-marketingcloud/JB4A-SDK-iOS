@@ -1,16 +1,15 @@
 //
-//  etpushsdk.h
-//  etpushsdk
+//  PushConstants.h
+//  JB4A-SDK-iOS
 //
 //  Created by Eddie Roger on 9/7/12.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
 // SDK Version
-#define ETPushSDKVersionString @"3.4.2"
-#define ETPushSDKVersionNumber 3402
+#define ETPushSDKVersionString @"4.0.0"
 
-/** 
+/**
  Helpers.
  */
 #define ETNotify(notification) \
@@ -33,15 +32,15 @@
 /**
   Constants for dealing with other stuff
   */
-#define AppLifecycleForeground              @"AppLifecycleForeground"
-#define AppLifecycleBackground              @"AppLifecycleBackground"
+#define AppLifecycleForeground          @"AppLifecycleForeground"
+#define AppLifecycleBackground          @"AppLifecycleBackground"
 
-/** 
- Notifications around Messages 
+/**
+ Notifications around Messages
  */
 #define RichMessagesNowAvailable        @"RichMessagesNowAvailable"
 
-/** 
+/**
  Geofence Constants
  */
 #define ETLargeGeofence                 433 // Get it? 433 North Capitol. It's been a long journey getting here.
@@ -60,14 +59,26 @@
 #define __DEPRECATED_WARNING(message) __attribute((deprecated(message)))
 
 // Tracks the BOOL for each in NSUserDefaults
-static NSString * const ETLocationServicesActive    = @"ETLocationServicesActive";
-static NSString * const ETCloudPagesActive          = @"ETCloudPagesActive";
-static NSString * const ETAnalyticsActive           = @"ETAnalyticsActive";
-static NSString * const ETPIAnalyticsActive         = @"ETPIAnalyticsActive";
+static NSString * const ETLocationServicesActive = @"ETLocationServicesActive";
+static NSString * const ETCloudPagesActive       = @"ETCloudPagesActive";
+static NSString * const ETAnalyticsActive        = @"ETAnalyticsActive";
+static NSString * const ETPIAnalyticsActive      = @"ETPIAnalyticsActive";
 
 typedef enum {
-    PushOriginationStateBackground = 0,
+PushOriginationStateBackground                   = 0,
     PushOriginationStateForeground
 } PushOriginationState;
 
-
+typedef NS_ENUM(NSUInteger, configureSDKWithAppIDError) {
+configureSDKWithAppIDNoError                     = 0,
+    configureSDKWithAppIDInvalidAppIDError,
+    configureSDKWithAppIDInvalidAccessTokenError,
+    configureSDKWithAppIDUnableToReadRandomError,
+    configureSDKWithAppIDDatabaseAccessError,
+    configureSDKWithAppIDUnableToKeyDatabaseError,
+    configureSDKWithAppIDCCKeyDerivationPBKDFError,
+    configureSDKWithAppIDCCSymmetricKeyWrapError,
+    configureSDKWithAppIDCCSymmetricKeyUnwrapError,
+    configureSDKWithAppIDKeyChainError,
+    configureSDKWithAppIDUnableToReadCertificateError
+};

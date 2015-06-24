@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00006C311AA7863F00D34CB8 /* libetpushsdk-3.4.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00006C301AA7863F00D34CB8 /* libetpushsdk-3.4.2.a */; };
-		00006C5D1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00006C5A1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a */; };
+		00AA95BD1B39A5E60059CE1C /* libJB4ASDK-4.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AA95BA1B39A5E60059CE1C /* libJB4ASDK-4.0.0.a */; };
 		3D06C959199B9ADB0085208E /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D06C958199B9ADB0085208E /* PUDBeaconsViewController.m */; };
 		3D91F0CA198AD1F000523DC6 /* PUDPushConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAB9F71982DBF5007A9100 /* PUDPushConfig.m */; };
-		3D91F0D7198C109800523DC6 /* PUDPushConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91F0D6198C109800523DC6 /* PUDPushConfigTableViewController.m */; };
 		4DA92C9E196D7F800005BC8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA92C9B196D7F740005BC8E /* QuartzCore.framework */; };
 		4DD373EC19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */; };
 		4DDDC875197D9C86009542E9 /* gibson.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4DDDC872197D9C86009542E9 /* gibson.gpx */; };
@@ -56,7 +54,6 @@
 		4DEB0B0A195DE31600790CEF /* PUDUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D67F1925C16000128F29 /* PUDUtility.m */; };
 		4DEB0B0B195DE31600790CEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE000191051BD00B65B6F /* main.m */; };
 		4DEB0B0D195DE31600790CEF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D95F14219256984002A5A43 /* MobileCoreServices.framework */; };
-		4DEB0B0E195DE31600790CEF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DE0311910525900B65B6F /* libsqlite3.dylib */; };
 		4DEB0B0F195DE31600790CEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DDFF6191051BD00B65B6F /* CoreGraphics.framework */; };
 		4DEB0B11195DE31600790CEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DDFF8191051BD00B65B6F /* UIKit.framework */; };
 		4DEB0B12195DE31600790CEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2DDFF4191051BD00B65B6F /* Foundation.framework */; };
@@ -68,39 +65,32 @@
 		4DEC6D16196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D13196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m */; };
 		4DEC6D1B196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */; };
 		A99812E419B926DF00EA36EF /* PUDEulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99812E319B926DF00EA36EF /* PUDEulaViewController.m */; };
-		EF70050819DC6462001E76B5 /* ProductionTestImport.pushconfig in Resources */ = {isa = PBXBuildFile; fileRef = EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */; };
-		EF95C6091AAA033900CFE56B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EF95C6081AAA033900CFE56B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00006C301AA7863F00D34CB8 /* libetpushsdk-3.4.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libetpushsdk-3.4.2.a"; path = "../../../SDK Explorer/2015-04/PublicDemo/Libraries/etpushsdk/libetpushsdk-3.4.2.a"; sourceTree = "<group>"; };
-		00006C481AA7873F00D34CB8 /* ETBulkUpdateShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBulkUpdateShim.h; sourceTree = "<group>"; };
-		00006C491AA7873F00D34CB8 /* ETEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEvent.h; sourceTree = "<group>"; };
-		00006C4A1AA7873F00D34CB8 /* ETFenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFenceMessage.h; sourceTree = "<group>"; };
-		00006C4B1AA7873F00D34CB8 /* ETGenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETGenericUpdate.h; sourceTree = "<group>"; };
-		00006C4C1AA7873F00D34CB8 /* ETKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETKeyValueStore.h; sourceTree = "<group>"; };
-		00006C4D1AA7873F00D34CB8 /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLandingPagePresenter.h; sourceTree = "<group>"; };
-		00006C4E1AA7873F00D34CB8 /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationManager.h; sourceTree = "<group>"; };
-		00006C4F1AA7873F00D34CB8 /* ETLocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationUpdate.h; sourceTree = "<group>"; };
-		00006C501AA7873F00D34CB8 /* ETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMessage.h; sourceTree = "<group>"; };
-		00006C511AA7873F00D34CB8 /* ETPhoneHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPhoneHome.h; sourceTree = "<group>"; };
-		00006C521AA7873F00D34CB8 /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
-		00006C531AA7873F00D34CB8 /* ETRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegion.h; sourceTree = "<group>"; };
-		00006C541AA7873F00D34CB8 /* ETRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegistration.h; sourceTree = "<group>"; };
-		00006C551AA7873F00D34CB8 /* ETSqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETSqliteHelper.h; sourceTree = "<group>"; };
-		00006C561AA7873F00D34CB8 /* ETStatsUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETStatsUpdate.h; sourceTree = "<group>"; };
-		00006C571AA7873F00D34CB8 /* ETTestsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTestsHelper.h; sourceTree = "<group>"; };
-		00006C581AA7873F00D34CB8 /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETURLConnection.h; sourceTree = "<group>"; };
-		00006C591AA7873F00D34CB8 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
-		00006C5A1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libetpushsdk-3.4.2.a"; sourceTree = "<group>"; };
-		00006C5B1AA7873F00D34CB8 /* PIEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIEvent.h; sourceTree = "<group>"; };
-		00006C5C1AA7873F00D34CB8 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
+		00AA95A91B39A5E60059CE1C /* ETBulkUpdateShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBulkUpdateShim.h; sourceTree = "<group>"; };
+		00AA95AA1B39A5E60059CE1C /* ETEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEvent.h; sourceTree = "<group>"; };
+		00AA95AB1B39A5E60059CE1C /* ETFenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETFenceMessage.h; sourceTree = "<group>"; };
+		00AA95AC1B39A5E60059CE1C /* ETGenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETGenericUpdate.h; sourceTree = "<group>"; };
+		00AA95AD1B39A5E60059CE1C /* ETKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETKeyValueStore.h; sourceTree = "<group>"; };
+		00AA95AE1B39A5E60059CE1C /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLandingPagePresenter.h; sourceTree = "<group>"; };
+		00AA95AF1B39A5E60059CE1C /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationManager.h; sourceTree = "<group>"; };
+		00AA95B01B39A5E60059CE1C /* ETLocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationUpdate.h; sourceTree = "<group>"; };
+		00AA95B11B39A5E60059CE1C /* ETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMessage.h; sourceTree = "<group>"; };
+		00AA95B21B39A5E60059CE1C /* ETPhoneHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPhoneHome.h; sourceTree = "<group>"; };
+		00AA95B31B39A5E60059CE1C /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
+		00AA95B41B39A5E60059CE1C /* ETRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegion.h; sourceTree = "<group>"; };
+		00AA95B51B39A5E60059CE1C /* ETRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegistration.h; sourceTree = "<group>"; };
+		00AA95B61B39A5E60059CE1C /* ETSqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETSqliteHelper.h; sourceTree = "<group>"; };
+		00AA95B71B39A5E60059CE1C /* ETStatsUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETStatsUpdate.h; sourceTree = "<group>"; };
+		00AA95B81B39A5E60059CE1C /* ETURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETURLConnection.h; sourceTree = "<group>"; };
+		00AA95B91B39A5E60059CE1C /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
+		00AA95BA1B39A5E60059CE1C /* libJB4ASDK-4.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libJB4ASDK-4.0.0.a"; sourceTree = "<group>"; };
+		00AA95BB1B39A5E60059CE1C /* PIEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIEvent.h; sourceTree = "<group>"; };
+		00AA95BC1B39A5E60059CE1C /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
 		3D06C957199B9ADB0085208E /* PUDBeaconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDBeaconsViewController.h; sourceTree = "<group>"; };
 		3D06C958199B9ADB0085208E /* PUDBeaconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDBeaconsViewController.m; sourceTree = "<group>"; };
 		3D91F0C8198AC52F00523DC6 /* SDK Explorer-Qa-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SDK Explorer-Qa-Info.plist"; sourceTree = SOURCE_ROOT; };
-		3D91F0D5198C109800523DC6 /* PUDPushConfigTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDPushConfigTableViewController.h; sourceTree = "<group>"; };
-		3D91F0D6198C109800523DC6 /* PUDPushConfigTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDPushConfigTableViewController.m; sourceTree = "<group>"; };
-		3D91F0DA198C112100523DC6 /* SDK Explorer-Appstore-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SDK Explorer-Appstore-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3DAAB9F61982DBF5007A9100 /* PUDPushConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDPushConfig.h; sourceTree = "<group>"; };
 		3DAAB9F71982DBF5007A9100 /* PUDPushConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDPushConfig.m; sourceTree = "<group>"; };
 		4D2180D619490A5C004F6095 /* PUDPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDPageContentViewController.h; sourceTree = "<group>"; };
@@ -119,10 +109,6 @@
 		4D2DE004191051BD00B65B6F /* PUDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PUDAppDelegate.m; sourceTree = "<group>"; };
 		4D2DE007191051BD00B65B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D2DE00F191051BD00B65B6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4D2DE016191051BD00B65B6F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		4D2DE01E191051BD00B65B6F /* PublicDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PublicDemoTests-Info.plist"; sourceTree = "<group>"; };
-		4D2DE020191051BD00B65B6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4D2DE022191051BD00B65B6F /* PublicDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicDemoTests.m; sourceTree = "<group>"; };
 		4D2DE0311910525900B65B6F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4D2DE04919105BB100B65B6F /* PUDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDConstants.h; sourceTree = "<group>"; };
 		4D2DE04A19105BB100B65B6F /* PUDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDConstants.m; sourceTree = "<group>"; };
@@ -211,8 +197,18 @@
 		4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDCloudPageInboxTableViewCell.m; sourceTree = "<group>"; };
 		A99812E219B926DF00EA36EF /* PUDEulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDEulaViewController.h; sourceTree = "<group>"; };
 		A99812E319B926DF00EA36EF /* PUDEulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDEulaViewController.m; sourceTree = "<group>"; };
-		EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductionTestImport.pushconfig; sourceTree = "<group>"; };
-		EF95C6081AAA033900CFE56B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EF31AEDC1AD4536B00EC3896 /* EncryptedSQLiteAvailableTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptedSQLiteAvailableTest.m; sourceTree = "<group>"; };
+		EF31AEDF1AD4677000EC3896 /* MCMobileSDKTeam.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = MCMobileSDKTeam.der; sourceTree = "<group>"; };
+		EF31AEE01AD4677000EC3896 /* MCMobileSDKTeam.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MCMobileSDKTeam.p12; sourceTree = "<group>"; };
+		EF31AEE11AD4677000EC3896 /* SupportInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportInfo.h; sourceTree = "<group>"; };
+		EF31AEE21AD4677000EC3896 /* SupportInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportInfo.m; sourceTree = "<group>"; };
+		EF32D54E1ADDA2870021CBE6 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		EF490F3C1ACDE57F002537E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF95C6061AA9FAF600CFE56B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EFD8E4771AE045AF004F315E /* com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata"; sourceTree = "<group>"; };
+		EFF0A8811AF152D000138F85 /* CHANGES.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES.txt; sourceTree = "<group>"; };
+		EFF0A8821AF152D000138F85 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EFF0A8831AF152D000138F85 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,14 +216,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00006C311AA7863F00D34CB8 /* libetpushsdk-3.4.2.a in Frameworks */,
 				4DA92C9E196D7F800005BC8E /* QuartzCore.framework in Frameworks */,
 				4DEB0B0D195DE31600790CEF /* MobileCoreServices.framework in Frameworks */,
-				4DEB0B0E195DE31600790CEF /* libsqlite3.dylib in Frameworks */,
 				4DEB0B0F195DE31600790CEF /* CoreGraphics.framework in Frameworks */,
 				4DEB0B11195DE31600790CEF /* UIKit.framework in Frameworks */,
+				00AA95BD1B39A5E60059CE1C /* libJB4ASDK-4.0.0.a in Frameworks */,
 				4DEB0B12195DE31600790CEF /* Foundation.framework in Frameworks */,
-				00006C5D1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,9 +231,9 @@
 		4D2DDFE8191051BD00B65B6F = {
 			isa = PBXGroup;
 			children = (
-				EF95C6081AAA033900CFE56B /* README.md */,
+				EF95C6061AA9FAF600CFE56B /* README.md */,
 				4D2DDFFA191051BD00B65B6F /* SDKExplorer */,
-				4D2DE01C191051BD00B65B6F /* SDKExplorerTests */,
+				EF490F3A1ACDE57F002537E5 /* SDK Explorer-Enterprise Tests */,
 				4D2DDFF3191051BD00B65B6F /* Frameworks */,
 				4D2DDFF2191051BD00B65B6F /* Products */,
 			);
@@ -256,14 +250,12 @@
 		4D2DDFF3191051BD00B65B6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				00006C301AA7863F00D34CB8 /* libetpushsdk-3.4.2.a */,
 				4DA92C9B196D7F740005BC8E /* QuartzCore.framework */,
 				4D95F14219256984002A5A43 /* MobileCoreServices.framework */,
 				4D2DE0311910525900B65B6F /* libsqlite3.dylib */,
 				4D2DDFF4191051BD00B65B6F /* Foundation.framework */,
 				4D2DDFF6191051BD00B65B6F /* CoreGraphics.framework */,
 				4D2DDFF8191051BD00B65B6F /* UIKit.framework */,
-				4D2DE016191051BD00B65B6F /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,34 +283,13 @@
 		4D2DDFFB191051BD00B65B6F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */,
 				4DDDC872197D9C86009542E9 /* gibson.gpx */,
 				4DCFB9391922842300BF96BB /* custom.caf */,
 				4DC4D6F3192A572F00128F29 /* fre3of9x.ttf */,
 				4D2DDFFD191051BD00B65B6F /* InfoPlist.strings */,
 				4D2DE000191051BD00B65B6F /* main.m */,
 				3D91F0C8198AC52F00523DC6 /* SDK Explorer-Qa-Info.plist */,
-				3D91F0DA198C112100523DC6 /* SDK Explorer-Appstore-Info.plist */,
 				4D2DE002191051BD00B65B6F /* SDK Explorer-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4D2DE01C191051BD00B65B6F /* SDKExplorerTests */ = {
-			isa = PBXGroup;
-			children = (
-				4D2DE022191051BD00B65B6F /* PublicDemoTests.m */,
-				4D2DE01D191051BD00B65B6F /* Supporting Files */,
-			);
-			name = SDKExplorerTests;
-			path = PublicDemoTests;
-			sourceTree = "<group>";
-		};
-		4D2DE01D191051BD00B65B6F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4D2DE01E191051BD00B65B6F /* PublicDemoTests-Info.plist */,
-				4D2DE01F191051BD00B65B6F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -348,8 +319,6 @@
 				4D2180D719490A5C004F6095 /* PUDPageContentViewController.m */,
 				4D2DE05319117CBA00B65B6F /* PUDPreferencesTableViewController.h */,
 				4D2DE05419117CBA00B65B6F /* PUDPreferencesTableViewController.m */,
-				3D91F0D5198C109800523DC6 /* PUDPushConfigTableViewController.h */,
-				3D91F0D6198C109800523DC6 /* PUDPushConfigTableViewController.m */,
 				4D2180D9194A9D37004F6095 /* PUDSendMessageViewController.h */,
 				4D2180DA194A9D37004F6095 /* PUDSendMessageViewController.m */,
 				4DCFB93319227E4700BF96BB /* PUDTabBarController.h */,
@@ -423,6 +392,9 @@
 		4D57231019377AA5007B1464 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				EFF0A8811AF152D000138F85 /* CHANGES.txt */,
+				EFF0A8821AF152D000138F85 /* LICENSE */,
+				EFF0A8831AF152D000138F85 /* README.md */,
 				4D57231119377AA5007B1464 /* AFHTTPRequestOperation.h */,
 				4D57231219377AA5007B1464 /* AFHTTPRequestOperation.m */,
 				4D57231319377AA5007B1464 /* AFHTTPRequestOperationManager.h */,
@@ -460,27 +432,26 @@
 		4D57232719377AA5007B1464 /* etpushsdk */ = {
 			isa = PBXGroup;
 			children = (
-				00006C481AA7873F00D34CB8 /* ETBulkUpdateShim.h */,
-				00006C491AA7873F00D34CB8 /* ETEvent.h */,
-				00006C4A1AA7873F00D34CB8 /* ETFenceMessage.h */,
-				00006C4B1AA7873F00D34CB8 /* ETGenericUpdate.h */,
-				00006C4C1AA7873F00D34CB8 /* ETKeyValueStore.h */,
-				00006C4D1AA7873F00D34CB8 /* ETLandingPagePresenter.h */,
-				00006C4E1AA7873F00D34CB8 /* ETLocationManager.h */,
-				00006C4F1AA7873F00D34CB8 /* ETLocationUpdate.h */,
-				00006C501AA7873F00D34CB8 /* ETMessage.h */,
-				00006C511AA7873F00D34CB8 /* ETPhoneHome.h */,
-				00006C521AA7873F00D34CB8 /* ETPush.h */,
-				00006C531AA7873F00D34CB8 /* ETRegion.h */,
-				00006C541AA7873F00D34CB8 /* ETRegistration.h */,
-				00006C551AA7873F00D34CB8 /* ETSqliteHelper.h */,
-				00006C561AA7873F00D34CB8 /* ETStatsUpdate.h */,
-				00006C571AA7873F00D34CB8 /* ETTestsHelper.h */,
-				00006C581AA7873F00D34CB8 /* ETURLConnection.h */,
-				00006C591AA7873F00D34CB8 /* ExactTargetEnhancedPushDataSource.h */,
-				00006C5A1AA7873F00D34CB8 /* libetpushsdk-3.4.2.a */,
-				00006C5B1AA7873F00D34CB8 /* PIEvent.h */,
-				00006C5C1AA7873F00D34CB8 /* PushConstants.h */,
+				00AA95A91B39A5E60059CE1C /* ETBulkUpdateShim.h */,
+				00AA95AA1B39A5E60059CE1C /* ETEvent.h */,
+				00AA95AB1B39A5E60059CE1C /* ETFenceMessage.h */,
+				00AA95AC1B39A5E60059CE1C /* ETGenericUpdate.h */,
+				00AA95AD1B39A5E60059CE1C /* ETKeyValueStore.h */,
+				00AA95AE1B39A5E60059CE1C /* ETLandingPagePresenter.h */,
+				00AA95AF1B39A5E60059CE1C /* ETLocationManager.h */,
+				00AA95B01B39A5E60059CE1C /* ETLocationUpdate.h */,
+				00AA95B11B39A5E60059CE1C /* ETMessage.h */,
+				00AA95B21B39A5E60059CE1C /* ETPhoneHome.h */,
+				00AA95B31B39A5E60059CE1C /* ETPush.h */,
+				00AA95B41B39A5E60059CE1C /* ETRegion.h */,
+				00AA95B51B39A5E60059CE1C /* ETRegistration.h */,
+				00AA95B61B39A5E60059CE1C /* ETSqliteHelper.h */,
+				00AA95B71B39A5E60059CE1C /* ETStatsUpdate.h */,
+				00AA95B81B39A5E60059CE1C /* ETURLConnection.h */,
+				00AA95B91B39A5E60059CE1C /* ExactTargetEnhancedPushDataSource.h */,
+				00AA95BA1B39A5E60059CE1C /* libJB4ASDK-4.0.0.a */,
+				00AA95BB1B39A5E60059CE1C /* PIEvent.h */,
+				00AA95BC1B39A5E60059CE1C /* PushConstants.h */,
 			);
 			name = etpushsdk;
 			path = Libraries/etpushsdk;
@@ -539,12 +510,44 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		EF31AEDE1AD4677000EC3896 /* SupportInfo (Internal Use Only) */ = {
+			isa = PBXGroup;
+			children = (
+				EFD8E4771AE045AF004F315E /* com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata */,
+				EF32D54E1ADDA2870021CBE6 /* sqlite3.h */,
+				EF31AEDF1AD4677000EC3896 /* MCMobileSDKTeam.der */,
+				EF31AEE01AD4677000EC3896 /* MCMobileSDKTeam.p12 */,
+				EF31AEE11AD4677000EC3896 /* SupportInfo.h */,
+				EF31AEE21AD4677000EC3896 /* SupportInfo.m */,
+			);
+			name = "SupportInfo (Internal Use Only)";
+			path = SupportInfo;
+			sourceTree = "<group>";
+		};
+		EF490F3A1ACDE57F002537E5 /* SDK Explorer-Enterprise Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EF31AEDC1AD4536B00EC3896 /* EncryptedSQLiteAvailableTest.m */,
+				EF490F3B1ACDE57F002537E5 /* Supporting Files */,
+			);
+			path = "SDK Explorer-Enterprise Tests";
+			sourceTree = "<group>";
+		};
+		EF490F3B1ACDE57F002537E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF31AEDE1AD4677000EC3896 /* SupportInfo (Internal Use Only) */,
+				EF490F3C1ACDE57F002537E5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4DEB0AE0195DE31600790CEF /* SDK Explorer 2.0 */ = {
+		4DEB0AE0195DE31600790CEF /* SDK Explorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DEB0B19195DE31600790CEF /* Build configuration list for PBXNativeTarget "SDK Explorer 2.0" */;
+			buildConfigurationList = 4DEB0B19195DE31600790CEF /* Build configuration list for PBXNativeTarget "SDK Explorer" */;
 			buildPhases = (
 				4DEB0AE1195DE31600790CEF /* Sources */,
 				4DEB0B0C195DE31600790CEF /* Frameworks */,
@@ -554,7 +557,7 @@
 			);
 			dependencies = (
 			);
-			name = "SDK Explorer 2.0";
+			name = "SDK Explorer";
 			productName = PushDemo;
 			productReference = 4DEB0B1C195DE31600790CEF /* SDK Explorer-Qa.app */;
 			productType = "com.apple.product-type.application";
@@ -568,6 +571,11 @@
 				CLASSPREFIX = PUD;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = ExactTarget;
+				TargetAttributes = {
+					4DEB0AE0195DE31600790CEF = {
+						DevelopmentTeam = RNQ52E7G3P;
+					};
+				};
 			};
 			buildConfigurationList = 4D2DDFEC191051BD00B65B6F /* Build configuration list for PBXProject "SDK Explorer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -589,7 +597,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DEB0AE0195DE31600790CEF /* SDK Explorer 2.0 */,
+				4DEB0AE0195DE31600790CEF /* SDK Explorer */,
 			);
 		};
 /* End PBXProject section */
@@ -600,7 +608,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEB0B14195DE31600790CEF /* custom.caf in Resources */,
-				EF70050819DC6462001E76B5 /* ProductionTestImport.pushconfig in Resources */,
 				4DDDC875197D9C86009542E9 /* gibson.gpx in Resources */,
 				4DEB0B15195DE31600790CEF /* Images.xcassets in Resources */,
 				4DEB0B16195DE31600790CEF /* InfoPlist.strings in Resources */,
@@ -622,7 +629,6 @@
 				A99812E419B926DF00EA36EF /* PUDEulaViewController.m in Sources */,
 				4DEB0AE5195DE31600790CEF /* PUDInfoViewController.m in Sources */,
 				4DEB0AE6195DE31600790CEF /* PUDMessageComposeTableViewController.m in Sources */,
-				EF95C6091AAA033900CFE56B /* README.md in Sources */,
 				4DEB0AE7195DE31600790CEF /* JDStatusBarView.m in Sources */,
 				4DEB0AE8195DE31600790CEF /* PUDDefaultMessageModel.m in Sources */,
 				4DEB0AE9195DE31600790CEF /* PUDFuelService.m in Sources */,
@@ -662,7 +668,6 @@
 				4DEB0B08195DE31600790CEF /* AFSecurityPolicy.m in Sources */,
 				4DEB0B09195DE31600790CEF /* AFHTTPSessionManager.m in Sources */,
 				4DEB0B0A195DE31600790CEF /* PUDUtility.m in Sources */,
-				3D91F0D7198C109800523DC6 /* PUDPushConfigTableViewController.m in Sources */,
 				4DEB0B0B195DE31600790CEF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,14 +691,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4D2DE01F191051BD00B65B6F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D2DE020191051BD00B65B6F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -713,7 +710,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Edwin Roger (8E395V6HFD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -732,7 +730,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "8EC7719A-6D89-4806-9CC9-00FF624D5B08";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -753,7 +751,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "${BUNDLE_IDENTIFIER}";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -765,7 +764,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "58D98FA9-68D4-4E92-A9DB-80C9846FFE6A";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -785,7 +784,10 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/SDK Explorer-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SQLITE_HAS_CODEC=1",
+					"QA=1",
+				);
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SDK Explorer-Qa-Info.plist";
@@ -795,10 +797,8 @@
 					"$(PROJECT_DIR)/PublicDemo",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
-					/Users/tbrooks/Documents/work/ET/samples,
-					apps/SDK,
-					"Explorer/2015-04/PublicDemo/Libraries/etpushsdk",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "SDK Explorer-Qa";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -819,7 +819,7 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PublicDemo/SDK Explorer-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "QA=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "SQLITE_HAS_CODEC=1";
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "QA=1";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SDK Explorer-Qa-Info.plist";
@@ -829,10 +829,8 @@
 					"$(PROJECT_DIR)/PublicDemo",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
-					/Users/tbrooks/Documents/work/ET/samples,
-					apps/SDK,
-					"Explorer/2015-04/PublicDemo/Libraries/etpushsdk",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "SDK Explorer-Qa";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -851,7 +849,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DEB0B19195DE31600790CEF /* Build configuration list for PBXNativeTarget "SDK Explorer 2.0" */ = {
+		4DEB0B19195DE31600790CEF /* Build configuration list for PBXNativeTarget "SDK Explorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DEB0B1A195DE31600790CEF /* Debug */,

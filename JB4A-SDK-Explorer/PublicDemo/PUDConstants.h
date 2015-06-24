@@ -167,6 +167,7 @@ extern NSString *const kPUDSegueMessagesToMessageDetail;
 extern NSString *const kPUDSeguePushReceivedToDiscount;
 
 #pragma mark - Settings Table View
+extern NSUInteger const kPUDSettingsPushConfigSectionIndex;
 extern NSUInteger const kPUDSettingsPersonalInformationSectionIndex;
 extern NSUInteger const kPUDSettingsActivitySectionIndex;
 

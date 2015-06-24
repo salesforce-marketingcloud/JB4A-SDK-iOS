@@ -1,6 +1,6 @@
 //
 //  ETEvent.h
-//  ET SDK Demo
+//  JB4A-SDK-iOS
 //
 //  Created by Eddie Roger on 7/21/14.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
@@ -25,7 +25,8 @@ typedef NS_ENUM(NSUInteger, MobilePushStatisticType) {
     MobilePushStatisticTypeReceived, /** FUTURE - Use to indicate push message receipt on device. */
     MobilePushStatisticTypeTimeInLocation, /** How long the user spent in a given ETRegion - GEOFENCE ONLY. Must be accompanied by a non-zero Value. */
     MobilePushStatisticTypeBeaconInRange, /** Indicates which ETRegion iBeacon prompted the trigger. Must be accompanied by a ETRegion fenceIdentifier. */
-    MobilePushStatisticTypeTimeWithBeaconInRange /** How long the user spent in *any* proximity of a known ETRegion iBeacon. Must be accompanied by a non-zero Value and an ETRegion fenceIdentifier.*/
+    MobilePushStatisticTypeTimeWithBeaconInRange, /** How long the user spent in *any* proximity of a known ETRegion iBeacon. Must be accompanied by a non-zero Value and an ETRegion fenceIdentifier.*/
+    MobilePushStatisticTypeCount    // how many are in the enum
 };
 
 /**

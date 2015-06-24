@@ -1,6 +1,6 @@
 //
 //  ETPhoneHome.h
-//  ET SDK Demo
+//  JB4A-SDK-iOS
 //
 //  Created by Eddie Roger on 7/18/13.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
@@ -80,10 +80,4 @@ static NSTimeInterval PIANALYTICS_TIMEOUT = 1800; //30 minutes
  Checks the cache database for records that weren't successfully sent to Salesforce, and tries to send them. No return value. 
  */
 -(void)checkForAndSendBackCachedData;
-
-/**
- For ETPhoneHome_Tests
- */
-- (int) getNumberOfActiveConnections;
-
 @end

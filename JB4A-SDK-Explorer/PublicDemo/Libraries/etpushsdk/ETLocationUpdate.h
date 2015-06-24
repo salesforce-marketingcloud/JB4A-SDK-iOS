@@ -1,6 +1,6 @@
 //
 //  LocationUpdate.h
-//  ET SDK Demo
+//  JB4A-SDK-iOS
 //
 //  Created by Eddie Roger on 7/17/13.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.

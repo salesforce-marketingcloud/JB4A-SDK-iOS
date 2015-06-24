@@ -1,6 +1,6 @@
 //
 //  ETURLConnection.h
-//  ET SDK Demo
+//  JB4A-SDK-iOS
 //
 //  Created by Eddie Roger on 9/24/12.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
