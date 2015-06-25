@@ -26,9 +26,10 @@ _To be released June 24th, 2015, correlating to the Salesforce Marketing Cloud 2
 
 **Required Coding Changes** 
 
-The following are changes that must be made in order to upgrade from previous releases of the SDK:<br/>
-The latest configureSDKWithAppID has some additional parameters and can be found at [Implement the SDK]({{ site.baseurl }}/sdk-implementation/implement-sdk.html
-* You will need to update your configSDK registration call to now read:
+The following are changes that must be made in order to upgrade from previous releases of the SDK:<br/><br/>
+The latest configureSDKWithAppID has some additional parameters and can be found at [Implement the SDK]({{ site.baseurl }}/sdk-implementation/implement-sdk.html).
+
+You will need to update your configSDK registration call to now read: 
 
 ~~~
 
