@@ -2,7 +2,7 @@
 layout: page
 title: "Overview"
 subtitle: "Overview of Cloud Page Messages"
-category: cloud-pages
+category: rich-push
 date: 2015-05-14 12:00:00
 order: 1
 ---
