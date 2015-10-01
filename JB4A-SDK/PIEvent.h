@@ -8,8 +8,13 @@
 
 #import "ETGenericUpdate.h"
 
+typedef NS_ENUM(NSInteger, PIEventType) {
+    PIEventOpenClose = 0,
+    PIEventDynamic
+};
+
 static NSString * const PIEVENT_APP_OPEN = @"app_open";
-static NSString * const PIEVENT_APP_CLOSE = @"app_close";
+static NSString * const PIEVENT_APP_CLOSE = @"app_close"; 
 
 static NSString * const PIEVENT_OPEN_FROM_PUSH_TRUE = @"TRUE";
 static NSString * const PIEVENT_OPEN_FROM_PUSH_FALSE = @"FALSE";
@@ -60,6 +65,11 @@ static NSString * const PIEVENT_OPEN_FROM_PUSH_FALSE = @"FALSE";
 @property (nonatomic, strong) NSSet *analyticTypes;
 
 /**
+ The enum type being stored for the PIEvent Type
+ */
+@property (nonatomic) PIEventType piEventType;
+
+/**
  Designated Initializer. Pass in an NSDictionary (usually from the cache db) to create an PIEvent.
  @param dict A dictionary of values
  @return id An PIEvent
@@ -70,7 +80,7 @@ static NSString * const PIEVENT_OPEN_FROM_PUSH_FALSE = @"FALSE";
  Adds a specific analyticType to the current set. You may add zero to many, relative to what you're reporting.
  @param statType The analyticType you wish to add. See MobilePushStatisticType enumeration for values.
  */
--(void)addAnalyticType:(NSString *)statType;
+-(bool)addAnalyticType:(PIEventType)eventType andStatType:(NSString *)statType andTitle:(NSString*)title andURL:(NSString*)url andItem:(NSString *)item andSearch:(NSString*)search;
 
 /**
  Removes an analytic type from the current set. It will echo out if it was removed, or nil if the value wasn't in there.

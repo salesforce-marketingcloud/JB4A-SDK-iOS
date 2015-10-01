@@ -15,18 +15,18 @@
 static NSString * const SDKName = @"JB4ASDK";
 
 /**
- Supporting protocol for OpenDirect, part of the Salesforce 2013-02 release. 
+ Supporting protocol for OpenDirect, part of the Salesforce 2013-02 release.
  
- Implementation of this delegate is not required for OpenDirect to function, but it is provided as a convenience to developers who do not with to parse the push payload on their own. 
+ Implementation of this delegate is not required for OpenDirect to function, but it is provided as a convenience to developers who do not with to parse the push payload on their own.
  
- All OpenDirect data is passed down as a JSON String, so you get it as an NSString. Please remember to parse it appropriately from there. Also, please remember to fail gracefully if you can't take action on the message. 
+ All OpenDirect data is passed down as a JSON String, so you get it as an NSString. Please remember to parse it appropriately from there. Also, please remember to fail gracefully if you can't take action on the message.
  
- Also, please note that setting an OpenDirect Delegate will negate the automatic webpage loading feature added to MobilePush recently. This is deliberately to not stomp on your URLs and deep links. 
+ Also, please note that setting an OpenDirect Delegate will negate the automatic webpage loading feature added to MobilePush recently. This is deliberately to not stomp on your URLs and deep links.
  */
 @protocol ExactTargetOpenDirectDelegate <NSObject>
 
 /**
- Method called when an OpenDirect payload is received from MobilePush. 
+ Method called when an OpenDirect payload is received from MobilePush.
  
  @param payload The contents of the payload as received from MobilePush.
  @return Doesn't return a value.
@@ -36,11 +36,11 @@ static NSString * const SDKName = @"JB4ASDK";
 @optional
 
 /**
- Allows you to define the behavior of OpenDirect based on application state. 
+ Allows you to define the behavior of OpenDirect based on application state.
  
  If set to YES, the OpenDirect delegate will be called if a push with an OpenDirect payload is received and the application state is running. This is counter to normal push behavior, so the default is NO.
-
- Consider that if you set this to YES, and the user is running the app when a push comes in, the app will start doing things that they didn't prompt it to do. This is bad user experience since it's confusing to the user. Along these lines, iOS won't present a notification if one is received while the app is running. 
+ 
+ Consider that if you set this to YES, and the user is running the app when a push comes in, the app will start doing things that they didn't prompt it to do. This is bad user experience since it's confusing to the user. Along these lines, iOS won't present a notification if one is received while the app is running.
  
  @return BOOL representing whether or not you want action to be taken.
  */
@@ -48,7 +48,7 @@ static NSString * const SDKName = @"JB4ASDK";
 
 @end
 
-/** 
+/**
  This is the main interface to the Salesforce MobilePush SDK. It is meant to handle a lot of the heavy lifting with regards to sending data back to Salesforce.
  
  Please note that this is a singleton object, and you should reference it as [ETPush pushManager].
@@ -62,7 +62,7 @@ static NSString * const SDKName = @"JB4ASDK";
     
     // OpenDirect Delegate stuff
     id<ExactTargetOpenDirectDelegate> _openDirectDelegate;
-        
+    
 }
 
 #pragma mark - Configure the App for ETPush
@@ -91,7 +91,7 @@ static NSString * const SDKName = @"JB4ASDK";
 -(void)configureSDKWithAppID:(NSString *)etAppID andAccessToken:(NSString *)accessToken;
 
 /**
-  This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget
+ This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget
  
  Each of the flags in the method are used to control various aspects of the MobilePush SDK. The act as global on/off switches, meaning that if you disable one here, it is off eveywhere.
  
@@ -107,7 +107,7 @@ static NSString * const SDKName = @"JB4ASDK";
               andAccessToken:(NSString *)accessToken
                withAnalytics:(BOOL)analyticsState
          andLocationServices:(BOOL)locState
-                andCloudPages:(BOOL)cpState;
+               andCloudPages:(BOOL)cpState;
 
 
 /**
@@ -138,7 +138,7 @@ static NSString * const SDKName = @"JB4ASDK";
 /**
  Sets the OpenDirect delegate.
  
- @param delegate The object you wish to be called when an OpenDirect message is delivered. 
+ @param delegate The object you wish to be called when an OpenDirect message is delivered.
  @return Doesn't return a value.
  */
 -(void)setOpenDirectDelegate:(id<ExactTargetOpenDirectDelegate>)delegate;
@@ -146,7 +146,7 @@ static NSString * const SDKName = @"JB4ASDK";
 /**
  Returns the OpenDirect delegate.
  
- @return delegate The named OpenDirect delegate, or nil if there isn't one. 
+ @return delegate The named OpenDirect delegate, or nil if there isn't one.
  */
 -(id<ExactTargetOpenDirectDelegate>)openDirectDelegate;
 
@@ -213,8 +213,8 @@ static NSString * const SDKName = @"JB4ASDK";
 /**
  Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify Salesforce that push is disabled.
  
-@deprecated in IOS8 - use registerUserNotificationSettings instead
-@param types The UIRemoteNotificationTypes that the application would like to use for push. These are pipe-delimited, and use Apple's native values
+ @deprecated in IOS8 - use registerUserNotificationSettings instead
+ @param types The UIRemoteNotificationTypes that the application would like to use for push. These are pipe-delimited, and use Apple's native values
  @return Doesn't return a value
  */
 -(void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types;
@@ -286,7 +286,7 @@ static NSString * const SDKName = @"JB4ASDK";
 -(NSString *)deviceToken;
 
 /**
- Handles a registration failure. 
+ Handles a registration failure.
  
  @param error The error returned to the application on a registration failure
  @return Doesn't return a value
@@ -305,7 +305,7 @@ static NSString * const SDKName = @"JB4ASDK";
  
  Please note that all push notifications received by the application will be processed, but iOS will *not* present an alert to the user if the app is running when the alert is received. If you set this value to true (YES), then the SDK will generate and present the alert for you. It will not play a sound, though.
  
- @param desiredState YES/NO if you want to display an alert view while the app is running. 
+ @param desiredState YES/NO if you want to display an alert view while the app is running.
  @return Doesn't return a value
  */
 -(void)shouldDisplayAlertViewIfPushReceived:(BOOL)desiredState;
@@ -320,7 +320,7 @@ static NSString * const SDKName = @"JB4ASDK";
  */
 
 /**
- Notifies the ET SDK of an app launch, including the dictionary sent to the app by iOS. The launchOptions dictionary is necessary because it will include the APNS dictionary, necessary for processing opens and other analytic information. 
+ Notifies the ET SDK of an app launch, including the dictionary sent to the app by iOS. The launchOptions dictionary is necessary because it will include the APNS dictionary, necessary for processing opens and other analytic information.
  
  @param launchOptions The dictionary passed to the application by iOS on launch.
  @return Doesn't return a value
@@ -328,18 +328,18 @@ static NSString * const SDKName = @"JB4ASDK";
 -(void)applicationLaunchedWithOptions:(NSDictionary *)launchOptions;
 
 /**
- Notifies the ET SDK of an app termination. Internally, this method does a lot of cleanup. 
+ Notifies the ET SDK of an app termination. Internally, this method does a lot of cleanup.
  
  @return Doesn't return a value (but how could it - the app terminated)
  */
 -(void)applicationTerminated;
 
 /**
- Handles a push notification received by the app when the application is already running. 
+ Handles a push notification received by the app when the application is already running.
  
  This method must be implemented in [[UIApplication sharedApplication] didReceiveRemoteNotification:userInfo].
  
- Sometimes, when a push comes in, the application will already be running (it happens). This method rises to the occasion of handing that notification, displaying an Alert (if the SDK is configured to do so), and calling all of the analytic methods that wouldn't be called otherwise. 
+ Sometimes, when a push comes in, the application will already be running (it happens). This method rises to the occasion of handing that notification, displaying an Alert (if the SDK is configured to do so), and calling all of the analytic methods that wouldn't be called otherwise.
  
  @param userInfo The dictionary containing the push notification
  @param applicationState State of the application at time of notification
@@ -347,10 +347,10 @@ static NSString * const SDKName = @"JB4ASDK";
  */
 -(void)handleNotification:(NSDictionary *)userInfo forApplicationState:(UIApplicationState)applicationState;
 
-/** 
- Handles a local notification received by the application. 
+/**
+ Handles a local notification received by the application.
  
- Sometimes the SDK will use local notifications to indicate something to the user. These are handled differently by iOS, and as such, need to be implemented differently in the SDK. Sorry about that. 
+ Sometimes the SDK will use local notifications to indicate something to the user. These are handled differently by iOS, and as such, need to be implemented differently in the SDK. Sorry about that.
  
  @param notification The received UILocalNotification
  @return Doesn't return a value
@@ -367,14 +367,14 @@ static NSString * const SDKName = @"JB4ASDK";
 /**
  Accepts and sets the Subscriber Key for the device's user.
  
- @param subscriberKey The subscriber key to attribute to the user. 
+ @param subscriberKey The subscriber key to attribute to the user.
  @return Doesn't return a value.
  */
 -(void)setSubscriberKey:(NSString *)subscriberKey;
 
 /**
  Returns the subscriber key for the active user, in case you need it.
-
+ 
  @return subscriberKey The code-set subscriber key.
  */
 -(NSString *)getSubscriberKey;
@@ -413,13 +413,13 @@ static NSString * const SDKName = @"JB4ASDK";
 /**
  Removes the provided attributef rom the data set to send to Salesforce.
  
- @param name The name of the attribute you wish to remove. 
+ @param name The name of the attribute you wish to remove.
  @return Returns the value that was set. It will no longer be sent back to Salesforce.
  */
 - (NSString*)removeAttributeNamed:(NSString*)name;
 
 /**
- Returns a read-only copy of the Attributes dictionary as it is right now. 
+ Returns a read-only copy of the Attributes dictionary as it is right now.
  
  @return All attributes currently set
  */
@@ -441,12 +441,12 @@ static NSString * const SDKName = @"JB4ASDK";
 /**
  Returns the hardware identification string, like "iPhone1,1". Salesforce uses this data for segmentation.
  
- @return A string of the hardware identification. 
+ @return A string of the hardware identification.
  */
 +(NSString *)hardwareIdentifier;
 
 /**
- Returns the state of Push based on logic reflected at Salesforce. 
+ Returns the state of Push based on logic reflected at Salesforce.
  
  As of this release, Push is considered enabled if the application is able to present an alert (banner, alert) to the user per Settings. Nothing else will be considered.
  */
@@ -475,6 +475,11 @@ static NSString * const SDKName = @"JB4ASDK";
  Responds to the UIApplicationDidEnterBackgroundNotification notification
  */
 -(void)applicationDidEnterBackgroundNotificationReceived; // UIApplicationDidEnterBackgroundNotification
+
+/**
+ Set PIEvent (WAMA) Web Analytics Mobile Analytics
+ */
+-(bool)setWebAndMobileAnalyticsTitle:(NSString*)title andURL:(NSString*)url andItem:(NSString *)item andSearch:(NSString*)search;
 
 /**
  Set the Log Level

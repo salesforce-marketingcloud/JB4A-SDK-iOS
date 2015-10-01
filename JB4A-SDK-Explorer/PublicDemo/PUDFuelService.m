@@ -75,7 +75,7 @@ NSString *messageContactURLString = @"https://www.exacttargetapis.com/push/v1/me
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
     [manager fuelRequestWithMethod:@"POST"
-                   numberOfRetries:3
+                   numberOfRetries:1
                          URLString:urlString
                         parameters:[payload serializableDictionary]
                            success:^(AFHTTPRequestOperation *operation, id responseObject) {

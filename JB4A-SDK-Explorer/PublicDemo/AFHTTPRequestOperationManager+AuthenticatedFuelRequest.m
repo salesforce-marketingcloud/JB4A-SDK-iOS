@@ -36,8 +36,6 @@
 //
 
 #import "AFHTTPRequestOperationManager+AuthenticatedFuelRequest.h"
-
-// Other
 #import "PUDUtility.h"
 
 @implementation AFHTTPRequestOperationManager (AuthenticatedFuelRequest)
@@ -59,12 +57,7 @@ NSString *accessTokenResponseObjectKey = @"accessToken";
                                           success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                           failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     
-    __block NSInteger blockNumberOfRetries = numberOfRetries + 1;
-    
-    // don't allow more than ten retries
-    if (blockNumberOfRetries > 10) {
-        blockNumberOfRetries = 10;
-    }
+    __block NSInteger blockNumberOfRetries = numberOfRetries;
     
     // retrieve the access token from user defaults
     __block NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:fuelRequestAccessTokenKey];

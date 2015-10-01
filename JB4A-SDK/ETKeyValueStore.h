@@ -13,6 +13,7 @@ static NSString * const AccessToken = @"AccessToken";
 static NSString * const DeviceToken = @"DeviceToken";
 static NSString * const DeviceIdentifier = @"DeviceID";
 static NSString * const SubscriberKey = @"SubscriberKey";
+static NSString * const RegistrationHashKey = @"RegistrationHashKey";
 
 static NSString * const Tags = @"Tags";
 static NSString * const Attributes = @"Attributes";

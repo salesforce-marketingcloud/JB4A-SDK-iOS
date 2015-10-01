@@ -69,6 +69,16 @@
         return;
     }
     else {
+        // sanity check the appID
+        NSString *appIDRegex = @"[0-9a-f]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}";
+        NSPredicate *appIDTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", appIDRegex];
+        if (config.appID == nil || [config.appID isEqualToString:@""] || ![appIDTest evaluateWithObject:config.appID])
+            return;
+        
+        // sanity check the accessToken
+        if (config.accessToken == nil || [config.accessToken isEqualToString:@""] || config.accessToken.length != 24)
+            return;
+        
         [ud setObject:config.configurationName forKey:kPUDUserDefaultsConfigName];
         [ud setObject:config.appID forKey:kPUDUserDefaultsAppID];
         [ud setObject:config.accessToken forKey:kPUDUserDefaultsAccessToken];
@@ -126,12 +136,12 @@
 {
     PUDPushConfig *_lastPushConfig = [[PUDPushConfig alloc] init];
     
-    if (![dict objectForKey:@"configurationName"] || ![dict objectForKey:@"appID"] || ![dict objectForKey:@"accessToken"]) {
+    if (![dict objectForKey:@"configurationName"] || ![dict objectForKey:@"appId"] || ![dict objectForKey:@"accessToken"]) {
         return NULL;
     }
     else {
         _lastPushConfig.configurationName = [dict objectForKey:@"configurationName"];
-        _lastPushConfig.appID = [dict objectForKey:@"appID"];
+        _lastPushConfig.appID = [dict objectForKey:@"appId"];
         _lastPushConfig.accessToken = [dict objectForKey:@"accessToken"];
         
         if ([dict objectForKey:@"client_id"] && [dict objectForKey:@"client_secret"] && [dict objectForKey:@"standard_message_id"] && [dict objectForKey:@"cloudpage_message_id"]) {

@@ -33,7 +33,6 @@
 //
 //  Created by Matt Lathrop on 4/29/14.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
-//
 #import "PUDAppDelegate.h"
 
 // Controllers
@@ -102,6 +101,10 @@
     /**
      *  The below method has to be implemented ONLY ONCE in the SDK. The below conditions are specifically for this app and you will NOT need multiple/ conditional implementation like this in your own app
      */
+    
+    // To enable logging while debugging
+    [ETPush setETLoggerToRequiredState:YES];
+    
     BOOL configOK = NO;
     NSError *error = nil;
     
@@ -113,8 +116,7 @@
                                              andCloudPages:YES
                                            withPIAnalytics:YES
                                                      error:&error];
-     
-    
+
     if (!configOK) {
         dispatch_async(dispatch_get_main_queue(), ^{
             // something went wrong in the config call - show what the error is
@@ -252,10 +254,7 @@
          ET_NOTE: Logging the device id is very useful for debugging purposes. One thing this can help you do is create a filtered list inside of MobilePush that only includes the device that matches this id.
          */
         NSLog(@"== DEVICE ID ==\nthe Salesforce Device ID is: %@\n", [ETPush safeDeviceIdentifier]);
-        
-        // To enable logging while debugging
-        [ETPush setETLoggerToRequiredState:YES];
-    } 
+    }
     
     NSString *configStr = [PUDPushConfig getCurrentConfig].configurationName;
     if ([configStr length] == 0) {

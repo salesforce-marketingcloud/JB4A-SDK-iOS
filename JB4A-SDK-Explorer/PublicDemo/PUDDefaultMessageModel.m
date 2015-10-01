@@ -128,7 +128,7 @@
                                                                                                       styleName:JDStatusBarStyleDark];
                                                                     }
                                                                     failure:^(NSError *error) {
-                                                                        [JDStatusBarNotification dismissAnimated:YES];
+                                                                        [JDStatusBarNotification dismissAnimated:NO];
                                                                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fuel Request Failed"
                                                                                                                         message:error.description
                                                                                                                        delegate:nil

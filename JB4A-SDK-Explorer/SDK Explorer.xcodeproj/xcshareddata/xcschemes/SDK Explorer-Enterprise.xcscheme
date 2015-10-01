@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0610"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4DEB0AE0195DE31600790CEF"
+               BuildableName = "SDK Explorer-Qa.app"
+               BlueprintName = "SDK Explorer"
+               ReferencedContainer = "container:SDK Explorer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EF490F381ACDE57E002537E5"
+               BuildableName = "SDK Explorer-Enterprise Tests.xctest"
+               BlueprintName = "SDK Explorer-Enterprise Tests"
+               ReferencedContainer = "container:SDK Explorer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4D8823E6197EF15300432744"
+               BuildableName = "SDK Explorer-Appstore.app"
+               BlueprintName = "SDK Explorer-Consumer"
+               ReferencedContainer = "container:SDK Explorer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EF490F381ACDE57E002537E5"
+               BuildableName = "SDK Explorer-Enterprise Tests.xctest"
+               BlueprintName = "SDK Explorer-Enterprise Tests"
+               ReferencedContainer = "container:SDK Explorer.xcodeproj">
+            </BuildableReference>
+            <DeviceAppData
+               resolvedPath = "../../SDK Explorer-Enterprise Tests/SupportInfo/com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata">
+            </DeviceAppData>
+            <LocationScenarioReference
+               identifier = "../../gibson.gpx"
+               referenceType = "0">
+            </LocationScenarioReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4DEB0AE0195DE31600790CEF"
+            BuildableName = "SDK Explorer-Qa.app"
+            BlueprintName = "SDK Explorer"
+            ReferencedContainer = "container:SDK Explorer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4DEB0AE0195DE31600790CEF"
+            BuildableName = "SDK Explorer-Qa.app"
+            BlueprintName = "SDK Explorer"
+            ReferencedContainer = "container:SDK Explorer.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <DeviceAppData
+         resolvedPath = "../../SDK Explorer-Enterprise Tests/SupportInfo/com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata">
+      </DeviceAppData>
+      <LocationScenarioReference
+         identifier = "../../gibson.gpx"
+         referenceType = "0">
+      </LocationScenarioReference>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = "/Users/jsylvia/Library/Application Support/Instruments/Templates/SDK-Explorer Send Receive Push.tracetemplate"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4D8823E6197EF15300432744"
+            BuildableName = "SDK Explorer-Appstore.app"
+            BlueprintName = "SDK Explorer-Consumer"
+            ReferencedContainer = "container:SDK Explorer.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
