@@ -13,7 +13,7 @@ The Apple docs for the SDK can be found here:<br/>
 
 #### Version 4.0.2
 **(supported)**
-_To be released October 2, 2015, correlating to the Salesforce Marketing Cloud 2015-06 Release_<br/>
+_Released October 2, 2015, correlating to the Salesforce Marketing Cloud 2015-06 Release_<br/>
 
 * MOBILESDK-327 - Fix for missing keychain item when applications are restored from an unencrypted backup.
 * MOBILESDK-326 - Only send registration data if different from the last one sent
