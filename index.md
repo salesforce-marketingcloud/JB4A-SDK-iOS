@@ -10,6 +10,18 @@ The Apple docs for the SDK can be found here:<br/>
 <a href="{{ site.baseurl }}/appledoc/index.html" target="_blank">iOS SDK Apple Docs</a>
 
 ## Release History
+
+#### Version 4.0.2
+**(supported)**
+_To be released October 2, 2015, correlating to the Salesforce Marketing Cloud 2015-06 Release_<br/>
+
+* MOBILESDK-327 - Fix for missing keychain item when applications are restored from an unencrypted backup.
+* MOBILESDK-326 - Only send registration data if different from the last one sent
+* MOBILESDK-311 - Application crashing in iOS SDK
+* MOBILESDK-310 - Reduce Location REST call traffic to SFMC
+* MOBILESDK-300 - Application crashing in iOS SDK
+
+This version of the JB4A SDK introduces iOS Keychain usage. To ensure that your app retains any relevant data across user backups and restores, encourage your app users to implement encrypted backups for their devices. Otherwise, information (such as tags, attributes, and subscriber keys) will not persist.
  
 #### Version 4.0.0
 **(supported)**
