@@ -21,11 +21,16 @@ _To be released October 2, 2015, correlating to the Salesforce Marketing Cloud 2
 * MOBILESDK-310 - Reduce Location REST call traffic to SFMC
 * MOBILESDK-300 - Application crashing in iOS SDK
 
-This version of the JB4A SDK introduces iOS Keychain usage. To ensure that your app retains any relevant data across user backups and restores, encourage your app users to implement encrypted backups for their devices. Otherwise, information (such as tags, attributes, and subscriber keys) will not persist.
- 
+> This version of the JB4A SDK introduces iOS Keychain usage. To ensure that your app retains any relevant data across user backups and restores, encourage your app users to implement encrypted backups for their devices. Otherwise, information (such as tags, attributes, and subscriber keys) will not persist.
+
+#### Version 4.0.1
+**(supported)**
+_Released July 23rd, 2015_<br/>
+
+* MPUSH-3856 - SUPPORT - Upgrade to MobilePush iOS SDK 4.0.0 from SDK 3.4.2 Causes App to Freeze<br/> 
 #### Version 4.0.0
 **(supported)**
-_To be released June 24th, 2015, correlating to the Salesforce Marketing Cloud 2015-04 Release_<br/>
+_Released June 24th, 2015, correlating to the Salesforce Marketing Cloud 2015-04 Release_<br/>
 
 * MPUSH-3605 - SDK iOS: Modify payload to always send english datetime<br/>
 * MPUSH-3472 - Change iOS location_enabled registration field to user location opt-in status<br/>
