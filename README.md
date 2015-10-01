@@ -3,7 +3,7 @@
 This is the git repository for the Salesforce Marketing Cloud Journey Builder for Apps iOS SDK.<br>
 <b>Formerly ExactTarget MobilePush IOS SDK</b>
 
-For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://exacttarget.github.io/JB4A-SDK-iOS).
+For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://salesforcefuel.github.io/JB4A-SDK-iOS).
 
 ### Version 4.0.2 
 _Released Oct 1, 2015
