@@ -28,6 +28,7 @@ _To be released October 2, 2015, correlating to the Salesforce Marketing Cloud 2
 _Released July 23rd, 2015_<br/>
 
 * MPUSH-3856 - SUPPORT - Upgrade to MobilePush iOS SDK 4.0.0 from SDK 3.4.2 Causes App to Freeze<br/> 
+
 #### Version 4.0.0
 **(supported)**
 _Released June 24th, 2015, correlating to the Salesforce Marketing Cloud 2015-04 Release_<br/>
