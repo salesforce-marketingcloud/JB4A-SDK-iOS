@@ -10,7 +10,7 @@ This is the documentation for the Salesforce Marketing Cloud Journey Builder for
 The Apple docs for the SDK can be found here:<br/>
 <a href="{{ site.baseurl }}/appledoc/index.html" target="_blank">iOS SDK Apple Docs</a>
 
-> Xcode 7 introduces a new feature called Bitcode that enables Apple to optimize your code and deliver an optimized version of your app. Our existing library does not function with Bitcode enabled at this time. If you attempt to link in our library (compiled pre-Xcode7 without Bitcode enabled) using Xcode 7, you will receive an error message. To correctly function with the JB4A SDK, please disable Bitcode in Xcode 7.
+> Xcode 7 introduces a new feature called Bitcode that enables Apple to optimize your code and deliver an optimized version of your app. Our existing library does not function with Bitcode enabled at this time. If you attempt to link in our library (compiled pre-Xcode7 without Bitcode enabled) using Xcode 7, you will receive an error message. To correctly function with the JB4A SDK, disable Bitcode in Xcode 7.
 
 ## Release History
 
