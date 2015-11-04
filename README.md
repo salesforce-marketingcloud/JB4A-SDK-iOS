@@ -5,6 +5,12 @@ This is the git repository for the Salesforce Marketing Cloud Journey Builder fo
 
 For more information, please see [Code@ExactTarget](http://code.exacttarget.com), or visit the online documentation [here](http://salesforcefuel.github.io/JB4A-SDK-iOS).
 
+### Version 4.0.3 
+_Released Nov 4, 2015
+* MOBILESDK-439 - iOS SDK returning latitude/longitude with commas instead of decimal points for certain locales.
+* MOBILESDK-428 - Database corruption following VACUUM
+* MOBILESDK-427 - Fix for ETEvent analytics to handle Array of dictionaries.
+
 ### Version 4.0.2 
 _Released Oct 1, 2015
 * MPUSH-327 - Fix for missing keychain item when applications are restored from an unencrypted backup.
@@ -12,7 +18,6 @@ _Released Oct 1, 2015
 * MPUSH-311 - Application crashing in iOS SDK
 * MPUSH-310 - Reduce Location REST call traffic to SFMC
 * MPUSH-300 - Application crashing in iOS SDKs
-
 
 ### Version 4.0.1 
 _Released July 23, 2015
