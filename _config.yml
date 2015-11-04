@@ -1,5 +1,5 @@
 # Site title and subtitle. This is used in _includes/header.html
-title: 'Journey Builder for Apps iOS SDK (v4.0.2)'
+title: 'Journey Builder for Apps iOS SDK (v4.0.3)'
 subtitle: 'For releases prior to v4.0, see: '
 link: '<a href="https://code.exacttarget.com/apis-sdks/journey-builder-for-apps" target="_blank">Prior Release Documentation</a>'
 
@@ -33,7 +33,7 @@ sections: [
 
 # Keep as an empty string if served up at the root. If served up at a specific 
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
-baseurl: "/JB4A-SDK-iOS" # the subpath of your site, e.g. /blog/
+baseurl: "/JB4A-SDK-iOS-DocPreview" # the subpath of your site, e.g. /blog/
 url: "http://exacttarget.github.io" # the base hostname & protocol for your site
 
 # Dates are not included in permalinks
