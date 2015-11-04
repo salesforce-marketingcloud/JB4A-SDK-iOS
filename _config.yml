@@ -16,7 +16,7 @@ google_analytics_id: ''
 navigation: 1
 
 # URL to source code, used in _includes/footer.html
-codeurl: 'https://github.com/salesforce-marketingcloud/JB4A-SDK-iOS' 
+codeurl: 'https://github.com/salesforce-marketingcloud/JB4A-SDK-iOS-DocPreview' 
 
 # Default categories (in order) to appear in the navigation
 sections: [
