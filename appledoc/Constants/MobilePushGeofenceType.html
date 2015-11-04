@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>MobilePushMessageType Constants Reference</title>
+	<title>MobilePushGeofenceType Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">MobilePushMessageType Constants Reference</h1>
+					<h1 class="title">MobilePushGeofenceType Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>ETMessage.h</td>
+	<td>ETRegion.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">MobilePushMessageType</h3>
+                    <h3 class="subsubtitle method-title">MobilePushGeofenceType</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+                        <p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 					</div>
 					
 					
@@ -87,13 +87,13 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, MobilePushMessageType ) {<br>
+                        <code>typedef NS_ENUM(NSUInteger, MobilePushGeofenceType ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">MobilePushMessageTypeUnknown</a>,<br>
+                            &nbsp;&nbsp; <a href="">MobilePushGeofenceTypeNone</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">MobilePushMessageTypeBasic</a>,<br>
+                            &nbsp;&nbsp; <a href="">MobilePushGeofenceTypeCircle</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">MobilePushMessageTypeEnhanced</a>,<br>
+                            &nbsp;&nbsp; <a href="">MobilePushGeofenceTypePolygon</a>,<br>
                             
                             &nbsp;&nbsp; <a href="">__attribute__</a>,<br>
                             
@@ -107,11 +107,7 @@
                             
                             &nbsp;&nbsp; <a href="">)</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">MobilePushMessageTypeFenceEntry</a>,<br>
-                            
-                            &nbsp;&nbsp; <a href="">MobilePushMessageTypeFenceExit</a>,<br>
-                            
-                            &nbsp;&nbsp; <a href="">MobilePushMessageTypeProximity</a>,<br>
+                            &nbsp;&nbsp; <a href="">MobilePushGeofenceTypeProximity</a>,<br>
                             
                             };</code>
                     
@@ -121,11 +117,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="MobilePushMessageTypeUnknown"></a><code>MobilePushMessageTypeUnknown</code></dt>
+                            <dt><a name="" title="MobilePushGeofenceTypeNone"></a><code>MobilePushGeofenceTypeNone</code></dt>
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -133,16 +129,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="MobilePushMessageTypeBasic"></a><code>MobilePushMessageTypeBasic</code></dt>
+                            <dt><a name="" title="MobilePushGeofenceTypeCircle"></a><code>MobilePushGeofenceTypeCircle</code></dt>
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -150,16 +146,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="MobilePushMessageTypeEnhanced"></a><code>MobilePushMessageTypeEnhanced</code></dt>
+                            <dt><a name="" title="MobilePushGeofenceTypePolygon"></a><code>MobilePushGeofenceTypePolygon</code></dt>
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -167,7 +163,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
@@ -176,7 +172,7 @@
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -184,7 +180,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
@@ -193,7 +189,7 @@
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -201,7 +197,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
@@ -210,7 +206,7 @@
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -218,7 +214,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
@@ -227,7 +223,7 @@
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -235,7 +231,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
@@ -244,7 +240,7 @@
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -252,7 +248,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
@@ -261,7 +257,7 @@
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -269,16 +265,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="MobilePushMessageTypeFenceEntry"></a><code>MobilePushMessageTypeFenceEntry</code></dt>
+                            <dt><a name="" title="MobilePushGeofenceTypeProximity"></a><code>MobilePushGeofenceTypeProximity</code></dt>
 <dd>
 
 
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
+<p>Enumeration of the type of <a href="../Classes/ETRegion.html">ETRegion</a> that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.</p>
 
 
 
@@ -286,41 +282,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="MobilePushMessageTypeFenceExit"></a><code>MobilePushMessageTypeFenceExit</code></dt>
-<dd>
-
-
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="MobilePushMessageTypeProximity"></a><code>MobilePushMessageTypeProximity</code></dt>
-<dd>
-
-
-<p>Enumeration of the type of <a href="../Classes/ETMessage.html">ETMessage</a> this is.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETRegion.h</code>.
 	</p>
 	
 </dd>
@@ -337,7 +299,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">ETMessage.h</code></p>
+                        <p><code class="declared-in-ref">ETRegion.h</code></p>
                     </div>
                     
                     
