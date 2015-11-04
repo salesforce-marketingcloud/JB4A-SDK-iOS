@@ -14,7 +14,7 @@ The Apple docs for the SDK can be found here:<br/>
 
 #### Version 4.0.3
 **(supported)**
-_Released November 4, 2015, correlating to the Salesforce Marketing Cloud 2015-07.1 Release_<br/>
+_Released November 4, 2015, correlating to the Salesforce Marketing Cloud 2015-06.HF Release_<br/>
 
 * MOBILESDK-439 - iOS SDK returning latitude/longitude with commas instead of decimal points for certain locales.
 * MOBILESDK-428 - Database corruption following VACUUM
