@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>MPMessageSource Constants Reference</title>
+	<title>LocationUpdateAppState Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">MPMessageSource Constants Reference</h1>
+					<h1 class="title">LocationUpdateAppState Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>ETMessage.h</td>
+	<td>ETLocationUpdate.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,23 +75,17 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">MPMessageSource</h3>
+                    <h3 class="subsubtitle method-title">LocationUpdateAppState</h3>
                     
-					
-					<div class="section section-overview">
-                        <p>Tracks where the currently parsing dictionary came from, because we run the values through twice to merge them together.</p>
-					</div>
-					
-					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, MPMessageSource ) {<br>
+                        <code>typedef NS_ENUM(NSInteger, LocationUpdateAppState ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">MPMessageSourceDatabase</a>,<br>
+                            &nbsp;&nbsp; <a href="">LocationUpdateAppStateBackground</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">MPMessageSourceRemote</a>,<br>
+                            &nbsp;&nbsp; <a href="">LocationUpdateAppStateForeground</a>,<br>
                             
                             };</code>
                     
@@ -101,36 +95,22 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="MPMessageSourceDatabase"></a><code>MPMessageSourceDatabase</code></dt>
+                            <dt><a name="" title="LocationUpdateAppStateBackground"></a><code>LocationUpdateAppStateBackground</code></dt>
 <dd>
-
-
-<p>Tracks where the currently parsing dictionary came from, because we run the values through twice to merge them together.</p>
-
-
-
-
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETLocationUpdate.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="MPMessageSourceRemote"></a><code>MPMessageSourceRemote</code></dt>
+                            <dt><a name="" title="LocationUpdateAppStateForeground"></a><code>LocationUpdateAppStateForeground</code></dt>
 <dd>
-
-
-<p>Database</p>
-
-
-
-
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ETMessage.h</code>.
+		Declared In <code class="declared-in-ref">ETLocationUpdate.h</code>.
 	</p>
 	
 </dd>
@@ -139,17 +119,6 @@
                     </div>
                     
 
-                    
-                    
-
-                    
-
-                    
-                    <div class="method-subsection declared-in-section">
-                        <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">ETMessage.h</code></p>
-                    </div>
-                    
                     
                     
                     
