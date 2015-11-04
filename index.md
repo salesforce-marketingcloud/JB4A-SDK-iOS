@@ -14,9 +14,9 @@ The Apple docs for the SDK can be found here:<br/>
 
 #### Version 4.0.3
 
-MOBILESDK-439 - iOS SDK returning latitude/longitude with commas instead of decimal points for certain locales.
-MOBILESDK-428 - Database corruption following VACUUM
-MOBILESDK-427 - Fix for ETEvent analytics to handle Array of dictionaries.
+* MOBILESDK-439 - iOS SDK returning latitude/longitude with commas instead of decimal points for certain locales.
+* MOBILESDK-428 - Database corruption following VACUUM
+* MOBILESDK-427 - Fix for ETEvent analytics to handle Array of dictionaries.
 
 #### Version 4.0.2
 **(supported)**
