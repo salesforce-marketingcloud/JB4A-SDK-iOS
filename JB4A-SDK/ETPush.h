@@ -465,10 +465,7 @@ static NSString * const SDKName = @"JB4ASDK";
  */
 -(void)applicationDidEnterBackgroundNotificationReceived; // UIApplicationDidEnterBackgroundNotification
 
-/**
- Set PIEvent (WAMA) Web Analytics Mobile Analytics
- */
--(bool)setWebAndMobileAnalyticsTitle:(NSString*)title andURL:(NSString*)url andItem:(NSString *)item andSearch:(NSString*)search;
+
 
 /**
  Set the Log Level

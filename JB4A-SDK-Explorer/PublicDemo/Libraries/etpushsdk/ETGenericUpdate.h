@@ -42,6 +42,9 @@ typedef NS_ENUM(NSInteger, GenericUpdateSendMethod)
 
 -(GenericUpdateSendMethod)sendMethod;
 
+@optional
+-(void)setRemoteRoutePath:(NSString *)route;
+
 @end
 
 static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.com";

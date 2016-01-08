@@ -15,9 +15,9 @@
 /**
  ETLocationManager is the main interface to Salesforce's Location Services. In the way that ETPush manages the push notification cycle, ETLocationMangaer manages geo services. It will use some of the information from ETPush (namely, App ID and Access Token) to function, but is an independent piece of functionality.
  
- Due to the invasive nature of location services, ETLocationManager defaults to off, and must be explicity turned on by the developer, whether invisibly to the user or not. To begin location services, call [[ETLocationManager locationManager] startWatchingLocation]. Similarly, to stop location services, call [[ETLocationManager locationManager] stopWatchingLocation]. 
+ Due to the invasive nature of location services, ETLocationManager defaults to off, and must be explicity turned on by the developer, whether invisibly to the user or not. To begin location services, call [[ETLocationManager sharedInstance] startWatchingLocation]. Similarly, to stop location services, call [[ETLocationManager sharedInstance] stopWatchingLocation].
  
- ETLocationManager will always respect the user's wishes (as enforced by iOS), so if the user disables Location Services at the system level through Settings, the SDK will be unable to use any location services, and fence monitoring will not function. You can check for this by querying [[ETLocationManager locationManager] locationEnabled], as it will reconcile app-level permissions as well as the state of you enabling loc services. Internally, this method is used to report back to Salesforce on the state of location services, so it is trustworthy.
+ ETLocationManager will always respect the user's wishes (as enforced by iOS), so if the user disables Location Services at the system level through Settings, the SDK will be unable to use any location services, and fence monitoring will not function. You can check for this by querying [[ETLocationManager sharedInstance] locationEnabled], as it will reconcile app-level permissions as well as the state of you enabling loc services. Internally, this method is used to report back to Salesforce on the state of location services, so it is trustworthy.
  
  Please ensure you are linking against CoreLocation. You will get errors otherwise. 
  
@@ -34,8 +34,15 @@
     
 /**
  Returns a reference to the shared loc manager.
- */
-+(ETLocationManager *)locationManager;
+ This method is deprecated. Please use sharedInstance instead.
+*/
++(ETLocationManager *)locationManager __attribute__((deprecated(("Use sharedInstance instead."))));
+
+/**
+  + Returns a reference to the shared ETLocationManager
+  */
+
++(instancetype)sharedInstance;
 
 -(id)init;
    
