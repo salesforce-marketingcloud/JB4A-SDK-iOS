@@ -256,12 +256,6 @@
         NSLog(@"== DEVICE ID ==\nthe Salesforce Device ID is: %@\n", [ETPush safeDeviceIdentifier]);
     }
     
-    NSString *configStr = [PUDPushConfig getCurrentConfig].configurationName;
-    if ([configStr length] == 0) {
-        PUDPushConfig *_defaultPushConfig = [PUDPushConfig getDefaultPushConfig];
-        [PUDPushConfig setCurrentConfigWithSelected:_defaultPushConfig];
-    }
-    
     return YES;
 }
 

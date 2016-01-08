@@ -41,7 +41,6 @@
 #import "PUDPageContentViewController.h"
 
 //Classes
-#import "PUDPushConfig.h"
 
 @interface PUDEulaViewController ()
 
