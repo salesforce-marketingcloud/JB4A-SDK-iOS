@@ -7,9 +7,9 @@ date: 2015-05-14 12:00:00
 order: 4
 ---
 
-The OpenDirect customized push message contains a URL to be opened in a web view. Craft your application to react appropriately when the mobile device receives that type of push message.
+The OpenDirect customized push message contains a URL that opens in a web view. Craft your application to react appropriately when the mobile device receives that type of push message.
 
-By default, an OpenDirect message will open the webpage.
+By default, an OpenDirect message will open the specified webpage.
 
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/OpenDirect.png" /><br/>

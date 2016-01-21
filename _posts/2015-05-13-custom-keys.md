@@ -7,7 +7,7 @@ date: 2015-05-14 12:00:00
 order: 5
 ---
 
-You can use custom keys to send extra data along with the push notification. This data can include an ID value used by the app to retrieve additional data or other function.
+Use custom keys to send extra data along with a push notification. This data can include an ID value used by the app to retrieve additional data or other function.
 
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/CustomKeys.png" /><br/>

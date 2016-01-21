@@ -6,11 +6,11 @@ category: rich-push
 date: 2015-05-14 12:00:00
 order: 1
 ---
-This section contains information on implementing cloud page functionality in your mobile app. Cloud Pages allow you to send either a page created in the CloudPage app to an Inbox configured in your app or a combination notification/CloudPage as an alert.
+This section contains information on implementing CloudPage functionality in your mobile app. CloudPages allow you to send either a page created in the CloudPage app to an inbox configured in your app or a combination of a notification and an CloudPage as an alert.
 
-Note that the Salesforce account using this functionality must have access to both MobilePush and CloudPages in order to successfully create and send cloud page alerts.
+The Salesforce Marketing Cloud must enable the account using this functionality with access to both MobilePush and CloudPages ito successfully create and send CloudPage alerts.
 
-A notification/CloudPage is shown by the SDK using the ETLandingPage class when the message is tapped.  
+The SDK shows a combination of a notification and CloudPage using the ETLandingPage class when tapping the message.  
 
-For CloudPage only messages that are sent to an Inbox configured in your app, new messages are downloaded from the Salesforce Marketing Cloud each time your app is brought into the foreground.  These messages are then saved in a view which you must configure in your app to display the CloudPage content.
+For CloudPage-only messages sent to an inbox configured in your app, the app downloads new messages from the Salesforce Marketing Cloud each time the app enters the foreground. The app saves these messages in a view. You must configure this view in your app to display the CloudPage content.
 

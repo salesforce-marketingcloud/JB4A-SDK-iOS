@@ -6,7 +6,7 @@ category: features
 date: 2015-05-14 12:00:00
 order: 6
 ---
-Follow the steps below to implement ET and/or Mobile analytics in your mobile app:
+Follow the steps on this page to implement ETAnalytics and Web and Mobile analytics in your mobile app:
 
 ET Analytics
 
@@ -22,7 +22,7 @@ If you wish to implement ETAnalytics for analytical information on your app, pas
                                                        error:&error];
 ~~~ 
 
-1. To see your new Web and Mobile Analytics, open the Web and Mobile Analytics app within the Marketing Cloud: 
+1. To see your new Web and Mobile Analytics information, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud: 
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/wama_menu.png" /><br/>
 <br/>

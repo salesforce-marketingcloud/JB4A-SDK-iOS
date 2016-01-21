@@ -15,11 +15,11 @@ A background push message appears on a mobile app without triggering a visual or
 ####How to Send Background Push Messages
 Follow the steps below to create and send background push messages:
 
-Create an API-triggered MobilePush message.
-Ensure you set the content-available property to 1.
-Set the override property to true.
-Include AMPscript in the messageText property as a placeholder for the overriden text. For example, you can include the value %%[]%%.
-Use the sample payload below as a model for your own message:
+1. Create an API-triggered MobilePush message.
+1. Ensure you set the **content-available** property to 1.
+1. Set the **override** property to **true**.
+1. Include AMPscript in the **messageText** property as a placeholder for the overriden text. For example, you can include the value %%[]%%.
+1. Use the sample payload below as a model for your own message:
 
 ~~~
 
@@ -32,4 +32,4 @@ Content-Type: application/json
 }
 ~~~
 
-Note that you cannot use badge count or sound as part of the message. Once you create the original message, you can pass text to the message using subsequent messages as part of the Override value.
+Note that you cannot use badge count or sound as part of the message. Once you create the original message, you can pass text to the message using subsequent messages as part of the **Override** value.
