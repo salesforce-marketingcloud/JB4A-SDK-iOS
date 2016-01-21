@@ -22,7 +22,7 @@ withPIAnalytics:YES
 error:&error];
 ~~~ 
 <br/>
-Make sure you also add the NSLocationAlwaysUsageDescription key to your application's *.plist file. Review the linked documentation for more information: <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18" target="_blank">NSLocationAlwaysUsageDescription</a> and <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW27" target="_blank">NSLocationUsageDescription</a>
+Ensure also add the NSLocationAlwaysUsageDescription key to the *.plist file for your application. Review Apple documentation for more information: <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18" target="_blank">NSLocationAlwaysUsageDescription</a>.
 
 <br/>
 <img class="img-responsive" src="{{ site.baseurl }}/assets/plist_locationservices_step1.png" /><br/>
