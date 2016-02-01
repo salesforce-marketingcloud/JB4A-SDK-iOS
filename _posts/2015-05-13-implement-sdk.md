@@ -137,6 +137,6 @@ static NSString *kETAccessToken_Prod  = @"change_this_to_your_production_accessT
 @end
 ~~~
 
-6. Deploy and start your app on a physical test device. You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
+1.  Deploy and start your app on a physical test device. You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
 
 Once you complete this process, you can build your application and send it push notifications from your Marketing Cloud account.

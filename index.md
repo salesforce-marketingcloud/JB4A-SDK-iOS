@@ -17,16 +17,19 @@ Review the Apple docs for the SDK:<br/>
 _Released February 2, 2016, correlating to the Salesforce Marketing Cloud 2016-01 Release_<br/>
 
 * MOBILESDK-508 - Swift unable to resolve LocationManager.
-* MOBILESDK-251 - Restructure PIEvent db table to support Retry logic.
+* MOBILESDK-503 - Make sure that we do not put data into the PIEvents table if PIEvents are not enabled.
+* MOBILESDK-502 - Create an ETAnalytics class to have parity with Android.
+* MOBILESDK-500 - Implement PIEvent database schema update.
+* MOBILESDK-493 - Swift unable to resolve LocationManager.
+* MOBILESDK-492 - Library has possible issues with debug symbols.
+* MOBILESDK-490 - Refactor the PIEvent class so that we do not need transient instances of the class.
+* MOBILESDK-474 - Registration Opt-In Process incorrectly sends TRUE.
+* MOBILESDK-455 - Edit ETPhoneHome didReceiveData call to accept phoneHome as well as ETBulkUpdateShim.
+* MOBILESDK-444 - Add Retry logic - iOS.
 * MOBILESDK-269 - Make end point configurable for WAMA in SDK.
 * MOBILESDK-231 - Add constraints to WAMA Analytics.
-* MOBILESDK-444 - Add Retry logic - iOS.
-* MOBILESDK-490 - Refactor the PIEvent class so that we do not need transient instances of the class.
-* MOBILESDK-500 - Implement PIEvent database schema update.
-* MOBILESDK-502 - Create an ETAnalytics class to have parity with Android.
-* MOBILESDK-503 - Make sure that we do not put data into the PIEvents table if PIEvents are not enabled.
-* MOBILESDK-455 - Edit ETPhoneHome didReceiveData call to accept phoneHome as well as ETBulkUpdateShim.
-* MOBILESDK-493 - Swift unable to resolve LocationManager.
+* MOBILESDK-251 - Restructure PIEvent db table to support Retry logic.
+* MOBILESDK-217 - Update Analytics
 
 #### Version 4.0.3
 **(supported)**
