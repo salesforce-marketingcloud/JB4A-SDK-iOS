@@ -82,6 +82,10 @@ static NSString *kETAccessToken_Prod  = @"change_this_to_your_production_accessT
         
         // inform the JB4ASDK of the launch options - possibly UIApplicationLaunchOptionsRemoteNotificationKey or UIApplicationLaunchOptionsLocalNotificationKey
         [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
+
+        // This method is required in order for location messaging to work and the user's location to be processed
+
+        [[ETLocationManager sharedInstance] startWatchingLocation];
     }
     
     return YES;

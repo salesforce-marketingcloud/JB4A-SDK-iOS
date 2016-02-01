@@ -22,6 +22,15 @@ withPIAnalytics:YES
 error:&error];
 ~~~ 
 <br/>
+
+To start location services, make the following call:
+
+~~~
+[[ETLocationManager sharedInstance] startWatchingLocation];
+~~~
+
+When making this call for the first time, iOS will prompt the user for permission to access location services.
+
 Ensure you also add the NSLocationAlwaysUsageDescription key to the *.plist file for your application. Review Apple documentation for more information: <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18" target="_blank">NSLocationAlwaysUsageDescription</a>. Any iOS 8 builds will ignore previous references to NSLocationUsageDescription keys due to the NSLocationAlwaysUsageDescription key.
 
 <br/>
