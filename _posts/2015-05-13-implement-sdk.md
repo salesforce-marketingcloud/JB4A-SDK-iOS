@@ -10,7 +10,7 @@ In order to use the SDK in your Mobile app, complete the steps required to regis
 
 1.  In your app development environment, copy the libJB4ASDK-X.X.X.a.a and the header files into your project.
 <br/>
- <img class="img-responsive" src="{{ site.baseurl }}/assets/iossdk37.png" /><br/>
+ <img class="img-responsive" src="{{ site.baseurl }}/assets/iossdk37new.png" /><br/>
 <br/>
 1.  Select **Project Settings**. 
 1.  Select **General**.
