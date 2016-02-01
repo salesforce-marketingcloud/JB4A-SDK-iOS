@@ -24,7 +24,7 @@ If you wish to implement ETAnalytics for analytical information on your app, pas
 
 ###Web and Mobile Analytics
 
-###Track Page View
+####Track Page View
 
 1.	Call the following method to implement page view analytics in your capp.
 
