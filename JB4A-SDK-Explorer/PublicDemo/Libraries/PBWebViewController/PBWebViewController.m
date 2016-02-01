@@ -85,6 +85,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    // for WAMA tracking purposes
+    [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:nil andSearch:nil];
+
     self.webView.delegate = self;
     if (self.URL) {
         [self load];

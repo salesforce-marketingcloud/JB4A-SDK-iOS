@@ -248,7 +248,7 @@
         /**
          ET_NOTE: This method is required in order for location messaging to work and the user's location to be processed
          */
-        [[ETLocationManager locationManager] startWatchingLocation];
+        [[ETLocationManager sharedInstance] startWatchingLocation];
         
         /**
          ET_NOTE: Logging the device id is very useful for debugging purposes. One thing this can help you do is create a filtered list inside of MobilePush that only includes the device that matches this id.

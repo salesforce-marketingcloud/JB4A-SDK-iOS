@@ -435,9 +435,11 @@ static NSString * const SDKName = @"JB4ASDK";
 +(NSString *)hardwareIdentifier;
 
 /**
- Returns the state of Push based on logic reflected at Salesforce.
+ Returns whether this device can receive Push Notifications.
  
- As of this release, Push is considered enabled if the application is able to present an alert (banner, alert) to the user per Settings. Nothing else will be considered.
+ Push is considered enabled if the application is able to present an alert (banner, alert, sound) to the user.  If UIUserNotificationTypeNone (ios8+) or
+    UIRemoteNotificationTypeNone (iOS7) is true, then Push is disabled and this method returns false.  For iOS8+, isRegisteredForRemoteNotifications
+    must also return true.
  */
 +(BOOL)isPushEnabled;
 

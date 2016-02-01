@@ -200,7 +200,7 @@
     /**
      *  ET_NOTE: This demonstrates how to see if location services are enabled
      */
-    BOOL isLocationEnabled = [[ETLocationManager locationManager] locationEnabled];
+    BOOL isLocationEnabled = [[ETLocationManager sharedInstance] locationEnabled];
     
     if (isLocationEnabled) {
         return @"YES";

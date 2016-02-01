@@ -8,21 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		00101DC61C4044BC00B35362 /* libJB4ASDK-4.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00101DC41C4044BC00B35362 /* libJB4ASDK-4.1.0.a */; };
+		00F2469F1C5FAE0E0047FCF3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2468D1C5FAE0E0047FCF3 /* AFHTTPRequestOperation.m */; };
+		00F246A01C5FAE0E0047FCF3 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2468F1C5FAE0E0047FCF3 /* AFHTTPRequestOperationManager.m */; };
+		00F246A11C5FAE0E0047FCF3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F246911C5FAE0E0047FCF3 /* AFHTTPSessionManager.m */; };
+		00F246A21C5FAE0E0047FCF3 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F246941C5FAE0E0047FCF3 /* AFNetworkReachabilityManager.m */; };
+		00F246A31C5FAE0E0047FCF3 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F246961C5FAE0E0047FCF3 /* AFSecurityPolicy.m */; };
+		00F246A41C5FAE0E0047FCF3 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F246981C5FAE0E0047FCF3 /* AFURLConnectionOperation.m */; };
+		00F246A51C5FAE0E0047FCF3 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2469A1C5FAE0E0047FCF3 /* AFURLRequestSerialization.m */; };
+		00F246A61C5FAE0E0047FCF3 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2469C1C5FAE0E0047FCF3 /* AFURLResponseSerialization.m */; };
+		00F246A71C5FAE0E0047FCF3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2469E1C5FAE0E0047FCF3 /* AFURLSessionManager.m */; };
+		00F246AE1C5FAEC10047FCF3 /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F246A91C5FAEC10047FCF3 /* JDStatusBarNotification.m */; };
+		00F246AF1C5FAEC10047FCF3 /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F246AB1C5FAEC10047FCF3 /* JDStatusBarStyle.m */; };
+		00F246B01C5FAEC10047FCF3 /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F246AD1C5FAEC10047FCF3 /* JDStatusBarView.m */; };
+		00F246B31C5FAED80047FCF3 /* PBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F246B21C5FAED80047FCF3 /* PBWebViewController.m */; };
 		3D06C959199B9ADB0085208E /* PUDBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D06C958199B9ADB0085208E /* PUDBeaconsViewController.m */; };
 		4DA92C9E196D7F800005BC8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA92C9B196D7F740005BC8E /* QuartzCore.framework */; };
 		4DD373EC19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */; };
 		4DDDC875197D9C86009542E9 /* gibson.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4DDDC872197D9C86009542E9 /* gibson.gpx */; };
 		4DEB0AE2195DE31600790CEF /* PUDServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546A19183F820040A1CC /* PUDServiceProvider.m */; };
-		4DEB0AE3195DE31600790CEF /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231919377AA5007B1464 /* AFNetworkReachabilityManager.m */; };
 		4DEB0AE4195DE31600790CEF /* PUDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5723581937E19F007B1464 /* PUDHomeViewController.m */; };
 		4DEB0AE5195DE31600790CEF /* PUDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D67C1925B5BA00128F29 /* PUDInfoViewController.m */; };
 		4DEB0AE6195DE31600790CEF /* PUDMessageComposeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546119183EE60040A1CC /* PUDMessageComposeTableViewController.m */; };
-		4DEB0AE7195DE31600790CEF /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232F19377AA5007B1464 /* JDStatusBarView.m */; };
 		4DEB0AE8195DE31600790CEF /* PUDDefaultMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546F191923AA0040A1CC /* PUDDefaultMessageModel.m */; };
 		4DEB0AE9195DE31600790CEF /* PUDFuelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546719183F660040A1CC /* PUDFuelService.m */; };
 		4DEB0AEA195DE31600790CEF /* PUDDiscountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D6EE192A497900128F29 /* PUDDiscountTableViewController.m */; };
-		4DEB0AEB195DE31600790CEF /* PBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57233219377AA5007B1464 /* PBWebViewController.m */; };
-		4DEB0AEC195DE31600790CEF /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232319377AA5007B1464 /* AFURLSessionManager.m */; };
 		4DEB0AED195DE31600790CEF /* PUDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE04A19105BB100B65B6F /* PUDConstants.m */; };
 		4DEB0AEE195DE31600790CEF /* PUDMessagePayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D651C53191D54AB000BAF5E /* PUDMessagePayload.m */; };
 		4DEB0AF0195DE31600790CEF /* PUDAppSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */; };
@@ -32,24 +41,15 @@
 		4DEB0AF4195DE31600790CEF /* PUDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB93419227E4700BF96BB /* PUDTabBarController.m */; };
 		4DEB0AF6195DE31600790CEF /* PUDMessageReceivedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB92E192127CB00BF96BB /* PUDMessageReceivedTableViewController.m */; };
 		4DEB0AF7195DE31600790CEF /* UIColor+ExactTargetColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232619377AA5007B1464 /* UIColor+ExactTargetColors.m */; };
-		4DEB0AF8195DE31600790CEF /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232D19377AA5007B1464 /* JDStatusBarStyle.m */; };
-		4DEB0AF9195DE31600790CEF /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232B19377AA5007B1464 /* JDStatusBarNotification.m */; };
 		4DEB0AFA195DE31600790CEF /* PUDPreferencesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE05419117CBA00B65B6F /* PUDPreferencesTableViewController.m */; };
 		4DEB0AFB195DE31600790CEF /* PUDPreferencesTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D667BAF19200DB90015BC2E /* PUDPreferencesTableData.m */; };
 		4DEB0AFC195DE31600790CEF /* PUDPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2180D719490A5C004F6095 /* PUDPageContentViewController.m */; };
 		4DEB0AFD195DE31600790CEF /* PUDPreferencesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D667BAC192005370015BC2E /* PUDPreferencesTableViewCell.m */; };
-		4DEB0AFE195DE31600790CEF /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57232119377AA5007B1464 /* AFURLResponseSerialization.m */; };
-		4DEB0AFF195DE31600790CEF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231219377AA5007B1464 /* AFHTTPRequestOperation.m */; };
-		4DEB0B00195DE31600790CEF /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231D19377AA5007B1464 /* AFURLConnectionOperation.m */; };
-		4DEB0B01195DE31600790CEF /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231419377AA5007B1464 /* AFHTTPRequestOperationManager.m */; };
 		4DEB0B02195DE31600790CEF /* PUDMessageComposeTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC426A81923AE9D002168F7 /* PUDMessageComposeTableData.m */; };
 		4DEB0B03195DE31600790CEF /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D667B9F191D9BDD0015BC2E /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m */; };
 		4DEB0B04195DE31600790CEF /* PUDDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC426AB1923ECF3002168F7 /* PUDDataPickerView.m */; };
 		4DEB0B05195DE31600790CEF /* PUDDiscountTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F1192A4AF700128F29 /* PUDDiscountTableData.m */; };
 		4DEB0B06195DE31600790CEF /* PUDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFB93119227BD300BF96BB /* PUDNavigationController.m */; };
-		4DEB0B07195DE31600790CEF /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231F19377AA5007B1464 /* AFURLRequestSerialization.m */; };
-		4DEB0B08195DE31600790CEF /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231B19377AA5007B1464 /* AFSecurityPolicy.m */; };
-		4DEB0B09195DE31600790CEF /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231619377AA5007B1464 /* AFHTTPSessionManager.m */; };
 		4DEB0B0A195DE31600790CEF /* PUDUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4D67F1925C16000128F29 /* PUDUtility.m */; };
 		4DEB0B0B195DE31600790CEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DE000191051BD00B65B6F /* main.m */; };
 		4DEB0B0D195DE31600790CEF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D95F14219256984002A5A43 /* MobileCoreServices.framework */; };
@@ -78,6 +78,33 @@
 		00101DC31C4044BC00B35362 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
 		00101DC41C4044BC00B35362 /* libJB4ASDK-4.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libJB4ASDK-4.1.0.a"; sourceTree = "<group>"; };
 		00101DC51C4044BC00B35362 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
+		00F2468C1C5FAE0E0047FCF3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		00F2468D1C5FAE0E0047FCF3 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		00F2468E1C5FAE0E0047FCF3 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		00F2468F1C5FAE0E0047FCF3 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		00F246901C5FAE0E0047FCF3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		00F246911C5FAE0E0047FCF3 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		00F246921C5FAE0E0047FCF3 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		00F246931C5FAE0E0047FCF3 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		00F246941C5FAE0E0047FCF3 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		00F246951C5FAE0E0047FCF3 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		00F246961C5FAE0E0047FCF3 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		00F246971C5FAE0E0047FCF3 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		00F246981C5FAE0E0047FCF3 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		00F246991C5FAE0E0047FCF3 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		00F2469A1C5FAE0E0047FCF3 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		00F2469B1C5FAE0E0047FCF3 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		00F2469C1C5FAE0E0047FCF3 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		00F2469D1C5FAE0E0047FCF3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		00F2469E1C5FAE0E0047FCF3 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		00F246A81C5FAEC10047FCF3 /* JDStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarNotification.h; sourceTree = "<group>"; };
+		00F246A91C5FAEC10047FCF3 /* JDStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarNotification.m; sourceTree = "<group>"; };
+		00F246AA1C5FAEC10047FCF3 /* JDStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarStyle.h; sourceTree = "<group>"; };
+		00F246AB1C5FAEC10047FCF3 /* JDStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarStyle.m; sourceTree = "<group>"; };
+		00F246AC1C5FAEC10047FCF3 /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
+		00F246AD1C5FAEC10047FCF3 /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
+		00F246B11C5FAED80047FCF3 /* PBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebViewController.h; sourceTree = "<group>"; };
+		00F246B21C5FAED80047FCF3 /* PBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebViewController.m; sourceTree = "<group>"; };
 		3D06C957199B9ADB0085208E /* PUDBeaconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDBeaconsViewController.h; sourceTree = "<group>"; };
 		3D06C958199B9ADB0085208E /* PUDBeaconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDBeaconsViewController.m; sourceTree = "<group>"; };
 		3D91F0C8198AC52F00523DC6 /* SDK Explorer-Qa-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SDK Explorer-Qa-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -101,35 +128,8 @@
 		4D2DE04A19105BB100B65B6F /* PUDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDConstants.m; sourceTree = "<group>"; };
 		4D2DE05319117CBA00B65B6F /* PUDPreferencesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDPreferencesTableViewController.h; sourceTree = "<group>"; };
 		4D2DE05419117CBA00B65B6F /* PUDPreferencesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDPreferencesTableViewController.m; sourceTree = "<group>"; };
-		4D57231119377AA5007B1464 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		4D57231219377AA5007B1464 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		4D57231319377AA5007B1464 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
-		4D57231419377AA5007B1464 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		4D57231519377AA5007B1464 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		4D57231619377AA5007B1464 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		4D57231719377AA5007B1464 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		4D57231819377AA5007B1464 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		4D57231919377AA5007B1464 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		4D57231A19377AA5007B1464 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		4D57231B19377AA5007B1464 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		4D57231C19377AA5007B1464 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		4D57231D19377AA5007B1464 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		4D57231E19377AA5007B1464 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		4D57231F19377AA5007B1464 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		4D57232019377AA5007B1464 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		4D57232119377AA5007B1464 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		4D57232219377AA5007B1464 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		4D57232319377AA5007B1464 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		4D57232519377AA5007B1464 /* UIColor+ExactTargetColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ExactTargetColors.h"; sourceTree = "<group>"; };
 		4D57232619377AA5007B1464 /* UIColor+ExactTargetColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ExactTargetColors.m"; sourceTree = "<group>"; };
-		4D57232A19377AA5007B1464 /* JDStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarNotification.h; sourceTree = "<group>"; };
-		4D57232B19377AA5007B1464 /* JDStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarNotification.m; sourceTree = "<group>"; };
-		4D57232C19377AA5007B1464 /* JDStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarStyle.h; sourceTree = "<group>"; };
-		4D57232D19377AA5007B1464 /* JDStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarStyle.m; sourceTree = "<group>"; };
-		4D57232E19377AA5007B1464 /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
-		4D57232F19377AA5007B1464 /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
-		4D57233119377AA5007B1464 /* PBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebViewController.h; sourceTree = "<group>"; };
-		4D57233219377AA5007B1464 /* PBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebViewController.m; sourceTree = "<group>"; };
 		4D5723571937E19F007B1464 /* PUDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDHomeViewController.h; sourceTree = "<group>"; };
 		4D5723581937E19F007B1464 /* PUDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDHomeViewController.m; sourceTree = "<group>"; };
 		4D651C52191D54AB000BAF5E /* PUDMessagePayload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDMessagePayload.h; sourceTree = "<group>"; };
@@ -185,9 +185,6 @@
 		A99812E219B926DF00EA36EF /* PUDEulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDEulaViewController.h; sourceTree = "<group>"; };
 		A99812E319B926DF00EA36EF /* PUDEulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDEulaViewController.m; sourceTree = "<group>"; };
 		EF95C6061AA9FAF600CFE56B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		EFF0A8811AF152D000138F85 /* CHANGES.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES.txt; sourceTree = "<group>"; };
-		EFF0A8821AF152D000138F85 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		EFF0A8831AF152D000138F85 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,28 +364,25 @@
 		4D57231019377AA5007B1464 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				EFF0A8811AF152D000138F85 /* CHANGES.txt */,
-				EFF0A8821AF152D000138F85 /* LICENSE */,
-				EFF0A8831AF152D000138F85 /* README.md */,
-				4D57231119377AA5007B1464 /* AFHTTPRequestOperation.h */,
-				4D57231219377AA5007B1464 /* AFHTTPRequestOperation.m */,
-				4D57231319377AA5007B1464 /* AFHTTPRequestOperationManager.h */,
-				4D57231419377AA5007B1464 /* AFHTTPRequestOperationManager.m */,
-				4D57231519377AA5007B1464 /* AFHTTPSessionManager.h */,
-				4D57231619377AA5007B1464 /* AFHTTPSessionManager.m */,
-				4D57231719377AA5007B1464 /* AFNetworking.h */,
-				4D57231819377AA5007B1464 /* AFNetworkReachabilityManager.h */,
-				4D57231919377AA5007B1464 /* AFNetworkReachabilityManager.m */,
-				4D57231A19377AA5007B1464 /* AFSecurityPolicy.h */,
-				4D57231B19377AA5007B1464 /* AFSecurityPolicy.m */,
-				4D57231C19377AA5007B1464 /* AFURLConnectionOperation.h */,
-				4D57231D19377AA5007B1464 /* AFURLConnectionOperation.m */,
-				4D57231E19377AA5007B1464 /* AFURLRequestSerialization.h */,
-				4D57231F19377AA5007B1464 /* AFURLRequestSerialization.m */,
-				4D57232019377AA5007B1464 /* AFURLResponseSerialization.h */,
-				4D57232119377AA5007B1464 /* AFURLResponseSerialization.m */,
-				4D57232219377AA5007B1464 /* AFURLSessionManager.h */,
-				4D57232319377AA5007B1464 /* AFURLSessionManager.m */,
+				00F2468C1C5FAE0E0047FCF3 /* AFHTTPRequestOperation.h */,
+				00F2468D1C5FAE0E0047FCF3 /* AFHTTPRequestOperation.m */,
+				00F2468E1C5FAE0E0047FCF3 /* AFHTTPRequestOperationManager.h */,
+				00F2468F1C5FAE0E0047FCF3 /* AFHTTPRequestOperationManager.m */,
+				00F246901C5FAE0E0047FCF3 /* AFHTTPSessionManager.h */,
+				00F246911C5FAE0E0047FCF3 /* AFHTTPSessionManager.m */,
+				00F246921C5FAE0E0047FCF3 /* AFNetworking.h */,
+				00F246931C5FAE0E0047FCF3 /* AFNetworkReachabilityManager.h */,
+				00F246941C5FAE0E0047FCF3 /* AFNetworkReachabilityManager.m */,
+				00F246951C5FAE0E0047FCF3 /* AFSecurityPolicy.h */,
+				00F246961C5FAE0E0047FCF3 /* AFSecurityPolicy.m */,
+				00F246971C5FAE0E0047FCF3 /* AFURLConnectionOperation.h */,
+				00F246981C5FAE0E0047FCF3 /* AFURLConnectionOperation.m */,
+				00F246991C5FAE0E0047FCF3 /* AFURLRequestSerialization.h */,
+				00F2469A1C5FAE0E0047FCF3 /* AFURLRequestSerialization.m */,
+				00F2469B1C5FAE0E0047FCF3 /* AFURLResponseSerialization.h */,
+				00F2469C1C5FAE0E0047FCF3 /* AFURLResponseSerialization.m */,
+				00F2469D1C5FAE0E0047FCF3 /* AFURLSessionManager.h */,
+				00F2469E1C5FAE0E0047FCF3 /* AFURLSessionManager.m */,
 			);
 			name = AFNetworking;
 			path = Libraries/AFNetworking;
@@ -426,12 +420,12 @@
 		4D57232919377AA5007B1464 /* JDStatusBarNotification */ = {
 			isa = PBXGroup;
 			children = (
-				4D57232A19377AA5007B1464 /* JDStatusBarNotification.h */,
-				4D57232B19377AA5007B1464 /* JDStatusBarNotification.m */,
-				4D57232C19377AA5007B1464 /* JDStatusBarStyle.h */,
-				4D57232D19377AA5007B1464 /* JDStatusBarStyle.m */,
-				4D57232E19377AA5007B1464 /* JDStatusBarView.h */,
-				4D57232F19377AA5007B1464 /* JDStatusBarView.m */,
+				00F246A81C5FAEC10047FCF3 /* JDStatusBarNotification.h */,
+				00F246A91C5FAEC10047FCF3 /* JDStatusBarNotification.m */,
+				00F246AA1C5FAEC10047FCF3 /* JDStatusBarStyle.h */,
+				00F246AB1C5FAEC10047FCF3 /* JDStatusBarStyle.m */,
+				00F246AC1C5FAEC10047FCF3 /* JDStatusBarView.h */,
+				00F246AD1C5FAEC10047FCF3 /* JDStatusBarView.m */,
 			);
 			name = JDStatusBarNotification;
 			path = Libraries/JDStatusBarNotification;
@@ -440,8 +434,8 @@
 		4D57233019377AA5007B1464 /* PBWebViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4D57233119377AA5007B1464 /* PBWebViewController.h */,
-				4D57233219377AA5007B1464 /* PBWebViewController.m */,
+				00F246B11C5FAED80047FCF3 /* PBWebViewController.h */,
+				00F246B21C5FAED80047FCF3 /* PBWebViewController.m */,
 			);
 			name = PBWebViewController;
 			path = Libraries/PBWebViewController;
@@ -503,7 +497,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PUD;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = ExactTarget;
 				TargetAttributes = {
 					4DEB0AE0195DE31600790CEF = {
@@ -557,50 +551,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F246A71C5FAE0E0047FCF3 /* AFURLSessionManager.m in Sources */,
+				00F246A31C5FAE0E0047FCF3 /* AFSecurityPolicy.m in Sources */,
 				4DEB0AE2195DE31600790CEF /* PUDServiceProvider.m in Sources */,
-				4DEB0AE3195DE31600790CEF /* AFNetworkReachabilityManager.m in Sources */,
 				4DEB0AE4195DE31600790CEF /* PUDHomeViewController.m in Sources */,
 				A99812E419B926DF00EA36EF /* PUDEulaViewController.m in Sources */,
 				4DEB0AE5195DE31600790CEF /* PUDInfoViewController.m in Sources */,
 				4DEB0AE6195DE31600790CEF /* PUDMessageComposeTableViewController.m in Sources */,
-				4DEB0AE7195DE31600790CEF /* JDStatusBarView.m in Sources */,
 				4DEB0AE8195DE31600790CEF /* PUDDefaultMessageModel.m in Sources */,
 				4DEB0AE9195DE31600790CEF /* PUDFuelService.m in Sources */,
+				00F246AF1C5FAEC10047FCF3 /* JDStatusBarStyle.m in Sources */,
 				4DEB0AEA195DE31600790CEF /* PUDDiscountTableViewController.m in Sources */,
-				4DEB0AEB195DE31600790CEF /* PBWebViewController.m in Sources */,
-				4DEB0AEC195DE31600790CEF /* AFURLSessionManager.m in Sources */,
+				00F2469F1C5FAE0E0047FCF3 /* AFHTTPRequestOperation.m in Sources */,
 				4DEB0AED195DE31600790CEF /* PUDConstants.m in Sources */,
+				00F246A11C5FAE0E0047FCF3 /* AFHTTPSessionManager.m in Sources */,
 				4DEB0AEE195DE31600790CEF /* PUDMessagePayload.m in Sources */,
+				00F246B01C5FAEC10047FCF3 /* JDStatusBarView.m in Sources */,
 				4DEB0AF0195DE31600790CEF /* PUDAppSettingConstants.m in Sources */,
 				4DEB0AF1195DE31600790CEF /* PUDAppDelegate.m in Sources */,
 				4DEB0AF2195DE31600790CEF /* PUDSendMessageViewController.m in Sources */,
 				4DEC6D16196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m in Sources */,
 				4DEB0AF3195DE31600790CEF /* PUDAbstractPageViewController.m in Sources */,
+				00F246AE1C5FAEC10047FCF3 /* JDStatusBarNotification.m in Sources */,
 				4DEB0AF4195DE31600790CEF /* PUDTabBarController.m in Sources */,
 				4DEB0AF6195DE31600790CEF /* PUDMessageReceivedTableViewController.m in Sources */,
 				4DEB0AF7195DE31600790CEF /* UIColor+ExactTargetColors.m in Sources */,
-				4DEB0AF8195DE31600790CEF /* JDStatusBarStyle.m in Sources */,
-				4DEB0AF9195DE31600790CEF /* JDStatusBarNotification.m in Sources */,
+				00F246A21C5FAE0E0047FCF3 /* AFNetworkReachabilityManager.m in Sources */,
+				00F246A51C5FAE0E0047FCF3 /* AFURLRequestSerialization.m in Sources */,
+				00F246A61C5FAE0E0047FCF3 /* AFURLResponseSerialization.m in Sources */,
 				4DEB0AFA195DE31600790CEF /* PUDPreferencesTableViewController.m in Sources */,
+				00F246B31C5FAED80047FCF3 /* PBWebViewController.m in Sources */,
 				4DEB0AFB195DE31600790CEF /* PUDPreferencesTableData.m in Sources */,
+				00F246A41C5FAE0E0047FCF3 /* AFURLConnectionOperation.m in Sources */,
 				3D06C959199B9ADB0085208E /* PUDBeaconsViewController.m in Sources */,
 				4DEB0AFC195DE31600790CEF /* PUDPageContentViewController.m in Sources */,
 				4DEB0AFD195DE31600790CEF /* PUDPreferencesTableViewCell.m in Sources */,
-				4DEB0AFE195DE31600790CEF /* AFURLResponseSerialization.m in Sources */,
-				4DEB0AFF195DE31600790CEF /* AFHTTPRequestOperation.m in Sources */,
-				4DEB0B00195DE31600790CEF /* AFURLConnectionOperation.m in Sources */,
 				4DD373EC19632DCF0005E6FF /* PUDCloudPageInboxViewController.m in Sources */,
-				4DEB0B01195DE31600790CEF /* AFHTTPRequestOperationManager.m in Sources */,
 				4DEB0B02195DE31600790CEF /* PUDMessageComposeTableData.m in Sources */,
 				4DEB0B03195DE31600790CEF /* AFHTTPRequestOperationManager+AuthenticatedFuelRequest.m in Sources */,
 				4DEB0B04195DE31600790CEF /* PUDDataPickerView.m in Sources */,
 				4DEC6D1B196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m in Sources */,
 				4DEB0B05195DE31600790CEF /* PUDDiscountTableData.m in Sources */,
 				4DEB0B06195DE31600790CEF /* PUDNavigationController.m in Sources */,
-				4DEB0B07195DE31600790CEF /* AFURLRequestSerialization.m in Sources */,
-				4DEB0B08195DE31600790CEF /* AFSecurityPolicy.m in Sources */,
-				4DEB0B09195DE31600790CEF /* AFHTTPSessionManager.m in Sources */,
 				4DEB0B0A195DE31600790CEF /* PUDUtility.m in Sources */,
+				00F246A01C5FAE0E0047FCF3 /* AFHTTPRequestOperationManager.m in Sources */,
 				4DEB0B0B195DE31600790CEF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +640,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -661,7 +656,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -696,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -728,7 +723,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SDK Explorer-Qa-Info.plist";
 				INSTALL_GROUP = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PublicDemo",
@@ -736,6 +731,7 @@
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.use.your.own.bundleid;
 				PRODUCT_NAME = "SDK Explorer-Qa";
 				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -765,7 +761,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SDK Explorer-Qa-Info.plist";
 				INSTALL_GROUP = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PublicDemo",
@@ -773,6 +769,7 @@
 					"$(PROJECT_DIR)/PublicDemo/Libraries/etpushsdk",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.use.your.own.bundleid;
 				PRODUCT_NAME = "SDK Explorer-Qa";
 				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";

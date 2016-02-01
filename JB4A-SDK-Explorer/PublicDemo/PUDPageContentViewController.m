@@ -57,7 +57,7 @@
     
     // set up the web view
     self.webView.backgroundColor = [UIColor clearColor];
-    [self.webView loadData:[self.html dataUsingEncoding:NSUTF8StringEncoding] MIMEType:nil textEncodingName:nil baseURL:nil];
+    [self.webView loadData:[self.html dataUsingEncoding:NSUTF8StringEncoding] MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[NSURL fileURLWithPath:self.html]];
 }
 
 #pragma mark - webview delegate
