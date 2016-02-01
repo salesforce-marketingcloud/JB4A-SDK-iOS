@@ -8,14 +8,14 @@ order: 1
 ---
 In order to use the SDK in your Mobile app, complete the steps required to register a device with the Salesforce Marketing Cloud. This process ultimately connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/create-apps/create-apps-overview.html).
 
-1. In your app development environment, copy the libJB4ASDK-X.X.X.a.a and the header files into your project. 
+1.  In your app development environment, copy the libJB4ASDK-X.X.X.a.a and the header files into your project.
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/iossdk37.png" /><br/>
 <br/>
-1. Select **Project Settings**. 
-1. Select **General**.
-1. Add libJB4ASDK-X.X.X.a as a dependency.
-1. Add code in the AppDelegate implementation class to bootstrap the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from <a href="https://code.exacttarget.com/" target="_blank">code@<a/>.
+1.  Select **Project Settings**. 
+1.  Select **General**.
+1.  Add libJB4ASDK-X.X.X.a as a dependency.
+1.  Add code in the AppDelegate implementation class to bootstrap the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from <a href="https://code.exacttarget.com/" target="_blank">code@<a/>.
 
 ~~~
 #import "AppDelegate.h"
@@ -136,7 +136,8 @@ static NSString *kETAccessToken_Prod  = @"change_this_to_your_production_accessT
 
 @end
 ~~~
+<br />
 
-1.  Deploy and start your app on a physical test device. You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
+You can now deploy and start your app on a physical test device. You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
 
 Once you complete this process, you can build your application and send it push notifications from your Marketing Cloud account.
