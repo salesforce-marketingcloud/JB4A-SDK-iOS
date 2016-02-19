@@ -19,3 +19,15 @@ Ensure that your network team unblocks the following ports to provide communicat
 * TCP port 2195 (used to send notifications to the APNS servers)
 * TCP port 2196 (used by the APNS feedback service)
 * TCP port 443 (used as a fallback service for Wi-Fi devices when those devices cannot communicate to the APNS service on port 5223)
+
+You can toggle the SDK logging facility by including the following line in your code:
+
+~~~
+    // Set to YES to enable logging while debugging
+    [ETPush setETLoggerToRequiredState:YES];
+~~~
+
+~~~
+    // Set to NO to disable logging while debugging
+    [ETPush setETLoggerToRequiredState:NO];
+~~~

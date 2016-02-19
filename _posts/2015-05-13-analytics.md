@@ -8,7 +8,7 @@ order: 6
 ---
 Follow the steps on this page to implement ETAnalytics and Web and Mobile analytics in your mobile app:
 
-ET Analytics
+###ET Analytics
 
 If you wish to implement ETAnalytics for analytical information on your app, pass a YES value for the withAnalytics parameter.
 
@@ -22,7 +22,7 @@ If you wish to implement ETAnalytics for analytical information on your app, pas
                                                        error:&error];
 ~~~ 
 
-Web and Mobile Analytics - Track Page View
+###Web and Mobile Analytics - Track Page View
 
 1.	Call the following method to implement page view analytics in your capp.
 

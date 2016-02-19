@@ -16,6 +16,9 @@ A background push message appears on a mobile app without triggering a visual or
 Follow the steps below to create and send background push messages:
 
 1. Create an API-triggered MobilePush message.
+	*	[Create a single push message](https://code.exacttarget.com/apis-sdks/rest-api/v1/push/createPushMessage.html)
+	*	[Create a push message for specified mobile devices](https://code.exacttarget.com/apis-sdks/rest-api/v1/push/postMessageContactSend.html)
+	*	[Update a push message](https://code.exacttarget.com/apis-sdks/rest-api/v1/push/updatePushMessage.html)
 1. Ensure you set the **content-available** property to 1.
 1. Set the **override** property to **true**.
 1. Include AMPscript in the **messageText** property as a placeholder for the overriden text. For example, you can include the value %%[]%%.
