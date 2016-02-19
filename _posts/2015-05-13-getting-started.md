@@ -19,7 +19,7 @@ Integrate MobilePush into your mobile app using the Journey Builder for Apps SDK
 
 This documentation contains all information required to integrate the Journey Builder for Apps SDK in your mobile apps.
 
-##Source Code and Other Information
+## Source Code and Other Information
 
 * <a href="https://github.com/ExactTarget/JB4A-SDK-iOS" target="_blank">Journey Builder for Apps iOS SDK</a> - Download the iOS SDK for use in your native iOS apps.
 * Review the <a href="http://exacttarget.github.io/JB4A-SDK-iOS/" target="_blank">Journey Builder for Apps SDK Reference<a/>

@@ -12,19 +12,19 @@ Attributes contain information used to describe different aspects about a contac
  <img class="img-responsive" src="{{ site.baseurl }}/assets/Attributes_Step3.png" /><br/>
 <br/>
 
-####Adding an Attribute
+#### Adding an Attribute
 ~~~ 
     // Add an attribute
     [[ETPush pushManager] addAttributeNamed:"FavoriteTeam" value:favoriteTeamName];
 ~~~
 
-####Removing an attribute
+#### Removing an attribute
 ~~~ 
     // Remove an attribute
     [[ETPush pushManager] removeAttributeNamed:favoriteTeamName];
 ~~~
 
-####Retrieving all available attributes
+#### Retrieving all available attributes
 ~~~ 
     // Get all attributes
     NSDictionary *attributes = [[ETPush pushManager] allAttributes];

@@ -6,13 +6,13 @@ category: features
 date: 2015-05-14 12:00:00
 order: 9
 ---
-####Background Push Messages for MobilePush
+#### Background Push Messages for MobilePush
 This document contains conceptual and procedural information about sending a background push message to a mobile app using the MobilePush app and the REST API.
 
-####What are Background Push Messages
+#### What are Background Push Messages
 A background push message appears on a mobile app without triggering a visual or audible alert on the mobile device. Examples include subscriptions read inside the iOS Newsstand app or updates to messages within an app that do not require notifications.
 
-####How to Send Background Push Messages
+#### How to Send Background Push Messages
 Follow the steps below to create and send background push messages:
 
 1. Create an API-triggered MobilePush message.
