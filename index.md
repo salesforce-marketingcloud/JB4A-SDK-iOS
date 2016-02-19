@@ -10,6 +10,10 @@ This documentation includes information for the Salesforce Marketing Cloud Journ
 Review the Apple docs for the SDK:<br/>
 <a href="{{ site.baseurl }}/appledoc/index.html" target="_blank">iOS SDK Apple Docs</a>
 
+##iOS Version
+
+Use the JB4A iOS SDK with iOS versions 7 or later.
+
 ## Release History
 
 #### Version 4.1.0
