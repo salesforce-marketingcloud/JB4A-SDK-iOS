@@ -14,7 +14,7 @@ Attributes contain information used to describe different aspects about a contac
 
 #### Adding an Attribute
 ~~~ 
-    // Add an attribute
+    // Add an attribute - will return a true or false value indicating success of call
     [[ETPush pushManager] addAttributeNamed:"FavoriteTeam" value:favoriteTeamName];
 ~~~
 
