@@ -48,6 +48,12 @@ Add the below to the AppDelegate.m didFinishLaunchingWithOptions function in ord
                                                    andCloudPages:NO
                                                  withPIAnalytics:NO
                                                            error:&error];
+
+if([[[UIDevice currentDevice] systemVersion] floatValue] >=7.0)
+  {
+    if ( [[UIApplication sharedApplication] backgroundRefreshStatus] == UIBackgroundRefreshStatusAvailable )
+      { [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum]; }
+  }
     #endif
         //
         // if configureSDKWithAppID returns NO, check the error object for detailed failure info. See PushConstants.h for codes.
@@ -118,6 +124,9 @@ Add the below to the AppDelegate.m didFinishLaunchingWithOptions function in ord
         
         return YES;
     }
+
+    -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+        { [[ETPush pushManager] refreshWithFetchCompletionHandler:completionHandler]; }
 
     - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
     {
