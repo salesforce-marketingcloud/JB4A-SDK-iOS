@@ -19,17 +19,17 @@ Upon receiving a MobilePush message with OpenDirect, the JB4A SDK will use the E
 
 To override this default behavior, provide your own functionality by implementing the OpenDirect protocol and delegate:
 
-1. Add the ExactTargetOpenDirectDelegate protocol to your class.
+1.	Add the ExactTargetOpenDirectDelegate protocol to your class.
 
-~~~
-@interface PUDAppDelegate : UIResponder <…, ExactTargetOpenDirectDelegate>
-{ … }
-~~~
+	~~~
+		@interface PUDAppDelegate : UIResponder <…, ExactTargetOpenDirectDelegate>
+		{ … }
+	~~~
 
-1. Implement the following required delegate method.
+1.	Implement the following required delegate method.
 
-~~~
--	(void)didReceiveOpenDirectMessageWithContents:(NSString *)payload { … }
-~~~
+	~~~
+		-(void)didReceiveOpenDirectMessageWithContents:(NSString *)payload { … }
+	~~~
 
 See the [ExactTargetOpenDirectDelegate Protocol Reference for more information](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/appledoc/Protocols/ExactTargetOpenDirectDelegate.html).
