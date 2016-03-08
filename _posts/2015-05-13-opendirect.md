@@ -14,3 +14,22 @@ By default, an OpenDirect message will open the specified webpage.
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/OpenDirect.png" /><br/>
 <br/>
+
+Upon receiving a MobilePush message with OpenDirect, the JB4A SDK will use the ETLandingPagePresenter class to open and present the URL specified in the OpenDirect key. ETLandingPagePresenter opens automatically upon tap of a notification. That action pops up a UIWebView with a toolbar, shows the location specified by the URL reference, and waits for dismissal. The JB4A SDK does not use a WKWebView or the SFSafariViewController.
+
+To override this default behavior, provide your own functionality by implementing the OpenDirect protocol and delegate:
+
+1. Add the ExactTargetOpenDirectDelegate protocol to your class.
+
+~~~
+@interface PUDAppDelegate : UIResponder <…, ExactTargetOpenDirectDelegate>
+{ … }
+~~~
+
+1. Implement the following required delegate method.
+
+~~~
+-	(void)didReceiveOpenDirectMessageWithContents:(NSString *)payload { … }
+~~~
+
+See the [ExactTargetOpenDirectDelegate Protocol Reference for more information](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/appledoc/Protocols/ExactTargetOpenDirectDelegate.html).
