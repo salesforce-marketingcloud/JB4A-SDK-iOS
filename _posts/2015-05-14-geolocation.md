@@ -7,7 +7,7 @@ date: 2015-05-14 08:43:35
 order: 2
 ---
 
-To implement location services, pass a YES value for the andLocationServices parameter and use ETLocationManager to monitor location and geofence for a user.
+To implement location services, pass a YES value for the andLocationServices parameter and use ETLocationManager to monitor location and geofence for a user. Swift apps can use geolocation functionality via ETLocationManager.”
 
 ~~~
 BOOL successful = NO;
