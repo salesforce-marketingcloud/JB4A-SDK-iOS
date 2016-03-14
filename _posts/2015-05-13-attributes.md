@@ -27,7 +27,7 @@ Attributes contain information used to describe different aspects about a contac
 #### Retrieving all available attributes
 ~~~ 
     // Get all attributes
-    NSDictionary *attributes = [[ETPush pushManager] allAttributes];
+    NSDictionary *attributes = [[ETPush pushManager] getAttributes];
 ~~~
 
 ###Reserved Attributes
