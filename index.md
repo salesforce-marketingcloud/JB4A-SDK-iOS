@@ -16,8 +16,16 @@ Use the JB4A iOS SDK with iOS versions 7 or later.
 
 ## Release History
 
+#### Version 4.2.0
+_Released March 21, 2016, correlating to the Salesforce Marketing Cloud 2016-02 Release_<br/>
+
+* MOBILESDK-268 - Package registration data updates with each update method (such as setTag(), addAttribute()) by
+                  issuing REST call 1 minute after first call.  If REST call fails, retry in background until REST 
+                  call succeeds or app is suspended.
+* MOBILESDK-727 - Change updateET() to that it sends registrations data immediately the first call after app comes
+                  into foreground and in 1 minute intervals for subsequent calls.                  
+
 #### Version 4.1.0
-**(supported)**
 _Released February 2, 2016, correlating to the Salesforce Marketing Cloud 2016-01 Release_<br/>
 
 * MOBILESDK-502 - Create an ETAnalytics class to have parity with Android.
@@ -30,7 +38,6 @@ _Released February 2, 2016, correlating to the Salesforce Marketing Cloud 2016-0
 * MOBILESDK-217 - Update Analytics
 
 #### Version 4.0.3
-**(supported)**
 _Released November 4, 2015, correlating to the Salesforce Marketing Cloud 2015-06.HF Release_<br/>
 
 * MOBILESDK-439 - iOS SDK returning latitude/longitude with commas instead of decimal points for certain locales.
@@ -38,7 +45,6 @@ _Released November 4, 2015, correlating to the Salesforce Marketing Cloud 2015-0
 * MOBILESDK-427 - Fix for ETEvent analytics to handle Array of dictionaries.
 
 #### Version 4.0.2
-**(supported)**
 _Released October 2, 2015, correlating to the Salesforce Marketing Cloud 2015-06 Release_<br/>
 
 * MOBILESDK-327 - Fix for missing keychain item when applications are restored from an unencrypted backup.
@@ -50,13 +56,11 @@ _Released October 2, 2015, correlating to the Salesforce Marketing Cloud 2015-06
 > This version of the JB4A SDK introduces iOS Keychain usage. To ensure that your app retains any relevant data across user backups and restores, encourage your app users to implement encrypted backups for their devices. Otherwise, information (such as tags, attributes, and subscriber keys) will not persist.
 
 #### Version 4.0.1
-**(supported)**
 _Released July 23rd, 2015_<br/>
 
 * MPUSH-3856 - SUPPORT - Upgrade to MobilePush iOS SDK 4.0.0 from SDK 3.4.2 Causes App to Freeze<br/> 
 
 #### Version 4.0.0
-**(supported)**
 _Released June 24th, 2015, correlating to the Salesforce Marketing Cloud 2015-04 Release_<br/>
 
 * MPUSH-3605 - SDK iOS: Modify payload to always send english datetime<br/>
@@ -95,7 +99,6 @@ successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Prod
 ___
 
 #### Version 3.4.2 ####
-**(supported)**
 _Released March 9, 2015, correlating to Salesforce Marketing Cloud 2015-02 Release_
 
 * Fix beacon payload message handling for personalized messages
@@ -106,7 +109,6 @@ _Released March 9, 2015, correlating to Salesforce Marketing Cloud 2015-02 Relea
 ___
 
 #### Version 3.4.1 #### 
-**(supported)**
 _Released December 11, 2014_
 
  * HF.1 - fixed analytics rest route.
@@ -114,7 +116,6 @@ _Released December 11, 2014_
 ___
 
 #### Version 3.4.0 ####
-**(supported)**
 _Released November 17, 2014, correlating to Salesforce Marketing Cloud 2014-08 Release_
 
 * MPUSH-2753 - Fix for someone calling registerForRemoteNotificationTypes on an IOS8 device. We will transform the call to into the IOS8 call/pair registerUserNotificationSettings and registerForRemoteNotifications using the same alert types (i.e. sound, badges, alerts). This is so push registration will work if the customer doesn't change their code at all and just recompiles with Xcode6 but they want to run on an IOS8 device.<br/>
@@ -127,7 +128,6 @@ Calling registerForRemoteNotificationTypes while running on an IOS8 device will 
 ___
 
 #### Version 3.3.0 #####
-**(supported)**
 _Released August 25, 2014, correlating to ExactTarget's 2014-06 Release_<br/>
 
 * MPUSH-2560 - Continued Beacon work to meet further requirements.<br/>
@@ -138,7 +138,6 @@ _Released August 25, 2014, correlating to ExactTarget's 2014-06 Release_<br/>
 ___
 
 #### Version 3.2.0 #####
-**(This version no longer supported as of June 19, 2015.)**<br/>
 _Released July 21, 2014, correlating to ExactTarget's 2014-05 Release_<br/>
 
 * Now with Beacons!<br/>
