@@ -33,14 +33,14 @@ sections: [
 
 # Keep as an empty string if served up at the root. If served up at a specific 
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
-baseurl: "/JB4A-SDK-iOS" # the subpath of your site, e.g. /blog/
+baseurl: "/JB4A-SDK-iOS-DocPreview" # the subpath of your site, e.g. /blog/
 url: "http://exacttarget.github.io" # the base hostname & protocol for your site
 
 # Dates are not included in permalinks
 permalink: none
 
 # Syntax highlighting
-highlighter: pygments
+highlighter: rouge
 
 # Since these are pages, it doesn't really matter
 future: true
@@ -50,3 +50,6 @@ exclude: ['bin', 'README.md']
 
 # Use the kramdown Markdown renderer
 markdown: kramdown
+
+# Current SDK version, use for all mentions
+currentVersion: "4.1.0"

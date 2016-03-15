@@ -54,6 +54,13 @@ static NSString *kETAccessToken_Prod  = @"change_this_to_your_production_accessT
                                                andCloudPages:YES
                                              withPIAnalytics:YES
                                                        error:&error];
+
+if([[[UIDevice currentDevice] systemVersion] floatValue] >=7.0)
+  {
+    if ( [[UIApplication sharedApplication] backgroundRefreshStatus] == UIBackgroundRefreshStatusAvailable )
+      { [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum]; }
+  }
+
 #endif
     //
     // if configureSDKWithAppID returns NO, check the error object for detailed failure info. See PushConstants.h for codes.
@@ -90,6 +97,9 @@ static NSString *kETAccessToken_Prod  = @"change_this_to_your_production_accessT
     
     return YES;
 }
+
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult) completionHandler
+{ [[ETPush pushManager] refreshWithFetchCompletionHandler:completionHandler]; }
 
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {

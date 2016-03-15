@@ -2,13 +2,17 @@
 layout: default
 title: "README"
 ---
-#Journey Builder for Apps iOS SDK
+# Journey Builder for Apps iOS SDK
 
 This documentation includes information for the Salesforce Marketing Cloud Journey Builder for Apps iOS SDK:<br/>
 <a href="https://github.com/ExactTarget/JB4A-SDK-iOS" target="_blank">JB4A iOS SDK GitHub Repository</a><br>
 
 Review the Apple docs for the SDK:<br/>
 <a href="{{ site.baseurl }}/appledoc/index.html" target="_blank">iOS SDK Apple Docs</a>
+
+## iOS Version
+
+Use the JB4A iOS SDK with iOS versions 7 or later.
 
 ## Release History
 

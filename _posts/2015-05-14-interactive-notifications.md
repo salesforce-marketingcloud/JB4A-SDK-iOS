@@ -6,7 +6,7 @@ category: features
 date: 2015-05-14 12:00:00
 order: 8
 ---
-Add buttons called **interactive notifications** to push notifications in your Mobile app. The Salesforce Marketing Cloud sends the category name for these interactive notifications in the message payload. 
+Add buttons called **interactive notifications** to push notifications in your Mobile app. The Salesforce Marketing Cloud sends the category name for these interactive notifications in the message payload. This feature requires [enablement](http://help.exacttarget.com/en/documentation/mobilepush/administering_your_mobilepush_account/apps_and_optional_settings_in_your_mobilepush_account/#interactiveNotifications) in the Marketing Cloud application.
 
 Add the below to the AppDelegate.m didFinishLaunchingWithOptions function in order to register a category.
 
@@ -48,6 +48,12 @@ Add the below to the AppDelegate.m didFinishLaunchingWithOptions function in ord
                                                    andCloudPages:NO
                                                  withPIAnalytics:NO
                                                            error:&error];
+
+if([[[UIDevice currentDevice] systemVersion] floatValue] >=7.0)
+  {
+    if ( [[UIApplication sharedApplication] backgroundRefreshStatus] == UIBackgroundRefreshStatusAvailable )
+      { [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum]; }
+  }
     #endif
         //
         // if configureSDKWithAppID returns NO, check the error object for detailed failure info. See PushConstants.h for codes.
@@ -118,6 +124,9 @@ Add the below to the AppDelegate.m didFinishLaunchingWithOptions function in ord
         
         return YES;
     }
+
+    -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+        { [[ETPush pushManager] refreshWithFetchCompletionHandler:completionHandler]; }
 
     - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
     {
