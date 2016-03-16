@@ -21,13 +21,13 @@ codeurl: 'https://github.com/ExactTarget/JB4A-SDK-iOS'
 # Default categories (in order) to appear in the navigation
 sections: [
     ['overview', 'Overview'],
-    ['trouble', 'Trouble Shooting'],
     ['provisioning', 'Provisioning'],
     ['create-apps', 'Create Cloud Apps'],
     ['sdk-implementation', 'SDK Implementation'],
     ['features', 'Feature Implementation'],
     ['rich-push', 'Rich Push'],
     ['location', 'Location Services'],
+    ['trouble', 'Trouble Shooting'],
     ['resources', 'Additional Resources'] 
 ]
 

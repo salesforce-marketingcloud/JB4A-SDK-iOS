@@ -20,14 +20,10 @@ Ensure that your network team unblocks the following ports to provide communicat
 * TCP port 2196 (used by the APNS feedback service)
 * TCP port 443 (used as a fallback service for Wi-Fi devices when those devices cannot communicate to the APNS service on port 5223)
 
-You can toggle the SDK logging facility by including the following line in your code:
+You can toggle the SDK logging facility by including the following lines in your code:
 
-~~~
-    // Set to YES to enable logging while debugging
-    [ETPush setETLoggerToRequiredState:YES];
-~~~
+<script src="https://gist.github.com/sfmc-mobilepushsdk/c9d6cd88962c843da694.js"></script>
 
-~~~
-    // Set to NO to disable logging while debugging
-    [ETPush setETLoggerToRequiredState:NO];
-~~~
+For a complete list of information that the SDK has and it's current state, you can implement getSDKState() as follows:
+
+<script src="https://gist.github.com/sfmc-mobilepushsdk/d77f990a6d13ab3086da.js"></script>
