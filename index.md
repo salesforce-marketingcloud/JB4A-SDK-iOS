@@ -33,7 +33,7 @@ _Released March 21, 2016, correlating to the Salesforce Marketing Cloud 2016-02 
 * MOBILESDK-387 - Improve downloading of new Geofences and Beacons.
 * MOBILESDK-389 - Ensure SQL DB is constrained to at most 1000 rows of Analytics.
 * MOBILESDK-413 - Make sure device ranges for locations after device reboot.
-* MOBILESDK-417 - Add boolean in configureSDK() to turn on Beacon ranging.
+* MOBILESDK-417 - Add boolean in [configureSDK()]({{ site.baseurl }}/sdk-implementation/implement-sdk.html) to turn on Beacon ranging (if you are part of the Beacon Beta Test).
 * MOBILESDK-496 - Add PI convenience methods ***link to details 
 * MOBILESDK-509 - Reject subscriberKey, tags, attributes that are null and trim leading and trailing blanks before sending.
                   Check returned boolean to determine if the values were accepted.
