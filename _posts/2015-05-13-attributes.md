@@ -24,7 +24,7 @@ Attributes contain information used to describe different aspects about a contac
 
 #### Removing an attribute
 
-Attributes cannot be removed from the Contact record.  However, they can be set back to blank.  Call removeAttribute to remove the value for the named Contact record attribute.
+Attributes cannot be removed from the Contact record.  However, you can stop sending the attribute with each registration call.  To stop sending the attribute to the SFMC, call removeAttribute.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/8378b45a6ce0a971f12b.js"></script>
 
