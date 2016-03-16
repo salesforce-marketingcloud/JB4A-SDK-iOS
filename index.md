@@ -19,28 +19,28 @@ Use the JB4A iOS SDK with iOS versions 7 or later.
 #### Version 4.2.0
 _Released March 21, 2016, correlating to the Salesforce Marketing Cloud 2016-02 Release_<br/>
 
+* MOBILESDK-063 - Fix Geofence and Beacon analytics for region entry, exit, and message displayed.
+* MOBILESDK-258 - Improvements to beacon detection and message display.    
 * MOBILESDK-268 - Package registration data updates with each update method (such as setTag(), addAttribute()) by
                   issuing REST call 1 minute after first call.  If REST call fails, retry in background until REST 
                   call succeeds or app is suspended.  ***link to Tags for details
-* MOBILESDK-727 - Change updateET() so that it sends registrations data immediately the first call (after app enters
-                  foreground state) and in 1 minute intervals for subsequent calls.
-* MOBILESDK-063 - Fix Geofence and Beacon analytics for region entry, exit, and message displayed.
-* MOBILESDK-550 - Fix open and open from push analytics.
-* MOBILESDK-616 - Make the device id persistent across app installs.
-* MOBILESDK-258 - Improvements to beacon detection and message display.    
 * MOBILESDK-375 - Update JB4ASDK landingPage Presenter to use WKWebView rather than UIWebview.  ***ADD NOTE ABOUT ADDING WEBKIT   
 * MOBILESDK-376 - Set CLLocationManager allowsBackgroundLocationUpdates to YES for iOS9 builds (required for Beacons support).
 * MOBILESDK-387 - Improve downloading of new Geofences and Beacons.
 * MOBILESDK-389 - Ensure SQL DB is constrained to at most 1000 rows of Analytics.
 * MOBILESDK-413 - Make sure device ranges for locations after device reboot.
 * MOBILESDK-417 - Add boolean in [configureSDK()]({{ site.baseurl }}/sdk-implementation/implement-sdk.html) to turn on Beacon ranging (if you are part of the Beacon Beta Test).
+* MOBILESDK-481 - Attribute names that conflict with Contact record attribute names will be rejected.  Check returned boolean if attribute is accepted.
 * MOBILESDK-496 - Add PI convenience methods ***link to details 
 * MOBILESDK-509 - Reject subscriberKey, tags, attributes that are null.  Trim leading and trailing blanks before sending.
                   Check returned boolean to determine if the values were accepted.
-* MOBILESDK-481 - Attribute names that conflict with Contact record attribute names will be rejected.  Check returned boolean if attribute is accepted.
+* MOBILESDK-550 - Fix open and open from push analytics.
 * MOBILESDK-580 - Implement [getSDKState()]({{ site.baseurl }}/trouble/ios-debugging.html) method to return a JSON with key SDK values for debugging purposes.
-* MOBILESDK-634 - Add customer logging interface.  *** link for more info
+* MOBILESDK-616 - Make the device id persistent across app installs.
+* MOBILESDK-634 - Add custom [logging handler()]({{ site.baseurl }}/trouble/ios-debugging.html)
 * MOBILESDK-674 - Add getTags() and getAttributes() and deprecate allTags() and allAttributes().                     
+* MOBILESDK-727 - Change updateET() so that it sends registrations data immediately the first call (after app enters
+                  foreground state) and in 1 minute intervals for subsequent calls.
 
 #### Version 4.1.0
 _Released February 2, 2016, correlating to the Salesforce Marketing Cloud 2016-01 Release_<br/>
