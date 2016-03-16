@@ -31,7 +31,7 @@ You can toggle the SDK logging facility by including the following lines in your
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/c9d6cd88962c843da694.js"></script>
 
-#### Override NSLog functionality
+#### Add custom logging handler
 
 The SDK provides a feature to allow you to capture the log statements rather than have them printed to the console.  This feature will allow you to save these statements to a file for future processing.  Or add your own additional information and log yourself for more personalized log and debugging purposes.
 
