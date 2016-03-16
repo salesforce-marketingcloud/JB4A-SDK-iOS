@@ -16,9 +16,9 @@ Attributes contain information used to describe different aspects about a contac
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/96f80418daaa274c36e3.js"></script>
 
-Attributes values and names will be trimmed of leading and trailing blanks.
+> Attributes values and names will be trimmed of leading and trailing blanks.
 
-> Attribute names and values cannot be nil or blank.  As well, attribute names from the following list will not be allowed since they overlap with the names used by the Contacts record.  Please ensure to check the boolean return value to determine if your attribute was accepted to be sent to the SFMC.
+> Attribute names from the following list will not be allowed since they overlap with the names used by the Contacts record.  Please ensure to check the boolean return value to determine if your attribute was accepted to be sent to the SFMC.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/34af56f4a7d4a1acd2a3.js"></script>
 
