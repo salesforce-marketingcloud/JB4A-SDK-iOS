@@ -24,12 +24,12 @@ Attributes values and names will be trimmed of leading and trailing blanks.
 
 #### Removing an attribute
 
-Attributes cannot be removed from the Contact record.  However, they can be set back to blank.  Call removeAttribute to remove the value for the name Contact record attribute.
+Attributes cannot be removed from the Contact record.  However, they can be set back to blank.  Call removeAttribute to remove the value for the named Contact record attribute.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/8378b45a6ce0a971f12b.js"></script>
 
 #### Retrieving all attributes saved locally
 
-Attributes are not retrieved from the Contact record.  However, if you wish to get a list of all the attributes you have saved locally by calling addAttribute, then you can by calling getAttributes.
+Attributes are not retrieved from the Contact record.  However, if you wish to get a list of all the attributes you have saved locally using addAttribute, then call getAttributes.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/bc224eb2e8c7d46ef4d0.js"></script>
