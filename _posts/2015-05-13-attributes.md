@@ -26,7 +26,7 @@ Attributes values and names will be trimmed of leading and trailing blanks.
 
 Attributes cannot be removed from the Contact record.  However, they can be set back to blank.  Call removeAttribute to remove the value for the name Contact record attribute.
 
-<script src="https://gist.github.com/sfmc-mobilepushsdk/34af56f4a7d4a1acd2a3.js"></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/8378b45a6ce0a971f12b.js"></script>
 
 #### Retrieving all attributes saved locally
 
