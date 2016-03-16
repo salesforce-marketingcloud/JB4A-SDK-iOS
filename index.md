@@ -24,7 +24,7 @@ _Released March 21, 2016, correlating to the Salesforce Marketing Cloud 2016-02 
                   call succeeds or app is suspended.  ***link to Tags for details
 * MOBILESDK-727 - Change updateET() so that it sends registrations data immediately the first call (after app enters
                   foreground state) and in 1 minute intervals for subsequent calls.
-* MOBILESDK-63  - Fix Geofence and Beacon analytics for region entry, exit, and message displayed.
+* MOBILESDK-063 - Fix Geofence and Beacon analytics for region entry, exit, and message displayed.
 * MOBILESDK-550 - Fix open and open from push analytics.
 * MOBILESDK-616 - Make the device id persistent across app installs.
 * MOBILESDK-258 - Improvements to beacon detection and message display.    
