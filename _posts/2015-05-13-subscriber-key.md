@@ -15,3 +15,7 @@ The SDK will send changes to the subscriberKey to the SFMC in a batch one minute
 <script src="https://gist.github.com/sfmc-mobilepushsdk/87841718df45af4354c8.js"></script>
 
 > The subscriberKey will be trimmed of leading and trailing blanks.
+
+To retrieve the subscriber key you had previously set, call getSubscriberKey()
+
+<script src="https://gist.github.com/sfmc-mobilepushsdk/d1f236b27e14fd5596c7.js"></script>
