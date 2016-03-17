@@ -20,7 +20,7 @@ Call the following method to implement page view analytics in your app.  These a
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
 
-As well as providing the ability to track page views within your app, the Web and Mobile Analytics app will provide information about the time your customers are spending in your app.
+As well as providing the ability to track page views within your app, the Web and Mobile Analytics app will provide information about the time your customers are spending in your app.  To view this information in the Web and Mobile App, following these steps to configure the Web and Mobile Analytic app within your SFMC account.
 
 1. 	To see your new Web and Mobile Analytics information sent by the SDK, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud: 
 <br/>
