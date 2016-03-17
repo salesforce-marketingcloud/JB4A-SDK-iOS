@@ -14,10 +14,7 @@ Integrate MobilePush into your mobile app using the Journey Builder for Apps SDK
 * [Create your apps]({{ site.baseurl }}/create-apps/create-apps-overview.html) in the App Center.
 * [Implement the SDK]({{ site.baseurl }}/sdk-implementation/implement-sdk.html).
 * Add [Feature Implementation]({{ site.baseurl }}/features/feature-implementation-overview.html) to your apps.
-* Add optional purchased features, such as [Cloud Pages]({{ site.baseurl }}/cloud-pages/rich-push-overview.html) and [Location Services]({{ site.baseurl }}/location/geolocation-overview.html), to your apps.
-
-
-This documentation contains all information required to integrate the Journey Builder for Apps SDK in your mobile apps.
+* Add optional purchased features, such as [Cloud Pages]({{ site.baseurl }}/rich-push/rich-push-overview.html) and [Location Services]({{ site.baseurl }}/location/geolocation-overview.html), to your apps.
 
 ## Source Code and Other Information
 
