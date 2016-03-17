@@ -28,7 +28,7 @@ In order to use the SDK in your Mobile app, complete the steps required to regis
 	* "App registers for location updates" is required if you have Proximity Services turned on in configureSDK and want to range for beacons in the background
 	* "App downloads content in response to push notifications" is required if you plan on using silent push notifications.
 
-	<img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>
+	<br/><img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>
 
 You can now deploy and start your app on a physical test device. You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
 
