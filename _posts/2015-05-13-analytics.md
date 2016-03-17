@@ -18,7 +18,7 @@ If you wish to implement SFMC Analytics for analytical information on your app, 
 
 Call the following method to implement page view analytics in your app.  These analytics are sent to the Web and Mobile Analytics app in the SFMC.
 
-	<script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
 
 As well as providing the ability to track page views within your app, the Web and Mobile Analytics app will provide information about the time your customers are spending in your app.
 
