@@ -17,7 +17,7 @@ Use the JB4A iOS SDK with iOS versions 7 or later.
 ## Release History
 
 #### Version 4.2.0
-_Released March 21, 2016, correlating to the Salesforce Marketing Cloud 2016-02 Release_<br/>
+_Released March 21 2016, correlating to the Salesforce Marketing Cloud 2016-02 Release_<br/>
 
 * MOBILESDK-063 - Fix Geofence and Beacon analytics for region entry, exit, and message displayed.
 * MOBILESDK-258 - Improvements to beacon detection and message display.    
