@@ -23,18 +23,18 @@ _Released March 21, 2016, correlating to the Salesforce Marketing Cloud 2016-02 
 * MOBILESDK-258 - Improvements to beacon detection and message display.    
 * MOBILESDK-268 - Package registration data updates with each update method (such as setTag(), addAttribute()) by
                   issuing REST call 1 minute after first call.  If REST call fails, retry in background until REST 
-                  call succeeds or app is suspended.  ***link to Tags for details
-* MOBILESDK-375 - Update JB4ASDK landingPage Presenter to use WKWebView rather than UIWebview.  ***ADD NOTE ABOUT ADDING WEBKIT   
+                  call succeeds or app is suspended.
+* MOBILESDK-375 - Update landing page for OpenDirect and CloudPage+Alert notifications to use WKWebView rather than UIWebview.   
 * MOBILESDK-376 - Set CLLocationManager allowsBackgroundLocationUpdates to YES for iOS9 builds (required for Beacons support).
 * MOBILESDK-387 - Improve downloading of new Geofences and Beacons.
-* MOBILESDK-389 - Ensure SQL DB is constrained to at most 1000 rows of Analytics.
+* MOBILESDK-389 - Ensure SQL DB is constrained to at most 1000 rows of SFMC Analytics.
 * MOBILESDK-413 - Make sure device ranges for locations after device reboot.
 * MOBILESDK-417 - Add boolean in [configureSDK()]({{ site.baseurl }}/sdk-implementation/implement-sdk.html) to turn on Beacon ranging (if you are part of the Beacon Beta Test).
 * MOBILESDK-481 - Attribute names that conflict with Contact record attribute names will be rejected.  Check returned boolean if attribute is accepted.
 * MOBILESDK-496 - Add PI convenience methods ***link to details 
 * MOBILESDK-509 - Reject subscriberKey, Tags and attributes that are null.  Trim leading and trailing blanks before sending.  Blank subscriberKey and Tags will also be rejected.
                   Check returned boolean to determine if the values were accepted.
-* MOBILESDK-550 - Fix open and open from push analytics.
+* MOBILESDK-550 - Fix open and time in app sent for SFMC analytics.
 * MOBILESDK-580 - Implement [getSDKState()]({{ site.baseurl }}/trouble/ios-debugging.html) method to return a JSON string with key SDK values for debugging purposes.
 * MOBILESDK-616 - Make the device id persistent across app installs.
 * MOBILESDK-634 - Add custom [logging handler]({{ site.baseurl }}/trouble/ios-debugging.html).

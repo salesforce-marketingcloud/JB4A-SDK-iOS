@@ -8,6 +8,8 @@ order: 2
 ---
 Attributes contain information used to describe different aspects about a contact. For example, the attribute FavoriteTeamName could contain a string value with the name of the favorite sports team for that contact. You must add any attributes you save with the SDK to your Salesforce Marketing Cloud contact record in advance so the SFMC can connect the values sent by the SDK to the correct contact fields. Attribute names assigned in your mobile app must maintain a 1:1 relationship with attributes stored in the SFMC to ensure segmentation and messaging activities use correct data values.
 
+The SDK will send changes to Attributes to the SFMC in a batch one minute after the first change to any SFMC data is received.  If the data fails to send, then it will retry in one minute intervals until the app is suspended.  If the send is unsuccessful before the app is suspended, the data will be sent the next time the app is opened.
+
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/Attributes_Step3.png" /><br/>
 <br/>
