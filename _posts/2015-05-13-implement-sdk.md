@@ -30,6 +30,6 @@ In order to use the SDK in your Mobile app, complete the steps required to regis
 
 	<br/><img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>
 
-You can now deploy and start your app on a physical test device. You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
+You can now deploy and test your app! 
 
-Once you complete this process, you can build your application and send it push notifications from your Marketing Cloud account.
+> You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
