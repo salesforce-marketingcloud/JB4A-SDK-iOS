@@ -21,5 +21,5 @@ Developers can expect to use the tools provided by the SDK to perform the follow
 * [Send messages based on a mobile device entering or exiting a geofenced area]({{ site.baseurl }}/location/geolocation.html)
 * [Include CloudPage content within a push message]({{ site.baseurl }}/rich-push/rich-push-overview.html)
 * [Include tags for audience segmentation]({{ site.baseurl }}/features/tags.html)
-* Adding custom [sounds]({{ site.baseurl }}/features/custom-sound.html), [custom keys]({{ site.baseurl }}/features/custom-keys.html), [app locations]({{ site.baseurl }}/features/custom-sound.html), and [interaction notifications]({{ site.baseurl }}/features/interactive-notifications.html)
+* Adding custom [sounds]({{ site.baseurl }}/features/custom-sound.html), [custom keys]({{ site.baseurl }}/features/custom-keys.html), [app locations]({{ site.baseurl }}/location/geolocation.html), and [interaction notifications]({{ site.baseurl }}/features/interactive-notifications.html)
 * [Send analytics information]({{ site.baseurl }}/features/analytics.html) from your mobile app.
