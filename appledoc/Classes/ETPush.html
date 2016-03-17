@@ -670,8 +670,8 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Triggers an immediate send of Registration data to Salesforce, unless last updateET call
-was within last 60 seconds.</p>
+				<p>Triggers an immediate send of Registration data to Salesforce Marketing Cloud and will wait 60 seconds to send
+for all calls made after the first call was made while the app is in foreground.</p>
 			</div>
 			
 		    
@@ -688,11 +688,11 @@ was within last 60 seconds.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Triggers an immediate send of Registration data to Salesforce, unless last updateET call
-was within last 60 seconds.</p>
+				<p>Triggers an immediate send of Registration data to Salesforce Marketing Cloud and will wait 60 seconds to send
+for all calls made after the first call was made while the app is in foreground.</p>
 
 <p>This is not normally needed as each method (setTag(), setSubscriberKey(), addAttribute() etc) will trigger
-a send to ET 60 seconds after the first request to change the Registration data.</p>
+a send to the SFMC 60 seconds after the first request to change any Registration data.</p>
 			</div>
 			
 
