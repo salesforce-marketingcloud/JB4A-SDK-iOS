@@ -14,6 +14,8 @@ Attributes contain information used to describe different aspects about a contac
 
 #### Adding an Attribute
 
+This call will update the value to an existing attribute on the contact record.  To remove a value from the contact record, call with a blank value.
+
 <script src="https://gist.github.com/sfmc-mobilepushsdk/96f80418daaa274c36e3.js"></script>
 
 > Attributes values and names will be trimmed of leading and trailing blanks.
@@ -24,7 +26,7 @@ Attributes contain information used to describe different aspects about a contac
 
 #### Removing an attribute
 
-Attributes cannot be removed from the Contact record.  However, you can stop sending the attribute with each registration call.  To stop sending the attribute to the SFMC, call removeAttribute.  This will not remove or change the value on the Contact record on the SFMC.
+Attributes cannot be removed from the Contact record.  However, you can stop sending the attribute with each registration call.  To stop sending the attribute to the SFMC, call removeAttribute.  This will not remove or change the value on the Contact record on the SFMC.  To remove the value of the attribute, you can call addAttribute with a blank value.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/8378b45a6ce0a971f12b.js"></script>
 
