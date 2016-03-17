@@ -10,35 +10,20 @@ Follow the steps on this page to implement ETAnalytics and Web and Mobile analyt
 
 ### ET Analytics
 
-If you wish to implement ETAnalytics for analytical information on your app, pass a YES value for the withAnalytics parameter.
+If you wish to implement SFMC Analytics for analytical information on your app, pass a YES value for the withAnalytics parameter.  If you also wish to implement Web and Mobile Analytics, pass a YES value for the withPIAnalytics parameter.
 
-~~~ 
-    successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug
-                                              andAccessToken:kETAccessToken_Debug
-                                               withAnalytics:YES
-                                         andLocationServices:NO
-                                               andCloudPages:NO
-                                             withPIAnalytics:YES
-                                                       error:&error];
-~~~ 
+<script src="https://gist.github.com/sfmc-mobilepushsdk/57757242e4d76abee281.js"></script>
 
 ### Web and Mobile Analytics - Track Page View
 
 1.	Call the following method to implement page view analytics in your capp.
 
-	~~~
-		+ (void)trackPageView:(NSString *)url andTitle:(NSString *)title andItem:(NSString *)item andSearch:(NSString *)search
-	~~~
-
-	* url - a non-nil NSSstring identifying the location within your app visited by a user
-	* title - a NSString identifying the title of the location within your app visited by a user (can contain a nil value)
-	* item - a NSString identifying an item viewed by a user (such as UPC-1234, can contain a nil value)
-	* search - a NSString identifying search terms used by a user (such as **blue jeans**, can contain a nil value)
+	<script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
 
 1. 	To see your new Web and Mobile Analytics information, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud: 
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/wama_menu.png" /><br/>
-<br/>
+<br/><br/>
 
 1. 	Then check the checkbox agreeing to the Terms and Conditions to get started:
 <br/>

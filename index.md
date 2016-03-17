@@ -31,7 +31,6 @@ _Released March 21 2016, correlating to the Salesforce Marketing Cloud 2016-02 R
 * MOBILESDK-413 - Make sure device ranges for locations after device reboot.
 * MOBILESDK-417 - Add boolean in [configureSDK()]({{ site.baseurl }}/sdk-implementation/implement-sdk.html) to turn on Beacon ranging (if you are part of the Beacon Beta Test).
 * MOBILESDK-481 - Attribute names that conflict with Contact record attribute names will be rejected.  Check returned boolean if attribute is accepted.
-* MOBILESDK-496 - Add PI convenience methods ***link to details 
 * MOBILESDK-509 - Reject subscriberKey, Tags and attributes that are null.  Trim leading and trailing blanks before sending.  Blank subscriberKey and Tags will also be rejected.
                   Check returned boolean to determine if the values were accepted.
 * MOBILESDK-550 - Fix open and time in app sent for SFMC analytics.

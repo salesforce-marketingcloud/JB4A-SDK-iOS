@@ -14,7 +14,7 @@ In order to use the SDK in your Mobile app, complete the steps required to regis
 <br/>
 1.  Select **Project Settings**. 
 1.  Select **General**.
-1.  Add libJB4ASDK-*.a as a dependency.
+1.  Add libJB4ASDK-*.a to Linked Frameworks and Libraries in the Build Phases configuration section within Xcode.
 1.  Add code in the AppDelegate implementation class to bootstrap the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from the Salesforce Marketing Cloud app you created in <a href="https://https://appcenter-auth.s1.marketingcloudapps.com/" target="_blank">App Center<a/>.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/346819617929db86b842.js"></script>
