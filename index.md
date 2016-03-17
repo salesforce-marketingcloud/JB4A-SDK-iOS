@@ -24,7 +24,7 @@ _Released March 21, 2016, correlating to the Salesforce Marketing Cloud 2016-02 
 * MOBILESDK-268 - Package registration data updates with each update method (such as setTag(), addAttribute()) by
                   issuing REST call 1 minute after first call.  If REST call fails, retry in background until REST 
                   call succeeds or app is suspended.
-* MOBILESDK-375 - Update landing page for OpenDirect and CloudPage+Alert notifications to use WKWebView rather than UIWebview.   
+* MOBILESDK-375 - Update the default landing page used to display OpenDirect and CloudPage+Alert URLs when these notifications are tapped, to use WKWebView rather than UIWebview.   
 * MOBILESDK-376 - Set CLLocationManager allowsBackgroundLocationUpdates to YES for iOS9 builds (required for Beacons support).
 * MOBILESDK-387 - Improve downloading of new Geofences and Beacons.
 * MOBILESDK-389 - Ensure SQL DB is constrained to at most 1000 rows of SFMC Analytics.
