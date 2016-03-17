@@ -14,6 +14,6 @@ This sample shows how to create a category named "Example".  When this category 
   
 <script src="https://gist.github.com/sfmc-mobilepushsdk/a6acdcd08c06225f2394.js"></script>
 
-In order to process the button taps, you need to add code to the AppDelegate.  For example:
+In order to process the button taps, you need to add code to the AppDelegate. For example:
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/26a92b4f7eb20d946c3e.js"></script>
