@@ -14,7 +14,7 @@ Attributes contain information used to describe different aspects about a contac
 
 #### Adding an Attribute
 
-This call will update the value to an existing attribute on the contact record.  To remove a value from the contact record, call with a blank value.
+This call will update the value of an existing attribute on the Contacts record.  To remove a value from the Contacts record, call with a blank value.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/96f80418daaa274c36e3.js"></script>
 
