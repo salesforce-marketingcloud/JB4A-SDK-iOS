@@ -8,19 +8,21 @@ order: 6
 ---
 Follow the steps on this page to implement ETAnalytics and Web and Mobile analytics in your mobile app:
 
-### ET Analytics
+### SFMC Analytics
 
 If you wish to implement SFMC Analytics for analytical information on your app, pass a YES value for the withAnalytics parameter.  If you also wish to implement Web and Mobile Analytics, pass a YES value for the withPIAnalytics parameter.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/57757242e4d76abee281.js"></script>
 
-### Web and Mobile Analytics - Track Page View
+### Web and Mobile Analytics
 
-1.	Call the following method to implement page view analytics in your capp.
+Call the following method to implement page view analytics in your app.  These analytics are sent to the Web and Mobile Analytics app in the SFMC.
 
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
 
-1. 	To see your new Web and Mobile Analytics information, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud: 
+As well as providing the ability to track page views within your app, the Web and Mobile Analytics app will provide information about the time your customers are spending in your app.
+
+1. 	To see your new Web and Mobile Analytics information sent by the SDK, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud: 
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/wama_menu.png" /><br/>
 <br/><br/>
