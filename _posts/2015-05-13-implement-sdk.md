@@ -25,7 +25,7 @@ In order to use the SDK in your Mobile app, complete the steps required to regis
 1.  Determine whether you need to implement any of the following keys to your applications plist file:
 
 	* "App downloads content from the network" is required to perform a Background App Refresh periodically to refresh geofences and beacons.
-	* "App registers for location updates" is required if you have Proximity Services turned on in configureSDK and want to range for beacons in the background
+	* "App registers for location updates" is required if you have Proximity Services turned on in configureSDK and want to range for beacons in the background (only for Beacon beta testers)
 	* "App downloads content in response to push notifications" is required if you plan on using silent push notifications.
 
 	<br/><img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>

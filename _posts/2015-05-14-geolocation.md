@@ -24,3 +24,9 @@ Ensure you also add the NSLocationAlwaysUsageDescription key to the *.plist file
 
 > iOS 8+ builds must used NSLocationAlwaysUsageDescription key for location to work.  The previous named key of NSLocationUsageDescription will not work in ios8+ builds.  If you have both, then the new key NSLocationAlwaysUsageDescription wins and the old key NSLocationUsageDescription will be ignored.  
 
+Implement the following keys if you wish to enable this functionality:
+
+* "App downloads content from the network" is required to perform a Background App Refresh periodically to refresh geofences and beacons.
+* "App registers for location updates" is required if you have Proximity Services turned on in configureSDK and want to range for beacons in the background (only for Beacon Beta Testers)
+
+	<br/><img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>
