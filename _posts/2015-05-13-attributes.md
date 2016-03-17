@@ -28,7 +28,7 @@ This call will update the value of an existing attribute on the Contacts record.
 
 Attributes cannot be removed from the Contact record.  However, you can stop sending the attribute with each registration call.  To stop sending the attribute to the SFMC, call removeAttribute.  This will not remove or change the value on the Contact record on the SFMC.  To remove the value of the attribute, you can call addAttribute with a blank value.
 
-<script src="https://gist.github.com/sfmc-mobilepushsdk/8378b45a6ce0a971f12b.js"></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/7c56c71f10332e279068.js"></script>
 
 #### Retrieving all attributes saved locally
 

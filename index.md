@@ -35,11 +35,11 @@ _Released March 21, 2016, correlating to the Salesforce Marketing Cloud 2016-02 
 * MOBILESDK-509 - Reject subscriberKey, Tags and attributes that are null.  Trim leading and trailing blanks before sending.  Blank subscriberKey and Tags will also be rejected.
                   Check returned boolean to determine if the values were accepted.
 * MOBILESDK-550 - Fix open and open from push analytics.
-* MOBILESDK-580 - Implement [getSDKState()]({{ site.baseurl }}/trouble/ios-debugging.html) method to return a JSON with key SDK values for debugging purposes.
+* MOBILESDK-580 - Implement [getSDKState()]({{ site.baseurl }}/trouble/ios-debugging.html) method to return a JSON string with key SDK values for debugging purposes.
 * MOBILESDK-616 - Make the device id persistent across app installs.
 * MOBILESDK-634 - Add custom [logging handler]({{ site.baseurl }}/trouble/ios-debugging.html).
 * MOBILESDK-674 - Add getTags() and getAttributes() and deprecate allTags() and allAttributes().                     
-* MOBILESDK-727 - Change updateET() so that it sends registrations data immediately the first call (after app enters
+* MOBILESDK-727 - Change updateET() so that it sends registrations data immediately on the first call (after app enters
                   foreground state) and in 1 minute intervals for subsequent calls.
 
 #### Version 4.1.0
