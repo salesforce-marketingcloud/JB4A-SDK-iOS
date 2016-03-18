@@ -11,6 +11,8 @@ To implement location services, pass a YES value for the andLocationServices par
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/97f89bf21b6dd92929b1.js"></script>
 
+> If you are a Beacon Beta Tester and you set andProximityServices to YES, then you must have andLocationServices set to YES as well.
+
 After calling configureSDK(), you must make the following call to initiate location services within the SDK.  This call will also ensure your customer is given the opportunity to accept or deny location services within your app.
 
 You do not have to call this from didFinishLaunchingWithOptions() if you prefer to notify the user about using location in another view.  However, it is recommended to request this information as soon as possible.  When making this call for the first time, iOS will prompt the user for permission to access location services.
