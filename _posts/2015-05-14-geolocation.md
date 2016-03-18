@@ -26,11 +26,13 @@ Ensure you also add the NSLocationAlwaysUsageDescription key to the *.plist file
 
 #### plist Updates
 
-There are two plist entries you can make depending on how current you want to keep your Location regions and messages.  Normally, new regions and messages are downloaded as the device moves more than 5k from their last location (and download).  
+There are two plist entries you can make depending on how current you want to keep your Location regions and messages.  
 
-However, if you have an app where your customers spend a lot of time within a single 5K radius, you should consider adding the ability to do a background refresh of geofences and messages.  Since Apple controls when this background refresh takes place, there isn't a guarantee when the refresh will occur.  However, it will allow the SDK to download new regions and messages for those times your customer is spending a considerable amount of time in a single 5K region.
+1.  Background App Refresh - Normally, new regions and messages are downloaded as the device moves more than 5k from their last location (and download).  However, if you have an app where your customers spend a lot of time within a single 5K radius, you should consider adding the ability to do a background refresh of geofences and messages.  Since Apple controls when this background refresh takes place, there isn't a guarantee when the refresh will occur.  However, it will allow the SDK to download new regions and messages for those times your customer is spending a considerable amount of time in a single 5K region.
 
-Implement the following keys if you wish to enable this functionality:
+2.  Range for Beacons in the background - This permission will ensure that your app will be able to range for Beacons when your app is in the background or suspended.  Note that this is required **only** if you are part of the Beacon Beta testing group.
+
+Implement the following keys if you wish to enable either of these two functions:
 
 * "App downloads content from the network" is required to perform a Background App Refresh periodically to refresh geofences and beacons.
 * "App registers for location updates" is required if you have Proximity Services turned on in configureSDK and want to range for beacons in the background (only for Beacon Beta Testers)
