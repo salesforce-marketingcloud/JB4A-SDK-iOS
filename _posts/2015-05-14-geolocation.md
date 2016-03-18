@@ -28,7 +28,7 @@ Ensure you also add the NSLocationAlwaysUsageDescription key to the *.plist file
 
 There are two plist entries to add depending the way your app works:  
 
-1.  Background App Refresh - Normally, new regions and messages are downloaded as the device moves more than 5k from their last location (and download).  However, if you have an app where your customers spend a lot of time within a single 5K radius, you should consider adding the ability to do a background refresh of geofences and messages.  Since Apple controls when this background refresh takes place, there isn't a guarantee when the refresh will occur.  However, it will allow the SDK to download new regions and messages for those times your customer is spending a considerable amount of time in a single 5K region.
+1.  Background App Refresh - Normally, new regions and messages are downloaded as the device moves more than 5k (5 kilometers) from their last location and download of this data.  However, if you have an app where your customers spend a lot of time within a single 5K radius, you should consider adding the ability to do a background refresh of regions and messages.  Since Apple controls when this background refresh takes place, there isn't a guarantee when the refresh will occur.  However, it will allow the SDK to download new regions and messages for those times your customer is spending a considerable amount of time in a single 5K region.
 
 2.  Range for Beacons in the background - This permission will ensure that your app will be able to range for Beacons when your app is in the background or suspended.  Note that this is required **only** if you are part of the Beacon Beta testing group.
 
