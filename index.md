@@ -38,7 +38,7 @@ _Released March 21 2016, correlating to the Marketing Cloud 2016-02 Release_<br/
 * MOBILESDK-550 - Fix open and time in app sent for Marketing Cloud analytics.
 * MOBILESDK-580 - Implement [getSDKState()]({{ site.baseurl }}/trouble/ios-debugging.html) method to return a JSON string with key SDK values for debugging purposes.
 * MOBILESDK-616 - Make the device id persistent across app installs.
-* MOBILESDK-634 - Add custom [logging handler]({{ site.baseurl }}/trouble/ios-debugging.html).
+* MOBILESDK-634 - Add custom [logging handler]({{ site.baseurl }}/features/features-logging.html).
 * MOBILESDK-674 - Add getTags() and getAttributes() and deprecate allTags() and allAttributes().                     
 * MOBILESDK-727 - Change [updateET()](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/appledoc/Classes/ETPush.html#//api/name/updateET) so that it sends Registration data immediately on the first call (after app enters
                   foreground state) and in 1 minute intervals for subsequent calls.
