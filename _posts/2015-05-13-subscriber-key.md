@@ -10,7 +10,7 @@ Use setSubscriberKey() to implement a specific value as the unique identifier fo
 
 By default, the Marketing Cloud generates a default subscriberKey value if your app does not set that value using setSubscriberKey(). The getSubscriberKey() method returns the value set in the last setSubscriberKey() call and will return a nil value until you call setSubscriberKey(). The getSubscriberKey() method retrieves only the local copy of the value and not the value from the Marketing Cloud. 
 
-The SDK will send changes to the subscriberKey to the Marketing Cloud in a batch one minute after the first change to any Marketing Cloud data.  If the data fails to send, then it will retry in one minute intervals until the app is suspended.  If the send is unsuccessful before the app is suspended, the data will be sent the next time the app is opened.
+{{ site.retryAndRESTdelayMessage }}
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/87841718df45af4354c8.js"></script>
 
