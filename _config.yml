@@ -1,7 +1,5 @@
 # Site title and subtitle. This is used in _includes/header.html
 title: 'Journey Builder for Apps iOS SDK (v4.2.0)'
-subtitle: 'For releases prior to v4.2.0, see: '
-link: '<a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.1.0/" target="_blank">Prior Release Documentation</a>'
 
 # if you wish to integrate disqus on pages set your shortname here
 disqus_shortname: ''
