@@ -6,11 +6,11 @@ category: features
 date: 2015-05-14 12:00:00
 order: 6
 ---
-Follow the steps on this page to implement ETAnalytics and Web and Mobile analytics in your mobile app:
+Follow the steps on this page to implement Analytics and Web and Mobile analytics in your mobile app:
 
-### SFMC Analytics
+### Analytics
 
-If you wish to implement SFMC Analytics for analytical information on your app, pass a YES value for the withAnalytics parameter.  If you also wish to implement Web and Mobile Analytics, pass a YES value for the withPIAnalytics parameter.
+If you wish to implement Analytics, pass a YES value for the withAnalytics parameter.  If you also wish to implement Web and Mobile Analytics, pass a YES value for the withPIAnalytics parameter.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/57757242e4d76abee281.js"></script>
 
