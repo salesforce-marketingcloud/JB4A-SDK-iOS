@@ -24,7 +24,7 @@ Ensure you also add the NSLocationAlwaysUsageDescription key to the *.plist file
 
 > iOS 8+ builds must used NSLocationAlwaysUsageDescription key for location to work.  The previous named key of NSLocationUsageDescription will not work in ios8+ builds.  If you have both, then the new key NSLocationAlwaysUsageDescription wins and the old key NSLocationUsageDescription will be ignored.  
 
-#### plist Updates
+#### <a name="plist-updates"></a>plist Updates
 
 There are two plist entries you can make depending on how current you want to keep your Location regions and messages.  
 
