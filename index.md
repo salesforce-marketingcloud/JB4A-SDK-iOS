@@ -26,7 +26,7 @@ _Released March 21 2016, correlating to the Salesforce Marketing Cloud 2016-02 R
                   call succeeds or app is suspended.
 * MOBILESDK-375 - Update the default landing page used to display OpenDirect and CloudPage+Alert URLs when these notifications are tapped, to use WKWebView rather than UIWebview.   
 * MOBILESDK-376 - Set CLLocationManager allowsBackgroundLocationUpdates to YES for iOS9 builds (required for Beacons support).
-* MOBILESDK-387 - Improve downloading of new Geofences and Beacons.
+* MOBILESDK-387 - Improve downloading of new Geofences and Beacons.  New [plist entry]({{ site.baseurl }}/location/geolocation.html#plist) if you would like a daily refresh of regions and messages.
 * MOBILESDK-389 - Ensure SQL DB is constrained to at most 1000 rows of SFMC Analytics.
 * MOBILESDK-413 - Make sure device ranges for locations after device reboot.
 * MOBILESDK-417 - Add boolean in [configureSDK()]({{ site.baseurl }}/sdk-implementation/implement-sdk.html) to turn on Beacon ranging (if you are part of the Beacon Beta Test).
