@@ -12,7 +12,7 @@ MobilePush uses the Apple Push Notification Service (APNS) to deliver messages t
 1. One for the development version of your app
 1. One for the published production version of your app.
 
-These separate certificates may expire on different days, independent of the other certificate. Some certificates may use password protection. The Salesforce Marketing Cloud cannot use password-protected certificates without the client-provided password.
+These separate certificates may expire on different days, independent of the other certificate. Some certificates may use password protection. The Marketing Cloud cannot use password-protected certificates without the client-provided password.
 
 ## Detailed Instructions With Screenshots
 

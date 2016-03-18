@@ -11,9 +11,9 @@ In order to connect your iOS app to the Marketing Cloud, you must first create a
 Each app in App Center represents an application connected to the Marketing Cloud. Developers familiar with connected apps in Force.com will find the concept of connected apps in the Marketing Cloud similar. App Center currently manages three types of connected apps:
 
 * *API Integration* allows you to leverage the Marketing Cloud APIs. Create an API Integration app when you want to use Fuel APIs to automate tasks or integrate business systems. API Integration apps utilize an OAuth2 client credentials flow to acquire access tokens directly from the Fuel authentication service.
-* *Marketing Cloud apps* represent apps located within the Salesforce Marketing Cloud that launch via the Marketing Cloud app menu. Marketing Cloud apps include custom apps built by your organization or apps installed from the Salesforce Marketing Cloud HubExchange. Marketing Cloud apps utilize a JSON Web Token (JWT) to acquire access tokens on behalf of logged-in users.
+* *Marketing Cloud apps* represent apps located within the Marketing Cloud that launch via the Marketing Cloud app menu. Marketing Cloud apps include custom apps built by your organization or apps installed from the Marketing Cloud HubExchange. Marketing Cloud apps utilize a JSON Web Token (JWT) to acquire access tokens on behalf of logged-in users.
 * *Application Extensions* allow you to extend the Marketing Cloud with custom Journey Builder activities, Cloud Editor Blocks, and Automation Studio activities.
-* *MobilePush apps* represent apps built for the iOS or Android mobile platforms that use MobilePush to communicate with their users via push messages. The Salesforce Marketing Cloud classifies MobilePush apps as consumer-grade applications and utilize long-lived limited access tokens.
+* *MobilePush apps* represent apps built for the iOS or Android mobile platforms that use MobilePush to communicate with their users via push messages. The Marketing Cloud classifies MobilePush apps as consumer-grade applications and utilize long-lived limited access tokens.
 
 <a href="https://appcenter-auth.exacttargetapps.com/create" target="_blank">Create an App Center account</a> if you do not currently own one.
 

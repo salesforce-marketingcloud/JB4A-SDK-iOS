@@ -6,9 +6,9 @@ category: features
 date: 2015-05-14 12:00:00
 order: 2
 ---
-Attributes contain information used to describe different aspects about a contact. For example, the attribute FavoriteTeamName could contain a string value with the name of the favorite sports team for that contact. You must add any attributes you save with the SDK to your Salesforce Marketing Cloud contact record in advance so the SFMC can connect the values sent by the SDK to the correct contact fields. Attribute names assigned in your mobile app must maintain a 1:1 relationship with attributes stored in the SFMC to ensure segmentation and messaging activities use correct data values.
+Attributes contain information used to describe different aspects about a contact. For example, the attribute FavoriteTeamName could contain a string value with the name of the favorite sports team for that contact. You must add any attributes you save with the SDK to your Marketing Cloud contact record in advance so the Marketing Cloud can connect the values sent by the SDK to the correct contact fields. Attribute names assigned in your mobile app must maintain a 1:1 relationship with attributes stored in the Marketing Cloud to ensure segmentation and messaging activities use correct data values.
 
-The SDK will send changes to Attributes to the SFMC in a batch one minute after the first change to any SFMC data.  If the data fails to send, then it will retry in one minute intervals until the app is suspended.  If the send is unsuccessful before the app is suspended, the data will be sent the next time the app is opened.
+The SDK will send changes to Attributes to the Marketing Cloud in a batch one minute after the first change to any Marketing Cloud data.  If the data fails to send, then it will retry in one minute intervals until the app is suspended.  If the send is unsuccessful before the app is suspended, the data will be sent the next time the app is opened.
 
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/Attributes_Step3.png" /><br/>
@@ -22,13 +22,13 @@ This call will update the value of an existing attribute on the Contacts record.
 
 > Attributes values and names will be trimmed of leading and trailing blanks.
 
-> Attribute names from the following list will not be allowed since they overlap with the names used by the Contacts record.  Please ensure to check the boolean return value to determine if your attribute was accepted to be sent to the SFMC.
+> Attribute names from the following list will not be allowed since they overlap with the names used by the Contacts record.  Please ensure to check the boolean return value to determine if your attribute was accepted to be sent to the Marketing Cloud.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/34af56f4a7d4a1acd2a3.js"></script>
 
 #### Removing an attribute
 
-Attributes cannot be removed from the Contact record.  However, you can stop sending the attribute with each registration call.  To stop sending the attribute to the SFMC, call removeAttribute.  This will not remove or change the value on the Contact record on the SFMC.  To remove the value of the attribute, you can call addAttribute with a blank value.
+Attributes cannot be removed from the Contact record.  However, you can stop sending the attribute with each registration call.  To stop sending the attribute to the Marketing Cloud, call removeAttribute.  This will not remove or change the value on the Contact record on the Marketing Cloud.  To remove the value of the attribute, you can call addAttribute with a blank value.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/7c56c71f10332e279068.js"></script>
 

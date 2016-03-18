@@ -23,7 +23,7 @@ The remote push notification process includes two major steps:
 1. In the registration process, the app first makes a registration call to iOS.
 1. iOS will then request a device token from APNS.
 1. The device receives the device token.
-1. The app sends the token to the Salesforce Marketing Cloud.
+1. The app sends the token to the Marketing Cloud.
 
 <br/>
 

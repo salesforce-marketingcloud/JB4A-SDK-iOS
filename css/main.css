@@ -86,4 +86,9 @@ blockquote {
   blockquote > :first-child {
     margin-top: 20; }
   blockquote > :last-child {
-    margin-bottom: 20; }
+    margin-bottom: 20; 
+}
+
+blockquote p {
+    font-size: inherit;    
+}

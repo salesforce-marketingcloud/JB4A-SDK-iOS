@@ -20,7 +20,7 @@ Integrate MobilePush into your mobile app using the Journey Builder for Apps SDK
 
 * <a href="https://github.com/salesforce-marketingcloud/JB4A-SDK-iOS" target="_blank">Journey Builder for Apps iOS SDK</a> - Download the iOS SDK for use in your native iOS apps.
 * Review the <a href="https://github.com/salesforce-marketingcloud/JB4A-SDK-iOS/" target="_blank">Journey Builder for Apps SDK Reference<a/>
-* <a href="http://help.exacttarget.com/en/documentation/mobilepush/" target="_blank">Salesforce Marketing Cloud MobilePush Documentation</a> – This documentation contains information on the Salesforce Marketing Cloud MobilePush app, including information on associating MobilePush with a mobile app.
-* The Salesforce Marketing Cloud provides an app that implements all of the features of the SDK to allow you to explore how a native app implements the Journey Builder for Apps SDK: <a href="https://github.com/salesforce-marketingcloud/JB4A-SDK-iOS/tree/master/JB4A-SDK-Explorer" target="_blank">Journey Builder for Apps SDK Explorer for iOS</a>
+* <a href="http://help.exacttarget.com/en/documentation/mobilepush/" target="_blank">Marketing Cloud MobilePush Documentation</a> – This documentation contains information on the Marketing Cloud MobilePush app, including information on associating MobilePush with a mobile app.
+* The Marketing Cloud provides an app that implements all of the features of the SDK to allow you to explore how a native app implements the Journey Builder for Apps SDK: <a href="https://github.com/salesforce-marketingcloud/JB4A-SDK-iOS/tree/master/JB4A-SDK-Explorer" target="_blank">Journey Builder for Apps SDK Explorer for iOS</a>
 
 Use the Journey Builder for Apps SDK Explorer app as your reference for working sample code that illustrates all available functionality for your mobile apps. 
