@@ -14,8 +14,11 @@
  Enumeration to keep track of if the request is for Geofences or Proximity messages. 
  */
 typedef NS_ENUM(NSUInteger, ETRegionRequestType) {
+    /** ETRegionRequestTypeUnknown */
     ETRegionRequestTypeUnknown,
+    /** ETRegionRequestTypeGeofence */
     ETRegionRequestTypeGeofence,
+    /** ETRegionRequestTypeProximity */
     ETRegionRequestTypeProximity
 };
 
@@ -23,9 +26,13 @@ typedef NS_ENUM(NSUInteger, ETRegionRequestType) {
  Enumeration of the type of ETRegion that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used. 
  */
 typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
+    /** MobilePushGeofenceTypeNone */
     MobilePushGeofenceTypeNone = 0,
+    /** MobilePushGeofenceTypeCircle */
     MobilePushGeofenceTypeCircle,
-    MobilePushGeofenceTypePolygon __attribute__((deprecated)), // Not currently in use.
+    /** MobilePushGeofenceTypePolygon */
+    MobilePushGeofenceTypePolygon DEPRECATED_MSG_ATTRIBUTE("MobilePushGeofenceTypePolygon is deprecated."), // Not currently in use.
+    /** MobilePushGeofenceTypeProximity */
     MobilePushGeofenceTypeProximity
 };
 
@@ -115,7 +122,7 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
 /**
  Region equality. Based on the kind of ETRegion, it will compare values and determine equality. 
  
- @param The other ETRegion to which the comparison should be made.
+ @param region a ETRegion value. The other ETRegion to which the comparison should be made.
  @return BOOL T/F of equality.
  */
 -(BOOL)isEqualToRegion:(ETRegion *)region;
@@ -192,6 +199,7 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
 /**
  Pulls all (both active and inactive) regions out of the local database.
  
+ @param getInactive a BOOL value.
  @return An NSSet of *all* ETRegions.
  */
 +(NSSet *)getFencesFromCacheIncludingInactive:(BOOL)getInactive;
