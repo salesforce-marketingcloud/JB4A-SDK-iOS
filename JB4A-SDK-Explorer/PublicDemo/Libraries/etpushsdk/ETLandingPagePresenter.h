@@ -10,6 +10,8 @@
 
 /**
  This is a helper class that shows webpages. These come down in several forms - sometimes a CloudPage, sometimes something from OpenDirect - and this guy shows them. It's a pretty simple class that pops up a view with a toolbar, shows a webpage, and waits to be dismissed. 
+ 
+ This class encapuslates a UIWebView. All new development should use ETWKLandingPagePresenter which encapsulates a WKWebView.
  */
 @interface ETLandingPagePresenter : UIViewController<UIWebViewDelegate>
 {
@@ -24,11 +26,17 @@
 
 /**
  A helper designated initializer that takes the landing page as a string.
+ 
+ @param landingPage a NSString value.
+ @return id value. A ETLandingPagePresenter instance.
  */
 -(id)initForLandingPageAt:(NSString *)landingPage;
 
 /**
  Another helper that takes it in NSURL form. We're not picky. It'd be cool of ObjC did method overloading, though.
+ 
+ @param landingPage a NSURL value.
+ @return id value. A ETLandingPagePresenter instance.
  */
 -(id)initForLandingPageAtWithURL:(NSURL *)landingPage;
 

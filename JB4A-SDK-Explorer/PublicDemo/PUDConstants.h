@@ -72,9 +72,11 @@ extern NSString *const kPUDInfoAppID;
 extern NSString *const kPUDInfoAccessToken;
 extern NSString *const kPUDInfoClientID;
 extern NSString *const kPUDInfoClientSecret;
-extern NSString *const kPUDInfoMessageIDVanilla;
+extern NSString *const kPUDInfoMessageIDStandard;
 extern NSString *const kPUDInfoMessageIDCloudPage;
+extern NSString *const kPUDInfoMessageIDSilent;
 extern NSString *const kPUDInfoPushEnabled;
+extern NSString *const kPUDInfoBackgroundRefreshEnabled;
 extern NSString *const kPUDInfoDeviceToken;
 extern NSString *const kPUDInfoDeviceID;
 extern NSString *const kPUDInfoOpenDirectDelegate;
@@ -82,6 +84,7 @@ extern NSString *const kPUDInfoLocationEnabled;
 extern NSString *const kPUDInfoAttributeFirstName;
 extern NSString *const kPUDInfoAttributeLastName;
 extern NSString *const kPUDInfoAttributeActivityTags;
+extern NSString *const kPUDInfoSdkState;
 
 #pragma mark - Message Detail Table View
 
@@ -159,7 +162,6 @@ extern NSString *const kPUDReuseIdentifierPushReceivedCell;
 extern NSString *const kPUDReuseIdentifierSettingCell;
 extern NSString *const kPUDReuseIdentifierTagCell;
 extern NSString *const kPUDReuseIdentifierCloudPageInboxCell;
-extern NSString *const kPUDReuseIdentifierPushConfigCell;
 
 #pragma mark - Segues
 extern NSString *const kPUDSegueMessagesToLastReceivedPush;
@@ -167,14 +169,12 @@ extern NSString *const kPUDSegueMessagesToMessageDetail;
 extern NSString *const kPUDSeguePushReceivedToDiscount;
 
 #pragma mark - Settings Table View
-extern NSUInteger const kPUDSettingsPushConfigSectionIndex;
 extern NSUInteger const kPUDSettingsPersonalInformationSectionIndex;
 extern NSUInteger const kPUDSettingsActivitySectionIndex;
 
 #pragma mark - Storyboard Identifiers
 extern NSString *const kPUDStoryboardIdentifierPushReceivedTableViewController;
 extern NSString *const kPUDStoryboardIdentifierDiscountCodeViewController;
-extern NSString *const kPUDStoryboardIdentifierPushConfigTable;
 
 #pragma mark - Storyboard Name
 extern NSString *const kPUDStoryboardMain;
@@ -204,12 +204,11 @@ extern NSString *const kPUDUserDefaultsAppID;
 extern NSString *const kPUDUserDefaultsAccessToken;
 extern NSString *const kPUDUserDefaultsClientID;
 extern NSString *const kPUDUserDefaultsClientSecret;
-extern NSString *const kPUDUserDefaultsMessageIDVanilla;
+extern NSString *const kPUDUserDefaultsMessageIDStandard;
 extern NSString *const kPUDUserDefaultsMessageIDCloudPage;
+extern NSString *const kPUDUserDefaultsMessageIDSilent;
 extern NSString *const kPUDUserDefaultsRestUrl;
 
 #pragma mark - Notifications
-extern NSString *const kPUDPushConfigChangedNotification;
-extern NSString *const kPUDNewPushConfigAddedNotication;
 extern NSString *const kPUDPreferencesChanged;
 

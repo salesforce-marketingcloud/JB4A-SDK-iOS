@@ -51,40 +51,28 @@
 
 #pragma mark - App Settings
 
-+ (NSString *)configurationName {
-    
-
-    return kAppSettingAppstoreConfigName;
-
-}
-
-
 + (NSString *)accessToken { //safe definitions exist
-    return kAppSettingAppstoreAccessToken;
+    return [PUDPushConfig getDefaultPushConfig].accessToken;
 }
 
 + (NSString *)appID { //safe definitions exist
-    return kAppSettingAppstoreAppId;
+     return [PUDPushConfig getDefaultPushConfig].appID;
 }
 
 + (NSString *)clientID { //safe definitions exist
-    return kAppSettingAppstoreClientId;
+    return [PUDPushConfig getDefaultPushConfig].clientID;
 }
 
 + (NSString *)clientSecret { //safe definitions exist
-    return kAppSettingAppstoreClientSecret;
+     return [PUDPushConfig getDefaultPushConfig].clientSecret;
 }
 
-+ (NSString *)messageIdVanilla {
-    return kAppSettingAppstoreOutboundMessageIdVanilla;
++ (NSString *)messageIdStandard {
+    return [PUDPushConfig getDefaultPushConfig].standardMessageID;
 }
 
 + (NSString *)messageIdCloudPage {
-    return kAppSettingAppstoreOutboundMessageIdCloudPage;
-}
-
-+ (NSString *)fuelAccessTokenRoute {
-    return kAppSettingAppstoreAccessTokenUrl;
+    return [PUDPushConfig getDefaultPushConfig].cloudpageMessageID;
 }
 
 #pragma mark - public methods
@@ -94,21 +82,11 @@
 }
 
 + (NSString *)sdkVersion {
-    return ETPushSDKVersionString;
-}
-
-+ (NSString *)configName {
-    NSString *configName = [self configurationName];
-
-    if (!configName) {
-        return nil;
-    }
-    
-    return configName;
+    return [NSString stringWithFormat:@"%@.%@", [ETPush getSDKVersionName], [ETPush getSDKVersionCode]];
 }
 
 + (NSString *)safeAppID {
-    NSString *appID = [self appID];
+    NSString *appID = [PUDPushConfig getDefaultPushConfig].appID;
 
     if (!appID) {
         return nil;
@@ -123,7 +101,7 @@
 }
 
 + (NSString *)safeAccessToken {
-    NSString *accessToken = [self accessToken];
+    NSString *accessToken = [PUDPushConfig getDefaultPushConfig].accessToken;
 
     if (!accessToken) {
         return nil;
@@ -138,7 +116,12 @@
 }
 
 + (NSString *)safeClientID {
-    NSString *clientID = [self clientID];
+    NSString *clientID = [PUDPushConfig getDefaultPushConfig].clientID;
+
+    if ([clientID isEqualToString:@""]) {
+        return clientID;
+    }
+    
     if (!clientID) {
         return nil;
     }
@@ -152,7 +135,11 @@
 }
 
 + (NSString *)safeClientSecret {
-    NSString *clientSecret = [self clientSecret];
+    
+    NSString *clientSecret = [PUDPushConfig getDefaultPushConfig].clientSecret;
+    if ([clientSecret isEqualToString:@""]) {
+        return clientSecret;
+    }
 
     NSRange range = {7, 11};
     return [clientSecret stringByReplacingCharactersInRange:range withString:@"***********"];
@@ -170,6 +157,12 @@
     else {
         return @"NO";
     }
+}
+
++ (NSString *)sdkState {
+    
+    return [ETPush getSDKState];
+    
 }
 
 + (NSString *)deviceToken {
@@ -218,30 +211,32 @@
     return [[NSBundle mainBundle] bundleIdentifier];
 }
 
-+ (NSString *)buildType {
-    return @"APPSTORE";
-}
-
 + (BOOL) isInternalBuild {
+    
+#if defined (DEBUG)
+    return YES;
+#else
     return NO;
+#endif
+    
 }
 
 #pragma mark - private methods
 
 + (NSString *)attributeFirstName {
-    NSString *firstName = [[[ETPush pushManager] allAttributes] objectForKey:kPUDAttributeFirstName];
+    NSString *firstName = [[[ETPush pushManager] getAttributes] objectForKey:kPUDAttributeFirstName];
     return firstName;
 }
 
 + (NSString *)attributeLastName {
-    NSString *lastName = [[[ETPush pushManager] allAttributes] objectForKey:kPUDAttributeLastName];
+    NSString *lastName = [[[ETPush pushManager] getAttributes] objectForKey:kPUDAttributeLastName];
     return lastName;
 }
 
 + (NSString *)activeActivityTags {
     NSString *tags = @"";
     
-    NSSet *allTags = [[ETPush pushManager] allTags];
+    NSSet *allTags = [[ETPush pushManager] getTags];
     
     if ([allTags containsObject:kPUDTagCampingGear.lowercaseString]) {
         tags = [tags stringByAppendingString:@"Camping Gear"];
@@ -287,7 +282,10 @@
 }
 
 + (BOOL) isSendMessageAvailable {
-    return YES;
+    if ([[PUDPushConfig getDefaultPushConfig].clientID isEqualToString:@""])
+        return NO;
+    else
+        return YES;
 }
 
 @end

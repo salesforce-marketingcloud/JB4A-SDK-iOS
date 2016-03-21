@@ -19,21 +19,30 @@ static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
  */
 typedef NS_ENUM(NSUInteger, MobilePushMessageType)
 {
-    MobilePushMessageTypeUnknown,       /* Unknown */
-    MobilePushMessageTypeBasic,         /* Basic - A standard push message */
-    MobilePushMessageTypeEnhanced __attribute__((deprecated)),      /* DO NOT USE - Was a CloudPage message, but that is a ContentType now */
-    MobilePushMessageTypeFenceEntry,    /* Geofence Entry */
-    MobilePushMessageTypeFenceExit,     /* Geofence Exit */
-    MobilePushMessageTypeProximity      /* Proximity */
+    /** Unknown */
+    MobilePushMessageTypeUnknown,
+    /** Basic - A standard push message */
+    MobilePushMessageTypeBasic,
+    /** DO NOT USE - Was a CloudPage message, but that is a ContentType now */
+    MobilePushMessageTypeEnhanced DEPRECATED_MSG_ATTRIBUTE("MobilePushMessageTypeEnhanced"),
+    /** Geofence Entry */
+    MobilePushMessageTypeFenceEntry,
+    /** Geofence Exit */
+    MobilePushMessageTypeFenceExit,
+    /** Proximity */
+    MobilePushMessageTypeProximity
 };
 
 /**
  Bitmask of features that a message has. This is the representation of Push (AlertMessage), Push+Page (AlertMessage + Page), Page Only (Page) in the MobilePush UI.
  */
 typedef NS_OPTIONS(NSUInteger, MobilePushContentType) {
-    MobilePushContentTypeNone           = 0,        /** Unknown */
-    MobilePushContentTypeAlertMessage   = 1 << 0,   /** Push Message */
-    MobilePushContentTypePage           = 1 << 1    /** CloudPage */
+    /** Unknown */
+    MobilePushContentTypeNone           = 0,
+    /** Push Message */
+    MobilePushContentTypeAlertMessage   = 1 << 0,
+    /** CloudPage */
+    MobilePushContentTypePage           = 1 << 1
 };
 
 /**
@@ -41,20 +50,28 @@ typedef NS_OPTIONS(NSUInteger, MobilePushContentType) {
  */
 typedef NS_ENUM(NSInteger, MPMessageSource)
 {
-    MPMessageSourceDatabase,    /** Database */
-    MPMessageSourceRemote       /** Salesforce via REST */
+    /** Database */
+    MPMessageSourceDatabase,
+    /** Salesforce via REST */
+    MPMessageSourceRemote
 };
 
 /** 
  Time Unit enumeration for Message limiting. 
  */
 typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
-    MobilePushMessageFrequencyUnitNone,     /** Unknown */
-    MobilePushMessageFrequencyUnitYear,     /** Year */
-    MobilePushMessageFrequencyUnitMonth,    /** Month */
-    MobilePushMessageFrequencyUnitWeek,     /** Week */
-    MobilePushMessageFrequencyUnitDay,      /** Day */
-    MobilePushMessageFrequencyUnitHour      /** Hour */
+    /** Unknown */
+    MobilePushMessageFrequencyUnitNone,
+    /** Year */
+    MobilePushMessageFrequencyUnitYear,
+    /** Month */
+    MobilePushMessageFrequencyUnitMonth,
+    /** Week */
+    MobilePushMessageFrequencyUnitWeek,
+    /** Day */
+    MobilePushMessageFrequencyUnitDay,
+    /** Hour */
+    MobilePushMessageFrequencyUnitHour
 };
 
 /**
@@ -275,13 +292,16 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 
 /**
  Gets all active messages for a specific contentType, usually Cloud Pages.
- @return An NSArray of ETMessages
+ 
+ @param contentType a MobilePushContentType value.
+ @return NSArray value. An NSArray of ETMessages
  */
 +(NSArray *)getMessagesByContentType:(MobilePushContentType)contentType;
 
 /**
  Gets a specific ETMessage for a given identifer. 
- @param The Message ID to retrieve
+ 
+ @param identifier a NSString value. The Message ID to retrieve
  @return The ETMessage, or nil if not found in the database.
  */
 +(ETMessage *)getMessageByIdentifier:(NSString *)identifier;

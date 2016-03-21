@@ -62,15 +62,18 @@ NSString *const kPUDInfoAppID = @"k_APP_ID";
 NSString *const kPUDInfoAccessToken = @"k_ACCESS_TOKEN";
 NSString *const kPUDInfoClientID = @"k_CLIENT_ID";
 NSString *const kPUDInfoClientSecret = @"k_CLIENT_SECRET";
-NSString *const kPUDInfoMessageIDVanilla = @"k_MESSAGE_ID_VANILLA";
+NSString *const kPUDInfoMessageIDStandard = @"k_MESSAGE_ID_STANDARD";
 NSString *const kPUDInfoMessageIDCloudPage = @"k_MESSAGE_ID_CLOUDPAGE";
+NSString *const kPUDInfoMessageIDSilent = @"k_MESSAGE_ID_SILENT";
 NSString *const kPUDInfoPushEnabled = @"k_PUSH_ENABLED";
+NSString *const kPUDInfoBackgroundRefreshEnabled = @"k_BACKGROUND_REFRESH_ENABLED";
 NSString *const kPUDInfoDeviceToken = @"k_DEVICE_TOKEN";
 NSString *const kPUDInfoDeviceID = @"k_DEVICE_ID";
 NSString *const kPUDInfoOpenDirectDelegate = @"k_OPENDIRECT_DELEGATE";
 NSString *const kPUDInfoLocationEnabled = @"k_LOCATION_ENABLED";
 NSString *const kPUDInfoAttributeFirstName = @"k_ATTR_FIRST";
 NSString *const kPUDInfoAttributeLastName = @"k_ATTR_LAST";
+NSString *const kPUDInfoSdkState = @"k_SDKState";
 NSString *const kPUDInfoAttributeActivityTags = @"k_ACTIVITY_TAGS";
 
 #pragma mark - Message Detail Table View
@@ -149,7 +152,6 @@ NSString *const kPUDReuseIdentifierPushReceivedCell = @"ruid_pushReceivedCell";
 NSString *const kPUDReuseIdentifierSettingCell = @"ruid_settingCell";
 NSString *const kPUDReuseIdentifierTagCell = @"ruid_tagCell";
 NSString *const kPUDReuseIdentifierCloudPageInboxCell = @"ruid_cloudPageInboxCell";
-NSString *const kPUDReuseIdentifierPushConfigCell = @"ruid_pushConfigCell";
 
 #pragma mark - Segues
 NSString *const kPUDSegueMessagesToLastReceivedPush = @"seg_messagesToLastReceivedPush";
@@ -163,7 +165,6 @@ NSUInteger const kPUDSettingsActivitySectionIndex = 1;
 #pragma mark - Storyboard Identifiers
 NSString *const kPUDStoryboardIdentifierPushReceivedTableViewController = @"sb_pushReceivedTableViewController";
 NSString *const kPUDStoryboardIdentifierDiscountCodeViewController = @"sb_discountCodeViewController";
-NSString *const kPUDStoryboardIdentifierPushConfigTable = @"sb_pushConfigTableViewController";
 
 #pragma mark - Storyboard Name
 NSString *const kPUDStoryboardMain = @"Main";
@@ -189,8 +190,9 @@ NSString *const kPUDUserDefaultsAppID = @"ud_appId";
 NSString *const kPUDUserDefaultsAccessToken = @"ud_accessToken";
 NSString *const kPUDUserDefaultsClientID = @"ud_clientId";
 NSString *const kPUDUserDefaultsClientSecret = @"ud_clientSecret";
-NSString *const kPUDUserDefaultsMessageIDVanilla = @"ud_standardMessageId";
+NSString *const kPUDUserDefaultsMessageIDStandard = @"ud_standardMessageId";
 NSString *const kPUDUserDefaultsMessageIDCloudPage = @"ud_CloudpageMessageId";
+NSString *const kPUDUserDefaultsMessageIDSilent = @"ud_SilentMessageId";
 NSString *const kPUDUserDefaultsRestUrl = @"ud_RestUrl";
 
 #pragma mark - Configs Table View
@@ -198,8 +200,6 @@ NSUInteger const kPUDConfigsDefaultIndex = 0;
 //NSUInteger const kPUDConfigsCustomIndex = 1;
 
 #pragma mark - Notifications
-NSString *const kPUDPushConfigChangedNotification = @"PushConfigChangedNotification";
-NSString *const kPUDNewPushConfigAddedNotication =  @"PushConfigAddedNotification";
 NSString *const kPUDPreferencesChanged =  @"PreferencesChanged";
 
 

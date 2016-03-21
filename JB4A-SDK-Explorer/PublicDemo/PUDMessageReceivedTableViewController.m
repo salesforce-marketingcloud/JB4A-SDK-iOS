@@ -103,6 +103,9 @@ NSString *messageTypeDefault = @"";
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    // for WAMA tracking purposes
+    [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:nil andSearch:nil];
+    
     NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
     
     if (self.shouldShowDiscountViewController

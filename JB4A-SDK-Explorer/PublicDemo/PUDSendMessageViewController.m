@@ -109,6 +109,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    // for WAMA tracking purposes
+    [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:nil andSearch:nil];
+    
     if (self.viewMessageButtonHidden && [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo]) {
         [self.buttonView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         [self setupButtonView];

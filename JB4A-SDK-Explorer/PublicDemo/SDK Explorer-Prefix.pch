@@ -5,7 +5,6 @@
 //
 
 #import <Availability.h>
-#import "ETAnalytics.h"
 
 #ifndef __IPHONE_5_0
 #warning "This project uses features only available in iOS SDK 5.0 and later."
@@ -20,5 +19,11 @@
     #import "UIColor+ExactTargetColors.h"
 #endif
 
-#define ETLog(fmt, ...)
+#import "ETAnalytics.h"
 
+#if defined (QA) || defined (DEBUG)
+#define ETLog(fmt, ...) NSLog((@"[ET] %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+//        #define ETLog(fmt, ...) NSLog((@"[ET] %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define ETLog(fmt, ...)
+#endif

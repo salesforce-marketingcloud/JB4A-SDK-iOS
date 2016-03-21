@@ -6,15 +6,6 @@
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 
-// SDK Version
-#define ETPushSDKVersionString @"4.1.0"
-
-/**
- Helpers.
- */
-#define ETNotify(notification) \
-    [[NSNotificationCenter defaultCenter] postNotificationName:notification object:nil];
-
 /**
  Notification that is sent when a push fails for some reason.
  */
@@ -28,17 +19,11 @@
 #define ETRequestServiceResponseSuccess @"ETRequestServiceResponseSuccess"
 #define ETRequestFinishedWithFailure    @"ETRequestFinishedWithFailure"
 
-
 /**
   Constants for dealing with other stuff
   */
 #define AppLifecycleForeground          @"AppLifecycleForeground"
 #define AppLifecycleBackground          @"AppLifecycleBackground"
-
-/**
- Notifications around Messages
- */
-#define RichMessagesNowAvailable        @"RichMessagesNowAvailable"
 
 /**
  Geofence Constants
@@ -59,26 +44,70 @@
 #define __DEPRECATED_WARNING(message) __attribute((deprecated(message)))
 
 // Tracks the BOOL for each in NSUserDefaults
-static NSString * const ETLocationServicesActive = @"ETLocationServicesActive";
-static NSString * const ETCloudPagesActive       = @"ETCloudPagesActive";
-static NSString * const ETAnalyticsActive        = @"ETAnalyticsActive";
-static NSString * const ETPIAnalyticsActive      = @"ETPIAnalyticsActive";
+static NSString * const ETProximityServicesActive = @"ETProximityServicesActive";
+static NSString * const ETLocationServicesActive  = @"ETLocationServicesActive";
+static NSString * const ETCloudPagesActive        = @"ETCloudPagesActive";
+static NSString * const ETAnalyticsActive         = @"ETAnalyticsActive";
+static NSString * const ETPIAnalyticsActive       = @"ETPIAnalyticsActive";
 
-typedef enum {
-PushOriginationStateBackground                   = 0,
+/**
+ Push Origination State
+ */
+typedef NS_ENUM (NSUInteger, pushOriginationState){
+    /** PushOriginationStateBackground  */
+    PushOriginationStateBackground                    = 0,
+    /** PushOriginationStateForeground  */
     PushOriginationStateForeground
-} PushOriginationState;
-
-typedef NS_ENUM(NSUInteger, configureSDKWithAppIDError) {
-configureSDKWithAppIDNoError                     = 0,
-    configureSDKWithAppIDInvalidAppIDError,
-    configureSDKWithAppIDInvalidAccessTokenError,
-    configureSDKWithAppIDUnableToReadRandomError,
-    configureSDKWithAppIDDatabaseAccessError,
-    configureSDKWithAppIDUnableToKeyDatabaseError,
-    configureSDKWithAppIDCCKeyDerivationPBKDFError,
-    configureSDKWithAppIDCCSymmetricKeyWrapError,
-    configureSDKWithAppIDCCSymmetricKeyUnwrapError,
-    configureSDKWithAppIDKeyChainError,
-    configureSDKWithAppIDUnableToReadCertificateError
 };
+
+/**
+ configureSDKWithAppID errors
+ */
+typedef NS_ENUM(NSUInteger, configureSDKWithAppIDError) {
+    /** configureSDKWithAppIDNoError  */
+    configureSDKWithAppIDNoError                      = 0,
+    /** configureSDKWithAppIDInvalidAppIDError  */
+    configureSDKWithAppIDInvalidAppIDError,
+    /** configureSDKWithAppIDInvalidAccessTokenError  */
+    configureSDKWithAppIDInvalidAccessTokenError,
+    /** configureSDKWithAppIDUnableToReadRandomError  */
+    configureSDKWithAppIDUnableToReadRandomError,
+    /** configureSDKWithAppIDDatabaseAccessError  */
+    configureSDKWithAppIDDatabaseAccessError,
+    /** configureSDKWithAppIDUnableToKeyDatabaseError  */
+    configureSDKWithAppIDUnableToKeyDatabaseError,
+    /** configureSDKWithAppIDCCKeyDerivationPBKDFError  */
+    configureSDKWithAppIDCCKeyDerivationPBKDFError,
+    /** configureSDKWithAppIDCCSymmetricKeyWrapError  */
+    configureSDKWithAppIDCCSymmetricKeyWrapError,
+    /** configureSDKWithAppIDCCSymmetricKeyUnwrapError  */
+    configureSDKWithAppIDCCSymmetricKeyUnwrapError,
+    /** configureSDKWithAppIDKeyChainError  */
+    configureSDKWithAppIDKeyChainError,
+    /** configureSDKWithAppIDUnableToReadCertificateError  */
+    configureSDKWithAppIDUnableToReadCertificateError,
+    /** configureSDKWithAppIDRunOnceSimultaneouslyError  */
+    configureSDKWithAppIDRunOnceSimultaneouslyError,
+    /** configureSDKWithAppIDRunOnceError  */
+    configureSDKWithAppIDRunOnceError,
+    /** configureSDKWithAppIDInvalidLocationAndProximityError  */
+    configureSDKWithAppIDInvalidLocationAndProximityError
+};
+
+/**
+ requestPIRecommendations errors
+ */
+typedef NS_ENUM(NSUInteger, requestPIRecommendationsError) {
+    /** requestPIRecommendationsNoError  */
+    requestPIRecommendationsNoError                   = 0,
+    /** requestPIRecommendationsInvalidMidParameterError  */
+    requestPIRecommendationsInvalidMidParameterError  = 1024,
+    /** requestPIRecommendationsInvalidRetailerParameterError  */
+    requestPIRecommendationsInvalidRetailerParameterError,
+    /** requestPIRecommendationsInvalidPageParameterError  */
+    requestPIRecommendationsInvalidPageParameterError,
+    /** requestPIRecommendationsInvalidCompletionHandlerError  */
+    requestPIRecommendationsInvalidCompletionHandlerError
+};
+
+

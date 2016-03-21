@@ -63,7 +63,7 @@ NSString *messageContactURLString = @"https://www.exacttargetapis.com/push/v1/me
      */
     NSString *messageId = nil;
     if (payload.pushMethod == kPushMethodAlert) {
-        messageId = [PUDUtility messageIdVanilla];
+        messageId = [PUDUtility messageIdStandard];
     }
     else if (payload.pushMethod == kPushMethodAlertCloudPage) {
         messageId = [PUDUtility messageIdCloudPage];
