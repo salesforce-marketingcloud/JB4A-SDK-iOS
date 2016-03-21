@@ -40,8 +40,6 @@
 // Controllers
 #import "PUDPageContentViewController.h"
 
-//Classes
-
 @interface PUDEulaViewController ()
 
 
@@ -49,6 +47,13 @@
 @end
 
 @implementation PUDEulaViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // for WAMA tracking purposes
+    [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:nil andSearch:nil];
+}
 
 - (NSString *)htmlPrefix {
     return @"<html style=\"margin:10px; font-size:16px; word-wrap: break-word;\"><font color=\"black\" face=\"Avenir Next\">";

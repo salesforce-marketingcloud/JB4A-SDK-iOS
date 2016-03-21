@@ -33,6 +33,7 @@
 //
 //  Created by Matt Lathrop on 4/29/14.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
+//
 #import "PUDAppDelegate.h"
 
 // Controllers
@@ -47,7 +48,6 @@
 
 //Constants
 #import "PUDConstants.h"
-#define PushConfigAlertViewTag 1
 
 @interface PUDAppDelegate()
 
@@ -108,15 +108,18 @@
     BOOL configOK = NO;
     NSError *error = nil;
     
-
-    configOK = [[ETPush pushManager] configureSDKWithAppID:[PUDUtility appID]
-                                            andAccessToken:[PUDUtility accessToken]
+    PUDPushConfig *pushConfig = [PUDPushConfig getDefaultPushConfig];
+    
+    configOK = [[ETPush pushManager] configureSDKWithAppID:pushConfig.appID
+                                            andAccessToken:pushConfig.accessToken
                                              withAnalytics:YES
                                        andLocationServices:YES
+                                      andProximityServices:YES                      // ONLY IF YOU ARE ON BETA TESTING PROGRAM
                                              andCloudPages:YES
                                            withPIAnalytics:YES
                                                      error:&error];
-
+    
+    
     if (!configOK) {
         dispatch_async(dispatch_get_main_queue(), ^{
             // something went wrong in the config call - show what the error is
@@ -398,6 +401,9 @@
 {
     NSLog(@"== BACKGROUND PUSH ==\nReceived a background push: %@\n", userInfo);
     
+    // for WAMA tracking purposes
+    [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:[userInfo description] andSearch:nil];
+    
     /**
      Show an alert view and save the user info in order to be able to show the last received push at a later time
      */
@@ -558,29 +564,6 @@
         self.webViewController = nil;
         self.discountViewController = nil;
     }];
-}
-
-/**
- *  This method is NOT required in order to implement the SDK. This is used specifically for this app and you will likely not need a method like this in your own app
- */
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-
-        if (buttonIndex != alertView.cancelButtonIndex) {
-            /**
-             *  Handle the payload immediately because the subscriber clicked the view button
-             */
-            NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:kPUDUserDefaultsPushUserInfo];
-            BOOL hasDiscountCodeCustomKey = ([userInfo objectForKey:kPUDMessageDetailCustomKeyDiscountCode] != nil);
-            BOOL hasOpenDirectPayload = ([userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey] != nil);
-            
-            if (hasOpenDirectPayload) {
-                [self handleOpenDirectPayload:[userInfo objectForKey:kPUDPushDefineOpenDirectPayloadKey]];
-            }
-            else if (hasDiscountCodeCustomKey) {
-                [self handleDiscountCodePayload];
-            }
-        }
 }
 
 - (void)handleOpenDirectPayload:(NSString *)payload {

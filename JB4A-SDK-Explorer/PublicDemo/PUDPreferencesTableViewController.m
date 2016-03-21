@@ -58,8 +58,6 @@
  */
 @property (nonatomic, strong) NSArray *dataArray;
 
-@property (nonatomic, assign, getter = isUpdateETRequired) BOOL updateETRequired;
-
 @end
 
 @implementation PUDPreferencesTableViewController
@@ -74,8 +72,7 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        //  _dataArray = @[[self currentPushConfig],[self personalInformationData], [self footballTagsData], [self soccerTagsData]];
-        _updateETRequired = NO;
+        //  _dataArray = @[[self personalInformationData], [self footballTagsData], [self soccerTagsData]];
     }
     return self;
 }
@@ -89,11 +86,15 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
     [singleTap setNumberOfTouchesRequired:1];
     singleTap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:singleTap];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    
+    // for WAMA tracking purposes
+    [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:nil andSearch:nil];
     
     _dataArray = @[[self personalInformationData], [self activityTagsData]];
     
@@ -114,18 +115,6 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
     [self.tableView reloadData];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    
-    /**
-     ET_NOTE: updateET should be called as SPARINGLY as possible. A good place to call this is whenever a user exits out of your settings screen where he or she can edit values that are used as contact attributes. This method will then send the attribute changes to Salesforce
-     */
-    if (self.isUpdateETRequired) {
-        self.updateETRequired = NO;
-        [[ETPush pushManager] updateET];
-    }
-}
-
 #pragma mark - table data creation
 
 - (NSArray *)personalInformationData {
@@ -136,7 +125,6 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
     
     __weak PUDPreferencesTableData *weakFirstName = firstName;
     firstName.textFieldDidEndEditingBlock = ^(UITextField *textField) {
-        self.updateETRequired = YES;
         
         [[NSUserDefaults standardUserDefaults] setObject:textField.text forKey:kPUDUserDefaultsFirstName];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -145,6 +133,9 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
          *  ET_NOTE: add an attribute named FirstName for this device. This attribute should first be defined inside MobilePush before being used inside the SDK
          */
         [[ETPush pushManager] addAttributeNamed:kPUDAttributeFirstName value:textField.text];
+        
+        // test updateET to update without waiting for alarm
+        [[ETPush pushManager] updateET];
         weakFirstName.textFieldValue = textField.text;
     };
     
@@ -154,7 +145,6 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
     
     __weak PUDPreferencesTableData *weakLastName = lastName;
     lastName.textFieldDidEndEditingBlock = ^(UITextField *textField) {
-        self.updateETRequired = YES;
         
         [[NSUserDefaults standardUserDefaults] setObject:textField.text forKey:kPUDUserDefaultsLastName];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -274,7 +264,8 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
     else if (section == kPUDSettingsActivitySectionIndex) {
         return @"Tags are used to specify which messsages a customer wishes to receive. For example, to receive messages for an interest in a particular activity.\n\n";
     }
-    return nil;
+    
+   return nil;
 }
 
 #pragma mark - ui actions
@@ -314,13 +305,14 @@ NSString *updatePreferencesBool = @"UpdatePreferences_BOOL";
      *  ET_NOTE: add or remove tags for the current device. Tags don't have to be defined inside of MobilePush before using them. You can create them at will
      */
     if (tagSwitch.on) {
+        // for WAMA tracking purposes
+        [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:nil andSearch:data.teamTag];
+        
         [[ETPush pushManager] addTag:data.teamTag];
     }
     else {
         [[ETPush pushManager] removeTag:data.teamTag];
     }
-    
-    self.updateETRequired = YES;
 }
 
 #pragma mark - text view delegate methods

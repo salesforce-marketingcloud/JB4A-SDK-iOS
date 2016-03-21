@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtensions/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2014-06-09T19:55:30Z</time>
+    <bounds maxlat="39.796476876363158" maxlon="-86.161437034606934" minlat="39.772782325744629" minlon="-86.234913719817996"/>
+  </metadata>
+
+  <wpt lat="39.796476876363158" lon="-86.234226319938898">
+    <time>2014-06-09T19:53:35Z</time>
+    <name>Indianapolis Motor Speedway</name>
+    <cmt>Indianapolis Motor Speedway</cmt>
+    <desc>Indianapolis Motor Speedway</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2014-06-09T19:53:35Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="39.773919582366943" lon="-86.161437034606934">
+    <time>2014-06-09T17:59:50Z</time>
+    <name>Sahm's Tavern</name>
+    <cmt>Sahm's Tavern
+433 N Capitol Ave
+Indianapolis, Indiana, 46204, United States
+317-822-9903</cmt>
+    <desc>Sahm's Tavern
+433 N Capitol Ave
+Indianapolis, Indiana, 46204, United States
+317-822-9903</desc>
+    <sym>Restaurant</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>433 N Capitol Ave</gpxx:StreetAddress>
+          <gpxx:City>Indianapolis</gpxx:City>
+          <gpxx:State>Indiana</gpxx:State>
+          <gpxx:Country>United States</gpxx:Country>
+          <gpxx:PostalCode>46204</gpxx:PostalCode>
+        </gpxx:Address>
+        <gpxx:PhoneNumber>317-822-9903</gpxx:PhoneNumber>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>433 N Capitol Ave</wptx1:StreetAddress>
+          <wptx1:City>Indianapolis</wptx1:City>
+          <wptx1:State>Indiana</wptx1:State>
+          <wptx1:Country>United States</wptx1:Country>
+          <wptx1:PostalCode>46204</wptx1:PostalCode>
+        </wptx1:Address>
+        <wptx1:PhoneNumber>317-822-9903</wptx1:PhoneNumber>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2014-06-09T17:59:50Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <rte>
+    <name>Sahm's Tavern to Indianapolis Motor Speedway</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>true</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+      <trp:Trip>
+        <trp:TransportationMode>Motorcycling</trp:TransportationMode>
+      </trp:Trip>
+    </extensions>
+    <rtept lat="39.773919582366943" lon="-86.161437034606934">
+      <time>2014-06-09T17:59:50Z</time>
+      <name>Sahm's Tavern</name>
+      <cmt>Sahm's Tavern
+433 N Capitol Ave
+Indianapolis, Indiana, 46204, United States
+317-822-9903</cmt>
+      <desc>Sahm's Tavern
+433 N Capitol Ave
+Indianapolis, Indiana, 46204, United States
+317-822-9903</desc>
+      <sym>Restaurant</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>FasterTime</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>0B09FFFFFFFF0380140BFFFFFFFFFFFFFFFF</gpxx:Subclass>
+          <gpxx:rpt lat="39.773920169100165" lon="-86.161466371268034">
+            <gpxx:Subclass>0600748410018EA506002116000067023500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.773490428924561" lon="-86.161479949951172"/>
+          <gpxx:rpt lat="39.772782325744629" lon="-86.161501407623291">
+            <gpxx:Subclass>060074841001FDA306001F020E00177C4000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.772825241088867" lon="-86.16328239440918">
+            <gpxx:Subclass>0600748410014E000E001F020E00067C6A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.772825241088867" lon="-86.16328239440918"/>
+          <gpxx:rpt lat="39.774112701416016" lon="-86.164891719818115"/>
+          <gpxx:rpt lat="39.774155616760254" lon="-86.164956092834473"/>
+          <gpxx:rpt lat="39.77426290512085" lon="-86.165063381195068"/>
+          <gpxx:rpt lat="39.774348735809326" lon="-86.165149211883545"/>
+          <gpxx:rpt lat="39.774370193481445" lon="-86.165192127227783"/>
+          <gpxx:rpt lat="39.774477481842041" lon="-86.165320873260498">
+            <gpxx:Subclass>060074841001DF7006041F000D00CDA94C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.77550745010376" lon="-86.166608333587646"/>
+          <gpxx:rpt lat="39.775636196136475" lon="-86.166801452636719">
+            <gpxx:Subclass>060074841001749A0F041F002600BB874900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.776623249053955" lon="-86.168389320373535">
+            <gpxx:Subclass>060074841001FF6F06001F000D00E7A93901</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.776966571807861" lon="-86.168947219848633"/>
+          <gpxx:rpt lat="39.776966571807861" lon="-86.168947219848633"/>
+          <gpxx:rpt lat="39.777095317840576" lon="-86.169161796569824"/>
+          <gpxx:rpt lat="39.777524471282959" lon="-86.169869899749756"/>
+          <gpxx:rpt lat="39.778339862823486" lon="-86.171092987060547"/>
+          <gpxx:rpt lat="39.779455661773682" lon="-86.173088550567627"/>
+          <gpxx:rpt lat="39.779455661773682" lon="-86.173088550567627"/>
+          <gpxx:rpt lat="39.779605865478516" lon="-86.173324584960938"/>
+          <gpxx:rpt lat="39.779670238494873" lon="-86.173453330993652"/>
+          <gpxx:rpt lat="39.77975606918335" lon="-86.173582077026367"/>
+          <gpxx:rpt lat="39.780120849609375" lon="-86.174139976501465"/>
+          <gpxx:rpt lat="39.780163764953613" lon="-86.17426872253418"/>
+          <gpxx:rpt lat="39.780592918395996" lon="-86.17501974105835"/>
+          <gpxx:rpt lat="39.780721664428711" lon="-86.175234317779541">
+            <gpxx:Subclass>060074841001FF6F06301F000D0037961100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.780957698822021" lon="-86.175599098205566">
+            <gpxx:Subclass>06007484100194E80D101F1920000C861D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.781365394592285" lon="-86.176199913024902">
+            <gpxx:Subclass>06007484100194E80D301F000D0017962700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.78198766708374" lon="-86.176950931549072">
+            <gpxx:Subclass>060074841001CB6C06001F000D0021969D01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.78224515914917" lon="-86.177294254302979"/>
+          <gpxx:rpt lat="39.783725738525391" lon="-86.178989410400391"/>
+          <gpxx:rpt lat="39.783725738525391" lon="-86.178989410400391"/>
+          <gpxx:rpt lat="39.784712791442871" lon="-86.180105209350586"/>
+          <gpxx:rpt lat="39.784712791442871" lon="-86.180105209350586"/>
+          <gpxx:rpt lat="39.785807132720947" lon="-86.181328296661377"/>
+          <gpxx:rpt lat="39.785807132720947" lon="-86.181328296661377"/>
+          <gpxx:rpt lat="39.786944389343262" lon="-86.182637214660645"/>
+          <gpxx:rpt lat="39.788661003112793" lon="-86.184525489807129">
+            <gpxx:Subclass>030074841001139A0F001F062600B681AB01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.788661003112793" lon="-86.185019016265869"/>
+          <gpxx:rpt lat="39.788661003112793" lon="-86.185019016265869"/>
+          <gpxx:rpt lat="39.78872537612915" lon="-86.185641288757324"/>
+          <gpxx:rpt lat="39.789068698883057" lon="-86.186649799346924"/>
+          <gpxx:rpt lat="39.789133071899414" lon="-86.187379360198975"/>
+          <gpxx:rpt lat="39.789197444915771" lon="-86.190962791442871"/>
+          <gpxx:rpt lat="39.78924036026001" lon="-86.195061206817627"/>
+          <gpxx:rpt lat="39.78924036026001" lon="-86.195962429046631"/>
+          <gpxx:rpt lat="39.789197444915771" lon="-86.196305751800537">
+            <gpxx:Subclass>0300748410010D9D0F041F00260031A3A300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.788875579833984" lon="-86.197571754455566"/>
+          <gpxx:rpt lat="39.788510799407959" lon="-86.198794841766357"/>
+          <gpxx:rpt lat="39.788446426391602" lon="-86.199052333831787"/>
+          <gpxx:rpt lat="39.788339138031006" lon="-86.199395656585693"/>
+          <gpxx:rpt lat="39.788167476654053" lon="-86.199953556060791"/>
+          <gpxx:rpt lat="39.788060188293457" lon="-86.200425624847412"/>
+          <gpxx:rpt lat="39.788038730621338" lon="-86.200575828552246">
+            <gpxx:Subclass>0300748410015B9D0F001F00260054A35B01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.7879958152771" lon="-86.200876235961914"/>
+          <gpxx:rpt lat="39.7879958152771" lon="-86.202034950256348"/>
+          <gpxx:rpt lat="39.78797435760498" lon="-86.202828884124756"/>
+          <gpxx:rpt lat="39.78797435760498" lon="-86.204116344451904"/>
+          <gpxx:rpt lat="39.787952899932861" lon="-86.20521068572998"/>
+          <gpxx:rpt lat="39.787931442260742" lon="-86.206305027008057"/>
+          <gpxx:rpt lat="39.787909984588623" lon="-86.207356452941895"/>
+          <gpxx:rpt lat="39.787909984588623" lon="-86.207356452941895"/>
+          <gpxx:rpt lat="39.787909984588623" lon="-86.208407878875732"/>
+          <gpxx:rpt lat="39.787909984588623" lon="-86.209566593170166"/>
+          <gpxx:rpt lat="39.787909984588623" lon="-86.210274696350098">
+            <gpxx:Subclass>030074841001909D0F041F002600EBA73400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.787888526916504" lon="-86.211047172546387"/>
+          <gpxx:rpt lat="39.787888526916504" lon="-86.21171236038208">
+            <gpxx:Subclass>030074841001A49D0F001F00260020A89200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.787867069244385" lon="-86.212570667266846"/>
+          <gpxx:rpt lat="39.787845611572266" lon="-86.213643550872803"/>
+          <gpxx:rpt lat="39.787845611572266" lon="-86.214630603790283"/>
+          <gpxx:rpt lat="39.787802696228027" lon="-86.215231418609619"/>
+          <gpxx:rpt lat="39.787781238555908" lon="-86.215789318084717">
+            <gpxx:Subclass>030074841001839D0F041F002600AFAB0B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.787781238555908" lon="-86.216089725494385">
+            <gpxx:Subclass>030074841001C59D0F001F0026004AA81101</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.787781238555908" lon="-86.216669082641602"/>
+          <gpxx:rpt lat="39.787781238555908" lon="-86.217184066772461"/>
+          <gpxx:rpt lat="39.787759780883789" lon="-86.218557357788086"/>
+          <gpxx:rpt lat="39.787759780883789" lon="-86.218557357788086"/>
+          <gpxx:rpt lat="39.78773832321167" lon="-86.219501495361328"/>
+          <gpxx:rpt lat="39.78773832321167" lon="-86.219887733459473"/>
+          <gpxx:rpt lat="39.787695407867432" lon="-86.221132278442383"/>
+          <gpxx:rpt lat="39.787673950195312" lon="-86.222290992736816"/>
+          <gpxx:rpt lat="39.787652492523193" lon="-86.223471164703369"/>
+          <gpxx:rpt lat="39.787652492523193" lon="-86.22370719909668">
+            <gpxx:Subclass>030074841001B39D0F041F00260070AC9800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.787631034851074" lon="-86.224479675292969"/>
+          <gpxx:rpt lat="39.787631034851074" lon="-86.225123405456543"/>
+          <gpxx:rpt lat="39.787631034851074" lon="-86.225531101226807"/>
+          <gpxx:rpt lat="39.787631034851074" lon="-86.225531101226807"/>
+          <gpxx:rpt lat="39.787631034851074" lon="-86.225745677947998"/>
+          <gpxx:rpt lat="39.787631034851074" lon="-86.225960254669189"/>
+          <gpxx:rpt lat="39.787609577178955" lon="-86.226217746734619"/>
+          <gpxx:rpt lat="39.787609577178955" lon="-86.22694730758667"/>
+          <gpxx:rpt lat="39.787588119506836" lon="-86.22795581817627">
+            <gpxx:Subclass>030074841001E29D0F001F002600F9AB1100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.787588119506836" lon="-86.228427886962891">
+            <gpxx:Subclass>030074841001E29D0F001F002600EFABB800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.787566661834717" lon="-86.229350566864014"/>
+          <gpxx:rpt lat="39.787566661834717" lon="-86.229608058929443"/>
+          <gpxx:rpt lat="39.787545204162598" lon="-86.230359077453613"/>
+          <gpxx:rpt lat="39.787545204162598" lon="-86.230895519256592"/>
+          <gpxx:rpt lat="39.787523746490479" lon="-86.23143196105957"/>
+          <gpxx:rpt lat="39.787523746490479" lon="-86.232290267944336"/>
+          <gpxx:rpt lat="39.787502288818359" lon="-86.233577728271484">
+            <gpxx:Subclass>070074841001A67706001F020D00B1CE4700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.788253307342529" lon="-86.233599185943604"/>
+          <gpxx:rpt lat="39.789025783538818" lon="-86.233642101287842">
+            <gpxx:Subclass>070074841001E37706001F060D0042CE2700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.789068698883057" lon="-86.234371662139893"/>
+          <gpxx:rpt lat="39.789133071899414" lon="-86.234714984893799">
+            <gpxx:Subclass>070074841001647806001F020D002ACECF00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.790077209472656" lon="-86.234757900238037"/>
+          <gpxx:rpt lat="39.790871143341064" lon="-86.234779357910156"/>
+          <gpxx:rpt lat="39.791107177734375" lon="-86.234779357910156"/>
+          <gpxx:rpt lat="39.791536331176758" lon="-86.234800815582275"/>
+          <gpxx:rpt lat="39.791536331176758" lon="-86.234800815582275"/>
+          <gpxx:rpt lat="39.792394638061523" lon="-86.234800815582275"/>
+          <gpxx:rpt lat="39.792802333831787" lon="-86.234822273254395"/>
+          <gpxx:rpt lat="39.792802333831787" lon="-86.234822273254395"/>
+          <gpxx:rpt lat="39.793596267700195" lon="-86.234843730926514">
+            <gpxx:Subclass>070074841001647806001F000D00FC358600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="39.796466985717416" lon="-86.234913719817996">
+            <gpxx:Subclass>07007484100164780600211700007C018600</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="39.796476876363158" lon="-86.234226319938898">
+      <time>2014-06-09T19:53:35Z</time>
+      <name>Indianapolis Motor Speedway</name>
+      <cmt>Indianapolis Motor Speedway</cmt>
+      <desc>Indianapolis Motor Speedway</desc>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>FasterTime</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>896874841001018037000300C200BA4C89AD</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

@@ -38,34 +38,29 @@
 #import <Foundation/Foundation.h>
 
 // Other
+#import "PUDPushConfig.h"
 
 @interface PUDUtility : NSObject
 
 #pragma mark - App Settings
 
-+ (NSString *)configurationName;
++ (NSString *)appID;
 
 + (NSString *)accessToken;
-
-+ (NSString *)appID;
 
 + (NSString *)clientID;
 
 + (NSString *)clientSecret;
 
-+ (NSString *)messageIdVanilla;
++ (NSString *)messageIdStandard;
 
 + (NSString *)messageIdCloudPage;
-
-+ (NSString *)fuelAccessTokenRoute;
 
 #pragma mark - Other
 
 + (NSString *)appVersion;
 
 + (NSString *)sdkVersion;
-
-+ (NSString *)configName;
 
 + (NSString *)safeAppID;
 
@@ -76,6 +71,10 @@
 + (NSString *)safeClientSecret;
 
 + (NSString *)isPushEnabled;
+
++ (NSString *)sdkState;
+
+//+ (NSString *)isBackgroundRefreshEnabled;
 
 + (NSString *)deviceToken;
 
@@ -88,8 +87,6 @@
 + (NSString *)buildNumber;
 
 + (NSString *)bundleID;
-
-+ (NSString *)buildType;
 
 + (BOOL) isInternalBuild;
 

@@ -1,10 +1,10 @@
 # SDK Explorer
 
-SDK Explorer is a sample app that demonstrates the features available for use in the Salesforce Marketing Cloud [JB4A-SDK](https://github.com/salesforce-marketingcloud/JB4A-SDK-iOS). See the [Implemented SDK Features](#implemented) section below for a full list of the features that are implemented.
+SDK Explorer is a sample app that demonstrates the features available for use in the Salesforce Marketing Cloud [JB4A-SDK](https://github.com/ExactTarget/JB4A-SDK-iOS). See the [Implemented SDK Features](#implemented) section below for a full list of the features that are implemented.
 
 ### About the JB4A SDK
 
-The JB4A SDK allows you to utilize MobilePush functionality as part of your iOS mobile app. This functionality includes the ability to send push messages to mobile devices through the app (based on demographic information or geofence triggers), collect analytics information based on the results of sent push messages, and many other things. For a high level overview of MobilePush features see [here](http://www.exacttarget.com/products/mobile-marketing/drive-mobile-app-engagement).
+The JB4A SDK allows you to utilize MobilePush functionality as part of your iOS mobile app. This functionality includes the ability to send push messages to mobile devices through the app (based on demographic information or geofence triggers), collect analytics information based on the results of sent push messages, and many other things. For a high level overview of MobilePush features see [here](http://www.exacttarget.com/products/mobile-marketing/drive-mobile-app-engagement). For technical discussion on MobilePush see [here](http://code-preview.herokuapp.com/apis-sdks/journey-builder-for-apps/).
 
 ### The Important Bits
 
@@ -17,15 +17,15 @@ To quickly view all SDK implementation code blocks, search the entire project fo
 
 The following SDK features are implemented by the app:
 
-- [Tags](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/features/tags.html)
-- [Attributes](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/features/attributes.html)
+- [Tags](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/tags.html)
+- [Attributes](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/attributes.html)
 - [Push Messages](https://code.exacttarget.com/api/messagecontact-send-0) (via Fuel REST Route)
-- [Custom Alert Sound](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/features/custom-sound.html)
-- [OpenDirect](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/features/opendirect.html)
-- [Custom Key](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/features/custom-keys.html)
-- [Location Messages](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/location/geolocation.html)
-- [CloudPages](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/rich-push/rich-push-overview.html)
-- [CloudPage Inbox](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/rich-push/rich-push-inbox.html)
+- [Custom Alert Sound](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/custom-sound.html)
+- [OpenDirect](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/open-direct.html)
+- [Custom Key](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/feature-implementation/custom-keys.html)
+- [Location Messages](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/location-services/geolocation.html)
+- [CloudPages](PublicDemo/PUDMessageComposeTableViewController.m)
+- [CloudPage Inbox](PublicDemo/PUDCloudPageInboxViewController.m)
 
 In addition the app:
 
@@ -44,7 +44,7 @@ This app allows you to easily send debug information to Salesforce directly from
 
 ### Setting Up The App In Your Account
 
-1. Follow the steps in [Getting Started with the SDK](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/overview/getting-started.html) up until the "How to Implement Analytics in your iOS Mobile App" section. At this point you will have the app set up in your AppCenter account, have the app provisioned, and have an AppID and AccessToken corresponding to your app.
+1. Follow the steps in [Integrate MobilePush into your mobile app using the Journey Builder for Apps SDK](https://code.exacttarget.com/apis-sdks/journey-builder-for-apps/getting-started.html) up until the "How to Implement Analytics in your iOS Mobile App" section. At this point you will have the app set up in your AppCenter account, have the app provisioned, and have an AppID and AccessToken corresponding to your app.
 2. Place the access token and application id you received within AppCenter into [PUDAppSettingConstants.m](PublicDemo/PUDAppSettingConstants.m) file. PUDAppSettingConstants is where you will place app specific settings such as access token, clientid, client secret, and more.
 3. *NOTE: At this point you will be able to send messages to the app from MobilePush inside the Salesforce Marketing Cloud. You can also set attributes within the app's Settings tab. You only need to continue further if you wish to be able to create and send push messages from within the app.*
 

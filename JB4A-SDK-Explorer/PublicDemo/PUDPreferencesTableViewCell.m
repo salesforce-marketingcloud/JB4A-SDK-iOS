@@ -81,7 +81,6 @@
         self.attributeTextField.placeholder = data.placeholderString;
         self.attributeTextField.text = data.textFieldValue;
     }
-    
     else if (indexPath.section == kPUDSettingsActivitySectionIndex) {
         self.attributeTextField.hidden = YES;
         self.titleLabel.hidden = NO;
@@ -90,7 +89,7 @@
         /**
          ET_NOTE: Set the switch to ON or OFF depending on whether or not a tag is present in allTags. An alternative to this would be to keep track of what Tags are ON yourself using NSUSerDefaults as an example
          */
-        NSSet *tagSet = [[ETPush pushManager] allTags];
+        NSSet *tagSet = [[ETPush pushManager] getTags];
         if ([tagSet containsObject:data.teamTag]) {
             self.notificationSwitch.on = YES;
         }

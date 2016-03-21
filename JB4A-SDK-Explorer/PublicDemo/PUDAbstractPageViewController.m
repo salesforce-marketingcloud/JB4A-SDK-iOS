@@ -80,8 +80,7 @@
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
-    
-    
+       
     [self listeningForPreferences];
 }
 
@@ -152,7 +151,6 @@
 {
     return 0;
 }
-
 
 - (void) listeningForPreferences {
     [[NSNotificationCenter defaultCenter] addObserver:self

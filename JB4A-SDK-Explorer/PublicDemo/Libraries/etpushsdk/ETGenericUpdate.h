@@ -49,6 +49,11 @@ typedef NS_ENUM(NSInteger, GenericUpdateSendMethod)
 
 static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.com";
 
+/*!
+ @class ETGenericUpdate
+ 
+ Inheritable class used for many other classes and allows usage for several core overload methods.
+ */
 @interface ETGenericUpdate : NSObject
 
 @property (nonatomic) int tag; // The property that started this whole ordeal.
@@ -132,7 +137,7 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
 /**
  Returns the arguments that should be inserted into the database to match the query specified in the previous method. As such, the number should equal the number of question marks used in the previous method.
  
- Also, they need to all be NSObjects, and not primitives or non-object variants of NULL. So, use an NSNumber wrapper for numbers and bools, and [NSNull null] for nils. Please.
+ Also, they need to all be NSObjects, and not primitives or non-object variants of NULL. So, use an NSNumber wrapper for numbers and bools, and [ NSNull null] for nils. Please.
  */
 -(NSArray *)insertQueryArguments;
 -(NSArray *)updateQueryArguments;

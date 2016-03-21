@@ -1,0 +1,13 @@
+{
+	"PushConfig": {
+		"configurationName":"Production Test Import",
+		"appID":"16586d33-807c-4e1a-9a73-feb54a5c4ad1",
+		"accessToken":"v9q3gd5ysstjrwv2vqcst296",
+		"gcm_sender_id":"348137931902",
+		"client_id":"ynpwpsn2ffftznsb2zwrt3cj",
+		"client_secret":"gU738uJQ8Q5H3s2uVxEacr5k",
+		"standard_message_id":"MjEzOToxMTQ6MA",
+		"cloudpage_message_id":"Mjc5MDoxMTQ6MA",
+		"rest_url":"##prod##"
+	}
+}

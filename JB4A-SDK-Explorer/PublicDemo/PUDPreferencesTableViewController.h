@@ -31,6 +31,7 @@
 //  PUDSettingsTableViewController.h
 //  PushDemo
 //
+//  Created by Matt Lathrop on 4/30/14.
 //  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
 //
 

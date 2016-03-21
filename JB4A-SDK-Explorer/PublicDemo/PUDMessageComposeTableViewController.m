@@ -96,6 +96,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    // for WAMA tracking purposes
+    [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:nil andSearch:nil];
+    
     // this is needed in order to ensure that controls stay tinted properly
     [self.tableView reloadData];
 }
@@ -778,6 +781,9 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"OK"]) {
+        // for WAMA tracking purposes
+        [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:[[self.message messagePayload] messageText] andSearch:nil];
+
         [self.message sendMessage];
     }
 }

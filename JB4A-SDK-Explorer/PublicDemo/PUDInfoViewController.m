@@ -40,13 +40,18 @@
 // Controllers
 #import "PUDPageContentViewController.h"
 
-//Classes
-
 @interface PUDInfoViewController ()
 
 @end
 
 @implementation PUDInfoViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // for WAMA tracking purposes
+    [ETAnalytics trackPageView:[[NSBundle mainBundle] bundleIdentifier] andTitle:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] andItem:nil andSearch:nil];
+}
 
 - (NSString *)htmlPrefix {
     return @"<html style=\"margin:10px; font-size:16px; word-wrap: break-word;\"><font color=\"black\" face=\"Avenir Next\">";
@@ -61,6 +66,7 @@
     
     NSMutableArray *array = [NSMutableArray arrayWithArray:@[[self appDetailsHtml],
                                                              [self appKeysHtml],
+                                                             [self sdkStateHtml],
                                                              [self attributesHtml],
                                                              [self notificationSettingsHtml],
                                                              [self deviceTokenHtml],
@@ -89,14 +95,12 @@
                      "<i>App Bundle Id:</i> k_APP_BUNDLE_ID<br>"
                      "<i>App Version:</i> k_APP_VERSION<br>"
                      "<i>Bundle Version:</i> k_BUILD_NUMBER<br>"
-                     "<i>SDK Version:</i> k_SDK_VERSION<br>"
-                     "<i>Build Type:</i> k_BUILD_TYPE<br>"];
+                     "<i>SDK Version:</i> k_SDK_VERSION<br>"];
     
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAppVersion withString:[PUDUtility appVersion]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAppBundleID withString:[PUDUtility bundleID]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoBuildNumber withString:[PUDUtility buildNumber]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoSDKVersion withString:[PUDUtility sdkVersion]];
-    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoBuildType withString:[PUDUtility buildType]];
     
     
     return ret;
@@ -104,7 +108,7 @@
 
 - (NSString *)appKeysHtml {
     
-    NSString *ret = @"<b>k_CONFIG_NAME App Keys</b><hr>"
+    NSString *ret = @"<b>App Keys</b><hr>"
     "The App Keys are used to uniquely identify your app within the Marketing Cloud.</p>"
     "<b>App Id:</b> k_APP_ID<br>"
     "<b>Access Token:</b> k_ACCESS_TOKEN<br><br>"
@@ -112,16 +116,28 @@
     "<b>Client Id:</b> k_CLIENT_ID<br>"
     "<b>Client Secret:</b> k_CLIENT_SECRET<br><br>"
     "The messageId is found in the Marketing Cloud Message Center for the API Message which is a template for the message to send. This app overrides the values in the message to customize who receives the message as well as what is included in the message.</p>"
-    "<b>Message Id, Vanilla:</b> k_MESSAGE_ID_VANILLA<br>"
+    "<b>Message Id, Standard:</b> k_MESSAGE_ID_STANDARD<br>"
     "<b>Message Id, CloudPage:</b> k_MESSAGE_ID_CLOUDPAGE<br>";
     
-    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoConfigName withString:[PUDUtility configName]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAppID withString:[PUDUtility safeAppID]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoAccessToken withString:[PUDUtility safeAccessToken]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoClientID withString:[PUDUtility safeClientID]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoClientSecret withString:[PUDUtility safeClientSecret]];
-    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoMessageIDVanilla withString:[PUDUtility messageIdVanilla]];
+    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoMessageIDStandard withString:[PUDUtility messageIdStandard]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoMessageIDCloudPage withString:[PUDUtility messageIdCloudPage]];
+    
+    return ret;
+}
+
+- (NSString *)sdkStateHtml {
+    
+    NSString *ret = @"<b>JB4A SDK State</b><hr>"
+    "k_SDKState";
+    
+    NSString *sdkState = [PUDUtility sdkState];
+    
+    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoSdkState withString:sdkState];
+    
     return ret;
 }
 
@@ -152,9 +168,11 @@
     NSString *ret = @"<b>Notification Settings</b><hr>"
     "Push and Location notifications are used to indicate whether this device is interested in receiving notifications or location messages.</p>"
     "<b>Push Enabled:</b> k_PUSH_ENABLED<br>"
+//    "<b>Background Refresh Enabled:</b> k_BACKGROUND_REFRESH_ENABLED<br>"
     "<b>Location Geo Fencing Enabled:</b> k_LOCATION_ENABLED<br>";
     
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoPushEnabled withString:[PUDUtility isPushEnabled]];
+//    ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoBackgroundRefreshEnabled withString:[PUDUtility isBackgroundRefreshEnabled]];
     ret = [ret stringByReplacingOccurrencesOfString:kPUDInfoLocationEnabled withString:[PUDUtility isLocationEnabled]];
     
     return ret;
