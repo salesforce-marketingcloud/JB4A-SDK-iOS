@@ -1,7 +1,5 @@
 # Site title and subtitle. This is used in _includes/header.html
-title: 'Journey Builder for Apps iOS SDK (v4.1.0)'
-subtitle: 'For releases prior to v4.0, see: '
-link: '<a href="https://code.exacttarget.com/apis-sdks/journey-builder-for-apps" target="_blank">Prior Release Documentation</a>'
+title: 'Journey Builder for Apps iOS SDK (v4.2.0)'
 
 # if you wish to integrate disqus on pages set your shortname here
 disqus_shortname: ''
@@ -21,13 +19,13 @@ codeurl: 'https://github.com/ExactTarget/JB4A-SDK-iOS'
 # Default categories (in order) to appear in the navigation
 sections: [
     ['overview', 'Overview'],
-    ['trouble', 'Trouble Shooting'],
     ['provisioning', 'Provisioning'],
     ['create-apps', 'Create Cloud Apps'],
     ['sdk-implementation', 'SDK Implementation'],
     ['features', 'Feature Implementation'],
     ['rich-push', 'Rich Push'],
     ['location', 'Location Services'],
+    ['trouble', 'Trouble Shooting'],
     ['resources', 'Additional Resources'] 
 ]
 
@@ -52,4 +50,8 @@ exclude: ['bin', 'README.md']
 markdown: kramdown
 
 # Current SDK version, use for all mentions
-currentVersion: "4.1.0"
+currentVersion: "4.2.0"
+
+# Retry and REST delay message
+retryAndRESTdelayMessage: "The SDK will send changes to Tags to the Marketing Cloud with a REST call one minute after the first change to any Marketing Cloud data.  If the REST call fails (no network for example), then it will retry in one minute intervals until the app is suspended.  If the send is unsuccessful before the app is suspended, the data will be sent the next time the app is opened.  It will take up to 5 minutes for this value to be recorded in the Contact record once the REST call is made by the SDK.
+"
