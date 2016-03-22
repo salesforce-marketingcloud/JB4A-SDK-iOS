@@ -13,7 +13,7 @@ Follow these steps to connect this MobilePush app to the correct Marketing Cloud
 1. Select an account (or New...) in the **Account** drop-down.<br/>
 
     <img class="img-responsive" src="{{ site.baseurl }}/assets/integrate-with-mc.png" />
-1. Select the **Production ExactTarget Account** button (unless otherwise instrucuted by your Salesforce Marketing Cloud relationship manager).<br/>
+1. Select the **Production ExactTarget Account** button (unless otherwise instrucuted by your Marketing Cloud relationship manager).<br/>
 
 1. Click **Link to Account**.<br/>
 

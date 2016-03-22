@@ -36,3 +36,7 @@ Content-Type: application/json
 ~~~
 
 Note that you cannot use badge count or sound as part of the message. Once you create the original message, you can pass text to the message using subsequent messages as part of the **Override** value.
+
+#### How to Receive Silent Push Messages
+
+<script src="https://gist.github.com/sfmc-mobilepushsdk/3f0fa4278111b0d6a974.js"></script>
