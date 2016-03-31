@@ -10,7 +10,7 @@ Add the provisioning information created in the [Apple]({{ site.baseurl }}/provi
 
 After connecting your App Center App to your Marketing Cloud account, add the provisioning information using the following form:
 
-* For iOS apps, click **Choose File** and upload the APNS certificate provided when you created your app in the <a href="https://developer.apple.com/devcenter/ios/" target="_blank">iOS Dev Center</a>.
+* For iOS apps, click **Choose File** and upload the APNS certificate provided when you created your app in the <a href="https://developer.apple.com/membercenter/" target="_blank">Member Center</a>.
 
 * Type in the APNS certificate password in the **Password** field.
 
