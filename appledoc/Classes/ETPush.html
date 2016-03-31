@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -18,7 +18,7 @@
 			</h1>
 
 			<p id="developer-home">
-				<a href="../index.html">Salesforce Marketing Cloud</a>
+				<a href="../index.html">Marketing Cloud</a>
 			</p>
 			
 		</div>
@@ -58,7 +58,11 @@
 	
 	<optgroup label="Class Methods">
 		
-		<option value="//api/name/ETLogger:">+ ETLogger:</option>
+		<option value="//api/name/getSDKState">+ getSDKState</option>
+		
+		<option value="//api/name/getSDKVersionCode">+ getSDKVersionCode</option>
+		
+		<option value="//api/name/getSDKVersionName">+ getSDKVersionName</option>
 		
 		<option value="//api/name/hardwareIdentifier">+ hardwareIdentifier</option>
 		
@@ -66,9 +70,15 @@
 		
 		<option value="//api/name/pushManager">+ pushManager</option>
 		
+		<option value="//api/name/requestPIRecommendations:page:error:completionHandler:">+ requestPIRecommendations:page:error:completionHandler:</option>
+		
+		<option value="//api/name/requestPIRecommendations:page:retailer:error:completionHandler:">+ requestPIRecommendations:page:retailer:error:completionHandler:</option>
+		
 		<option value="//api/name/safeDeviceIdentifier">+ safeDeviceIdentifier</option>
 		
 		<option value="//api/name/setETLoggerToRequiredState:">+ setETLoggerToRequiredState:</option>
+		
+		<option value="//api/name/setLoggerWithHandler:">+ setLoggerWithHandler:</option>
 		
 	</optgroup>
 	
@@ -98,13 +108,19 @@
 		
 		<option value="//api/name/configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andCloudPages:withPIAnalytics:error:">- configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andCloudPages:withPIAnalytics:error:</option>
 		
+		<option value="//api/name/configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andProximityServices:andCloudPages:withPIAnalytics:error:">- configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andProximityServices:andCloudPages:withPIAnalytics:error:</option>
+		
 		<option value="//api/name/currentUserNotificationSettings">- currentUserNotificationSettings</option>
 		
 		<option value="//api/name/deviceToken">- deviceToken</option>
 		
 		<option value="//api/name/didRegisterUserNotificationSettings:">- didRegisterUserNotificationSettings:</option>
 		
+		<option value="//api/name/getAttributes">- getAttributes</option>
+		
 		<option value="//api/name/getSubscriberKey">- getSubscriberKey</option>
+		
+		<option value="//api/name/getTags">- getTags</option>
 		
 		<option value="//api/name/handleLocalNotification:">- handleLocalNotification:</option>
 		
@@ -113,6 +129,8 @@
 		<option value="//api/name/isRegisteredForRemoteNotifications">- isRegisteredForRemoteNotifications</option>
 		
 		<option value="//api/name/openDirectDelegate">- openDirectDelegate</option>
+		
+		<option value="//api/name/refreshWithFetchCompletionHandler:">- refreshWithFetchCompletionHandler:</option>
 		
 		<option value="//api/name/registerDeviceToken:">- registerDeviceToken:</option>
 		
@@ -254,7 +272,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
+				<p>This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget (<b class="deprecated">Deprecated:</b><span class="deprecated"> Jan 27 2016</span>)</p>
 			</div>
 			
 		    
@@ -311,8 +329,6 @@
 				<p>This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
 
 <p>Each of the flags in the method are used to control various aspects of the MobilePush SDK. The act as global on/off switches, meaning that if you disable one here, it is off eveywhere.</p>
-
-<p>@deprecated</p>
 			</div>
 			
 
@@ -342,7 +358,7 @@
 			
 			<div class="method-subsection brief-description">
 				<p>Use this for JB4ASDK 4.0.0 and above
-This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
+This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget (<b class="deprecated">Deprecated:</b><span class="deprecated"> Jan 26 2016</span>)</p>
 			</div>
 			
 		    
@@ -397,7 +413,109 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return value Returns YES if successful or NO if failed. Do not proceed if NO is returned</p>
+				<p>Returns YES if successful or NO if failed. Do not proceed if NO is returned</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this for JB4ASDK 4.0.0 and above
+This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
+
+<p>Each of the flags in the method are used to control various aspects of the MobilePush SDK. The act as global on/off switches, meaning that if you disable one here, it is off eveywhere.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andProximityServices:andCloudPages:withPIAnalytics:error:" title="configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andProximityServices:andCloudPages:withPIAnalytics:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andProximityServices:andCloudPages:withPIAnalytics:error:">&ndash;&nbsp;configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andProximityServices:andCloudPages:withPIAnalytics:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Use this for JB4ASDK 4.0.0 and above
+This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)configureSDKWithAppID:(NSString *)<em>etAppID</em> andAccessToken:(NSString *)<em>accessToken</em> withAnalytics:(BOOL)<em>analyticsState</em> andLocationServices:(BOOL)<em>locState</em> andProximityServices:(BOOL)<em>proximityState</em> andCloudPages:(BOOL)<em>cpState</em> withPIAnalytics:(BOOL)<em>pIAnalyticsState</em> error:(NSError **)<em>configureError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>etAppID</code></th>
+						<td><p>The App ID generated by Code@ExactTarget to identify the consumer app</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>accessToken</code></th>
+						<td><p>The designed token given to you by Code@ExactTarget that allows you access to the API</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>analyticsState</code></th>
+						<td><p>Whether or not to send analytic data back to Salesforce</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>locState</code></th>
+						<td><p>Whether or not to use Location Services</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>proximityState</code></th>
+						<td><p>Whether or not to use Proximity Services. Using proximity services requires setting locState to YES</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cpState</code></th>
+						<td><p>Whether or not to use Cloud Pages</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pIAnalyticsState</code></th>
+						<td><p>Whether or not to send Web and Mobile analytic data back to Salesforce</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>configureError</code></th>
+						<td><p>NSError object describing the error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Returns YES if successful or NO if failed. Do not proceed if NO is returned</p>
 			</div>
 			
 
@@ -552,7 +670,8 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Triggers a data send to Salesforce. Mostly used internally, and rarely should be called by client code.</p>
+				<p>Triggers an immediate send of Registration data to Marketing Cloud and will wait 60 seconds to send
+for all calls made after the first call was made while the app is in foreground.</p>
 			</div>
 			
 		    
@@ -569,7 +688,11 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Triggers a data send to Salesforce. Mostly used internally, and rarely should be called by client code.</p>
+				<p>Triggers an immediate send of Registration data to Marketing Cloud and will wait 60 seconds to send
+for all calls made after the first call was made while the app is in foreground.</p>
+
+<p>This is not normally needed as each method (setTag(), setSubscriberKey(), addAttribute() etc) will trigger
+a send to the Marketing Cloud 60 seconds after the first request to change any Registration data.</p>
 			</div>
 			
 
@@ -831,11 +954,23 @@ This is the main configuration method, responsible for setting credentials neede
 
 		    
 			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>notificationSettings</code></th>
+						<td><p>a UIUserNotificationSettings class value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
 
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Returns the current UIUserNotificationSettings object</p>
+				<p>no value returned.</p>
 			</div>
 			
 
@@ -873,7 +1008,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify Salesforce that push is disabled. (<b class="deprecated">Deprecated:</b><span class="deprecated"> in IOS8 - use registerUserNotificationSettings instead</span>)</p>
+				<p>Wrapper for iOS' application:registerForRemoteNotificationTypes; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify Salesforce that push is disabled. (<b class="deprecated">Deprecated:</b><span class="deprecated"> June 4 2015</span>)</p>
 			</div>
 			
 		    
@@ -1394,9 +1529,8 @@ This is the main configuration method, responsible for setting credentials neede
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Handles a push notification received by the app when the application is already running.</p>
 
-<p>This method must be implemented in [[UIApplication sharedApplication] didReceiveRemoteNotification:userInfo].</p>
-
-<p>Sometimes, when a push comes in, the application will already be running (it happens). This method rises to the occasion of handing that notification, displaying an Alert (if the SDK is configured to do so), and calling all of the analytic methods that wouldn&rsquo;t be called otherwise.</p>
+<p>This method must be implemented in UIApplication sharedApplication didReceiveRemoteNotification:userInfo.
+Sometimes, when a push comes in, the application will already be running (it happens). This method rises to the occasion of handing that notification, displaying an Alert (if the SDK is configured to do so), and calling all of the analytic methods that wouldn&rsquo;t be called otherwise.</p>
 			</div>
 			
 
@@ -1503,7 +1637,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setSubscriberKey:(NSString *)<em>subscriberKey</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)setSubscriberKey:(NSString *)<em>subscriberKey</em></code></div>
 
 		    
 			
@@ -1523,7 +1657,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Doesn&rsquo;t return a value.</p>
+				<p>YES if set successfully</p>
 			</div>
 			
 
@@ -1533,6 +1667,10 @@ This is the main configuration method, responsible for setting credentials neede
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Accepts and sets the Subscriber Key for the device&rsquo;s user.</p>
+
+<p>Cannot be nil or blank.</p>
+
+<p>Will trim leading and trailing whitespace.</p>
 			</div>
 			
 
@@ -1612,12 +1750,12 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Adds the provided Tag (NSString) to the list of tags.</p>
+				<p>Adds the provided Tag (NSString) to the set of unique tags.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)addTag:(NSString *)<em>tag</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)addTag:(NSString *)<em>tag</em></code></div>
 
 		    
 			
@@ -1635,13 +1773,22 @@ This is the main configuration method, responsible for setting credentials neede
 			
 
 			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if added successfully.</p>
+			</div>
+			
 
 			
 
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Adds the provided Tag (NSString) to the list of tags.</p>
+				<p>Adds the provided Tag (NSString) to the set of unique tags.</p>
+
+<p>Will trim leading and trailing whitespace.</p>
+
+<p>Cannot be nil or blank.</p>
 			</div>
 			
 
@@ -1733,12 +1880,63 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns the list of tags for this device.</p>
+				<p>Returns the list of tags for this device. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Feb 29 2016</span>)</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>- (NSSet *)allTags</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>All tags associated.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the list of tags for this device.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getTags" title="getTags"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getTags">&ndash;&nbsp;getTags</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the list of tags for this device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSSet *)getTags</code></div>
 
 		    
 			
@@ -1789,7 +1987,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)addAttributeNamed:(NSString *)<em>name</em> value:(NSString *)<em>value</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)addAttributeNamed:(NSString *)<em>name</em> value:(NSString *)<em>value</em></code></div>
 
 		    
 			
@@ -1812,6 +2010,11 @@ This is the main configuration method, responsible for setting credentials neede
 			
 
 			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if added successfully</p>
+			</div>
+			
 
 			
 
@@ -1819,6 +2022,21 @@ This is the main configuration method, responsible for setting credentials neede
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Adds an attribute to the data set sent to Salesforce.</p>
+
+<p>The Attribute Name cannot be nil or blank, or one of the reserved words.</p>
+
+<p>Will trim leading and trailing whitespace from the name and value.</p>
+
+<p>The attribute must be defined within the Marketing Cloud Contact model prior to adding a value.  If the attribute does not exist within the
+Marketing Cloud Contact model, then this attribute will be accepted by the SDK, but will be ignored within the Marketing Cloud.</p>
+
+<p>If you previously added a value for the named attribute, then the value will be updated with the new value and sent to the Marketing Cloud.</p>
+
+<p>If you send in a blank value, then the value will be sent to the Marketing Cloud to remove that value from the Contact record.</p>
+
+<p>All attribute values set with this method persist through the installation of the app on your customer device.</p>
+
+<p>Note that attribute mapping is case sensitive, and spaces should be avoided when setting up new attributes in the Marketing Cloud Contact model.</p>
 			</div>
 			
 
@@ -1847,7 +2065,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Removes the provided attributef rom the data set to send to Salesforce.</p>
+				<p>Removes the provided attribute from the data set to send to Salesforce.  The value is not changed on the Marketing Cloud.</p>
 			</div>
 			
 		    
@@ -1881,7 +2099,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Removes the provided attributef rom the data set to send to Salesforce.</p>
+				<p>Removes the provided attribute from the data set to send to Salesforce.  The value is not changed on the Marketing Cloud.</p>
 			</div>
 			
 
@@ -1910,7 +2128,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns a read-only copy of the Attributes dictionary as it is right now.</p>
+				<p>Returns a read-only copy of the Attributes dictionary as it is right now. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Feb 29 2016</span>)</p>
 			</div>
 			
 		    
@@ -1949,65 +2167,9 @@ This is the main configuration method, responsible for setting credentials neede
 			
 		</div>
 	</div>
-</div>
-						</div>
-						
-
-						<a title="ETPush Convenience Methods" name="task_ETPush Convenience Methods"></a>
-						<h2 class="task-title">ETPush Convenience Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/safeDeviceIdentifier" title="safeDeviceIdentifier"></a>
-	<h3 class="method-title"><code><a href="#//api/name/safeDeviceIdentifier">+&nbsp;safeDeviceIdentifier</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Gets the Apple-safe, unique Device Identifier that ET will later use to identify the device.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (NSString *)safeDeviceIdentifier</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Gets the Apple-safe, unique Device Identifier that ET will later use to identify the device.</p>
-
-<p>Note that this method is compliant with Apple&rsquo;s compliance rules, but may not be permanent.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ETPush.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
 </div><div class="section-method">
-	<a name="//api/name/hardwareIdentifier" title="hardwareIdentifier"></a>
-	<h3 class="method-title"><code><a href="#//api/name/hardwareIdentifier">+&nbsp;hardwareIdentifier</a></code>
+	<a name="//api/name/getAttributes" title="getAttributes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAttributes">&ndash;&nbsp;getAttributes</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2017,12 +2179,12 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. Salesforce uses this data for segmentation.</p>
+				<p>Returns a read-only copy of the Attributes dictionary as it is right now.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSString *)hardwareIdentifier</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getAttributes</code></div>
 
 		    
 			
@@ -2030,7 +2192,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A string of the hardware identification.</p>
+				<p>All attributes currently set</p>
 			</div>
 			
 
@@ -2039,55 +2201,7 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. Salesforce uses this data for segmentation.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ETPush.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/isPushEnabled" title="isPushEnabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isPushEnabled">+&nbsp;isPushEnabled</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Returns the state of Push based on logic reflected at Salesforce.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (BOOL)isPushEnabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns the state of Push based on logic reflected at Salesforce.</p>
-
-<p>As of this release, Push is considered enabled if the application is able to present an alert (banner, alert) to the user per Settings. Nothing else will be considered.</p>
+				<p>Returns a read-only copy of the Attributes dictionary as it is right now.</p>
 			</div>
 			
 
@@ -2296,6 +2410,260 @@ This is the main configuration method, responsible for setting credentials neede
 			
 		</div>
 	</div>
+</div>
+						</div>
+						
+
+						<a title="ETPush Convenience Methods" name="task_ETPush Convenience Methods"></a>
+						<h2 class="task-title">ETPush Convenience Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/safeDeviceIdentifier" title="safeDeviceIdentifier"></a>
+	<h3 class="method-title"><code><a href="#//api/name/safeDeviceIdentifier">+&nbsp;safeDeviceIdentifier</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets the Apple-safe, unique Device Identifier that ET will later use to identify the device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)safeDeviceIdentifier</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gets the Apple-safe, unique Device Identifier that ET will later use to identify the device.</p>
+
+<p>Note that this method is compliant with Apple&rsquo;s compliance rules, but may not be permanent.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hardwareIdentifier" title="hardwareIdentifier"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hardwareIdentifier">+&nbsp;hardwareIdentifier</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. Salesforce uses this data for segmentation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)hardwareIdentifier</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A string of the hardware identification.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the hardware identification string, like &ldquo;iPhone1,1&rdquo;. Salesforce uses this data for segmentation.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isPushEnabled" title="isPushEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isPushEnabled">+&nbsp;isPushEnabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns whether this device can receive Push Notifications.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)isPushEnabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns whether this device can receive Push Notifications.</p>
+
+<p>Push is considered enabled if the application is able to present an alert (banner, alert, sound) to the user.  If UIUserNotificationTypeNone (ios8+) or
+UIRemoteNotificationTypeNone (iOS7) is true, then Push is disabled and this method returns false.  For iOS8+, <a href="#//api/name/isRegisteredForRemoteNotifications">isRegisteredForRemoteNotifications</a>
+must also return true.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSDKVersionName" title="getSDKVersionName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSDKVersionName">+&nbsp;getSDKVersionName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get SDK Version Name</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getSDKVersionName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get SDK Version Name</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSDKVersionCode" title="getSDKVersionCode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSDKVersionCode">+&nbsp;getSDKVersionCode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get SDK Version Code</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getSDKVersionCode</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString value.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get SDK Version Code</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div><div class="section-method">
 	<a name="//api/name/setETLoggerToRequiredState:" title="setETLoggerToRequiredState:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/setETLoggerToRequiredState:">+&nbsp;setETLoggerToRequiredState:</a></code>
@@ -2317,7 +2685,24 @@ This is the main configuration method, responsible for setting credentials neede
 
 		    
 			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>state</code></th>
+						<td><p>type BOOL value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
 
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>nothing to return.</p>
+			</div>
 			
 
 			
@@ -2343,8 +2728,8 @@ This is the main configuration method, responsible for setting credentials neede
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/ETLogger:" title="ETLogger:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/ETLogger:">+&nbsp;ETLogger:</a></code>
+	<a name="//api/name/setLoggerWithHandler:" title="setLoggerWithHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setLoggerWithHandler:">+&nbsp;setLoggerWithHandler:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2354,16 +2739,42 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			
 			<div class="method-subsection brief-description">
-				<p>To Log the string whenever [ETPush setETLoggerToState:YES]</p>
+				<p>To override the logging that the SDK does with your own logging code.  Adding this logging handler will
+replace the logs that the SDK prints to the console.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (void)ETLogger:(NSString *)<em>stringToBeLogged</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (void)setLoggerWithHandler:(void ( ^ ) ( NSString *))<em>customLogger</em></code></div>
 
 		    
 			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>customLogger</code></th>
+						<td><ul>
+<li>A completion handler that will be called each time the SDK logs to the console.  Instead of
+                     calling NSLog to log to the console, the SDK will call this customLogger and provide the String
+                     that was going to be logged.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
 
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<ul>
+<li>No value returned.</li>
+</ul>
+
+			</div>
 			
 
 			
@@ -2371,7 +2782,288 @@ This is the main configuration method, responsible for setting credentials neede
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>To Log the string whenever [ETPush setETLoggerToState:YES]</p>
+				<p>To override the logging that the SDK does with your own logging code.  Adding this logging handler will
+replace the logs that the SDK prints to the console.</p>
+
+<p>Typical uses would be to save the logs in your own logging datastore instead of printing to the console.</p>
+
+<p>NOTE: Do not base any program logic on the contents of the String received as a parameter as we do not guarantee
+the contents of a log string will remain the same from one release to another.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSDKState" title="getSDKState"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSDKState">+&nbsp;getSDKState</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Outputs a formatted, easily readable block of text describing the current status of the SDK.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getSDKState</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>JSON string with values of the current state of the SDK</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Outputs a formatted, easily readable block of text describing the current status of the SDK.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/refreshWithFetchCompletionHandler:" title="refreshWithFetchCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/refreshWithFetchCompletionHandler:">&ndash;&nbsp;refreshWithFetchCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Ask ETPush to update its data. ETPush will throttle attempts based on the time since the last time this was called.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)refreshWithFetchCompletionHandler:(void ( ^ ) ( UIBackgroundFetchResult result ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The UIBackgroundFetchResult completion handler. This method will be called with UIBackgroundFetchResultNoData if no attempt was made to update data, otherwise it will be called with UIBackgroundFetchResultNewData after the update completes. If nil is passed, then process of the completion handler must be managed by the caller.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>True if ETPush did make an attempt at updating data</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Ask ETPush to update its data. ETPush will throttle attempts based on the time since the last time this was called.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestPIRecommendations:page:error:completionHandler:" title="requestPIRecommendations:page:error:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestPIRecommendations:page:error:completionHandler:">+&nbsp;requestPIRecommendations:page:error:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)requestPIRecommendations:(NSString *)<em>mid</em> page:(NSString *)<em>page</em> error:(NSError **)<em>error</em> completionHandler:(void ( ^ ) ( NSString *result , NSError *error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mid</code></th>
+						<td><p>An identifier used to locate the application specific recommendations</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>page</code></th>
+						<td><p>A recommendations page that has been created within the Predictive Web section of the Marketing Cloud</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>A pointer to a location to store an NSError object describing any error that occurred while sanity checking the input parameters. Can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>A pointer to a user-supplied completion handler block. The completion handler will be called if requestPIRecommendations returns True. The result parameter of the completion handler will contain a JSON formatted string with the recommendations on a successfull call otherwise it will be nil and the error parameter will be filled with an NSError object describing the error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Returns T/F based on sanity checks of the input parameters. If False is returned the user completion handler will not be called.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestPIRecommendations:page:retailer:error:completionHandler:" title="requestPIRecommendations:page:retailer:error:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestPIRecommendations:page:retailer:error:completionHandler:">+&nbsp;requestPIRecommendations:page:retailer:error:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)requestPIRecommendations:(NSString *)<em>mid</em> page:(NSString *)<em>page</em> retailer:(NSString *)<em>retailer</em> error:(NSError **)<em>error</em> completionHandler:(void ( ^ ) ( NSString *result , NSError *error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mid</code></th>
+						<td><p>An identifier used to locate the application specific recommendations</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>page</code></th>
+						<td><p>A recommendations page that has been created within the Predictive Web section of the Marketing Cloud</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retailer</code></th>
+						<td><p>An identifier used to locate the application specific recommendations</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>A pointer to a location to store an NSError object describing any error that occurred while sanity checking the input parameters. Can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>A pointer to a user-supplied completion handler block. The completion handler will be called if requestPIRecommendations returns True. The result parameter of the completion handler will contain a JSON formatted string with the recommendations on a successfull call otherwise it will be nil and the error parameter will be filled with an NSError object describing the error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Returns T/F based on sanity checks of the input parameters. If False is returned the user completion handler will not be called.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.</p>
 			</div>
 			
 
@@ -2403,10 +3095,10 @@ This is the main configuration method, responsible for setting credentials neede
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Salesforce Marketing Cloud. All rights reserved. Updated: 2016-01-15</p>
+						<p class="copyright">Copyright &copy; 2016 Marketing Cloud. All rights reserved. Updated: 2016-03-17</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

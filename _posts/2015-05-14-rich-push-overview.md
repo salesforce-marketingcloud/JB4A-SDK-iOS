@@ -6,11 +6,11 @@ category: rich-push
 date: 2015-05-14 12:00:00
 order: 1
 ---
-This section contains information on implementing cloud page functionality in your mobile app. Cloud Pages allow you to send either a page created in the CloudPage app to an Inbox configured in your app or a combination notification/CloudPage as an alert.
+This section contains information on implementing CloudPage functionality in your mobile app. CloudPages allow you to send either a CloudPage in the payload of a notification (CloudPage+Alert) or as a page to be displayed in an inbox configured in your app.
 
-Note that the Salesforce account using this functionality must have access to both MobilePush and CloudPages in order to successfully create and send cloud page alerts.
+The Marketing Cloud must enable the account using this functionality with access to both MobilePush and CloudPages to successfully create and send CloudPage alerts.
 
-A notification/CloudPage is shown by the SDK using the ETLandingPage class when the message is tapped.  
+For notifications that are sent that include a CloudPage URL (CloudPage+Alert), the JB4A SDK will open this URL when the message is tapped using the ETWKLandingPagePresenter view controller.  You must include the WebKit.framework in Link Binary With Libraries section of the Build Phases configuration in Xcode.  
 
-For CloudPage only messages that are sent to an Inbox configured in your app, new messages are downloaded from the Salesforce Marketing Cloud each time your app is brought into the foreground.  These messages are then saved in a view which you must configure in your app to display the CloudPage content.
+For [CloudPage-only messages]({{ site.baseurl }}/rich-push/rich-push-inbox.html) that are displayed in an inbox configured in your app, the app downloads new messages from the Marketing Cloud each time the app enters the foreground. The app saves these messages in a view. You must configure this view in your app to display the CloudPage content.
 

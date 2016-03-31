@@ -8,15 +8,7 @@ order: 3
 ---
 For CloudPage-only Messages, the JB4A SDK will download new messages each time your app comes into the foreground.
 
-Your app must be configured to display these messages. The SDK provides an interface for you to use to allow your customers to view CloudPage-only messages sent from the Salesforce Marketing Cloud directly to the app. The inbox in the app displays these messages, and the app displays no alert for these messages.
+You must configure your app to display these messages. The SDK provides a TableView Datasource for you to use in a ViewController to display the CloudPage-only messages sent from the Marketing Cloud. The ViewController you create will essentially create an inbox in your app to display these messages.  When these messages are downloaded, they are added to the Datasource only.  No alerts for these messages are displayed.
 
-~~~ 
-    /*
-     * ET_NOTE: instantiate the data source, set it to be our tableView's data source, then set the inbox tableview on our data source. It is important to call the setInboxTableView: method because the SDK will need to reload your tableview when a new cloud page is received
-     */
-    self.dataSource = [[PUDCloudPageInboxDataSource alloc] init];
-    self.inboxTableView.dataSource = self.dataSource;
-    [self.dataSource setInboxTableView:self.inboxTableView];
-~~~ 
+<script src="https://gist.github.com/sfmc-mobilepushsdk/f278db5683b7aec102f3.js"></script>
 
-Review the <a href="https://github.com/ExactTarget/JB4A-SDK-iOS/tree/master/JB4A-SDK-Explorer" target="_blank">Journey Builder for Apps iOS SDK Explorer</a> within the Journey Builder for Apps iOS SDK public GitHub repository. The app provides a full sample of a CloudPage Inbox within the PUDCloudPageInboxViewController.

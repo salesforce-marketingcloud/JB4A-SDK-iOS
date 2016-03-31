@@ -6,28 +6,28 @@ category: features
 date: 2015-05-14 12:00:00
 order: 6
 ---
-Follow the steps below to implement ET and/or Mobile analytics in your mobile app:
+Follow the steps on this page to implement Analytics and Web and Mobile analytics in your mobile app:
 
-ET Analytics
+### Analytics
 
-If you wish to implement ETAnalytics for analytical information on your app, pass a YES value for the withAnalytics parameter.
+If you wish to implement Analytics, pass a YES value for the withAnalytics parameter.  If you also wish to implement Web and Mobile Analytics, pass a YES value for the withPIAnalytics parameter.
 
-~~~ 
-    successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug
-                                              andAccessToken:kETAccessToken_Debug
-                                               withAnalytics:YES
-                                         andLocationServices:NO
-                                               andCloudPages:NO
-                                             withPIAnalytics:YES
-                                                       error:&error];
-~~~ 
+<script src="https://gist.github.com/sfmc-mobilepushsdk/57757242e4d76abee281.js"></script>
 
-1. To see your new Web and Mobile Analytics, open the Web and Mobile Analytics app within the Marketing Cloud: 
+### Web and Mobile Analytics
+
+Call the following method to implement page view analytics in your app.  These analytics are sent to the Web and Mobile Analytics app in the Marketing Cloud.
+
+<script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
+
+As well as providing the ability to track page views within your app, the Web and Mobile Analytics app will provide information about the time your customers are spending in your app.  To view this information in the Web and Mobile App, following these steps to configure the Web and Mobile Analytic app within your Marketing Cloud account.
+
+1. 	To see your new Web and Mobile Analytics information sent by the SDK, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud: 
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/wama_menu.png" /><br/>
-<br/>
+<br/><br/>
 
-1. Then check the checkbox agreeing to the Terms and Conditions to get started:
+1. 	Then check the checkbox agreeing to the Terms and Conditions to get started:
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/wama_t_and_c.png" /><br/>
 <br/>
