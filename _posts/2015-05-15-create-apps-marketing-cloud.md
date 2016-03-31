@@ -25,4 +25,4 @@ Follow these steps to connect this MobilePush app to the correct Marketing Cloud
 1. Click **Integrate**.<br/>
     
     > The popup window will disappear.
-1. When this popup disappears, add the provisioning information (.p12 files) you created in the Apple Dev Center.  See [Add Provisioning to App Center App]({{ site.baseurl }}/create-apps/create-apps-provisioning.html).
+1. When this popup disappears, add the provisioning information (.p12 files) you created in the Apple Member Center.  See [Add Provisioning to App Center App]({{ site.baseurl }}/create-apps/create-apps-provisioning.html).
