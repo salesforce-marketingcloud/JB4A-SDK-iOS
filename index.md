@@ -97,20 +97,7 @@ The latest configureSDKWithAppID has some additional parameters and can be found
 
 You will need to update your configSDK registration call to now read: 
 
-~~~
-
-BOOL successful = NO;
-
-successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Prod
-                                              andAccessToken:kETAccessToken_Prod
-                                               withAnalytics:YES
-                                         andLocationServices:YES
-                                               andCloudPages:YES
-                                             withPIAnalytics:YES
-                                                       error:&error];
-
-~~~
-
+<script src="https://gist.github.com/sfmc-mobilepushsdk/71cf71032cfe92c06d76bf5f894cb115.js"></script>
 
 <!--**Recommended Coding Changes** -->
 
