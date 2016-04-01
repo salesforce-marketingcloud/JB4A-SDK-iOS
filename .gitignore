@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-*.sw?
-_site
-_pages
-=======
 # Xcode
 .DS_Store
 build/
@@ -21,4 +16,5 @@ profile
 *.moved-aside
 DerivedData
 .idea/
->>>>>>> origin/master
+_site
+_pages
