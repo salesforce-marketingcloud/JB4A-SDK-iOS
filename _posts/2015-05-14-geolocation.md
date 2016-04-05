@@ -9,7 +9,7 @@ order: 2
 
 To implement location services, pass a YES value for the andLocationServices parameter and use ETLocationManager to monitor location and geofence for a user.
 
-<script src="https://gist.github.com/sfmc-mobilepushsdk/97f89bf21b6dd92929b1.js"></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/16b7d79c4e246b5d64cc92e2f88317c4.js"></script>
 
 > If you are a Beacon Beta Tester and you set andProximityServices to YES, then you must have andLocationServices set to YES as well.
 
