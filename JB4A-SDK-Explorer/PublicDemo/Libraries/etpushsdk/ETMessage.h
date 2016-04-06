@@ -351,6 +351,13 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 +(BOOL)invalidateAllMessagesForType:(MobilePushMessageType)type;
 
 /**
+ Marks all messages for a given content type as inactive. This is done prior to processing new messages just received from Salesforce.
+ @param type The MobilePushContentType you wish to invalidate
+ @return T/F if the invalidation query worked
+ */
++(BOOL)invalidateAllMessagesForContentType:(MobilePushContentType)type;
+
+/**
  ETMessage equality. Since object equality won't always work, this compares messageIdentifiers to determine equality.
  @param message The ETMessage to compare self to
  @return T/F if the messages are equal.
