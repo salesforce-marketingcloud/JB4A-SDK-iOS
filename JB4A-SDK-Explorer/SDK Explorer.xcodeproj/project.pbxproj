@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A9D019F11C483136006C57DF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D019F01C483136006C57DF /* WebKit.framework */; };
-		A9D92BE41C99F0D50050408A /* libJB4ASDK-4.2.0.160200009.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D92BE31C99F0D50050408A /* libJB4ASDK-4.2.0.160200009.a */; };
 		A9F3E8791C459703005374AF /* PUDServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D71546A19183F820040A1CC /* PUDServiceProvider.m */; };
 		A9F3E87A1C459703005374AF /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D57231919377AA5007B1464 /* AFNetworkReachabilityManager.m */; };
 		A9F3E87B1C459703005374AF /* PUDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5723581937E19F007B1464 /* PUDHomeViewController.m */; };
@@ -66,6 +65,7 @@
 		A9F3E8B41C459703005374AF /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A9F3E8B51C459703005374AF /* fre3of9x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F3192A572F00128F29 /* fre3of9x.ttf */; };
 		A9F3E8B61C459703005374AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DE006191051BD00B65B6F /* Main.storyboard */; };
+		EF56438F1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF56438E1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,7 +166,6 @@
 		4DCFB9391922842300BF96BB /* custom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = custom.caf; sourceTree = "<group>"; };
 		4DD373E819632DCF0005E6FF /* PUDCloudPageInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDCloudPageInboxViewController.h; sourceTree = "<group>"; };
 		4DD373E919632DCF0005E6FF /* PUDCloudPageInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PUDCloudPageInboxViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		4DDDC872197D9C86009542E9 /* gibson.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = gibson.gpx; path = ../gibson.gpx; sourceTree = "<group>"; };
 		4DEB0ADD195DC22900790CEF /* PUDAppSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PUDAppSettingConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4DEB0ADE195DC22900790CEF /* PUDAppSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PUDAppSettingConstants.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4DEC6D12196CDD4F00322A99 /* PUDCloudPageInboxDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDCloudPageInboxDataSource.h; sourceTree = "<group>"; };
@@ -180,9 +179,6 @@
 		A99812E219B926DF00EA36EF /* PUDEulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDEulaViewController.h; sourceTree = "<group>"; };
 		A99812E319B926DF00EA36EF /* PUDEulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PUDEulaViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A99F04071C515007009AE9DC /* SDKX-Prod_DevAPNS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDKX-Prod_DevAPNS-Info.plist"; sourceTree = SOURCE_ROOT; };
-		A99F04081C515007009AE9DC /* SDKX-Prod_ProdAPNS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDKX-Prod_ProdAPNS-Info.plist"; sourceTree = SOURCE_ROOT; };
-		A99F04091C515007009AE9DC /* SDKX-QA1S1_ProdAPNS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDKX-QA1S1_ProdAPNS-Info.plist"; sourceTree = SOURCE_ROOT; };
-		A99F040A1C515007009AE9DC /* SDKX-QA3S1_ProdAPNS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDKX-QA3S1_ProdAPNS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A9D019F01C483136006C57DF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A9D92BE31C99F0D50050408A /* libJB4ASDK-4.2.0.160200009.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libJB4ASDK-4.2.0.160200009.a"; path = "PublicDemo/Libraries/etpushsdk/libJB4ASDK-4.2.0.160200009.a"; sourceTree = "<group>"; };
 		A9F3E8BC1C459703005374AF /* SDKX-Prod_DevAPNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDKX-Prod_DevAPNS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +194,7 @@
 		EF31AEE21AD4677000EC3896 /* SupportInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportInfo.m; sourceTree = "<group>"; };
 		EF32D54E1ADDA2870021CBE6 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		EF490F3C1ACDE57F002537E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF56438E1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libJB4ASDK-4.2.1.160200010.a"; path = "PublicDemo/Libraries/etpushsdk/libJB4ASDK-4.2.1.160200010.a"; sourceTree = "<group>"; };
 		EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductionTestImport.pushconfig; sourceTree = "<group>"; };
 		EF7645DB1C235C4800C1FE42 /* ETAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAnalytics.h; sourceTree = "<group>"; };
 		EF7645DC1C235C4800C1FE42 /* ETGenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETGenericUpdate.h; sourceTree = "<group>"; };
@@ -212,12 +209,10 @@
 		EF9AF1571B750DC400C0F6CE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EFD8E4771AE045AF004F315E /* com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata"; sourceTree = "<group>"; };
 		EFE5F5921BBC641C00195351 /* CheckRestoreFromUnencryptedBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckRestoreFromUnencryptedBackup.m; sourceTree = "<group>"; };
-		EFEBB4DA1BB0957E003EB4CD /* Sahm's Tavern to Indianapolis Motor Speedway.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sahm's Tavern to Indianapolis Motor Speedway.gpx"; sourceTree = "<group>"; };
 		EFEBB4DC1BB184E4003EB4CD /* CityMarket.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CityMarket.gpx; sourceTree = "<group>"; };
 		EFEBB4DD1BB184E4003EB4CD /* iGoDigital.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iGoDigital.gpx; sourceTree = "<group>"; };
 		EFEBB4DE1BB184E4003EB4CD /* IUPUI.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = IUPUI.gpx; sourceTree = "<group>"; };
 		EFEBB4DF1BB184E4003EB4CD /* MonumentCircle.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MonumentCircle.gpx; sourceTree = "<group>"; };
-		EFEBB4E41BB19333003EB4CD /* Gibson to Exit137.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Gibson to Exit137.gpx"; sourceTree = "<group>"; };
 		EFF0A8811AF152D000138F85 /* CHANGES.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES.txt; sourceTree = "<group>"; };
 		EFF0A8821AF152D000138F85 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EFF0A8831AF152D000138F85 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -228,7 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D92BE41C99F0D50050408A /* libJB4ASDK-4.2.0.160200009.a in Frameworks */,
+				EF56438F1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a in Frameworks */,
 				A9D019F11C483136006C57DF /* WebKit.framework in Frameworks */,
 				A9F3E8AA1C459703005374AF /* QuartzCore.framework in Frameworks */,
 				A9F3E8AB1C459703005374AF /* MobileCoreServices.framework in Frameworks */,
@@ -263,6 +258,7 @@
 		4D2DDFF3191051BD00B65B6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF56438E1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a */,
 				A9D92BE31C99F0D50050408A /* libJB4ASDK-4.2.0.160200009.a */,
 				A91995F41C936456001A38A6 /* libJB4ASDK-4.2.0.160200008.a */,
 				A91995F21C9338D6001A38A6 /* libJB4ASDK-4.2.0.MOBILESDK-737.a */,
@@ -302,22 +298,16 @@
 			isa = PBXGroup;
 			children = (
 				A99F04071C515007009AE9DC /* SDKX-Prod_DevAPNS-Info.plist */,
-				A99F04081C515007009AE9DC /* SDKX-Prod_ProdAPNS-Info.plist */,
-				A99F04091C515007009AE9DC /* SDKX-QA1S1_ProdAPNS-Info.plist */,
-				A99F040A1C515007009AE9DC /* SDKX-QA3S1_ProdAPNS-Info.plist */,
 				EFEBB4DC1BB184E4003EB4CD /* CityMarket.gpx */,
 				EFEBB4DD1BB184E4003EB4CD /* iGoDigital.gpx */,
 				EFEBB4DE1BB184E4003EB4CD /* IUPUI.gpx */,
 				EFEBB4DF1BB184E4003EB4CD /* MonumentCircle.gpx */,
-				EFEBB4DA1BB0957E003EB4CD /* Sahm's Tavern to Indianapolis Motor Speedway.gpx */,
 				EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */,
-				4DDDC872197D9C86009542E9 /* gibson.gpx */,
 				4DCFB9391922842300BF96BB /* custom.caf */,
 				4DC4D6F3192A572F00128F29 /* fre3of9x.ttf */,
 				4D2DDFFD191051BD00B65B6F /* InfoPlist.strings */,
 				4D2DE000191051BD00B65B6F /* main.m */,
 				4D2DE002191051BD00B65B6F /* SDK Explorer-Prefix.pch */,
-				EFEBB4E41BB19333003EB4CD /* Gibson to Exit137.gpx */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
