@@ -24,6 +24,10 @@ In order to use the SDK in your Mobile app, complete the steps below to configur
 
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/346819617929db86b842.js"></script>
 
+1.	In **App Settings**, set the **Push Notifications** switch to **ON**. 
+<br/>
+ <img class="img-responsive" src="{{ site.baseurl }}/assets/pushNotifications.png" /><br/>
+<br/>
 1.  Determine whether you need to implement any of the following keys to your applications plist file:
 
 	* "App downloads content from the network" is required to perform a Background App Refresh periodically for [regions and messages]({{ site.baseurl }}/location/geolocation.html#plist).
