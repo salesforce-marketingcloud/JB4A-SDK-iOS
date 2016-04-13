@@ -24,16 +24,7 @@ Follow the steps below to create and send silent push messages:
 1. Include AMPscript in the **messageText** property as a placeholder for the overriden text. For example, you can include the value %%[]%%.
 1. Use the sample payload below as a model for your own message:
 
-~~~
-
-Content-Type: application/json
-{
-    "Override": true,
-    "MessageText":"%%[]%%",
-    "SendTime": "2012-10-31 09:00",
-     "content-available":1
-}
-~~~
+<script src="https://gist.github.com/sfmc-mobilepushsdk/4f4ab7311a39657e9356.js"></script>
 
 Note that you cannot use badge count or sound as part of the message. Once you create the original message, you can pass text to the message using subsequent messages as part of the **Override** value.
 
