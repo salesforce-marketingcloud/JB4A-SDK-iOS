@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/ExactTargetOpenDirectDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/ExactTargetOpenDirectDelegate</TokenIdentifier>
+			<Abstract type="html">Supporting protocol for OpenDirect, part of the Salesforce 2013-02 release.</Abstract>
+			<DeclaredIn>ETPush.h</DeclaredIn>
+            
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ExactTargetOpenDirectDelegate/didReceiveOpenDirectMessageWithContents:</TokenIdentifier>
+			<Abstract type="html">Method called when an OpenDirect payload is received from MobilePush.</Abstract>
+			<DeclaredIn>ETPush.h</DeclaredIn>
+			
+			<Declaration>- (void)didReceiveOpenDirectMessageWithContents:(NSString *)payload</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>payload</Name>
+					<Abstract type="html">value NSString. The contents of the payload as received from MobilePush.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Doesn&apos;t return a value.</Abstract></ReturnValue>
+			<Anchor>//api/name/didReceiveOpenDirectMessageWithContents:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ExactTargetOpenDirectDelegate/shouldDeliverOpenDirectMessageIfAppIsRunning</TokenIdentifier>
+			<Abstract type="html">Allows you to define the behavior of OpenDirect based on application state.</Abstract>
+			<DeclaredIn>ETPush.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)shouldDeliverOpenDirectMessageIfAppIsRunning</Declaration>
+			
+			<ReturnValue><Abstract type="html">BOOL representing whether or not you want action to be taken.</Abstract></ReturnValue>
+			<Anchor>//api/name/shouldDeliverOpenDirectMessageIfAppIsRunning</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

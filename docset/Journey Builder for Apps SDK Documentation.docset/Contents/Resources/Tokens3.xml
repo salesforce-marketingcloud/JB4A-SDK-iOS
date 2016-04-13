@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ETLandingPagePresenter.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ETLandingPagePresenter</TokenIdentifier>
+			<Abstract type="html">This is a helper class that shows webpages. These come down in several forms - sometimes a CloudPage, sometimes something from OpenDirect - and this guy shows them. It&apos;s a pretty simple class that pops up a view with a toolbar, shows a webpage, and waits to be dismissed.</Abstract>
+			<DeclaredIn>ETLandingPagePresenter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ETLandingPagePresenter/setLandingPagePath:</TokenIdentifier>
+			<Abstract type="html">Don&apos;t let the name fool you - this can be any URL, not just a landing page. It will eventually be converted to an NSURL and displayed.</Abstract>
+			<DeclaredIn>ETLandingPagePresenter.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *landingPagePath</Declaration>
+			
+			
+			<Anchor>//api/name/landingPagePath</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ETLandingPagePresenter/landingPagePath</TokenIdentifier>
+			<Abstract type="html">Don&apos;t let the name fool you - this can be any URL, not just a landing page. It will eventually be converted to an NSURL and displayed.</Abstract>
+			<DeclaredIn>ETLandingPagePresenter.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *landingPagePath</Declaration>
+			
+			
+			<Anchor>//api/name/landingPagePath</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ETLandingPagePresenter/landingPagePath</TokenIdentifier>
+			<Abstract type="html">Don&apos;t let the name fool you - this can be any URL, not just a landing page. It will eventually be converted to an NSURL and displayed.</Abstract>
+			<DeclaredIn>ETLandingPagePresenter.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *landingPagePath</Declaration>
+			
+			
+			<Anchor>//api/name/landingPagePath</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ETLandingPagePresenter/initForLandingPageAt:</TokenIdentifier>
+			<Abstract type="html">A helper designated initializer that takes the landing page as a string.</Abstract>
+			<DeclaredIn>ETLandingPagePresenter.h</DeclaredIn>
+			
+			<Declaration>- (id)initForLandingPageAt:(NSString *)landingPage</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>landingPage</Name>
+					<Abstract type="html">a NSString value.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">id value. A ETLandingPagePresenter instance.</Abstract></ReturnValue>
+			<Anchor>//api/name/initForLandingPageAt:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ETLandingPagePresenter/initForLandingPageAtWithURL:</TokenIdentifier>
+			<Abstract type="html">Another helper that takes it in NSURL form. We&apos;re not picky. It&apos;d be cool of ObjC did method overloading, though.</Abstract>
+			<DeclaredIn>ETLandingPagePresenter.h</DeclaredIn>
+			
+			<Declaration>- (id)initForLandingPageAtWithURL:(NSURL *)landingPage</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>landingPage</Name>
+					<Abstract type="html">a NSURL value.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">id value. A ETLandingPagePresenter instance.</Abstract></ReturnValue>
+			<Anchor>//api/name/initForLandingPageAtWithURL:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
