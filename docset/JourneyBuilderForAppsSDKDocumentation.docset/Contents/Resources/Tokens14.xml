@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/LocationUpdateAppState.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/LocationUpdateAppState</TokenIdentifier>
+			<Abstract type="html">Local definitions of the LocationUpdateAppState enumeration.</Abstract>
+			<DeclaredIn>ETLocationManager.h</DeclaredIn>
+            
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/LocationUpdateAppStateBackground</TokenIdentifier>
+            <Abstract type="html">LocationUpdateAppStateBackground</Abstract>
+            <Declaration>LocationUpdateAppStateBackground</Declaration>
+            
+            <DeclaredIn>ETLocationManager.h</DeclaredIn>
+            
+            <NodeRef refid="14"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/LocationUpdateAppStateForeground</TokenIdentifier>
+            <Abstract type="html">LocationUpdateAppStateForeground</Abstract>
+            <Declaration>LocationUpdateAppStateForeground</Declaration>
+            
+            <DeclaredIn>ETLocationManager.h</DeclaredIn>
+            
+            <NodeRef refid="14"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>
