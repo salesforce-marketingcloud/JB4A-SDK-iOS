@@ -14,3 +14,6 @@ Download a [docset]({{ site.baseurl }}/docset/JourneyBuilderForAppsSDKDocumentat
 ```
 ~/Library/Developer/Shared/Documentation/DocSets
 ```
+<br />
+<br />
+Performing this action makes this documentation available within Xcode under **Documents and API Reference** while offline.
