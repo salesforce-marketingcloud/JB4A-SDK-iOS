@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/MobilePushContentType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/MobilePushContentType</TokenIdentifier>
+			<Abstract type="html">Bitmask of features that a message has. This is the representation of Push (AlertMessage), Push+Page (AlertMessage + Page), Page Only (Page) in the MobilePush UI.</Abstract>
+			<DeclaredIn>ETMessage.h</DeclaredIn>
+            
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushContentTypeNone</TokenIdentifier>
+            <Abstract type="html">Unknown</Abstract>
+            <Declaration>MobilePushContentTypeNone</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="16"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushContentTypeAlertMessage</TokenIdentifier>
+            <Abstract type="html">Push Message</Abstract>
+            <Declaration>MobilePushContentTypeAlertMessage</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="16"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushContentTypePage</TokenIdentifier>
+            <Abstract type="html">CloudPage</Abstract>
+            <Declaration>MobilePushContentTypePage</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="16"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

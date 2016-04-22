@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/MobilePushMessageFrequencyUnit.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/MobilePushMessageFrequencyUnit</TokenIdentifier>
+			<Abstract type="html">Time Unit enumeration for Message limiting.</Abstract>
+			<DeclaredIn>ETMessage.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushMessageFrequencyUnitNone</TokenIdentifier>
+            <Abstract type="html">Unknown</Abstract>
+            <Declaration>MobilePushMessageFrequencyUnitNone</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushMessageFrequencyUnitYear</TokenIdentifier>
+            <Abstract type="html">Year</Abstract>
+            <Declaration>MobilePushMessageFrequencyUnitYear</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushMessageFrequencyUnitMonth</TokenIdentifier>
+            <Abstract type="html">Month</Abstract>
+            <Declaration>MobilePushMessageFrequencyUnitMonth</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushMessageFrequencyUnitWeek</TokenIdentifier>
+            <Abstract type="html">Week</Abstract>
+            <Declaration>MobilePushMessageFrequencyUnitWeek</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushMessageFrequencyUnitDay</TokenIdentifier>
+            <Abstract type="html">Day</Abstract>
+            <Declaration>MobilePushMessageFrequencyUnitDay</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MobilePushMessageFrequencyUnitHour</TokenIdentifier>
+            <Abstract type="html">Hour</Abstract>
+            <Declaration>MobilePushMessageFrequencyUnitHour</Declaration>
+            
+            <DeclaredIn>ETMessage.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>
