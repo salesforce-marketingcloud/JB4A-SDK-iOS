@@ -16,7 +16,24 @@ Use the JB4A iOS SDK with iOS versions 7 or later.
 
 ## Release History
 
-For releases prior to v4.2.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.1.0/" target="_blank">Prior Release Documentation</a>
+For releases prior to v4.2.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.2.0/" target="_blank">Prior Release Documentation</a>
+
+#### Version 4.3.0
+_Released May 2 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
+
+* MOBILESDK-371 - Remove deprecated functions from public interfaces.
+* MOBILESDK-379 - Adjust iOS to be Swift compatible.
+* MOBILESDK-604 - Create Event Bus.
+* MOBILESDK-711 - Cloud Page sync for iOS. Cloud pages removed from web app are also removed from SDK.
+* MOBILESDK-779 - Include Appledocs docset file with release code and documentation.
+* MOBILESDK-790 - Inaccurate horizontal accuracy may prevent location downloads from occuring.
+* MOBILESDK-821 - Reusing a beacon with the same UUID/Major/Minor will result in lookup errors in the SDK.
+* MOBILESDK-822 - Do not display geofence or beacon message with an empty alert.
+* MOBILESDK-830 - Getting OpenDirect delegate crashes app unless has been set.
+* MOBILESDK-832 - Add missing fields to PiWama Analytics.
+* MOBILESDK-829 - Implement retry logic for beacons, cloudpages and geofences.
+* MOBILESDK-848 - Implement bitcode enabled.
+* MOBILESDK-851 - Once a day updates should renew the location fix before getting data.
 
 #### Version 4.2.1
 _Released April 06 2016, correlating to the Marketing Cloud 2016-02.1 Release_<br/>
