@@ -26,7 +26,7 @@ $ sudo gem install cocoapods
 In your project directory (the directory containing your *.xcodeproj file), create a plain text file named Podfile (without any file extension). Open your Podfile in a text editor and add these two lines:<br/>
 
 ```
-https://github.com/CocoaPods/Specs.git
+source 'https://github.com/CocoaPods/Specs.git'
 pod 'JB4ASDK'
 ```
 
