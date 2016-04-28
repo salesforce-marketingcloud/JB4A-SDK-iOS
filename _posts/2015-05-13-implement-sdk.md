@@ -42,7 +42,7 @@ Open up *.xcworkspace with Xcode and start using the SDK.
 Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/><br/>
 
 
-<h4>Configuring your SDK in your app.</h4>
+<h5>Configuring the SDK with header files and static library.</h5>
 The following are the list of steps to configure the SDK for your app.<br/>
 
 
