@@ -6,28 +6,35 @@ category: sdk-implementation
 date: 2015-05-14 12:00:00
 order: 1
 ---
-In order to use the SDK in your Mobile app, complete the steps below to configure the SDK for your app. Once this process is completed, and you run your first test, the SDK connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/create-apps/create-apps-overview.html).<br/><br/>
+In order to use the SDK in your Mobile app, complete the steps below to configure the SDK for your app. Once you complete this process and run your first test, the SDK connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/create-apps/create-apps-overview.html).<br/><br/>
 
 <h4>Importing the JB4ASDK</h4>
-There are two ways to import the JB4ASDK for iOS into your project:
+Use one of these two ways to import the JB4ASDK for iOS into your project:
 
-* CocoaPods
-* Static Library
+1.	CocoaPods
+1.	Static Library
 
-You should use one of these two ways to import the JB4ASDK but not both.
+Only use one of these two ways to import the JB4ASDK - not both.
 
-The JB4ASDK for iOS is available through CocoaPods. If you have not installed CocoaPods, install it by running the command:<br/>
+You can obtain the JB4ASDK for iOS through CocoaPods. Install CocoaPods by running the command:<br/>
 
-<i>$ sudo gem install cocoapods</i><br/>
+```
+$ sudo gem install cocoapods
+```
+<br/>
 
-In your project directory (the directory where your *.xcodeproj file is), create a plain text file named Podfile (without any file extension), open it in a text editor and add the two lines below:<br/>
+In your project directory (the directory containing your *.xcodeproj file), create a plain text file named Podfile (without any file extension). Open your Podfile in a text editor and add these two lines:<br/>
 
-<i>source 'https://github.com/CocoaPods/Specs.git'<br/>
-pod 'JB4ASDK'</i>
+```
+<source 'https://github.com/CocoaPods/Specs.git'<br/>
+pod 'JB4ASDK'
+```
 
-Save the file. Then run the following command:<br/>
+Save the file, hen run this command:<br/>
 
-<i>$ pod install</i>
+```
+$ pod install
+```
 
 Open up *.xcworkspace with Xcode and start using the SDK.
 
