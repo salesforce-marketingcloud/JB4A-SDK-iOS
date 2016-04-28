@@ -29,9 +29,9 @@ In order to use the SDK in your Mobile app, complete the steps below to configur
  <img class="img-responsive" src="{{ site.baseurl }}/assets/pushNotifications.png" /><br/>
 <br/>
 
-Note that calling didReceiveLocalNotifcation on an app in the foreground of a mobile device will display a notification in the Apple Notification Center, but the mobile device will not provide a visibile or audible notification. Use an AlertController to display a message regarding the new notification. If you choose to display an alert, ensure that you clear the Apple Notification Center upon display of the alert.
+	Note that calling didReceiveLocalNotifcation on an app in the foreground of a mobile device will display a notification in the Apple Notification Center, but the mobile device will not provide a visibile or audible notification. Use an AlertController to display a message regarding the new notification. If you choose to display an alert, ensure that you clear the Apple Notification Center upon display of the alert.
 
-You can also call didReceiveRemoveNotification for an active app in the foreground of a mobile device. In this case, the app will not display an alert in the Apple Notification Center or provide a visible or audible notification. Decide whether to display an alert to the user upon receipt of the notification in this case.
+	You can also call didReceiveRemoveNotification for an active app in the foreground of a mobile device. In this case, the app will not display an alert in the Apple Notification Center or provide a visible or audible notification. Decide whether to display an alert to the user upon receipt of the notification in this case.
 
 1.  Determine whether you need to implement any of the following keys to your applications plist file:
 
