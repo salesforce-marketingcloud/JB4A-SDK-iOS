@@ -11,11 +11,12 @@ In order to use the SDK in your Mobile app, complete the steps below to configur
 <h4>Importing the JB4ASDK</h4>
 There are two ways to import the JB4ASDK for iOS into your project:
 
-* CocoaPods
-* Static Library
+1.  CocoaPods
+1.  Static Library
 
-You should use one of these two ways to import the JB4ASDK but not both.
+You should use one of these two ways to import the JB4ASDK but not both.<br/><br/>
 
+<h5>Configuring the SDK with CocoaPods</h5>
 The JB4ASDK for iOS is available through CocoaPods. If you have not installed CocoaPods, install it by running the command:<br/>
 
 <i>$ sudo gem install cocoapods</i><br/>
@@ -35,7 +36,7 @@ Open up *.xcworkspace with Xcode and start using the SDK.
 Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/><br/>
 
 
-<h4>Configuring your SDK in your app.</h4>
+<h5>Configuring the SDK with header files and static library.</h5>
 The following are the list of steps to configure the SDK for your app.<br/>
 
 
