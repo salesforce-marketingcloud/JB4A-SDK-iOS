@@ -21,6 +21,10 @@ You can override this functionality, by implementing the ExactTargetOpenDirectDe
 
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/e3dc039e860b3a3448da.js"></script>
 
+1. Set the delegate to your class.
+
+    <script src="https://gist.github.com/cctman/afedad34e7a8cd9c8c59e2b5d4f611af.js"></script>
+
 1.	Implement the delegate method that will allow you to handle the open direct URL with your own code.  This delegate method will be called when a notification is tapped that has an OpenDirect URL in the payload.
 
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/f63fdac81f45a365c258.js"></script>
