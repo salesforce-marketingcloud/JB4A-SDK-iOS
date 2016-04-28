@@ -38,13 +38,12 @@ $ pod install
 
 Open up *.xcworkspace with Xcode and start using the SDK.
 
-<i>Note:</i>
-Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/><br/>
+> Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/><br/>
 
 
-<h5>Configuring the SDK with header files and static library.</h5>
-The following are the list of steps to configure the SDK for your app.<br/>
+<h4>Configuring the SDK with header files and static library</h4>
 
+Follow these steps to configure the SDK for your app.<br/>
 
 1.  In your app development environment, copy the libJB4ASDK-*.a and the header files into your project.
 <br/>
@@ -84,6 +83,6 @@ You can now deploy and test your app!
 > You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.<br/><br/>
 
 <h4>Getting Started with Swift</h4>
-Create an Objective-C bridging header file using Xcode or you can use the provided bridging header JB4ASDK-Bridging-Header.h as a starting point. If creating your own be sure to copy the contents of JB4ASDK-Bridging-Header.h into your bridging header.
+Create an Objective-C bridging header file using Xcode. Ensure you copy the contents of JB4ASDK-Bridging-Header.h into your bridging header. You can also use the provided bridging header JB4ASDK-Bridging-Header.h as a starting point.
 
-From Your Target > Build Settings > Objective-C Bridging Header, point Objective-C Bridging Header to the bridging header you just created.<br/><br/>
+From Objective-C Bridging Header (under Build Settings in Your Target), point Objective-C Bridging Header to the bridging header you just created.<br/><br/>
