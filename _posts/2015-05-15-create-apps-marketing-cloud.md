@@ -19,7 +19,7 @@ Follow these steps to connect this MobilePush app to the correct Marketing Cloud
 
     > A popup window (pictured below) will appear.
 
-    <img class="img-responsive" src="{{ site.baseurl }}/assets/AccountIntegration.png" />
+    <img class="img-responsive" src="{{ site.baseurl }}/assets/AccountIntegration05032016.png" />
 1. If you use an Enterprise 2.0 account, ensure that you select the correct business unit for your app integration.<br/>
 
 1. Click **Integrate**.<br/>

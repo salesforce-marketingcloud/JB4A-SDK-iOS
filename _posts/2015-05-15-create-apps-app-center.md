@@ -23,10 +23,10 @@ After you log into the App Center, follow these steps to create a new MobilePush
 
 1. Create a new app and select the MobilePush template:
 
-    <img class="img-responsive" src="{{ site.baseurl }}/assets/CreateNewApp.png" />
+    <img class="img-responsive" src="{{ site.baseurl }}/assets/CreateNewApp05032016.png" />
 1. Fill in, at a minimum, the mandatory fields in this form:
 
-    <img class="img-responsive" src="{{ site.baseurl }}/assets/CreateNewMobilePushApp.png" />
+    <img class="img-responsive" src="{{ site.baseurl }}/assets/CreateNewMobilePushApp05032016.png" />
  
     > Repeat this process for Production and Development instances of your app.
     
