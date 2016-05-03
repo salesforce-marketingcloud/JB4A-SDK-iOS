@@ -12,6 +12,7 @@ Integrate MobilePush into your mobile app using the Journey Builder for Apps SDK
 * <a href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html" target="_blank">Review Apple Push Notification Service documentation<a/>.
 * Provision Apps with [Apple]({{ site.baseurl }}/provisioning/apple.html).
 * [Create your apps]({{ site.baseurl }}/create-apps/create-apps-overview.html) in the App Center.
+* When creating your app, ensure you enable the Push Notification in the Capabilities tab in Xcode.
 * [Implement the SDK]({{ site.baseurl }}/sdk-implementation/implement-sdk.html).
 * Add [Feature Implementation]({{ site.baseurl }}/features/feature-implementation-overview.html) to your apps.
 * Add optional purchased features, such as [Cloud Pages]({{ site.baseurl }}/rich-push/rich-push-overview.html) and [Location Services]({{ site.baseurl }}/location/geolocation-overview.html), to your apps.
