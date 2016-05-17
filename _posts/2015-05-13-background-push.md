@@ -4,7 +4,7 @@ title: "Silent Pushes"
 subtitle: "Using Silent Pushes"
 category: features
 date: 2015-05-14 12:00:00
-order: 9
+order: 10
 ---
 #### Silent Push Messages for MobilePush
 This document contains conceptual and procedural information about sending a silent push message to a mobile app using the MobilePush app and the REST API.
