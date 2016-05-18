@@ -48,3 +48,5 @@ Implement the following keys if you wish to enable either of these two functions
 * "App registers for location updates" is required if you have Proximity Services turned on in configureSDK and want to range for beacons in the background (only for Beacon Beta Testers)
 
 <br/><img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>
+
+> MobilePush prevents the app from displaying a geofence or beacon message with an empty alert. If you include AMPscript in your message that returns no content, the mobile app will not display that message. 
