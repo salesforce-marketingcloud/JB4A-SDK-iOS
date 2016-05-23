@@ -65,7 +65,7 @@
 		A9F3E8B41C459703005374AF /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A9F3E8B51C459703005374AF /* fre3of9x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4D6F3192A572F00128F29 /* fre3of9x.ttf */; };
 		A9F3E8B61C459703005374AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DE006191051BD00B65B6F /* Main.storyboard */; };
-		EF56438F1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF56438E1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a */; };
+		EFC082511CF3462D0083B109 /* libJB4ASDK-4.3.0.160300007.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC082501CF3462D0083B109 /* libJB4ASDK-4.3.0.160300007.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,15 +172,12 @@
 		4DEC6D13196CDD4F00322A99 /* PUDCloudPageInboxDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDCloudPageInboxDataSource.m; sourceTree = "<group>"; };
 		4DEC6D17196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDCloudPageInboxTableViewCell.h; sourceTree = "<group>"; };
 		4DEC6D18196CE4A500322A99 /* PUDCloudPageInboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDCloudPageInboxTableViewCell.m; sourceTree = "<group>"; };
-		A91995F21C9338D6001A38A6 /* libJB4ASDK-4.2.0.MOBILESDK-737.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libJB4ASDK-4.2.0.MOBILESDK-737.a"; path = "PublicDemo/Libraries/etpushsdk/libJB4ASDK-4.2.0.MOBILESDK-737.a"; sourceTree = "<group>"; };
-		A91995F41C936456001A38A6 /* libJB4ASDK-4.2.0.160200008.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libJB4ASDK-4.2.0.160200008.a"; path = "PublicDemo/Libraries/etpushsdk/libJB4ASDK-4.2.0.160200008.a"; sourceTree = "<group>"; };
 		A926ABF51C498E1200370BDA /* ETWKLandingPagePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETWKLandingPagePresenter.h; sourceTree = "<group>"; };
 		A926ABF71C498F6F00370BDA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A99812E219B926DF00EA36EF /* PUDEulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDEulaViewController.h; sourceTree = "<group>"; };
 		A99812E319B926DF00EA36EF /* PUDEulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PUDEulaViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A99F04071C515007009AE9DC /* SDKX-Prod_DevAPNS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDKX-Prod_DevAPNS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A9D019F01C483136006C57DF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		A9D92BE31C99F0D50050408A /* libJB4ASDK-4.2.0.160200009.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libJB4ASDK-4.2.0.160200009.a"; path = "PublicDemo/Libraries/etpushsdk/libJB4ASDK-4.2.0.160200009.a"; sourceTree = "<group>"; };
 		A9F3E8BC1C459703005374AF /* SDKX-Prod_DevAPNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDKX-Prod_DevAPNS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F3E8BE1C468A20005374AF /* BuildReleaseSDKX.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = BuildReleaseSDKX.sh; path = scripts/BuildReleaseSDKX.sh; sourceTree = "<group>"; };
 		A9F3E8C51C46A850005374AF /* SDKX-Prod_DevAPNS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDKX-Prod_DevAPNS-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -194,7 +191,6 @@
 		EF31AEE21AD4677000EC3896 /* SupportInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportInfo.m; sourceTree = "<group>"; };
 		EF32D54E1ADDA2870021CBE6 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		EF490F3C1ACDE57F002537E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF56438E1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libJB4ASDK-4.2.1.160200010.a"; path = "PublicDemo/Libraries/etpushsdk/libJB4ASDK-4.2.1.160200010.a"; sourceTree = "<group>"; };
 		EF70050719DC6462001E76B5 /* ProductionTestImport.pushconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductionTestImport.pushconfig; sourceTree = "<group>"; };
 		EF7645DB1C235C4800C1FE42 /* ETAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAnalytics.h; sourceTree = "<group>"; };
 		EF7645DC1C235C4800C1FE42 /* ETGenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETGenericUpdate.h; sourceTree = "<group>"; };
@@ -207,6 +203,7 @@
 		EF7645E51C235C4800C1FE42 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
 		EF95C6061AA9FAF600CFE56B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EF9AF1571B750DC400C0F6CE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		EFC082501CF3462D0083B109 /* libJB4ASDK-4.3.0.160300007.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libJB4ASDK-4.3.0.160300007.a"; path = "PublicDemo/Libraries/etpushsdk/libJB4ASDK-4.3.0.160300007.a"; sourceTree = "<group>"; };
 		EFD8E4771AE045AF004F315E /* com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "com.exacttarget.internal.sdkexplorer 2015-04-16 15.25.14.082.xcappdata"; sourceTree = "<group>"; };
 		EFE5F5921BBC641C00195351 /* CheckRestoreFromUnencryptedBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckRestoreFromUnencryptedBackup.m; sourceTree = "<group>"; };
 		EFEBB4DC1BB184E4003EB4CD /* CityMarket.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CityMarket.gpx; sourceTree = "<group>"; };
@@ -223,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF56438F1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a in Frameworks */,
+				EFC082511CF3462D0083B109 /* libJB4ASDK-4.3.0.160300007.a in Frameworks */,
 				A9D019F11C483136006C57DF /* WebKit.framework in Frameworks */,
 				A9F3E8AA1C459703005374AF /* QuartzCore.framework in Frameworks */,
 				A9F3E8AB1C459703005374AF /* MobileCoreServices.framework in Frameworks */,
@@ -258,10 +255,7 @@
 		4D2DDFF3191051BD00B65B6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF56438E1CB549EA00575CC4 /* libJB4ASDK-4.2.1.160200010.a */,
-				A9D92BE31C99F0D50050408A /* libJB4ASDK-4.2.0.160200009.a */,
-				A91995F41C936456001A38A6 /* libJB4ASDK-4.2.0.160200008.a */,
-				A91995F21C9338D6001A38A6 /* libJB4ASDK-4.2.0.MOBILESDK-737.a */,
+				EFC082501CF3462D0083B109 /* libJB4ASDK-4.3.0.160300007.a */,
 				A926ABF71C498F6F00370BDA /* WebKit.framework */,
 				EF9AF1571B750DC400C0F6CE /* Crashlytics.framework */,
 				4DA92C9B196D7F740005BC8E /* QuartzCore.framework */,

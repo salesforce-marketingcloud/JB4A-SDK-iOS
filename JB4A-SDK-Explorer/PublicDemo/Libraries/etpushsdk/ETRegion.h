@@ -2,44 +2,24 @@
 //  Region.h
 //  JB4A-SDK-iOS
 //
-//  Created by Eddie Roger on 8/8/13.
-//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
+//  JB4A iOS SDK GitHub Repository
+//  https://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/
+
+//  Copyright © 2016 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ETGenericUpdate.h"
+#import "PushConstants.h"
+#import "ETEventRegion.h"
 
-/**
- Enumeration to keep track of if the request is for Geofences or Proximity messages. 
- */
-typedef NS_ENUM(NSUInteger, ETRegionRequestType) {
-    /** ETRegionRequestTypeUnknown */
-    ETRegionRequestTypeUnknown,
-    /** ETRegionRequestTypeGeofence */
-    ETRegionRequestTypeGeofence,
-    /** ETRegionRequestTypeProximity */
-    ETRegionRequestTypeProximity
-};
-
-/**
- Enumeration of the type of ETRegion that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used. 
- */
-typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
-    /** MobilePushGeofenceTypeNone */
-    MobilePushGeofenceTypeNone = 0,
-    /** MobilePushGeofenceTypeCircle */
-    MobilePushGeofenceTypeCircle,
-    /** MobilePushGeofenceTypePolygon */
-    MobilePushGeofenceTypePolygon DEPRECATED_MSG_ATTRIBUTE("MobilePushGeofenceTypePolygon is deprecated."), // Not currently in use.
-    /** MobilePushGeofenceTypeProximity */
-    MobilePushGeofenceTypeProximity
-};
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  ETRegion is a representation of a physical region that should trigger a message to be presented to the user. This could be either macro, a geofence, or micro, an iBeacon (marketing name: Proximity), but both go through iOS' Location Manager, and are reported back to the SDK through the CLLocationManagerDelegate (which is currently always ETLocationManager). 
  
- Geofences will have a latitude and longitude and radius, but will be notably absent of a proximity UUID, major and minor number. Beacons also have latitude and longitude (but no radius) because of a decision to track their physical location in the world, but it is inconsequential to functionality. A beacon is functional because of the Proximity UUID. Major and Minor number. The three of these uniquely identify a physical beacon. Per Apple's best practices (WWDC 2013), a single UUID should be used commonly amongst an entire Enterprise (example: All Starbucks locations share a UUID). Major numbers should designate a single location within the UUID (Starbucks #1234, 15th and College, Indianapolis), and a Minor number can indicate the beacon within the location designated in the Major (Point of Sale). Salesforce suggests following this pattern when configuring beacons.
+ Geofences will have a latitude and longitude and radius, but will be notably absent of a proximity UUID, major and minor number. Beacons also have latitude and longitude (but no radius) because of a decision to track their physical location in the world, but it is inconsequential to functionality. A beacon is functional because of the Proximity UUID. Major and Minor number. The three of these uniquely identify a physical beacon. Per Apple's best practices (WWDC 2013), a single UUID should be used commonly amongst an entire Enterprise (example: All Motes Coffee Shop locations share a UUID). Major numbers should designate a single location within the UUID (Starbucks #1234, 15th and College, Indianapolis), and a Minor number can indicate the beacon within the location designated in the Major (Point of Sale). Salesforce suggests following this pattern when configuring beacons.
  
  ETRegions will has a zero-to-many relationship with ETMessage, which in turn, has a zero-to-many relationship with ETRegion. In plain English, one region can have many messages, and one message can belong to many regions. This is handled through ETFenceMessage.
  */
@@ -48,57 +28,57 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
 /**
  ET-generated identifier for the ETRegion in question. This should be treated as a primary key, and is stored on the device as the encoded version sent via the routes.
  */
-@property (nonatomic, strong) NSString *fenceIdentifier;
+@property (nonatomic, strong, nullable) NSString *fenceIdentifier;
 
 /**
  The latitude of this region. Saved in an NSNumber as a double for easy passing. Be sure to call doubleValue on this property.
  */
-@property (nonatomic, strong) NSNumber *latitude;
+@property (nonatomic, strong, nullable) NSNumber *latitude;
 
 /**
  The longitude of this region. Saved in an NSNumber as a double for easy passing. Be sure to call doubleValue on this property.
  */
-@property (nonatomic, strong) NSNumber *longitude;
+@property (nonatomic, strong, nullable) NSNumber *longitude;
 
 /**
  For geofences only, the radius of the fence. This number, an integer, is in meters. 
  */
-@property (nonatomic, strong) NSNumber *radius;
+@property (nonatomic, strong, nullable) NSNumber *radius;
 
 /**
  An array of related messages. It is not proper to pull a message out of this array, though. It's used for initialization and data passing.
  */
-@property (nonatomic, strong) NSMutableArray *messages;
+@property (nonatomic, strong, nullable) NSMutableArray *messages;
 
 /**
  For beacons, the Proximity UUID of the beacon. 
  */
-@property (nonatomic, strong) NSString *proximityUUID;
+@property (nonatomic, strong, nullable) NSString *proximityUUID;
 
 /**
  For beacons, the Major number. This is a uint32 per the CLBeaconRegion spec.
  */
-@property (nonatomic, strong) NSNumber *majorNumber;
+@property (nonatomic, strong, nullable) NSNumber *majorNumber;
 
 /** 
  For beacons, the Minor number. This is a uint32 per the CLBeaconRegion spec.
  */
-@property (nonatomic, strong) NSNumber *minorNumber;
+@property (nonatomic, strong, nullable) NSNumber *minorNumber;
 
 /**
  This is the number of times a region is entered as counted by the ETLocationManager. 
  */
-@property (nonatomic, strong) NSNumber *entryCount;
+@property (nonatomic, strong, nullable) NSNumber *entryCount;
 
 /**
  This is the number of times a region is exited as counted by the ETLocationManager. Ideally, it matches enter count.
  */
-@property (nonatomic, strong) NSNumber *exitCount;
+@property (nonatomic, strong, nullable) NSNumber *exitCount;
 
 /**
  This is the name which is set on SalesforceMarketingCloud, while setting the ETRegion
  */
-@property (nonatomic, strong) NSString *regionName;
+@property (nonatomic, strong, nullable) NSString *regionName;
 
 
 /**
@@ -117,7 +97,7 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
  @param dict NSDictionary of values of which to apply to this ETRegion.
  @return A newly minted ETRegion.
  */
--(id)initFromDictionary:(NSDictionary *)dict;
+-(nullable instancetype)initFromDictionary:(NSDictionary<__kindof NSString *, id> *)dict;
 
 /**
  Region equality. Based on the kind of ETRegion, it will compare values and determine equality. 
@@ -133,21 +113,21 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
 
  @return The region as a CLLocation.
  */
--(CLLocation *)regionAsLocation; // For Geofences
+-(nullable CLLocation *)regionAsLocation; // For Geofences
 
 /**
  Returns the ETRegion as a CLRegion for use in Beacon code, or nil if a Geofence.
  
  @return A CLRegion representation of self.
  */
--(CLRegion *)regionAsCLRegion; // For Beacons
+-(nullable CLRegion *)regionAsCLRegion; // For Beacons
 
 /**
  Returns self as a CLBeaconRegion, or nil if a Geofence.
  
  @return CLBeaconRegion representation of self.
  */
--(CLBeaconRegion *)regionAsBeaconRegion; // Also for beacons
+-(nullable CLBeaconRegion *)regionAsBeaconRegion; // Also for beacons
 
 /**
  Helper to quickly determine if this is a Geofence region. 
@@ -169,7 +149,7 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
  @param identifier The region ID to retrieve. 
  @return The region, or nil if it doesn't exist.
  */
-+(ETRegion*)getRegionByIdentifier:(NSString *)identifier;
++(nullable ETRegion*)getRegionByIdentifier:(NSString *)identifier;
 
 /**
  Returns a specific Beacon Region from the database. This is more useful for ranging, since at that time we don't know the ET identifier yet, but we know UUID, Major and Minor. 
@@ -179,7 +159,7 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
  @param minorNumber An NSNumber-wrapped uint32 of the beacon's minor number
  @return The region, or nil if it doesn't exist. 
  */
-+(ETRegion*)getBeaconRegionForRegionWithProximityUUID:(NSString *)proximityUUID andMajorNumber:(NSNumber *)majorNumber andMinorNumber:(NSNumber *)minorNumber;
++(nullable ETRegion*)getBeaconRegionForRegionWithProximityUUID:(NSString *)proximityUUID andMajorNumber:(NSNumber *)majorNumber andMinorNumber:(NSNumber *)minorNumber;
 
 /**
  Returns a specific Beacon Region from the database.
@@ -187,14 +167,14 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
  @param proximityUUID The ranged beacon region UUID
  @return The region, or nil if it doesn't exist.
  */
-+(ETRegion *)getBeaconRegionForRegionWithProximityUUID:(NSString *)proximityUUID;
++(nullable ETRegion *)getBeaconRegionForRegionWithProximityUUID:(NSString *)proximityUUID;
 
 /**
  Pulls all active regions out of the local database. 
  
  @return An NSSet of ETRegions.
  */
-+(NSSet *)getFencesFromCache;
++(nullable NSSet<__kindof ETRegion*> *)getFencesFromCache;
 
 /**
  Pulls all (both active and inactive) regions out of the local database.
@@ -202,7 +182,7 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
  @param getInactive a BOOL value.
  @return An NSSet of *all* ETRegions.
  */
-+(NSSet *)getFencesFromCacheIncludingInactive:(BOOL)getInactive;
++(nullable NSSet<__kindof ETRegion*> *)getFencesFromCacheIncludingInactive:(BOOL)getInactive;
 
 /**
  Marks all regions in the database for a specific type as inactive. This is done after successfully retrieving fences from Salesforce.
@@ -231,4 +211,7 @@ typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
 
 +(BOOL)generatePersistentDataSchemaInDatabase;
 
+-(nullable ETEventRegion *)regionAsETEventRegion;
+
 @end
+NS_ASSUME_NONNULL_END

@@ -2,15 +2,18 @@
 //  ETLocationManager.h
 //  JB4A-SDK-iOS
 //
-//  Created by Eddie Roger on 2/12/13.
-//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
+//  JB4A iOS SDK GitHub Repository
+//  https://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/
+
+//  Copyright © 2016 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "ETMessage.h"
-#import "ETRegion.h"
+#import "PushConstants.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  Local definitions of the LocationUpdateAppState enumeration.
@@ -55,7 +58,7 @@ typedef NS_ENUM(NSInteger, LocationUpdateAppState)
 
 +(instancetype)sharedInstance;
 
--(id)init;
+-(instancetype)init;
    
 /**
  Determines the state of Location Services based on developer setting and OS-level permission. This is the preferred method for checking for location state.
@@ -99,30 +102,24 @@ typedef NS_ENUM(NSInteger, LocationUpdateAppState)
  
  @return void no return value.
  */
--(void)monitorRegions:(NSSet *)fences ofRequestType:(ETRegionRequestType)requestType;
+-(void)monitorRegions:(NSSet<__kindof CLRegion *> *)fences ofRequestType:(ETRegionRequestType)requestType;
 
 /**
  Instructs the CLLocationManager to stop monitoring all regions. 
  */
 -(void)stopMonitoringRegions;
 
-/**
- Retrieves the messages for a given ETRegion and MobilePushMessageType and schedules any messages returned for display. 
- @param region The ETRegion that prompted this action
- @param type The MobilePushMessageType of event that prompted this action.
- */
--(void)getAndScheduleAlertsForRegion:(ETRegion *)region andMessageType:(MobilePushMessageType)type;
 
 /**
  Returns the currently monitored regions. 
  @return An NSSet of monitored regions.
  */
--(NSSet *)monitoredRegions;
+-(NSSet<__kindof CLRegion *> *)monitoredRegions;
 
 /**
  A dictionary version of the Last Known Location. The dictionary will contain two keys, latitude and longitude, which are NSNumber wrappers around doubles. Use doubleValue to retrieve.
  */
--(NSDictionary *)lastKnownLocation;
+-(NSDictionary<NSString *, NSString *> *)lastKnownLocation;
 
 /* For Tests */
 /**
@@ -131,7 +128,5 @@ typedef NS_ENUM(NSInteger, LocationUpdateAppState)
  */
 - (BOOL) getWatchingLocation;
 
-
-
-
 @end
+NS_ASSUME_NONNULL_END
