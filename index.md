@@ -19,7 +19,7 @@ Use the JB4A iOS SDK with iOS versions 7 or later.
 For releases prior to v4.2.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.2.0/" target="_blank">Prior Release Documentation</a>
 
 #### Version 4.3.0
-_Released May 2 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
+_Released May 23 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
 
 * MOBILESDK-371 - Remove deprecated functions from public interfaces.
 * MOBILESDK-379 - Adjust iOS to be Swift compatible.
