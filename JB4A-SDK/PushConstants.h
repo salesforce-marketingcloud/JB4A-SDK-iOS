@@ -2,8 +2,8 @@
 //  PushConstants.h
 //  JB4A-SDK-iOS
 //
-//  Created by Eddie Roger on 9/7/12.
-//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
+//  JB4A iOS SDK GitHub Repository
+//  https://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/
 //
 
 /**
@@ -110,4 +110,93 @@ typedef NS_ENUM(NSUInteger, requestPIRecommendationsError) {
     requestPIRecommendationsInvalidCompletionHandlerError
 };
 
+
+/**
+ ETEventBus constants
+ */
+
+static NSString * const kDidDisplayLocationMessageNotification = @"ETEventBusDidDisplayLocationMessageNotification";
+static NSString * const kDidReceiveGeofenceResponseNotification = @"ETEventBusDidReceiveGeofenceResponseNotification";
+static NSString * const kDidReceiveBeaconResponseNotification = @"ETEventBusDidReceiveBeaconResponseNotification";
+static NSString * const kDidEnterGeofenceNotification = @"ETEventBusDidEnterGeofenceNotification";
+static NSString * const kDidExitGeofenceNotification = @"ETEventBusDidExitGeofenceNotification";
+static NSString * const kDidRangeBeaconNotification = @"ETEventBusDidRangeBeaconNotification";
+static NSString * const kDidReceiveRichMessagesNotification = @"ETEventBusDidReceiveRichMessagesNotification";
+static NSString * const kDidReceiveCloudPagesNotification = @"ETEventBusDidReceiveRichMessagesNotification";
+static NSString * const kDidReceiveLocationUpdateNotification = @"ETEventBusDidReceiveLocationUpdateNotification";
+
+/**
+ Enumeration of the type of ETMessage this is.
+ */
+typedef NS_ENUM(NSUInteger, MobilePushMessageType)
+{
+    /** Unknown */
+    MobilePushMessageTypeUnknown,
+    /** Basic - A standard push message */
+    MobilePushMessageTypeBasic,
+    /** DO NOT USE - Was a CloudPage message, but that is a ContentType now */
+    MobilePushMessageTypeEnhanced __attribute__((deprecated)),
+    /** Geofence Entry */
+    MobilePushMessageTypeFenceEntry,
+    /** Geofence Exit */
+    MobilePushMessageTypeFenceExit,
+    /** Proximity */
+    MobilePushMessageTypeProximity
+};
+
+/**
+ Enumeration of the type of ETRegion that this is - Circle (Geofence) or Proximity (ibeacon). Polygon is not currently used.
+ */
+typedef NS_ENUM(NSUInteger, MobilePushGeofenceType) {
+    /** MobilePushGeofenceTypeNone */
+    MobilePushGeofenceTypeNone = 0,
+    /** MobilePushGeofenceTypeCircle */
+    MobilePushGeofenceTypeCircle,
+    /** MobilePushGeofenceTypePolygon */
+    MobilePushGeofenceTypePolygon __attribute__((deprecated)), // Not currently in use.
+    /** MobilePushGeofenceTypeProximity */
+    MobilePushGeofenceTypeProximity
+};
+
+/**
+ Enumeration to keep track of if the request is for Geofences or Proximity messages.
+ */
+typedef NS_ENUM(NSUInteger, ETRegionRequestType) {
+    /** ETRegionRequestTypeUnknown */
+    ETRegionRequestTypeUnknown,
+    /** ETRegionRequestTypeGeofence */
+    ETRegionRequestTypeGeofence,
+    /** ETRegionRequestTypeProximity */
+    ETRegionRequestTypeProximity
+};
+
+/**
+ Bitmask of features that a message has. This is the representation of Push (AlertMessage), Push+Page (AlertMessage + Page), Page Only (Page) in the MobilePush UI.
+ */
+typedef NS_OPTIONS(NSUInteger, MobilePushContentType) {
+    /** Unknown */
+    MobilePushContentTypeNone           = 0,
+    /** Push Message */
+    MobilePushContentTypeAlertMessage   = 1 << 0,
+    /** CloudPage */
+    MobilePushContentTypePage           = 1 << 1
+};
+
+/**
+ Time Unit enumeration for Message limiting.
+ */
+typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
+    /** Unknown */
+    MobilePushMessageFrequencyUnitNone,
+    /** Year */
+    MobilePushMessageFrequencyUnitYear,
+    /** Month */
+    MobilePushMessageFrequencyUnitMonth,
+    /** Week */
+    MobilePushMessageFrequencyUnitWeek,
+    /** Day */
+    MobilePushMessageFrequencyUnitDay,
+    /** Hour */
+    MobilePushMessageFrequencyUnitHour
+};
 

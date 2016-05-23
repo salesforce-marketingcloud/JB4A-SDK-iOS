@@ -2,11 +2,15 @@
 //  ETLandingPagePresenter.h
 //  connections12
 //
-//  Created by Eddie Roger on 8/17/12.
+//  JB4A iOS SDK GitHub Repository
+//  https://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/
+
 //
 //
 
 #import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  This is a helper class that shows webpages. These come down in several forms - sometimes a CloudPage, sometimes something from OpenDirect - and this guy shows them. It's a pretty simple class that pops up a view with a toolbar, shows a webpage, and waits to be dismissed. 
@@ -28,16 +32,17 @@
  A helper designated initializer that takes the landing page as a string.
  
  @param landingPage a NSString value.
- @return id value. A ETLandingPagePresenter instance.
+ @return ETLandingPagePresenter value. An ETLandingPagePresenter instance.
  */
--(id)initForLandingPageAt:(NSString *)landingPage;
+-(nullable instancetype)initForLandingPageAt:(NSString *)landingPage;
 
 /**
  Another helper that takes it in NSURL form. We're not picky. It'd be cool of ObjC did method overloading, though.
  
  @param landingPage a NSURL value.
- @return id value. A ETLandingPagePresenter instance.
+ @return ETLandingPagePresenter value. An ETLandingPagePresenter instance.
  */
--(id)initForLandingPageAtWithURL:(NSURL *)landingPage;
+-(nullable instancetype)initForLandingPageAtWithURL:(NSURL *)landingPage;
 
 @end
+NS_ASSUME_NONNULL_END

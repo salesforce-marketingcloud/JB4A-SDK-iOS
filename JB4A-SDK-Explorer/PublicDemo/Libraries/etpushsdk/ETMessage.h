@@ -2,48 +2,22 @@
 //  Message.h
 //  JB4A-SDK-iOS
 //
-//  Created by Eddie Roger on 7/24/13.
-//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
+//  JB4A iOS SDK GitHub Repository
+//  https://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/
+
+//  Copyright © 2016 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import "ETGenericUpdate.h"
 #import "ETRegion.h"
-
+#import "ETEventMessage.h"
+#import "ETCloudPage.h"
 #import "PushConstants.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 static NSString *kMessagesTableName = @"messages";
 static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
-
-/**
- Enumeration of the type of ETMessage this is. 
- */
-typedef NS_ENUM(NSUInteger, MobilePushMessageType)
-{
-    /** Unknown */
-    MobilePushMessageTypeUnknown,
-    /** Basic - A standard push message */
-    MobilePushMessageTypeBasic,
-    /** DO NOT USE - Was a CloudPage message, but that is a ContentType now */
-    MobilePushMessageTypeEnhanced DEPRECATED_MSG_ATTRIBUTE("MobilePushMessageTypeEnhanced"),
-    /** Geofence Entry */
-    MobilePushMessageTypeFenceEntry,
-    /** Geofence Exit */
-    MobilePushMessageTypeFenceExit,
-    /** Proximity */
-    MobilePushMessageTypeProximity
-};
-
-/**
- Bitmask of features that a message has. This is the representation of Push (AlertMessage), Push+Page (AlertMessage + Page), Page Only (Page) in the MobilePush UI.
- */
-typedef NS_OPTIONS(NSUInteger, MobilePushContentType) {
-    /** Unknown */
-    MobilePushContentTypeNone           = 0,
-    /** Push Message */
-    MobilePushContentTypeAlertMessage   = 1 << 0,
-    /** CloudPage */
-    MobilePushContentTypePage           = 1 << 1
-};
 
 /**
  Tracks where the currently parsing dictionary came from, because we run the values through twice to merge them together. 
@@ -56,23 +30,6 @@ typedef NS_ENUM(NSInteger, MPMessageSource)
     MPMessageSourceRemote
 };
 
-/** 
- Time Unit enumeration for Message limiting. 
- */
-typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
-    /** Unknown */
-    MobilePushMessageFrequencyUnitNone,
-    /** Year */
-    MobilePushMessageFrequencyUnitYear,
-    /** Month */
-    MobilePushMessageFrequencyUnitMonth,
-    /** Week */
-    MobilePushMessageFrequencyUnitWeek,
-    /** Day */
-    MobilePushMessageFrequencyUnitDay,
-    /** Hour */
-    MobilePushMessageFrequencyUnitHour
-};
 
 /**
  ETMessage is the local representation of a Message from Salesforce. They are multipurpose, sometimes representing a message that should be scheduled because of the entrance or exit of a Geofence, the proximal arrival to an iBeacon, or a CloudPage message downloaded from ET. Because of their multipurpose nature, there are a lot of different attributes on them, many of which may be null at any give time depending on the type of message.
@@ -86,12 +43,12 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 /**
  Encoded ID from Salesforce. Will match the ID in MobilePush. This is the primary key.
  */
-@property (nonatomic, strong, readonly) NSString *messageIdentifier;
+@property (nonatomic, strong, readonly, nullable) NSString *messageIdentifier;
 
 /**
  This is the name which is set on SalesforceMarketingCloud, while setting the ETMessage
  */
-@property (nonatomic, strong) NSString *messageName;
+@property (nonatomic, strong, nullable) NSString *messageName;
 
 /** 
  The type of ETMessage being represented.
@@ -106,74 +63,74 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 /**
  The alert text of the message. This displays on the screen. 
  */
-@property (nonatomic, strong, readonly) NSString *alert;
+@property (nonatomic, strong, readonly, nullable) NSString *alert;
 
 /**
  The sound that should play, if any. Most of the time, either "default" or "custom.caf", conventions enforced in MobilePush. 
  */
-@property (nonatomic, strong, readonly) NSString *sound;
+@property (nonatomic, strong, readonly, nullable) NSString *sound;
 
 /**
  The badge modifier. This should be a NSString in the form of "+1" or nothing at all. It's saved as a string because of that.
  */
-@property (nonatomic, strong, readonly) NSString *badge;
+@property (nonatomic, strong, readonly, nullable) NSString *badge;
 
 /**
  The category name for an interactive notification if it has one.
  */
-@property (nonatomic, strong, readonly) NSString *category;
+@property (nonatomic, strong, readonly, nullable) NSString *category;
 
 /**
  An array of Key Value Pairs, or Custom Keys in local parlance, for this message. This will contain NSDictionary objects.
  */
-@property (nonatomic, strong, readonly) NSArray *keyValuePairs;
+@property (nonatomic, strong, readonly, nullable) NSArray *keyValuePairs;
 
 /**
  The message's start date. Messages shouldn't show before this time. 
  */
-@property (nonatomic, strong, readonly) NSDate *startDate;
+@property (nonatomic, strong, readonly, nullable) NSDate *startDate;
 
 /** 
  The message's end date. Messages shouldn't show after this time.
  */
-@property (nonatomic, strong, readonly) NSDate *endDate;
+@property (nonatomic, strong, readonly, nullable) NSDate *endDate;
 
 /** 
  The Site ID for the CloudPage attached to this message. 
  */
-@property (nonatomic, strong, readonly) NSString *siteIdentifier;
+@property (nonatomic, strong, readonly, nullable) NSString *siteIdentifier;
 
 /** 
  The Site URL for the ClouePage attached to this message. It is saved as an NSString and converted later to NSURL.
  */
-@property (nonatomic, strong, readonly) NSString *siteUrlAsString;
+@property (nonatomic, strong, readonly, nullable) NSString *siteUrlAsString;
 
 /**
  OpenDirect payload for this message, if there is one. 
  */
-@property (nonatomic, strong, readonly) NSString *openDirectPayload;
+@property (nonatomic, strong, readonly, nullable) NSString *openDirectPayload;
 
 /**
  DEPRECTED. The related ETRegion for this message. This is a remnant of days when the relationship was one to one. It is not anymore. 
  */
-@property (nonatomic, strong, readonly) ETRegion *relatedFence;
+@property (nonatomic, strong, readonly, nullable) ETRegion *relatedFence;
 
 /**
  The total number of times, ever, that a message will show on a device. 
  */
-@property (nonatomic, strong, readonly) NSNumber *messageLimit;
+@property (nonatomic, strong, readonly, nullable) NSNumber *messageLimit;
 
 /**
  The total number of times for a given number of time units that a message can be shown. In the statement "show 1 time per 2 hours", this is the "1" part.
  
  This defaults to 1 if it is not set in the received payload from Salesforce.
  */
-@property (nonatomic, strong, readonly) NSNumber *messagesPerPeriod;
+@property (nonatomic, strong, readonly, nullable) NSNumber *messagesPerPeriod;
 
 /**
  The number of time periods in which a message should be limited. In the statement "show 1 time per 2 hours", this is the "2" part.
  */
-@property (nonatomic, strong, readonly) NSNumber *numberOfPeriods;
+@property (nonatomic, strong, readonly, nullable) NSNumber *numberOfPeriods;
 
 /**
  The time unit counted in numberOfPeriods. In the statement "show 1 time per 2 hours", this is the "hours" part.
@@ -190,7 +147,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 /**
  The number of times an ETRegion must be tripped before the message shows. This is not currently used, and is a placeholder for future functionality. 
  */
-@property (nonatomic, strong, readonly) NSNumber *minTripped;
+@property (nonatomic, strong, readonly, nullable) NSNumber *minTripped;
 
 /**
  Ephemeral Messages disappear when the user walks away from the iBeacon that tripped the message. The default value is NO.
@@ -220,7 +177,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
 /**
  A reference to the UILocalNotification triggered for this message. It is used later to cancel the message if need be.
  */
-@property (nonatomic, strong) UILocalNotification *notification;
+@property (nonatomic, strong, nullable) UILocalNotification *notification;
 
 /**
  Used while ranging beacons to determine if a message for a beacon has been shown based on the proximity trigger.
@@ -232,7 +189,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param dict A dictionary of values to apply to the ETMessage
  @return A new ETMessage
  */
--(instancetype)initFromDictionary:(NSDictionary *)dict;
+-(nullable instancetype)initFromDictionary:(NSDictionary<__kindof NSString *, id> *)dict;
 
 /**
  Designated Initializer. Creates a new ETMessage with values from an NSDictionary for a specific ETRegion. 
@@ -240,17 +197,17 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param region The ETRegion that prompted the creation of this ETMessage
  @return A new ETMessage
  */
--(instancetype)initFromDictionary:(NSDictionary *)dict forFence:(ETRegion *)region;
+-(nullable instancetype)initFromDictionary:(NSDictionary<__kindof NSString *, id> *)dict forFence:(nullable ETRegion *)region;
 
 /**
  This is an overridden accessor for subj ect to handle some business logic around what to show. Use this for display in an inbox.
  */
--(NSString *)subject; // Public getter, now with logic.
+-(nullable NSString *)subject; // Public getter, now with logic.
 
 /**
  Cleanses and returns the Sites URL as a proper NSURL. This is mostly for convenience.
  */
--(NSURL *)siteURL;
+-(nullable NSURL *)siteURL;
 
 /**
  Marks a message as read in the local cache. Read messages do not show up in the Inbox.
@@ -277,7 +234,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  Getter for a private value, lastShownDate.
  @return The Last Shown Date, if any.
  */
-- (NSDate *) getLastShownDate;
+- (nullable NSDate *) getLastShownDate;
 
 /**
  Getter for a private value, showCount.
@@ -296,7 +253,7 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param contentType a MobilePushContentType value.
  @return NSArray value. An NSArray of ETMessages
  */
-+(NSArray *)getMessagesByContentType:(MobilePushContentType)contentType;
++(nullable NSArray<__kindof ETMessage*> *)getMessagesByContentType:(MobilePushContentType)contentType;
 
 /**
  Gets a specific ETMessage for a given identifer. 
@@ -304,21 +261,21 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param identifier a NSString value. The Message ID to retrieve
  @return The ETMessage, or nil if not found in the database.
  */
-+(ETMessage *)getMessageByIdentifier:(NSString *)identifier;
++(nullable ETMessage *)getMessageByIdentifier:(NSString *)identifier;
 
 /**
  Gets all active ETMessages for a specific message type, like Fence Entry, Exit or Proximity.
  @param type The MobilePushMessageType you'd like back
  @return An array of ETMessages.
  */
-+(NSArray *)getMessagesByType:(MobilePushMessageType)type;
++(nullable NSArray<__kindof ETMessage*> *)getMessagesByType:(MobilePushMessageType)type;
 
 /**
  Gets all active ETMessages tied to a specific ETRegion (Geofence).
  @param fence The ETRegion for which you would like messages
  @return An NSArray of ETMessages
  */
-+(NSArray *)getMessagesForGeofence:(ETRegion *)fence;
++(nullable NSArray<__kindof ETMessage*> *)getMessagesForGeofence:(ETRegion *)fence;
 
 /**
  Gets all active ETMessages tied to a specific ETRegion (Geofence) and MobilePushMessageType, like Entry ot Exit.
@@ -326,14 +283,14 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  @param type The MobilePushMessageType that describes the messages you want
  @return An NSArray of ETMessages that meet the criteria asked for.
  */
-+(NSArray *)getMessagesForGeofence:(ETRegion *)fence andMessageType:(MobilePushMessageType)type;
++(nullable NSArray<__kindof ETMessage*> *)getMessagesForGeofence:(ETRegion *)fence andMessageType:(MobilePushMessageType)type;
 
 /**
  Gets all active ETMessages for a specific ETRegion (Proximity). 
  @param region The ETRegion for which you would like messages
  @return An NSArray of ETMessages
  */
-+(NSArray *)getProximityMessagesForRegion:(ETRegion *)region; // withRangedBeaconProximity:(CLProximity)prox;
++(nullable NSArray<__kindof ETMessage*> *)getProximityMessagesForRegion:(ETRegion *)region; // withRangedBeaconProximity:(CLProximity)prox;
 
 /**
  Triggeres a data pull from Salesforce for messages that meet the supplied requirements.
@@ -364,4 +321,9 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageFrequencyUnit) {
  */
 -(BOOL)isEqualToMessage:(ETMessage *)message;
 
+-(nullable ETEventMessage *) messageAsETEventMessage;
+-(nullable ETCloudPage *) messageAsETCloudPage;
+
+
 @end
+NS_ASSUME_NONNULL_END

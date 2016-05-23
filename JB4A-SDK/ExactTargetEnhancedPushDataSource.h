@@ -2,11 +2,16 @@
 //  ExactTargetEnhancedPushDataSource.h
 //  JB4A-SDK-iOS
 //
-//  Created by Eddie Roger on 8/23/13.
-//  Copyright © 2015 Salesforce Marketing Cloud. All rights reserved.
+//  JB4A iOS SDK GitHub Repository
+//  https://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/
+
+//  Copyright © 2016 Salesforce Marketing Cloud. All rights reserved.
 //
 
 #import <UIKit/UIKit.h> // need UITableViewDataSource, so we use UIKit, not Foundation
+#import "ETMessage.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  The ExactTargetEnhancedPushDataSource is an interface object for CloudPage support. It was designed to be used as the datasource for a UITableView, and can be allocated and used as such without too much other customization. Of course, you are welcomed to use it any way you want other than that.
@@ -21,11 +26,12 @@
 /**
  This array contains ETMessages, suitable for display in a UITableView or other presentation apparatus of your liking. Please see ETMessage for a list of properties available.
  */
-@property (nonatomic, strong) NSArray *messages;
+@property (nonatomic, strong, nullable) NSArray<__kindof ETMessage *> *messages;
 
 /** 
  This is a reference to the tableview in your UIViewController. We need a reference to it to reload data periodically.
  */
-@property (nonatomic, weak) UITableView *inboxTableView;
+@property (nonatomic, weak, nullable) UITableView *inboxTableView;
 
 @end
+NS_ASSUME_NONNULL_END
