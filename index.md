@@ -29,9 +29,9 @@ _Released May 23 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
 * MOBILESDK-790 - Inaccurate horizontal accuracy may prevent location downloads from occuring.
 * MOBILESDK-821 - Reusing a beacon with the same UUID/Major/Minor will result in lookup errors in the SDK.
 * MOBILESDK-822 - Do not display geofence or beacon message with an empty alert.
+* MOBILESDK-829 - Implement retry logic for beacons, cloudpages and geofences.
 * MOBILESDK-830 - Getting OpenDirect delegate crashes app unless has been set.
 * MOBILESDK-832 - Add missing fields to PiWama Analytics.
-* MOBILESDK-829 - Implement retry logic for beacons, cloudpages and geofences.
 * MOBILESDK-848 - Implement bitcode enabled.
 * MOBILESDK-851 - Once a day updates should renew the location fix before getting data.
 
