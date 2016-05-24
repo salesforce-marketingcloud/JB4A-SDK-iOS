@@ -30,7 +30,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 pod 'JB4ASDK'
 ```
 
-Save the file, hen run this command:<br/>
+Save the file, then run this command:<br/>
 
 ```
 $ pod install
