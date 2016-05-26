@@ -18,34 +18,26 @@ Only use one of these two ways to import the JB4ASDK - not both.
 
 <h4>Configuring the SDK with CocoaPods</h4>
 
-1. You can obtain the JB4ASDK for iOS through CocoaPods. Install CocoaPods by running the command:<br/>
+1. You can obtain the JB4ASDK for iOS through CocoaPods. Install CocoaPods by running the command:
 
-	```
-	$ sudo gem install cocoapods
-	```
-	<br/>
+		sudo gem install cocoapods
+
 
 1. Once the process completes, run this command:
 
-	```
-	pod init
-	```
+		pod init
 
-1. Open the new podfile in a text editor and add these lines:<br/>
+1. Open the new podfile in a text editor and add these lines:
 
-	```
-	target 'TheNameOfYourApp' do
-	  pod 'JB4ASDK'
-	end
-	```
+		target 'TheNameOfYourApp' do
+			pod 'JB4ASDK'
+		end
 
 	> Some text editors may introduce additional line breaks or unwanted lines. Ensure you use a text editor that does not perform these actions, such as Sublime Text.
 
 1. Save the file, then run this command:<br/>
 
-	```
-	$ pod install
-	```
+		pod install
 
 	> Ensure that you do not save the file with a file extension.
 
@@ -92,7 +84,7 @@ Follow these steps to configure the SDK for your app.<br/>
 
 You can now deploy and test your app! 
 
-> You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.<br/><br/>
+> You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
 
 <h4>Getting Started with Swift</h4>
 Create an Objective-C bridging header file using Xcode. Ensure you copy the contents of JB4ASDK-Bridging-Header.h into your bridging header. You can also use the provided bridging header JB4ASDK-Bridging-Header.h as a starting point.
