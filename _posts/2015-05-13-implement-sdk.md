@@ -11,35 +11,47 @@ In order to use the SDK in your Mobile app, complete the steps below to configur
 <h4>Importing the JB4ASDK</h4>
 Use one of these two ways to import the JB4ASDK for iOS into your project:
 
-1.	CocoaPods
+1.	[CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 1.	Static Library
 
 Only use one of these two ways to import the JB4ASDK - not both.
 
-You can obtain the JB4ASDK for iOS through CocoaPods. Install CocoaPods by running the command:<br/>
+<h4>Configuring the SDK with CocoaPods</h4>
 
-```
-$ sudo gem install cocoapods
-```
-<br/>
+1. You can obtain the JB4ASDK for iOS through CocoaPods. Install CocoaPods by running the command:<br/>
 
-In your project directory (the directory containing your *.xcodeproj file), create a plain text file named Podfile (without any file extension). Open your Podfile in a text editor and add these two lines:<br/>
+	```
+	$ sudo gem install cocoapods
+	```
+	<br/>
 
-```
-source 'https://github.com/CocoaPods/Specs.git'
-pod 'JB4ASDK'
-```
+1. Once the process completes, run this command:
 
-Save the file, then run this command:<br/>
+	```
+	pod init
+	```
 
-```
-$ pod install
-```
+1. Open the new podfile in a text editor and add these lines:<br/>
 
-Open up *.xcworkspace with Xcode and start using the SDK.
+	```
+	target 'TheNameOfYourApp' do
+	  pod 'JB4ASDK'
+	end
+	```
 
-> Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/><br/>
+	> Some text editors may introduce additional line breaks or unwanted lines. Ensure you use a text editor that does not perform these actions, such as Sublime Text.
 
+1. Save the file, then run this command:<br/>
+
+	```
+	$ pod install
+	```
+
+	> Ensure that you do not save the file with a file extension.
+
+1. Open up the *.xcworkspace created by the install process with Xcode and start using the SDK.
+
+	> Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/><br/>
 
 <h4>Configuring the SDK with header files and static library</h4>
 
