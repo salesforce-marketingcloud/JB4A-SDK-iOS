@@ -51,7 +51,7 @@ Only use one of these two ways to import the JB4ASDK - not both.
 
 1. Open up the *.xcworkspace created by the install process with Xcode and start using the SDK.
 
-	> Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/><br/>
+	> Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/>
 
 <h4>Configuring the SDK with header files and static library</h4>
 
