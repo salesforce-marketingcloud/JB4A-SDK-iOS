@@ -18,30 +18,7 @@ Only use one of these two ways to import the JB4ASDK - not both.
 
 <h4>Configuring the SDK with CocoaPods</h4>
 
-1. You can obtain the JB4ASDK for iOS through CocoaPods. Install CocoaPods by running the command:
-
-		sudo gem install cocoapods
-
-
-1. Once the process completes, run this command:
-
-		pod init
-
-1. Open the new podfile in a text editor and add these lines:
-
-		target 'TheNameOfYourApp' do
-			pod 'JB4ASDK'
-		end
-
-	> Some text editors may introduce additional line breaks or unwanted lines. Ensure you use a text editor that does not perform these actions, such as Sublime Text.
-
-1. Save the file, then run this command:<br/>
-
-		pod install
-
-	> Ensure that you do not save the file with a file extension.
-
-1. Open up the *.xcworkspace created by the install process with Xcode and start using the SDK.
+Follow the [Cocoapods installation instructions](https://guides.cocoapods.org/using/using-cocoapods.html) using **JB4SDK** as the podfile name. Open up the *.xcworkspace created by the install process with Xcode and start using the SDK.
 
 	> Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/>
 
