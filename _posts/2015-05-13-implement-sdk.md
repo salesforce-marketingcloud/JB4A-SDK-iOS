@@ -20,7 +20,7 @@ Only use one of these two ways to import the JB4ASDK - not both.
 
 Follow the [Cocoapods installation instructions](https://guides.cocoapods.org/using/using-cocoapods.html) using **JB4SDK** as the podfile name. Open up the *.xcworkspace created by the install process with Xcode and start using the SDK.
 
-	> Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/>
+> Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/>
 
 <h4>Configuring the SDK with header files and static library</h4>
 
