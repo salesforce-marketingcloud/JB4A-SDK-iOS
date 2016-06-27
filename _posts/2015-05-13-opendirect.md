@@ -33,4 +33,4 @@ You can override this functionality, by implementing the ExactTargetOpenDirectDe
 
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/1ab86534e81f5ff1be7b.js"></script>
 
-For more information see the [ExactTargetOpenDirectDelegate Protocol Reference](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/appledoc/Protocols/ExactTargetOpenDirectDelegate.html).
+For more information see the [ExactTargetOpenDirectDelegate Protocol Reference]({{ site.baseurl }}/appledoc/Protocols/ExactTargetOpenDirectDelegate.html).

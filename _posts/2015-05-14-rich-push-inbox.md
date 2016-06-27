@@ -30,4 +30,4 @@ You can override this functionality, by implementing the ExactTargetCloudPageWit
 
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/74ca87449cf6e782a8ddbb3ebaea3586.js"></script>
 
-For more information see the [ExactTargetCloudPageWithAlertDelegate Protocol Reference](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/appledoc/Protocols/ExactTargetCloudPageWithAlertDelegate.html).
+For more information see the [ExactTargetCloudPageWithAlertDelegate Protocol Reference]({{ site.baseurl }}/appledoc/Protocols/ExactTargetCloudPageWithAlertDelegate.html).

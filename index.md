@@ -5,7 +5,7 @@ title: "README"
 # Journey Builder for Apps iOS SDK
 
 This documentation includes information for the Marketing Cloud Journey Builder for Apps iOS SDK:<br/>
-<a href="https://github.com/ExactTarget/JB4A-SDK-iOS" target="_blank">JB4A iOS SDK GitHub Repository</a><br>
+<a href="{{ site.codeurl }}" target="_blank">JB4A iOS SDK GitHub Repository</a><br>
 
 Review the Apple docs for the SDK:<br/>
 <a href="{{ site.baseurl }}/appledoc/index.html" target="_blank">iOS SDK Apple Docs</a>
