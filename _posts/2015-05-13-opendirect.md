@@ -19,7 +19,7 @@ You can override this functionality, by implementing the ExactTargetOpenDirectDe
 
 1.	Add the ExactTargetOpenDirectDelegate protocol to your class.
 
-	<script src="https://gist.github.com/sfmc-mobilepushsdk/e3dc039e860b3a3448da.js"></script>
+	<script src="https://gist.github.com/sfmc-mobilepushsdk/ae6e3de55dd3bde9747071d51363a8fb.js"></script>
 
 1. Set the delegate to your class.
 

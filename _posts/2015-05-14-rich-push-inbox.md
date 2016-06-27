@@ -22,7 +22,7 @@ You can override this functionality, by implementing the ExactTargetCloudPageWit
 
     <script src="https://gist.github.com/sfmc-mobilepushsdk/e3df64163d067f3b559b84c057b82499.js"></script>
 
-1.	Implement the delegate method that will allow you to handle the CloudPage URL with your own code.  This delegate method will be called when a notification is tapped that has an CloudPage URL in the payload.
+1.	Implement the delegate method that will allow you to handle the CloudPage URL with your own code.  This delegate method will be called when a notification is tapped that has a CloudPage URL in the payload.
 
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/a8a1922c436db0224038c9e337dc8a99.js"></script>
 
