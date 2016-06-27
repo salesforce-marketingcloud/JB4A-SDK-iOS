@@ -16,6 +16,17 @@ If you wish to implement Analytics, pass a YES value for the withAnalytics param
 
 ### Web and Mobile Analytics
 
+#### Track Cart
+Use to track the contents of an in-app shopping cart.
+
+<script src="https://gist.github.com/sfmc-mobilepushsdk/5c21e497878b8d51ccb81cc4694b99fa"></script>
+
+#### Track Conversion
+Use to track a purchase made through your mobile application.
+
+<script src=https://gist.github.com/sfmc-mobilepushsdk/5e942a1125b7f45fd16b6e01290df510"></script>
+  
+#### Track Page View
 Call the following method to implement page view analytics in your app.  These analytics are sent to the Web and Mobile Analytics app in the Marketing Cloud.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
