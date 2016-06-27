@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>ExactTargetOpenDirectDelegate Protocol Reference</title>
+	<title>ExactTargetCloudPageWithAlertDelegate Protocol Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -60,9 +60,9 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/didReceiveOpenDirectMessageWithContents:">- didReceiveOpenDirectMessageWithContents:</option>
+		<option value="//api/name/didReceiveCloudPageWithAlertMessageWithContents:">- didReceiveCloudPageWithAlertMessageWithContents:</option>
 		
-		<option value="//api/name/shouldDeliverOpenDirectMessageIfAppIsRunning">- shouldDeliverOpenDirectMessageIfAppIsRunning</option>
+		<option value="//api/name/shouldDeliverCloudPageWithAlertMessageIfAppIsRunning">- shouldDeliverCloudPageWithAlertMessageIfAppIsRunning</option>
 		
 	</optgroup>
 	
@@ -79,7 +79,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">ExactTargetOpenDirectDelegate Protocol Reference</h1>
+					<h1 class="title">ExactTargetCloudPageWithAlertDelegate Protocol Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -98,13 +98,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Supporting protocol for OpenDirect, part of the Salesforce 2013-02 release.</p>
+						<p>Supporting protocol for Cloud Pages with Alert, part of the Salesforce 2016-04 release.</p>
 
-<p>Implementation of this delegate is not required for OpenDirect to function, but it is provided as a convenience to developers who do not with to parse the push payload on their own.</p>
+<p>Implementation of this delegate is not required for CloudPage with Alert to function, but it is provided as a convenience to developers who do not wish to parse the push payload on their own.</p>
 
-<p>All OpenDirect data is passed down as a JSON String, so you get it as an NSString. Please remember to parse it appropriately from there. Also, please remember to fail gracefully if you can&rsquo;t take action on the message.</p>
+<p>All CloudPage data is passed down as a JSON String, so you get it as an NSString. Please remember to parse it appropriately from there. Also, please remember to fail gracefully if you can&rsquo;t take action on the message.</p>
 
-<p>Also, please note that setting an OpenDirect Delegate will negate the automatic webpage loading feature added to MobilePush recently. This is deliberately to not stomp on your URLs and deep links.</p>
+<p>Also, please note that setting a CloudPage with Alert Delegate will negate the automatic webpage load to inbox feature added to MobilePush.</p>
 					</div>
 					
 					
@@ -120,8 +120,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/didReceiveOpenDirectMessageWithContents:" title="didReceiveOpenDirectMessageWithContents:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/didReceiveOpenDirectMessageWithContents:">&ndash;&nbsp;didReceiveOpenDirectMessageWithContents:</a></code>
+	<a name="//api/name/didReceiveCloudPageWithAlertMessageWithContents:" title="didReceiveCloudPageWithAlertMessageWithContents:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didReceiveCloudPageWithAlertMessageWithContents:">&ndash;&nbsp;didReceiveCloudPageWithAlertMessageWithContents:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -131,12 +131,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Method called when an OpenDirect payload is received from MobilePush.</p>
+				<p>Method called when an Cloud Page with Alert payload is received from MobilePush.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)didReceiveOpenDirectMessageWithContents:(NSString *)<em>payload</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)didReceiveCloudPageWithAlertMessageWithContents:(NSString *)<em>payload</em></code></div>
 
 		    
 			
@@ -165,7 +165,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Method called when an OpenDirect payload is received from MobilePush.</p>
+				<p>Method called when an Cloud Page with Alert payload is received from MobilePush.</p>
 			</div>
 			
 
@@ -183,8 +183,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/shouldDeliverOpenDirectMessageIfAppIsRunning" title="shouldDeliverOpenDirectMessageIfAppIsRunning"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shouldDeliverOpenDirectMessageIfAppIsRunning">&ndash;&nbsp;shouldDeliverOpenDirectMessageIfAppIsRunning</a></code>
+	<a name="//api/name/shouldDeliverCloudPageWithAlertMessageIfAppIsRunning" title="shouldDeliverCloudPageWithAlertMessageIfAppIsRunning"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldDeliverCloudPageWithAlertMessageIfAppIsRunning">&ndash;&nbsp;shouldDeliverCloudPageWithAlertMessageIfAppIsRunning</a></code>
 </h3>
 
 	<div class="method-info">
@@ -194,12 +194,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Allows you to define the behavior of OpenDirect based on application state.</p>
+				<p>Allows you to define the behavior of Cloud Page with Alert based on application state.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)shouldDeliverOpenDirectMessageIfAppIsRunning</code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)shouldDeliverCloudPageWithAlertMessageIfAppIsRunning</code></div>
 
 		    
 			
@@ -216,9 +216,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Allows you to define the behavior of OpenDirect based on application state.</p>
+				<p>Allows you to define the behavior of Cloud Page with Alert based on application state.</p>
 
-<p>If set to YES, the OpenDirect delegate will be called if a push with an OpenDirect payload is received and the application state is running. This is counter to normal push behavior, so the default is NO.</p>
+<p>If set to YES, the Cloud Page with Alert delegate will be called if a push with an Cloud Page with Alert payload is received and the application state is running. This is counter to normal push behavior, so the default is NO.</p>
 
 <p>Consider that if you set this to YES, and the user is running the app when a push comes in, the app will start doing things that they didn&rsquo;t prompt it to do. This is bad user experience since it&rsquo;s confusing to the user. Along these lines, iOS won&rsquo;t present a notification if one is received while the app is running.</p>
 			</div>

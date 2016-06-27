@@ -104,6 +104,8 @@
 		
 		<option value="//api/name/applicationTerminated">- applicationTerminated</option>
 		
+		<option value="//api/name/cloudPageWithAlertDelegate">- cloudPageWithAlertDelegate</option>
+		
 		<option value="//api/name/configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andProximityServices:andCloudPages:withPIAnalytics:error:">- configureSDKWithAppID:andAccessToken:withAnalytics:andLocationServices:andProximityServices:andCloudPages:withPIAnalytics:error:</option>
 		
 		<option value="//api/name/currentUserNotificationSettings">- currentUserNotificationSettings</option>
@@ -141,6 +143,8 @@
 		<option value="//api/name/removeTag:">- removeTag:</option>
 		
 		<option value="//api/name/resetBadgeCount">- resetBadgeCount</option>
+		
+		<option value="//api/name/setCloudPageWithAlertDelegate:">- setCloudPageWithAlertDelegate:</option>
 		
 		<option value="//api/name/setOpenDirectDelegate:">- setOpenDirectDelegate:</option>
 		
@@ -373,7 +377,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setOpenDirectDelegate:(id&lt;ExactTargetOpenDirectDelegate&gt;)<em>delegate</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setOpenDirectDelegate:(nullable id&lt;ExactTargetOpenDirectDelegate&gt;)<em>delegate</em></code></div>
 
 		    
 			
@@ -454,6 +458,120 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Returns the OpenDirect delegate.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCloudPageWithAlertDelegate:" title="setCloudPageWithAlertDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCloudPageWithAlertDelegate:">&ndash;&nbsp;setCloudPageWithAlertDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the cloudPageWithAlert delegate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCloudPageWithAlertDelegate:(nullable id&lt;ExactTargetCloudPageWithAlertDelegate&gt;)<em>delegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>delegate</code></th>
+						<td><p>The object you wish to be called when an OpenDirect message is delivered.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Doesn&rsquo;t return a value.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets the cloudPageWithAlert delegate.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETPush.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cloudPageWithAlertDelegate" title="cloudPageWithAlertDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cloudPageWithAlertDelegate">&ndash;&nbsp;cloudPageWithAlertDelegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the cloudPageWithAlert delegate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable id&lt;ExactTargetCloudPageWithAlertDelegate&gt;)cloudPageWithAlertDelegate</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>delegate The named cloudPageWithAlert delegate, or nil if there isn&rsquo;t one.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the cloudPageWithAlert delegate.</p>
 			</div>
 			
 
@@ -1062,7 +1180,7 @@ a send to the SFMC 60 seconds after the first request to change any Registration
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Reset the application&rsquo;s badge number to zero (aka, remove it) and let the push servers know that it should zero the count.</p>
+				<p>Reset the application&rsquo;s badge number to zero (aka, remove it). Call <a href="#//api/name/updateET">updateET</a> to refresh the server with the current badge number. Note: <a href="#//api/name/updateET">updateET</a> may not be fully processed by the server for a number of minutes; the server&rsquo;s badge value may be out of sync with the app for a short amount of time.</p>
 			</div>
 			
 		    
@@ -1084,7 +1202,7 @@ a send to the SFMC 60 seconds after the first request to change any Registration
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Reset the application&rsquo;s badge number to zero (aka, remove it) and let the push servers know that it should zero the count.</p>
+				<p>Reset the application&rsquo;s badge number to zero (aka, remove it). Call <a href="#//api/name/updateET">updateET</a> to refresh the server with the current badge number. Note: <a href="#//api/name/updateET">updateET</a> may not be fully processed by the server for a number of minutes; the server&rsquo;s badge value may be out of sync with the app for a short amount of time.</p>
 			</div>
 			
 
@@ -2900,12 +3018,14 @@ the contents of a log string will remain the same from one release to another.</
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Salesforce Marketing Cloud. All rights reserved. Updated: 2016-05-05</p>
+						<p class="copyright">Copyright &copy; 2016 Salesforce Marketing Cloud. All rights reserved. Updated: 2016-06-24</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
