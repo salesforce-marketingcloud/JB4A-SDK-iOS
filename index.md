@@ -16,7 +16,18 @@ Use the JB4A iOS SDK with iOS versions 7 or later.
 
 ## Release History
 
-For releases prior to v4.3.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.2.1/" target="_blank">Prior Release Documentation</a>
+For releases prior to v4.4.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.3.0/" target="_blank">Prior Release Documentation</a>
+
+#### Version 4.4.0
+_Released July 18 2016, correlating to the Marketing Cloud 2016-04 Release_<br/>
+
+* MOBILESDK-854 - iOS - Create CloudPage+Alert Delegate.
+* MOBILESDK-997 - Enumeration and Header files changes to support Pushing Cloud Pages.
+* MOBILESDK-907 - Implement PI trackConversion & trackCart methods.
+* MOBILESDK-910 - Improve Deprecation warnings in SDK.
+* MOBILESDK-946 - Switch to CGGeometry's CGRectGetXYZ rather than using direct structure accessors.
+* MOBILESDK-909 - getSDKState() incorrectly reports data.
+* MOBILESDK-904 - iOS SDK to use NSURLSession for networking in main phoneHome method.
 
 #### Version 4.3.0
 _Released May 23 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
