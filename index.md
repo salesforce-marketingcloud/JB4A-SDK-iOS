@@ -23,11 +23,10 @@ _Released July 18 2016, correlating to the Marketing Cloud 2016-04 Release_<br/>
 
 * MOBILESDK-854 - iOS - Create CloudPage+Alert Delegate.
 * MOBILESDK-997 - Enumeration and Header files changes to support Pushing Cloud Pages.
-* MOBILESDK-907 - Implement PI trackConversion & trackCart methods.
+* MOBILESDK-907 - Implement analytic events for tracking eCommerce cart contents and cart conversions.
 * MOBILESDK-910 - Improve Deprecation warnings in SDK.
-* MOBILESDK-946 - Switch to CGGeometry's CGRectGetXYZ rather than using direct structure accessors.
 * MOBILESDK-909 - getSDKState() incorrectly reports data.
-* MOBILESDK-904 - iOS SDK to use NSURLSession for networking in main phoneHome method.
+* MOBILESDK-904 - iOS SDK to use NSURLSession for networking.
 
 #### Version 4.3.0
 _Released May 23 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
