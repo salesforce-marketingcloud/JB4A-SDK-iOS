@@ -21,12 +21,11 @@ For releases prior to v4.4.0, see: <a href="http://salesforce-marketingcloud.git
 #### Version 4.4.0
 _Released July 18 2016, correlating to the Marketing Cloud 2016-04 Release_<br/>
 
-* MOBILESDK-854 - iOS - Create CloudPage+Alert Delegate.
-* MOBILESDK-997 - Enumeration and Header files changes to support Pushing Cloud Pages.
-* MOBILESDK-907 - Implement analytic events for tracking eCommerce cart contents and cart conversions.
+* MOBILESDK-854 - <a href="/JB4A-SDK-iOS-DocPreview/rich-push/rich-push-inbox.html#CPDelegate">iOS - Create CloudPage+Alert Delegate</a>.
+* MOBILESDK-907 - <a href="/JB4A-SDK-iOS-DocPreview/features/analytics.html#TrackCartAnalytics">Implement Predictive Intelligence integration methods for tracking eCommerce cart contents and cart conversions.</a>
 * MOBILESDK-910 - Improve Deprecation warnings in SDK.
-* MOBILESDK-909 - getSDKState() incorrectly reports data.
-* MOBILESDK-904 - iOS SDK to use NSURLSession for networking.
+* MOBILESDK-909 - Fixed getSDKState() to correctly report data.
+* MOBILESDK-904 - iOS SDK to use NSURLSession for networking. As of release 2016-04 of the JB4A SDK, we are 100% compliant with Apple NSURLSession standards.
 
 #### Version 4.3.0
 _Released May 23 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
