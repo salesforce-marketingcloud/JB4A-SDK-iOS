@@ -9,7 +9,7 @@ order: 2
 
 > Only use JB4A functionality to monitor locations for your mobile app. Using both the JB4A SDK and CLLocationManager will cause conflicts and prevent geolocation from functioning correctly.
 
-To implement location services, pass a YES value for the andLocationServices parameter and use ETLocationManager to monitor location and geofence for a user.
+To implement location services, pass a YES value for the andLocationServices parameter and use sharedInstance to monitor location and geofence for a user.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/16b7d79c4e246b5d64cc92e2f88317c4.js"></script>
 
