@@ -12,7 +12,7 @@ You must configure your app to display these messages. The SDK provides a TableV
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/f278db5683b7aec102f3.js"></script>
 
-You can override this functionality, by implementing the ExactTargetCloudPageWithAlertDelegate which will allow you to handle the URL in any fashion you choose.
+<div id="CPDelegate">You can override this functionality, by implementing the ExactTargetCloudPageWithAlertDelegate which will allow you to handle the URL in any fashion you choose.</div>
 
 1.	Add the ExactTargetCloudPageWithAlertDelegate protocol to your class.
 

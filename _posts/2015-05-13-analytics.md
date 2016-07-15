@@ -14,7 +14,7 @@ If you wish to implement Analytics, pass a YES value for the withAnalytics param
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/57757242e4d76abee281.js"></script>
 
-### Web and Mobile Analytics
+<div id="TrackCartAnalytics">### Web and Mobile Analytics</div>
 
 #### Track Cart
 Use to track the contents of an in-app shopping cart.
