@@ -13,9 +13,11 @@ Follow the steps on this page to implement Analytics and Web and Mobile analytic
 If you wish to implement Analytics, pass a YES value for the withAnalytics parameter.  If you also wish to implement Web and Mobile Analytics, pass a YES value for the withPIAnalytics parameter.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/57757242e4d76abee281.js"></script>
+<div id="TrackCartAnalytics"></div> 
 
 ## Predictive Intelligence and Collect API Integration
- 
+
+
 The following methods integrate your mobile app with the Marketing Cloud Predictive Intelligence application. You must have an existing Predictive Intelligence deployment in order to use these. Also, you must enable the "PIAnalytics" option when you configure your SDK.
 
 ### Track Cart
