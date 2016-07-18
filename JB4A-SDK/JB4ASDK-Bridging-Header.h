@@ -22,4 +22,7 @@
 #import "ETCloudPageDataSource.h"
 #import "ETEventMessage.h"
 #import "ETWKLandingPagePresenter.h"
+#import "PICart.h"
+#import "PICartItem.h"
+#import "PIOrder.h"
 #endif

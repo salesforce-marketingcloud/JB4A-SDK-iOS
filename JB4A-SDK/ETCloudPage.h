@@ -12,7 +12,9 @@
 #import "PushConstants.h"
 #import <CoreLocation/CoreLocation.h>
 
-
+/**
+ ETCloudPage class defines the cloudpage message type. The ETCloudPage object defines the inbox message properties which are used to support and store rich messages from the MarketingCloud. This class works with the ETCloudPageDataSource which is suitable for displaying the inbox UITableView.
+ */
 @interface ETCloudPage : NSObject
 
 /**

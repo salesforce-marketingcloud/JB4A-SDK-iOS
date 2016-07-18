@@ -17,6 +17,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class PIOrder;
+@class PICart;
+
 @interface ETAnalytics : NSObject
 
 /**
@@ -28,6 +31,20 @@ NS_ASSUME_NONNULL_BEGIN
  @return void
  */
 +(void)trackPageView:(NSString*)url andTitle:(nullable NSString*)title andItem:(nullable NSString *)item andSearch:(nullable NSString*)search;
+
+/**
+ Set Web Analytics Mobile Analytics, Track cart contents within your application.
+ @param cart a non-nil PICart object containing a cartID and an array of PICartItems
+ @return void
+ */
++(void)trackCartContents:(PICart * _Nonnull) cart;
+
+/**
+ Set Web Analytics Mobile Analytics, Track cart conversion within your application.
+ @param order a non-nil PIOrder object representing an order; created from a cart and cart items and "converted" into a sale of some sort
+ @return void
+ */
++(void)trackCartConversion:(PIOrder * _Nonnull) order;
 
 @end
 NS_ASSUME_NONNULL_END

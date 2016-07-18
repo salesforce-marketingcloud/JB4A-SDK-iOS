@@ -58,6 +58,42 @@ static NSString * const SDKName = @"JB4ASDK";
 
 @end
 
+/**
+ Supporting protocol for Cloud Pages with Alert, part of the Salesforce 2016-04 release.
+ 
+ Implementation of this delegate is not required for CloudPage with Alert to function, but it is provided as a convenience to developers who do not wish to parse the push payload on their own.
+ 
+ All CloudPage data is passed down as a JSON String, so you get it as an NSString. Please remember to parse it appropriately from there. Also, please remember to fail gracefully if you can't take action on the message.
+ 
+ Also, please note that setting a CloudPage with Alert Delegate will negate the automatic webpage load to inbox feature added to MobilePush.
+ */
+@protocol ExactTargetCloudPageWithAlertDelegate <NSObject>
+
+/**
+ Method called when an Cloud Page with Alert payload is received from MobilePush.
+ 
+ @param payload value NSString. The contents of the payload as received from MobilePush.
+ @return Doesn't return a value.
+ */
+-(void)didReceiveCloudPageWithAlertMessageWithContents:(NSString *)payload;
+
+#pragma mark - Optional
+
+@optional
+
+/**
+ Allows you to define the behavior of Cloud Page with Alert based on application state.
+ 
+ If set to YES, the Cloud Page with Alert delegate will be called if a push with an Cloud Page with Alert payload is received and the application state is running. This is counter to normal push behavior, so the default is NO.
+ 
+ Consider that if you set this to YES, and the user is running the app when a push comes in, the app will start doing things that they didn't prompt it to do. This is bad user experience since it's confusing to the user. Along these lines, iOS won't present a notification if one is received while the app is running.
+ 
+ @return BOOL representing whether or not you want action to be taken.
+ */
+-(BOOL)shouldDeliverCloudPageWithAlertMessageIfAppIsRunning;
+
+@end
+
 #pragma mark - Interface
 
 /**
@@ -74,6 +110,9 @@ static NSString * const SDKName = @"JB4ASDK";
     
     // OpenDirect Delegate stuff
     id<ExactTargetOpenDirectDelegate> _openDirectDelegate;
+    
+    // CloudPageWithAlert Delegate stuff
+    id<ExactTargetCloudPageWithAlertDelegate> _cloudPageWithAlertDelegate;
     
 }
 
@@ -121,7 +160,7 @@ static NSString * const SDKName = @"JB4ASDK";
  @param delegate The object you wish to be called when an OpenDirect message is delivered.
  @return Doesn't return a value.
  */
--(void)setOpenDirectDelegate:(id<ExactTargetOpenDirectDelegate>)delegate;
+-(void)setOpenDirectDelegate:(nullable id<ExactTargetOpenDirectDelegate>)delegate;
 
 /**
  Returns the OpenDirect delegate.
@@ -129,6 +168,21 @@ static NSString * const SDKName = @"JB4ASDK";
  @return delegate The named OpenDirect delegate, or nil if there isn't one.
  */
 -(nullable id<ExactTargetOpenDirectDelegate>)openDirectDelegate;
+
+/**
+ Sets the cloudPageWithAlert delegate.
+ 
+ @param delegate The object you wish to be called when an OpenDirect message is delivered.
+ @return Doesn't return a value.
+ */
+-(void)setCloudPageWithAlertDelegate:(nullable id<ExactTargetCloudPageWithAlertDelegate>)delegate;
+
+/**
+ Returns the cloudPageWithAlert delegate.
+ 
+ @return delegate The named cloudPageWithAlert delegate, or nil if there isn't one.
+ */
+-(nullable id<ExactTargetCloudPageWithAlertDelegate>)cloudPageWithAlertDelegate;
 
 /**
  Triggers an immediate send of Registration data to Salesforce Marketing Cloud and will wait 60 seconds to send 
@@ -277,7 +331,7 @@ static NSString * const SDKName = @"JB4ASDK";
 -(void)applicationDidFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
 
 /**
- Reset the application's badge number to zero (aka, remove it) and let the push servers know that it should zero the count.
+Reset the application's badge number to zero (aka, remove it). Call updateET to refresh the server with the current badge number. Note: updateET may not be fully processed by the server for a number of minutes; the server's badge value may be out of sync with the app for a short amount of time.
  
  @return Doesn't return a value
  */
@@ -391,7 +445,7 @@ Handles a push notification received by the app when the application is already 
  @deprecated Feb 29 2016
  @return All tags associated.
  */
--(NSSet *)allTags;
+-(NSSet *)allTags DEPRECATED_MSG_ATTRIBUTE("allTags is deprecated. Please use getTags instead.");
 
 /**
  Returns the list of tags for this device.
@@ -438,7 +492,7 @@ Handles a push notification received by the app when the application is already 
  @deprecated Feb 29 2016
  @return All attributes currently set
  */
--(NSDictionary *)allAttributes;
+-(NSDictionary *)allAttributes DEPRECATED_MSG_ATTRIBUTE("allAttributes has been deprecated. Please use getAttributes instead");
 
 /**
  Returns a read-only copy of the Attributes dictionary as it is right now.

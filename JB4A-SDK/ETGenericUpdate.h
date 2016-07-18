@@ -62,8 +62,7 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
 
 @property (nonatomic) int tag; // The property that started this whole ordeal.
 @property (nonatomic) NSInteger databaseIdentifier;
-@property (nonatomic, strong) NSMutableData *responseData;
-@property (nonatomic, strong) NSHTTPURLResponse *responseCode;
+@property (nonatomic, copy) NSData *responseData;
 @property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundTaskID;
 
 /**
@@ -93,14 +92,14 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
 -(nullable NSDictionary *)jsonPayloadAsDictionary;
 
 /**
- Called by ETPhoneHome after the ETURLConnection is finished. This should handle doing anything that needs to be done to the payload after it's fully received (like, start monitoring for geofences.
+ Called by ETPhoneHome after the session is finished. This should handle doing anything that needs to be done to the payload after it's fully received (like, start monitoring for geofences.
  
  It's called after a respondsToSelector: so it doesn't have to be implemented.
  */
 -(void)processResults;
 
 /** 
- Called by ETPhone if the ETURLConnection fails. This should do it's best to recover what it can, maybe loading things from the database or whatever. 
+ Called by ETPhone if the session fails. This should do it's best to recover what it can, maybe loading things from the database or whatever. 
  
  Sometimes bad things happen when retrieving data from Salesforce. I mean, cellular Internet isn't a perfect science.
  */
