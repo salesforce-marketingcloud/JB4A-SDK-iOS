@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger, GenericUpdateSendMethod)
 +(nullable instancetype)alloc;
 -(nullable instancetype)initFromDictionary:(NSDictionary *)dict;
 
-+(NSString *)remoteRoutePath;
++(NSString * _Nullable)remoteRoutePath;
 -(NSString *)remoteRoutePath;
 
 +(NSString *)tableName;
@@ -123,12 +123,12 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
  */
 
 /**
- To make the databases self-updating (more or less), we keep track of the version of the local DB that the insert query represents. This number is stored to NSUserDefaults with the key in databaseVersionKey and checked before inserts. If the number returned is less than this number, it drops and recreates the database table. 
+ To make the databases self-updating (more or less), we keep track of the version of the local DB that the insert query represents. This number is stored to ETGeneralSettingsManager with the key in databaseVersionKey and checked before inserts. If the number returned is less than this number, it drops and recreates the database table. 
  */
 -(int)dbVersionNumber;
 
 /** 
- And this is the key to match the dbVersionNumber. It is saved to NSUserDefaults in combination with dbVersionNumber to identify the age of the table.
+ And this is the key to match the dbVersionNumber. It is saved to ETGeneralSettingsManager in combination with dbVersionNumber to identify the age of the table.
  */
 -(NSString *)databaseVersionKey;
 
