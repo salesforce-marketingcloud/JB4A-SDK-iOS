@@ -39,12 +39,10 @@ Follow these steps to configure the SDK for your app.<br/>
 1.	Include the WebKit.framework in Link Binary With Libraries section of the Build Phases configuration in Xcode.
 
 1.  Add code in the AppDelegate implementation class to configure the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from the Marketing Cloud app you created in <a href="https://https://appcenter-auth.s1.marketingcloudapps.com/" target="_blank">App Center<a/>.
-
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/346819617929db86b842.js"></script>
-
 After resetBadgeCount, you should call updateET. Note that updateET may not be fully processed by the server at the time that you call, so the server's badge value may be out of sync with the app for several minutes.
 
-1.	In **App Settings**, set the **Push Notifications** switch to **ON**. 
+1.	In **App Settings**, set the **Push Notifications** switch to **ON**.
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/pushNotifications.png" /><br/>
 <br/>
