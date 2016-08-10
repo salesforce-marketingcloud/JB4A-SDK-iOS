@@ -7,7 +7,7 @@ date: 2015-05-14 08:43:35
 order: 2
 ---
 
-> Only use JB4A functionality to monitor locations for your mobile app. Using both the JB4A SDK and CLLocationManager will cause conflicts and prevent geolocation from functioning correctly.
+> If you create your own core location object, we cannot guarantee that features of our SDK will work as intended. If all that is needed is a location fix, you can access our CLLocationDelegate by calling [ETLocationManager sharedInstance].
 
 To implement location services, pass a YES value for the andLocationServices parameter and use sharedInstance to monitor location and geofence for a user.
 
