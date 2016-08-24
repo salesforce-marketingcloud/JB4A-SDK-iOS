@@ -109,10 +109,15 @@
 
             if (document.querySelectorAll) orderNav();
         </script>
-        {% if site.environment == 'production' %}
-            {% if site.google_analytics_id != "" %}
-                {% include google_analytics.html %}
-            {% endif %}
+        
+        {% if site.baseurl == "/JB4A-SDK-iOS" %}
+            {% site.google_analytics_id = site.google_analytics_prod_id %}
+        {% elseif site.baseurl == "/JB4A-SDK-iOS-DocPreview" %}
+            {% site.google_analytics_id = site.google_analytics_docpreview_id %}
+        {% endif %}
+
+        {% if site.google_analytics_id == site.google_analytics_prod_id or site.google_analytics_id == site.google_analytics_docpreview_id %}
+            {% include google_analytics.html %}
         {% endif %}
     </body>
 </html>
