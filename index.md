@@ -10,13 +10,25 @@ This documentation includes information for the Marketing Cloud Journey Builder 
 Review the Apple docs for the SDK:<br/>
 <a href="{{ site.baseurl }}/appledoc/index.html" target="_blank">iOS SDK Apple Docs</a>
 
+Learn how to use the SDK with the Marketing Cloud Learning App:<br/>
+<a href="https://github.com/salesforce-marketingcloud/LearningAppIos" target="_blank">iOS Learning App</a>
+
 ## iOS Version
 
 Use the JB4A iOS SDK with iOS versions 7 or later.
 
 ## Release History
 
-For releases prior to v4.4.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.3.0/" target="_blank">Prior Release Documentation</a>
+For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.3.0/" target="_blank">Prior Release Documentation</a>
+
+#### Version 4.5.0
+_Released September 9, 2016, correlating with the Marketing Cloud 2016-05 release._
+
+* **MobilePush Beacons Support** - The SDK supports MobilePush Beacons.
+
+* **Use Multiple Push Providers Cautiously - If you use multiple push providers, there are several things you should be aware of: [Troubleshooting]({{ site.baseurl}}/trouble-shooting/multiple-push-sdks.html).
+<!
+* **MessageID Recorded for App Open Events** - MessageID is now collected when users open the app from a push notification. This includes direct and indirect opens.
 
 #### Version 4.4.0
 _Released July 18 2016, correlating to the Marketing Cloud 2016-04 Release_<br/>
