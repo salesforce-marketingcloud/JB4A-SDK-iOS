@@ -44,4 +44,4 @@ Implement the following key if you want to enable this function:
 
 <br/><img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>
 
-> MobilePush prevents the app from displaying a geofence or beacon message with an empty alert. If you include AMPscript in your message that returns no content or an empty string, the mobile app will not display that message. 
+> MobilePush prevents the app from displaying a geofence message with an empty alert. If you include AMPscript in your message that returns no content or an empty string, the mobile app will not display that message. 
