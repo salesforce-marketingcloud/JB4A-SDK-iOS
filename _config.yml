@@ -5,10 +5,10 @@ title: 'Journey Builder for Apps iOS SDK (v4.4.0)'
 disqus_shortname: ''
 
 # if you use google analytics, add your tracking id here
-google_analytics_prod_id: 'UA-82902574-4'
-google_analytics_docpreview_id: 'UA-82902574-1'
-#google_analytics_android_id: 'UA-82902574-3'
-#google_analytics_android_docpreview_id: 'UA-82902574-2'
+#google_analytics_id: 'UA-82902574-4' #PROD
+google_analytics_id: 'UA-82902574-1' #DocPreview
+#google_analytics_id: 'UA-82902574-3' #PROD
+#google_analytics_id: 'UA-82902574-2' #DocPreview
 
 # Enable/show navigation. There are there options:
 #   0 - always hide
