@@ -7,13 +7,15 @@ date: 2016-09-02 08:43:35
 order: 3
 ---
 
-To implement beacons, follow the steps for adding geolocation and set both andProximityServices and andLocationServices to YES.
+1. Add geolocation. Follow the steps for [Add Geolocation]({{ site.baseurl}}/location/geolocation.html) before continuing.
+1. Set `andProximityServices` and `andLocationServices` to YES.
+
 
 #### <a name="plist"></a>plist Update
 
 There is one plist entry to add, depending on the way your app works:  
 
-Range for Beacons in the background: This permission will ensure that your app can range for beacons when your app is in the background or suspended.
+* Range for Beacons in the background: This permission will ensure that your app can range for beacons when your app is in the background or suspended.
 
 Implement the following key if you want to enable this function:
 

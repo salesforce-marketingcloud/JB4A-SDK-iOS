@@ -25,9 +25,7 @@ For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce
 _Released September 9, 2016, correlating with the Marketing Cloud 2016-05 release._
 
 * **MobilePush Beacons Support** - The SDK supports MobilePush Beacons.
-
-* **Use Multiple Push Providers Cautiously - If you use multiple push providers, there are several things you should be aware of: [Troubleshooting]({{ site.baseurl}}/trouble-shooting/multiple-push-sdks.html).
-<!
+* **Use Multiple Push Providers Cautiously** - If you use multiple push providers, there are several things you should be aware of: [Troubleshooting]({{ site.baseurl}}/trouble-shooting/multiple-push-sdks.html).
 * **MessageID Recorded for App Open Events** - MessageID is now collected when users open the app from a push notification. This includes direct and indirect opens.
 
 #### Version 4.4.0
