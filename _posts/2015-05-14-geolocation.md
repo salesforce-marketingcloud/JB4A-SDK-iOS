@@ -11,7 +11,7 @@ order: 2
 
 To implement location services, pass a YES value for the andLocationServices parameter and use sharedInstance to monitor location and geofence for a user.
 
-<script src="https://gist.github.com/sfmc-mobilepushsdk/16b7d79c4e246b5d64cc92e2f88317c4.js"></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/be782b1c6b47fc7db9f911eb9e108eac.js"></script>
 
 After calling configureSDK(), you must make the following call to initiate location services within the SDK.  This call will also ensure your customer is given the opportunity to accept or deny location services within your app.
 
