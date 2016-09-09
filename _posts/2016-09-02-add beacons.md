@@ -25,4 +25,4 @@ Implement the following key if you want to enable this function:
 
 > MobilePush prevents the app from displaying a beacon message with an empty alert. If you include AMPscript in your message that returns no content or an empty string, the mobile app will not display that message.
 
-> To understand how beacons behave in different situations, see the MobilePush beacons help documentation.
+> To understand how beacons behave in different situations, see the <a href="http://help.marketingcloud.com/en/documentation/mobilepush/beacons_overview/beacon_behavior/" target="_blank">MobilePush beacons help documentation</a>.

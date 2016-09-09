@@ -24,7 +24,7 @@ For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce
 #### Version 4.5.0
 _Released September 9, 2016, correlating with the Marketing Cloud 2016-05 release._
 
-* **MobilePush Beacons Support** - The SDK supports [MobilePush Beacons]({{ site.baseurl }}/location/add-beacons.html) .
+* **MobilePush Beacons Support** - The SDK supports [MobilePush Beacons]({{ site.baseurl }}/location/add-beacons.html).
 * **Use Multiple Push Providers Cautiously** - If you use multiple push providers, there are several things you should be aware of: [Troubleshooting]({{ site.baseurl}}/trouble-shooting/multiple-push-sdks.html).
 
 #### Version 4.4.0
