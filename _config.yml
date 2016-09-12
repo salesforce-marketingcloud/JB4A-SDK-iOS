@@ -1,11 +1,14 @@
 # Site title and subtitle. This is used in _includes/header.html
-title: 'Journey Builder for Apps iOS SDK (v4.4.0)'
+title: 'Journey Builder for Apps iOS SDK (v4.5.0)'
 
 # if you wish to integrate disqus on pages set your shortname here
 disqus_shortname: ''
 
 # if you use google analytics, add your tracking id here
-google_analytics_id: ''
+google_analytics_id: 'UA-82902574-4' #PROD
+#google_analytics_id: 'UA-82902574-1' #DocPreview
+#google_analytics_id: 'UA-82902574-3' #PROD
+#google_analytics_id: 'UA-82902574-2' #DocPreview
 
 # Enable/show navigation. There are there options:
 #   0 - always hide
@@ -50,7 +53,7 @@ exclude: ['bin', 'README.md']
 markdown: kramdown
 
 # Current SDK version, use for all mentions
-currentVersion: "4.4.0"
+currentVersion: "4.5.0"
 
 # Retry and REST delay message
 retryAndRESTdelayMessage: "The SDK will send changes to Tags to the Marketing Cloud with a REST call one minute after the first change to any Marketing Cloud data.  If the REST call fails (no network for example), then it will retry in one minute intervals until the app is suspended.  If the send is unsuccessful before the app is suspended, the data will be sent the next time the app is opened.  It will take up to 5 minutes for this value to be recorded in the Contact record once the REST call is made by the SDK.

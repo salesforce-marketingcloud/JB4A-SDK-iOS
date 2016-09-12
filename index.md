@@ -10,13 +10,22 @@ This documentation includes information for the Marketing Cloud Journey Builder 
 Review the Apple docs for the SDK:<br/>
 <a href="{{ site.baseurl }}/appledoc/index.html" target="_blank">iOS SDK Apple Docs</a>
 
+Learn how to use the SDK with the Marketing Cloud Learning App:<br/>
+<a href="https://github.com/salesforce-marketingcloud/LearningAppIos" target="_blank">iOS Learning App</a>
+
 ## iOS Version
 
 Use the JB4A iOS SDK with iOS versions 7 or later.
 
 ## Release History
 
-For releases prior to v4.4.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.3.0/" target="_blank">Prior Release Documentation</a>
+For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.3.0/" target="_blank">Prior Release Documentation</a>
+
+#### Version 4.5.0
+_Released September 9, 2016, correlating with the Marketing Cloud 2016-05 release._
+
+* **MobilePush Beacons Support** - The SDK supports [MobilePush Beacons]({{ site.baseurl }}/location/add-beacons.html).
+* **Use Multiple Push Providers Cautiously** - If you use multiple push providers, there are several things you should be aware of: [Troubleshooting]({{ site.baseurl}}/trouble-shooting/multiple-push-sdks.html).
 
 #### Version 4.4.0
 _Released July 18 2016, correlating to the Marketing Cloud 2016-04 Release_<br/>
@@ -131,56 +140,3 @@ You will need to update your configSDK registration call to now read:
 <script src="https://gist.github.com/sfmc-mobilepushsdk/71cf71032cfe92c06d76bf5f894cb115.js"></script>
 
 <!--**Recommended Coding Changes** -->
-
-___
-
-#### Version 3.4.2 ####
-_Released March 9, 2015, correlating to Marketing Cloud 2015-02 Release_
-
-* Fix beacon payload message handling for personalized messages
- Added initial PI Analytics - off by default in the SDK
- Enabled IOS Data Protection on SQLite DB. Using NSFileProtectionCompleteUnlessOpen. User must set a passcode to enable.
- Disabled caching of URL responses
-
-___
-
-#### Version 3.4.1 #### 
-_Released December 11, 2014_
-
- * HF.1 - fixed analytics rest route.
-
-___
-
-#### Version 3.4.0 ####
-_Released November 17, 2014, correlating to Marketing Cloud 2014-08 Release_
-
-* MPUSH-2753 - Fix for someone calling registerForRemoteNotificationTypes on an IOS8 device. We will transform the call to into the IOS8 call/pair registerUserNotificationSettings and registerForRemoteNotifications using the same alert types (i.e. sound, badges, alerts). This is so push registration will work if the customer doesn't change their code at all and just recompiles with Xcode6 but they want to run on an IOS8 device.<br/>
-Calling registerForRemoteNotificationTypes while running on an IOS8 device will fail and you will not get a push token.<br/>
-* MPUSH-2752 - Rename PracticeField app to JB4A SDK Explorer (iOS).<br/>
-* MPUSH-2855 - Geofence Messages not always displaying when expected.<br/>
-* MPUSH-2854 - iOS Beacons not working.<br/>
-* MPUSH-3010 - Payload for iOS Local Messages.<br/>
-
-___
-
-#### Version 3.3.0 #####
-_Released August 25, 2014, correlating to ExactTarget's 2014-06 Release_<br/>
-
-* MPUSH-2560 - Continued Beacon work to meet further requirements.<br/>
-* MPUSH-2488 - Added device locale to registrations.<br/>
-* MPUSH-2472 - Introduced ETEvent to track statistics and such going forward. This also includes the addition of the Bulk Uploader Shim and related functionality.<br/>
-* MPUSH-2513 - Added the ability to retrieve inactive fences from the SDK's cache. This was previously impossible.<br/>
-* MPUSH-2536 - ETLog can now be turned on or off in production. It defaults to off.<br/>
-___
-
-#### Version 3.2.0 #####
-_Released July 21, 2014, correlating to ExactTarget's 2014-05 Release_<br/>
-
-* Now with Beacons!<br/>
-* Refactored the GenericUpdate objects to have the "ET" prefix that they should have had this whole time. This shouldn't create a breaking change for anyone since they weren't yet using these classes for anything.<br/>
-* Removed the Geofence class altogether. Now, all of the work it did is handled by statics in ETRegion.<br/>
-* Extended ETRegion to handle beacons as well as geofences. This one class describes both types of regions now.<br/>
-* Began writing UIAutomation tests.<br/>
-* Wrote a local podspec so internal projects can use the SDK directly from source.<br/>
-* Regions now count the number of times they're entered or exited. <br/>
-* A message can now be fired **after** <br/>
