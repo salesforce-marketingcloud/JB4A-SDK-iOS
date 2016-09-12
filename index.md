@@ -19,10 +19,10 @@ Use the JB4A iOS SDK with iOS versions 7 or later.
 
 ## Release History
 
-For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.3.0/" target="_blank">Prior Release Documentation</a>
+For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.4.0/" target="_blank">Prior Release Documentation</a>
 
 #### Version 4.5.0
-_Released September 9, 2016, correlating with the Marketing Cloud 2016-05 release._
+_Released September 12, 2016, correlating with the Marketing Cloud 2016-05 release._
 
 * **MobilePush Beacons Support** - The SDK supports [MobilePush Beacons]({{ site.baseurl }}/location/add-beacons.html).
 * **Use Multiple Push Providers Cautiously** - If you use multiple push providers, there are several things you should be aware of: [Troubleshooting]({{ site.baseurl}}/trouble-shooting/multiple-push-sdks.html).
