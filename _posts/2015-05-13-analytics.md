@@ -15,25 +15,25 @@ If you wish to implement Analytics, pass a YES value for the withAnalytics param
 <script src="https://gist.github.com/sfmc-mobilepushsdk/57757242e4d76abee281.js"></script>
 <div id="TrackCartAnalytics"></div> 
 
-## Predictive Intelligence and Collect API Integration
+## Personalization Builder and Collect API Integration
 
 
-The following methods integrate your mobile app with the Marketing Cloud Predictive Intelligence application. You must have an existing Predictive Intelligence deployment in order to use these. Also, you must enable the "PIAnalytics" option when you configure your SDK.
+The following methods integrate your mobile app with Personalization Builder. You must have an existing Personalization Builder deployment in order to use these. Also, you must enable the "PIAnalytics" option when you configure your SDK.
 
 ### Track Cart
 
-Use to track the contents of an in-app shopping cart. For more information about this method's general use with the Predictive Intelligence system, see <a href="http://help.marketingcloud.com/en/documentation/collect_code/install_collect_code/track_cart/" target="_blank">Track Items in Shopping Cart</a>. Sample code for use in your mobile app is below.
+Use to track the contents of an in-app shopping cart. For more information about this method's general use with Personalization Builder, see <a href="http://help.marketingcloud.com/en/documentation/collect_code/install_collect_code/track_cart/" target="_blank">Track Items in Shopping Cart</a>. Sample code for use in your mobile app is below.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/d8bb05166f37dabc5780763a4a39bb31.js"></script>
 
 ### Track Conversion
 
-Use to track a purchase made through your mobile application. For more information about this method's general use with the Predictive Intelligence app, see <a href="http://help.marketingcloud.com/en/documentation/collect_code/install_collect_code/track_conversion/" target="_blank">Track Purchase Details</a>. Sample code for use in your mobile app is below.
+Use to track a purchase made through your mobile application. For more information about this method's general use with Personalization Builder, see <a href="http://help.marketingcloud.com/en/documentation/collect_code/install_collect_code/track_conversion/" target="_blank">Track Purchase Details</a>. Sample code for use in your mobile app is below.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/23d224f8bb3e4dc510c356755dbd323d.js"></script>
   
 ### Track Page View
-Call the following method to implement page view analytics in your app. For more information about this method's general use with the Predictive Intelligence app, see <a href="http://help.marketingcloud.com/en/documentation/collect_code/install_collect_code/track_page_view/" target="_blank">Track Items Viewed</a>. Sample code for use in your mobile app is below.
+Call the following method to implement page view analytics in your app. For more information about this method's general use with Personalization Builder, see <a href="http://help.marketingcloud.com/en/documentation/collect_code/install_collect_code/track_page_view/" target="_blank">Track Items Viewed</a>. Sample code for use in your mobile app is below.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
 
