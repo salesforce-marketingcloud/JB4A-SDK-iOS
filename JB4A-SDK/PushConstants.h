@@ -55,9 +55,11 @@ static NSString * const ETPIAnalyticsActive       = @"ETPIAnalyticsActive";
  */
 typedef NS_ENUM (NSUInteger, pushOriginationState){
     /** PushOriginationStateBackground  */
-    PushOriginationStateBackground                    = 0,
+    PushOriginationStateBackground                      = 0,
     /** PushOriginationStateForeground  */
-    PushOriginationStateForeground
+    PushOriginationStateForeground,
+    /** Unknown state  */
+    PushOriginationStateUnknown                         = 999
 };
 
 /**
@@ -91,7 +93,11 @@ typedef NS_ENUM(NSUInteger, configureSDKWithAppIDError) {
     /** configureSDKWithAppIDRunOnceError  */
     configureSDKWithAppIDRunOnceError,
     /** configureSDKWithAppIDInvalidLocationAndProximityError  */
-    configureSDKWithAppIDInvalidLocationAndProximityError
+    configureSDKWithAppIDInvalidLocationAndProximityError,
+    /** configureSDKWithAppIDSimulatorBlobError  */
+    configureSDKWithAppIDSimulatorBlobError,
+    /** configureSDKWithAppIDKeyChainInvalidError  */
+    configureSDKWithAppIDKeyChainInvalidError
 };
 
 /**
