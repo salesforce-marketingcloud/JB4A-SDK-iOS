@@ -21,6 +21,11 @@ Use the JB4A iOS SDK with iOS versions 7 or later.
 
 For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.4.0/" target="_blank">Prior Release Documentation</a>
 
+#### Version 4.5.1
+_Released October 6, 2016_
+
+* **Keychain error handling improvements** - We made improvements to keychain error handling.
+
 #### Version 4.5.0
 _Released September 12, 2016, correlating with the Marketing Cloud 2016-05 release._
 
