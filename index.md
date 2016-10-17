@@ -15,7 +15,9 @@ Learn how to use the SDK with the Marketing Cloud Learning App:<br/>
 
 ## iOS Version
 
-Use the JB4A iOS SDK with iOS versions 7 or later.
+For SDK version 4.5.1: Build your app for iOS version 7 or higher.
+
+When SDK version 4.6.0 is released, iOS 8.1 will be the new minimum deployment target version. Build your app for iOS version 8.1 or higher to be compatible with the new version of the JB4A SDK.
 
 ## Release History
 
