@@ -37,6 +37,12 @@ Call the following method to implement page view analytics in your app. For more
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/97625936a95fa46a0e8a.js"></script>
 
+### Subscriber Key
+
+Using Subscriber Key, you can link track cart, track conversion, and other Collect API analytic events with a specific user. Subscriber Key is included in the Collect API payload and can contain information such as email addess, mobile number, customer number, etc. See [Updating Subscriber Key]({{ site.baseurl }}/features/subscriber-key.html) for more information.
+
+## Access Web & Mobile Analytics
+
 As well as providing the ability to track page views within your app, the Web and Mobile Analytics app will provide information about the time your customers are spending in your app.  To view this information in the Web and Mobile App, following these steps to configure the Web and Mobile Analytic app within your Marketing Cloud account.
 
 1. 	To see your new Web and Mobile Analytics information sent by the SDK, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud: 
