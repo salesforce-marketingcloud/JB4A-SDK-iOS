@@ -23,6 +23,15 @@ When SDK version 4.6.0 is released, iOS 8.1 will be the new minimum deployment t
 
 For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.5.0/" target="_blank">Prior Release Documentation</a>
 
+#### Version 4.6.0
+_Released October 31, 2016, corresponding to the Marketing Cloud 2016-06 release_
+
+* **iOS 10 Support** -- Users can now use the SDK with iOS 10. This update changes the handling of push notifications on iOS devices running version 10 or greater. The SDK remains compatible with previous versions of iOS. On devices running version 10, the SDK now uses the new user notification framework. View details here: [Use iOS 10 Notifications]({{ site.baseurl }}/features/iOS10-notifications.html).
+
+* **Collect API Update** -- If SubscriberKey contains a value, the Collect API payload includes that value whether or not it's in the format of an email address.
+
+* **New Minimum Deployment Target Version: iOS 8.1** -- Build your app for iOS 8.1 or higher to be compatible with the SDK.
+
 #### Version 4.5.1
 _Released October 6, 2016_
 
