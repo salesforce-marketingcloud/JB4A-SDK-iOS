@@ -39,7 +39,7 @@ Call the following method to implement page view analytics in your app. For more
 
 ### Subscriber Key
 
-Using Subscriber Key, you can link track cart, track conversion, and other Collect API analytic events with a specific user. Subscriber Key is included in the Collect API payload and can contain information such as email addess, mobile number, customer number, etc. See [Updating Subscriber Key]({{ site.baseurl }}/features/subscriber-key.html) for more information.
+Using Subscriber Key, you can link track cart, track conversion, and other Collect API analytic events with a specific user. Subscriber Key is included in the Collect API payload and can contain information such as email addess, mobile number, device ID, etc. See [Updating Subscriber Key]({{ site.baseurl }}/features/subscriber-key.html) for more information.
 
 ## Access Web & Mobile Analytics
 
