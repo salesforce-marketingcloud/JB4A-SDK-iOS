@@ -27,11 +27,7 @@ Use the following method to enable iOS 10 notifications. When this method is cal
 
 The method can be called like this:
 
-```
- [[ETPush pushManager] registerForRemoteNotificationsWithDelegate:self options:(UNAuthorizationOptionAlert + UNAuthorizationOptionBadge + UNAuthorizationOptionSound) categories:nil completionHandler:^(BOOL granted, NSError * _Nullable error) {
-           NSLog(@"Registered for remote notifications: %d", granted);
-       }];
-```
+<script src="https://gist.github.com/sfmc-mobilepushsdk/5c7fd7dde75b4efeb84f364eda47d9dc.js"></script>
 
 Parameters:
 - `delegate` -- Assign the delegate before your app is done launching. For details, see Apple’s [API Reference](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate).
@@ -52,42 +48,11 @@ Parameters:
 
 An application delegate **must** implement `UIApplication` delegate methods to handle registration success and failure cases. At a minimum, implement these methods like this:
 
-```
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-   /**
-    Inform the JB4ASDK of the device token
-    */
-   [[ETPush pushManager] registerDeviceToken:deviceToken];
-}
- 
--(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-   /**
-    Inform the JB4ASDK that the device failed to register and did not receive a device token
-    */
-   [[ETPush pushManager] applicationDidFailToRegisterForRemoteNotificationsWithError:error];    
-}
-```
+<script src="https://gist.github.com/sfmc-mobilepushsdk/2f665859f298f85409ae1fc1dc2e1047.js"></script>
 
 > If your application supports iOS 8 and iOS 9 in addition to iOS 10, your notification registration code must make a runtime check for iOS version and call the appropriate registration method, like this example:
 
-```
-if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
-       [[ETPush pushManager] registerForRemoteNotificationsWithDelegate:self options:(UNAuthorizationOptionAlert + UNAuthorizationOptionBadge + UNAuthorizationOptionSound) categories:nil completionHandler:^(BOOL granted, NSError * _Nullable error) {
-           
-           NSLog(@"Registered for remote notifications: %d", granted);
-       }];
-   }
-   else {
-       UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
-                                               UIUserNotificationTypeBadge |
-                                               UIUserNotificationTypeSound |
-                                               UIUserNotificationTypeAlert
-                                                                                categories:nil];
-       // Notify the SDK what user notification settings have been selected
-       [[ETPush pushManager] registerUserNotificationSettings:settings];
-       [[ETPush pushManager] registerForRemoteNotifications];
-   }
-```
+<script src="https://gist.github.com/sfmc-mobilepushsdk/0da26f1e972ac80adfd879100464b489.js"></script>
 
 ### Convenience Methods
 
@@ -99,31 +64,4 @@ When running on iOS10, the following two methods of the UNUserNotificationCenter
  
 The first method, didReceiveNotificationResponse, is called to let your app know which action the user selected for a given notification. The second method, willPresentNotification, is called when a notification is delivered to a foregrounded app. The examples below show how to pass the notification to ETPush in order for the SDK to process the notification properly.
 
-```
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler {
-   
-        	NSDictionary *userInfo = response.notification.request.content.userInfo;
-        	[[ETPush pushManager] handleNotification:userInfo forApplicationState:[UIApplication sharedApplication].applicationState];
-   
-        	if (completionHandler != nil) {
-        	completionHandler();
-        	}
-}
- 
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
-   
-        	if (completionHandler != nil) {
-        	if ([[ETPush pushManager] shouldShowLocalAlert] == YES) {
-        	completionHandler(UNNotificationPresentationOptionAlert);
-        	}
-        	else {
-        	[[ETPush pushManager] handleNotification:notification.request.content.userInfo forApplicationState:[UIApplication sharedApplication].applicationState];
-        	completionHandler(UNNotificationPresentationOptionNone);
-        	}
-        	}
-        	else {
-        	[[ETPush pushManager] handleNotification:notification.request.content.userInfo forApplicationState:[UIApplication sharedApplication].applicationState];
-        	}
-}
-#endif
-```
+<script src="https://gist.github.com/sfmc-mobilepushsdk/597c94101fcbea6b854118576cf9d584.js"></script>
