@@ -40,7 +40,7 @@ Follow these steps to configure the SDK for your app.<br/>
 
 1.  Add code in the AppDelegate implementation class to configure the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from the Marketing Cloud app you created in <a href="https://https://appcenter-auth.s1.marketingcloudapps.com/" target="_blank">App Center<a/>.
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/076015adff482663719373704f60925b.js"></script>
-After resetBadgeCount, you should call updateET. Note that updateET may not be fully processed by the server at the time that you call, so the server's badge value may be out of sync with the app for several minutes.
+A call to resetBadgeCount includes a call to updateET, which sends a registration with a badge count value of zero. Registrations are processed every few minutes in batch. You can keep the device and the device record in sync if you only send notifications with badge updates once every 10 minutes.
 
 1.	In **App Settings**, set the **Push Notifications** switch to **ON**.
 <br/>
