@@ -16,8 +16,9 @@ iOS 10 offers a more consistent and powerful way to use notifications, which are
 To use UserNotification.framework in applications that target iOS 10:
  
 - Build your app with XCode 8 and the iOS 10 SDK
-- Add UserNotification.framework to the “Link Binary With Libraries” section of your app target’s Build Phases
+- Add UserNotification.framework to the Link Binary With Libraries section of your app target’s Build Phases
 - Register your app for notifications using the UserNotification registration method. Do not use older registration methods in UIApplication. The UserNotification registration method allows you to support features such as notification service extensions, foreground push notification display, mutable content, etc.
+- Contact your account executive to to enable rich notifications (mutable content) for your app.
 
 Use the following method to enable iOS 10 notifications. When this method is called by an application (in `-applicationDidFinishLaunching:`, for example), it sets the application for full compatibility with iOS 10 notification handling.
 
@@ -60,7 +61,7 @@ ETPush implements a number of methods that act as pass-throughs to the UNUserNot
 
 ### Delegate Methods
 
-When running on iOS10, the following two methods of the UNUserNotificationCenterDelegate protocol are required in order to process notifications. You must set the “delegate” property of your UNNotificationCenter instance to the class that implements them. Do this either by setting the delegate in the -[ETPush registerForRemoteNotificationsWithDelegate:options:categories:completionHandler:] call as shown above or by calling -[ETPush setUserNotificationCenterDelegate:]. The delegate must be set before the application returns from applicationDidFinishLaunching.
+When running on iOS10, the following two methods of the UNUserNotificationCenterDelegate protocol are required in order to process notifications. You must set the delegate property of your UNNotificationCenter instance to the class that implements them. Do this either by setting the delegate in the -[ETPush registerForRemoteNotificationsWithDelegate:options:categories:completionHandler:] call as shown above or by calling -[ETPush setUserNotificationCenterDelegate:]. The delegate must be set before the application returns from applicationDidFinishLaunching.
  
 The first method, didReceiveNotificationResponse, is called to let your app know which action the user selected for a given notification. The second method, willPresentNotification, is called when a notification is delivered to a foregrounded app. The examples below show how to pass the notification to ETPush in order for the SDK to process the notification properly.
 
