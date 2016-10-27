@@ -16,6 +16,8 @@ Use one of these two ways to import the JB4ASDK for iOS into your project:
 
 Only use one of these two ways to import the JB4ASDK - not both.
 
+> Do not use the JB4A-SDK-iOS podspec. Use the [JB4ASDK podspec](https://cocoapods.org/?q=jb4a) instead.
+
 <h4>Configuring the SDK with CocoaPods</h4>
 
 Follow the [CocoaPods installation instructions](https://guides.cocoapods.org/using/using-cocoapods.html) using **JB4ASDK** as a dependency in the podfile. Open up the *.xcworkspace created by the install process with Xcode and start using the SDK.
