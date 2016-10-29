@@ -13,11 +13,13 @@ Review the Apple docs for the SDK:<br/>
 Learn how to use the SDK with the Marketing Cloud Learning App:<br/>
 <a href="https://github.com/salesforce-marketingcloud/LearningAppIos" target="_blank">iOS Learning App</a>
 
+Sign up for email updates about the JB4A iOS SDK: [Subscribe now](http://pub.s1.exacttarget.com/2ujjacpet3t).<br/><br/>
+
 ## iOS Version
 
 For SDK version 4.5.1: Build your app for iOS version 7 or higher.
 
-When SDK version 4.6.0 is released, iOS 8.1 will be the new minimum deployment target version. Build your app for iOS version 8.1 or higher to be compatible with the new version of the JB4A SDK.
+When SDK version 4.6.0 is released, iOS 8.1 will be the new minimum deployment target version. Build your app for iOS version 8.1 or higher to be compatible with the new version of the JB4A SDK.<br/><br/>
 
 ## Release History
 
