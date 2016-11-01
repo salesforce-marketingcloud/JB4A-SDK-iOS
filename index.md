@@ -35,6 +35,10 @@ _Released November 2, 2016, corresponding to the Marketing Cloud 2016-06 release
 
 * **New Minimum Deployment Target Version: iOS 8.1** -- Build your app for iOS 8.1 or higher to be compatible with the SDK.
 
+* **Upgrade SDK to have ATS supported** -- The JB4A SDK version 4.4.0 or higher supports App Transport Security (ATS). Apple announced that ATS will be required for all apps by January 2017. Upgrade the JB4A SDK and build your app for iOS 9 or higher. See [ATS Considerations]({{ site.baseurl }}/upgrading/ats-considerations.html).
+
+* **Improved error handling** -- We improved the error handling in the ETPush class method `-(void)applicationLaunchedWithOptions:(nullable NSDictionary *)launchOptions`.
+
 #### Version 4.5.1
 _Released October 6, 2016_
 
