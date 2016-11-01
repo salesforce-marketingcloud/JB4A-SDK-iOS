@@ -25,6 +25,7 @@ sections: [
     ['provisioning', 'Provisioning'],
     ['create-apps', 'Create Cloud Apps'],
     ['sdk-implementation', 'SDK Implementation'],
+    ['upgrading', 'Upgrading'],
     ['features', 'Feature Implementation'],
     ['rich-push', 'Rich Push'],
     ['location', 'Location Services'],
