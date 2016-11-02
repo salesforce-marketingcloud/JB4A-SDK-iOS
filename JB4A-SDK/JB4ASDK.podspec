@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
     s.preserve_paths    = "*.md"
     s.requires_arc      = true
     s.vendored_library  = "JB4A-SDK/libJB4ASDK-#{s.version}*.a"
-    s.frameworks        = 'WebKit', 'CoreLocation'
+    s.frameworks        = 'WebKit', 'CoreLocation', 'UserNotifications'
 end
