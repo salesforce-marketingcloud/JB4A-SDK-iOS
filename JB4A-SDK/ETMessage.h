@@ -175,9 +175,9 @@ typedef NS_ENUM(NSInteger, MPMessageSource)
 @property (nonatomic, getter = isActive, readonly) BOOL active;
 
 /**
- A reference to the UILocalNotification triggered for this message. It is used later to cancel the message if need be.
+ A reference to a unique notification identifer which corresponds to the notifcation triggered for this message. It is used later to cancel the message if need be.
  */
-@property (nonatomic, strong, nullable) UILocalNotification *notification;
+@property (nonatomic, copy, nullable) NSString *notificationID;
 
 /**
  Used while ranging beacons to determine if a message for a beacon has been shown based on the proximity trigger.
