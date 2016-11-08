@@ -65,7 +65,6 @@ _Released May 23 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
 * MOBILESDK-371 - Remove deprecated functions from public interfaces.
 * MOBILESDK-379 - Adjust iOS to be Swift compatible.
 * MOBILESDK-604 - Create Event Bus.
-* MOBILESDK-711 - Cloud Page sync for iOS. Cloud pages removed from web app are also removed from SDK.
 * MOBILESDK-779 - Include Appledocs docset file with release code and documentation.
 * MOBILESDK-790 - Inaccurate horizontal accuracy may prevent location downloads from occuring.
 * MOBILESDK-821 - Reusing a beacon with the same UUID/Major/Minor will result in lookup errors in the SDK.
@@ -80,6 +79,7 @@ _Released May 23 2016, correlating to the Marketing Cloud 2016-03 Release_<br/>
 _Released April 06 2016, correlating to the Marketing Cloud 2016-02.1 Release_<br/>
 
 * MOBILESDK-760 - Remove expired Mobile Inbox Cloud Pages from the SDK.
+* MOBILESDK-711 - Cloud Page sync for iOS. Cloud pages removed from web app are also removed from SDK.
 
 #### Version 4.2.0
 _Released March 21 2016, correlating to the Marketing Cloud 2016-02 Release_<br/>
