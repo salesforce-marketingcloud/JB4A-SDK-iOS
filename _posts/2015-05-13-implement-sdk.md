@@ -56,7 +56,7 @@ A call to resetBadgeCount includes a call to updateET, which sends a registratio
 1.  Determine whether you need to implement any of the following keys to your applications plist file:
 
 	* "App downloads content from the network" is required to perform a Background App Refresh periodically for [regions and messages]({{ site.baseurl }}/location/geolocation.html#plist).
-	* "App registers for location updates" is required if you have Proximity Services turned on in `configureSDKWithAppID` and you want to [range for beacons]({{ site.baseurl }}/features/features-logging.html#plist) in the background (only for Beacon beta testers)
+	* "App registers for location updates" is required if you have Proximity Services turned on in `configureSDKWithAppID` and you want to [range for beacons]({{ site.baseurl }}/features/features-logging.html#plist) in the background.
 	* "App downloads content in response to push notifications" is required if you plan on using [silent push]({{ site.baseurl }}/features/background-push.html) notifications.
 
 	<br/><img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>
