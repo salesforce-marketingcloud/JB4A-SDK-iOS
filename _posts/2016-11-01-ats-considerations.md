@@ -16,7 +16,7 @@ With ATS, you must use HTTPS instead of HTTP. For details, see [Apple’s docume
 > To find any HTTP connections to your app, run a proxy debugger, such as Charles proxy.
 
 
-While Apple allows you to bypass ATS using NSAppTransportSecurity, Apple announced that ATS will be required for all apps by January 2017. If you enable NSAppTransportSecurity in your .plist to bypass ATS, your app may not be published in the Apple Store.
+While Apple allows you to bypass ATS using NSAppTransportSecurity, [Apple announced](https://developer.apple.com/news/?id=12212016b) that ATS will be required for all apps in the future. If you enable NSAppTransportSecurity in your .plist to bypass ATS, your app may not be published in the Apple Store.
 
 
 If you are using an older version without ATS enabled, we strongly encourage you to upgrade to the newest JB4A SDK version and build your app for iOS 9 or higher.
