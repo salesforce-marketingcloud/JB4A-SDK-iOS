@@ -3,7 +3,7 @@ layout: page
 title: "Silent Pushes"
 subtitle: "Using Silent Pushes"
 category: features
-date: 2017-01-18 12:00:00
+date: 2015-05-14 12:00:00
 order: 10
 ---
 #### Silent Push Messages for MobilePush
@@ -30,4 +30,4 @@ Note that you cannot use badge count or sound as part of the message. Once you c
 
 #### How to Receive Silent Push Messages
 
-<script src="https://gist.github.com/sfmc-mobilepushsdk/0a0bb039fa16c8cf98da0e687f6d2fe7.js"></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/3f0fa4278111b0d6a974.js"></script>

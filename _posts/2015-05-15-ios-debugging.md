@@ -3,7 +3,7 @@ layout: page
 title: "iOS Debugging"
 subtitle: "iOS Debugging"
 category: trouble
-date: 2017-01-18 12:00:00
+date: 2015-05-14 12:00:00
 order: 1
 ---
 
@@ -27,12 +27,12 @@ Ensure that your network team unblocks the following ports to provide communicat
 
 #### Add debugging statements to the log
 
-You can extend the SDK logging facility by including the following lines in your code, giving you a mechanism to capture all logging for application use (in your own logging implementation, for example):
+You can toggle the SDK logging facility by including the following lines in your code:
 
-<script src="https://gist.github.com/sfmc-mobilepushsdk/255bd1e0aecd97b3c76c40a6419c9203.js"></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/c9d6cd88962c843da694.js"></script>
 
 #### Add SDK State information to log
 
-For a complete list of information that the SDK has and it's current state, you can implement sfmc_sdkState as follows:
+For a complete list of information that the SDK has and it's current state, you can implement getSDKState() as follows:
 
-<script src="https://gist.github.com/sfmc-mobilepushsdk/ec8a44dba7b3d453d4880fa3594935cf.js"></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/d77f990a6d13ab3086da.js"></script>

@@ -1,13 +1,12 @@
 # Site title and subtitle. This is used in _includes/header.html
-title: 'iOS MarketingCloudSDK (v4.7.0)'
-
+title: 'Journey Builder for Apps iOS SDK (v4.6.0)'
 
 # if you wish to integrate disqus on pages set your shortname here
 disqus_shortname: ''
 
 # if you use google analytics, add your tracking id here
-#google_analytics_id: 'UA-82902574-4' #PROD
-google_analytics_id: 'UA-82902574-1' #DocPreview
+google_analytics_id: 'UA-82902574-4' #PROD
+#google_analytics_id: 'UA-82902574-1' #DocPreview
 #google_analytics_id: 'UA-82902574-3' #PROD
 #google_analytics_id: 'UA-82902574-2' #DocPreview
 
@@ -26,21 +25,18 @@ sections: [
     ['provisioning', 'Provisioning'],
     ['create-apps', 'Create Cloud Apps'],
     ['sdk-implementation', 'SDK Implementation'],
-    ['sdk-interfaces', 'SDK Interfaces'],
-    ['features', 'Push Notification Features'],
+    ['upgrading', 'Upgrading'],
+    ['features', 'Feature Implementation'],
     ['rich-push', 'Rich Push'],
     ['location', 'Location Services'],
-    ['resources', 'Additional Resources'],
-    ['trouble', 'Trouble Shooting']
+    ['trouble', 'Trouble Shooting'],
+    ['resources', 'Additional Resources']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific 
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
-baseurl: "/MarketingCloudSDK-207-DocPreview" # the subpath of your site, e.g. /blog/
-#baseurl: "/JB4A-SDK-iOS" # the subpath of your site, e.g. /blog/
+baseurl: "/JB4A-SDK-iOS" # the subpath of your site, e.g. /blog/
 url: "http://salesforce-marketingcloud.github.io" # the base hostname & protocol for your site
-
-staticLibDocsURL: "/JB4A-SDK-iOS-v4.4.0"
 
 # Dates are not included in permalinks
 permalink: none
@@ -58,10 +54,7 @@ exclude: ['bin', 'README.md']
 markdown: kramdown
 
 # Current SDK version, use for all mentions
-currentVersion: "4.7.0"
-
-# Old documentation last version
-staticLibVersion: "4.4.0"
+currentVersion: "4.6.0"
 
 # Retry and REST delay message
 retryAndRESTdelayMessage: "The SDK will send changes to Tags to the Marketing Cloud with a REST call one minute after the first change to any Marketing Cloud data.  If the REST call fails (no network for example), then it will retry in one minute intervals until the app is suspended.  If the send is unsuccessful before the app is suspended, the data will be sent the next time the app is opened.  It will take up to 5 minutes for this value to be recorded in the Contact record once the REST call is made by the SDK.
