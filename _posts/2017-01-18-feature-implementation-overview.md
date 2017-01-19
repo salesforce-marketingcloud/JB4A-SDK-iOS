@@ -2,8 +2,8 @@
 layout: page
 title: "Overview"
 subtitle: "Feature Implementation"
-category: features
-date: 2015-06-16 12:00:00
+category: sdk-interfaces
+date: 2017-01-18 12:00:00
 order: 1
 ---
 This section contains information on implementing various features in your mobile app. 

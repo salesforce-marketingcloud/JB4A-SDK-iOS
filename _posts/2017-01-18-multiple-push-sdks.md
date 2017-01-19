@@ -3,18 +3,18 @@ layout: page
 title: "Multiple Push SDKs"
 subtitle: "Troubleshooting Multiple Push SDKs"
 category: trouble
-date: 2016-07-15 12:00:00
+date: 2017-01-18 12:00:00
 order: 2
 ---
 While multiple push SDKs can be integrated into a single app, this may cause issues, and we cannot guarantee results. This section provides some considerations you should keep in mind as you develop your app.  Note that this is not an exhaustive list.
 
 #### 1. Registration
 
-Only ONE call to register for push notifications can be made; otherwise, multiple notification banners, alerts, and/or sounds may be triggered in a single push. If you are using the JB4A  registerForRemoteNotifications method, do not use a direct call to [[UIApplication sharedApplication] registerForRemoteNotifications] in your application.
+Only ONE SDK's call to register for push notifications can be made; otherwise, multiple notification banners, alerts, and/or sounds may be triggered in a single push. If you are using the MarketingCloudSDK `sfmc_registerForRemoteNotificationsWithDelegate...` method, do not use a direct call to the UserNotifications.framework in your application.
 
 #### 2. Notification Settings
 
-An app can call registerUserNotificationSettings multiple times, but only the last call is used. The settings are overwritten each time it is called.
+An app can call `sfmc_registerForRemoteNotificationsWithDelegate...` multiple times, but only the last call is used. The settings are overwritten each time it is called.
 
 #### 3. Badging
 

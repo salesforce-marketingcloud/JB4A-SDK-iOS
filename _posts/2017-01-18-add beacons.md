@@ -3,12 +3,12 @@ layout: page
 title: "Beacons"
 subtitle: "Add Beacons"
 category: location
-date: 2016-09-02 08:43:35
+date: 2017-01-18 12:00:00
 order: 3
 ---
 
 1. Add geolocation. Follow the steps for [Add Geolocation]({{ site.baseurl}}/location/geolocation.html) before continuing.
-1. Set `andProximityServices` and `andLocationServices` to YES in the `configureSDK()` call.
+1. Set `proximityServicesEnabled` and `locationServicesEnabled` to YES in the `sfmc_configureSDK...` call.
 
 
 #### <a name="plist"></a>Info.plist Update
