@@ -17,14 +17,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 typedef NS_ENUM(NSInteger, GenericUpdateSendMethod)
 {
+    firstGenericUpdateSendMethodDeleteIndex = 0,
     /** HTTP GET */
-    GenericUpdateSendMethodGet,
+    GenericUpdateSendMethodGet = firstGenericUpdateSendMethodDeleteIndex,
     /** HTTP POST */
     GenericUpdateSendMethodPost,
     /** HTTP PUT */
     GenericUpdateSendMethodPut,
     /** HTTP DELETE */
-    GenericUpdateSendMethodDelete
+    GenericUpdateSendMethodDelete,
+    /** lastGenericUpdateSendMethodIndex */
+    lastGenericUpdateSendMethodDeleteIndex = GenericUpdateSendMethodDelete
 };
 
 /**
@@ -62,8 +65,9 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
 
 @property (nonatomic) int tag; // The property that started this whole ordeal.
 @property (nonatomic) NSInteger databaseIdentifier;
-@property (nonatomic, copy) NSData *responseData;
+@property (nonatomic, copy, nullable) NSData *responseData;
 @property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundTaskID;
+@property (nonatomic, assign) NSInteger httpStatusCode;
 
 /**
  Sending to Salesforce
@@ -96,14 +100,14 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
  
  It's called after a respondsToSelector: so it doesn't have to be implemented.
  */
--(void)processResults;
+-(void)handleResponseWithSuccess;
 
 /** 
  Called by ETPhone if the session fails. This should do it's best to recover what it can, maybe loading things from the database or whatever. 
  
  Sometimes bad things happen when retrieving data from Salesforce. I mean, cellular Internet isn't a perfect science.
  */
--(void)handleDataFailure;
+-(void)handleResponseWithFailure;
 
 /**
  Not everything should save itself to the database. By default, they should, since that's the expectation that's already set. However, sometimes, it doesn't make sense. This controls that. 
@@ -164,6 +168,11 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
  */
 -(NSString *)tableName;
 +(NSString *)tableName;
+
+/**
+ Cleanup records in database as necessary. This may be required if records were left "dangling" because of a crash or other error.
+ */
++(void) cleanupDatabaseRecords;
 
 /**
  Statics

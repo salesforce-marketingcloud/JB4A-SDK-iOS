@@ -19,17 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 static NSString *kMessagesTableName = @"messages";
 static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
 
-/**
- Tracks where the currently parsing dictionary came from, because we run the values through twice to merge them together. 
- */
-typedef NS_ENUM(NSInteger, MPMessageSource)
-{
-    /** Database */
-    MPMessageSourceDatabase,
-    /** Salesforce via REST */
-    MPMessageSourceRemote
-};
-
 
 /**
  ETMessage is the local representation of a Message from Salesforce. They are multipurpose, sometimes representing a message that should be scheduled because of the entrance or exit of a Geofence, the proximal arrival to an iBeacon, or a CloudPage message downloaded from ET. Because of their multipurpose nature, there are a lot of different attributes on them, many of which may be null at any give time depending on the type of message.

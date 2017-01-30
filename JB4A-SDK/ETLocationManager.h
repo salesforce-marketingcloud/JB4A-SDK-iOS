@@ -20,10 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 typedef NS_ENUM(NSInteger, LocationUpdateAppState)
 {
+    firstLocationUpdateAppStateIndex = 0,
     /** LocationUpdateAppStateBackground */
-    LocationUpdateAppStateBackground,
+    LocationUpdateAppStateBackground = firstLocationUpdateAppStateIndex,
     /** LocationUpdateAppStateForeground */
-    LocationUpdateAppStateForeground
+    LocationUpdateAppStateForeground,
+    /** lastLocationUpdateAppStateIndex */
+    lastLocationUpdateAppStateIndex = LocationUpdateAppStateForeground
 };
 
 /*!
