@@ -26,6 +26,12 @@ Sign up for email updates about the JB4A iOS SDK:<br/>
 
 For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.5.0/" target="_blank">Prior Release Documentation</a>
 
+#### Version 4.7.0
+_Released January 30, 2017, correlating with the Marketing Cloud 206 release._
+
+* **Improved internal database** – We resolved a potential error in our internal database to ensure proper app function.
+* **Improved network error handling** – We improved network error handling to prevent CloudPage inbox messages from being incorrectly deleted.
+
 #### Version 4.6.0
 _Released November 2, 2016, corresponding to the Marketing Cloud 2016-06 release_
 
