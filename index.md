@@ -18,13 +18,21 @@ Sign up for email updates about the JB4A iOS SDK:<br/>
 
 ## iOS Version
 
-**SDK version 4.6.0:** Build your app for iOS version 8.1 or higher.
+**SDK version 4.6.0 and higher:** Build your app for iOS version 8.1 or higher.
 
 **SDK version 4.5.1:** Build your app for iOS version 7 or higher.<br/><br/>
 
 ## Release History
 
-For releases prior to {{ site.currentVersion }}, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.5.0/" target="_blank">Prior Release Documentation</a>
+For releases prior to 4.5.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.5.0/" target="_blank">Prior Release Documentation</a>
+
+#### Version 4.8.0
+_Released April 3, 2017, correlating with the Marketing Cloud 207 release._
+
+* **Updated CloudPage inbox data source** -- We now ensure that the CloudPage inbox refreshes for the entire lifecycle of the data source object.
+* **Corrected nullability annotation warning** -- We corrected an annotation that generated a warning in Swift projects.
+* **Updated push tokens** -- We now ensure that apps send new or refreshed push tokens back to Marketing Cloud.
+* **Improved thread safety** -- We improved the SDK’s behavior with multiple concurrent network connections, which makes the SDK more thread safe.
 
 #### Version 4.7.0
 _Released January 30, 2017, correlating with the Marketing Cloud 206 release._
