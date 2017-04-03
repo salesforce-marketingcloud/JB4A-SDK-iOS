@@ -27,14 +27,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Don't let the name fool you - this can be *any* URL, not just a landing page. It will eventually be converted to an NSURL and displayed.
+  
  */
-@property (nonatomic, copy) NSString *landingPagePath;
+@property (nonatomic, readonly, copy) NSString *landingPagePath ;
 
 /**
  A helper designated initializer that takes the landing page as a string.
  
  @param landingPage An NSString value
  @return Returns an ETWKLandingPagePresenter value
+  
  */
 -(nullable instancetype)initForLandingPageAt:(NSString *)landingPage;
 
@@ -43,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param landingPage An NSURL value
  @return Returns an ETWKLandingPagePresenter value
+  
  */
 -(nullable instancetype)initForLandingPageAtWithURL:(NSURL *)landingPage;
 

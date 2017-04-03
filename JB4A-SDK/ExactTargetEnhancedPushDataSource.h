@@ -25,13 +25,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  This array contains ETMessages, suitable for display in a UITableView or other presentation apparatus of your liking. Please see ETMessage for a list of properties available.
+  
  */
-@property (nonatomic, strong, nullable) NSArray<__kindof ETMessage *> *messages;
+@property (nonatomic, readonly, copy, nullable) NSArray<__kindof ETMessage *> *messages ;
 
 /** 
  This is a reference to the tableview in your UIViewController. We need a reference to it to reload data periodically.
+  
  */
-@property (nonatomic, weak, nullable) UITableView *inboxTableView;
+@property (nonatomic, weak, nullable) UITableView *inboxTableView ;
 
 @end
 NS_ASSUME_NONNULL_END

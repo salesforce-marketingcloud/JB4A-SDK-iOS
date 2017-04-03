@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param cartItems An array of PICartItem objects (non-nil array). An empty array indicates an empty cart, and will be used to indicate a cleared cart to the analytics system.
  @return instancetype
+  
  */
 - (instancetype)initWithCartItems:(NSArray *) cartItems NS_DESIGNATED_INITIALIZER;
 
@@ -33,9 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
  Convert PICart to dictionary.
  
  @return NSDictionary
+  
  */
 - (NSDictionary *)dictionaryRepresentation;
 
 @end
+
+
 
 NS_ASSUME_NONNULL_END

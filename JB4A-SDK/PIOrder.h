@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param discount The discount amount (USD) of this order (non-nil value; 0 permissable)
  @param cart The order's shopping cart object (non-nil object)
  @return instancetype
+  
  */
 - (instancetype)initWithOrderNumber:(NSString *) orderNumber shipping:(NSNumber *) shipping discount:(NSNumber *) discount cart:(PICart *) cart NS_DESIGNATED_INITIALIZER;
 
@@ -37,6 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  Convert PIOrder to dictionary.
  
  @return NSDictionary
+  
  */
 - (NSDictionary *)dictionaryRepresentation;
 

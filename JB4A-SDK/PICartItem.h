@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param quantity The count of items in the cart for this particular product (non-nil value; 0 permissable)
  @param item The unique product code from the e-commerce system representing this cart item (non-nil string value)
  @return instancetype
+  
  */
 - (instancetype)initWithPrice:(NSNumber *)price quantity:(NSNumber *)quantity item:(NSString *)item NS_DESIGNATED_INITIALIZER;
 
@@ -34,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  Convert PICartItem to dictionary.
  
  @return NSDictionary
+  
  */
 - (NSDictionary *)dictionaryRepresentation;
 

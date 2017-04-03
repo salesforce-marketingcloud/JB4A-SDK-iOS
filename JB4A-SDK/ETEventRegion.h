@@ -21,63 +21,74 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  ET-generated identifier for the ETRegion in question. This should be treated as a primary key, and is stored on the device as the encoded version sent via the routes.
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSString *fenceIdentifier;
+@property (nonatomic, readonly, copy, nullable) NSString *fenceIdentifier ;
 
 /**
  The latitude of this region. Saved in an NSNumber as a double for easy passing. Be sure to call doubleValue on this property.
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSNumber *latitude;
+@property (nonatomic, readonly, copy, nullable) NSNumber *latitude ;
 
 /**
  The longitude of this region. Saved in an NSNumber as a double for easy passing. Be sure to call doubleValue on this property.
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSNumber *longitude;
+@property (nonatomic, readonly, copy, nullable) NSNumber *longitude ;
 
 /**
  For geofences only, the radius of the fence. This number, an integer, is in meters.
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSNumber *radius;
+@property (nonatomic, readonly, copy, nullable) NSNumber *radius ;
 
 /**
  For beacons, the Proximity UUID of the beacon.
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSString *proximityUUID;
+@property (nonatomic, readonly, copy, nullable) NSString *proximityUUID ;
 
 /**
  For beacons, the Major number. This is a uint32 per the CLBeaconRegion spec.
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSNumber *majorNumber;
+@property (nonatomic, readonly, copy, nullable) NSNumber *majorNumber ;
 
 /**
  For beacons, the Minor number. This is a uint32 per the CLBeaconRegion spec.
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSNumber *minorNumber;
+@property (nonatomic, readonly, copy, nullable) NSNumber *minorNumber ;
 
 
 /**
  This is the name which is set on SalesforceMarketingCloud, while setting the ETRegion
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSString *regionName;
+@property (nonatomic, readonly, copy, nullable) NSString *regionName ;
 
 /**
  Helper to quickly determine if this is a Geofence region.
  
  @return T/F if a geofence.
+  
  */
-@property (nonatomic, readonly) BOOL isGeofenceRegion;
+@property (nonatomic, readonly) BOOL isGeofenceRegion ;
 
 /**
  Helper to quickly determine if this is a Beacon/Proximity region.
  
  @return T/F if a beacon.
+  
  */
-@property (nonatomic, readonly) BOOL isBeaconRegion;
+@property (nonatomic, readonly) BOOL isBeaconRegion ;
 
 /**
  An array of event messages associated with this region
+  
  */
-@property (nonatomic, readonly, copy, nullable) NSArray *messages;
+@property (nonatomic, readonly, copy, nullable) NSArray *messages ;
 
 
 

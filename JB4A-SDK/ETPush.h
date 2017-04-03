@@ -41,6 +41,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Method called when an OpenDirect payload is received from MobilePush.
  
  @param payload value NSString. The contents of the payload as received from MobilePush.
+  
  */
 -(void)didReceiveOpenDirectMessageWithContents:(NSString *)payload;
 
@@ -56,6 +57,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Consider that if you set this to YES, and the user is running the app when a push comes in, the app will start doing things that they didn't prompt it to do. This is bad user experience since it's confusing to the user. Along these lines, iOS won't present a notification if one is received while the app is running.
  
  @return BOOL representing whether or not you want action to be taken.
+  
  */
 -(BOOL)shouldDeliverOpenDirectMessageIfAppIsRunning;
 
@@ -76,6 +78,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Method called when an Cloud Page with Alert payload is received from MobilePush.
  
  @param payload value NSString. The contents of the payload as received from MobilePush.
+  
  */
 -(void)didReceiveCloudPageWithAlertMessageWithContents:(NSString *)payload;
 
@@ -91,6 +94,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Consider that if you set this to YES, and the user is running the app when a push comes in, the app will start doing things that they didn't prompt it to do. This is bad user experience since it's confusing to the user. Along these lines, iOS won't present a notification if one is received while the app is running.
  
  @return BOOL representing whether or not you want action to be taken.
+  
  */
 -(BOOL)shouldDeliverCloudPageWithAlertMessageIfAppIsRunning;
 
@@ -128,9 +132,10 @@ static NSString * const SDKName = @"JB4ASDK";
  Returns (or initializes) the shared pushManager instance.
  
  @return The singleton instance of an ETPush pushManager.
+  
  */
 +(nullable instancetype)pushManager;
--(nullable instancetype)init;
+-(instancetype)init;
 
 /**
  This is the main configuration method, responsible for setting credentials needed to communicate with Salesforce. If you are unsure of your accessToken or environment, please visit Code@ExactTarget
@@ -146,6 +151,7 @@ static NSString * const SDKName = @"JB4ASDK";
  @param pIAnalyticsState Whether or not to send Web and Mobile analytic data back to Salesforce
  @param configureError NSError object describing the error
  @return Returns YES if successful or NO if failed. Do not proceed if NO is returned
+  
  */
 - (BOOL)configureSDKWithAppID:(NSString *)etAppID
                andAccessToken:(NSString *)accessToken
@@ -160,6 +166,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Returns state of _showLocalAlert flag
  
  @return BOOL
+  
  */
 - (BOOL)shouldShowLocalAlert;
 
@@ -167,6 +174,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Sets the OpenDirect delegate.
  
  @param delegate The object you wish to be called when an OpenDirect message is delivered.
+  
  */
 -(void)setOpenDirectDelegate:(nullable id<ExactTargetOpenDirectDelegate>)delegate;
 
@@ -174,6 +182,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Returns the OpenDirect delegate.
  
  @return delegate The named OpenDirect delegate, or nil if there isn't one.
+  
  */
 -(nullable id<ExactTargetOpenDirectDelegate>)openDirectDelegate;
 
@@ -181,6 +190,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Sets the cloudPageWithAlert delegate.
  
  @param delegate The object you wish to be called when an OpenDirect message is delivered.
+  
  */
 -(void)setCloudPageWithAlertDelegate:(nullable id<ExactTargetCloudPageWithAlertDelegate>)delegate;
 
@@ -188,6 +198,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Returns the cloudPageWithAlert delegate.
  
  @return delegate The named cloudPageWithAlert delegate, or nil if there isn't one.
+  
  */
 -(nullable id<ExactTargetCloudPageWithAlertDelegate>)cloudPageWithAlertDelegate;
 
@@ -197,6 +208,7 @@ static NSString * const SDKName = @"JB4ASDK";
  
  This is not normally needed as each method (setTag(), setSubscriberKey(), addAttribute() etc) will trigger
  a send to the SFMC 60 seconds after the first request to change any Registration data.
+  
  */
 -(void)updateET;
 
@@ -227,6 +239,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method around UNNotificationSettings's authorizationStatus to return registration status as well as the set of options.
  @param completionHandler A handler returning the following: (registered A BOOL value reflecting the authorizationStatus is UNAuthorizationStatusAuthorized or not) (options UNAuthorizationOptions for current registration)
  
+  
  */
 - (void)registeredForRemoteNotificationsWithCompletionHandler:(void (^)(BOOL registered, UNAuthorizationOptions options))completionHandler;
 
@@ -235,6 +248,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method to return UNNotificationSettings.
  @param completionHandler A handler returning the following: (settings UNNotificationSettings)
  
+  
  */
 - (void)currentUserNotificationSettingsWithCompletionHandler:(void(^)(UNNotificationSettings *settings))completionHandler;
 
@@ -243,6 +257,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method to set UNUserNotificationCenter's delegate.
  @param delegate A pointer to a class (typically, self) adhering to the UNUserNotificationCenterDelegate protocol
  
+  
  */
 - (void)setUserNotificationCenterDelegate:(_Nullable id<UNUserNotificationCenterDelegate>) delegate;
 
@@ -251,6 +266,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method to set UNUserNotificationCenter's categories.
  @param categories A set of UNNotificationCategory objects
  
+  
  */
 - (void)setUserNotificationCenterCategories:(NSSet<UNNotificationCategory *> *_Nullable)categories;
 
@@ -259,6 +275,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method to return get UNUserNotificationCenter categories.
  @param completionHandler A handler returning the following: (categories A set of UNNotificationCategory objects)
  
+  
  */
 - (void)getUserNotificationCenterCategoriesWithCompletionHandler:(void(^)(NSSet<UNNotificationCategory *> *categories))completionHandler;
 
@@ -268,6 +285,7 @@ static NSString * const SDKName = @"JB4ASDK";
  @param request A deliverable notification request
  @param completionHandler A handler returning the following: (error An error signifying success or failure)
  
+  
  */
 - (void)addNotificationRequest:(UNNotificationRequest *)request withCompletionHandler:(nullable void(^)(NSError *__nullable error))completionHandler;
 
@@ -276,6 +294,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method to get notifications pending delivery.
  @param completionHandler A handler returning the following: (requests An array of notification requests)
  
+  
  */
 - (void)getPendingNotificationRequestsWithCompletionHandler:(void(^)(NSArray<UNNotificationRequest *> *requests))completionHandler;
 
@@ -284,6 +303,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method to remove notifications pending delivery.
  @param identifiers An array of notification identifiers to remove
  
+  
  */
 - (void)removePendingNotificationRequestsWithIdentifiers:(NSArray<NSString *> *)identifiers;
 
@@ -291,6 +311,7 @@ static NSString * const SDKName = @"JB4ASDK";
  
  A convenience method to remove all notifications pending delivery.
  
+  
  */
 - (void)removeAllPendingNotificationRequests;
 /**
@@ -298,6 +319,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method to get notifications already delivered.
  @param completionHandler A handler returning the following: (notifications An array of delivered notifications)
  
+  
  */
 - (void)getDeliveredNotificationsWithCompletionHandler:(void(^)(NSArray<UNNotification *> *notifications))completionHandler;
 /**
@@ -305,6 +327,7 @@ static NSString * const SDKName = @"JB4ASDK";
  A convenience method to remove notifications which have been delivered.
  @param identifiers An array of notification identifiers to remove
  
+  
  */
 - (void)removeDeliveredNotificationsWithIdentifiers:(NSArray<NSString *> *)identifiers;
 
@@ -312,6 +335,7 @@ static NSString * const SDKName = @"JB4ASDK";
  
  A convenience method to remove all notifications which have been delivered.
  
+  
  */
 - (void)removeAllDeliveredNotifications;
 
@@ -322,6 +346,7 @@ static NSString * const SDKName = @"JB4ASDK";
 /**
  Wrapper for iOS' application:registerForRemoteNotification; call. It will check that push is allowed, and if so, register with Apple for a token. If push is not enabled, it will notify Salesforce that push is disabled.
  
+  
  */
 -(void)registerForRemoteNotifications;
 
@@ -329,6 +354,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Wrapper for iOS' isRegisteredForRemoteNotifications; call.
  
  @return BOOL
+  
  */
 - (BOOL)isRegisteredForRemoteNotifications;
 
@@ -336,6 +362,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Wrapper for iOS' application:registerUserNotificationSettings; call.
  
  @param notificationSettings The UIUserNotificationSettings object that the application would like to use for push. These are pipe-delimited, and use Apple's native values
+  
  */
 - (void)registerUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings;
 
@@ -343,6 +370,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Wrapper for iOS' currentUserNotificationSettings; call.
  
  @return Returns the current UIUserNotificationSettings object
+  
  */
 - (UIUserNotificationSettings *)currentUserNotificationSettings;
 
@@ -350,6 +378,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Wrapper for iOS' didRegisterUserNotificationSettings; callback.
  
  @param notificationSettings A UIUserNotificationSettings object
+  
  */
 - (void)didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings;
 
@@ -360,6 +389,7 @@ static NSString * const SDKName = @"JB4ASDK";
  This method is necessary to implementation of ET Push.
  
  @param deviceToken Token as received from Apple, still an NSData object
+  
  */
 -(void)registerDeviceToken:(NSData *)deviceToken;
 
@@ -367,6 +397,7 @@ static NSString * const SDKName = @"JB4ASDK";
  Returns the device token as a NSString. As requested via GitHub (Issue #3).
  
  @return A stringified version of the Device Token
+  
  */
 -(nullable NSString *)deviceToken;
 
@@ -374,7 +405,8 @@ static NSString * const SDKName = @"JB4ASDK";
  Handles a registration failure.
  
  @param error The error returned to the application on a registration failure
-  */
+   
+ */
 -(void)applicationDidFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
 
 /**
@@ -389,6 +421,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Please note that all push notifications received by the application will be processed, but iOS will *not* present an alert to the user if the app is running when the alert is received. If you set this value to true (YES), then the SDK will generate and present the alert for you. It will not play a sound, though.
  
  @param desiredState YES/NO if you want to display an alert view while the app is running.
+  
  */
 -(void)shouldDisplayAlertViewIfPushReceived:(BOOL)desiredState;
 
@@ -405,12 +438,14 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Notifies the ET SDK of an app launch, including the dictionary sent to the app by iOS. The launchOptions dictionary is necessary because it will include the APNS dictionary, necessary for processing opens and other analytic information.
  
  @param launchOptions The dictionary passed to the application by iOS on launch.
+  
  */
 -(void)applicationLaunchedWithOptions:(nullable NSDictionary *)launchOptions;
 
 /**
  Notifies the ET SDK of an app termination. Internally, this method does a lot of cleanup.
  
+  
  */
 -(void)applicationTerminated;
 
@@ -419,18 +454,21 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  
  @param userInfo The dictionary containing the push notification payload
  @param applicationState UIApplicationState value used as a hint to the SDK to describe if the app was in the foreground or background when the notification payload is received by the application delegate, thereby facilitating propery SDK behavior and logging
+  
  */
 - (void) handleNotification:(NSDictionary *)userInfo forApplicationState:(UIApplicationState)applicationState;
 
 /** Handles a notification received by the app (typically, in response to -application:didReceiveRemoteNotification:fetchCompletionHandler:)
  
  @param userInfo The dictionary containing the push notification payload
+  
  */
 - (void) handleRemoteNotification:( NSDictionary * _Nullable ) userInfo;
 
 /** Handles a notification received by the app (in response to -application:didReceiveLocalNotification:)
  
  @param localNotification The localNotification received by the application
+  
  */
 - (void) handleLocalNotification:( UILocalNotification * _Nullable ) localNotification;
 
@@ -438,6 +476,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
 /** Handles an iOS 10 notification received by the app (in response to -userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:)
  
  @param notificationResponse The UNNotificationResponse received by the application
+  
  */
 - (void) handleUserNotificationResponse:(UNNotificationResponse * _Nullable ) notificationResponse;
 #endif
@@ -458,6 +497,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  
  @param subscriberKey The subscriber key to attribute to the user.
  @return YES if set successfully
+  
  */
 -(BOOL)setSubscriberKey:(NSString *)subscriberKey;
 
@@ -465,6 +505,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Returns the subscriber key for the active user, in case you need it.
  
  @return subscriberKey The code-set subscriber key.
+  
  */
 -(nullable NSString *)getSubscriberKey;
 
@@ -477,6 +518,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  
  @param  tag A string to add to the list of tags
  @return YES if added successfully.
+  
  */
 -(BOOL)addTag:(NSString *)tag;
 
@@ -485,6 +527,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  
  @param tag A string to remove from the list of tags
  @return tag Echoes the tag back on successful removal, or nil if something failed.
+  
  */
 -(nullable NSString *)removeTag:(NSString *)tag;
 
@@ -493,6 +536,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  
  @deprecated Feb 29 2016
  @return All tags associated.
+  
  */
 -(NSSet *)allTags DEPRECATED_MSG_ATTRIBUTE("allTags is deprecated. Please use getTags instead.");
 
@@ -500,6 +544,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Returns the list of tags for this device.
  
  @return All tags associated.
+  
  */
 -(NSSet *)getTags;
 
@@ -524,6 +569,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  @param name The name of the attribute you wish to send. This will be the key of the pair.
  @param value The value to set for the data pair.
  @return YES if added successfully
+  
  */
 - (BOOL)addAttributeNamed:(NSString*)name value:(NSString*)value;
 
@@ -532,6 +578,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  
  @param name The name of the attribute you wish to remove.
  @return Returns the value that was set. It will no longer be sent back to Salesforce.
+  
  */
 - (nullable NSString*)removeAttributeNamed:(NSString*)name;
 
@@ -540,6 +587,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  
  @deprecated Feb 29 2016
  @return All attributes currently set
+  
  */
 -(NSDictionary *)allAttributes DEPRECATED_MSG_ATTRIBUTE("allAttributes has been deprecated. Please use getAttributes instead");
 
@@ -547,30 +595,36 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Returns a read-only copy of the Attributes dictionary as it is right now.
  
  @return All attributes currently set
+  
  */
 -(NSDictionary *)getAttributes;
 
 /**
  @name Listeners for UIApplication events
+  
  */
 
 /**
  Sets up the listeners.
+  
  */
 -(void)startListeningForApplicationNotifications;
 
 /**
  Drops the listeners.
+  
  */
 -(void)stopListeningForApplicationNotifications;
 
 /**
  Responds to the UIApplicationDidBecomeActiveNotification notification
+  
  */
 -(void)applicationDidBecomeActiveNotificationReceived; // UIApplicationDidBecomeActiveNotification
 
 /**
  Responds to the UIApplicationDidEnterBackgroundNotification notification
+  
  */
 -(void)applicationDidEnterBackgroundNotificationReceived; // UIApplicationDidEnterBackgroundNotification
 
@@ -583,6 +637,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Gets the Apple-safe, unique Device Identifier that ET will later use to identify the device.
  
  Note that this method is compliant with Apple's compliance rules, but may not be permanent.
+  
  */
 +(NSString *)safeDeviceIdentifier;
 
@@ -590,6 +645,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Returns the hardware identification string, like "iPhone1,1". Salesforce uses this data for segmentation.
  
  @return A string of the hardware identification.
+  
  */
 +(NSString *)hardwareIdentifier;
 
@@ -599,11 +655,13 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Push is considered enabled if the application is able to present an alert (banner, alert, sound) to the user.  If UIUserNotificationTypeNone (ios8+) or
  UIRemoteNotificationTypeNone (iOS7) is true, then Push is disabled and this method returns false.  For iOS8+, isRegisteredForRemoteNotifications
  must also return true.
+  
  */
 +(BOOL)isPushEnabled;
 
 /**
  Get SDK Version Name
+  
  */
 +(NSString *)getSDKVersionName;
 
@@ -611,6 +669,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Get SDK Version Code
  
  @return NSString value.
+  
  */
 +(NSString *)getSDKVersionCode;
 
@@ -618,6 +677,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Set the Log Level
  
  @param state type BOOL value.
+  
  */
 +(void)setETLoggerToRequiredState:(BOOL)state;
 
@@ -633,6 +693,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  @param customLogger - A completion handler that will be called each time the SDK logs to the console.  Instead of
                        calling NSLog to log to the console, the SDK will call this customLogger and provide the String
                        that was going to be logged.
+  
  */
 +(void) setLoggerWithHandler:( void (^__nullable)(NSString *))customLogger;
 
@@ -640,6 +701,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  Outputs a formatted, easily readable block of text describing the current status of the SDK.
  
  @return JSON string with values of the current state of the SDK
+  
  */
 +(nullable NSString *)getSDKState;
 
@@ -648,6 +710,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  
  @param completionHandler The UIBackgroundFetchResult completion handler. This method will be called with UIBackgroundFetchResultNoData if no attempt was made to update data, otherwise it will be called with UIBackgroundFetchResultNewData after the update completes. If nil is passed, then process of the completion handler must be managed by the caller.
  @return True if ETPush did make an attempt at updating data
+  
  */
 - (BOOL) refreshWithFetchCompletionHandler:(void (^__nullable)(UIBackgroundFetchResult result))completionHandler;
 
@@ -659,6 +722,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  @param error A pointer to a location to store an NSError object describing any error that occurred while sanity checking the input parameters. Can be nil.
  @param completionHandler A pointer to a user-supplied completion handler block. The completion handler will be called if requestPIRecommendations returns True. The result parameter of the completion handler will contain a JSON formatted string with the recommendations on a successfull call otherwise it will be nil and the error parameter will be filled with an NSError object describing the error.
  @return Returns T/F based on sanity checks of the input parameters. If False is returned the user completion handler will not be called.
+  
  */
 +(BOOL)requestPIRecommendations:(NSString *)mid page:(NSString *)page error:(NSError **)error completionHandler:(void (^)(NSString *result, NSError *error))completionHandler;
 /**
@@ -670,6 +734,7 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
  @param error A pointer to a location to store an NSError object describing any error that occurred while sanity checking the input parameters. Can be nil.
  @param completionHandler A pointer to a user-supplied completion handler block. The completion handler will be called if requestPIRecommendations returns True. The result parameter of the completion handler will contain a JSON formatted string with the recommendations on a successfull call otherwise it will be nil and the error parameter will be filled with an NSError object describing the error.
  @return Returns T/F based on sanity checks of the input parameters. If False is returned the user completion handler will not be called.
+  
  */
 +(BOOL)requestPIRecommendations:(NSString *)mid page:(NSString *)page retailer:(NSString *)retailer error:(NSError **)error completionHandler:(void (^)(NSString *result, NSError *error))completionHandler;
 

@@ -21,12 +21,14 @@
 
 /**
  This array contains ETCloudPages, suitable for display in a UITableView or other presentation apparatus of your liking. Please see ETRichMessage for a list of properties available.
+  
  */
-@property (nonatomic, strong, nullable) NSArray<__kindof ETCloudPage *>*messages;
+@property (nonatomic, readonly, copy, nullable) NSArray<__kindof ETCloudPage *>*messages ;
 
 /**
  This is a reference to the tableview in your UIViewController. We need a reference to it to reload data periodically.
+  
  */
-@property (nonatomic, weak, nullable) UITableView *inboxTableView;
+@property (nonatomic, weak, nullable) UITableView *inboxTableView ;
 
 @end
