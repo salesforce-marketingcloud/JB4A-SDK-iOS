@@ -6,25 +6,25 @@ category: sdk-implementation
 date: 2015-05-14 12:00:00
 order: 1
 ---
-In order to use the SDK in your Mobile app, complete the steps below to configure the SDK for your app. Once you complete this process and run your first test, the SDK connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/create-apps/create-apps-overview.html).<br/><br/>
+In order to use the JB4A SDK in your Mobile app, complete the steps below to configure the SDK for your app. Once you complete this process and run your first test, the SDK connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/create-apps/create-apps-overview.html).<br/><br/>
 
-<h4>Importing the JB4ASDK</h4>
-Use one of these two ways to import the JB4ASDK for iOS into your project:
+<h4>Import the SDK</h4>
+Use one of these two ways to import the SDK for iOS into your project:
 
 1.	[CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 1.	Static Library
 
-Only use one of these two ways to import the JB4ASDK - not both.
+Only use one of these two ways to import the SDK - not both.
 
-> Do not use the JB4A-SDK-iOS podspec. Use the [JB4ASDK podspec](https://cocoapods.org/?q=jb4a) instead.
+> Do not use the JB4A-SDK-iOS podspec. Use the [JB4A SDK podspec](https://cocoapods.org/?q=jb4a) instead.
 
-<h4>Configuring the SDK with CocoaPods</h4>
+<h4>Configure the SDK with CocoaPods</h4>
 
 Follow the [CocoaPods installation instructions](https://guides.cocoapods.org/using/using-cocoapods.html) using **JB4ASDK** as a dependency in the podfile. Open up the *.xcworkspace created by the install process with Xcode and start using the SDK.
 
 > Do <b>NOT</b> use *.xcodeproj. If you open up a project file instead of a workspace, you will receive an error.<br/>
 
-<h4>Configuring the SDK with header files and static library</h4>
+<h4>Configure the SDK with header files and static library</h4>
 
 Follow these steps to configure the SDK for your app.<br/>
 
@@ -40,7 +40,9 @@ Follow these steps to configure the SDK for your app.<br/>
 
 1.	Include the WebKit.framework in Link Binary With Libraries section of the Build Phases configuration in Xcode.
 
-1.  Add code in the AppDelegate implementation class to configure the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from the Marketing Cloud app you created in <a href="https://https://appcenter-auth.s1.marketingcloudapps.com/" target="_blank">App Center<a/>.
+#### Configure the SDK
+
+1. Add code in the AppDelegate implementation class to configure the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from the Marketing Cloud app you created in <a href="https://https://appcenter-auth.s1.marketingcloudapps.com/" target="_blank">App Center<a/>.
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/076015adff482663719373704f60925b.js"></script>
 A call to resetBadgeCount includes a call to updateET, which sends a registration with a badge count value of zero. Registrations are processed every few minutes in batch. You can keep the device and the device record in sync if you only send notifications with badge updates once every 10 minutes.
 
@@ -69,3 +71,16 @@ You can now deploy and test your app!
 Create an Objective-C bridging header file using Xcode. Ensure you copy the contents of JB4ASDK-Bridging-Header.h into your bridging header. You can also use the provided bridging header JB4ASDK-Bridging-Header.h as a starting point.
 
 From Objective-C Bridging Header (under Build Settings in Your Target), point Objective-C Bridging Header to the bridging header you just created.<br/><br/>
+
+#### Track Push Notifications
+
+To ensure that push notifications are properly tracked by the SDK and Marketing Cloud analytics, you must call `[[ETPush pushManager] handleNotification:userInfo forApplicationState:application.applicationState];` from within your `- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler` implementation.
+
+If you don't, analytic events can't track open counts for your push messaging campaigns.
+
+**Example:**
+`- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler {`
+    
+  `// inform the JB4ASDK that the device received a remote notification
+    [[ETPush pushManager] handleNotification:userInfo forApplicationState:application.applicationState];
+}`
