@@ -17,16 +17,11 @@ If you wish to implement Analytics, pass a YES value for the withAnalytics param
 
 #### Track Push Notifications
 
-To ensure that push notifications are properly tracked by the SDK and Marketing Cloud analytics, you must call `[[ETPush pushManager] handleNotification:userInfo forApplicationState:application.applicationState];` from within your `- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler` implementation.
+To ensure that push notifications are properly tracked by the SDK and Marketing Cloud analytics, you must call `[[ETPush pushManager] handleNotification:userInfo forApplicationState:application.applicationState];` like this:
+<script src="https://gist.github.com/sfmc-mobilepushsdk/302c876fb8e4cf6d7b7eb0fa65bcaa79.js"></script>
 
 If you don't, analytic events can't track open counts for your push messaging campaigns.
 
-**Example:**
-`- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler {`
-    
-  `// inform the JB4ASDK that the device received a remote notification
-    [[ETPush pushManager] handleNotification:userInfo forApplicationState:application.applicationState];
-}`
 
 ## Personalization Builder and Collect API Integration
 
