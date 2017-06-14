@@ -26,6 +26,11 @@ Sign up for email updates about the JB4A iOS SDK:<br/>
 
 For releases prior to 4.5.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.5.0/" target="_blank">Prior Release Documentation</a>
 
+#### Version 4.9.0
+_Released June 19, 2017, correlating with the Marketing Cloud 208 release._
+
+* **Added ability to get inbox messages and counts** -- We added new convenience methods to get all inbox messages, only read inbox messages, only unread inbox messages, and the count of inbox messages.
+
 #### Version 4.8.0
 _Released April 3, 2017, correlating with the Marketing Cloud 207 release._
 
