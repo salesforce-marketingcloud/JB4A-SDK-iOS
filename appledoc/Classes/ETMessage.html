@@ -118,7 +118,11 @@
 	
 	<optgroup label="Class Methods">
 		
+		<option value="//api/name/getCloudPageMessages">+ getCloudPageMessages</option>
+		
 		<option value="//api/name/getMessageByIdentifier:">+ getMessageByIdentifier:</option>
+		
+		<option value="//api/name/getMessageCount">+ getMessageCount</option>
 		
 		<option value="//api/name/getMessagesByContentType:">+ getMessagesByContentType:</option>
 		
@@ -131,6 +135,10 @@
 		<option value="//api/name/getMessagesFromExactTargetOfMessageType:andContentType:">+ getMessagesFromExactTargetOfMessageType:andContentType:</option>
 		
 		<option value="//api/name/getProximityMessagesForRegion:">+ getProximityMessagesForRegion:</option>
+		
+		<option value="//api/name/getReadMessageCount">+ getReadMessageCount</option>
+		
+		<option value="//api/name/getUnreadMessageCount">+ getUnreadMessageCount</option>
 		
 		<option value="//api/name/invalidateAllMessagesForContentType:">+ invalidateAllMessagesForContentType:</option>
 		
@@ -2022,6 +2030,226 @@
 						</div>
 						
 
+						<a title="CloudPage Message Retrieval Helpers" name="task_CloudPage Message Retrieval Helpers"></a>
+						<h2 class="task-title">CloudPage Message Retrieval Helpers</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/getCloudPageMessages" title="getCloudPageMessages"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCloudPageMessages">+&nbsp;getCloudPageMessages</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used to retrieve Cloud Pages that are <a href="#//api/name/active">active</a> and have not been deleted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable NSArray *)getCloudPageMessages</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Cloud Page Messages if any.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Used to retrieve Cloud Pages that are <a href="#//api/name/active">active</a> and have not been deleted.</p>
+
+<p>Getter for a CloudPage Messages.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getReadMessageCount" title="getReadMessageCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getReadMessageCount">+&nbsp;getReadMessageCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets <a href="#//api/name/read">read</a> CloudPage Message count.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSInteger)getReadMessageCount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>CloudPage Message <a href="#//api/name/read">read</a> count.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gets <a href="#//api/name/read">read</a> CloudPage Message count.</p>
+
+<p>Getter for a <a href="#//api/name/read">read</a> CloudPage Message count.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getUnreadMessageCount" title="getUnreadMessageCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getUnreadMessageCount">+&nbsp;getUnreadMessageCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets un<a href="#//api/name/read">read</a> CloudPage Message count.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSInteger)getUnreadMessageCount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>CloudPage Message un<a href="#//api/name/read">read</a> count.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gets un<a href="#//api/name/read">read</a> CloudPage Message count.</p>
+
+<p>Getter for an un<a href="#//api/name/read">read</a> CloudPage Message count.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getMessageCount" title="getMessageCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getMessageCount">+&nbsp;getMessageCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets CloudPage Message count.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSInteger)getMessageCount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>CloudPage Message count.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gets CloudPage Message count.</p>
+
+<p>Getter for a <a href="#//api/name/read">read</a> CloudPage Message count.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
 						<a title="Message Retrieval Helpers" name="task_Message Retrieval Helpers"></a>
 						<h2 class="task-title">Message Retrieval Helpers</h2>
 
@@ -2676,7 +2904,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Salesforce Marketing Cloud. All rights reserved. Updated: 2017-02-28</p>
+						<p class="copyright">Copyright &copy; 2017 Salesforce Marketing Cloud. All rights reserved. Updated: 2017-06-19</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

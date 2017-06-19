@@ -58,6 +58,8 @@
 	
 	<optgroup label="Class Methods">
 		
+		<option value="//api/name/getCloudPages">+ getCloudPages</option>
+		
 		<option value="//api/name/getSDKState">+ getSDKState</option>
 		
 		<option value="//api/name/getSDKVersionCode">+ getSDKVersionCode</option>
@@ -69,10 +71,6 @@
 		<option value="//api/name/isPushEnabled">+ isPushEnabled</option>
 		
 		<option value="//api/name/pushManager">+ pushManager</option>
-		
-		<option value="//api/name/requestPIRecommendations:page:error:completionHandler:">+ requestPIRecommendations:page:error:completionHandler:</option>
-		
-		<option value="//api/name/requestPIRecommendations:page:retailer:error:completionHandler:">+ requestPIRecommendations:page:retailer:error:completionHandler:</option>
 		
 		<option value="//api/name/safeDeviceIdentifier">+ safeDeviceIdentifier</option>
 		
@@ -3651,8 +3649,8 @@ the contents of a log string will remain the same from one release to another.</
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/requestPIRecommendations:page:error:completionHandler:" title="requestPIRecommendations:page:error:completionHandler:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/requestPIRecommendations:page:error:completionHandler:">+&nbsp;requestPIRecommendations:page:error:completionHandler:</a></code>
+	<a name="//api/name/getCloudPages" title="getCloudPages"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCloudPages">+&nbsp;getCloudPages</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3662,47 +3660,20 @@ the contents of a log string will remain the same from one release to another.</
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.</p>
+				<p>Used to retrieve Cloud Pages that are active and have not been deleted.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (BOOL)requestPIRecommendations:(NSString *)<em>mid</em> page:(NSString *)<em>page</em> error:(NSError **)<em>error</em> completionHandler:(void ( ^ ) ( NSString *result , NSError *error ))<em>completionHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)getCloudPages</code></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>mid</code></th>
-						<td><p>An identifier used to locate the application specific recommendations</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>page</code></th>
-						<td><p>A recommendations page that has been created within the Predictive Web section of the Marketing Cloud</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>A pointer to a location to store an NSError object describing any error that occurred while sanity checking the input parameters. Can be nil.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>completionHandler</code></th>
-						<td><p>A pointer to a user-supplied completion handler block. The completion handler will be called if requestPIRecommendations returns True. The result parameter of the completion handler will contain a JSON formatted string with the recommendations on a successfull call otherwise it will be nil and the error parameter will be filled with an NSError object describing the error.</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Returns T/F based on sanity checks of the input parameters. If False is returned the user completion handler will not be called.</p>
+				<p>Returns Array of Cloud Pages Messages.</p>
 			</div>
 			
 
@@ -3711,90 +3682,7 @@ the contents of a log string will remain the same from one release to another.</
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ETPush.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/requestPIRecommendations:page:retailer:error:completionHandler:" title="requestPIRecommendations:page:retailer:error:completionHandler:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/requestPIRecommendations:page:retailer:error:completionHandler:">+&nbsp;requestPIRecommendations:page:retailer:error:completionHandler:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (BOOL)requestPIRecommendations:(NSString *)<em>mid</em> page:(NSString *)<em>page</em> retailer:(NSString *)<em>retailer</em> error:(NSError **)<em>error</em> completionHandler:(void ( ^ ) ( NSString *result , NSError *error ))<em>completionHandler</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>mid</code></th>
-						<td><p>An identifier used to locate the application specific recommendations</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>page</code></th>
-						<td><p>A recommendations page that has been created within the Predictive Web section of the Marketing Cloud</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>retailer</code></th>
-						<td><p>An identifier used to locate the application specific recommendations</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>A pointer to a location to store an NSError object describing any error that occurred while sanity checking the input parameters. Can be nil.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>completionHandler</code></th>
-						<td><p>A pointer to a user-supplied completion handler block. The completion handler will be called if requestPIRecommendations returns True. The result parameter of the completion handler will contain a JSON formatted string with the recommendations on a successfull call otherwise it will be nil and the error parameter will be filled with an NSError object describing the error.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Returns T/F based on sanity checks of the input parameters. If False is returned the user completion handler will not be called.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.</p>
+				<p>Used to retrieve Cloud Pages that are active and have not been deleted.</p>
 			</div>
 			
 
@@ -3826,7 +3714,7 @@ the contents of a log string will remain the same from one release to another.</
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Salesforce Marketing Cloud. All rights reserved. Updated: 2017-02-28</p>
+						<p class="copyright">Copyright &copy; 2017 Salesforce Marketing Cloud. All rights reserved. Updated: 2017-06-19</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
