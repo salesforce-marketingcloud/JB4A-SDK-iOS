@@ -270,6 +270,47 @@ static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
 - (int) getShowCount;
 
 /**---------------------------------------------------------------------------------------
+ * @name CloudPage Message Retrieval Helpers
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+ Used to retrieve Cloud Pages that are active and have not been deleted.
+ 
+ Getter for a CloudPage Messages.
+ @return Cloud Page Messages if any.
+ 
+ */
++ (nullable NSArray *) getCloudPageMessages;
+
+/**
+ Gets read CloudPage Message count.
+ 
+ Getter for a read CloudPage Message count.
+ @return CloudPage Message read count.
+ 
+ */
++ (NSInteger) getReadMessageCount;
+
+/**
+ Gets unread CloudPage Message count.
+ 
+ Getter for an unread CloudPage Message count.
+ @return CloudPage Message unread count.
+ 
+ */
++ (NSInteger) getUnreadMessageCount;
+
+/**
+ Gets CloudPage Message count.
+ 
+ Getter for a read CloudPage Message count.
+ @return CloudPage Message count.
+ 
+ */
++ (NSInteger) getMessageCount;
+
+/**---------------------------------------------------------------------------------------
  * @name Message Retrieval Helpers
  *  ---------------------------------------------------------------------------------------
  */

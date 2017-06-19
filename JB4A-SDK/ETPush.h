@@ -715,30 +715,11 @@ Reset the application's badge number to zero (aka, remove it). Call updateET to 
 - (BOOL) refreshWithFetchCompletionHandler:(void (^__nullable)(UIBackgroundFetchResult result))completionHandler;
 
 /**
- Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.
+ Used to retrieve Cloud Pages that are active and have not been deleted.
  
- @param mid An identifier used to locate the application specific recommendations
- @param page A recommendations page that has been created within the Predictive Web section of the Marketing Cloud
- @param error A pointer to a location to store an NSError object describing any error that occurred while sanity checking the input parameters. Can be nil.
- @param completionHandler A pointer to a user-supplied completion handler block. The completion handler will be called if requestPIRecommendations returns True. The result parameter of the completion handler will contain a JSON formatted string with the recommendations on a successfull call otherwise it will be nil and the error parameter will be filled with an NSError object describing the error.
- @return Returns T/F based on sanity checks of the input parameters. If False is returned the user completion handler will not be called.
-  
- */
-+(BOOL)requestPIRecommendations:(NSString *)mid page:(NSString *)page error:(NSError **)error completionHandler:(void (^)(NSString *result, NSError *error))completionHandler;
-/**
- Used to retrieve a JSON formatted string of recommendations from the Predictive Web section of the Marketing Cloud.
+ @return Returns Array of Cloud Pages Messages.
  
- @param mid An identifier used to locate the application specific recommendations
- @param page A recommendations page that has been created within the Predictive Web section of the Marketing Cloud
- @param retailer An identifier used to locate the application specific recommendations
- @param error A pointer to a location to store an NSError object describing any error that occurred while sanity checking the input parameters. Can be nil.
- @param completionHandler A pointer to a user-supplied completion handler block. The completion handler will be called if requestPIRecommendations returns True. The result parameter of the completion handler will contain a JSON formatted string with the recommendations on a successfull call otherwise it will be nil and the error parameter will be filled with an NSError object describing the error.
- @return Returns T/F based on sanity checks of the input parameters. If False is returned the user completion handler will not be called.
-  
  */
-+(BOOL)requestPIRecommendations:(NSString *)mid page:(NSString *)page retailer:(NSString *)retailer error:(NSError **)error completionHandler:(void (^)(NSString *result, NSError *error))completionHandler;
-
-
 +(NSArray *)getCloudPages;
 
 @end
