@@ -29,7 +29,7 @@ For releases prior to 4.5.0, see: <a href="http://salesforce-marketingcloud.gith
 #### Version 4.9.0
 _Released June 19, 2017, correlating with the Marketing Cloud 208 release._
 
-* **Added ability to get inbox messages and counts** -- We added new convenience methods to get all inbox messages, only read inbox messages, only unread inbox messages, and the count of inbox messages.
+* **Added ability to get inbox messages and counts** -- We added new convenience methods to get all CloudPage inbox messages and the count of read, unread and all inbox messages.
 
 #### Version 4.8.0
 _Released April 3, 2017, correlating with the Marketing Cloud 207 release._

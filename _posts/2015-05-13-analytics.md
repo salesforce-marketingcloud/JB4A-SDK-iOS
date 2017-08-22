@@ -22,6 +22,9 @@ To ensure that push notifications are properly tracked by the SDK and Marketing 
 
 If you don't, analytic events can't track open counts for your push messaging campaigns.
 
+You can also track analytics for Inbox messages.
+
+<script src="https://gist.github.com/sfmc-mobilepushsdk/8090229913f6a8bd7b26fff86450e74d.js"></script>
 
 ## Personalization Builder and Collect API Integration
 
