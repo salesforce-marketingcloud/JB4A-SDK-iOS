@@ -34,6 +34,14 @@ You must configure your app to display these messages. The SDK provides a TableV
 
 For more information, see the [ExactTargetCloudPageWithAlertDelegate Protocol Reference]({{ site.baseurl }}/appledoc/Protocols/ExactTargetCloudPageWithAlertDelegate.html).
 
+Here is the full breakdown of MobilePush Message consumption:
+
+* Each MobilePush Message Alert consumes one additional MobilePush Message
+* Each MobilePush Alert+CloudPage consumes one MobilePush Message
+* Each MobilePush Inbox-Only Message consumes one MobilePush Message
+* Each MobilePush Alert+Inbox Message consumes two MobilePush Messages
+* Each Badge App Icon added to a MobilePush Inbox-Only Message consumes one additional MobilePush Message, in addition to the one MobilePush Message consumed with each Inbox-Only Message
+
 For alerts, the app displays a badge count of 1 no matter how many alerts you send. If you also send messages to an inbox, the app adds the number of unread messages to the alert count for the total count. For messages sent to the system and not yet downloaded to the inbox, the SDK displays the expected number of unread messages plus one. Messages marked as read or unread change the count as applicable. When your app goes to the background, the SDK sets the alert count to 0 and the inbox count to the number of unread messages.
 
 Review the [Analytics page]({{ site.baseurl }}/features/analytics.html) for information on gathering tracking information on Inbox messages.
