@@ -26,10 +26,16 @@ Sign up for email updates about the JB4A iOS SDK:<br/>
 
 For releases prior to 4.5.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.5.0/" target="_blank">Prior Release Documentation</a>
 
+#### Version 4.9.5
+_Released August 28, 2017, correlating with the Marketing Cloud August 2017 release._
+
+* **App Inbox Enhancements** -- Send a push message to the Inbox at the same time. On iOS, this feature comes with support of unread message count badging on the app icon. The new enhancements also come with additional analytics so you can track the engagement on opened and downloaded messages.
+* **Predictive Intelligence Cart Tracking** -- Interested in tracking shopping carts from within your app? Track unique SKUs, which makes it possible to track all of your products through to conversion. Tracking cart events can be used to drive abandoned cart journeys to drive sales.
+
 #### Version 4.9.0
 _Released June 19, 2017, correlating with the Marketing Cloud 208 release._
 
-* **Added ability to get inbox messages and counts** -- We added new convenience methods to get all inbox messages, only read inbox messages, only unread inbox messages, and the count of inbox messages.
+* **Added ability to get inbox messages and counts** -- We added new convenience methods to get all CloudPage inbox messages and the count of read, unread and all inbox messages.
 
 #### Version 4.8.0
 _Released April 3, 2017, correlating with the Marketing Cloud 207 release._

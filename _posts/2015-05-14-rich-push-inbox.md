@@ -1,16 +1,18 @@
 ---
 layout: page
 title: "Inbox"
-subtitle: "Cloud Page Inbox"
+subtitle: "Inbox"
 category: rich-push
 date: 2015-05-14 12:00:00
 order: 3
 ---
-For CloudPage-only Messages, the JB4A SDK will download new messages each time your app comes into the foreground.
+Inbox Message functionality allows you to send alerts with an inbox message or just an inbox message.
 
-You must configure your app to display these messages. The SDK provides a TableView Datasource for you to use in a ViewController to display the CloudPage-only messages sent from the Marketing Cloud. The ViewController you create will essentially create an inbox in your app to display these messages.  When these messages are downloaded, they are added to the Datasource only.  No alerts for these messages are displayed.
+For Inbox-only Messages, the JB4A SDK downloads new messages each time your app comes into the foreground.
 
-<script src="https://gist.github.com/sfmc-mobilepushsdk/f278db5683b7aec102f3.js"></script>
+You must configure your app to display these messages. The SDK provides a TableView Datasource for you to use in a ViewController to display the Inbox-only messages sent from the Marketing Cloud. The ViewController you create will essentially create an inbox in your app to display these messages.  When these messages are downloaded, they are added to the Datasource only.  No alerts for these messages are displayed.
+
+<script src="https://gist.github.com/sfmc-mobilepushsdk/3baee2f078072a8331146577230dd709.js"></script>
 
 <div id="CPDelegate">You can override this functionality by implementing the ExactTargetCloudPageWithAlertDelegate, which will allow you to handle the URL any way you choose.</div>
 
@@ -31,3 +33,15 @@ You must configure your app to display these messages. The SDK provides a TableV
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/74ca87449cf6e782a8ddbb3ebaea3586.js"></script>
 
 For more information, see the [ExactTargetCloudPageWithAlertDelegate Protocol Reference]({{ site.baseurl }}/appledoc/Protocols/ExactTargetCloudPageWithAlertDelegate.html).
+
+Here is the full breakdown of MobilePush Message consumption:
+
+* Each MobilePush Message Alert consumes one additional MobilePush Message
+* Each MobilePush Alert+CloudPage consumes one MobilePush Message
+* Each MobilePush Inbox-Only Message consumes one MobilePush Message
+* Each MobilePush Alert+Inbox Message consumes two MobilePush Messages
+* Each Badge App Icon added to a MobilePush Inbox-Only Message consumes one additional MobilePush Message, in addition to the one MobilePush Message consumed with each Inbox-Only Message
+
+For alerts, the app displays a badge count of 1 no matter how many alerts you send. If you also send messages to an inbox, the app adds the number of unread messages to the alert count for the total count. For messages sent to the system and not yet downloaded to the inbox, the SDK displays the expected number of unread messages plus one. Messages marked as read or unread change the count as applicable. When your app goes to the background, the SDK sets the alert count to 0 and the inbox count to the number of unread messages.
+
+Review the [Analytics page]({{ site.baseurl }}/features/analytics.html) for information on gathering tracking information on Inbox messages.

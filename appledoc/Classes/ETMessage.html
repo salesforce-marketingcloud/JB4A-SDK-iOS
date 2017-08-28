@@ -76,6 +76,8 @@
 		
 		<option value="//api/name/loiteringSeconds">loiteringSeconds</option>
 		
+		<option value="//api/name/messageHash">messageHash</option>
+		
 		<option value="//api/name/messageIdentifier">messageIdentifier</option>
 		
 		<option value="//api/name/messageLimit">messageLimit</option>
@@ -102,6 +104,8 @@
 		
 		<option value="//api/name/relatedFence">relatedFence</option>
 		
+		<option value="//api/name/requestId">requestId</option>
+		
 		<option value="//api/name/rollingPeriod">rollingPeriod</option>
 		
 		<option value="//api/name/siteIdentifier">siteIdentifier</option>
@@ -111,6 +115,8 @@
 		<option value="//api/name/sound">sound</option>
 		
 		<option value="//api/name/startDate">startDate</option>
+		
+		<option value="//api/name/statusDirty">statusDirty</option>
 		
 	</optgroup>
 	
@@ -143,6 +149,10 @@
 		<option value="//api/name/invalidateAllMessagesForContentType:">+ invalidateAllMessagesForContentType:</option>
 		
 		<option value="//api/name/invalidateAllMessagesForType:">+ invalidateAllMessagesForType:</option>
+		
+		<option value="//api/name/markAllAsRead">+ markAllAsRead</option>
+		
+		<option value="//api/name/trackInboxMessageOpened:">+ trackInboxMessageOpened:</option>
 		
 	</optgroup>
 	
@@ -1518,6 +1528,144 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/requestId" title="requestId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestId">&nbsp;&nbsp;requestId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used to maintaing context about a messages&rsquo;s source in the ETEvent system.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly, nullable) NSString *requestId</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Used to maintaing context about a messages&rsquo;s source in the ETEvent system.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/messageHash" title="messageHash"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageHash">&nbsp;&nbsp;messageHash</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used for determining message uniqueness.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly, nullable) NSString *messageHash</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Used for determining message uniqueness.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/statusDirty" title="statusDirty"></a>
+	<h3 class="method-title"><code><a href="#//api/name/statusDirty">&nbsp;&nbsp;statusDirty</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used for updating message status.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly, nullable) NSNumber *statusDirty</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Used for updating message status.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/initFromDictionary:" title="initFromDictionary:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/initFromDictionary:">&ndash;&nbsp;initFromDictionary:</a></code>
 </h3>
@@ -1741,52 +1889,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/markAsRead" title="markAsRead"></a>
-	<h3 class="method-title"><code><a href="#//api/name/markAsRead">&ndash;&nbsp;markAsRead</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Marks a message as <a href="#//api/name/read">read</a> in the local cache. Read messages do not show up in the Inbox.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)markAsRead</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Marks a message as <a href="#//api/name/read">read</a> in the local cache. Read messages do not show up in the Inbox.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ETMessage.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/messageScheduledForDisplay" title="messageScheduledForDisplay"></a>
 	<h3 class="method-title"><code><a href="#//api/name/messageScheduledForDisplay">&ndash;&nbsp;messageScheduledForDisplay</a></code>
 </h3>
@@ -1816,98 +1918,6 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Records a message as scheduled, and updates the fun, fun logic around when it should again, if it should of course.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ETMessage.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/markAsUnread" title="markAsUnread"></a>
-	<h3 class="method-title"><code><a href="#//api/name/markAsUnread">&ndash;&nbsp;markAsUnread</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Marks a message as un<a href="#//api/name/read">read</a>. Just for convenience.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)markAsUnread</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Marks a message as un<a href="#//api/name/read">read</a>. Just for convenience.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">ETMessage.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/markAsDeleted" title="markAsDeleted"></a>
-	<h3 class="method-title"><code><a href="#//api/name/markAsDeleted">&ndash;&nbsp;markAsDeleted</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Marks a message as deleted. They will not be returned after this, and it&rsquo;s irreversable.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)markAsDeleted</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Marks a message as deleted. They will not be returned after this, and it&rsquo;s irreversable.</p>
 			</div>
 			
 
@@ -2230,6 +2240,270 @@
 				<p>Gets CloudPage Message count.</p>
 
 <p>Getter for a <a href="#//api/name/read">read</a> CloudPage Message count.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="CloudPage Inbox Utility Methods" name="task_CloudPage Inbox Utility Methods"></a>
+						<h2 class="task-title">CloudPage Inbox Utility Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/markAllAsRead" title="markAllAsRead"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markAllAsRead">+&nbsp;markAllAsRead</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Marks all CloudPage Inbox messages as <a href="#//api/name/read">read</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)markAllAsRead</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Marks all CloudPage Inbox messages as <a href="#//api/name/read">read</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/markAsRead" title="markAsRead"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markAsRead">&ndash;&nbsp;markAsRead</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Marks a message as <a href="#//api/name/read">read</a> in the local cache. Read messages do not show up in the Inbox.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)markAsRead</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Marks a message as <a href="#//api/name/read">read</a> in the local cache. Read messages do not show up in the Inbox.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/markAsUnread" title="markAsUnread"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markAsUnread">&ndash;&nbsp;markAsUnread</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is not available in the current release as the new Inbox feature does not yet support mark as un<a href="#//api/name/read">read</a> functionality.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)markAsUnread</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is not available in the current release as the new Inbox feature does not yet support mark as un<a href="#//api/name/read">read</a> functionality.</p>
+
+<p>Marks a message as un<a href="#//api/name/read">read</a>. Just for convenience.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/markAsDeleted" title="markAsDeleted"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markAsDeleted">&ndash;&nbsp;markAsDeleted</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Marks a message as deleted. They will not be returned after this, and it&rsquo;s irreversable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)markAsDeleted</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Marks a message as deleted. They will not be returned after this, and it&rsquo;s irreversable.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ETMessage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="CloudPage Message Open analytic" name="task_CloudPage Message Open analytic"></a>
+						<h2 class="task-title">CloudPage Message Open analytic</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/trackInboxMessageOpened:" title="trackInboxMessageOpened:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackInboxMessageOpened:">+&nbsp;trackInboxMessageOpened:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used to tell the Marketing Cloud that a CloudPage Inbox message has been opened.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)trackInboxMessageOpened:(ETCloudPage *_Nonnull)<em>cloudPageInboxMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cloudPageInboxMessage</code></th>
+						<td><p>a non-nil <a href="../Classes/ETCloudPage.html">ETCloudPage</a> message object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Used to tell the Marketing Cloud that a CloudPage Inbox message has been opened.</p>
+
+<p>Call this method from your inbox code (upon tableView:didSelectRowAtIndexPath:) passing the <a href="../Classes/ETCloudPage.html">ETCloudPage</a> object selected.</p>
+
+<p>If configureSDK&hellip; was called using withAnalytics:YES, the CloudPage&rsquo;s &ldquo;open&rdquo; will be recorded.</p>
 			</div>
 			
 
@@ -2904,7 +3178,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Salesforce Marketing Cloud. All rights reserved. Updated: 2017-06-19</p>
+						<p class="copyright">Copyright &copy; 2017 Salesforce Marketing Cloud. All rights reserved. Updated: 2017-08-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
