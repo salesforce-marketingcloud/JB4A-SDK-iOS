@@ -148,6 +148,12 @@ static NSString * const ETRequestBaseURL = @"https://consumer.exacttargetapis.co
 -(BOOL)generatePersistentDataSchemaInDatabase;
 
 /**
+ Passes a call to the Static method of the same name, with the correct object named in the instance variable. It needed an instance counterpart because we are dealing with a specific update at the point where this is called, and that's the perfect place to reference back to the static version.
+ 
+ */
+-(BOOL)updateSchemaInDatabase;
+
+/**
  Returns the arguments that should be inserted into the database to match the query specified in the previous method. As such, the number should equal the number of question marks used in the previous method.
  
  Also, they need to all be NSObjects, and not primitives or non-object variants of NULL. So, use an NSNumber wrapper for numbers and bools, and [ NSNull null] for nils. Please.

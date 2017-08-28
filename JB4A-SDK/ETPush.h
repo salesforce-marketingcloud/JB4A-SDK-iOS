@@ -410,10 +410,9 @@ static NSString * const SDKName = @"JB4ASDK";
 -(void)applicationDidFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
 
 /**
-Reset the application's badge number to zero (aka, remove it). Call updateET to refresh the server with the current badge number. Note: updateET may not be fully processed by the server for a number of minutes; the server's badge value may be out of sync with the app for a short amount of time.
- 
-*/
--(void)resetBadgeCount;
+ Resetting badge count via the JB4ASDK is now unavailable. If absolutely necessary, use UIApplication's -setApplicationIconBadgeNumber:; be aware that the SDK will be managing badge values and *will* set the badge count to reflect the state of Marketing Cloud messages.
+ */
+-(void)resetBadgeCount __attribute__((unavailable("Resetting badge count via the JB4ASDK is now unavailable. If absolutely necessary, use UIApplication's -setApplicationIconBadgeNumber:; be aware that the SDK will be managing badge values and *will* set the badge count to reflect the state of Marketing Cloud messages.")));
 
 /**
  Tell the SDK to display a UIAlertView if a push is received while the app is already running. Default behavior is set to NO.

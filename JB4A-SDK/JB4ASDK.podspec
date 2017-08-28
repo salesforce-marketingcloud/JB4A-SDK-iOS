@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = "JB4ASDK"
-    s.version           = "4.9.0"
+    s.version           = "4.9.5"
     s.summary           = "Salesforce Marketing Cloud Journey Builder for Apps iOS SDK"
     s.homepage          = "https://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/"
     s.documentation_url = 'https://salesforce-marketingcloud.github.io/JB4A-SDK-iOS/appledoc/index.html'

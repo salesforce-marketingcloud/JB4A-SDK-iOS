@@ -29,7 +29,19 @@ NS_ASSUME_NONNULL_BEGIN
  @return instancetype
   
  */
-- (instancetype)initWithPrice:(NSNumber *)price quantity:(NSNumber *)quantity item:(NSString *)item NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPrice:(NSNumber *)price quantity:(NSNumber *)quantity item:(NSString *)item;
+
+/**
+ Initialize a Cart Item object for use in analytics.
+ 
+ @param price The price amount (USD) of this item (non-nil value; 0 permissable)
+ @param quantity The count of items in the cart for this particular product (non-nil value; 0 permissable)
+ @param item The unique product code from the e-commerce system representing this cart item (non-nil string value)
+ @param uniqueId The unique product id from the e-commerce system representing this cart item (string value; nil permissable)
+ @return instancetype
+ 
+ */
+- (instancetype)initWithPrice:(NSNumber *)price quantity:(NSNumber *)quantity item:(NSString *)item uniqueId:(NSString *) uniqueId;
 
 /**
  Convert PICartItem to dictionary.
