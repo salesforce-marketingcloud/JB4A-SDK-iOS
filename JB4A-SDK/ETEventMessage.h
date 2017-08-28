@@ -54,12 +54,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy, nullable) NSString *sound ;
 
 /**
- The badge modifier. This should be a NSString in the form of "+1" or nothing at all. It's saved as a string because of that.
-  
- */
-@property (nonatomic, readonly, copy, nullable) NSString *badge ;
-
-/**
  The category name for an interactive notification if it has one.
   
  */

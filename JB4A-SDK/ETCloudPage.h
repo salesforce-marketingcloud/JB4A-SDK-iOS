@@ -107,4 +107,12 @@
  */
 -(BOOL)markAsRead;
 
+/**
+ This method is not available in the current release as the new Inbox feature does not yet support mark as unread functionality.
+ 
+ Marks a message as unread in the local cache. Unread messages do show up in the Inbox.
+ 
+ */
+-(BOOL)markAsUnread __attribute__((unavailable("This method is not available in the current release as the new Inbox feature does not yet support mark as unread functionality.")));
+
 @end

@@ -202,6 +202,24 @@ static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
 @property (nonatomic, readonly) BOOL hasShownForBeacon ;
 
 /**
+ Used to maintaing context about a messages's source in the ETEvent system.
+ 
+ */
+@property (nonatomic, copy, readonly, nullable) NSString *requestId ;
+
+/**
+ Used for determining message uniqueness.
+ 
+ */
+@property (nonatomic, copy, readonly, nullable) NSString *messageHash;
+
+/**
+ Used for updating message status.
+ 
+ */
+@property (nonatomic, copy, readonly, nullable) NSNumber *statusDirty;
+
+/**
  Creates a new ETMessage with values in the given NSDictionary. 
  @param dict A dictionary of values to apply to the ETMessage
  @return A new ETMessage
@@ -231,28 +249,10 @@ static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
 -(nullable NSURL *)siteURL;
 
 /**
- Marks a message as read in the local cache. Read messages do not show up in the Inbox.
-  
- */
--(BOOL)markAsRead;
-
-/**
  Records a message as scheduled, and updates the fun, fun logic around when it should again, if it should of course. 
   
  */
 -(BOOL)messageScheduledForDisplay;
-
-/**
- Marks a message as unread. Just for convenience. 
-  
- */
--(BOOL)markAsUnread;;
-
-/**
- Marks a message as deleted. They will not be returned after this, and it's irreversable.
-  
- */
--(BOOL)markAsDeleted;
 
 /** Methods for testing */
 /**
@@ -309,6 +309,55 @@ static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
  
  */
 + (NSInteger) getMessageCount;
+
+/**---------------------------------------------------------------------------------------
+ * @name CloudPage Inbox Utility Methods
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+ Marks all CloudPage Inbox messages as read.
+ */
++(void)markAllAsRead;
+
+/**
+ Marks a message as read in the local cache. Read messages do not show up in the Inbox.
+ 
+ */
+-(BOOL)markAsRead;
+
+/**
+ 
+ This method is not available in the current release as the new Inbox feature does not yet support mark as unread functionality.
+ 
+ Marks a message as unread. Just for convenience.
+ 
+ */
+-(BOOL)markAsUnread __attribute__((unavailable("This method is not available in the current release as the new Inbox feature does not yet support mark as unread functionality.")));
+/**
+ Marks a message as deleted. They will not be returned after this, and it's irreversable.
+ 
+ */
+-(BOOL)markAsDeleted;
+
+
+/**---------------------------------------------------------------------------------------
+ * @name CloudPage Message Open analytic
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+ Used to tell the Marketing Cloud that a CloudPage Inbox message has been opened.
+ 
+ Call this method from your inbox code (upon tableView:didSelectRowAtIndexPath:) passing the ETCloudPage object selected.
+ 
+ If configureSDK... was called using withAnalytics:YES, the CloudPage's "open" will be recorded.
+
+ @param cloudPageInboxMessage a non-nil ETCloudPage message object.
+ */
+
++ (void) trackInboxMessageOpened:(ETCloudPage * _Nonnull) cloudPageInboxMessage;
+
 
 /**---------------------------------------------------------------------------------------
  * @name Message Retrieval Helpers

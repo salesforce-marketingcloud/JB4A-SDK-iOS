@@ -160,8 +160,12 @@ typedef NS_ENUM(NSUInteger, MobilePushMessageType)
     MobilePushMessageTypeFenceExit,
     /** Proximity */
     MobilePushMessageTypeProximity,
+    /** Silent Push */
+    MobilePushMessageTypeSilentPush,
+    /** Inbox */
+    MobilePushMessageTypeInbox = 8,
     /** lastMobilePushMessageTypeIndex */
-    lastMobilePushMessageTypeIndex = MobilePushMessageTypeProximity
+    lastMobilePushMessageTypeIndex = MobilePushMessageTypeInbox
 };
 
 /**
