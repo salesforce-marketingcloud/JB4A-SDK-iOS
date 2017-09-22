@@ -33,7 +33,7 @@ _Released August 28, 2017, correlating with the Marketing Cloud August 2017 rele
 * **Predictive Intelligence Cart Tracking** -- Interested in tracking shopping carts from within your app? Track unique SKUs, which makes it possible to track all of your products through to conversion. Tracking cart events can be used to drive abandoned cart journeys to drive sales.
 * We fully tested the JB4A version 4.9.5 SDK with Xcode 8 and Xcode 9 using all supported base SDK and deployment target versions, including iOS 11 as both base SDK and minimum deployment versions in Xcode 9. If you build your application with Xcode 9 and target the iOS 11 SDK, note that SDK 4.9.5/209 and earlier versions display at least one static analyzer warning at debug time in Xcode. These versions also display at least one application log message at app runtime indicating that requestAlwaysAuthorization and registerForRemoteNotifications need to be called on the main thread:
   * Use [UIApplication registerForRemoteNotifications] from the main thread only.
-  * This is _not_ a fatal error.
+  * This error is _not_ fatal.
   * Our October 2017 release corrects this error.
 
 #### Version 4.9.0
