@@ -31,6 +31,10 @@ _Released August 28, 2017, correlating with the Marketing Cloud August 2017 rele
 
 * **App Inbox Enhancements** -- Send a push message to the Inbox at the same time. On iOS, this feature comes with support of unread message count badging on the app icon. The new enhancements also come with additional analytics so you can track the engagement on opened and downloaded messages.
 * **Predictive Intelligence Cart Tracking** -- Interested in tracking shopping carts from within your app? Track unique SKUs, which makes it possible to track all of your products through to conversion. Tracking cart events can be used to drive abandoned cart journeys to drive sales.
+* We fully tested the JB4A version 4.9.5 SDK with Xcode 8 and Xcode 9 using all supported base SDK and deployment target versions, including iOS 11 as both base SDK and minimum deployment versions in Xcode 9. If you build your application with Xcode 9 and target the iOS 11 SDK, note that SDK 4.9.5/209 and earlier versions display at least one static analyzer warning at debug time in Xcode. These versions also display at least one application log message at app runtime indicating that requestAlwaysAuthorization and registerForRemoteNotifications need to be called on the main thread:
+  * Use [UIApplication registerForRemoteNotifications] from the main thread only.
+  * This is _not_ a fatal error.
+  * Our October 2017 release corrects this error.
 
 #### Version 4.9.0
 _Released June 19, 2017, correlating with the Marketing Cloud 208 release._
@@ -112,7 +116,7 @@ _Released March 21 2016, correlating to the Marketing Cloud 2016-02 Release_<br/
 * MOBILESDK-063 - Fix Geofence and Beacon analytics for region entry, exit, and message displayed.
 * MOBILESDK-258 - Improvements to beacon detection and message display.    
 * MOBILESDK-268 - Package registration data updates with each update method (such as setTag(), addAttribute()) by
-                  issuing REST call 1 minute after first call.  If REST call fails, retry in background until REST 
+                  issuing REST call 1 minute after first call.  If REST call fails, retry in background until REST
                   call succeeds or app is suspended.
 * MOBILESDK-375 - Update the default landing page used to display OpenDirect and CloudPage+Alert URLs when these notifications are tapped, to use WKWebView rather than UIWebview.   
 * MOBILESDK-376 - Set CLLocationManager allowsBackgroundLocationUpdates to YES for iOS9 builds (required for Beacons support).
@@ -164,7 +168,7 @@ _Released October 2, 2015, correlating to the Marketing Cloud 2015-06 Release_<b
 #### Version 4.0.1
 _Released July 23rd, 2015_<br/>
 
-* MPUSH-3856 - SUPPORT - Upgrade to MobilePush iOS SDK 4.0.0 from SDK 3.4.2 Causes App to Freeze<br/> 
+* MPUSH-3856 - SUPPORT - Upgrade to MobilePush iOS SDK 4.0.0 from SDK 3.4.2 Causes App to Freeze<br/>
 
 #### Version 4.0.0
 _Released June 24th, 2015, correlating to the Marketing Cloud 2015-04 Release_<br/>
@@ -178,12 +182,12 @@ _Released June 24th, 2015, correlating to the Marketing Cloud 2015-04 Release_<b
 * MPUSH-3717 - Timing issue with ExactTargetEnhancedPushDataSource<br/>
 * MPUSH-3713 - Added ability to utilize unicode characters in Rich Push subject lines<br/>
 
-**Required Coding Changes** 
+**Required Coding Changes**
 
 The following are changes that must be made in order to upgrade from previous releases of the SDK:<br/><br/>
 The latest configureSDKWithAppID has some additional parameters and can be found at [Implement the SDK]({{ site.baseurl }}/sdk-implementation/implement-sdk.html).
 
-You will need to update your configSDK registration call to now read: 
+You will need to update your configSDK registration call to now read:
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/71cf71032cfe92c06d76bf5f894cb115.js"></script>
 
