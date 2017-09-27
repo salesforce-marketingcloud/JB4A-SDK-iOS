@@ -10,7 +10,7 @@ Inbox Message functionality allows you to send alerts with an inbox message or j
 
 For Inbox-only Messages, the JB4A SDK downloads new messages each time your app comes into the foreground.
 
-You must configure your app to display these messages. The SDK provides a TableView Datasource for you to use in a ViewController to display the Inbox-only messages sent from the Marketing Cloud. The ViewController you create will essentially create an inbox in your app to display these messages.  When these messages are downloaded, they are added to the Datasource only.  No alerts for these messages are displayed.
+You must configure your app to display these messages. Ensure you enable the CLOUDPAGES property in your AppDelegate.m file. The SDK provides a TableView Datasource for you to use in a ViewController to display the Inbox-only messages sent from the Marketing Cloud. The ViewController you create essentially creates an inbox in your app to display these messages.  When these messages are downloaded, they are added to the Datasource only.  No alerts for these messages are displayed.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/3baee2f078072a8331146577230dd709.js"></script>
 
