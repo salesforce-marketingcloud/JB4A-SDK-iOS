@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "CloudPage Alert Overview"
-subtitle: "Implement CloudPage functionality in your mobile app"
+subtitle: "Implement CloudPage functionality in Your Mobile App"
 category: inbox
 date: 2015-05-14 12:00:00
 order: 2
