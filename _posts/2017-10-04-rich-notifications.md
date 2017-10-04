@@ -7,7 +7,7 @@ date: 2017-10-04 12:00:00
 order: 1
 ---
 
-##Prerequisites
+## Prerequisites
 
 * Make sure that your iOS app is built for iOS 10 or higher.
 * Include a service extension for your app that can handle mutable content. See Apple’s documentation.
@@ -16,7 +16,7 @@ order: 1
 
 The Learning App includes an example of the notification service extension for mutable content called MarketingCloudServiceExtension and a sample payload. You can see these examples in NotificationService.m. The sample payload includes a URL for media content. Before the notification displays on a device, the service extension downloads the file from the URL. Then it presents the content in the notification.
 
-##Sample payload
+## Sample Payload
 ```
 {
   "aps": {

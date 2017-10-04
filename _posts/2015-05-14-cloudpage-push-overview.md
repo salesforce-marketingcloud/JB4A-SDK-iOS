@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Overview"
-subtitle: "Overview of CloudPage Alerts"
+title: "CloudPage Alert Overview"
+subtitle: "Implement CloudPage functionality in your mobile app"
 category: inbox
 date: 2015-05-14 12:00:00
 order: 2
 ---
-This section contains information on implementing CloudPage functionality in your mobile app. CloudPages allow you to send either a CloudPage in the payload of a notification (CloudPage+Alert) or as a page to be displayed in an inbox configured in your app.
+
+CloudPages allow you to send either a CloudPage in the payload of a notification (CloudPage+Alert) or as a page to be displayed in an inbox configured in your app.
 
 Marketing Cloud must enable the account using this functionality with access to both MobilePush and CloudPages to successfully create and send CloudPage alerts.
 
