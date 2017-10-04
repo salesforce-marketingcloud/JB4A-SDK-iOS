@@ -1,14 +1,14 @@
 ---
 layout: page
 title: "Overview"
-subtitle: "Overview of Cloud Page Messages"
-category: rich-push
+subtitle: "Overview of CloudPage Alerts"
+category: inbox
 date: 2015-05-14 12:00:00
-order: 1
+order: 2
 ---
 This section contains information on implementing CloudPage functionality in your mobile app. CloudPages allow you to send either a CloudPage in the payload of a notification (CloudPage+Alert) or as a page to be displayed in an inbox configured in your app.
 
-The Marketing Cloud must enable the account using this functionality with access to both MobilePush and CloudPages to successfully create and send CloudPage alerts.
+Marketing Cloud must enable the account using this functionality with access to both MobilePush and CloudPages to successfully create and send CloudPage alerts.
 
 For notifications that are sent that include a CloudPage URL (CloudPage+Alert), the JB4A SDK will open this URL when the message is tapped using the ETWKLandingPagePresenter view controller.  You must include the WebKit.framework in Link Binary With Libraries section of the Build Phases configuration in Xcode.  
 

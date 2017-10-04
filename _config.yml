@@ -27,7 +27,7 @@ sections: [
     ['sdk-implementation', 'SDK Implementation'],
     ['upgrading', 'Upgrading'],
     ['features', 'Feature Implementation'],
-    ['rich-push', 'Rich Push'],
+    ['rich-notifications', 'Rich Notifications'],
     ['inbox', 'Inbox'],
     ['location', 'Location Services'],
     ['trouble', 'Troubleshooting'],
