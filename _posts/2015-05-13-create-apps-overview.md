@@ -8,7 +8,6 @@ order: 1
 ---
 Follow these steps to connect your iOS app to your Marketing Cloud account:
 
-1. Create a MobilePush app in the App Center. See [Add App to App Center]({{ site.baseurl }}/create-apps/create-apps-app-center.html)
-1. Integrate the App Center app to your Marketing Cloud account.  See [Integrate App Center App]({{ site.baseurl }}/create-apps/create-apps-marketing-cloud.html)
+1. Create a MobilePush app in Marketing Cloud. See [Add App to MobilePush]({{ site.baseurl }}/create-apps/create-apps-mobilepush.html).
 1. Upload the APNS certificate provided when you created your app in the <a href="https://developer.apple.com/devcenter/ios/" target="_blank">Member Center</a>.  See [Add Provisioning to App Center App]({{ site.baseurl }}/create-apps/create-apps-provisioning.html)
-
+1. [Troubleshoot as necessary]({{ site.baseurl }}/create-apps/create-apps-certificate-troubleshooting.html).
