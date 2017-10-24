@@ -30,12 +30,12 @@ Use Xcode 9 from Apple to create a Notification Service Extension.
 
 This example has been taking from the (Marketing Cloud Learning App)[https://github.com/salesforce-marketingcloud/LearningAppIos]. Remember that your code uses a different service extension.
 
-This service extension checks for a “_mediaUrl” element in request.content.userInfo.  If found, it attempts to download the media from the URL , creates a thumbnail-size version, and then adds the attachment. The service extension also checks for a “_mediaAlt” element in request.content.userInfo.  If found, the service extension uses the element for the body text if there are any problems downloading or creating the media attachment.
+This service extension checks for a "&#95;mediaUrl" element in request.content.userInfo.  If found, it attempts to download the media from the URL , creates a thumbnail-size version, and then adds the attachment. The service extension also checks for a ""&#95;mediaAlt" element in request.content.userInfo.  If found, the service extension uses the element for the body text if there are any problems downloading or creating the media attachment.
 
-A service extension can timeout when it is unable to download.  In this code sample, the service extension delivers the original content with the body text changed to the value in “_mediaAlt”.
+A service extension can timeout when it is unable to download.  In this code sample, the service extension delivers the original content with the body text changed to the value in "&#95;mediaAlt".
 
-<script src=“https://gist.github.com/sfmc-mobilepushsdk/7745e6cc375704765d4b549d24a12af7.js“></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/7745e6cc375704765d4b549d24a12af7.js"></script>
 
 ## Service Extension Example in Swift
 
-<script src=“https://gist.github.com/sfmc-mobilepushsdk/70864d138f258de4cbca0a49584cdd84.js“></script>
+<script src="https://gist.github.com/sfmc-mobilepushsdk/70864d138f258de4cbca0a49584cdd84.js"></script>
