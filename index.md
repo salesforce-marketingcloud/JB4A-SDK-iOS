@@ -26,7 +26,7 @@ Sign up for email updates about the JB4A iOS SDK:<br/>
 
 For releases prior to 4.5.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.5.0/" target="_blank">Prior Release Documentation</a>
 
-#### Version X.X.X
+#### Version 4.9.6
 _Released October 30, 2017, correlating with the Marketing Cloud October 2017 release_
 
 * This release adds support for rich notifications. Rich notifications include images, audio, video, and titles and subtitles from MobilePush. Host your files with a public URL and use that address to include rich media in your notifications.
