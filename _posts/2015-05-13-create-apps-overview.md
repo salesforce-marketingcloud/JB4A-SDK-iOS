@@ -20,3 +20,5 @@ After you log into MobilePush, follow these steps to create a new MobilePush app
 1. Click **Save**.
 
 Review the steps in our [MobilePush documentation](https://help.marketingcloud.com/en/documentation/mobilepush/administering_your_mobilepush_account/add_provisioning_info_to_your_app_center_app/) for more information.
+
+To create or renew certificates, follow [Apple's Xcode instructions](http://help.apple.com/xcode/mac/current/#/dev11b059073).
