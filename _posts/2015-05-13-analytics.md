@@ -13,7 +13,7 @@ Follow the steps on this page to implement Analytics and Web and Mobile analytic
 If you wish to implement Analytics, pass a YES value for the withAnalytics parameter.  If you also wish to implement Web and Mobile Analytics, pass a YES value for the withPIAnalytics parameter.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/57757242e4d76abee281.js"></script>
-<div id="TrackCartAnalytics"></div> 
+<div id="TrackCartAnalytics"></div>
 
 #### Track Push Notifications
 
@@ -22,12 +22,11 @@ To ensure that push notifications are properly tracked by the SDK and Marketing 
 
 If you don't, analytic events can't track open counts for your push messaging campaigns.
 
-You can also track analytics for Inbox messages.
+You can also track analytics for Inbox messages. Call trackInboxOpenEvent() to send the open analytic value to Marketing Cloud. We automatically provide analytic information for message downloads.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/8090229913f6a8bd7b26fff86450e74d.js"></script>
 
 ## Personalization Builder and Collect API Integration
-
 
 The following methods integrate your mobile app with Personalization Builder. You must have an existing <a href="http://help.marketingcloud.com/en/documentation/personalization_builder">Personalization Builder</a> deployment in order to use these. Also, you must enable the "PIAnalytics" option when you configure your SDK.
 
@@ -42,7 +41,7 @@ Use to track the contents of an in-app shopping cart. For more information about
 Use to track a purchase made through your mobile application. For more information about this method's general use with Personalization Builder, see <a href="http://help.marketingcloud.com/en/documentation/collect_code/install_collect_code/track_conversion/" target="_blank">Track Purchase Details</a>. Sample code for use in your mobile app is below.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/32f4a008cbd6d802389b0a172572efe6.js"></script>
-  
+
 ### Track Page View
 Call the following method to implement page view analytics in your app. For more information about this method's general use with Personalization Builder, see <a href="http://help.marketingcloud.com/en/documentation/collect_code/install_collect_code/track_page_view/" target="_blank">Track Items Viewed</a>. Sample code for use in your mobile app is below.
 
@@ -56,7 +55,7 @@ Using Subscriber Key, you can link track cart, track conversion, and other Colle
 
 As well as providing the ability to track page views within your app, the Web and Mobile Analytics app will provide information about the time your customers are spending in your app.  To view this information in the Web and Mobile App, following these steps to configure the Web and Mobile Analytic app within your Marketing Cloud account.
 
-1. 	To see your new Web and Mobile Analytics information sent by the SDK, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud: 
+1. 	To see your new Web and Mobile Analytics information sent by the SDK, open the [Web and Mobile Analytics](http://www.exacttarget.com/products/customer-data-platform/web-mobile-analytics){:target="_blank"} app within the Marketing Cloud:
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/wama_menu.png" /><br/>
 <br/><br/>
