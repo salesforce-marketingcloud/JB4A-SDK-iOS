@@ -220,6 +220,15 @@ static NSString *kMessagesPreferencesKey = @"messagesPreferencesKey";
 @property (nonatomic, copy, readonly, nullable) NSNumber *statusDirty;
 
 /**
+ Used for rich notifications
+ 
+ */
+@property (nonatomic, copy, readonly, nullable) NSString *title;
+@property (nonatomic, copy, readonly, nullable) NSString *subtitle;
+@property (nonatomic, copy, readonly, nullable) NSString *media_iosUrl;
+@property (nonatomic, copy, readonly, nullable) NSString *media_alt;
+
+/**
  Creates a new ETMessage with values in the given NSDictionary. 
  @param dict A dictionary of values to apply to the ETMessage
  @return A new ETMessage
