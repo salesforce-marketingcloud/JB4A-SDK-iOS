@@ -31,7 +31,7 @@ _Released October 30, 2017, correlating with the Marketing Cloud October 2017 re
 
 * This release adds support for rich notifications. Rich notifications include images, audio, video, and titles and subtitles from MobilePush. Host your files with a public URL and use that address to include rich media in your notifications.
 
-* Marketing Cloud now offers a plug-in to enable Cordova functionality in our Android and iOS SDKs. Review our [GitHub repo](https://github.exacttarget.com/Mobile/MarketingCloud-Cordova-Plugin) for plug-in files and more information.
+* Marketing Cloud now offers a plug-in to enable Cordova functionality in our Android and iOS SDKs. Review our [GitHub repo](https://github.com/salesforce-marketingcloud/MC-Cordova-Plugin) for plug-in files and more information.
 
 #### Version 4.9.5
 _Released August 28, 2017, correlating with the Marketing Cloud August 2017 release._
