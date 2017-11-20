@@ -11,7 +11,7 @@ order: 1
 
 * Make sure that your iOS app is built for iOS 10 or 11.
 * Include a service extension for your app that can handle mutable content. See Apple’s documentation.
-* Update to version 4.6.0 or higher of the Journey Builder for Apps (JB4A) SDK, which supports iOS 10.
+* Update to version 4.9.6 or higher of the Journey Builder for Apps (JB4A) SDK, which supports iOS 10.
 * Make sure that your app is registered for push notifications via the JB4A SDK. See Implement SDK in your iOS App.
 
 Rich notifications include images, videos, titles and subtitles from the MobilePush app, and mutable content. Mutable content can include personalization in the title, subtitle, or body of your message.
