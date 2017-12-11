@@ -20,6 +20,8 @@ This call will update the value of an existing attribute on the Contacts record.
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/96f80418daaa274c36e3.js"></script>
 
+The SDK sends changes to an attribute value to the Marketing Cloud with a REST call one minute after the first change to any contact_registration_data for that attribute. If the REST call fails (no network for example), then it retries in one minute intervals until the app is suspended. If the send is unsuccessful before the app is suspended, the data sends the next time the app is opened. It takes up to 5 minutes to record this value in the contact record once the SDK makes the REST call.
+
 > Attributes values and names will be trimmed of leading and trailing blanks.
 
 > Attribute names from the following list will not be allowed since they overlap with the names used by the Contacts record.  Please ensure to check the boolean return value to determine if your attribute was accepted to be sent to the Marketing Cloud.
