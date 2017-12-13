@@ -4,16 +4,16 @@ title: "README"
 ---
 # Journey Builder for Apps iOS SDK
 
-This documentation includes information for the Marketing Cloud Journey Builder for Apps iOS SDK:<br/>
-<a href="{{ site.codeurl }}" target="_blank">JB4A iOS SDK GitHub Repository</a><br>
+1. Provision Apps with [Apple]({{ site.baseurl }}/provisioning/apple.html).
+1. [Create your apps]({{ site.baseurl }}/create-apps/create-apps-overview.html) in the App Center.
+1. [Download the SDK]({{site.codeurl}}).
+1. [Implement the SDK]({{ site.baseurl }}/sdk-implementation/implement-sdk.html).
+1. Add [Feature Implementation]({{ site.baseurl }}/features/feature-implementation-overview.html) to your apps.
+1. Add optional purchased features, such as [CloudPages]({{ site.baseurl }}/inbox/cloudpage-push-overview.html) and [Location Services]({{ site.baseurl }}/location/geolocation-overview.html), to your apps.
 
-Review the Apple docs for the SDK:<br/>
-<a href="{{ site.baseurl }}/appledoc/index.html" target="_blank">iOS SDK Apple Docs</a>
-
-Learn how to use the SDK with the Marketing Cloud Learning App:<br/>
-<a href="https://github.com/salesforce-marketingcloud/LearningAppIos" target="_blank">iOS Learning App</a>
-
-Sign up for email updates about the JB4A iOS SDK:<br/>
+* <a href="http://help.exacttarget.com/en/documentation/mobilepush/" target="_blank">Marketing Cloud MobilePush Documentation</a> – This documentation contains information on the Marketing Cloud MobilePush app, including information on associating MobilePush with a mobile app.
+* The Marketing Cloud provides an app that implements features of the SDK to allow you to explore how a native app implements the Journey Builder for Apps SDK: <a href="https://github.com/salesforce-marketingcloud/LearningAppIos" target="_blank">Learning App for iOS</a>
+* Sign up for email updates about the JB4A iOS SDK:<br/>
 [Subscribe here](http://pub.s1.exacttarget.com/2ujjacpet3t)<br/><br/>
 
 ## iOS Version

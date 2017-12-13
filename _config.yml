@@ -25,12 +25,12 @@ sections: [
     ['provisioning', 'Provisioning'],
     ['create-apps', 'Create Cloud Apps'],
     ['sdk-implementation', 'SDK Implementation'],
-    ['upgrading', 'Upgrading'],
     ['features', 'Feature Implementation'],
     ['rich-notifications', 'Rich Notifications'],
     ['inbox', 'Inbox'],
     ['location', 'Location Services'],
     ['trouble', 'Troubleshooting'],
+    ['upgrading', 'Upgrading'],
     ['resources', 'Additional Resources']
 ]
 

@@ -5,11 +5,13 @@ subtitle: "Getting Started with the SDK"
 category: overview
 date: 2015-05-14 12:00:00
 order: 2
+publish: false
 ---
 Integrate MobilePush into your mobile app using the Journey Builder for Apps SDK:
 
 1. Provision Apps with [Apple]({{ site.baseurl }}/provisioning/apple.html).
 1. [Create your apps]({{ site.baseurl }}/create-apps/create-apps-overview.html) in the App Center.
+1. [Download the SDK]({{codeurl}}).
 1. [Implement the SDK]({{ site.baseurl }}/sdk-implementation/implement-sdk.html).
 1. Add [Feature Implementation]({{ site.baseurl }}/features/feature-implementation-overview.html) to your apps.
 1. Add optional purchased features, such as [CloudPages]({{ site.baseurl }}/inbox/cloudpage-push-overview.html) and [Location Services]({{ site.baseurl }}/location/geolocation-overview.html), to your apps.
