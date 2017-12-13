@@ -2,9 +2,9 @@
 layout: page
 title: "Implement SDK"
 subtitle: "Implement SDK in your iOS App"
-category: sdk-implementation
+category: get-started
 date: 2015-05-14 12:00:00
-order: 1
+order: 4
 ---
 In order to use the JB4A SDK in your Mobile app, complete the steps below to configure the SDK for your app. Once you complete this process and run your first test, the SDK connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/create-apps/create-apps-overview.html).<br/><br/>
 
@@ -32,7 +32,7 @@ Follow these steps to configure the SDK for your app.<br/>
 <br/>
  <img class="img-responsive" src="{{ site.baseurl }}/assets/iossdk-artifacts.png" /><br/>
 <br/>
-1.  Select **Project Settings**. 
+1.  Select **Project Settings**.
 
 1.  Select **General**.
 
@@ -65,7 +65,7 @@ A call to resetBadgeCount includes a call to updateET, which sends a registratio
 
 	<br/><img class="img-responsive" src="{{ site.baseurl }}/assets/background_modes_plist_entry.png" /><br/>
 
-You can now deploy and test your app! 
+You can now deploy and test your app!
 
 > You can use an iOS simulator for testing, but the simulator will not receive push messages as part of the testing process.
 

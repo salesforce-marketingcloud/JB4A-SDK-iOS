@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "Overview"
+title: "Create Cloud App"
 subtitle: "Connecting Marketing Cloud Account to your iOS App"
-category: create-apps
+category: get-started
 date: 2015-05-14 12:00:00
-order: 1
+order: 2
 ---
 In order to connect your iOS app to the Marketing Cloud, you must first create a MobilePush app in MobilePush within Marketing Cloud.
 

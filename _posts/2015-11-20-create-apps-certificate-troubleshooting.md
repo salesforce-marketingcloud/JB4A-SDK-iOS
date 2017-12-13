@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Troubleshooting Certificate Issues for iOS APNS"
-subtitle: "Troubleshooting Certificate Issues for iOS APNS"
-category: create-apps
+title: "Troubleshoot Certificate Issues for iOS APNS"
+subtitle: "Troubleshoot Certificate Issues for iOS APNS"
+category: get-started
 date: 2015-11-20 12:00:00
-order: 5
+order: 3
 ---
 
-MobilePush uses the Apple Push Notification Service (APNS) to deliver messages to iOS devices. The APNS relies on authentication certificates that expire after one year. You generally use two certificates: 
+MobilePush uses the Apple Push Notification Service (APNS) to deliver messages to iOS devices. The APNS relies on authentication certificates that expire after one year. You generally use two certificates:
 
 1. One for the development version of your app
 1. One for the published production version of your app.
