@@ -5,7 +5,7 @@ subtitle: "Getting Started with the SDK"
 category: overview
 date: 2015-05-14 12:00:00
 order: 2
-publish: false
+published: false
 ---
 Integrate MobilePush into your mobile app using the Journey Builder for Apps SDK:
 

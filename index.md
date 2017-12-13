@@ -4,6 +4,8 @@ title: "README"
 ---
 # Journey Builder for Apps iOS SDK
 
+## Get Started
+
 1. Provision Apps with [Apple]({{ site.baseurl }}/provisioning/apple.html).
 1. [Create your apps]({{ site.baseurl }}/create-apps/create-apps-overview.html) in the App Center.
 1. [Download the SDK]({{site.codeurl}}).
@@ -11,7 +13,9 @@ title: "README"
 1. Add [Feature Implementation]({{ site.baseurl }}/features/feature-implementation-overview.html) to your apps.
 1. Add optional purchased features, such as [CloudPages]({{ site.baseurl }}/inbox/cloudpage-push-overview.html) and [Location Services]({{ site.baseurl }}/location/geolocation-overview.html), to your apps.
 
-* <a href="http://help.exacttarget.com/en/documentation/mobilepush/" target="_blank">Marketing Cloud MobilePush Documentation</a> – This documentation contains information on the Marketing Cloud MobilePush app, including information on associating MobilePush with a mobile app.
+## Additional Resources
+
+* The <a href="http://help.exacttarget.com/en/documentation/mobilepush/" target="_blank">Marketing Cloud MobilePush Documentation</a> contains information on the Marketing Cloud MobilePush app, including information on associating MobilePush with a mobile app.
 * The Marketing Cloud provides the <a href="https://github.com/salesforce-marketingcloud/LearningAppIos" target="_blank">Learning App for iOS</a> that implements features of the SDK to allow you to explore how a native app implements the Journey Builder for Apps SDK.
 * [Sign up for email updates about the JB4A iOS SDK](http://pub.s1.exacttarget.com/2ujjacpet3t).<br/><br/>
 
