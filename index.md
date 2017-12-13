@@ -13,8 +13,7 @@ title: "README"
 
 * <a href="http://help.exacttarget.com/en/documentation/mobilepush/" target="_blank">Marketing Cloud MobilePush Documentation</a> – This documentation contains information on the Marketing Cloud MobilePush app, including information on associating MobilePush with a mobile app.
 * The Marketing Cloud provides an app that implements features of the SDK to allow you to explore how a native app implements the Journey Builder for Apps SDK: <a href="https://github.com/salesforce-marketingcloud/LearningAppIos" target="_blank">Learning App for iOS</a>
-* Sign up for email updates about the JB4A iOS SDK:<br/>
-[Subscribe here](http://pub.s1.exacttarget.com/2ujjacpet3t)<br/><br/>
+* [Sign up for email updates about the JB4A iOS SDK](http://pub.s1.exacttarget.com/2ujjacpet3t)<br/><br/>
 
 ## iOS Version
 
