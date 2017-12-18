@@ -5,7 +5,7 @@ title: "README"
 ## Get Started
 
 1. Provision Apps with [Apple]({{ site.baseurl }}/get-started/apple.html).
-1. [Create your apps]({{ site.baseurl }}/create-apps/create-apps-overview.html) in the App Center.
+1. [Create your apps]({{ site.baseurl }}/get-started/create-apps-overview.html) in the MobilePush Marketing Cloud app.
 1. [Download the SDK]({{site.codeurl}}).
 1. [Implement the SDK]({{ site.baseurl }}/get-started/implement-sdk.html).
 1. Add [Feature Implementation]({{ site.baseurl }}/features/feature-implementation-overview.html) to your apps.
