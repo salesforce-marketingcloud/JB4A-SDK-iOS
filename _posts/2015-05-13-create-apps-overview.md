@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Create Cloud App"
+title: "Create MobilePush App"
 subtitle: "Connecting Marketing Cloud Account to your iOS App"
 category: get-started
 date: 2015-05-14 12:00:00

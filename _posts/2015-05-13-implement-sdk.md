@@ -4,7 +4,7 @@ title: "Implement SDK"
 subtitle: "Implement SDK in your iOS App"
 category: get-started
 date: 2015-05-14 12:00:00
-order: 4
+order: 3
 ---
 In order to use the JB4A SDK in your Mobile app, complete the steps below to configure the SDK for your app. Once you complete this process and run your first test, the SDK connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/create-apps/create-apps-overview.html).<br/><br/>
 
