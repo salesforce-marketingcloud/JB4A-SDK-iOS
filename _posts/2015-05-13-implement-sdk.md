@@ -6,7 +6,7 @@ category: get-started
 date: 2015-05-14 12:00:00
 order: 3
 ---
-In order to use the [JB4A SDK]({{site.codeurl}}) in your Mobile app, complete the steps below to configure the SDK for your app. Once you complete this process and run your first test, the SDK connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/get-started/create-apps-overview.html).<br/><br/>
+Download the [JB4A SDK]({{site.codeurl}}) for your mobile app, then complete these steps to configure the SDK for your app. Once you complete this process and run your first test, the SDK connects the device to the MobilePush app you created in the [App Center]({{ site.baseurl }}/get-started/create-apps-overview.html).<br/><br/>
 
 <h4>Import the SDK</h4>
 Use one of these two ways to import the SDK for iOS into your project:
