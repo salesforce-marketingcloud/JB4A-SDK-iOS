@@ -18,7 +18,7 @@ Use this information when testing your app and the device either does not receiv
 
 #### Unblock network ports
 
-Ensure that your network team unblocks the following ports to provide communication between the moble device and APNS servers for MobilePush functionality:
+Ensure that your network team unblocks the following ports to provide communication between the mobile device and APNS servers for MobilePush functionality:
 
 * TCP port 5223 (used by devices to communicate to the APNS servers)
 * TCP port 2195 (used to send notifications to the APNS servers)
