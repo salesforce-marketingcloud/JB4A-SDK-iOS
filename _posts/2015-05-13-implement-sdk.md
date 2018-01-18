@@ -44,7 +44,7 @@ Follow these steps to configure the SDK for your app.<br/>
 
 > Threading caution - The JB4ASDK is not thread-safe. We do not recommend mixing API calls to the SDK on different threads. Make all calls to the SDK API on the same thread. You can call the SDK from the main thread or from a background thread, but make all calls to the SDK on the same thread.
 
-1. Add code in the AppDelegate implementation class to configure the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from the Marketing Cloud app you created in <a href="https://https://appcenter-auth.s1.marketingcloudapps.com/" target="_blank">App Center<a/>.
+1. Add code in the AppDelegate implementation class to configure the Journey Builder for Apps SDK. Note that you must call configureSDKWithAppId and andAccessToken and provide values from the app you created in MobilePush.
 	<script src="https://gist.github.com/sfmc-mobilepushsdk/076015adff482663719373704f60925b.js"></script>
 A call to resetBadgeCount includes a call to updateET, which sends a registration with a badge count value of zero. Registrations are processed every few minutes in batch. You can keep the device and the device record in sync if you only send notifications with badge updates once every 10 minutes.
 
