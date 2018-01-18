@@ -1,8 +1,6 @@
 # Site title and subtitle. This is used in _includes/header.html
 title: 'Marketing Cloud iOS SDK (v4.9.6)'
 
-theme: jekyll-theme-modernist
-
 # if you wish to integrate disqus on pages set your shortname here
 disqus_shortname: ''
 
