@@ -2,6 +2,12 @@
 layout: default
 title: "README"
 ---
+###
+## NEW SDK:
+Access the [new iOS SDK and documentation here](https://salesforce-marketingcloud.github.io/MarketingCloudSDK-iOS/).
+We redesigned the SDK to make it easier to integrate than ever before. The version 5.0.0 Jaunary 2018 release includes a slimmer API that makes it easier to add Marketing Cloud features to your app. Existing users can upgrade their version to take advantage of the improved SDK. New users can follow the existing Getting Started directions to get the SDK up and running.
+###
+
 ## Get Started
 
 1. Provision Apps with [Apple]({{ site.baseurl }}/get-started/apple.html).
