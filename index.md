@@ -34,6 +34,11 @@ We redesigned the SDK to make it easier to integrate than ever before. The versi
 
 For releases prior to 4.5.0, see: <a href="http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-v4.5.0/" target="_blank">Prior Release Documentation</a>
 
+#### Version 4.9.7
+_Released March 28, 2018_
+
+* Fixed database upgrade issue -- We fixed an issue where upgrading from an SDK version before 4.9.5 to 4.9.5 or 4.9.6 resulted in lost data.
+
 #### Version 4.9.6
 _Released October 30, 2017, correlating with the Marketing Cloud October 2017 release_
 
