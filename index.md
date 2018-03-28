@@ -37,7 +37,7 @@ For releases prior to 4.5.0, see: <a href="http://salesforce-marketingcloud.gith
 #### Version 4.9.7
 _Released March 28, 2018_
 
-* Fixed database upgrade issue -- We fixed an issue where upgrading from an SDK version before 4.9.5 to 4.9.5 or 4.9.6 resulted in lost data.
+* **Fixed database upgrade issue** -- We fixed an issue where upgrading from an SDK version before 4.9.5 to 4.9.5 or 4.9.6 resulted in lost data.
 
 #### Version 4.9.6
 _Released October 30, 2017, correlating with the Marketing Cloud October 2017 release_
