@@ -19,12 +19,22 @@ You do not have to call this from didFinishLaunchingWithOptions() if you prefer 
 
 <script src="https://gist.github.com/sfmc-mobilepushsdk/092adf7e911614c30daf.js"></script>
 
-Ensure you also add the NSLocationAlwaysUsageDescription key to the *.plist file for your application. Review Apple documentation for more information: <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18" target="_blank">NSLocationAlwaysUsageDescription</a>.
+## Location Messaging
+
+In addition, Apple requires adding keys to your Info.plist file to enable location services:
+
+* NSLocationAlwaysUsageDescription
+* NSLocationAlwaysAndWhenInUseUsageDescription
+* NSLocationWhenInUseUsageDescription
+
+Review the [Apple documentation](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services) for more information.
+
+<img class="img-responsive" src="{{ site.baseurl }}/assets/location.png" /><br/>
+
+> MarketingCloudSDK requires “Always” permissions for full geofence and beacon functionality. An application does not receive location messages if “When-in-use authorization” is selected by the app user.
 
 <br/>
-<img class="img-responsive" src="{{ site.baseurl }}/assets/location_usage_plist_entry.png" /><br/>
 
-> iOS 8+ builds must used NSLocationAlwaysUsageDescription key for location to work.  The previous named key of NSLocationUsageDescription will not work in iOS 8+ builds.  If you have both, then the new key NSLocationAlwaysUsageDescription wins and the old key NSLocationUsageDescription will be ignored.  
 
 #### <a name="plist"></a>Info.plist Updates
 
