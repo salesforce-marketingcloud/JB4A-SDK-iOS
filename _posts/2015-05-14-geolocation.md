@@ -31,7 +31,7 @@ Review the [Apple documentation](https://developer.apple.com/documentation/corel
 
 <img class="img-responsive" src="{{ site.baseurl }}/assets/location.png" /><br/>
 
-> MarketingCloudSDK requires “Always” permissions for full geofence and beacon functionality. An application does not receive location messages if “When-in-use authorization” is selected by the app user.
+> JB4ASDK requires “Always” permissions for full geofence and beacon functionality. An application does not receive location messages if “When-in-use authorization” is selected by the app user.
 
 <br/>
 
