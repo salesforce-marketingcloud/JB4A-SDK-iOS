@@ -1,3 +1,6 @@
+newSiteUrl: "https://salesforce-marketingcloud.github.io/MarketingCloudSDK-iOS/"
+
+
 # Site title and subtitle. This is used in _includes/header.html
 title: 'Marketing Cloud iOS SDK (v4.9.7)'
 
