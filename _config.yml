@@ -17,26 +17,12 @@ google_analytics_id: 'UA-82902574-4' #PROD
 #   0 - always hide
 #   1 - always show
 #   2 - show only if posts are present
-navigation: 1
+navigation: 0
 
 # URL to source code, used in _includes/footer.html
 codeurl: 'https://github.com/ExactTarget/JB4A-SDK-iOS'
 
 # Default categories (in order) to appear in the navigation
-sections: [
-    ['overview', 'Overview'],
-    ['get-started', 'Get Started'],
-    ['provisioning', 'Provisioning'],
-    ['create-apps', 'Create Cloud Apps'],
-    ['sdk-implementation', 'SDK Implementation'],
-    ['features', 'Feature Implementation'],
-    ['rich-notifications', 'Rich Notifications'],
-    ['inbox', 'Inbox'],
-    ['location', 'Location Services'],
-    ['trouble', 'Troubleshooting'],
-    ['upgrading', 'Upgrading'],
-    ['resources', 'Additional Resources']
-]
 
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
